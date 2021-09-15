@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://docs.ipi.wiki/404/index.html</loc>
+=======
+    <loc>https://docs.ipi.wiki/ava/UbuntuInstallation.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/YoctoInstallation.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/Unboxing.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/edk2-firmware-update.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/CarrierIntroduction.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+    <lastmod>2021-09-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/index.html</loc>
+    
+    <lastmod>2021-09-13</lastmod>
+    
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://docs.ipi.wiki/ava/operation.html</loc>
+=======
+    <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+    <lastmod>2021-09-08</lastmod>
+    
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://docs.ipi.wiki/ava/shipment-configurations.html</loc>
+=======
+    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+    <lastmod>2021-09-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/index.html</loc>
+    
+<<<<<<< HEAD
+    <lastmod>2021-09-08</lastmod>
+=======
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/operation.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://docs.ipi.wiki/ava/HowToFlashEDK2FW.html</loc>
+    
+    <lastmod>2021-09-08</lastmod>
+=======
+    <loc>https://docs.ipi.wiki/ava/introduction.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/PowerCableConnection.html</loc>
+<<<<<<< HEAD
+    
+    <lastmod>2021-09-08</lastmod>
+=======
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/IntroductionCOMHPC.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
+    
+    <lastmod>2021-09-08</lastmod>
+=======
+    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
+    
+    <lastmod>2021-09-08</lastmod>
+=======
+    <loc>https://docs.ipi.wiki/ava/HowToFlashMMCFW.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
+    
+<<<<<<< HEAD
+    <lastmod>2021-09-08</lastmod>
+=======
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
+    
+<<<<<<< HEAD
+    <lastmod>2021-09-08</lastmod>
+=======
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToBuildYoctoEWAOL.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToCheckPowerReadingByIMPI.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/COMHPC_BuildInstructions.html</loc>
+    
+<<<<<<< HEAD
+    <lastmod>2021-09-08</lastmod>
+=======
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/index.html</loc>
+    
+    <lastmod>2021-09-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/404/index.html</loc>
+    
+    <lastmod>2021-09-14</lastmod>
+>>>>>>> fba996dbd30d596aea307db2506b8045635425fb
+    
+  </url>
+  
+
+  <url>
+    <loc>https://docs.ipi.wiki/</loc>
+    <lastmod>2021-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
+  
+</urlset>
