@@ -1,0 +1,29 @@
+language: node_js
+
+sudo: false
+
+node_js:
+  - 12.9.0
+
+cache:
+  apt: true
+  directories:
+    - node_modules
+
+scrpit:
+  - hexo clean
+  - hexo g
+
+before_install:
+  - npm install hexo-cli -g
+
+install:
+  - npm install
+  - npm rebuild node-sass --force
+
+deploy:
+  provider: script
+  script: .travis/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
