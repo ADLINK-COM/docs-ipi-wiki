@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="icon" href="https://xfii.b-cdn.net/uploads/i-pi-smarc/5ieu2go.jpg">
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.html">
+  <!-- Alternative links -->
+  
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/SMARC/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/SMARC//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/SMARC//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/SMARC//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/SMARC//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/SMARC/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/SMARC//css/font/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Welcome to the era of Artificial Intelligence!!!You most likely do not see AI at work, but it is almost everywhere these days. Man-made machine intelligence is making a huge difference. Within this">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Welcome to the era of Artificial Intelligence!!!You most likely do not see AI at work, but it is almost everywhere these days. Man-made machine intelligence is making a huge difference. Within this">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/fig2.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/fig3.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/fig1.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/fig4.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/figsix.png">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/image-8.png">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/MicrosoftTeams-image-1616493434194.png">
+<meta property="article:published_time" content="2021-09-14T02:27:30.269Z">
+<meta property="article:modified_time" content="2021-09-14T02:27:30.269Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/AIInferencingOnNPU.assets/fig2.PNG">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      <img src="https://xfii.b-cdn.net/uploads/i-pi-smarc/5ieu2go.jpg" class="img-fluid" style="height:27px;top: 8px;position: relative;/* display: inline-block; */" alt="">  </a>
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link current header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <div class="bullets">
+
+<h2 id="Welcome-to-the-era-of-Artificial-Intelligence" class="article-heading"><a href="#Welcome-to-the-era-of-Artificial-Intelligence" class="headerlink" title="Welcome to the era of Artificial Intelligence!!!"></a>Welcome to the era of Artificial Intelligence!!!<a class="article-anchor" href="#Welcome-to-the-era-of-Artificial-Intelligence" aria-hidden="true"></a></h2><p>You most likely do not see AI at work, but it is almost everywhere these days. Man-made machine intelligence is making a huge difference. Within this decade, machine reasoning has gone from a sci-fi dream to a basic piece of our regular day-to-day existence. We use AI frameworks to communicate with our phones through Siri and Alexa, vehicles like Tesla’s decipher and examine their environmental factors to drive themselves, Amazon screens our perusing propensities and cleverly serves us up items it thinks we’d prefer to purchase, and even Google and YouTube chooses what sorts of query items we need. This is just the start, and one day we will glance back at AI and wonder about how it made our lives so easy and comfortable. </p>
+<h2 id="Accelerating-the-time-for-work" class="article-heading"><a href="#Accelerating-the-time-for-work" class="headerlink" title="Accelerating the time for work"></a><strong>Accelerating the time for work</strong><a class="article-anchor" href="#Accelerating-the-time-for-work" aria-hidden="true"></a></h2><p>However, what precisely is AI? Possibly a superior question may be what precisely is “Intelligence”? The most straightforward answer is gathering information about the world, and utilizing that information to make expectations and react in the short and long run. That applies to individuals and machines. Therefore, when we talk about AI in our lives, we are looking at everything from a PC having the option to read the handwritten text and transfer it to machine ASCII code and maybe even then to understand the context, to a huge database showing your preferred options in advance on the web, to a robot performing complex medical procedures all alone. Since the universe of AI is so fantastically enormous, everybody should look into the advancements in their fields.</p>
+<h2 id="Artificial-Intelligence-on-Modules-AIOM" class="article-heading"><a href="#Artificial-Intelligence-on-Modules-AIOM" class="headerlink" title="Artificial Intelligence on Modules (AIOM)"></a>Artificial Intelligence on Modules (AIOM)<a class="article-anchor" href="#Artificial-Intelligence-on-Modules-AIOM" aria-hidden="true"></a></h2><p>AIOM allows quick creation of Edge AI systems. ADLINK technology launched a new range of modules for artificial intelligence (AI) at the edge, allowing inference much faster than traditional methods with I-Pi SMARC IMX8M Plus. This AIOM product is created with ADLINK’s I-Pi SMARC and NXP’s eIQ machine learning software which uses Neural processing unit (NPU) for AI inferencing.</p>
+<p>The Features include:</p>
+<ul>
+<li>Optional in-SoC 2.3 TOPS NPU</li>
+<li>SMARC revision 2.1.1 compliant</li>
+<li>NXP i.MX8M Plus with Quad Cortex-A53</li>
+<li>LVDS, DSI, HDMI graphic output interfaces</li>
+<li>Dual CAN bus / USB 2.0 / USB 3.0 interfaces</li>
+<li>Dual GbE ports (one TSN capable)</li>
+<li>I2S audio codec interface</li>
+<li>Rugged operating temperature (optional): -40°C to +85°C</li>
+<li>15 year product availability</li>
+</ul>
+<h2 id="eIQ-Machine-learning-Software" class="article-heading"><a href="#eIQ-Machine-learning-Software" class="headerlink" title="eIQ Machine learning Software"></a>eIQ Machine learning Software<a class="article-anchor" href="#eIQ-Machine-learning-Software" aria-hidden="true"></a></h2><p>Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify the patterns and make decisions with minimal human intervention.</p>
+<center>
+<img src="AIInferencingOnNPU.assets/fig2.PNG"> 
+</center>
+
+
+
+<p>The major benefits of this software is edge inference and intelligence, No cloud dependency, privacy and better user experience. In 2010[1], the so-called deep learning started. It is a fast-growing subdomain of ML, based on Neural Networks (NN). Inspired by the human brain, deep learning achieved state-of-the-art results in various tasks. Neural networks are capable of learning complex patterns from millions of examples. A huge adaptation is expected in the embedded world where NXP created eIQ machine learning software for i.MX applications processors, a set of ML tools which allows developing and deploying ML applications on the i.MX 8 family of devices.</p>
+<p>eIQ software acts as the bridge between NN and Arm machine learning processors that supports the Arm NN SDK which supports Caffe, TensorFlow, TensorFlow Lite and ONNX models. This software development provides a set of libraries and development tools for machine learning applications. eIQ software is solely responsible for inferencing the trained models. For more details about eIQ machine learning software, please refer official NXP webpage <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.nxp.com/design/software/development-software/eiq-ml-development-environment/eiq-software-for-arm-nn-inference-engine:eIQArmNN">https://www.nxp.com/design/software/development-software/eiq-ml-development-environment/eiq-software-for-arm-nn-inference-engine:eIQArmNN</a></p>
+<p>The below figure describes the block diagram of eIQ software for Arm NN SDK</p>
+<center>
+<img src="AIInferencingOnNPU.assets/fig3.PNG"> 
+</center>
+
+
+<h3 id="AI-innovations-based-on-daily-life" class="article-heading"><a href="#AI-innovations-based-on-daily-life" class="headerlink" title="AI innovations based on daily life"></a>AI innovations based on daily life<a class="article-anchor" href="#AI-innovations-based-on-daily-life" aria-hidden="true"></a></h3><p>AI has even appeared to guess human conduct, and foresee cautioning signs by perceiving basic language utilized by individuals in social sites and making law authorization aware of such actions. On the other hand, that equivalent innovation can be utilized to find potential disasters, or deliver news and alerts to the public. The more we examine and create human-like consciousness, the clearer it turns into this hugely amazing asset for a lot of companies. </p>
+<p>As futurists attempt to design out a quickly changing and propelling world, the greatest obstacle is neither the innovative, nor financial and political. It is the pace of the changes that are coming up with the introduction of new capabilities and improvements of the inference model. Only an imposing business model of the futureproof computer on modules can be responsible to control the most recent achievements in information gathering, handling, and managing daily needs in the world such as ATMs, Ticket vending machines, surveillance network, etc. Keeping in mind that we may trust that AI will help advance our public, we need hardware that could support this kind of software requirements.</p>
+<center>
+<img src="AIInferencingOnNPU.assets/fig1.PNG"> 
+</center>
+
+<p>In recent days, Artificial intelligence is created by engineers for performing organized tasks with supervised learning. Its purpose is to handle the allotted task without any self-thinking. It is good at speech and Image recognition and playing a few games. Machine learning makes the computer or machines to think as humans do. It is like the learning of newborn babies that starts with zero but improves with data intake. The computer grasps knowledge with a neural network. It learns to analyze the situation with predictions. The world is full of data with visuals and sounds. AI evolves with analytical, logical, and creative thinking. </p>
+<h3 id="Target-Applications" class="article-heading"><a href="#Target-Applications" class="headerlink" title="Target Applications:"></a>Target Applications:<a class="article-anchor" href="#Target-Applications" aria-hidden="true"></a></h3><p>• <strong>Smart home:</strong> AI local server, alarm hub and security systems, smart robot, access, control, home patient monitors, sound bars, AV receivers, and other home automation applications </p>
+<p>• <strong>Smart city:</strong> safety and security, surveillance, crowd and traffic control, transportation and fleet management </p>
+<p><strong>• Smart world:</strong> smart retail, POS interfaces, targeted advertisement, building control, teleconferencing systems and healthcare diagnostics </p>
+<p><strong>• Industrial IoT:</strong> machine vision, robot controller, industrial gateway, HMI and computers, commercial printers and scanners, industrial tablets, smart industrial cameras and multiple factory automation applications</p>
+<h3 id="Transfer-Learning" class="article-heading"><a href="#Transfer-Learning" class="headerlink" title="Transfer Learning"></a>Transfer Learning<a class="article-anchor" href="#Transfer-Learning" aria-hidden="true"></a></h3><p>Before taking a deep dive in Transfer Learning, we need to understand what inference are available in Arm NN SDK and why we need them. However, the complications occur in storing and compiling the large data on the local computers. Even if we use cloud or edge servers to manage the data, still the training and building the model becomes difficult. The new revolution in technology has gifted inference engines with various designated processing units such as GPU’s, NPU’s, VPU’s and TPU’s etc, which could be the solution that engineers in embedded world are looking for. </p>
+<p>One does not need to train or build those AI models, Inference engines could replace this time taking tasks and give better performance than those traditional training models. The impressable aspect of these inference engines is that they are compatible with Arm processors and don’t require much storage space and time, yet they give better performance. Usually, when you build an AI model, there are few specific rules to be followed. Such as setting up the environment, supporting framework and its respective packages and dependencies, and then compiling them together. The general pipeline of deploying AI models follows the procedure such as Data Ingestion, Data Filtering, Model Training, Model Testing, and finally Model Deployment. Usually, for an AI environment, there are approximately 800+ tools/frameworks/libraries. </p>
+<p>But most of the developers prefer well-known frameworks such as Caffe, TensorFlow, PyTorch, ONNX, etc. If we keep on installing the AI libraries on embedded devices manually, it takes a lot of time, space, and also finding the correct source for the required package could be a challenging task. So, this whole process is just to make the application work, still more effort to optimize it. Therefore nowadays Industrial manufacturers and developers prefer ready environments, as they focus on application development rather than research. Henceforth, the inference engines are calibrated to make this complex procedure much easier where users can develop their applications from pre-trained models without considering all the background tasks. This makes the hardware compatible with software for a longer time and reduces the cost for the Industry. The below picture explains the Neural network runtime architecture (NNRT) [1]. </p>
+<center>
+<img src="AIInferencingOnNPU.assets/fig4.PNG"> 
+</center>
+
+
+
+<p>So far we have understood how the inference engines are supporting the NPU inferencing in eIQ machine learning software. Transfer learning is a machine learning method where a model is developed for a task reused as the initial point on the second task. It is one of the popular approach and time saving method where pre-trained models are used as the initial point to follow up with the second task.</p>
+<h4 id="When-to-use-Transfer-Learning" class="article-heading"><a href="#When-to-use-Transfer-Learning" class="headerlink" title="When to use Transfer Learning?"></a>When to use Transfer Learning?<a class="article-anchor" href="#When-to-use-Transfer-Learning" aria-hidden="true"></a></h4><p>Transfer Learning is an optimization, a shortcut to saving time or getting better performance. In general, it is not obvious that there will be a benefit to using transfer learning in the domain until after the model has been developed and evaluated. For example, The knowledge gained while learning to recognize birds can also used to recognize vehicles, animals etc. The point is you are replacing the data of initial task and retraining the parameters making the model to adapt to perform the second task. For more details refer this link [2] <a target="_blank" rel="noopener external nofollow noreferrer" href="https://community.nxp.com/t5/eIQ-Machine-Learning-Software/eIQ-Sample-Apps-Overview/ta-p/1122925">https://community.nxp.com/t5/eIQ-Machine-Learning-Software/eIQ-Sample-Apps-Overview/ta-p/1122925</a></p>
+<p>Also check our Tutorials about how to use Transfer Learning (insert the link for tutorials)</p>
+<h2 id="Use-Cases-and-Benchmark" class="article-heading"><a href="#Use-Cases-and-Benchmark" class="headerlink" title="Use Cases and Benchmark"></a>Use Cases and Benchmark<a class="article-anchor" href="#Use-Cases-and-Benchmark" aria-hidden="true"></a></h2><p>For better understanding on NPU inferencing on I-Pi SMARC IMX8M Plus, results of use cases are tabulated for easy understanding.</p>
+<center>
+<div class="table-wrapper" markdown="block">
+
+<table>
+<thead>
+<tr>
+<th>SI.No</th>
+<th align="center">Model</th>
+<th align="center">Algorithm</th>
+<th align="center">Inference Engine</th>
+<th align="center">NPU Inferencing(ms)</th>
+<th align="center">CPU Inferencing(ms)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td align="center">Facial Expression detection</td>
+<td align="center">MobileNet</td>
+<td align="center">Tflite 2.3.0</td>
+<td align="center">35</td>
+<td align="center">98</td>
+</tr>
+<tr>
+<td>2</td>
+<td align="center">Image Classification</td>
+<td align="center">MobileNet</td>
+<td align="center">Tflite 2.3.0</td>
+<td align="center">5</td>
+<td align="center">36</td>
+</tr>
+<tr>
+<td>3</td>
+<td align="center">Object detection</td>
+<td align="center">Single Shot detection (SSD)</td>
+<td align="center">Tflite 2.3.0</td>
+<td align="center">10.25</td>
+<td align="center">41</td>
+</tr>
+<tr>
+<td>4</td>
+<td align="center">Object detection</td>
+<td align="center">Deep Neural Network (DNN)</td>
+<td align="center">OpenCV 4.2.0</td>
+<td align="center">56</td>
+<td align="center">123.6</td>
+</tr>
+<tr>
+<td>5</td>
+<td align="center">Fire &amp; No fire Classification</td>
+<td align="center">Convolution Neural Network (CNN)</td>
+<td align="center">ArmNN</td>
+<td align="center">7.6</td>
+<td align="center">42.8</td>
+</tr>
+<tr>
+<td>6</td>
+<td align="center">OpenPose detection</td>
+<td align="center">MobileNet</td>
+<td align="center">Tflite 2.3.0</td>
+<td align="center">48</td>
+<td align="center">118</td>
+</tr>
+<tr>
+<td>7</td>
+<td align="center">Object detection</td>
+<td align="center">YOLO v3</td>
+<td align="center">Tflite 2.3.0</td>
+<td align="center">102</td>
+<td align="center">225</td>
+</tr>
+</tbody></table>
+<p>The above histogram clearly shows the difference of NPU and CPU inferencing on I-Pi SMARC IMX8M Plus</p>
+</div>
+
+</center>
+
+
+
+
+
+<center>
+<img src="AIInferencingOnNPU.assets/figsix.png"> 
+</center>
+
+
+
+
+<h2 id="Netron" class="article-heading"><a href="#Netron" class="headerlink" title="Netron"></a>Netron<a class="article-anchor" href="#Netron" aria-hidden="true"></a></h2><p>Netron is a viewer for neural network, deep learning and machine learning models. Netron supports <strong>ONNX</strong> (<code>.onnx</code>, <code>.pb</code>, <code>.pbtxt</code>), <strong>Keras</strong> (<code>.h5</code>, <code>.keras</code>), <strong>TensorFlow Lite</strong> (<code>.tflite</code>), <strong>Caffe</strong> (<code>.caffemodel</code>, <code>.prototxt</code>), <strong>Darknet</strong> (<code>.cfg</code>), <strong>Core ML</strong> (<code>.mlmodel</code>), <strong>MNN</strong> (<code>.mnn</code>), <strong>MXNet</strong> (<code>.model</code>, <code>-symbol.json</code>), <strong>ncnn</strong> (<code>.param</code>), <strong>PaddlePaddle</strong> (<code>.zip</code>, <code>__model__</code>), <strong>Caffe2</strong> (<code>predict_net.pb</code>), <strong>Barracuda</strong> (<code>.nn</code>), <strong>Tengine</strong> (<code>.tmfile</code>), <strong>TNN</strong> (<code>.tnnproto</code>), <strong>RKNN</strong> (<code>.rknn</code>), <strong>MindSpore Lite</strong> (<code>.ms</code>), <strong>UFF</strong> (<code>.uff</code>).</p>
+<p>Netron has experimental support for <strong>TensorFlow</strong> (<code>.pb</code>, <code>.meta</code>, <code>.pbtxt</code>, <code>.ckpt</code>, <code>.index</code>), <strong>PyTorch</strong> (<code>.pt</code>, <code>.pth</code>), <strong>TorchScript</strong> (<code>.pt</code>, <code>.pth</code>), <strong>OpenVINO</strong> (<code>.xml</code>), <strong>Torch</strong> (<code>.t7</code>), <strong>Arm NN</strong> (<code>.armnn</code>), <strong>BigDL</strong> (<code>.bigdl</code>, <code>.model</code>), <strong>Chainer</strong> (<code>.npz</code>, <code>.h5</code>), <strong>CNTK</strong> (<code>.model</code>, <code>.cntk</code>), <strong>Deeplearning4j</strong> (<code>.zip</code>), <strong>MediaPipe</strong> (<code>.pbtxt</code>), <strong>ML.NET</strong> (<code>.zip</code>), <strong>scikit-learn</strong> (<code>.pkl</code>), <strong>TensorFlow.js</strong> (<code>model.json</code>, <code>.pb</code>).</p>
+<h3 id="How-to-install-Netron" class="article-heading"><a href="#How-to-install-Netron" class="headerlink" title="How to install Netron"></a>How to install Netron<a class="article-anchor" href="#How-to-install-Netron" aria-hidden="true"></a></h3><p><strong>Linux:</strong> Run the below command in your terminal</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ snap install netron</span><br></pre></td></tr></table></figure>
+
+<p><strong>Windows:</strong> Run the below command in your cmd</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ winget install netron</span><br></pre></td></tr></table></figure>
+
+<h3 id="Why-is-Netron-important" class="article-heading"><a href="#Why-is-Netron-important" class="headerlink" title="Why is Netron important?"></a><strong>Why is Netron important?</strong><a class="article-anchor" href="#Why-is-Netron-important" aria-hidden="true"></a></h3><p>Being a viewer for neural networks and machine learning models, it generates beautiful visualizations that you can use to clearly communicate the structure of your neural network. What’s more, using the tool, you can explore your models in great detail. And best of all, it’s a cross-platform tool. During transfer learning, Netron helps to analyze the input parameters of the network which can helpful during retraining in transfer Learning. The below figure describes an example of the network visualizer. </p>
+<center>
+<img src="AIInferencingOnNPU.assets/image-8.png"> 
+</center>
+
+<h2 id="Future-innovation" class="article-heading"><a href="#Future-innovation" class="headerlink" title="Future innovation"></a>Future innovation<a class="article-anchor" href="#Future-innovation" aria-hidden="true"></a></h2><center>
+<img src="AIInferencingOnNPU.assets/MicrosoftTeams-image-1616493434194.png"> 
+</center>
+
+<p>I-Pi SMARC IMX8M Plus can be used for various applications such as gaming &amp; computing, connectivity, security, industrial automation, energy management, health care, transport &amp; mobility, smart logistics, smart home and AI/ML inferencing.</p>
+<h3 id="Demos" class="article-heading"><a href="#Demos" class="headerlink" title="Demos"></a>Demos<a class="article-anchor" href="#Demos" aria-hidden="true"></a></h3><center>
+<iframe width="700" height="480" src="https://www.youtube.com/embed/WkdLgFr4_hw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</center>
+
+<center>
+<iframe width="700" height="480" src="https://www.youtube.com/embed/0a_iCahPTmE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</center>
+
+
+<center>
+<iframe width="700" height="480" src="https://www.youtube.com/embed/0TG4vyJSRY4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</center>
+
+
+<h2 id="Reference" class="article-heading"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:<a class="article-anchor" href="#Reference" aria-hidden="true"></a></h2><p>[1] Source: User guide <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.nxp.com/design/software/development-software/eiq-ml-development-environment/eiq-software-for-arm-nn-inference-engine:eIQArmNN">https://www.nxp.com/design/software/development-software/eiq-ml-development-environment/eiq-software-for-arm-nn-inference-engine:eIQArmNN</a></p>
+<p>[2] <a target="_blank" rel="noopener external nofollow noreferrer" href="https://community.nxp.com/t5/eIQ-Machine-Learning-Software/eIQ-Sample-Apps-Overview/ta-p/1122925">https://community.nxp.com/t5/eIQ-Machine-Learning-Software/eIQ-Sample-Apps-Overview/ta-p/1122925</a></p>
+</div>
+
+<style>
+.bullets ul li {
+    list-style-type: disc;
+ }
+ .bullets ol li {
+    list-style-type: decimal;
+ }
+ .table-wrapper {
+  overflow-x: scroll;
+}
+</style>
+
+
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2021-09-14T02:27:30.269Z" itemprop="dateModified">Last updated: 2021-09-14</time>
+                <a href="ExampleHowto.html" class="article-footer-prev" title="Examples & How-to"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CanderaCGIStudioPage.html" class="article-footer-next" title="CANDERA CGI Studio"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Welcome-to-the-era-of-Artificial-Intelligence"><span class="toc-text">Welcome to the era of Artificial Intelligence!!!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Accelerating-the-time-for-work"><span class="toc-text">Accelerating the time for work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Artificial-Intelligence-on-Modules-AIOM"><span class="toc-text">Artificial Intelligence on Modules (AIOM)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#eIQ-Machine-learning-Software"><span class="toc-text">eIQ Machine learning Software</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-innovations-based-on-daily-life"><span class="toc-text">AI innovations based on daily life</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Target-Applications"><span class="toc-text">Target Applications:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transfer-Learning"><span class="toc-text">Transfer Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#When-to-use-Transfer-Learning"><span class="toc-text">When to use Transfer Learning?</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-Cases-and-Benchmark"><span class="toc-text">Use Cases and Benchmark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Netron"><span class="toc-text">Netron</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-install-Netron"><span class="toc-text">How to install Netron</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-is-Netron-important"><span class="toc-text">Why is Netron important?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Future-innovation"><span class="toc-text">Future innovation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Demos"><span class="toc-text">Demos</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference:</span></a></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="HowToFlashImageSD" class="sidebar-link">Prepare your SD Card</a><a href="HowToFlashImageeMMC.html" class="sidebar-link">Prepare your eMMC</a></details></strong><strong class="sidebar-title"><details><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing on NPU</summary><a href="AIInferencingOnNPU.html" class="sidebar-link current first">AI Inferencing</a></details></strong><strong class="sidebar-title"><details><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/ADLINKTECH/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_smarc" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/channel/UC5N0wFxt_mPucg7CC2sZSLQ" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li></ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2021, <a href="/" title="">I-Pi SMARC</a></small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link current header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="HowToFlashImageSD" class="mobile-nav-link">Prepare your SD Card</a><a href="HowToFlashImageeMMC.html" class="mobile-nav-link">Prepare your eMMC</a></details></strong><strong class="mobile-nav-title"><details><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="AIInferencingOnNPU.html" class="mobile-nav-link current first">AI Inferencing</a></details></strong><strong class="mobile-nav-title"><details><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/SMARC/js/lang_select.js"></script>
+
+
+<script src="/SMARC/js/toc.js"></script>
+
+
+<script src="/SMARC/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="icon" href="https://xfii.b-cdn.net/uploads/i-pi-smarc/5ieu2go.jpg">
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.html">
+  <!-- Alternative links -->
+  
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/SMARC/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/SMARC//vendor/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/SMARC//vendor/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+  <script src="/SMARC//vendor/semantic/dist/semantic.min.js"></script>
+  <script src="/SMARC//vendor/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/SMARC/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/SMARC//css/font/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="How to Flash an Image to the SD CardThis procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the SD Card.  Flash Ubuntu or Debian Image  Flash Yocto or Android Image       Flash Ub">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="How to Flash an Image to the SD CardThis procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the SD Card.  Flash Ubuntu or Debian Image  Flash Yocto or Android Image       Flash Ub">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.assets/rufus_1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.assets/rufus_2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.assets/win32_1.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.assets/win32_2.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.assets/Boot_loadert.png">
+<meta property="article:published_time" content="2021-09-14T02:27:30.297Z">
+<meta property="article:modified_time" content="2021-09-14T02:27:30.297Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.assets/rufus_1.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      <img src="https://xfii.b-cdn.net/uploads/i-pi-smarc/5ieu2go.jpg" class="img-fluid" style="height:27px;top: 8px;position: relative;/* display: inline-block; */" alt="">  </a>
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link current header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <div class="bullets">
+
+<h1 id="How-to-Flash-an-Image-to-the-SD-Card" class="article-heading"><a href="#How-to-Flash-an-Image-to-the-SD-Card" class="headerlink" title="How to Flash an Image to the SD Card"></a>How to Flash an Image to the SD Card<a class="article-anchor" href="#How-to-Flash-an-Image-to-the-SD-Card" aria-hidden="true"></a></h1><p>This procedure describes how to flash <strong>Ubuntu/Debian/Yocto/Android</strong> image to the SD Card.</p>
+<ul>
+<li><p><a href="#Flash-Ubuntu-or-Debian-Image">Flash Ubuntu or Debian Image</a></p>
+</li>
+<li><p><a href="#Flash-Yocto-or-Android-Image">Flash Yocto or Android Image</a>    </p>
+</li>
+</ul>
+<h2 id="Flash-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flash-Ubuntu-or-Debian-Image" class="headerlink" title="Flash Ubuntu or Debian Image"></a>Flash Ubuntu or Debian Image<a class="article-anchor" href="#Flash-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<li>Download the prebuilt bootable Ubuntu image to the working directory on your development host.</li>
+<li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">rufus</a> to flash the image to the SD Card.</li>
+<li>In a Linux environment use <code>dd</code> command.</li>
+</ul>
+<p> <strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger. </p>
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
+<li>Insert an empty MicroSD Card into the development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.</li>
+</ol>
+<img src="HowToFlashImageSD.assets\rufus_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
+<ol start="2">
+<li>Press the <strong>SELECT</strong> button and browse to the .img file previously copied to your working directory on the development host. Then click <strong>START</strong> and wait for the process to be finished.</li>
+</ol>
+<img src="HowToFlashImageSD.assets\rufus_2.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<li><p>Copy the prebuilt bootable Ubuntu/Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</p>
+<p><strong>Warning</strong>: Make sure you first properly identify the SD Card device name as for example (/dev/sdb or /dev/sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your hosts OS.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure></li>
+<li><p>After dd has completed, enter the following command:</p>
+</li>
+</ol>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
+<p><strong>Note</strong>: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your <code>dd</code> command.</p>
+<h2 id="Flash-Yocto-or-Android-Image" class="article-heading"><a href="#Flash-Yocto-or-Android-Image" class="headerlink" title="Flash Yocto or Android Image"></a>Flash Yocto or Android Image<a class="article-anchor" href="#Flash-Yocto-or-Android-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
+<li><p>Copy the prebuilt bootable Yocto image to the working directory on your development host.</p>
+</li>
+<li><p>In Windows environments, please download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">Win32DiskImager</a> to flash the image to the SD Card.</p>
+<p><strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger.</p>
+</li>
+</ul>
+<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.</p>
+<ul>
+<li>The SD card device is automatically detected.</li>
+<li>Choose Image file by clicking on File explorer icon.</li>
+<li>Select the image form the downloaded directory of host computer, then click the <strong>Write</strong> button to start the process.</li>
+</ul>
+<img src="HowToFlashImageSD.assets\win32_1.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
+<p>* The tool will prompt to the user that data will be lost. Select “Yes” to continue</p>
+<ul>
+<li><p>Once done, click <strong>OK</strong> and and it will show the message that <strong>Write successful</strong>.</p>
+<img src="HowToFlashImageSD.assets\win32_2.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></li>
+<li><p>Eject the SD card and insert it into the target board and power on the board to boot up.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> If you want to use Linux development host for flashing <strong>Yocto/Android</strong>, you can use <code>dd</code> command as shown for <strong>Ubuntu/Debian</strong>.</p>
+<p>Make sure the boot loader on the carrier board is set according to the SD card or eMMC as you boot.</p>
+<img src="HowToFlashImageSD.assets\Boot_loadert.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
+
+</div> 
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2021-09-14T02:27:30.297Z" itemprop="dateModified">Last updated: 2021-09-14</time>
+                <a href="index.html" class="article-footer-next" title="UnBoxing"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Flash-an-Image-to-the-SD-Card"><span class="toc-text">How to Flash an Image to the SD Card</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Flash-Ubuntu-or-Debian-Image"><span class="toc-text">Flash Ubuntu or Debian Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flash-Yocto-or-Android-Image"><span class="toc-text">Flash Yocto or Android Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites-1"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host-1"><span class="toc-text">Windows Host</span></a></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="HowToFlashImageSD" class="sidebar-link">Prepare your SD Card</a><a href="HowToFlashImageeMMC.html" class="sidebar-link">Prepare your eMMC</a></details></strong><strong class="sidebar-title"><details><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details><summary>AI Inferencing on NPU</summary><a href="AIInferencingOnNPU.html" class="sidebar-link first">AI Inferencing</a></details></strong><strong class="sidebar-title"><details><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/ADLINKTECH/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_smarc" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/channel/UC5N0wFxt_mPucg7CC2sZSLQ" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li></ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2021, <a href="/" title="">I-Pi SMARC</a></small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link current header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="HowToFlashImageSD" class="mobile-nav-link">Prepare your SD Card</a><a href="HowToFlashImageeMMC.html" class="mobile-nav-link">Prepare your eMMC</a></details></strong><strong class="mobile-nav-title"><details><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details><summary>AI Inferencing on NPU</summary><a href="AIInferencingOnNPU.html" class="mobile-nav-link first">AI Inferencing</a></details></strong><strong class="mobile-nav-title"><details><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/SMARC/js/lang_select.js"></script>
+
+
+<script src="/SMARC/js/toc.js"></script>
+
+
+<script src="/SMARC/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
