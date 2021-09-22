@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/UnBoxing.html</loc>
+    
+    <lastmod>2021-09-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
     
     <lastmod>2021-09-22</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
     
     <lastmod>2021-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/index.html</loc>
-    
-    <lastmod>2021-09-14</lastmod>
     
   </url>
   
@@ -275,7 +275,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
@@ -439,6 +439,20 @@
     <loc>https://docs.ipi.wiki/404/index.html</loc>
     
     <lastmod>2021-09-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
+    
+    <lastmod>2021-06-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/index.html</loc>
+    
+    <lastmod>2021-06-01</lastmod>
     
   </url>
   

@@ -62,19 +62,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="What’s Inside the BoxBefore going to the setup or installation chapter please verify the contents of your package. Following items should be part of the kit. The standard set of I-Pi SMARC includes th">
+  <meta name="description" content="Introducing the I-Pi SMARCWhen microcontroller development platforms like the Arduino and Raspberry Pi (RPi) first appeared on the scene circa 2005 and 2012, respectively, they were generally regarded">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/index.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="What’s Inside the BoxBefore going to the setup or installation chapter please verify the contents of your package. Following items should be part of the kit. The standard set of I-Pi SMARC includes th">
+<meta property="og:description" content="Introducing the I-Pi SMARCWhen microcontroller development platforms like the Arduino and Raspberry Pi (RPi) first appeared on the scene circa 2005 and 2012, respectively, they were generally regarded">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/index.assets/box-content.png">
-<meta property="article:published_time" content="2021-09-14T07:19:14.088Z">
-<meta property="article:modified_time" content="2021-09-14T02:27:30.478Z">
+<meta property="article:published_time" content="2021-09-22T08:33:58.899Z">
+<meta property="article:modified_time" content="2021-06-01T09:22:01.622Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-px30/index.assets/box-content.png">
   <!-- Google Analytics -->
   
 <script>
@@ -128,29 +126,22 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h2 id="What’s-Inside-the-Box" class="article-heading"><a href="#What’s-Inside-the-Box" class="headerlink" title="What’s Inside the Box"></a>What’s Inside the Box<a class="article-anchor" href="#What’s-Inside-the-Box" aria-hidden="true"></a></h2><p>Before going to the setup or installation chapter please verify the contents of your package. Following items should be part of the kit. The standard set of I-Pi SMARC includes the following items:</p>
-<center>
-<img src="index.assets/box-content.png" alt="box-content" style="zoom:67%;">
-</center>
-1. Industrial I-Pi SMARC development kit containing the carrier and SMARC LEC-PX30 SoM pre-assembled in a chassis. <br>
-2. d12Vdc /2A Power adapter with barrel connector (picture illustrates the US version, an EU version is also available). <br>
-3. micro USB to Type A cable for OTG connection. <br>
-4. micro-SD card with adapter (32 GB). 
+                <h2 id="Introducing-the-I-Pi-SMARC" class="article-heading"><a href="#Introducing-the-I-Pi-SMARC" class="headerlink" title="Introducing the I-Pi SMARC"></a>Introducing the I-Pi SMARC<a class="article-anchor" href="#Introducing-the-I-Pi-SMARC" aria-hidden="true"></a></h2><p>When microcontroller development platforms like the Arduino and Raspberry Pi (RPi) first appeared on the scene circa 2005 and 2012, respectively, they were generally regarded as being of interest only to students, hobbyists, and makers.</p>
+<p>Over time, however, the open source nature of the hardware and software associated with these platforms – coupled with the huge hardware and software ecosystems that evolved around them – resulted in professional engineers using them as low-cost evaluation platforms for sensors, actuators, and peripherals, and as prototyping platforms for next-generation embedded systems and Internet of Things (IoT) devices.</p>
+<p>By the start of 2020, it was estimated that at least <strong>50 million</strong> RPi platforms had been sold in around ten different models/versions. By comparison, there are around 20 different Arduino platforms, some with multiple versions. Unfortunately, there is no accurate record as to how many Arduinos have been sold. If only “official” systems are counted, then the number of Arduinos is probably less than that for the RPi; if unofficial clones are also accounted for, however, then the number of Arduinos almost certainly exceeds that for RPi platforms.</p>
+<h3 id="Prototyping-to-Production-Problems" class="article-heading"><a href="#Prototyping-to-Production-Problems" class="headerlink" title="Prototyping to Production Problems"></a><strong>Prototyping to Production Problems</strong><a class="article-anchor" href="#Prototyping-to-Production-Problems" aria-hidden="true"></a></h3><p>Engineers are driven to create. Many engineers work with hardware and software in their own time, experimenting at home with peripherals and sensors, and developing prototype versions of potential products. Due to the low cost of entry, they often use Arduino or RPi development boards as their prototyping platforms of choice.</p>
+<p>In addition to the open source nature of these platforms, Arduino shields and RPi HATS are available with almost every sensor, actuator, and peripheral one can dream of.</p>
+<p>Unfortunately, problems arise when the efforts the engineers have undertaken at home arrive at work, at which time their prototypes need to be translated into industrial solutions. As one simple example, Arduino and RPi platforms are commercial products designed to support commercial temperature ranges and environments – they aren’t intended for use in hostile environments that feature shocks, vibration, noisy power supplies, high humidity, and extreme temperatures.</p>
+<p>Another issue is that the creators of products intended for the consumer market – like the Arduino and RPi development boards – are happy to change components and make substitutions as and when circumstances dictate (“these are both 10pF ceramic capacitors, so there won’t be a problem if we use them interchangeably”). This philosophy is unacceptable in the case of products intended for medical, industrial, or military use.</p>
+<p><em>The bottom line is that it simply is not possible to “drop” an Arduino or RPi prototype into a box and call it an industrial solution.</em></p>
+<p>By comparison, ADLINK’s I-Pi SMARC follows industry standard <strong>ECN</strong> (engineering change notice) and <strong>PCN</strong> (process change notice) practices, which means that end users have access to an audit trail that defines what changes, if any, have <em>been</em> made and why those changes <em>were</em> made. (ECNs are items that affect the fit, form, or function of the product; PCNs are changes to how the product is made.)</p>
+<p>There are, of course,  many existing industrial platforms available, but they each have different register maps and hardware interfaces when it comes to talking to things like general-purpose input/output (GPIO) pins, pulse-width modulator (PWM) functions, analog to digital converters (ADCs), digital to analog converters (DACs), and communication functions like I2C, SPI, UART, etc. This makes it difficult to take the software and drivers developed for an Arduino or RPi and migrate them to an industrial platform.</p>
+<p>The <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/eclipse/mraa">MRAA</a> (pronounced “em rah”) library on the I-Pu SMARC simplifies the logic for connecting to different sensor pins. In addition to allowing users to program in C++, Python, JavaScript, Java, MRAA is portable, thereby allowing the same code to be run on multiple platforms.</p>
 
-
-
-<br>
-
-<p><strong>Watch our unboxing video to find out more:</strong></p>
-<div class="contentiframe">
-
-<iframe class="responsive-iframe" width="100%" height="480" src="https://www.youtube.com/embed/JqBQaoybEgU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-</div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2021-09-14T02:27:30.478Z" itemprop="dateModified">Last updated: 2021-09-14</time>
-                <a href="UserInterfaces.html" class="article-footer-next" title="User Interfaces"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2021-06-01T09:22:01.622Z" itemprop="dateModified">Last updated: 2021-06-01</time>
+                <a href="UnBoxing.html" class="article-footer-next" title="UnBoxing"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -159,7 +150,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What%E2%80%99s-Inside-the-Box"><span class="toc-text">What’s Inside the Box</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introducing-the-I-Pi-SMARC"><span class="toc-text">Introducing the I-Pi SMARC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prototyping-to-Production-Problems"><span class="toc-text">Prototyping to Production Problems</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -168,7 +159,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link current first">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="DebianImages.html" class="sidebar-link">Debian</a><a href="HowToFlashImage.html" class="sidebar-link">Prepare your SD Card</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="sidebar-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="sidebar-link">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="sidebar-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link current first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="DebianImages.html" class="sidebar-link">Debian</a><a href="HowToFlashImage.html" class="sidebar-link">Prepare your SD Card</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="sidebar-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="sidebar-link">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="sidebar-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
   </div>
 </aside>
     </div>
@@ -214,7 +205,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link current first">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="DebianImages.html" class="mobile-nav-link">Debian</a><a href="HowToFlashImage.html" class="mobile-nav-link">Prepare your SD Card</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="mobile-nav-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="mobile-nav-link">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="mobile-nav-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link current first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="DebianImages.html" class="mobile-nav-link">Debian</a><a href="HowToFlashImage.html" class="mobile-nav-link">Prepare your SD Card</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="mobile-nav-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="mobile-nav-link">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="mobile-nav-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
     
   </div>
   
