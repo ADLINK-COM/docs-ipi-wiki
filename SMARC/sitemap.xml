@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
+    
+    <lastmod>2021-09-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/DebianImages.html</loc>
     
     <lastmod>2021-09-23</lastmod>
@@ -171,13 +178,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/MechanicalandThermal.html</loc>
-    
-    <lastmod>2021-09-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
