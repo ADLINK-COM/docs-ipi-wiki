@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/ava/COMHPC_BuildInstructions.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/ava/HowToBuildYocto.html">
   <!-- Alternative links -->
   
     
@@ -62,15 +62,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/COMe/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Project Quickstart This documentation explains how to quickly get started with the Yocto SCDP (BSP+EWAOL) project.  Build Host Setup Please Refer Yocto Project documentation for the list of essential">
+  <meta name="description" content="Yocto BSP build Instructions on AVA Developer PlatformThis documentation explains how to quickly get started with the Yocto BSP on AVA Developer Platform.  Build Host SetupPlease refer Yocto Project d">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/ava/COMHPC_BuildInstructions.html">
+<meta property="og:url" content="https://docs.ipi.wiki/ava/HowToBuildYocto.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Project Quickstart This documentation explains how to quickly get started with the Yocto SCDP (BSP+EWAOL) project.  Build Host Setup Please Refer Yocto Project documentation for the list of essential">
+<meta property="og:description" content="Yocto BSP build Instructions on AVA Developer PlatformThis documentation explains how to quickly get started with the Yocto BSP on AVA Developer Platform.  Build Host SetupPlease refer Yocto Project d">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-09-16T15:20:08.935Z">
-<meta property="article:modified_time" content="2021-09-15T03:06:18.000Z">
+<meta property="article:published_time" content="2021-09-27T02:23:26.859Z">
+<meta property="article:modified_time" content="2021-09-27T02:23:26.854Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -126,65 +126,49 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p><strong>Project Quickstart</strong></p>
-<p>This documentation explains how to quickly get started with the Yocto SCDP (BSP+EWAOL) project. </p>
-<p><strong>Build Host Setup</strong></p>
-<p>Please Refer Yocto Project documentation for the list of essential packages to be installed on the Build Host.</p>
-<p>ComHpc.yml contains build configs for kas , a tool for easily setting up bitbake based projects. ComHpc.yml will invoke/include the required YAML files present in meta-ewaol layer. </p>
-<p>On the Build Host, install the kas setup tool:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install --user kas</span><br></pre></td></tr></table></figure>
+                <h1 id="Yocto-BSP-build-Instructions-on-AVA-Developer-Platform" class="article-heading"><a href="#Yocto-BSP-build-Instructions-on-AVA-Developer-Platform" class="headerlink" title="Yocto BSP build Instructions on AVA Developer Platform"></a>Yocto BSP build Instructions on AVA Developer Platform<a class="article-anchor" href="#Yocto-BSP-build-Instructions-on-AVA-Developer-Platform" aria-hidden="true"></a></h1><p>This documentation explains how to quickly get started with the Yocto BSP on AVA Developer Platform. </p>
+<h2 id="Build-Host-Setup" class="article-heading"><a href="#Build-Host-Setup" class="headerlink" title="Build Host Setup"></a>Build Host Setup<a class="article-anchor" href="#Build-Host-Setup" aria-hidden="true"></a></h2><p>Please refer Yocto Project documentation for the list of essential packages to be installed on the Build Host.</p>
+<p><strong>Note:</strong> The Build Host machine should have at least 150 GBytes of free disk space for Building the Image.</p>
+<h3 id="Minimal-Image-Build" class="article-heading"><a href="#Minimal-Image-Build" class="headerlink" title="Minimal Image Build"></a>Minimal Image Build<a class="article-anchor" href="#Minimal-Image-Build" aria-hidden="true"></a></h3><p>This section describes how to build images for the Yocto BSP project for the following machines:</p>
+<p>The ArmV8.2 Base Ampere Altra machine, corresponding to the com-hpc MACHINE implemented in meta-adlink-ampere</p>
+<h3 id="Build-Instruction" class="article-heading"><a href="#Build-Instruction" class="headerlink" title="Build Instruction"></a>Build Instruction<a class="article-anchor" href="#Build-Instruction" aria-hidden="true"></a></h3><p>Checkout the meta-adlink-ampere and dependent repository </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mkdir -p ~/ava </span><br><span class="line">$ cd ~/ava </span><br><span class="line">$ git clone https://github.com/ADLINK/meta-adlink-ampere.git </span><br><span class="line">$ git clone https://git.yoctoproject.org/git/poky -b hardknott ./layers</span><br><span class="line">$ git clone https://github.com/openembedded/meta-openembedded.git -b hardknott ./layers</span><br><span class="line">$ git clone https://git.yoctoproject.org/git/meta-security -b hardknott ./layers</span><br><span class="line">$ git clone https://git.yoctoproject.org/git/meta-virtualization -b hardknott ./layers</span><br><span class="line">$ git clone https://git.yoctoproject.org/git/meta-arm -b hardknott ./layers</span><br></pre></td></tr></table></figure>
 
-
-<p>For more details on kas, see kas Introduction:</p>
-<p>Note: The Build Host machine should have at least 150 GBytes of free disk space for Building the Image.</p>
-<p><strong>Minimal Image Build via kas</strong></p>
-<p>This section describes how to build images for the Yocto SCDP (BSP+EWAOL) project for the<br>following machines:</p>
-<p> . The ArmV8 Base Ampere Altra machine,corresponding to the comhpc MACHINE implemented in meta-adlink-ampere</p>
-<p><strong>Build Instruction</strong></p>
-<p>checkout the meta-adlink-ampere repository </p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/scdp </span><br><span class="line">cd ~/scdp </span><br><span class="line">git clone https://github.com/ADLINK/meta-adlink-ampere.git </span><br></pre></td></tr></table></figure>
-
-
-<p>checkout the meta-adlink-ampere repository </p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd ~/scdp</span><br><span class="line">git clone &lt;meta-ewaol-repo-url&gt; -b v0.1</span><br></pre></td></tr></table></figure>
-
-<p><strong>Build for SCDP</strong></p>
-<p>To build the images via kas for the SCDP board:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd ~/scdp</span><br><span class="line">kas build meta-adlink-ampere/ComHpc.yml</span><br></pre></td></tr></table></figure>
+<p>Build for AVA</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd ~/ava</span><br><span class="line">$ TEMPLATECONF=$PWD/meta-adlink-ampere/conf/adlink-conf</span><br><span class="line">$ source layers/poky/oe-init-build-env </span><br><span class="line">$ bibtake core-image-base</span><br></pre></td></tr></table></figure>
 
 
 <p>The resulting images will be produced: </p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">build/tmp/deploy/images/comhpc/ewaol-image-docker-comhpc.wic</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">build/tmp/deploy/images/comhpc/core-image-base-comhpc.wic</span><br></pre></td></tr></table></figure>
 
-<p>The above can be boot on COMHPC-SCDP Board, login as <code>root</code> without password.</p>
-<p><strong>Prepare Bootable Medium</strong></p>
-<p>To install the binaries into USB Drive  ( Note : Ensure writing into USB is formatted before proceed installation )</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=ewaol-image-docker-comhpc.wic  of=/dev/sdX bs=1M ( X should be replaced with respect device like sda / sdc or sdd )</span><br><span class="line"></span><br><span class="line">For Example: ( USB Device  uses /dev/sda device node )</span><br><span class="line">sudo dd if=ewaol-image-docker-comhpc.wic  of=/dev/sda bs=1M</span><br></pre></td></tr></table></figure>
+<p>The above can be boot on AVA Developer Platform and login as <code>root</code> without password.</p>
+<h2 id="Prepare-Bootable-Medium" class="article-heading"><a href="#Prepare-Bootable-Medium" class="headerlink" title="Prepare Bootable Medium"></a>Prepare Bootable Medium<a class="article-anchor" href="#Prepare-Bootable-Medium" aria-hidden="true"></a></h2><p>To install the binaries into USB Drive  </p>
+<p><strong>Note :</strong> Ensure the USB is formatted before proceeding installation</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=core-image-base-comhpc.wic  of=/dev/sdX bs=1M ( X should be replaced with respect device like sda, sdc or sdd )</span><br><span class="line">For Example: ( USB Device  uses /dev/sda device node )</span><br><span class="line">$ sudo dd if=core-image-base-comhpc.wic  of=/dev/sda bs=1M</span><br></pre></td></tr></table></figure>
 
-<p>To Install the binaries into NVMe M.2 SSD </p>
-<p>Please create an USB drive Bootable as mentioned in above section.</p>
-<p>On plug the USB drive (Bootable drive) in Host system, you should see 3 partition mounted namely as below </p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">&lt;/media/&lt;local_directory&gt;/msdos</span><br><span class="line"></span><br><span class="line">&lt;/media/&lt;local_directory&gt;rootfs</span><br><span class="line"></span><br><span class="line">&lt;/media/&lt;local_directory&gt;/<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
+<h3 id="To-Install-the-binaries-into-NVMe-M-2-SSD" class="article-heading"><a href="#To-Install-the-binaries-into-NVMe-M-2-SSD" class="headerlink" title="To Install the binaries into NVMe M.2 SSD"></a>To Install the binaries into NVMe M.2 SSD<a class="article-anchor" href="#To-Install-the-binaries-into-NVMe-M-2-SSD" aria-hidden="true"></a></h3><p>Please create a USB drive Bootable as mentioned in the above section.</p>
+<p>Plug the USB drive (Bootable drive) in Host system, you should see 3 partition mounted namely as below </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;/media/&lt;local_directory&gt;/msdos&gt;</span><br><span class="line">&lt;/media/&lt;local_directory&gt;rootfs&gt;</span><br><span class="line">&lt;/media/&lt;local_directory&gt;/data&gt;</span><br></pre></td></tr></table></figure>
 
-<p>Copy the Images into “&lt;/media/<directory>/data”</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">sudo <span class="built_in">cp</span>  &lt;Yocto_Build_Directory&gt;/build/tmp/deploy/images/comhpc/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bz2 &lt;/media/&lt;directory&gt;/<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
+<p>Copy the Images into<code>&quot;&lt;/media/&lt;directory&gt;/data&gt;&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo cp &lt;Yocto_Build_Directory&gt;/build/tmp/deploy/images/comhpc/core-image-base-comhpc.wic.bz2 &lt;/media/&lt;directory&gt;/data&gt;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span>  &lt;Yocto_Build_Directory&gt;/build/tmp/deploy/images/comhpc/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bmap  &lt;/media/&lt;directory&gt;/<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo cp &lt;Yocto_Build_Directory&gt;/build/tmp/deploy/images/comhpc/core-image-base-comhpc.wic.bmap  &lt;/media/&lt;directory&gt;/data&gt;</span><br></pre></td></tr></table></figure>
 
-<p>Insert the USB drive  and Boot the Board ,login as “root” with NO password via VGA Display and create a “data” Directory</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span>  /</span><br><span class="line"></span><br><span class="line">mkdir <span class="keyword">data</span></span><br></pre></td></tr></table></figure>
+<p>Insert the USB drive and Boot the Board, login as “root” with NO password via VGA Display and create a “data” Directory</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd  /</span><br><span class="line">$ mkdir data</span><br></pre></td></tr></table></figure>
 
 <p>mount the 3rd partition of USB into “data” directory </p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mount</span> /dev/sda3  /<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mount /dev/sda3 /data</span><br></pre></td></tr></table></figure>
 
-<p>Flash the image to the target’s local drive using bmaptool</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">bmaptool <span class="built_in">copy</span> -<span class="literal">-bmap</span> /<span class="keyword">data</span>/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bmap /<span class="keyword">data</span>/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bz2 /dev/nvme0n1</span><br></pre></td></tr></table></figure>
+<p>Flash the image to the target’s NVMe M.2 SSD  drive using bmaptool</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ bmaptool copy --bmap /data/core-image-base-comhpc.wic.bmap /data/core-image-base-comhpc.wic.bz2 /dev/nvme0n1</span><br></pre></td></tr></table></figure>
 
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2021-09-15T03:06:18.000Z" itemprop="dateModified">Last updated: 2021-09-15</time>
-                <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2021-09-27T02:23:26.854Z" itemprop="dateModified">Last updated: 2021-09-27</time>
+                <a href="CentOSInstallation.html" class="article-footer-prev" title="CentOS"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
             </div>
@@ -193,7 +177,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Yocto-BSP-build-Instructions-on-AVA-Developer-Platform"><span class="toc-text">Yocto BSP build Instructions on AVA Developer Platform</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Build-Host-Setup"><span class="toc-text">Build Host Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Minimal-Image-Build"><span class="toc-text">Minimal Image Build</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Instruction"><span class="toc-text">Build Instruction</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-Bootable-Medium"><span class="toc-text">Prepare Bootable Medium</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#To-Install-the-binaries-into-NVMe-M-2-SSD"><span class="toc-text">To Install the binaries into NVMe M.2 SSD</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -202,7 +186,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="Unboxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="edk2-firmware-update.html" class="sidebar-link first">Updating EDK2-UEFI Firmware</a><a href="HowToBuildEDK2.html" class="sidebar-link">How to build EDK2</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="Unboxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="edk2-firmware-update.html" class="sidebar-link first">Updating EDK2-UEFI Firmware</a><a href="HowToBuildEDK2.html" class="sidebar-link">How to build EDK2</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link current first">How to Build Yocto</a></details></strong>
   </div>
 </aside>
     </div>
@@ -248,7 +232,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="Unboxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="edk2-firmware-update.html" class="mobile-nav-link first">Updating EDK2-UEFI Firmware</a><a href="HowToBuildEDK2.html" class="mobile-nav-link">How to build EDK2</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="Unboxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="edk2-firmware-update.html" class="mobile-nav-link first">Updating EDK2-UEFI Firmware</a><a href="HowToBuildEDK2.html" class="mobile-nav-link">How to build EDK2</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link current first">How to Build Yocto</a></details></strong>
     
   </div>
   
