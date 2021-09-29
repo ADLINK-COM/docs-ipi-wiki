@@ -114,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToCheckPowerReadingByIMPI.html</loc>
-    
-    <lastmod>2021-09-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
     
     <lastmod>2021-09-15</lastmod>
@@ -128,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashMMCFW.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToCheckPowerReadingByIMPI.html</loc>
     
     <lastmod>2021-09-15</lastmod>
     
@@ -136,6 +129,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
+    
+    <lastmod>2021-09-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashMMCFW.html</loc>
     
     <lastmod>2021-09-15</lastmod>
     
@@ -193,7 +193,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2021-09-28</lastmod>
+    <lastmod>2021-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
