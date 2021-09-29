@@ -62,24 +62,24 @@
   <!-- RSS -->
   <link rel="alternate" href="/COMHPC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to update the EDK II&#x2F;UEFI firmware  EDK II is a modern, feature-rich, cross-platform firmware development environment for the UEFI and UEFI Platform Initialization (PI) specifications. The below">
+  <meta name="description" content="How to update the EDK II&#x2F;UEFI firmware EDK II is a modern, feature-rich, cross-platform firmware development environment for the UEFI and UEFI Platform Initialization (PI) specifications.  The below">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ava/edk2-firmware-update.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to update the EDK II&#x2F;UEFI firmware  EDK II is a modern, feature-rich, cross-platform firmware development environment for the UEFI and UEFI Platform Initialization (PI) specifications. The below">
+<meta property="og:description" content="How to update the EDK II&#x2F;UEFI firmware EDK II is a modern, feature-rich, cross-platform firmware development environment for the UEFI and UEFI Platform Initialization (PI) specifications.  The below">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/esc-mac.png">
+<meta property="og:image" content="https://docs.ipi.wiki/Users/karamo/Downloads/ava%202/edk2-firmware-updating.assets/esc-mac.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/image-20210820144057452.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/image-20210820144506009.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/image-20210820144625909.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/image-20210820144916900.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/image-20210820145403960.png">
-<meta property="article:published_time" content="2021-09-28T05:36:53.182Z">
-<meta property="article:modified_time" content="2021-09-22T01:41:06.988Z">
+<meta property="article:published_time" content="2021-09-29T01:48:16.720Z">
+<meta property="article:modified_time" content="2021-09-29T01:37:31.000Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/ava/edk2-firmware-updating.assets/esc-mac.png">
+<meta name="twitter:image" content="https://docs.ipi.wiki/Users/karamo/Downloads/ava%202/edk2-firmware-updating.assets/esc-mac.png">
   <!-- Google Analytics -->
   
 <script>
@@ -134,59 +134,57 @@
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h1 id="How-to-update-the-EDK-II-UEFI-firmware" class="article-heading"><a href="#How-to-update-the-EDK-II-UEFI-firmware" class="headerlink" title="How to update the EDK II/UEFI firmware"></a>How to update the EDK II/UEFI firmware<a class="article-anchor" href="#How-to-update-the-EDK-II-UEFI-firmware" aria-hidden="true"></a></h1><div class="bullets">
+EDK II is a modern, feature-rich, cross-platform firmware development environment for the UEFI and UEFI Platform Initialization (PI) specifications.
 
-<p>EDK II is a modern, feature-rich, cross-platform firmware development environment for the UEFI and UEFI Platform Initialization (PI) specifications.</p>
 <p>The below  procedure describes how to flash and update the edk2 firmware using a UEFI Shell on AVA Developer Platform</p>
 <ol>
-<li><p>Click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Ampere/AVA/Firmware/EDK2_SCP/v1.07/EDK2-FWU-v1.07-20210811.zip">here</a> to download a zip files that includes the firmware update and a flashing tool. </p>
+<li><p>Click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Ampere/COM-HPC-ALT/EDK2-SCP-FW/1.07/EDK2-FWU-v1.07-20210811.zip">here</a> to download a zip file that includes both the firmware update and flashing tool. </p>
 </li>
-<li><p>Unzip the file and copy the files to the root directory of an empty USB drive with standard FAT32 format</p>
+<li><p>Unzip the file and copy the files to the root directory of an empty USB drive formatted in FAT32</p>
 <p><strong>Warning</strong>: Data loss may result if written to the wrong device or in the worst case you kill your host OS.</p>
 </li>
 <li><p>Insert the USB drive to AVA Developer Platform and power on the system.</p>
 </li>
 <li><p>It takes around 35 to 40 seconds after power on for the below screen to appear, </p>
-<p>when it appears Press <img src="edk2-firmware-updating.assets/esc-mac.png" alt="Esc icon in iOS Style" style="zoom: 40%;">key several times to enter the edk2 setup menu</p>
+<p>when it appears Press <img src="/Users/karamo/Downloads/ava 2/edk2-firmware-updating.assets/esc-mac.png" alt="Esc icon in iOS Style" style="zoom: 40%;">key several times to enter the edk2 setup menu</p>
 </li>
 </ol>
  <img src="edk2-firmware-updating.assets/image-20210820144057452.png" alt="image-20210820144057452" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
 
 
 
-<ol start="4">
+<ol start="5">
 <li>After entering the boot menu, the options will appear as the below</li>
 </ol>
  <img src="edk2-firmware-updating.assets/image-20210820144506009.png" alt="image-20210820144506009" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
 
 
 
-<ol start="5">
+<ol start="6">
 <li>Go to the sub-menu of <strong>[Boot Manager]</strong> and Select to boot from <strong>[UEFl Shell]</strong></li>
 </ol>
  <img src="edk2-firmware-updating.assets/image-20210820144625909.png" alt="image-20210820144625909" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
 
 
 
-<ol start="6">
+<ol start="7">
 <li>The USB drive  will appear with device name: <strong>FS0</strong> on the block device map </li>
 </ol>
  <img src="edk2-firmware-updating.assets/image-20210820144916900.png" alt="image-20210820144916900" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
 
-
-<ol start="7">
-<li><p>Change to FS0, list the contents and execute the update  </p>
+<ol start="8">
+<li>Change to FS0, list the contents and execute the update  </li>
+</ol>
 <blockquote>
 <p>Shell&gt; FS0:   </p>
 <p>FS0:\&gt; ls</p>
 <p>FS0:\&gt; fwu.nsh</p>
 </blockquote>
-</li>
-</ol>
  <img src="edk2-firmware-updating.assets/image-20210820145403960.png" alt="image-20210820145403960" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
 
 
 
-<ol start="8">
+<ol start="9">
 <li>After the flash process has concluded (100%) power down and reboot the system</li>
 </ol>
 </div>
