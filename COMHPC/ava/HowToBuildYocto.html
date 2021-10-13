@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="Yocto BSP build Instructions on AVA Developer Platform  This documentation explains how to quickly get started with the Yocto BSP with SOAFEE on AVA Developer Platform.  Build Host SetupSOAFEE - Scala">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-13T02:22:57.261Z">
-<meta property="article:modified_time" content="2021-10-13T02:22:57.256Z">
+<meta property="article:published_time" content="2021-10-13T07:33:55.366Z">
+<meta property="article:modified_time" content="2021-10-13T07:33:55.266Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -136,21 +136,8 @@
 <li>ADLINK AVA-AP1 Platform is a ruggedized version with I/O to support a full sensor suite for in-vehicle prototyping and testing.</li>
 </ul>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gitlab.arm.com/soafee/working-groups/-/blob/main/groups/ecosystem/SOAFEE_reference/R1/ava_dev_platform_soafee_bringup.md">Click here</a> to build and deploy a baseline Poky Linux image on the ADLINK AVA Development Platform.</p>
-<p>Please refer Yocto Project documentation for the list of essential packages to be installed on the Build Host.</p>
 <p><strong>Note:</strong> The Build Host machine should have at least 150 GBytes of free disk space for Building the Image.</p>
-<h3 id="Minimal-Image-Build" class="article-heading"><a href="#Minimal-Image-Build" class="headerlink" title="Minimal Image Build"></a>Minimal Image Build<a class="article-anchor" href="#Minimal-Image-Build" aria-hidden="true"></a></h3><p>This section describes how to build images for the Yocto BSP project for the following machines:</p>
-<p>The ArmV8.2 Base Ampere Altra machine, corresponding to the com-hpc MACHINE implemented in meta-adlink-ampere</p>
-<h3 id="Build-Instruction" class="article-heading"><a href="#Build-Instruction" class="headerlink" title="Build Instruction"></a>Build Instruction<a class="article-anchor" href="#Build-Instruction" aria-hidden="true"></a></h3><p>Checkout the meta-adlink-ampere and dependent repository </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mkdir -p ~/ava </span><br><span class="line">$ cd ~/ava </span><br><span class="line">$ git clone https://github.com/ADLINK/meta-adlink-ampere.git </span><br><span class="line">$ git clone https://git.yoctoproject.org/git/poky -b hardknott ./layers</span><br><span class="line">$ git clone https://github.com/openembedded/meta-openembedded.git -b hardknott ./layers</span><br><span class="line">$ git clone https://git.yoctoproject.org/git/meta-security -b hardknott ./layers</span><br><span class="line">$ git clone https://git.yoctoproject.org/git/meta-virtualization -b hardknott ./layers</span><br><span class="line">$ git clone https://git.yoctoproject.org/git/meta-arm -b hardknott ./layers</span><br></pre></td></tr></table></figure>
-
-<p>Build for AVA</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd ~/ava</span><br><span class="line">$ TEMPLATECONF=$PWD/meta-adlink-ampere/conf/adlink-conf</span><br><span class="line">$ source layers/poky/oe-init-build-env </span><br><span class="line">$ bibtake core-image-base</span><br></pre></td></tr></table></figure>
-
-
-<p>The resulting images will be produced: </p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">build/tmp/deploy/images/comhpc/core-image-base-comhpc.wic</span><br></pre></td></tr></table></figure>
-
-<p>The above can be boot on AVA Developer Platform and login as <code>root</code> without password.</p>
+<p>The above image can be boot on AVA Developer Platform and login as <code>root</code> without password.</p>
 <h2 id="Prepare-Bootable-Medium" class="article-heading"><a href="#Prepare-Bootable-Medium" class="headerlink" title="Prepare Bootable Medium"></a>Prepare Bootable Medium<a class="article-anchor" href="#Prepare-Bootable-Medium" aria-hidden="true"></a></h2><p>To install the binaries into USB Drive  </p>
 <p><strong>Note :</strong> Ensure the USB is formatted before proceeding installation</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=core-image-base-comhpc.wic  of=/dev/sdX bs=1M ( X should be replaced with respect device like sda, sdc or sdd )</span><br><span class="line">For Example: ( USB Device  uses /dev/sda device node )</span><br><span class="line">$ sudo dd if=core-image-base-comhpc.wic  of=/dev/sda bs=1M</span><br></pre></td></tr></table></figure>
@@ -176,7 +163,7 @@
 </div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2021-10-13T02:22:57.256Z" itemprop="dateModified">Last updated: 2021-10-13</time>
+                <time class="article-footer-updated" datetime="2021-10-13T07:33:55.266Z" itemprop="dateModified">Last updated: 2021-10-13</time>
                 <a href="CentOSInstallation.html" class="article-footer-prev" title="CentOS"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
@@ -186,7 +173,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Yocto-BSP-build-Instructions-on-AVA-Developer-Platform"><span class="toc-text">Yocto BSP build Instructions on AVA Developer Platform</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Build-Host-Setup"><span class="toc-text">Build Host Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Minimal-Image-Build"><span class="toc-text">Minimal Image Build</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Instruction"><span class="toc-text">Build Instruction</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-Bootable-Medium"><span class="toc-text">Prepare Bootable Medium</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#To-Install-the-binaries-into-NVMe-M-2-SSD"><span class="toc-text">To Install the binaries into NVMe M.2 SSD</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Yocto-BSP-build-Instructions-on-AVA-Developer-Platform"><span class="toc-text">Yocto BSP build Instructions on AVA Developer Platform</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Build-Host-Setup"><span class="toc-text">Build Host Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-Bootable-Medium"><span class="toc-text">Prepare Bootable Medium</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#To-Install-the-binaries-into-NVMe-M-2-SSD"><span class="toc-text">To Install the binaries into NVMe M.2 SSD</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
