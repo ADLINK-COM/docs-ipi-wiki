@@ -1,1 +1,1 @@
-!function(){"use strict";function e(){var e=this.value,t=this.dataset.canonical;"en"===e&&(e=""),e&&(e+="/"),location.href="/COMe/"+e+t}document.getElementById("lang-select").addEventListener("change",e),document.getElementById("mobile-lang-select").addEventListener("change",e)}();
+!function(){"use strict";function e(){var e=this.value,t=this.dataset.canonical;"en"===e&&(e=""),e&&(e+="/"),location.href="/COMHPC/"+e+t}document.getElementById("lang-select").addEventListener("change",e),document.getElementById("mobile-lang-select").addEventListener("change",e)}();
