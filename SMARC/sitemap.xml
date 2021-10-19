@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/DebianImages.html</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
     
     <lastmod>2021-09-23</lastmod>
@@ -135,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/PinoutSummary.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/PinoutSummary.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
@@ -184,14 +205,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToInstallMRAAUPM.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToInstallMRAAUPM.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
@@ -219,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUboot.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
@@ -296,13 +317,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/FlashingUbuntuDebianImageintoMicroSD.html</loc>
-    
-    <lastmod>2021-09-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CarrierModuleandeIQMachinelearningsoftware.html</loc>
     
     <lastmod>2021-09-14</lastmod>
@@ -310,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/FlashingUbuntuDebianImageintoMicroSD.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
@@ -394,21 +408,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/DebianImages.html</loc>
-    
-    <lastmod>2021-09-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
-    
-    <lastmod>2021-09-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
     
     <lastmod>2021-09-14</lastmod>
     
@@ -459,7 +459,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2021-09-29</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
