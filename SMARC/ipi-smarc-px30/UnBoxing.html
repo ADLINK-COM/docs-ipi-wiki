@@ -60,7 +60,7 @@
           page = page.replace(/\.[^/.]+$/, ""); //Remove .html so we get page
           let currentHref = window.top.location.href; //Get the current windows location
           //console.log(window.location.hostname+'/docs?page='+page);
-          window.top.location.href = 'https://docs.ipi.wiki/SMARC/ipi-smarc-px30/px30-docs?page='+page; //Set the current window (not the frame) location
+          window.top.location.href = 'https://www.ipi.wiki/pages/px30-docs?page='+page; //Set the current window (not the frame) location
           e.preventDefault();
       });
   });
