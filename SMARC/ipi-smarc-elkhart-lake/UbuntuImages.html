@@ -62,20 +62,20 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="​       Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)it will guide you through the steps to install Ubuntu Desktop on your system.   Current limitations:  unable to enable for two Etherne">
+  <meta name="description" content="Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)It will guide you through the steps to install Ubuntu Desktop on your system.    Current Limitations:  unable to enable for two Etherne">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="​       Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)it will guide you through the steps to install Ubuntu Desktop on your system.   Current limitations:  unable to enable for two Etherne">
+<meta property="og:description" content="Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)It will guide you through the steps to install Ubuntu Desktop on your system.    Current Limitations:  unable to enable for two Etherne">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.assets/ubuntu_logo_hex.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.assets/image-20211228104634806.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.assets/pasted%20image%200.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.assets/pasted%20image%200%20(1).png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.assets/2021-12-28_112602.png">
-<meta property="article:published_time" content="2021-12-28T05:59:12.588Z">
-<meta property="article:modified_time" content="2021-12-28T05:59:12.588Z">
+<meta property="article:published_time" content="2021-12-28T09:11:18.267Z">
+<meta property="article:modified_time" content="2021-12-28T09:11:18.267Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImages.assets/ubuntu_logo_hex.png">
@@ -133,14 +133,17 @@
               </header>
               <div class="article-content" itemprop="articleBody">
                 <img src="UbuntuImages.assets\ubuntu_logo_hex.png" alt="ubuntu_logo_hex" style="zoom:70%;" align="right">
+
+<br> 
+
 <div class="bullets">
-​    
 
 
-<h1 id="Ubuntu-Focal-Fossa-20-04-3-LTS-with-Intel-Elkhart-Lake" class="article-heading"><a href="#Ubuntu-Focal-Fossa-20-04-3-LTS-with-Intel-Elkhart-Lake" class="headerlink" title="Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)"></a>Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)<a class="article-anchor" href="#Ubuntu-Focal-Fossa-20-04-3-LTS-with-Intel-Elkhart-Lake" aria-hidden="true"></a></h1><p>it will guide you through the steps to install Ubuntu Desktop on your system.</p>
-<p>  Current limitations:</p>
+
+<h1 id="Ubuntu-Focal-Fossa-20-04-3-LTS-with-Intel-Elkhart-Lake" class="article-heading"><a href="#Ubuntu-Focal-Fossa-20-04-3-LTS-with-Intel-Elkhart-Lake" class="headerlink" title="Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)"></a>Ubuntu Focal Fossa 20.04.3 LTS (with Intel Elkhart Lake)<a class="article-anchor" href="#Ubuntu-Focal-Fossa-20-04-3-LTS-with-Intel-Elkhart-Lake" aria-hidden="true"></a></h1><p>It will guide you through the steps to install Ubuntu Desktop on your system. </p>
+<p>  Current Limitations:</p>
 <ul>
-<li><p>unable to enable for two Ethernet ports. ( Canonical suggest an workaround solution and <a href="UbuntuImages.html#How-to-enable-two-Ethernet-Ports">click here</a> )</p>
+<li><p>unable to enable for two Ethernet ports. ( Canonical suggests the workaround solution and <a href="UbuntuImages.html#How-to-enable-two-Ethernet-Ports">click here</a> )</p>
 </li>
 <li><p>pinctrl driver can not work to control GPIO pins ( Waiting for Canonical solution)</p>
 </li>
@@ -149,7 +152,8 @@
 </ul>
 <br>
 
-<h2 id="Download-an-Ubuntu-Image" class="article-heading"><a href="#Download-an-Ubuntu-Image" class="headerlink" title="Download an Ubuntu Image"></a>Download an Ubuntu Image<a class="article-anchor" href="#Download-an-Ubuntu-Image" aria-hidden="true"></a></h2><p>you can download an Ubuntu image <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/">here</a>. (<strong>Make sure to select the correct one</strong>: <em><strong>focal-desktop-amd64+intel-iot.iso</strong></em>)</p>
+<h2 id="Download-an-Ubuntu-Image" class="article-heading"><a href="#Download-an-Ubuntu-Image" class="headerlink" title="Download an Ubuntu Image"></a>Download an Ubuntu Image<a class="article-anchor" href="#Download-an-Ubuntu-Image" aria-hidden="true"></a></h2><p>You can download an Ubuntu image (<strong>kernel version: 5.13</strong>) <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/">here</a>. </p>
+<p>Make sure to select the correct one: <strong>focal-desktop-amd64+intel-iot.iso</strong></p>
 <p><img src="UbuntuImages.assets/image-20211228104634806.png" alt="image-20211228104634806"></p>
 <h2 id="Create-a-Bootable-USB-stick" class="article-heading"><a href="#Create-a-Bootable-USB-stick" class="headerlink" title="Create a Bootable USB stick"></a>Create a Bootable USB stick<a class="article-anchor" href="#Create-a-Bootable-USB-stick" aria-hidden="true"></a></h2><p>To install Ubuntu Desktop, you need to write your downloaded ISO to a USB stick to create the installation media. you’ll use rufus to download and Install tool: <a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/PreparingabootableUSBdrive.html">click here</a> to see the steps.</p>
 <h2 id="Boot-from-USB-flash-drive" class="article-heading"><a href="#Boot-from-USB-flash-drive" class="headerlink" title="Boot from USB flash drive"></a>Boot from USB flash drive<a class="article-anchor" href="#Boot-from-USB-flash-drive" aria-hidden="true"></a></h2><p>Insert the USB flash drive into the IPi SMARC Elkhart Lake and boot or restart the device. It should recognize the installation media automatically. If not, try holding <strong>F10</strong> during startup and selecting the USB device from the system-specific boot menu. also go <a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/biossettings.html">here</a> to see how to boot from USB drive </p>
@@ -173,7 +177,7 @@
 </div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2021-12-28T05:59:12.588Z" itemprop="dateModified">Last updated: 2021-12-28</time>
+                <time class="article-footer-updated" datetime="2021-12-28T09:11:18.267Z" itemprop="dateModified">Last updated: 2021-12-28</time>
                 <a href="biossettings.html" class="article-footer-prev" title="BIOS Settings"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
