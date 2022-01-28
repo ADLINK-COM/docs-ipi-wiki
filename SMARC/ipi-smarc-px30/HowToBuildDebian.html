@@ -115,7 +115,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>parent.postMessage( {msg: 'MessageFromIframePage'}, '*');</script>
+	    window.addEventListener('message', function(e) {if (e.origin !== 'https://www.ipi.wiki/pages/px30-docs' return; let data = e.data; let mmss = data.time.toISOString().substr(14, 5);let li = document.createElement('li'); li.innerText = mmss + ' ' + data.msg;document.getElementById('m').appendChild(li);let srcWin = e.source;srcWin.postMessage('ACK for ' + mmss, e.origin);});
 
 	</div>
 	
