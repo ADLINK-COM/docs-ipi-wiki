@@ -115,7 +115,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script> window.onload = function() {window.parent.postMessage( 'YES, I'm from iframe', '*');}</script>
+	    <script>parent.postMessage( {msg: 'MessageFromIframePage'}, '*');</script>
 
 	</div>
 	
