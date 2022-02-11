@@ -11,9 +11,9 @@
   <!-- Canonical links -->
   <link rel="canonical" href="https://docs.ipi.wiki/ava/HowToFlashAllFW.html">
   <!-- Alternative links -->
-
-
-
+  
+    
+  
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
   <style>
@@ -52,7 +52,7 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-
+  
 <link rel="stylesheet" href="/COMHPC/css/navy.css">
 
   <!-- endbuild -->
@@ -62,19 +62,19 @@
   <!-- RSS -->
   <link rel="alternate" href="/COMHPC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="The preferred firmware combination is below     Firmware Preferred Preferred Description    edk2 1.07.300.02 1. USB key booting fix2. NVRAM USB fix    3. RESET &#x2F; soft Poweroff fix &lt;br &#x2F;   ATF 1.08">
+  <meta name="description" content="Combination of the preferred firmware      Firmware Preferred Preferred Description    edk2 1.07.300.02 - USB key booting fix- NVRAM USB fix    - RESET &#x2F; soft Poweroff fix    ATF 1.08 Use latest 1.08">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ava/HowToFlashAllFW.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="The preferred firmware combination is below     Firmware Preferred Preferred Description    edk2 1.07.300.02 1. USB key booting fix2. NVRAM USB fix    3. RESET &#x2F; soft Poweroff fix &lt;br &#x2F;   ATF 1.08">
+<meta property="og:description" content="Combination of the preferred firmware      Firmware Preferred Preferred Description    edk2 1.07.300.02 - USB key booting fix- NVRAM USB fix    - RESET &#x2F; soft Poweroff fix    ATF 1.08 Use latest 1.08">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-01-13T04:58:36.153Z">
-<meta property="article:modified_time" content="2022-01-13T04:58:36.153Z">
+<meta property="article:published_time" content="2022-02-11T06:13:45.207Z">
+<meta property="article:modified_time" content="2022-02-11T06:13:45.207Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
-
+  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -85,7 +85,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 6.0.0"></head>
 
 <body>
   <div id="container">
@@ -100,13 +100,16 @@
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
       <div style="display:inline-block"><div class="btn-group"><a href="/COMHPC/ava/" class="main-nav-link current header">menu.AVA</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
-      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashAllFW.html'}, '*');}</script>
 
-    <div id = "changeurl">
-  	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashAllFW.html'}, '*');}</script>
+	</div>
+	
 
-  	</div>
+	
 
 
     <a id="mobile-nav-toggle">
@@ -129,7 +132,9 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>The preferred firmware combination is below </p>
+                <h2 id="Combination-of-the-preferred-firmware" class="article-heading"><a href="#Combination-of-the-preferred-firmware" class="headerlink" title="Combination of the preferred firmware"></a>Combination of the preferred firmware<a class="article-anchor" href="#Combination-of-the-preferred-firmware" aria-hidden="true"></a></h2><div class="bullets">
+
+
 <table>
 <thead>
 <tr>
@@ -141,7 +146,7 @@
 <tbody><tr>
 <td>edk2</td>
 <td>1.07.300.02</td>
-<td>1. USB key booting fix<br />2. NVRAM USB fix    <br />3. RESET / soft Poweroff fix &lt;br /</td>
+<td>- USB key booting fix<br>- NVRAM USB fix    <br>- RESET / soft Poweroff fix <br></td>
 </tr>
 <tr>
 <td>ATF</td>
@@ -151,7 +156,7 @@
 <tr>
 <td>SCP</td>
 <td>1.07</td>
-<td>Altough 1.08 is availabe we have to downgrade to 1.07 to enable support for up to 6 DIMMs<br /> 1.08 only supports 2 controllers (DIMMs)</td>
+<td>- Although 1.08 is available we have to downgrade to 1.07 to enable support for up to 6 DIMMs<br>   <strong>Note: 1.08 only supports 2 controllers (DIMMs)</strong></td>
 </tr>
 <tr>
 <td>MMC</td>
@@ -160,36 +165,36 @@
 </tr>
 <tr>
 <td>BMC</td>
-<td>1.04</td>
-<td>1.04 is the first revision that activates the BMC LAN<br />An active BMC LAN is needed for OOBC flashing of the MMC on the module</td>
+<td>1.04b</td>
+<td>- <strong>1.04</strong> is the first revision that activates the BMC LAN. An active BMC LAN is needed for OOBC flashing of the MMC on the module<br>- Remove BMC virtual USB devices would appear on EDK2</td>
 </tr>
 <tr>
 <td>OS</td>
-<td>Ubuntu 2.04.3 <br />with HWE 5.11</td>
-<td>1. HWE has best support for the Intel Quad 10GbE LAN add on card<br />2. Login system name : <strong>comhpcalt</strong>  <br />    username : <strong>adlink</strong><br />    password (root) : <strong>adlink123</strong></td>
+<td>Ubuntu 2.04.3 <br>with HWE 5.11</td>
+<td>- HWE has best support for the Intel Quad 10GbE LAN add on card<br>- Login system name : <strong>comhpcalt</strong>  <br>     1) username : <strong>adlink</strong><br>     2) password (root) : <strong>adlink123</strong></td>
 </tr>
 </tbody></table>
 <p>Below is the sequence we suggest to follow to update firmware : </p>
 <ol>
-<li><strong>If the BMC has no LAN support than replace the two BMC SPI flash chips with a newer version that you should receive through postal mail from ADLINK</strong>: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToReplaceBMCROM.md">https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToReplaceBMCROM.md</a></li>
-<li><strong>MMC FW update</strong>: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToFlashMMCFW.md">https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToFlashMMCFW.md</a></li>
-<li><strong>EDK2 FW update</strong>: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToUpdateEDK2SCP.md">https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToUpdateEDK2SCP.md</a></li>
-<li><strong>SCP FW update</strong>: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToUpdateEDK2SCP.md">https://github.com/ADLINK/docs.scdp/blob/main/source/ava/HowToUpdateEDK2SCP.md</a></li>
+<li><strong>If the BMC has no LAN support than replace the two BMC SPI flash chips with a newer version that you should receive through postal mail from ADLINK</strong>: <a href="HowToReplaceBMCROM.html">click here</a></li>
+<li><strong>MMC FW update</strong>:  <a href="HowToFlashMMCFW.html">click here</a> </li>
+<li><strong>EDK2 FW update</strong>: <a href="HowToUpdateEDK2SCP.html">click here</a> </li>
+<li><strong>SCP FW update</strong>: <a href="HowToUpdateEDK2SCP.html#To-flash-SCP-firmware">click here</a> </li>
 </ol>
-
+</div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-01-13T04:58:36.153Z" itemprop="dateModified">Last updated: 2022-01-13</time>
-                <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2022-02-11T06:13:45.207Z" itemprop="dateModified">Last updated: 2022-02-11</time>
+                <a href="CarrierIntroduction.html" class="article-footer-prev" title="Carrier Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowDualSPIROMWorks.html" class="article-footer-next" title="BMC Firmware Failover"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
-
+              
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Combination-of-the-preferred-firmware"><span class="toc-text">Combination of the preferred firmware</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -198,7 +203,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="Unboxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowToUpdateEDK2SCP.html" class="sidebar-link first">Updating EDK2/SCP Firmware</a><a href="HowToBuildEDK2.html" class="sidebar-link">How to build EDK2</a><a href="HowToReplaceBMCROM.html" class="sidebar-link">How to replace BMC flash chips</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="Unboxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowToFlashAllFW.html" class="sidebar-link current first">How to Update Firmwares</a><a href="HowDualSPIROMWorks.html" class="sidebar-link">BMC Firmware Failover</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong>
   </div>
 </aside>
     </div>
@@ -243,11 +248,11 @@
       <a href="/COMHPC/ava/" class="mobile-nav-link current header">menu.AVA</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
-
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="Unboxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowToUpdateEDK2SCP.html" class="mobile-nav-link first">Updating EDK2/SCP Firmware</a><a href="HowToBuildEDK2.html" class="mobile-nav-link">How to build EDK2</a><a href="HowToReplaceBMCROM.html" class="mobile-nav-link">How to replace BMC flash chips</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong>
-
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="Unboxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowToFlashAllFW.html" class="mobile-nav-link current first">How to Update Firmwares</a><a href="HowDualSPIROMWorks.html" class="mobile-nav-link">BMC Firmware Failover</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong>
+    
   </div>
-
+  
 
 </nav>
   <!-- Scripts -->
