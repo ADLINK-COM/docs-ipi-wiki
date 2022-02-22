@@ -11,9 +11,9 @@
   <!-- Canonical links -->
   <link rel="canonical" href="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/PreparingabootableUSBdrive.html">
   <!-- Alternative links -->
-
-
-
+  
+    
+  
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
   <style>
@@ -52,7 +52,7 @@
   </script>
 
   <!-- build:css build/css/navy.css -->
-
+  
 <link rel="stylesheet" href="/SMARC/css/navy.css">
 
   <!-- endbuild -->
@@ -71,13 +71,13 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/Preparingabootableusbdrive.assets/rufus_2.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/Preparingabootableusbdrive.assets/win32_2.png">
-<meta property="article:published_time" content="2021-12-28T02:37:18.772Z">
-<meta property="article:modified_time" content="2021-12-28T02:37:18.772Z">
+<meta property="article:published_time" content="2022-02-04T08:57:37.781Z">
+<meta property="article:modified_time" content="2022-02-04T08:57:37.781Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/Preparingabootableusbdrive.assets/rufus_2.png">
   <!-- Google Analytics -->
-
+  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -103,14 +103,16 @@
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
       <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
-      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html'}, '*');}</script>
 
-    <div id = "changeurl">
-        <script>window.onload = function() {parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html'}, '*');}</script>
+	</div>
+	
 
-    </div>
-
+	
 
 
     <a id="mobile-nav-toggle">
@@ -133,16 +135,16 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="Preparing-a-bootable-USB-drive" class="article-heading"><a href="#Preparing-a-bootable-USB-drive" class="headerlink" title="Preparing a bootable USB drive"></a>Preparing a bootable USB drive<a class="article-anchor" href="#Preparing-a-bootable-USB-drive" aria-hidden="true"></a></h1><p>This procedure describes how to Flash the OS into USB drive and make it as an installation medium</p>
+                <h1 id="Preparing-a-bootable-USB-drive" class="article-heading"><a href="#Preparing-a-bootable-USB-drive" class="headerlink" title="Preparing a bootable USB drive"></a>Preparing a bootable USB drive<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Preparing-a-bootable-USB-drive'}, '*');" class="article-anchor" href="#Preparing-a-bootable-USB-drive" aria-hidden="true"></a></h1><p>This procedure describes how to Flash the OS into USB drive and make it as an installation medium</p>
 <div class="bullets">
 
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li>Download the prebuilt bootable image to the working directory on your development host  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/focal-desktop-amd64+intel-iot.iso">click here (20211227 build)</a>. </li>
 <li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">Rufus</a> / <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">Win32DiskImager</a> to flash the image to the USB drive. (Rufus is flashing tool for <strong>.iso</strong> format and Win32DiskImager is flashing tool for <strong>.wic</strong> format)</li>
 <li>In a Linux environment use <code>dd</code> command.</li>
 </ul>
 <p><strong>Note:</strong> All files will be erased on the USB drive. The size should be preferable 16 GB or larger.</p>
-<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><h4 id="Rufus-as-Flashing-tool" class="article-heading"><a href="#Rufus-as-Flashing-tool" class="headerlink" title="Rufus as Flashing tool"></a>Rufus as Flashing tool<a class="article-anchor" href="#Rufus-as-Flashing-tool" aria-hidden="true"></a></h4><ol>
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><h4 id="Rufus-as-Flashing-tool" class="article-heading"><a href="#Rufus-as-Flashing-tool" class="headerlink" title="Rufus as Flashing tool"></a>Rufus as Flashing tool<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Rufus-as-Flashing-tool'}, '*');" class="article-anchor" href="#Rufus-as-Flashing-tool" aria-hidden="true"></a></h4><ol>
 <li><p>Insert an empty USB card into the development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.</p>
 </li>
 <li><p>Press the <strong>SELECT</strong> button and browse to the .iso file previously downloaded to your working directory on the development host. Then click <strong>START</strong> and wait for the process to be finished.</p>
@@ -152,7 +154,7 @@
 
 
 
-<h4 id="Win32DiskImager-as-Flashing-tool" class="article-heading"><a href="#Win32DiskImager-as-Flashing-tool" class="headerlink" title="Win32DiskImager as Flashing tool"></a>Win32DiskImager as Flashing tool<a class="article-anchor" href="#Win32DiskImager-as-Flashing-tool" aria-hidden="true"></a></h4><p>Insert an empty USB drive into the development host and execute the Win32DiskImager tool.</p>
+<h4 id="Win32DiskImager-as-Flashing-tool" class="article-heading"><a href="#Win32DiskImager-as-Flashing-tool" class="headerlink" title="Win32DiskImager as Flashing tool"></a>Win32DiskImager as Flashing tool<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Win32DiskImager-as-Flashing-tool'}, '*');" class="article-anchor" href="#Win32DiskImager-as-Flashing-tool" aria-hidden="true"></a></h4><p>Insert an empty USB drive into the development host and execute the Win32DiskImager tool.</p>
 <ul>
 <li><p>The USB device is automatically detected.</p>
 </li>
@@ -164,7 +166,7 @@
 <img src="Preparingabootableusbdrive.assets/win32_2.png" alt="rufus_2" style="margin-left: auto; margin-right: auto; display: block;">
 
 
-<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
 <li><p>Download the prebuilt bootable OS to the working directory on your development host. Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
 <p><strong>Warning</strong>: Make sure you first properly identify the USB device, for example (/dev/sdb or /dev/sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your hosts OS.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
@@ -178,10 +180,10 @@
 </div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2021-12-28T02:37:18.772Z" itemprop="dateModified">Last updated: 2021-12-28</time>
+                <time class="article-footer-updated" datetime="2022-02-04T08:57:37.781Z" itemprop="dateModified">Last updated: 2022-02-04</time>
                 <a href="CarrierIntroduction.html" class="article-footer-prev" title="Carrier Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="biossettings.html" class="article-footer-next" title="BIOS Settings"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
-
+              
             </div>
           </div>
           <aside id="article-toc" role="navigation">
@@ -242,11 +244,11 @@
       <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
-
+    
       <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link current first">Prepare your USB Drive</a><a href="biossettings.html" class="mobile-nav-link">BIOS Settings</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a></details></strong>
-
+    
   </div>
-
+  
 
 </nav>
   <!-- Scripts -->
