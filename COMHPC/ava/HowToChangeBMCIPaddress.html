@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="How to change MAC&#x2F;IP Address on BMCIt describes the procedures to change MAC&#x2F;IP address on BMC    Step 1: Modify MAC address on bootloader Login in via the serial console. see this guideline “How to c">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-16T14:41:57.252Z">
-<meta property="article:modified_time" content="2022-02-16T14:41:57.252Z">
+<meta property="article:published_time" content="2022-02-22T08:23:12.060Z">
+<meta property="article:modified_time" content="2022-02-22T08:23:12.060Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -85,7 +85,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 6.0.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -132,11 +132,11 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h2 id="How-to-change-MAC-IP-Address-on-BMC" class="article-heading"><a href="#How-to-change-MAC-IP-Address-on-BMC" class="headerlink" title="How to change MAC/IP Address on BMC"></a>How to change MAC/IP Address on BMC<a class="article-anchor" href="#How-to-change-MAC-IP-Address-on-BMC" aria-hidden="true"></a></h2><p>It describes the procedures to change MAC/IP address on BMC</p>
+                <h2 id="How-to-change-MAC-IP-Address-on-BMC" class="article-heading"><a href="#How-to-change-MAC-IP-Address-on-BMC" class="headerlink" title="How to change MAC/IP Address on BMC"></a>How to change MAC/IP Address on BMC<a onclick="parent.postMessage( {msg: '?page=HowToChangeBMCIPaddress.html#How-to-change-MAC-IP-Address-on-BMC'}, '*');" class="article-anchor" href="#How-to-change-MAC-IP-Address-on-BMC" aria-hidden="true"></a></h2><p>It describes the procedures to change MAC/IP address on BMC</p>
 <br>
 <div class="bullets">
 
-<h3 id="Step-1-Modify-MAC-address-on-bootloader" class="article-heading"><a href="#Step-1-Modify-MAC-address-on-bootloader" class="headerlink" title="Step 1: Modify MAC address on bootloader"></a>Step 1: Modify MAC address on bootloader<a class="article-anchor" href="#Step-1-Modify-MAC-address-on-bootloader" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-1-Modify-MAC-address-on-bootloader" class="article-heading"><a href="#Step-1-Modify-MAC-address-on-bootloader" class="headerlink" title="Step 1: Modify MAC address on bootloader"></a>Step 1: Modify MAC address on bootloader<a onclick="parent.postMessage( {msg: '?page=HowToChangeBMCIPaddress.html#Step-1-Modify-MAC-address-on-bootloader'}, '*');" class="article-anchor" href="#Step-1-Modify-MAC-address-on-bootloader" aria-hidden="true"></a></h3><ul>
 <li><p>Login in via the serial console. see this guideline <strong>“How to connect BMC serial console on AVA Developer Platform”</strong> for enabling serial console on BMC</p>
 </li>
 <li><p>Reboot or power on your system</p>
@@ -149,14 +149,14 @@
 <p><strong>Note:</strong> Please enter any value for MAC address because the default is 00:00:00:00:00:00</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setenv ethaddr 00:22:33:44:55:66</span><br><span class="line">saveenv</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="Step-2-Check-if-MAC-address-is-changed" class="article-heading"><a href="#Step-2-Check-if-MAC-address-is-changed" class="headerlink" title="Step 2: Check if MAC address is changed"></a>Step 2: Check if MAC address is changed<a class="article-anchor" href="#Step-2-Check-if-MAC-address-is-changed" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-2-Check-if-MAC-address-is-changed" class="article-heading"><a href="#Step-2-Check-if-MAC-address-is-changed" class="headerlink" title="Step 2: Check if MAC address is changed"></a>Step 2: Check if MAC address is changed<a onclick="parent.postMessage( {msg: '?page=HowToChangeBMCIPaddress.html#Step-2-Check-if-MAC-address-is-changed'}, '*');" class="article-anchor" href="#Step-2-Check-if-MAC-address-is-changed" aria-hidden="true"></a></h3><ul>
 <li><p>Get into the BMC Linux </p>
 </li>
 <li><p>If the change becomes valid, you can see the prompt login message </p>
 <p>  <strong>Note</strong>: ADL + your MAC address</p>
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ADL002233445566 login: </span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="Step-3-Configure-the-static-IP-address" class="article-heading"><a href="#Step-3-Configure-the-static-IP-address" class="headerlink" title="Step 3: Configure the static IP address"></a>Step 3: Configure the static IP address<a class="article-anchor" href="#Step-3-Configure-the-static-IP-address" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-3-Configure-the-static-IP-address" class="article-heading"><a href="#Step-3-Configure-the-static-IP-address" class="headerlink" title="Step 3: Configure the static IP address"></a>Step 3: Configure the static IP address<a onclick="parent.postMessage( {msg: '?page=HowToChangeBMCIPaddress.html#Step-3-Configure-the-static-IP-address'}, '*');" class="article-anchor" href="#Step-3-Configure-the-static-IP-address" aria-hidden="true"></a></h3><ul>
 <li><p>Type the command to enter IP address you want</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 192.168.0.100 netmask 255.255.255.0 up</span><br></pre></td></tr></table></figure>
 
@@ -166,7 +166,7 @@
 </div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-02-16T14:41:57.252Z" itemprop="dateModified">Last updated: 2022-02-16</time>
+                <time class="article-footer-updated" datetime="2022-02-22T08:23:12.060Z" itemprop="dateModified">Last updated: 2022-02-22</time>
                 <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
