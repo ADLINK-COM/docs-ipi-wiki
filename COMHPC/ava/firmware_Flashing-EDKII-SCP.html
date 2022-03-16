@@ -69,16 +69,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20210820144057452.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20210820144506009.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20211130105758970.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20211130110335065.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20210820144625909.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20210820144916900.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_165755.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_170037.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png">
-<meta property="article:published_time" content="2022-03-16T02:24:27.756Z">
-<meta property="article:modified_time" content="2022-03-16T02:24:27.742Z">
+<meta property="article:published_time" content="2022-03-16T06:58:15.865Z">
+<meta property="article:modified_time" content="2022-03-16T06:58:15.857Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20210820144057452.png">
@@ -141,15 +139,12 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Flashing-your-EDKII-SCP-firmware" class="article-heading"><a href="#Flashing-your-EDKII-SCP-firmware" class="headerlink" title="Flashing your EDKII/SCP firmware"></a>Flashing your EDKII/SCP firmware<a class="article-anchor" href="#Flashing-your-EDKII-SCP-firmware" aria-hidden="true"></a></h1><h2 id="Using-a-UEFI-Shell" class="article-heading"><a href="#Using-a-UEFI-Shell" class="headerlink" title="Using a UEFI Shell"></a>Using a UEFI Shell<a class="article-anchor" href="#Using-a-UEFI-Shell" aria-hidden="true"></a></h2><blockquote class="note info"><p>The following describes how to flash your system’s EDKII and/or SCP firmware using a UEFI Shell, which requires an empty FAT32 USB drive and your AVA Developer Platform, at first, being turned off with all USB ports unused. </p>
-</blockquote>
-<p><br></p>
+                <h1 id="Flashing-your-EDKII-SCP-firmware" class="article-heading"><a href="#Flashing-your-EDKII-SCP-firmware" class="headerlink" title="Flashing your EDKII/SCP firmware"></a>Flashing your EDKII/SCP firmware<a class="article-anchor" href="#Flashing-your-EDKII-SCP-firmware" aria-hidden="true"></a></h1><h2 id="Using-a-UEFI-Shell" class="article-heading"><a href="#Using-a-UEFI-Shell" class="headerlink" title="Using a UEFI Shell"></a>Using a UEFI Shell<a class="article-anchor" href="#Using-a-UEFI-Shell" aria-hidden="true"></a></h2><blockquote class="note info"><p>The following describes how to flash your system’s EDKII and/or SCP firmware using a UEFI Shell, which requires an empty FAT32 USB drive and your AVA Developer Platform, at first, being turned off with all USB ports unused. </p></blockquote>
 <h2 id="How-to-boot-your-system-with-UEFI-Shell" class="article-heading"><a href="#How-to-boot-your-system-with-UEFI-Shell" class="headerlink" title="How to boot your system with UEFI Shell?"></a>How to boot your system with UEFI Shell?<a class="article-anchor" href="#How-to-boot-your-system-with-UEFI-Shell" aria-hidden="true"></a></h2><ol>
 <li><p>On a PC, download and extract the flashing tool and firmware files from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/ampere/COM-HPC-ALT%2BSCDP/COM-HPC-ALT_SCDP_1.07.300.02b.zip">here</a>.</p>
 </li>
 <li><p>Copy the extracted files to the root directory of an empty USB drive with standard FAT32 format.</p>
-<div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p>WARNING: Irreversible data loss or OS damage may result when copying to the wrong device or location.</p>
-</div>
+<div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p>  WARNING: Irreversible data loss or OS damage may result when copying to the wrong device or location.</p></div>
 </li>
 <li><p>Make sure that your AVA Developer Platform is turned off with all USB ports unused.</p>
 </li>
@@ -163,16 +158,32 @@
 <p>​      <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144506009.png" alt="image-20210820144506009" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
 <p><br></p>
 <p>A. If you want to check the current versions of your EDKII and/or SCP firmware, do the following:</p>
-<details class="folding-tag" blue><summary> Expand </summary>
-              <div class="content">
-              <p></p><p>— <strong>EDKII firmware version:</strong> Your current EDKII firmware version is displayed on the upper-left corner of the EDKII setup menu.</p><p></p><p></p><p><img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105758970.png" alt="image-20211130105758970"></p><p></p><p></p><p>— <strong>SCP firmware version:</strong> Go to <strong>Device Manager &gt; Platform Manager &gt; Platform Board Information</strong> to check your current SCP firmware version, as exemplified below.</p><p></p><p></p><p><img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130110335065.png" alt="image-20211130110335065"></p><p></p><p></p><p><br></p><p></p><div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p><strong>IMPORTANT:</strong> <em>SCP v.1.07</em>, and not 1.08, is required for fully supporting all 6 DIMM slots, as 1.08 poses problems and can only support 2 DIMMs. </p></div>
-              </div>
-            </details>
-<p>B. If you want to flash your EDKII and/or SCP firmware, proceed to step 7.</p>
-<p><br></p>
 </li>
 </ol>
-<h2 id="How-to-flash-your-EDKII-SCP-firmware" class="article-heading"><a href="#How-to-flash-your-EDKII-SCP-firmware" class="headerlink" title="How to flash your EDKII/SCP firmware?"></a>How to flash your EDKII/SCP firmware?<a class="article-anchor" href="#How-to-flash-your-EDKII-SCP-firmware" aria-hidden="true"></a></h2><ol>
+<pre><code>  -- **EDKII firmware version:** Your current EDKII firmware version is displayed on the upper-left corner of the EDKII setup menu.
+
+  ![image-20211130105758970](firmware_3-Flashing-EDKII-SCP.assets/image-20211130105758970.png)
+
+  -- **SCP firmware version:** Go to **Device Manager &gt; Platform Manager &gt; Platform Board Information** to check your current SCP firmware version, as exemplified below.
+
+  ![image-20211130110335065](firmware_3-Flashing-EDKII-SCP.assets/image-20211130110335065.png)
+
+  &lt;br&gt;
+
+   &#123;% alert warning %&#125; 
+
+  **IMPORTANT:** *SCP v.1.07*, and not 1.08, is required for fully supporting all 6 DIMM slots, as 1.08 poses problems and can only support 2 DIMMs. 
+
+   &#123;% endalert %&#125;
+
+
+
+
+
+  B. If you want to flash your EDKII and/or SCP firmware, proceed to step 7.
+
+  &lt;br&gt;
+</code></pre><h2 id="How-to-flash-your-EDKII-SCP-firmware" class="article-heading"><a href="#How-to-flash-your-EDKII-SCP-firmware" class="headerlink" title="How to flash your EDKII/SCP firmware?"></a>How to flash your EDKII/SCP firmware?<a class="article-anchor" href="#How-to-flash-your-EDKII-SCP-firmware" aria-hidden="true"></a></h2><ol>
 <li><p>In the EDKII setup menu, go to <strong>Boot Manager &gt; UEFI Shell</strong>, as demonstrated below.</p>
 <p>​      <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144625909.png" alt="image-20210820144625909" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
 <p><br></p>
@@ -206,7 +217,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-03-16T02:24:27.742Z" itemprop="dateModified">Last updated: 2022-03-16</time>
+                <time class="article-footer-updated" datetime="2022-03-16T06:58:15.857Z" itemprop="dateModified">Last updated: 2022-03-16</time>
                 <a href="firmware_UpdatingMMC.html" class="article-footer-prev" title="Updating MMC F/W"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
