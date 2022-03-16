@@ -88,7 +88,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -134,12 +134,11 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <h1 id="How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" class="article-heading"><a href="#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" class="headerlink" title="How to connect BMC serial console on AVA Developer Platform"></a>How to connect BMC serial console on AVA Developer Platform<a onclick="parent.postMessage( {msg: '?page=HowToUseBMCSerialConsole.html#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform'}, '*');" class="article-anchor" href="#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" aria-hidden="true"></a></h1><p>There is 3 Pin header (<strong>BMC_DBG</strong>) on the carrier board that supports the serial console for BMC (with IPMI functions).</p>
 <p><img src="HowtoUseBMCSerialConsole.assets/image-20210830171315702.png" alt="image-20210830171315702"></p>
 <p> Before start, please prepare <strong>USB to TTL Serial Adapter 3.3V Debug Cable TX RX Signal 3 Pin</strong> like this:</p>
-<img src="HowtoUseBMCSerialConsole.assets/image-20210830171550029.png" alt="image-20210830171550029" style="zoom: 33%;">
-
+<p><img src="HowtoUseBMCSerialConsole.assets/image-20210830171550029.png" alt="image-20210830171550029" style="zoom: 33%;"></p>
 <ul>
 <li><p>Plug the USBtoRS232 adapter cable to your host machine and connect 3 pins with the corresponding the pins.</p>
 <h3 id="If-your-host-machine-is-runs-Linux-Environment" class="article-heading"><a href="#If-your-host-machine-is-runs-Linux-Environment" class="headerlink" title="If your host machine is runs Linux Environment"></a>If your host machine is runs Linux Environment<a onclick="parent.postMessage( {msg: '?page=HowToUseBMCSerialConsole.html#If-your-host-machine-is-runs-Linux-Environment'}, '*');" class="article-anchor" href="#If-your-host-machine-is-runs-Linux-Environment" aria-hidden="true"></a></h3><ul>
@@ -148,7 +147,7 @@
 <p>sushi@Sushi:~$ lsusb<br>Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br><strong>Bus 001 Device 011: ID 0403:6001 Future Technology Devices International, Ltd FT232 Serial (UART) IC</strong></p>
 </blockquote>
 </li>
-<li><p> once detected, the devices will be under the /dev/ path to see if the interface is visible with this command: <strong>ls /dev/ttyUSB0</strong></p>
+<li><p>once detected, the devices will be under the /dev/ path to see if the interface is visible with this command: <strong>ls /dev/ttyUSB0</strong></p>
 </li>
 <li><p>If you are installing a Minicom serial device then follow the below procedure:</p>
 <blockquote>
@@ -156,10 +155,10 @@
 <p>sudo minicom -s</p>
 </blockquote>
 <ul>
-<li>Go to **[Serial Port Setup] **in the Configure of minicom application</li>
+<li>Go to <strong>[Serial Port Setup] </strong>in the Configure of minicom application</li>
 <li><strong>Press A</strong> and then edit to <strong>/dev/ttyUSB0</strong></li>
 <li><strong>Press E</strong> and then edit to <strong>115200 8N1</strong></li>
-<li>Go to **[Exit] **</li>
+<li>Go to <strong>[Exit] </strong></li>
 </ul>
 </li>
 <li><p>Then power on  target system and you will get the booting messages from Serial Console</p>
@@ -215,7 +214,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="sidebar-link first">How to Flash Firmware</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="sidebar-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="sidebar-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="sidebar-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="sidebar-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="sidebar-link">Flashing EDII/SCP F/W</a></details></strong>
   </div>
 </aside>
     </div>
@@ -261,7 +260,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="mobile-nav-link first">How to Flash Firmware</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="mobile-nav-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="mobile-nav-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="mobile-nav-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="mobile-nav-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="mobile-nav-link">Flashing EDII/SCP F/W</a></details></strong>
     
   </div>
   
@@ -283,5 +282,5 @@
 <!-- Algolia -->
 
 
-</body>
+<!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
 </html>

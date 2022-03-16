@@ -67,21 +67,10 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="How to Use IPMI Web GUI to flash BMC FirmwareThe BMC Firmware features an embedded Web server and enable users to connect to BMC using Internet browser. It will walk you though how to flash BMC firmwa">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/image-20220103100927988.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/image-20210827171017237.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/2021-12-28_172711.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/2021-12-28_172015.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/2022-02-11_111506.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/image-20211130102830533.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/image-20220211111836765.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/2022-02-11_112739.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/2022-02-11_113553.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/2022-02-11_113837.png">
 <meta property="article:published_time" content="2022-02-22T08:23:12.104Z">
 <meta property="article:modified_time" content="2022-02-22T08:23:12.104Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/ava/HowToFlashBMCWeb.assets/image-20220103100927988.png">
   <!-- Google Analytics -->
   
 <script>
@@ -94,7 +83,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -140,85 +129,90 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <h2 id="How-to-Use-IPMI-Web-GUI-to-flash-BMC-Firmware" class="article-heading"><a href="#How-to-Use-IPMI-Web-GUI-to-flash-BMC-Firmware" class="headerlink" title="How to Use IPMI Web GUI to flash BMC Firmware"></a>How to Use IPMI Web GUI to flash BMC Firmware<a onclick="parent.postMessage( {msg: '?page=HowToFlashBMCWeb.html#How-to-Use-IPMI-Web-GUI-to-flash-BMC-Firmware'}, '*');" class="article-anchor" href="#How-to-Use-IPMI-Web-GUI-to-flash-BMC-Firmware" aria-hidden="true"></a></h2><p>The BMC Firmware features an embedded Web server and enable users to connect to BMC using Internet browser. It will walk you though how to flash BMC firmware on Web GUI</p>
-<br>
-
+<p><br></p>
 <div class="bullets">
 
-<p><strong>Before you begin,</strong></p>
-<ol>
-<li>Prepare the Ethernet cable and connect to your host machine and AVA system like this:</li>
-</ol>
-<p><img src="HowToFlashBMCWeb.assets/image-20220103100927988.png" alt="image-20220103100927988"></p>
-<ol start="2">
-<li><p>Confirm the connection is alive between your host machine and AVA system</p>
-<p><strong>In your host Machine with Linux Environment:</strong></p>
-<ul>
-<li><p>Type the below command to configure the static IP address</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ifconfig eth0 192.168.0.22 netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+**Before you begin,**
 
-<br></li>
-</ul>
-<p><strong>In your host Machine with Windows Environment:</strong> </p>
-<ul>
-<li>Configure the static IP Address on the network device and save it:</li>
-</ul>
-</li>
-</ol>
-<p><img src="HowToFlashBMCWeb.assets/image-20210827171017237.png" alt="image-20210827171017237"></p>
-<ul>
-<li><p>Type the Ping command to see if the connection is alive between your host machine and the AVA system</p>
-<blockquote>
-<p>sushi@Sushi:~$ ping 192.168.0.100<br>PING 192.168.0.100 (192.168.0.100) 56(84) bytes of data.<br>64 bytes from 192.168.0.100: icmp_seq=1 ttl=64 time=0.569 ms<br>64 bytes from 192.168.0.100: icmp_seq=2 ttl=64 time=0.572 ms<br>64 bytes from 192.168.0.100: icmp_seq=3 ttl=64 time=0.560 ms</p>
-</blockquote>
-</li>
-</ul>
+   1. Prepare the Ethernet cable and connect to your host machine and AVA system like this:
+
+![image-20220103100927988](HowToFlashBMCWeb.assets/image-20220103100927988.png)
+
+2. Confirm the connection is alive between your host machine and AVA system
+
+   **In your host Machine with Linux Environment:**
+
+   * Type the below command to configure the static IP address
+
+     <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ifconfig eth0 192.168.0.22 netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+
+     <br>
+
+   **In your host Machine with Windows Environment:** 
+
+   * Configure the static IP Address on the network device and save it:
+
+![image-20210827171017237](HowToFlashBMCWeb.assets/image-20210827171017237.png)
+
+
+
+- Type the Ping command to see if the connection is alive between your host machine and the AVA system
+
+  > sushi@Sushi:~$ ping 192.168.0.100
+  > PING 192.168.0.100 (192.168.0.100) 56(84) bytes of data.
+  > 64 bytes from 192.168.0.100: icmp_seq=1 ttl=64 time=0.569 ms
+  > 64 bytes from 192.168.0.100: icmp_seq=2 ttl=64 time=0.572 ms
+  > 64 bytes from 192.168.0.100: icmp_seq=3 ttl=64 time=0.560 ms
+
 <br>
 
 
 
-<p><strong>Getting Started</strong></p>
-<ul>
-<li><p>Open your browser in your host machine and enter <strong>“<a target="_blank" rel="noopener external nofollow noreferrer" href="http://192.168.0.100&quot;/">http://192.168.0.100&quot;</a></strong> to get into the Web Interface as below. Please ignore the waring message of untrusted security certificate and continue to access it. </p>
-<p>​       Note: the default network configuration is Static mode with IP address <strong>192.168.0.100</strong>. if want to change DHCP IP address, can be referred to this link: </p>
-</li>
-</ul>
-<p><img src="HowToFlashBMCWeb.assets/2021-12-28_172711.png" alt="2021-12-28_172711"></p>
-<ul>
-<li>Once it works, enter the login information: username/password: <strong>admin/admin</strong>.</li>
-</ul>
-<p><img src="HowToFlashBMCWeb.assets/2021-12-28_172015.png" alt="2021-12-28_172015"></p>
-<ul>
-<li><p>After successfully login, go to  **[Maintenance page]  =&gt; [Dual Firmware Update] ** in the Dashboard as below</p>
-<p><img src="HowToFlashBMCWeb.assets/2022-02-11_111506.png" alt="2022-02-11_111506"></p>
-</li>
-<li><p>In the page of Dual Firmware Update, please select which BMC chip you would like to upgrade:</p>
-<p>BMC (IPMI) on the carrier board is located in two external SPI Flash chips and These chips are not soldered but socketed so can simply be replaced with SPI Flash chips that contain firmware updates</p>
-<p><img src="HowToFlashBMCWeb.assets/image-20211130102830533.png" alt="image-20211130102830533"></p>
-<ul>
-<li>Image 1: point to the <strong>Primary SPI ROM</strong></li>
-<li>Image 2: point to the <strong>Backup SPI ROM</strong></li>
-<li>Both Images: able to upgrade BMC firmware for <strong>both SPI ROMs</strong>. (it would take a while)</li>
-</ul>
-</li>
-</ul>
-<p><img src="HowToFlashBMCWeb.assets/image-20220211111836765.png" alt="image-20220211111836765"></p>
-<ul>
-<li>Once select SPI BMC ROM, download the latest image <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Ampere/AVA/Firmware/BMC/rom_v1.04.0b.zip">click here</a> and upload it to Web GUI</li>
-</ul>
-<p><img src="HowToFlashBMCWeb.assets/2022-02-11_112739.png" alt="2022-02-11_112739"></p>
-<ul>
-<li>During the uploading, please select all of sections to be updated and start to flash as below:</li>
-</ul>
-<p><img src="HowToFlashBMCWeb.assets/2022-02-11_113553.png" alt="2022-02-11_113553"></p>
-<ul>
-<li><p>Please be patient until the process is completed with 100% percentage.</p>
-<p><img src="HowToFlashBMCWeb.assets/2022-02-11_113837.png" alt="2022-02-11_113837"></p>
-</li>
-<li><p>Please reboot your system.</p>
-</li>
-</ul>
+**Getting Started**
+
+* Open your browser in your host machine and enter **"http://192.168.0.100"** to get into the Web Interface as below. Please ignore the waring message of untrusted security certificate and continue to access it. 
+
+  ​       Note: the default network configuration is Static mode with IP address **192.168.0.100**. if want to change DHCP IP address, can be referred to this link: 
+
+![2021-12-28_172711](HowToFlashBMCWeb.assets/2021-12-28_172711.png)
+
+* Once it works, enter the login information: username/password: **admin/admin**.
+
+![2021-12-28_172015](HowToFlashBMCWeb.assets/2021-12-28_172015.png)
+
+* After successfully login, go to  **[Maintenance page]  => [Dual Firmware Update] ** in the Dashboard as below
+
+  ![2022-02-11_111506](HowToFlashBMCWeb.assets/2022-02-11_111506.png)
+
+* In the page of Dual Firmware Update, please select which BMC chip you would like to upgrade:
+
+  BMC (IPMI) on the carrier board is located in two external SPI Flash chips and These chips are not soldered but socketed so can simply be replaced with SPI Flash chips that contain firmware updates
+
+  ![image-20211130102830533](HowToFlashBMCWeb.assets/image-20211130102830533.png)
+
+  * Image 1: point to the **Primary SPI ROM**
+  * Image 2: point to the **Backup SPI ROM**
+  * Both Images: able to upgrade BMC firmware for **both SPI ROMs**. (it would take a while)
+
+![image-20220211111836765](HowToFlashBMCWeb.assets/image-20220211111836765.png)
+
+* Once select SPI BMC ROM, download the latest image [click here](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/COMe/Ampere/AVA/Firmware/BMC/rom_v1.04.0b.zip) and upload it to Web GUI
+
+
+![2022-02-11_112739](HowToFlashBMCWeb.assets/2022-02-11_112739.png)
+
+* During the uploading, please select all of sections to be updated and start to flash as below:
+
+![2022-02-11_113553](HowToFlashBMCWeb.assets/2022-02-11_113553.png)
+
+* Please be patient until the process is completed with 100% percentage.
+
+  ![2022-02-11_113837](HowToFlashBMCWeb.assets/2022-02-11_113837.png)
+
+* Please reboot your system.
+
 </div>
               </div>
               <footer class="article-footer">
@@ -241,7 +235,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="sidebar-link first">How to Flash Firmware</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="sidebar-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="sidebar-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="sidebar-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="sidebar-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="sidebar-link">Flashing EDII/SCP F/W</a></details></strong>
   </div>
 </aside>
     </div>
@@ -287,7 +281,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="mobile-nav-link first">How to Flash Firmware</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="mobile-nav-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="mobile-nav-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="mobile-nav-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="mobile-nav-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="mobile-nav-link">Flashing EDII/SCP F/W</a></details></strong>
     
   </div>
   
@@ -309,5 +303,5 @@
 <!-- Algolia -->
 
 
-</body>
+<!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
 </html>

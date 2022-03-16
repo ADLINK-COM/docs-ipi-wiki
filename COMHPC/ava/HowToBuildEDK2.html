@@ -83,7 +83,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -129,27 +129,29 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
-                <h1 id="EDK-II-on-AVA-Developer-System" class="article-heading"><a href="#EDK-II-on-AVA-Developer-System" class="headerlink" title="EDK-II on AVA Developer System"></a>EDK-II on AVA Developer System<a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-on-AVA-Developer-System'}, '*');" class="article-anchor" href="#EDK-II-on-AVA-Developer-System" aria-hidden="true"></a></h1><h2 id="EDK-II-UEFI-Firmware" class="article-heading"><a href="#EDK-II-UEFI-Firmware" class="headerlink" title="EDK-II (UEFI Firmware)"></a>EDK-II (UEFI Firmware)<a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-UEFI-Firmware'}, '*');" class="article-anchor" href="#EDK-II-UEFI-Firmware" aria-hidden="true"></a></h2><p>A modern, feature-rich, cross-platform firmware development environment for the UEFI and PI specifications from <a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.uefi.org/">www.uefi.org</a>.</p>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="EDK-II-on-AVA-Developer-System" class="article-heading"><a href="#EDK-II-on-AVA-Developer-System" class="headerlink" title="EDK-II on AVA Developer System"></a>EDK-II on AVA Developer System<a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-on-AVA-Developer-System'}, '*');" class="article-anchor" href="#EDK-II-on-AVA-Developer-System" aria-hidden="true"></a></h1><h2 id="EDK-II-UEFI-Firmware" class="article-heading"><a href="#EDK-II-UEFI-Firmware" class="headerlink" title="EDK-II (UEFI Firmware)"></a>EDK-II (UEFI Firmware)<a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-UEFI-Firmware'}, '*');" class="article-anchor" href="#EDK-II-UEFI-Firmware" aria-hidden="true"></a></h2><p>A modern, feature-rich, cross-platform firmware development environment for the UEFI and PI specifications from www.uefi.org.</p>
 <p>Unified Extensible Firmware Interface (UEFI) is a specification for a software program that connects a computer’s firmware to its operating system (OS). UEFI contains platform-related data tables and boot and <a target="_blank" rel="noopener external nofollow noreferrer" href="https://searchsoftwarequality.techtarget.com/definition/runtime">runtime</a> service calls used by the OS loader.</p>
 <p>UEFI behaves like a miniaturized OS that sits between firmware and the OS. It initialises the central processing unit, random access memory, Peripheral Component Interconnect Express cards and network devices. UEFI stores initialization data in an EFI file partition in <a target="_blank" rel="noopener external nofollow noreferrer" href="https://searchstorage.techtarget.com/definition/nonvolatile-memory">nonvolatile flash memory</a>, rather than in the firmware. </p>
 <div class="bullets">
 
-<p>PI compliant system firmware must support the six phases: </p>
-<ol>
-<li>Security (SEC) </li>
-<li>Pre-efi initialization (PEI)</li>
-<li>Driver execution environment (DXE)</li>
-<li>Boot device selection (BDS)</li>
-<li>Run time (RT) services</li>
-<li>After Life (transition from the OS back to the firmware) of system.</li>
-</ol>
-<h2 id="How-to-Build-EDK-II" class="article-heading"><a href="#How-to-Build-EDK-II" class="headerlink" title="How to Build EDK II"></a>How to Build EDK II<a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#How-to-Build-EDK-II'}, '*');" class="article-anchor" href="#How-to-Build-EDK-II" aria-hidden="true"></a></h2><ul>
-<li><p>The EDK-II source code can be found <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/edk2-ampere">here</a> </p>
-</li>
-<li><p>Th building instructions can be also found <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/edk2-ampere#building-edk-ii-image">here</a> </p>
-</li>
-</ul>
+PI compliant system firmware must support the six phases: 
+
+1. Security (SEC) 
+2. Pre-efi initialization (PEI)
+3. Driver execution environment (DXE)
+4. Boot device selection (BDS)
+5. Run time (RT) services
+6. After Life (transition from the OS back to the firmware) of system.
+
+
+
+## How to Build EDK II
+
+* The EDK-II source code can be found [here](https://github.com/ADLINK/edk2-ampere) 
+
+* Th building instructions can be also found [here](https://github.com/ADLINK/edk2-ampere#building-edk-ii-image) 
+
 </div>
               </div>
               <footer class="article-footer">
@@ -163,7 +165,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-on-AVA-Developer-System'}, '*');" class="toc-link" href="#EDK-II-on-AVA-Developer-System"><span class="toc-text">EDK-II on AVA Developer System</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-UEFI-Firmware'}, '*');" class="toc-link" href="#EDK-II-UEFI-Firmware"><span class="toc-text">EDK-II (UEFI Firmware)</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#How-to-Build-EDK-II'}, '*');" class="toc-link" href="#How-to-Build-EDK-II"><span class="toc-text">How to Build EDK II</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-on-AVA-Developer-System'}, '*');" class="toc-link" href="#EDK-II-on-AVA-Developer-System"><span class="toc-text">EDK-II on AVA Developer System</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildEDK2.html#EDK-II-UEFI-Firmware'}, '*');" class="toc-link" href="#EDK-II-UEFI-Firmware"><span class="toc-text">EDK-II (UEFI Firmware)</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -172,7 +174,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="sidebar-link first">How to Flash Firmware</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="sidebar-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="sidebar-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="sidebar-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="sidebar-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="sidebar-link">Flashing EDII/SCP F/W</a></details></strong>
   </div>
 </aside>
     </div>
@@ -218,7 +220,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="mobile-nav-link first">How to Flash Firmware</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="mobile-nav-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="mobile-nav-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="mobile-nav-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="mobile-nav-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="mobile-nav-link">Flashing EDII/SCP F/W</a></details></strong>
     
   </div>
   
@@ -240,5 +242,5 @@
 <!-- Algolia -->
 
 
-</body>
+<!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
 </html>

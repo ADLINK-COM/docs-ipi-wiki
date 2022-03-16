@@ -87,7 +87,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -133,7 +133,7 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <h3 id="How-to-check-the-Power-Voltage-Readings-Using-Out-of-Band-Management-OOBM" class="article-heading"><a href="#How-to-check-the-Power-Voltage-Readings-Using-Out-of-Band-Management-OOBM" class="headerlink" title="How to check the Power Voltage Readings Using Out-of-Band Management (OOBM)"></a>How to check the Power Voltage Readings Using Out-of-Band Management (OOBM)<a onclick="parent.postMessage( {msg: '?page=HowToCheckPowerReadingByIMPI.html#How-to-check-the-Power-Voltage-Readings-Using-Out-of-Band-Management-OOBM'}, '*');" class="article-anchor" href="#How-to-check-the-Power-Voltage-Readings-Using-Out-of-Band-Management-OOBM" aria-hidden="true"></a></h3><p>MMC chip is located on COM-HPC-ALT COMe module which supports the power sequence control and hardware monitoring features (like CPU temperature, voltage readings,…). The procedure describes how to flash MMC firmware by using IPMI command.</p>
 <p>Before start, please prepare the Ethernet cable and connect to your host machine and SCDP system like this:</p>
 <p><img src="HowToCheckPowerReadingByIMPI.assets/connection.png" alt="connection"></p>
@@ -146,17 +146,16 @@
 <li><p>Netmask: <strong>255.255.255.0</strong></p>
 </li>
 <li><p>Gateway: <strong>192.168.0.200</strong></p>
-<br></li>
-</ul>
+<p><br></p>
 </li>
 </ul>
-<p> <strong>In your host Machine with Windows Environment:</strong> </p>
-<ul>
-<li>Configure the static IP Address on the network device and save it:</li>
+<p><strong>In your host Machine with Windows Environment:</strong> </p>
+</li>
+<li><p>Configure the static IP Address on the network device and save it:</p>
+</li>
 </ul>
 <p><img src="HowToCheckPowerReadingByIMPI.assets/image-20210827171017237.png" alt="image-20210827171017237"></p>
-<br>
-
+<p><br></p>
 <ul>
 <li><p>the IP address of OOBM on SCDP system is <strong>192.168.0.100</strong></p>
 </li>
@@ -171,6 +170,7 @@
 </ul>
 <p>​        the result will be:</p>
 <p><img src="HowToCheckPowerReadingByIMPI.assets/voltage_reading.png" alt="voltage_reading"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -178,7 +178,8 @@
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>IPMI P3V3</td>
 <td>3.3 V for BMC chip</td>
 </tr>
@@ -218,7 +219,9 @@
 <td>P1V8_PCP</td>
 <td>CPU voltage</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
               </div>
               <footer class="article-footer">
@@ -241,7 +244,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="sidebar-link first">How to Flash Firmware</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="sidebar-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="sidebar-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="sidebar-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="sidebar-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="sidebar-link">Flashing EDII/SCP F/W</a></details></strong>
   </div>
 </aside>
     </div>
@@ -287,7 +290,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="mobile-nav-link first">How to Flash Firmware</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="mobile-nav-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="mobile-nav-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="mobile-nav-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="mobile-nav-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="mobile-nav-link">Flashing EDII/SCP F/W</a></details></strong>
     
   </div>
   
@@ -309,5 +312,5 @@
 <!-- Algolia -->
 
 
-</body>
+<!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
 </html>

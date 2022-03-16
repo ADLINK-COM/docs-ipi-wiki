@@ -83,7 +83,7 @@
   ga('send', 'pageview');
 </script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -129,7 +129,7 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <p><strong>Project Quickstart</strong></p>
 <p>This documentation explains how to quickly get started with the Yocto SCDP (BSP+EWAOL) project. </p>
 <p><strong>Build Host Setup</strong></p>
@@ -137,8 +137,6 @@
 <p>ComHpc.yml contains build configs for kas , a tool for easily setting up bitbake based projects. ComHpc.yml will invoke/include the required YAML files present in meta-ewaol layer. </p>
 <p>On the Build Host, install the kas setup tool:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install --user kas</span><br></pre></td></tr></table></figure>
-
-
 <p>For more details on kas, see kas Introduction:</p>
 <p>Note: The Build Host machine should have at least 150 GBytes of free disk space for Building the Image.</p>
 <p><strong>Minimal Image Build via kas</strong></p>
@@ -147,43 +145,30 @@
 <p><strong>Build Instruction</strong></p>
 <p>checkout the meta-adlink-ampere repository </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/scdp </span><br><span class="line">cd ~/scdp </span><br><span class="line">git clone https://github.com/ADLINK/meta-adlink-ampere.git </span><br></pre></td></tr></table></figure>
-
-
 <p>checkout the meta-adlink-ampere repository </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd ~/scdp</span><br><span class="line">git clone &lt;meta-ewaol-repo-url&gt; -b v0.1</span><br></pre></td></tr></table></figure>
-
 <p><strong>Build for SCDP</strong></p>
 <p>To build the images via kas for the SCDP board:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd ~/scdp</span><br><span class="line">kas build meta-adlink-ampere/ComHpc.yml</span><br></pre></td></tr></table></figure>
-
-
 <p>The resulting images will be produced: </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">build/tmp/deploy/images/comhpc/ewaol-image-docker-comhpc.wic</span><br></pre></td></tr></table></figure>
-
 <p>The above can be boot on COMHPC-SCDP Board, login as <code>root</code> without password.</p>
 <p><strong>Prepare Bootable Medium</strong></p>
 <p>To install the binaries into USB Drive  ( Note : Ensure writing into USB is formatted before proceed installation )</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=ewaol-image-docker-comhpc.wic  of=/dev/sdX bs=1M ( X should be replaced with respect device like sda / sdc or sdd )</span><br><span class="line"></span><br><span class="line">For Example: ( USB Device  uses /dev/sda device node )</span><br><span class="line">sudo dd if=ewaol-image-docker-comhpc.wic  of=/dev/sda bs=1M</span><br></pre></td></tr></table></figure>
-
 <p>To Install the binaries into NVMe M.2 SSD </p>
 <p>Please create an USB drive Bootable as mentioned in above section.</p>
 <p>On plug the USB drive (Bootable drive) in Host system, you should see 3 partition mounted namely as below </p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">&lt;/media/&lt;local_directory&gt;/msdos</span><br><span class="line"></span><br><span class="line">&lt;/media/&lt;local_directory&gt;rootfs</span><br><span class="line"></span><br><span class="line">&lt;/media/&lt;local_directory&gt;/<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
-
 <p>Copy the Images into “&lt;/media/<directory>/data”</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">sudo <span class="built_in">cp</span>  &lt;Yocto_Build_Directory&gt;/build/tmp/deploy/images/comhpc/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bz2 &lt;/media/&lt;directory&gt;/<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span>  &lt;Yocto_Build_Directory&gt;/build/tmp/deploy/images/comhpc/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bmap  &lt;/media/&lt;directory&gt;/<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
-
 <p>Insert the USB drive  and Boot the Board ,login as “root” with NO password via VGA Display and create a “data” Directory</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span>  /</span><br><span class="line"></span><br><span class="line">mkdir <span class="keyword">data</span></span><br></pre></td></tr></table></figure>
-
 <p>mount the 3rd partition of USB into “data” directory </p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mount</span> /dev/sda3  /<span class="keyword">data</span></span><br></pre></td></tr></table></figure>
-
 <p>Flash the image to the target’s local drive using bmaptool</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">bmaptool <span class="built_in">copy</span> -<span class="literal">-bmap</span> /<span class="keyword">data</span>/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bmap /<span class="keyword">data</span>/ewaol<span class="literal">-image</span><span class="literal">-docker</span><span class="literal">-comhpc</span>.wic.bz2 /dev/nvme0n1</span><br></pre></td></tr></table></figure>
-
 
               </div>
               <footer class="article-footer">
@@ -206,7 +191,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="sidebar-link first">How to Flash Firmware</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="Intro.html" class="sidebar-link first">Introduction</a><a href="ComponentsInterfaces.html" class="sidebar-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="sidebar-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="sidebar-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="sidebar-link first">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="sidebar-link">How to use Serial Console</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="sidebar-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="sidebar-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="sidebar-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="sidebar-link first">Yocto</a><a href="UbuntuInstallation.html" class="sidebar-link">Ubuntu</a><a href="CentOSInstallation.html" class="sidebar-link">CentOS</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="sidebar-link first">How to Build Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="sidebar-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="sidebar-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="sidebar-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="sidebar-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="sidebar-link">Flashing EDII/SCP F/W</a></details></strong>
   </div>
 </aside>
     </div>
@@ -252,7 +237,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmwares Update</summary><a href="HowToFlashAllFW.html" class="mobile-nav-link first">How to Flash Firmware</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="Intro.html" class="mobile-nav-link first">Introduction</a><a href="ComponentsInterfaces.html" class="mobile-nav-link">Components & Interfaces</a><a href="ArmSystemReadySR_OSsupport.html" class="mobile-nav-link">Arm SystemReady & OS Support</a><a href="AmpereAltraNeoverseN1.html" class="mobile-nav-link">Ampere Altra (Arm Neoverse N1)</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="Unboxing.html" class="mobile-nav-link first">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a><a href="HowToUseSerialConsole.html" class="mobile-nav-link">How to use Serial Console</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>User Guides</summary><a href="HowDualSPIROMWorks.html" class="mobile-nav-link first">BMC Firmware Failover</a><a href="HowToChangeBMCMACIPAddress.html" class="mobile-nav-link">Change BMC MAC/IP Address</a><a href="HowToDisableMutipleUSBEntriesOnEDK2.html" class="mobile-nav-link">Disable BMC Viraul USB Entries</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoInstallation.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuInstallation.html" class="mobile-nav-link">Ubuntu</a><a href="CentOSInstallation.html" class="mobile-nav-link">CentOS</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToBuildYocto.html" class="mobile-nav-link first">How to Build Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Firmware</summary><a href="firmware_PreferredVersions.html" class="mobile-nav-link first">Preferred F/W Version</a><a href="firmware_UpdateSequence.html" class="mobile-nav-link">F/W Update Sequence</a><a href="firmware_EnablingBMC-LAN.html" class="mobile-nav-link">Enabling BMC-LAN</a><a href="firmware_UpdatingMMC.html" class="mobile-nav-link">Updating MMC F/W</a><a href="firmware_Flashing-EDKII-SCP.html" class="mobile-nav-link">Flashing EDII/SCP F/W</a></details></strong>
     
   </div>
   
@@ -274,5 +259,5 @@
 <!-- Algolia -->
 
 
-</body>
+<!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
 </html>
