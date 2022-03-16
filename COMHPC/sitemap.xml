@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_Flashing-EDKII-SCP.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_EnablingBMC-LAN.html</loc>
     
     <lastmod>2022-03-16</lastmod>
     
@@ -10,6 +10,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/firmware_UpdatingMMC.html</loc>
+    
+    <lastmod>2022-03-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_Flashing-EDKII-SCP.html</loc>
     
     <lastmod>2022-03-16</lastmod>
     
@@ -24,13 +31,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_EnablingBMC-LAN.html</loc>
     
     <lastmod>2022-03-16</lastmod>
     
