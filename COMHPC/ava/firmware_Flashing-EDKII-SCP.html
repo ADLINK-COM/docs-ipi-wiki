@@ -77,8 +77,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_170037.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png">
-<meta property="article:published_time" content="2022-03-16T09:50:15.541Z">
-<meta property="article:modified_time" content="2022-03-16T09:50:15.532Z">
+<meta property="article:published_time" content="2022-03-16T16:35:26.293Z">
+<meta property="article:modified_time" content="2022-03-16T16:35:26.293Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ava/firmware_3-Flashing-EDKII-SCP.assets/image-20210820144057452.png">
@@ -94,7 +94,7 @@
   ga('send', 'pageview');
 </script>
 
-<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
 
 <body>
   <div id="container">
@@ -141,73 +141,73 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Flashing-your-EDKII-SCP-firmware" class="article-heading"><a href="#Flashing-your-EDKII-SCP-firmware" class="headerlink" title="Flashing your EDKII/SCP firmware"></a>Flashing your EDKII/SCP firmware<a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#Flashing-your-EDKII-SCP-firmware'}, '*');" class="article-anchor" href="#Flashing-your-EDKII-SCP-firmware" aria-hidden="true"></a></h1><h2 id="Using-a-UEFI-Shell" class="article-heading"><a href="#Using-a-UEFI-Shell" class="headerlink" title="Using a UEFI Shell"></a>Using a UEFI Shell<a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#Using-a-UEFI-Shell'}, '*');" class="article-anchor" href="#Using-a-UEFI-Shell" aria-hidden="true"></a></h2><blockquote class="note info"><p>The following describes how to flash your system’s EDKII and/or SCP firmware using a UEFI Shell, which requires an empty FAT32 USB drive and your AVA Developer Platform, at first, being turned off with all USB ports unused. </p></blockquote>
-<h2 id="How-to-boot-your-system-with-UEFI-Shell" class="article-heading"><a href="#How-to-boot-your-system-with-UEFI-Shell" class="headerlink" title="How to boot your system with UEFI Shell?"></a>How to boot your system with UEFI Shell?<a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#How-to-boot-your-system-with-UEFI-Shell'}, '*');" class="article-anchor" href="#How-to-boot-your-system-with-UEFI-Shell" aria-hidden="true"></a></h2><p>   <strong>1</strong>. On a PC, download and extract the flashing tool and firmware files from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/ampere/COM-HPC-ALT%2BSCDP/COM-HPC-ALT_SCDP_1.07.300.02b.zip">here</a>.</p>
-<p>   <strong>2</strong>. Copy the extracted files to the root directory of an empty USB drive with standard FAT32 format.</p>
-<div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p></p><p>   WARNING: Irreversible data loss or OS damage may result when copying to the wrong device or location.<br></p>
-</div><p></p>
-<p>   <strong>3</strong>. Make sure that your AVA Developer Platform is turned off with all USB ports unused.</p>
-<p>   <strong>4</strong>. Insert the USB drive containing the exracted files into your AVA Developer Platform, and then turn it on.</p>
-<p>   <strong>5</strong>. Wait (~50 to 60 seconds) for the following screen to appear, and then upon appearing, press <strong>ESC</strong> several times to enter the EDKII setup menu.</p>
-<p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144057452.png" alt="image-20210820144057452" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
-<p>  <br></p>
-<p>   <strong>6</strong>. The EDKII setup menu appears.</p>
-<p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144506009.png" alt="image-20210820144506009" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
-<p> <br></p>
-<p>  A. If you want to check the current versions of your EDKII and/or SCP firmware, do the following:</p>
+                <h1 id="Flashing-your-EDKII-SCP-firmware" class="article-heading"><a href="#Flashing-your-EDKII-SCP-firmware" class="headerlink" title="Flashing your EDKII/SCP firmware"></a>Flashing your EDKII/SCP firmware<a class="article-anchor" href="#Flashing-your-EDKII-SCP-firmware" aria-hidden="true"></a></h1><h2 id="Using-a-UEFI-Shell" class="article-heading"><a href="#Using-a-UEFI-Shell" class="headerlink" title="Using a UEFI Shell"></a>Using a UEFI Shell<a class="article-anchor" href="#Using-a-UEFI-Shell" aria-hidden="true"></a></h2><blockquote class="note info"><p>The following describes how to flash your system’s EDKII and/or SCP firmware using a UEFI Shell, which requires an empty FAT32 USB drive and your AVA Developer Platform, at first, being turned off with all USB ports unused. </p>
+</blockquote>
+<h2 id="How-to-boot-your-system-with-UEFI-Shell" class="article-heading"><a href="#How-to-boot-your-system-with-UEFI-Shell" class="headerlink" title="How to boot your system with UEFI Shell?"></a>How to boot your system with UEFI Shell?<a class="article-anchor" href="#How-to-boot-your-system-with-UEFI-Shell" aria-hidden="true"></a></h2><ol>
+<li><p>On a PC, download and extract the flashing tool and firmware files from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/ampere/COM-HPC-ALT%2BSCDP/COM-HPC-ALT_SCDP_1.07.300.02b.zip">here</a>.</p>
+</li>
+<li><p>Copy the extracted files to the root directory of an empty USB drive with standard FAT32 format.</p>
+<div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p>WARNING: Irreversible data loss or OS damage may result when copying to the wrong device or location.</p>
+</div>
+</li>
+<li><p>Make sure that your AVA Developer Platform is turned off with all USB ports unused.</p>
+</li>
+<li><p>Insert the USB drive containing the exracted files into your AVA Developer Platform, and then turn it on.</p>
+</li>
+<li><p>Wait (~50 to 60 seconds) for the following screen to appear, and then upon appearing, press <strong>ESC</strong> several times to enter the EDKII setup menu.</p>
+<p>​      <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144057452.png" alt="image-20210820144057452" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<p><br></p>
+</li>
+<li><p>The EDKII setup menu appears.</p>
+<p>​      <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144506009.png" alt="image-20210820144506009" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<p><br></p>
+<p>A. If you want to check the current versions of your EDKII and/or SCP firmware, do the following:</p>
 <details class="folding-tag" blue><summary> Expand </summary>
               <div class="content">
-              <p></p><p>  — <strong>EDKII firmware version:</strong> Your current EDKII firmware version is displayed on the upper-left corner of the EDKII setup menu.</p><p></p><p></p><p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105758970.png" alt="image-20211130105758970"></p><p></p><p></p><p>   — <strong>SCP firmware version:</strong> Go to <strong>Device Manager &gt; Platform Manager &gt; Platform Board Information</strong> to check your current SCP firmware version, as exemplified below.</p><p></p><p></p><p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130110335065.png" alt="image-20211130110335065"></p><p></p><p></p><p>   <br></p><br>   <div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p>   <strong>IMPORTANT:</strong> <em>SCP v.1.07</em>, and not 1.08, is required for fully supporting all 6 DIMM slots, as 1.08 poses problems and can only support 2 DIMMs. </p></div><p></p>
+              <p>— <strong>EDKII firmware version:</strong> Your current EDKII firmware version is displayed on the upper-left corner of the EDKII setup menu.</p><p><img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105758970.png" alt="image-20211130105758970"></p><p>— <strong>SCP firmware version:</strong> Go to <strong>Device Manager &gt; Platform Manager &gt; Platform Board Information</strong> to check your current SCP firmware version, as exemplified below.</p><p> <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130110335065.png" alt="image-20211130110335065"></p><p><br></p><div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p><strong>IMPORTANT:</strong> <em>SCP v.1.07</em>, and not 1.08, is required for fully supporting all 6 DIMM slots, as 1.08 poses problems and can only support 2 DIMMs. </p></div>
               </div>
             </details>
-<p>​<br>​     ​<br>​      B. If you want to flash your EDKII and/or SCP firmware, proceed to step 7.<br>​      </p>
-<h2 id="How-to-flash-your-EDKII-SCP-firmware" class="article-heading"><a href="#How-to-flash-your-EDKII-SCP-firmware" class="headerlink" title="How to flash your EDKII/SCP firmware?"></a>How to flash your EDKII/SCP firmware?<a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#How-to-flash-your-EDKII-SCP-firmware'}, '*');" class="article-anchor" href="#How-to-flash-your-EDKII-SCP-firmware" aria-hidden="true"></a></h2><p> <strong>7</strong>. In the EDKII setup menu, go to <strong>Boot Manager &gt; UEFI Shell</strong>, as demonstrated below.</p>
-<p><img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144625909.png" alt="image-20210820144625909" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
-<p><strong>8</strong>. The USB drive with the extracted files shall be displayed under <strong>FS0</strong>, as exemplified below.</p>
-<p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144916900.png" style="zoom: 100%;"></p>
-<p>  <br></p>
-<p>  — To flash your EDKII firmware, do the following:</p>
-<p>   A. In the UEFI Shell screen, type ‘<em>FS0:</em>‘ and press <strong>Enter</strong> to enter the USB directory.</p>
-<p>   B. Type the following commands in sequence to execute <strong>fwu.nsh</strong></p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong></p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘fwu.nsh’ <strong>[Enter]</strong><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">update EDKII</span><br><span class="line">      Shell&gt; FS0:</span><br><span class="line">      FS0:\\&gt; ls</span><br><span class="line">      FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">      FS0:\\&gt; ls</span><br><span class="line">      FS0:\\&gt; fwu.nsh</span><br></pre></td></tr></table></figure></p>
-<p><img src="firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_165755.png" alt="2022-01-19_165755"></p>
-<p>Once finished, reboot your AVA Developer Platform.</p>
-<p>   — To downgrade your SCP firmware from v1.08, do the following:</p>
-   <div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p><strong>IMPORTANT:</strong> Downgrading from 1.08 to 1.07 is required for fully supporting all 6 DIMM slots, as 1.08 poses problems and can only support 2 DIMMs. </p>
+<p>B. If you want to flash your EDKII and/or SCP firmware, proceed to step 7.</p>
+</li>
+</ol>
+<p><br></p>
+<h2 id="How-to-flash-your-EDKII-SCP-firmware" class="article-heading"><a href="#How-to-flash-your-EDKII-SCP-firmware" class="headerlink" title="How to flash your EDKII/SCP firmware?"></a>How to flash your EDKII/SCP firmware?<a class="article-anchor" href="#How-to-flash-your-EDKII-SCP-firmware" aria-hidden="true"></a></h2><ol>
+<li><p>In the EDKII setup menu, go to <strong>Boot Manager &gt; UEFI Shell</strong>, as demonstrated below.</p>
+<p>​      <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144625909.png" alt="image-20210820144625909" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<p><br></p>
+</li>
+<li><p>The USB drive with the extracted files shall be displayed under <strong>FS0</strong>, as exemplified below.</p>
+<p>​      <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20210820144916900.png" style="zoom: 100%;"></p>
+<p><br></p>
+<p>— To flash your EDKII firmware, do the following:</p>
+  <details class="folding-tag" blue><summary> Expand </summary>
+              <div class="content">
+              <p>  A. In the UEFI Shell screen, type ‘<em>FS0:</em>‘ and press <strong>Enter</strong> to enter the USB directory.</p><p>  B. Type the following commands in sequence to execute <strong>fwu.nsh</strong></p><p>‘ls’ <strong>[Enter]</strong><br>‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong><br>‘ls’ <strong>[Enter]</strong><br>‘fwu.nsh’ <strong>[Enter]</strong></p><figure class="highlight plaintext"><figcaption><span>EDKII</span></figcaption><table><tr><td class="code"><pre><span class="line">Shell&gt; FS0:</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; fwu.nsh</span><br></pre></td></tr></table></figure><p>  <img src="firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_165755.png" alt="2022-01-19_165755"></p><p>  <br></p><p>  Once finished, reboot your AVA Developer Platform.</p>
+              </div>
+            </details>
+<p><br></p>
+<p>— To downgrade your SCP firmware from v1.08, do the following:</p>
+<div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p><strong>IMPORTANT:</strong> Downgrading from 1.08 to 1.07 is required for fully supporting all 6 DIMM slots, as 1.08 poses problems and can only support 2 DIMMs. </p>
 </div>
-<p>   A. In the UEFI Shell screen, type ‘<em>FS0:</em>‘ and press <strong>Enter</strong> to enter the USB directory.</p>
-<p>   B. Type the following commands in sequence to <strong>clear</strong> <em>v1.08-related data</em>.</p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong></p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘XTools.efi nvp clr <em>‘ <em>*[Enter]</em></em><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear clearing 1.08</span><br><span class="line">      Shell&gt; FS0:</span><br><span class="line">      FS0:\\&gt; ls</span><br><span class="line">      FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">      FS0:\\&gt; ls</span><br><span class="line">      FS0:\\&gt; XTools.efi nvp clr *</span><br></pre></td></tr></table></figure></p>
-<p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_170037.png" alt="2022-01-19_170037"></p>
-<p>  C. Type  ‘<em>FS0:</em>‘ and press <strong>Enter</strong> again to enter the USB directory, and then type the following commands in sequence to execute <strong>capsule.nsh</strong></p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong></p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘capsule.nsh’ <strong>[Enter]</strong><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flashing SCP</span><br><span class="line">   Shell&gt; FS0:</span><br><span class="line">   FS0:\\&gt; ls</span><br><span class="line">   FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">   FS0:\\&gt; ls</span><br><span class="line">   FS0:\\&gt; capsule.nsh</span><br></pre></td></tr></table></figure></p>
-<p>  <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png" alt="image-20211130105949022"></p>
-<p>  <br></p>
-<p>  Once finished, reboot your AVA Developer Platform.</p>
-<p>​<br>   — To update your SCP firmware from earlier versions, do the following:<br>​      </p>
-<p>   A. In the UEFI Shell screen, type ‘<em>FS0:</em>‘ and press <strong>Enter</strong> to enter the USB directory.</p>
-<p>   B. Type the following commands in sequence to execute <strong>capsule.nsh</strong></p>
-<p>   ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong></p>
-<p>   ​    ‘ls’ <strong>[Enter]</strong></p>
-<p>   ​    ‘capsule.nsh’ <strong>[Enter]</strong><br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flashing SCP</span><br><span class="line">    Shell&gt; FS0:</span><br><span class="line">    FS0:\\&gt; ls</span><br><span class="line">    FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">    FS0:\\&gt; ls</span><br><span class="line">    FS0:\\&gt; capsule.nsh</span><br></pre></td></tr></table></figure></p>
-<p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png" alt="image-20211130105949022"></p>
-<p>   <br></p>
-<p>   Once finished, reboot your AVA Developer Platform.</p>
+<details class="folding-tag" blue><summary> Expand </summary>
+              <div class="content">
+              <p>A. In the UEFI Shell screen, type ‘<em>FS0:</em>‘ and press <strong>Enter</strong> to enter the USB directory.</p><p>B. Type the following commands in sequence to <strong>clear</strong> <em>v1.08-related data</em>.</p><p>‘ls’ <strong>[Enter]</strong><br>‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong><br>‘ls’ <strong>[Enter]</strong><br>‘XTools.efi nvp clr * <strong>[Enter]</strong></p><figure class="highlight plaintext"><figcaption><span>clearing 1.08</span></figcaption><table><tr><td class="code"><pre><span class="line">Shell&gt; FS0:</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; XTools.efi nvp clr *</span><br></pre></td></tr></table></figure><p>   <img src="firmware_3-Flashing-EDKII-SCP.assets/2022-01-19_170037.png" alt="2022-01-19_170037"></p><p>C. Type  ‘<em>FS0:</em>‘ and press <strong>Enter</strong> again to enter the USB directory, and then type the following commands in sequence to execute <strong>capsule.nsh</strong></p><p>‘ls’ <strong>[Enter]</strong><br>‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong><br>‘ls’ <strong>[Enter]</strong><br>‘capsule.nsh’ <strong>[Enter]</strong></p><figure class="highlight plaintext"><figcaption><span>SCP</span></figcaption><table><tr><td class="code"><pre><span class="line">Shell&gt; FS0:</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; capsule.nsh</span><br></pre></td></tr></table></figure><p> <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png" alt="image-20211130105949022"></p><p><br></p><p>Once finished, reboot your AVA Developer Platform.</p>
+              </div>
+            </details>
+<p><br></p>
+<p>— To update your SCP firmware from earlier versions, do the following:</p>
+<details class="folding-tag" blue><summary> Expand </summary>
+              <div class="content">
+              <p>A. In the UEFI Shell screen, type ‘<em>FS0:</em>‘ and press <strong>Enter</strong> to enter the USB directory.</p><p>B. Type the following commands in sequence to execute <strong>capsule.nsh</strong></p><p>‘ls’ <strong>[Enter]</strong><br>‘cd ComHpcAlt_tianocore_atf_1.07.300.02b\’ <strong>[Enter]</strong><br>‘ls’ <strong>[Enter]</strong><br>‘capsule.nsh’ <strong>[Enter]</strong></p><figure class="highlight plaintext"><figcaption><span>SCP</span></figcaption><table><tr><td class="code"><pre><span class="line">Shell&gt; FS0:</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; cd ComHpcAlt_tianocore_atf_1.07.300.02b\</span><br><span class="line">FS0:\\&gt; ls</span><br><span class="line">FS0:\\&gt; capsule.nsh</span><br></pre></td></tr></table></figure><p>  <img src="firmware_3-Flashing-EDKII-SCP.assets/image-20211130105949022.png" alt="image-20211130105949022"></p><p><br></p><p>Once finished, reboot your AVA Developer Platform.</p>
+              </div>
+            </details>
+</li>
+</ol>
 <p>Once the update is finished, please double-check that the EDKII/SCP firmware is of the correct version by repeating step 6-A.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-03-16T09:50:15.532Z" itemprop="dateModified">Last updated: 2022-03-16</time>
+                <time class="article-footer-updated" datetime="2022-03-16T16:35:26.293Z" itemprop="dateModified">Last updated: 2022-03-17</time>
                 <a href="firmware_UpdatingMMC.html" class="article-footer-prev" title="2 Updating MMC F/W"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
@@ -217,7 +217,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#Flashing-your-EDKII-SCP-firmware'}, '*');" class="toc-link" href="#Flashing-your-EDKII-SCP-firmware"><span class="toc-text">Flashing your EDKII&#x2F;SCP firmware</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#Using-a-UEFI-Shell'}, '*');" class="toc-link" href="#Using-a-UEFI-Shell"><span class="toc-text">Using a UEFI Shell</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#How-to-boot-your-system-with-UEFI-Shell'}, '*');" class="toc-link" href="#How-to-boot-your-system-with-UEFI-Shell"><span class="toc-text">How to boot your system with UEFI Shell?</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=firmware_Flashing-EDKII-SCP.html#How-to-flash-your-EDKII-SCP-firmware'}, '*');" class="toc-link" href="#How-to-flash-your-EDKII-SCP-firmware"><span class="toc-text">How to flash your EDKII&#x2F;SCP firmware?</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-your-EDKII-SCP-firmware"><span class="toc-text">Flashing your EDKII&#x2F;SCP firmware</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-a-UEFI-Shell"><span class="toc-text">Using a UEFI Shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-boot-your-system-with-UEFI-Shell"><span class="toc-text">How to boot your system with UEFI Shell?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-flash-your-EDKII-SCP-firmware"><span class="toc-text">How to flash your EDKII&#x2F;SCP firmware?</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
