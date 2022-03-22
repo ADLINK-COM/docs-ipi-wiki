@@ -76,8 +76,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.assets/BootSettingsButtons.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.assets/Linux%20User">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.assets/Windows%20User">
-<meta property="article:published_time" content="2022-03-21T03:58:51.325Z">
-<meta property="article:modified_time" content="2022-03-21T03:44:59.203Z">
+<meta property="article:published_time" content="2022-03-22T03:14:40.758Z">
+<meta property="article:modified_time" content="2022-03-22T03:14:40.749Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.assets/BootSettingsButtons.png">
@@ -112,7 +112,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#HowToFlashImageeMMCUsingUUUTool.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html'}, '*');}</script>
 
 	</div>
 	
@@ -140,28 +140,28 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-from-eMMC-using-UUU-tool" class="article-heading"><a href="#Boot-from-eMMC-using-UUU-tool" class="headerlink" title="Boot from eMMC using UUU tool"></a>Boot from eMMC using UUU tool<a class="article-anchor" href="#Boot-from-eMMC-using-UUU-tool" aria-hidden="true"></a></h1><p>This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.</p>
+                <h1 id="Boot-from-eMMC-using-UUU-tool" class="article-heading"><a href="#Boot-from-eMMC-using-UUU-tool" class="headerlink" title="Boot from eMMC using UUU tool"></a>Boot from eMMC using UUU tool<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Boot-from-eMMC-using-UUU-tool'}, '*');" class="article-anchor" href="#Boot-from-eMMC-using-UUU-tool" aria-hidden="true"></a></h1><p>This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.</p>
 <ul>
 <li><p><a href="#Windows-Host">Windows Host Users</a></p>
 </li>
 <li><p><a href="#Linux-Host">Linux Host Users</a></p>
 </li>
 </ul>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
-<li><p>Download the <strong>prebuilt Image(2G&#x2F;4G)</strong> to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click_here</a>.</p>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<li><p>Download the <strong>prebuilt Image(2G&#x2F;4G)</strong> to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a>.</p>
 </li>
-<li><p>Download the <strong>boot_loader(2G&#x2F;4G)</strong>  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click_here</a>.</p>
+<li><p>Download the <strong>boot_loader(2G&#x2F;4G)</strong>  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a>.</p>
 </li>
 <li><p>Place the <strong>boot_loader</strong> and the <strong>downloaded Image</strong> in the same directory.</p>
 </li>
 </ul>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
 <li><p>Change the boot settings is in <strong>recovery mode&#x2F;serial download mode</strong> <strong>0001</strong> on your I-Pi SMARC IMX8M plus. Here, as shown in the below figure the <strong>upper side</strong> of the switch is <strong>‘1’</strong> and <strong>lower side</strong> of the switch is <strong>‘0’</strong>.</p>
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\BootSettingsButtons.png" alt="led" style="margin-left: auto; margin-right: auto; display: block; zoom: 50%;">
 </li>
 <li><p>Your host computer must be connected to your target board via a micro USB OTG cable and the board must be powered with a power cable.</p>
 </li>
-<li><p>Install the <strong>winusb driver</strong> using <strong>Zadig</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zadig.akeo.ie/">click_here</a>.</p>
+<li><p>Install the <strong>winusb driver</strong> using <strong>Zadig</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zadig.akeo.ie/">click here</a>.</p>
 </li>
 <li><p>Open Zadig find your <strong>USB-connected device</strong>. Go to options and click list All Devices.</p>
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows User's\ChangingTheOptions.png" alt="led" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
@@ -173,7 +173,7 @@
 
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows User's\InstallingTheDriver.png" alt="led" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
 </li>
-<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UUU-Tool/UUU_Windows_Users/uuu_exe.zip">Click_here</a> to download the <strong>uuu.exe</strong> tool and extract the files. After extracting the files, copy them to <strong>C:&#x2F;Users&#x2F;(user_name)</strong> directory.</p>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UUU-Tool/UUU_Windows_Users/uuu_exe.zip">Click here</a> to download the <strong>uuu.exe</strong> tool and extract the files. After extracting the files, copy them to <strong>C:&#x2F;Users&#x2F;(user_name)</strong> directory.</p>
 </li>
 <li><p>Run the Windows **Command Prompt ** and navigate to the directory where you downloaded UUU tool. Type the following command,</p>
 </li>
@@ -196,13 +196,13 @@
 <li><p>The installed image is visible on your display.</p>
 </li>
 </ul>
-<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ul>
+<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ul>
 <li>Change the boot settings is in <strong>recovery mode&#x2F;serial download mode</strong> <strong>0001</strong> on your I-Pi SMARC IMX8M plus. Here, as shown in the below figure the <strong>upper side</strong> of the switch is <strong>‘1’</strong> and <strong>lower side</strong> of the switch is <strong>‘0’</strong>.</li>
 </ul>
  <img src="HowToFlashImageeMMCUsingUUUTool.assets\BootSettingsButtons.png" alt="led" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
 
 <ul>
-<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UUU-Tool/UUU_Linux_Users/uuu.zip">Click_here</a> to download the <strong>UUU tool</strong> and extract the files. After extracting the files, copy them to <strong>&#x2F;home</strong> directory.</p>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UUU-Tool/UUU_Linux_Users/uuu.zip">Click here</a> to download the <strong>UUU tool</strong> and extract the files. After extracting the files, copy them to <strong>&#x2F;home</strong> directory.</p>
 </li>
 <li><p>Your host computer must be connected to your target board via a micro USB OTG cable and the board must be powered with a power cable.</p>
 </li>
@@ -235,7 +235,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-03-21T03:44:59.203Z" itemprop="dateModified">Last updated: 2022-03-21</time>
+                <time class="article-footer-updated" datetime="2022-03-22T03:14:40.749Z" itemprop="dateModified">Last updated: 2022-03-22</time>
                 <a href="HowToFlashImageeMMC.html" class="article-footer-prev" title="Prepare your eMMC"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToBuildYocto.html" class="article-footer-next" title="How to Build Yocto"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

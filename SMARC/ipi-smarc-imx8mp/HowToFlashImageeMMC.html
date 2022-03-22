@@ -106,7 +106,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashImageeMMC.html#HowToFlashImageeMMC.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashImageeMMC.html'}, '*');}</script>
 
 	</div>
 	
@@ -134,12 +134,12 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-from-eMMC" class="article-heading"><a href="#Boot-from-eMMC" class="headerlink" title="Boot from eMMC"></a>Boot from eMMC<a class="article-anchor" href="#Boot-from-eMMC" aria-hidden="true"></a></h1><p>This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.</p>
+                <h1 id="Boot-from-eMMC" class="article-heading"><a href="#Boot-from-eMMC" class="headerlink" title="Boot from eMMC"></a>Boot from eMMC<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMC.html#Boot-from-eMMC'}, '*');" class="article-anchor" href="#Boot-from-eMMC" aria-hidden="true"></a></h1><p>This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.</p>
 <ul>
 <li><a href="#Windows-Host">Windows Host Users</a></li>
 <li><a href="#Linux-Host">Linux Host Users</a></li>
 </ul>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMC.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li><p>Download the prebuilt image to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a>.</p>
 </li>
 <li><p>Prepare your target board by connecting the power cord and the micro USB OTG cable to the host computer.</p>
@@ -147,7 +147,7 @@
 <li><p>Make sure your boot loader switches are in eMMC mode which is 1000.</p>
 <img src="HowToFlashImageeMMC.assets\Boot_loadert.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></li>
 </ul>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMC.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
 <li><p>Download and install on your host computer Win32DiskImager <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">click here</a>. Win32DiskImager is used to flash your system image.</p>
 </li>
 <li><p>Open Win32 Disk Imager and select the target board as device, be sure not to select any other conneted USB drive.</p>
@@ -169,7 +169,7 @@
 <li><p>Connect HDMI cable from Monitor to target board to check the display.</p>
 </li>
 </ul>
-<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ol>
+<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMC.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ol>
 <li><p>Copy the prebuilt bootable image to the working directory on your development host. Connect the target board to the host and enter the following command to flash the image.</p>
 <p><strong>Warning</strong>: Make sure your target board is recognized as storage device in development host. You can check the disk partitions to see if there are other device names, for example &#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc. you can also check device name with <code>dmesg</code> in terminal. Data loss may result if written to the wrong device or in the worst case you kill your hosts OS.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image] of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
