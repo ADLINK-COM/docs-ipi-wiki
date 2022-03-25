@@ -135,13 +135,13 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" class="article-heading"><a href="#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" class="headerlink" title="How to connect BMC serial console on AVA Developer Platform"></a>How to connect BMC serial console on AVA Developer Platform<a onclick="parent.postMessage( {msg: '?page=HowToUseBMCSerialConsole.html#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform'}, '*');" class="article-anchor" href="#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" aria-hidden="true"></a></h1><p>There is 3 Pin header (<strong>BMC_DBG</strong>) on the carrier board that supports the serial console for BMC (with IPMI functions).</p>
+                <h1 id="How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" class="article-heading"><a href="#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" class="headerlink" title="How to connect BMC serial console on AVA Developer Platform"></a>How to connect BMC serial console on AVA Developer Platform<a class="article-anchor" href="#How-to-connect-BMC-serial-console-on-AVA-Developer-Platform" aria-hidden="true"></a></h1><p>There is 3 Pin header (<strong>BMC_DBG</strong>) on the carrier board that supports the serial console for BMC (with IPMI functions).</p>
 <p><img src="HowtoUseBMCSerialConsole.assets/image-20210830171315702.png" alt="image-20210830171315702"></p>
 <p> Before start, please prepare <strong>USB to TTL Serial Adapter 3.3V Debug Cable TX RX Signal 3 Pin</strong> like this:</p>
 <p><img src="HowtoUseBMCSerialConsole.assets/image-20210830171550029.png" alt="image-20210830171550029" style="zoom: 33%;"></p>
 <ul>
 <li><p>Plug the USBtoRS232 adapter cable to your host machine and connect 3 pins with the corresponding the pins.</p>
-<h3 id="If-your-host-machine-is-runs-Linux-Environment" class="article-heading"><a href="#If-your-host-machine-is-runs-Linux-Environment" class="headerlink" title="If your host machine is runs Linux Environment"></a>If your host machine is runs Linux Environment<a onclick="parent.postMessage( {msg: '?page=HowToUseBMCSerialConsole.html#If-your-host-machine-is-runs-Linux-Environment'}, '*');" class="article-anchor" href="#If-your-host-machine-is-runs-Linux-Environment" aria-hidden="true"></a></h3><ul>
+<h3 id="If-your-host-machine-is-runs-Linux-Environment" class="article-heading"><a href="#If-your-host-machine-is-runs-Linux-Environment" class="headerlink" title="If your host machine is runs Linux Environment"></a>If your host machine is runs Linux Environment<a class="article-anchor" href="#If-your-host-machine-is-runs-Linux-Environment" aria-hidden="true"></a></h3><ul>
 <li><p>Type this command to list the USB devices: <strong>lsusb</strong></p>
 <blockquote>
 <p>sushi@Sushi:~$ lsusb<br>Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub<br><strong>Bus 001 Device 011: ID 0403:6001 Future Technology Devices International, Ltd FT232 Serial (UART) IC</strong></p>
@@ -162,8 +162,8 @@
 </ul>
 </li>
 <li><p>Then power on  target system and you will get the booting messages from Serial Console</p>
-<h3 id class="article-heading"><a href="#" class="headerlink" title></a><img src="HowtoUseBMCSerialConsole.assets/image-20210827154923325.png" alt="image-20210827154923325"><a onclick="parent.postMessage( {msg: '?page=HowToUseBMCSerialConsole.html#'}, '*');" class="article-anchor" href="#" aria-hidden="true"></a></h3><p>​</p>
-<h3 id="If-your-Host-machine-runs-Windows-Environment" class="article-heading"><a href="#If-your-Host-machine-runs-Windows-Environment" class="headerlink" title="If your Host machine runs Windows Environment"></a>If your Host machine runs Windows Environment<a onclick="parent.postMessage( {msg: '?page=HowToUseBMCSerialConsole.html#If-your-Host-machine-runs-Windows-Environment'}, '*');" class="article-anchor" href="#If-your-Host-machine-runs-Windows-Environment" aria-hidden="true"></a></h3></li>
+<h3 id class="article-heading"><a href="#" class="headerlink" title></a><img src="HowtoUseBMCSerialConsole.assets/image-20210827154923325.png" alt="image-20210827154923325"><a class="article-anchor" href="#" aria-hidden="true"></a></h3><p>​</p>
+<h3 id="If-your-Host-machine-runs-Windows-Environment" class="article-heading"><a href="#If-your-Host-machine-runs-Windows-Environment" class="headerlink" title="If your Host machine runs Windows Environment"></a>If your Host machine runs Windows Environment<a class="article-anchor" href="#If-your-Host-machine-runs-Windows-Environment" aria-hidden="true"></a></h3></li>
 </ul>
 </li>
 </ul>
