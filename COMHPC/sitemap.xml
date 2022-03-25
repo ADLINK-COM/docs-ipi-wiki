@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
+    
+    <lastmod>2022-03-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/index.html</loc>
+    
+    <lastmod>2022-03-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-03-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/Building%20Android10.0%20Image%20Developer%20Guide.html</loc>
+    
+    <lastmod>2022-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_Flashing-EDKII-SCP.html</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
     
     <lastmod>2022-03-22</lastmod>
@@ -33,20 +68,6 @@
     <loc>https://docs.ipi.wiki/ava/firmware_EnablingBMC-LAN.html</loc>
     
     <lastmod>2022-03-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_Flashing-EDKII-SCP.html</loc>
-    
-    <lastmod>2022-03-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/index.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
     
   </url>
   
@@ -108,13 +129,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/HowDualSPIROMWorks.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/CarrierIntroduction.html</loc>
     
     <lastmod>2022-03-16</lastmod>
     
@@ -340,7 +354,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-03-22</lastmod>
+    <lastmod>2022-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
