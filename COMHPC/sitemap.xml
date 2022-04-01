@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
     
     <lastmod>2022-04-01</lastmod>
@@ -17,13 +31,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/index-old.html</loc>
-    
-    <lastmod>2022-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
     
     <lastmod>2022-04-01</lastmod>
     
@@ -73,13 +80,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/GettingStarted_WhatsInTheBox.html</loc>
-    
-    <lastmod>2022-03-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
     
     <lastmod>2022-03-22</lastmod>
     
