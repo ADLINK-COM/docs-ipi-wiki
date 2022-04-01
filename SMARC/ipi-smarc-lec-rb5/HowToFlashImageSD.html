@@ -60,12 +60,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to Flash an Image to the SD CardThis procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the SD Card.  Flash Ubuntu or Debian Image  Flash Yocto or Android Image       Flash Ub">
+  <meta name="description" content="How to Flash an Image to the SD CardThis procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the SD Card.  Flash Ubuntu or Debian Image  Flash Yocto or Android Image">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashImageSD.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to Flash an Image to the SD CardThis procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the SD Card.  Flash Ubuntu or Debian Image  Flash Yocto or Android Image       Flash Ub">
+<meta property="og:description" content="How to Flash an Image to the SD CardThis procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the SD Card.  Flash Ubuntu or Debian Image  Flash Yocto or Android Image">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashImageSD.assets/rufus_1.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashImageSD.assets/rufus_2.png">
@@ -135,14 +135,14 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <div class="bullets">
 
-<h1 id="How-to-Flash-an-Image-to-the-SD-Card" class="article-heading"><a href="#How-to-Flash-an-Image-to-the-SD-Card" class="headerlink" title="How to Flash an Image to the SD Card"></a>How to Flash an Image to the SD Card<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#How-to-Flash-an-Image-to-the-SD-Card'}, '*');" class="article-anchor" href="#How-to-Flash-an-Image-to-the-SD-Card" aria-hidden="true"></a></h1><p>This procedure describes how to flash <strong>Ubuntu/Debian/Yocto/Android</strong> image to the SD Card.</p>
+<h1 id="How-to-Flash-an-Image-to-the-SD-Card" class="article-heading"><a href="#How-to-Flash-an-Image-to-the-SD-Card" class="headerlink" title="How to Flash an Image to the SD Card"></a>How to Flash an Image to the SD Card<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#How-to-Flash-an-Image-to-the-SD-Card'}, '*');" class="article-anchor" href="#How-to-Flash-an-Image-to-the-SD-Card" aria-hidden="true"></a></h1><p>This procedure describes how to flash <strong>Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android</strong> image to the SD Card.</p>
 <ul>
 <li><p><a href="#Flash-Ubuntu-or-Debian-Image">Flash Ubuntu or Debian Image</a></p>
 </li>
-<li><p><a href="#Flash-Yocto-or-Android-Image">Flash Yocto or Android Image</a>    </p>
+<li><p><a href="#Flash-Yocto-or-Android-Image">Flash Yocto or Android Image</a></p>
 </li>
 </ul>
 <h2 id="Flash-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flash-Ubuntu-or-Debian-Image" class="headerlink" title="Flash Ubuntu or Debian Image"></a>Flash Ubuntu or Debian Image<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Flash-Ubuntu-or-Debian-Image'}, '*');" class="article-anchor" href="#Flash-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
@@ -162,9 +162,10 @@
 <img src="HowToFlashImageSD.assets\rufus_2.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
 
 <h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
-<li><p>Copy the prebuilt bootable Ubuntu/Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</p>
-<p><strong>Warning</strong>: Make sure you first properly identify the SD Card device name as for example (/dev/sdb or /dev/sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your hosts OS.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure></li>
+<li><p>Copy the prebuilt bootable Ubuntu&#x2F;Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</p>
+<p><strong>Warning</strong>: Make sure you first properly identify the SD Card device name as for example (&#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your hosts OS.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>After dd has completed, enter the following command:</p>
 </li>
 </ol>
@@ -188,11 +189,12 @@
 <p>* The tool will prompt to the user that data will be lost. Select “Yes” to continue</p>
 <ul>
 <li><p>Once done, click <strong>OK</strong> and and it will show the message that <strong>Write successful</strong>.</p>
-<img src="HowToFlashImageSD.assets\win32_2.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></li>
+<img src="HowToFlashImageSD.assets\win32_2.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+</li>
 <li><p>Eject the SD card and insert it into the target board and power on the board to boot up.</p>
 </li>
 </ul>
-<p><strong>Note:</strong> If you want to use Linux development host for flashing <strong>Yocto/Android</strong>, you can use <code>dd</code> command as shown for <strong>Ubuntu/Debian</strong>.</p>
+<p><strong>Note:</strong> If you want to use Linux development host for flashing <strong>Yocto&#x2F;Android</strong>, you can use <code>dd</code> command as shown for <strong>Ubuntu&#x2F;Debian</strong>.</p>
 <p>Make sure the boot loader on the carrier board is set according to the SD card or eMMC as you boot.</p>
 <img src="HowToFlashImageSD.assets\Boot_loadert.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
 

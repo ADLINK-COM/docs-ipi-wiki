@@ -133,7 +133,7 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <h1 id="Candera-CGI-Studio-demo-on-I-Pi-SMARC-IMX8M-Plus-devkit" class="article-heading"><a href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-IMX8M-Plus-devkit" class="headerlink" title="Candera CGI Studio demo on I-Pi SMARC IMX8M Plus devkit"></a>Candera CGI Studio demo on I-Pi SMARC IMX8M Plus devkit<a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Candera-CGI-Studio-demo-on-I-Pi-SMARC-IMX8M-Plus-devkit'}, '*');" class="article-anchor" href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-IMX8M-Plus-devkit" aria-hidden="true"></a></h1><div class="bullets">
 This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC IMX8M Plus
 For requirements and how to set up your environment and appropriate utilities, refer to following document:
@@ -157,12 +157,14 @@ For requirements and how to set up your environment and appropriate utilities, r
 </li>
 <li><p>To get the application working, two files must be deployed on the target device locally which means, the files must be placed in rootfs of the device.</p>
 <ul>
-<li><input checked disabled type="checkbox"> Application/<strong>homa.cfg.sample</strong>à /sdcard/<strong>homa.cfg</strong></li>
-</ul>
+<li><p><input checked disabled type="checkbox"> 
+Application&#x2F;<strong>homa.cfg.sample</strong>à &#x2F;sdcard&#x2F;<strong>homa.cfg</strong></p>
+</li>
+<li><p><input checked disabled type="checkbox"> 
+Application&#x2F;Assets&#x2F;<strong>AssetLibCff_Android_Target.bin</strong> à &#x2F;sdcard&#x2F;<strong>AssetLibCff.bin</strong></p>
 </li>
 </ul>
-<ul>
-<li><input checked disabled type="checkbox"> Application/Assets/<strong>AssetLibCff_Android_Target.bin</strong> à /sdcard/<strong>AssetLibCff.bin</strong></li>
+</li>
 </ul>
 <p>This can be done by drag and drop utilizing Explorer or by the <strong>adb</strong> command line tool on power shell.</p>
 <p>Refer the below image.</p>
