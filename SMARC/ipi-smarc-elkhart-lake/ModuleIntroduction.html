@@ -60,17 +60,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Module Introduction     Download Datasheet  The SMARC FormfactorThe SMARC (“Smart Mobility ARChitecture”) is a versatile small form factor computer on Module definition targeting applications that req">
+  <meta name="description" content="Module Introduction     Download Datasheet    The SMARC Form FactorThe SMARC (“Smart Mobility ARChitecture”) is a versatile small form factor computer on Module definition targeting applications that">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/ModuleIntroduction.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Module Introduction     Download Datasheet  The SMARC FormfactorThe SMARC (“Smart Mobility ARChitecture”) is a versatile small form factor computer on Module definition targeting applications that req">
+<meta property="og:description" content="Module Introduction     Download Datasheet    The SMARC Form FactorThe SMARC (“Smart Mobility ARChitecture”) is a versatile small form factor computer on Module definition targeting applications that">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/ModuleIntroduction.assets/modulenew-min.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/ModuleIntroduction.assets/logo.png">
-<meta property="article:published_time" content="2022-03-21T02:57:37.575Z">
-<meta property="article:modified_time" content="2022-03-21T02:57:37.567Z">
+<meta property="article:published_time" content="2022-04-01T00:38:36.823Z">
+<meta property="article:modified_time" content="2022-03-31T10:33:39.367Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/ModuleIntroduction.assets/modulenew-min.png">
@@ -138,7 +138,9 @@
 
 
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-EL/documentation/LEC-EL-datasheet-preliminary-20211007.pdf">Download Datasheet</a> </p>
-<h2 id="The-SMARC-Formfactor" class="article-heading"><a href="#The-SMARC-Formfactor" class="headerlink" title="The SMARC Formfactor"></a>The SMARC Formfactor<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#The-SMARC-Formfactor'}, '*');" class="article-anchor" href="#The-SMARC-Formfactor" aria-hidden="true"></a></h2><p>The SMARC (“Smart Mobility ARChitecture”) is a versatile small form factor computer on Module definition targeting applications that require low power, low costs, and high performance. The Modules will typically use ARM SOCs similar or the same as those used in many familiar devices such as tablet computers and smart phones. Alternative low power SOCs and CPUs, such as tablet oriented X86 devices and other RISC CPUs may be used as well. The Module power envelope is typically under 6W.</p>
+<div class="bullets">
+
+<h2 id="The-SMARC-Form-Factor" class="article-heading"><a href="#The-SMARC-Form-Factor" class="headerlink" title="The SMARC Form Factor"></a>The SMARC Form Factor<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#The-SMARC-Form-Factor'}, '*');" class="article-anchor" href="#The-SMARC-Form-Factor" aria-hidden="true"></a></h2><p>The SMARC (“Smart Mobility ARChitecture”) is a versatile small form factor computer on Module definition targeting applications that require low power, low costs, and high performance. The Modules will typically use ARM SOCs similar or the same as those used in many familiar devices such as tablet computers and smart phones. Alternative low power SOCs and CPUs, such as tablet oriented X86 devices and other RISC CPUs may be used as well. The Module power envelope is typically under 6W.</p>
 <p>Two Module sizes are defined: 82 mm x 50 mm and 82 mm x 80 mm.</p>
 <p>The Module PCBs have 314 edge fingers that mate with a low profile 314 pin 0.5 mm pitch right angle connector (the connector is sometimes identified as a 321 pin connector, but 7 pins are lost to the key).</p>
 <p>The Modules are used as building blocks for portable and stationary embedded systems. The core CPU and support circuits, including DRAM, boot flash, power sequencing, CPU power supplies, GBE and a single channel LVDS display transmitter are concentrated on the Module. The Modules are used with application specific Carrier Boards that implement other features such as audio CODECs, touch controllers, wireless devices, etc. The modular approach allows scalability, fast time to market and upgradability while still maintaining low costs, low power and small physical size.</p>
@@ -281,8 +283,36 @@
 </ul>
 <h3 id="Power" class="article-heading"><a href="#Power" class="headerlink" title="Power"></a>Power<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Power'}, '*');" class="article-anchor" href="#Power" aria-hidden="true"></a></h3><p><strong>Input</strong></p>
 <ul>
-<li>5Vdc +&#x2F;- 5%</li>
+<li>5VDC +&#x2F;- 5%</li>
 </ul>
+<p><strong>LEDs</strong></p>
+<ul>
+<li>2 LEDs (1 blue &#x2F; 1 green)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>LED status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Both LEDs off</td>
+<td>powered off</td>
+</tr>
+<tr>
+<td>Blue on &#x2F; <br>Green off</td>
+<td>booting up</td>
+</tr>
+<tr>
+<td>Green on &#x2F; <br>Blue off</td>
+<td>powered on and ready</td>
+</tr>
+<tr>
+<td>Blue blinking &#x2F; <br>Green off</td>
+<td>error occurred</td>
+</tr>
+</tbody></table>
 <h3 id="Mechanical-and-Environmental" class="article-heading"><a href="#Mechanical-and-Environmental" class="headerlink" title="Mechanical and Environmental"></a>Mechanical and Environmental<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Mechanical-and-Environmental'}, '*');" class="article-anchor" href="#Mechanical-and-Environmental" aria-hidden="true"></a></h3><p><strong>Form Factor</strong></p>
 <ul>
 <li>SGET SMARC Specifications 2.1</li>
@@ -318,10 +348,18 @@
 <ul>
 <li>VxWorks</li>
 </ul>
+</div>
+
+
+
+
+
+
+
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-03-21T02:57:37.567Z" itemprop="dateModified">Last updated: 2022-03-21</time>
+                <time class="article-footer-updated" datetime="2022-03-31T10:33:39.367Z" itemprop="dateModified">Last updated: 2022-03-31</time>
                 <a href="HowToSetup.html" class="article-footer-prev" title="How to Setup"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CarrierIntroduction.html" class="article-footer-next" title="Carrier Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -331,7 +369,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Module-Introduction'}, '*');" class="toc-link" href="#Module-Introduction"><span class="toc-text">Module Introduction</span></a><ol class="toc-childbvdf"><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#The-SMARC-Formfactor'}, '*');" class="toc-link" href="#The-SMARC-Formfactor"><span class="toc-text">The SMARC Formfactor</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Features'}, '*');" class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Specifications'}, '*');" class="toc-link" href="#Specifications"><span class="toc-text">Specifications</span></a><ol class="toc-childbvdf"><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Core-System'}, '*');" class="toc-link" href="#Core-System"><span class="toc-text">Core System</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Video'}, '*');" class="toc-link" href="#Video"><span class="toc-text">Video</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Audio'}, '*');" class="toc-link" href="#Audio"><span class="toc-text">Audio</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Dual-Ethernet'}, '*');" class="toc-link" href="#Dual-Ethernet"><span class="toc-text">Dual Ethernet</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Extension-Busses'}, '*');" class="toc-link" href="#Extension-Busses"><span class="toc-text">Extension Busses</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#System-Storage'}, '*');" class="toc-link" href="#System-Storage"><span class="toc-text">System Storage</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#SEMA®-Board-Controller'}, '*');" class="toc-link" href="#SEMA%C2%AE-Board-Controller"><span class="toc-text">SEMA® Board Controller</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Power'}, '*');" class="toc-link" href="#Power"><span class="toc-text">Power</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Mechanical-and-Environmental'}, '*');" class="toc-link" href="#Mechanical-and-Environmental"><span class="toc-text">Mechanical and Environmental</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Operating-Systems'}, '*');" class="toc-link" href="#Operating-Systems"><span class="toc-text">Operating Systems</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Module-Introduction'}, '*');" class="toc-link" href="#Module-Introduction"><span class="toc-text">Module Introduction</span></a><ol class="toc-childbvdf"><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#The-SMARC-Form-Factor'}, '*');" class="toc-link" href="#The-SMARC-Form-Factor"><span class="toc-text">The SMARC Form Factor</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Features'}, '*');" class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Specifications'}, '*');" class="toc-link" href="#Specifications"><span class="toc-text">Specifications</span></a><ol class="toc-childbvdf"><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Core-System'}, '*');" class="toc-link" href="#Core-System"><span class="toc-text">Core System</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Video'}, '*');" class="toc-link" href="#Video"><span class="toc-text">Video</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Audio'}, '*');" class="toc-link" href="#Audio"><span class="toc-text">Audio</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Dual-Ethernet'}, '*');" class="toc-link" href="#Dual-Ethernet"><span class="toc-text">Dual Ethernet</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Extension-Busses'}, '*');" class="toc-link" href="#Extension-Busses"><span class="toc-text">Extension Busses</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#System-Storage'}, '*');" class="toc-link" href="#System-Storage"><span class="toc-text">System Storage</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#SEMA®-Board-Controller'}, '*');" class="toc-link" href="#SEMA%C2%AE-Board-Controller"><span class="toc-text">SEMA® Board Controller</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Power'}, '*');" class="toc-link" href="#Power"><span class="toc-text">Power</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Mechanical-and-Environmental'}, '*');" class="toc-link" href="#Mechanical-and-Environmental"><span class="toc-text">Mechanical and Environmental</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Operating-Systems'}, '*');" class="toc-link" href="#Operating-Systems"><span class="toc-text">Operating Systems</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
