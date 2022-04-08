@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/index.html</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/GettingStarted_WhatsInTheBox.html</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
     
     <lastmod>2022-04-01</lastmod>
@@ -10,20 +38,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
-    
-    <lastmod>2022-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
-    
-    <lastmod>2022-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/index.html</loc>
     
     <lastmod>2022-04-01</lastmod>
     
@@ -68,20 +82,6 @@
     <loc>https://docs.ipi.wiki/ava/firmware_Flashing-EDKII-SCP.html</loc>
     
     <lastmod>2022-03-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
-    
-    <lastmod>2022-03-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/GettingStarted_WhatsInTheBox.html</loc>
-    
-    <lastmod>2022-03-22</lastmod>
     
   </url>
   
@@ -382,7 +382,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-04-01</lastmod>
+    <lastmod>2022-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
