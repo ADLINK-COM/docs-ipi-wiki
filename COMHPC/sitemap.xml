@@ -2,16 +2,289 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
+    <loc>https://docs.ipi.wiki/index.html</loc>
     
-    <lastmod>2022-04-07</lastmod>
+    <lastmod>2022-04-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/index.html</loc>
+    <loc>https://docs.ipi.wiki/ava/operation.html</loc>
     
-    <lastmod>2022-04-07</lastmod>
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/introduction.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/index_old.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/edk2-firmware-update.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/YoctoInstallation.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/UserInterfaces.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/Unboxing.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/UbuntuInstallation.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/PowerCableConnection.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/IntroductionCOMHPC.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseOpenOCD.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashEDK2.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashBMC.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToReplaceBMCROM.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashMMCFW.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashBMCWeb.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToCheckPowerReadingByIMPI.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCMACIPAddress.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToBuildYoctoEWAOL.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToBuildYocto.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToBuildEDK2.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowDualSPIROMWorks.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ComponentsInterfaces-old.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/COMHPC_BuildInstructions.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/Building%20Android10.0%20Image%20Developer%20Guide.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ArmSystemReadySR_OSsupport.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/AmpereAltraNeoverseN1.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/404/index.html</loc>
+    
+    <lastmod>2022-04-15</lastmod>
     
   </url>
   
@@ -30,6 +303,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
     
     <lastmod>2022-04-01</lastmod>
@@ -38,6 +318,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/index.html</loc>
     
     <lastmod>2022-04-01</lastmod>
     
@@ -58,23 +345,9 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/CarrierIntroduction.html</loc>
-    
-    <lastmod>2022-03-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/overview_components&interfaces-old.html</loc>
     
     <lastmod>2022-03-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/Building%20Android10.0%20Image%20Developer%20Guide.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
     
   </url>
   
@@ -106,283 +379,10 @@
     
   </url>
   
-  <url>
-    <loc>https://docs.ipi.wiki/ava/index_old.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToBuildYocto.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/UbuntuInstallation.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/YoctoInstallation.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCMACIPAddress.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowDualSPIROMWorks.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/ArmSystemReadySR_OSsupport.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/Unboxing.html</loc>
-    
-    <lastmod>2022-03-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/AmpereAltraNeoverseN1.html</loc>
-    
-    <lastmod>2022-03-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/ComponentsInterfaces-old.html</loc>
-    
-    <lastmod>2022-03-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/UserInterfaces.html</loc>
-    
-    <lastmod>2022-02-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/operation.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseOpenOCD.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashEDK2.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashBMC.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToReplaceBMCROM.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashMMCFW.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashBMCWeb.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
-    
-    <lastmod>2022-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/edk2-firmware-update.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/index.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/introduction.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/PowerCableConnection.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/IntroductionCOMHPC.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToCheckPowerReadingByIMPI.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToBuildEDK2.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToBuildYoctoEWAOL.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/COMHPC_BuildInstructions.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/404/index.html</loc>
-    
-    <lastmod>2021-11-22</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
