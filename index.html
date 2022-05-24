@@ -212,6 +212,46 @@ h1 {
   height: auto;
 }
 
+
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* .col-e {
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 50px;
+} */
+
+
+.col-e h2 {
+  font-size: 40px;
+  color: #707070;
+  font-weight: 800;
+  margin: 20px 300px 10px;
+  align-items: center;
+}
+
+
+.col-f {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.col-g .controller {
+  width: 70%;
+
+}
+
+
+
 </style>
 
 <header id="banner" class="wrapper">
@@ -221,41 +261,74 @@ h1 {
   <div class="wrapper">
     <div class="inner">
 
-      <div class="top-image">
+      <!-- <div class="top-image">
         DOCS
+      </div> -->
+
+      <div class="col-12 col-g">
+          <img src="index/Untitled-ban.png" class="controller" />
+          <hr>
       </div>
 
+      <!-- <div class="row top">
+          <div class="col-4 col-e">
+              <h2> DOCS+ <br> Center</h2>
+          </div>
+          <div class="col-8 col-g">
+              <img src="index/image_banner.jpeg" class="controller" />
+          </div>
+      </div> -->
 
 <div class="container">
 
-  <h1> DOCS+ Center </h1>
+  <!-- <h1> DOCS+ Center </h1> -->
+
 
   <div class="row justify-content-between" >
 
     <div class="col-4">
-      <img src="index/SMARC.jpg" alt="Screenshot_20200608-082418"  class="responsive" width="300" height="100"/>
-      <h3>SMARC</h3>
       <br>
-      <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/">I-Pi SMARC Elkhart Lake</a></h5>
       <br>
-      <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-imx8mp/">I-Pi SMARC IMX8M Plus</a></h5>
+      <img src="index/SMARC.jpg" alt="Screenshot_20200608-082418"  class="responsive" width="200" height="60"/>
+      <!-- <h3>SMARC</h3> -->
       <br>
-      <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-px30/">I-Pi SMARC PX30</a></h5>
-      <br>
-      <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/">I-Pi SMARC RB5</a></h5>
+          <div class="d-flex flex-column">
+              <li class="d-flex align-items-center py-2">
+                  <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/">I-Pi SMARC Elkhart Lake</a></h5>
+              </li>
+              <li class="d-flex align-items-center py-2">
+                  <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-imx8mp/">I-Pi SMARC IMX8M Plus</a></h5>
+              </li>
+              <li class="d-flex align-items-center py-2">
+                  <span class="bullet me-5"></span>   <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-px30/">I-Pi SMARC PX30</a></h5>
+              </li>
+              <li class="d-flex align-items-center py-2">
+                  <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/">I-Pi SMARC RB5</a></h5>
+
+              </li>
+
+        </div>
 
     </div>
 
 
     <div class="col-4">
+
+      <img src="index/com-hpc.png" alt="Screenshot_20200608-082418" class="responsive" width="200" height="80" />
+      <!-- <h3>COM-HPC</h3> -->
       <br>
       <br>
-      <img src="index/com-hpc.png" alt="Screenshot_20200608-082418" class="responsive" width="300" height="80" />
-      <h3>COM-HPC</h3>
-      <br>
-      <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">Ampere Altra Developer Platform</a></h5>
-      <br>
-      <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">AVA Developer Platform</a></h5>
+
+      <div class="d-flex flex-column">
+          <li class="d-flex align-items-center py-2">
+              <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">Ampere Altra Developer Platform</a></h5>
+          </li>
+          <li class="d-flex align-items-center py-2">
+              <span class="bullet me-5"></span>   <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">AVA Developer Platform</a></h5>
+          </li>
+
+      </div>
+
     </div>
 
   </div>
