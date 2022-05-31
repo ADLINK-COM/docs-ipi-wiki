@@ -213,8 +213,6 @@ h1 {
 }
 
 
-
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -250,7 +248,23 @@ h1 {
 
 }
 
+.col-4 a{
+  color:  #2778CA;
+}
 
+.col-4 a:hover {
+  color: #333232;
+}
+
+.list-display li {
+  margin-bottom:.4rem;
+  font-size:1.1rem;
+  padding-left: 40px;
+}
+
+ul.list-display {
+  list-style-type: circle;
+}
 
 </style>
 
@@ -293,6 +307,7 @@ h1 {
       <!-- <h3>SMARC</h3> -->
       <br>
           <div class="d-flex flex-column">
+            <ul class="list-display" >
               <li class="d-flex align-items-center py-2">
                   <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/">I-Pi SMARC Elkhart Lake</a></h5>
               </li>
@@ -306,7 +321,7 @@ h1 {
                   <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/">I-Pi SMARC RB5</a></h5>
 
               </li>
-
+          </ul>
         </div>
 
     </div>
@@ -318,15 +333,15 @@ h1 {
       <!-- <h3>COM-HPC</h3> -->
       <br>
       <br>
-
       <div class="d-flex flex-column">
-          <li class="d-flex align-items-center py-2">
-              <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">Ampere Altra Developer Platform</a></h5>
-          </li>
-          <li class="d-flex align-items-center py-2">
-              <span class="bullet me-5"></span>   <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">AVA Developer Platform</a></h5>
-          </li>
-
+          <ul class="list-display" >
+            <li class="d-flex align-items-center py-2">
+                <span class="bullet me-5"></span> <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">Ampere Altra Developer Platform</a></h5>
+            </li>
+            <li class="d-flex align-items-center py-2">
+                <span class="bullet me-5"></span>   <h5><a href="https://docs.ipi.wiki/COMHPC/ava/">AVA Developer Platform</a></h5>
+            </li>
+        </ul>
       </div>
 
     </div>
