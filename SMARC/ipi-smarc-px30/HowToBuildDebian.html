@@ -67,21 +67,21 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="How to Build Debian  This procedure describes how to create a Debian SD Card image for LEC-PX30 with Industrial I-Pi SMARC. The version of Debian used is 10 (buster). Recommended HardwareTo setup the">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/image-20200309102707320.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/image-20200309102707320.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.assets/Capture3.JPG">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted1-1583897658803.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted2-1583897706819.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted3-1583903424202.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted4.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted5.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted6.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.assets/gparted3-1583903538497.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/lsblk_output-1583903709858.png">
-<meta property="article:published_time" content="2021-10-19T05:23:25.812Z">
-<meta property="article:modified_time" content="2021-10-19T05:23:25.812Z">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/gparted1-1583897658803.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/gparted2-1583897706819.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/gparted3-1583903424202.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/gparted4.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/gparted5.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/gparted6.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildDebian.assets/gparted3-1583903538497.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/lsblk_output-1583903709858.png">
+<meta property="article:published_time" content="2022-06-24T03:31:26.943Z">
+<meta property="article:modified_time" content="2022-06-24T03:31:26.943Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/image-20200309102707320.png">
+<meta name="twitter:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu.assets/image-20200309102707320.png">
   <!-- Google Analytics -->
   
 <script>
@@ -140,19 +140,19 @@
                 <h1 class="article-title" itemprop="name"></h1>
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody">
+              <div class="article-content bullets" itemprop="articleBody">
                 <h2 id="How-to-Build-Debian" class="article-heading"><a href="#How-to-Build-Debian" class="headerlink" title="How to Build Debian"></a>How to Build Debian<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#How-to-Build-Debian'}, '*');" class="article-anchor" href="#How-to-Build-Debian" aria-hidden="true"></a></h2><div class="bullets">
 
 <p>This procedure describes how to create a Debian SD Card image for <strong>LEC-PX30 with Industrial I-Pi SMARC</strong>. The version of Debian used is 10 (buster).</p>
-<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Recommended-Hardware'}, '*');" class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Debian image creation, a Linux host with the following configuration is recommended. A host machine with adequate processing power and disk space is ideal as the packages can run several GBs in size and the build can take a lot of time.</p>
+<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Recommended-Hardware'}, '*');" class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Debian image creation, a Linux development host with the following configuration is recommended. A development host with adequate processing power and disk space is ideal as the packages can run several GBs in size and the build can take a lot of time.</p>
 <ul>
-<li>Intel Core-i7 processor (&gt;= 4 cores)</li>
+<li>Intel Core-i7 processor (&gt;&#x3D; 4 cores)</li>
 <li>8 GB RAM</li>
 <li>1 TB disk space</li>
 <li>High speed network connectivity</li>
-<li>OS: Ubuntu 16.04 LTS/Ubuntu 18.04 LTS</li>
+<li>OS: Ubuntu 16.04 LTS&#x2F;Ubuntu 18.04 LTS</li>
 </ul>
-<p>Update apt repositories list on your host machine.</p>
+<p>Update apt repositories list on your development host.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br></pre></td></tr></table></figure>
 
 <p>Install kernel and u-boot dependencies.</p>
@@ -168,52 +168,66 @@
 <li>Step 1: Create a Debian root file system.</li>
 <li>Step 2: Generate Buildroot SD Card Image.</li>
 <li>Step 3: Flash Buildroot SD card image to the prepared SD card by using SD Firmware Tool.</li>
-<li>Step 4: Replace the buidroot rootfs image with Debian’s one on BuildRoot SD Card image.</li>
+<li>Step 4: Replace the buidroot rootfs image with Debian’s one on buildroot SD Card image.</li>
 </ul>
 <p>These steps are detailed below.</p>
 <h2 id="Step-1-Preparing-Debian-Root-File-System" class="article-heading"><a href="#Step-1-Preparing-Debian-Root-File-System" class="headerlink" title="Step 1: Preparing Debian Root File System"></a>Step 1: Preparing Debian Root File System<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-1-Preparing-Debian-Root-File-System'}, '*');" class="article-anchor" href="#Step-1-Preparing-Debian-Root-File-System" aria-hidden="true"></a></h2><ol>
 <li><p>Create a new working directory and change directory into it.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/px30</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/px30</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/px30</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/px30</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Create a rootfs directory.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir rootfs</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir rootfs</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Install debootsrap and it’s dependencies.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install debootstrap binfmt-support qemu-user-static</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo debootstrap --arch=arm64 --include=sudo,net-tools,isc-dhcp-client --foreign buster rootfs</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo debootstrap --arch=arm64 --include=sudo,net-tools,isc-dhcp-client --foreign buster rootfs</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Add required apt repositories to sources.list.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;printf &#x27;deb http://deb.debian.org/debian buster main contrib non-free\ndeb-src http://deb.debian.org/debian buster main contrib non-free\n\ndeb http://deb.debian.org/debian-security buster/updates main contrib non-free\ndeb-src http://deb.debian.org/debian-security buster/updates main contrib non-free\n\ndeb http://deb.debian.org/debian buster-updates main contrib non-free\ndeb-src http://deb.debian.org/debian buster-updates main contrib non-free\n\ndeb http://deb.debian.org/debian buster-backports main contrib non-free\ndeb-src http://deb.debian.org/debian buster-backports main contrib non-free\n&#x27; &gt; rootfs/etc/apt/sources.list&quot;</span></span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="Configure-the-Rootfs" class="article-heading"><a href="#Configure-the-Rootfs" class="headerlink" title="Configure the Rootfs"></a>Configure the Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Configure-the-Rootfs'}, '*');" class="article-anchor" href="#Configure-the-Rootfs" aria-hidden="true"></a></h3><ol>
 <li><p>Add host name to <code>/etc/hostname</code> </p>
 <p>​    Here is an example.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;adlink&#x27; &gt; rootfs/etc/hostname&quot;</span></span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;adlink&#x27; &gt; rootfs/etc/hostname&quot;</span></span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Add host entry in <code>/etc/hosts</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;printf &#x27;127.0.0.1\tlocalhost\n127.0.1.1\tadlink\n\n&#x27; &gt; rootfs/etc/hosts&quot;</span></span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;root::0:0:root:/root:/bin/bash&#x27; &gt; rootfs/etc/passwd&quot;</span></span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;root::0:0:root:/root:/bin/bash&#x27; &gt; rootfs/etc/passwd&quot;</span></span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Prepare QEMU</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo wget https://github.com/multiarch/qemu-user-static/releases/download/v4.2.0-6/qemu-aarch64-static -O rootfs/usr/bin/qemu-aarch64-static</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x rootfs/usr/bin/qemu-aarch64-static</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo wget https://github.com/multiarch/qemu-user-static/releases/download/v4.2.0-6/qemu-aarch64-static -O rootfs/usr/bin/qemu-aarch64-static</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x rootfs/usr/bin/qemu-aarch64-static</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Get your network ready</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp /etc/resolv.conf rootfs/etc/</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp /etc/resolv.conf rootfs/etc/</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Mount the proc sys dev file systems</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev dev/pts; <span class="keyword">do</span> sudo mount --<span class="built_in">bind</span> /<span class="variable">$f</span> rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev dev/pts; <span class="keyword">do</span> sudo mount --<span class="built_in">bind</span> /<span class="variable">$f</span> rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Change root.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chroot rootfs /bin/bash</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chroot rootfs /bin/bash</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Add user name</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> /debootstrap/debootstrap --second-stage</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install sudo net-tools isc-dhcp-client</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser px30 (provide new password and name <span class="keyword">for</span> the user <span class="keyword">in</span> the prompt)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> usermod -a -G sudo px30</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> /debootstrap/debootstrap --second-stage</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install sudo net-tools isc-dhcp-client</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> adduser px30 (provide new password and name <span class="keyword">for</span> the user <span class="keyword">in</span> the prompt)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> usermod -a -G sudo px30</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Install the required tools or utilities</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install vim git sudo net-tools ifupdown kmod iputils-ping man wget bash-completion alsa-utils apt-utils usbutils i2c-tools netplan.io vnc4server lm-sensors build-essential cmake  can-utils mesa-utils blueman locales</span> </span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> apt install vim git sudo net-tools ifupdown kmod iputils-ping man wget bash-completion alsa-utils apt-utils usbutils i2c-tools netplan.io vnc4server lm-sensors build-essential cmake  can-utils mesa-utils blueman locales</span> </span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Configure locales</p>
-<p> You will be prompted through GUI menu to make certain selections such as those for date/time/region. Please make the appropriate selections and proceed.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> dpkg-reconfigure locales</span></span><br></pre></td></tr></table></figure></li>
+<p> You will be prompted through GUI menu to make certain selections such as those for date&#x2F;time&#x2F;region. Please make the appropriate selections and proceed.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> dpkg-reconfigure locales</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Install xfce desktop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt install task-xfce-desktop</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt install task-xfce-desktop</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Exit from chroot</p>
  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sync</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">exit</span></span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="Add-I-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-O-Drivers-to-Rootfs" class="headerlink" title="Add I/O Drivers to Rootfs"></a>Add I/O Drivers to Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Add-I-O-Drivers-to-Rootfs'}, '*');" class="article-anchor" href="#Add-I-O-Drivers-to-Rootfs" aria-hidden="true"></a></h3><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="- Ethernet &amp; CAN Bus"></a>- Ethernet &amp; CAN Bus<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Ethernet-amp-CAN-Bus'}, '*');" class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
+<h3 id="Add-I-x2F-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-x2F-O-Drivers-to-Rootfs" class="headerlink" title="Add I&#x2F;O Drivers to Rootfs"></a>Add I&#x2F;O Drivers to Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Add-I-x2F-O-Drivers-to-Rootfs'}, '*');" class="article-anchor" href="#Add-I-x2F-O-Drivers-to-Rootfs" aria-hidden="true"></a></h3><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="- Ethernet &amp; CAN Bus"></a>- Ethernet &amp; CAN Bus<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Ethernet-amp-CAN-Bus'}, '*');" class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
 <li><p>Create a directory to copy the Ethernet and CAN kernel modules</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/Kernel-modules.zip">here</a> to download and copy <strong>smsc9500.ko, smscusbnet.ko and mcp25xxfd.ko kernel modules</strong> into rockchip_test folder from host PC.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp &lt;your_path&gt;/*.ko <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -221,27 +235,32 @@
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.zip">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp asound.state <span class="variable">$HOME</span>/px30/rootfs/var/lib/alsa/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="WiFi-Bluetooth" class="article-heading"><a href="#WiFi-Bluetooth" class="headerlink" title="- WiFi/Bluetooth"></a>- WiFi/Bluetooth<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#WiFi-Bluetooth'}, '*');" class="article-anchor" href="#WiFi-Bluetooth" aria-hidden="true"></a></h4><ol>
+<h4 id="WiFi-x2F-Bluetooth" class="article-heading"><a href="#WiFi-x2F-Bluetooth" class="headerlink" title="- WiFi&#x2F;Bluetooth"></a>- WiFi&#x2F;Bluetooth<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#WiFi-x2F-Bluetooth'}, '*');" class="article-anchor" href="#WiFi-x2F-Bluetooth" aria-hidden="true"></a></h4><ol>
 <li><p>Download the <code>rtl_bt.zip</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/rtl_bt.zip">here</a> and extract.</p>
 </li>
 <li><p>Copy the rtl_bt folder which has Bluetooth firmware to file system.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r rtl_bt/ <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r rtl_bt/ <span class="variable">$HOME</span>/px30/lib/firmware</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Unmount the mounted fie systems.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev/pts dev; <span class="keyword">do</span> sudo umount rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev/pts dev; <span class="keyword">do</span> sudo umount rootfs/<span class="variable">$f</span>; <span class="keyword">done</span></span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Remove emulator and resolv.conf file.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm rootfs/usr/bin/qemu-aarch64-static rootfs/etc/resolv.conf</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="IMX219-camera" class="article-heading"><a href="#IMX219-camera" class="headerlink" title="- IMX219 camera"></a>- IMX219 camera<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#IMX219-camera'}, '*');" class="article-anchor" href="#IMX219-camera" aria-hidden="true"></a></h4><p>Download the imx219_camera.tar file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/imx219_camera.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/camera</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf imx219_camera.tar -C <span class="variable">$HOME</span>/camera/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/camera/usr/ <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/camera/etc <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm <span class="variable">$HOME</span>/px30/rootfs/lib/aarch64-linux-gnu/libm.so.6</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp <span class="variable">$HOME</span>/camera/libm.so.6 <span class="variable">$HOME</span>/px30/rootfs/lib/aarch64-linux-gnu/</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="Enable-I-O-Interfaces" class="article-heading"><a href="#Enable-I-O-Interfaces" class="headerlink" title="- Enable I/O Interfaces"></a>- Enable I/O Interfaces<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Enable-I-O-Interfaces'}, '*');" class="article-anchor" href="#Enable-I-O-Interfaces" aria-hidden="true"></a></h4><ol>
+<h4 id="Enable-I-x2F-O-Interfaces" class="article-heading"><a href="#Enable-I-x2F-O-Interfaces" class="headerlink" title="- Enable I&#x2F;O Interfaces"></a>- Enable I&#x2F;O Interfaces<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Enable-I-x2F-O-Interfaces'}, '*');" class="article-anchor" href="#Enable-I-x2F-O-Interfaces" aria-hidden="true"></a></h4><ol>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.zip">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder.</p>
 <p><strong>Note</strong>: It is shell script to insert modules on every reboot</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp Load.sh <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp Load.sh <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Give execute permissions to script.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/Debian_rc_local.zip">here</a> to download and copy <strong>rc.local</strong> to <code>temp/etc/</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp rc.local <span class="variable">$HOME</span>/px30/rootfs/etc/</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp rc.local <span class="variable">$HOME</span>/px30/rootfs/etc/</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Give executable permissions.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/etc/rc.local</span></span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -254,16 +273,17 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> unzip Debian_libMALI_Integration.zip</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/Debian_libMALI_Integration</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf xserver.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf libmali.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf librga.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf glmark2-es2.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="Step-2-Generating-Buildroot-SD-Card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-Card-Image" class="headerlink" title="Step 2: Generating Buildroot SD Card Image"></a>Step 2: <strong>Generating Buildroot SD Card Image</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-2-Generating-Buildroot-SD-Card-Image'}, '*');" class="article-anchor" href="#Step-2-Generating-Buildroot-SD-Card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200413/px30_buildroot_es2_sdk_20200413.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
-<p><strong>Note</strong>: Use <code>iPIsmarc-es2</code> branch and root for creating custom images for SD card. Use <code>git branch</code> command under <strong>px30_buildroot/kernel</strong> to check the branch version.</p>
+<p><strong>Note</strong>: Use <code>iPIsmarc-es2</code> branch and root for creating custom images for SD card. Use <code>git branch</code> command under <strong>px30_buildroot&#x2F;kernel</strong> to check the branch version.</p>
 <ol>
 <li><p>Change directory to px30_buildroot.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> px30_buildroot</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> px30_buildroot</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Run build script.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./build.sh</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<p>After you run “./build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
+<p>After you run “.&#x2F;build.sh”, a menuconfig screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
 <p>If you dont see the menuconfig screen, install ncurses<br>$ yum install ncurses-devel ncurses</p>
-<p><img src="HowToBuildUbuntu.assets/image-20200309102707320.png" alt="image-20200309102707320"></p>
+<p><img src="/SMARC/HowToBuildUbuntu.assets/image-20200309102707320.png" alt="image-20200309102707320"></p>
 <p>The image will be generated as <strong>“update.img”</strong> under rockdev folder and will be used in SD Card.</p>
 <h2 id="Step-3-Flashing-Buildroot-Image-to-SD-Card" class="article-heading"><a href="#Step-3-Flashing-Buildroot-Image-to-SD-Card" class="headerlink" title="Step 3: Flashing Buildroot Image to SD Card"></a>Step 3: <strong>Flashing Buildroot Image to SD Card</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-3-Flashing-Buildroot-Image-to-SD-Card'}, '*');" class="article-anchor" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card" aria-hidden="true"></a></h2><p>Flash image (generated in step 2) to the prepared SD card by using <strong>SD Firmware Tool</strong> (this tool is executed in Windows environment).</p>
 <p><strong>Note:</strong> Before going to flash image to SD card, format it. The size should be at least 8 Gb.</p>
@@ -282,50 +302,50 @@
 <li><p>Unmount the mounted partitions</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo umount /dev/sdc*</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>Note:</strong> In our case, ‘/dev/sdc ‘ is SD card device name</p>
+<p><strong>Note:</strong> In our case, ‘&#x2F;dev&#x2F;sdc ‘ is SD card device name</p>
 </li>
 <li><p>Run <strong>GParted</strong> by using command line</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo gparted</span><br></pre></td></tr></table></figure>
 
 <p><strong>Note</strong>: GParted is a free partition editor for graphically managing your disk partitions. Please check <a target="_blank" rel="noopener external nofollow noreferrer" href="https://gparted.org/index.php">this link</a>.</p>
 </li>
-<li><p>Select SD card as highlighted in above corner in below picture<img src="HowToBuildUbuntu.assets/gparted1-1583897658803.png" alt="gparted1"></p>
+<li><p>Select SD card as highlighted in above corner in below picture<img src="/SMARC/HowToBuildUbuntu.assets/gparted1-1583897658803.png" alt="gparted1"></p>
 </li>
-<li><p>Select partition 9 and give right click, then select delete<img src="HowToBuildUbuntu.assets/gparted2-1583897706819.png" alt="gparted2"></p>
+<li><p>Select partition 9 and give right click, then select delete<img src="/SMARC/HowToBuildUbuntu.assets/gparted2-1583897706819.png" alt="gparted2"></p>
 </li>
 <li><p>Save the changes and select apply</p>
 </li>
 </ol>
-<p><img src="HowToBuildUbuntu.assets/gparted3-1583903424202.png" alt="gparted3"></p>
+<p><img src="/SMARC/HowToBuildUbuntu.assets/gparted3-1583903424202.png" alt="gparted3"></p>
 <ol start="6">
 <li>After changes are applied, select close.</li>
 </ol>
-<p><img src="HowToBuildUbuntu.assets/gparted4.png" alt="gparted4"></p>
+<p><img src="/SMARC/HowToBuildUbuntu.assets/gparted4.png" alt="gparted4"></p>
 <ol start="7">
-<li>Select the root fs partition and select resize option above. Partition 8 (/dev/sdc8) is the rootfs partition in below picture.</li>
+<li>Select the root fs partition and select resize option above. Partition 8 (&#x2F;dev&#x2F;sdc8) is the rootfs partition in below picture.</li>
 </ol>
-<p><img src="HowToBuildUbuntu.assets/gparted5.png" alt="gparted5"></p>
+<p><img src="/SMARC/HowToBuildUbuntu.assets/gparted5.png" alt="gparted5"></p>
 <ol start="8">
-<li>Increase the size and select Resize/Move option</li>
+<li>Increase the size and select Resize&#x2F;Move option</li>
 </ol>
-<p><img src="HowToBuildUbuntu.assets/gparted6.png" alt="gparted6"></p>
+<p><img src="/SMARC/HowToBuildUbuntu.assets/gparted6.png" alt="gparted6"></p>
 <ol start="9">
 <li>Save the changes and select apply</li>
 </ol>
-<p><img src="HowToBuildDebian.assets/gparted3-1583903538497.png" alt="gparted3"></p>
+<p><img src="/SMARC/HowToBuildDebian.assets/gparted3-1583903538497.png" alt="gparted3"></p>
 <ol start="10">
-<li><p>Close GParted and eject SD card. Also connect your SD Card to the development Linux host PC.</p>
+<li><p>Close GParted and eject SD card. Also connect your SD Card to the Linux development host PC.</p>
 </li>
 <li><p>Run <strong>lsblk</strong> command to get the path for mounted rootfs partition.</p>
 </li>
 </ol>
-<p><img src="HowToBuildUbuntu.assets/lsblk_output-1583903709858.png" alt="lsblk_output"></p>
+<p><img src="/SMARC/HowToBuildUbuntu.assets/lsblk_output-1583903709858.png" alt="lsblk_output"></p>
 <ol start="12">
 <li>Remove the existing contents as this file system is the default build root file system.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -rf &lt;mount_path&gt;/*</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sync</span></span><br></pre></td></tr></table></figure>
 
-<p>For example, the required partition is <strong>sdc8</strong> here with path <strong>/media/nhcpc20011/ac09cb0f-0d9b-4441-902c-bf48b1f10127/</strong></p>
+<p>For example, the required partition is <strong>sdc8</strong> here with path <strong>&#x2F;media&#x2F;nhcpc20011&#x2F;ac09cb0f-0d9b-4441-902c-bf48b1f10127&#x2F;</strong></p>
 <ol start="13">
 <li>Run the following commands to copy the contents of the Debian rootfs.img to the SD card.</li>
 </ol>
@@ -344,10 +364,9 @@
  }
 </style>
 
-
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2021-10-19T05:23:25.812Z" itemprop="dateModified">Last updated: 2021-10-19</time>
+                <time class="article-footer-updated" datetime="2022-06-24T03:31:26.943Z" itemprop="dateModified">Last updated: 2022-06-24</time>
                 <a href="HowToBuildUbuntu.html" class="article-footer-prev" title="How to Build Ubuntu"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToBuildUboot.html" class="article-footer-next" title="How to Build U-boot"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -357,7 +376,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#How-to-Build-Debian'}, '*');" class="toc-link" href="#How-to-Build-Debian"><span class="toc-text">How to Build Debian</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Recommended-Hardware'}, '*');" class="toc-link" href="#Recommended-Hardware"><span class="toc-text">Recommended Hardware</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Getting-Started'}, '*');" class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-1-Preparing-Debian-Root-File-System'}, '*');" class="toc-link" href="#Step-1-Preparing-Debian-Root-File-System"><span class="toc-text">Step 1: Preparing Debian Root File System</span></a><ol class="toc-childbvdf"><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Configure-the-Rootfs'}, '*');" class="toc-link" href="#Configure-the-Rootfs"><span class="toc-text">Configure the Rootfs</span></a></li><li class="toc-item toc-level-3"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Add-I-O-Drivers-to-Rootfs'}, '*');" class="toc-link" href="#Add-I-O-Drivers-to-Rootfs"><span class="toc-text">Add I&#x2F;O Drivers to Rootfs</span></a><ol class="toc-childbvdf"><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Ethernet-amp-CAN-Bus'}, '*');" class="toc-link" href="#Ethernet-amp-CAN-Bus"><span class="toc-text">- Ethernet &amp; CAN Bus</span></a></li><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Audio'}, '*');" class="toc-link" href="#Audio"><span class="toc-text">- Audio</span></a></li><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#WiFi-Bluetooth'}, '*');" class="toc-link" href="#WiFi-Bluetooth"><span class="toc-text">- WiFi&#x2F;Bluetooth</span></a></li><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#IMX219-camera'}, '*');" class="toc-link" href="#IMX219-camera"><span class="toc-text">- IMX219 camera</span></a></li><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Enable-I-O-Interfaces'}, '*');" class="toc-link" href="#Enable-I-O-Interfaces"><span class="toc-text">- Enable I&#x2F;O Interfaces</span></a></li><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Adding-MRAA'}, '*');" class="toc-link" href="#Adding-MRAA"><span class="toc-text">- Adding MRAA</span></a></li><li class="toc-item toc-level-4"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Adding-libMALI'}, '*');" class="toc-link" href="#Adding-libMALI"><span class="toc-text">- Adding libMALI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-2-Generating-Buildroot-SD-Card-Image'}, '*');" class="toc-link" href="#Step-2-Generating-Buildroot-SD-Card-Image"><span class="toc-text">Step 2: Generating Buildroot SD Card Image</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-3-Flashing-Buildroot-Image-to-SD-Card'}, '*');" class="toc-link" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card"><span class="toc-text">Step 3: Flashing Buildroot Image to SD Card</span></a></li><li class="toc-item toc-level-2"><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs'}, '*');" class="toc-link" href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs"><span class="toc-text">Step 4: Replacing Buildroot Rootfs with Debian Rootfs</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Build-Debian"><span class="toc-text">How to Build Debian</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recommended-Hardware"><span class="toc-text">Recommended Hardware</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-Preparing-Debian-Root-File-System"><span class="toc-text">Step 1: Preparing Debian Root File System</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-the-Rootfs"><span class="toc-text">Configure the Rootfs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-I-x2F-O-Drivers-to-Rootfs"><span class="toc-text">Add I&#x2F;O Drivers to Rootfs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ethernet-amp-CAN-Bus"><span class="toc-text">- Ethernet &amp; CAN Bus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Audio"><span class="toc-text">- Audio</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiFi-x2F-Bluetooth"><span class="toc-text">- WiFi&#x2F;Bluetooth</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IMX219-camera"><span class="toc-text">- IMX219 camera</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enable-I-x2F-O-Interfaces"><span class="toc-text">- Enable I&#x2F;O Interfaces</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adding-MRAA"><span class="toc-text">- Adding MRAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adding-libMALI"><span class="toc-text">- Adding libMALI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-Generating-Buildroot-SD-Card-Image"><span class="toc-text">Step 2: Generating Buildroot SD Card Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card"><span class="toc-text">Step 3: Flashing Buildroot Image to SD Card</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs"><span class="toc-text">Step 4: Replacing Buildroot Rootfs with Debian Rootfs</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
