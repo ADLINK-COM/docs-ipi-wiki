@@ -60,12 +60,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Boot from eMMC using UUU tool  This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.  Wind">
+  <meta name="description" content="Boot from eMMC using UUU tool  This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.  * [W">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Boot from eMMC using UUU tool  This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.  Wind">
+<meta property="og:description" content="Boot from eMMC using UUU tool  This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.  * [W">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.assets/BootSettingsButtons.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.assets/Windows-User">
@@ -142,110 +142,101 @@
               <div class="article-content bullets" itemprop="articleBody">
                 <h1 id="Boot-from-eMMC-using-UUU-tool" class="article-heading"><a href="#Boot-from-eMMC-using-UUU-tool" class="headerlink" title="Boot from eMMC using UUU tool"></a>Boot from eMMC using UUU tool<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Boot-from-eMMC-using-UUU-tool'}, '*');" class="article-anchor" href="#Boot-from-eMMC-using-UUU-tool" aria-hidden="true"></a></h1><div class="bullets">
 
-<p>This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.</p>
-<ul>
-<li><p><a href="#Windows-Host">Windows Host Users</a></p>
-</li>
-<li><p><a href="#Linux-Host">Linux Host Users</a></p>
-</li>
-</ul>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
-<li><p>Download the <strong>prebuilt Image(2G&#x2F;4G)</strong> to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click_here</a>.</p>
-</li>
-<li><p>Download the <strong>boot_loader(2G&#x2F;4G)</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click_here</a>.</p>
-</li>
-<li><p>Place the <strong>boot_loader</strong> and the <strong>downloaded Image</strong> in the same directory.</p>
-</li>
-</ul>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
-<li>Change the boot settings is in <strong>recovery mode&#x2F;serial download mode</strong> <strong>0001</strong> on your I-Pi SMARC IMX8M plus. Here, as shown in the below figure the <strong>upper side</strong> of the switch is <strong>‘1’</strong> and <strong>lower side</strong> of the switch is <strong>‘0’</strong>.</li>
-</ul>
+This document provides detailed instructions for flashing the image to the eMMC on an I-Pi SMARC IMX8M plus using the UUU tool for users of both Windows and Linux.
+
+* [Windows Host Users](#Windows-Host)
+
+* [Linux Host Users](#Linux-Host)
+
+## **Prerequisites**
+
+- Download the **prebuilt Image(2G/4G)** to the working directory on your development host [click_here](https://www.ipi.wiki/pages/downloads-imx8mplus).
+
+- Download the **boot_loader(2G/4G)** [click_here](https://www.ipi.wiki/pages/downloads-imx8mplus).
+
+- Place the **boot_loader** and the **downloaded Image** in the same directory.
+
+## Windows Host
+
+- Change the boot settings is in **recovery mode/serial download mode** **0001** on your I-Pi SMARC IMX8M plus. Here, as shown in the below figure the **upper side** of the switch is **'1'** and **lower side** of the switch is **'0'**.
+
+
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\BootSettingsButtons.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-  
 
 
-<ul>
-<li><p>Your development host must be connected to your target board via a micro USB OTG cable and the board must be powered with a power cable.</p>
-</li>
-<li><p>Install the <strong>winusb driver</strong> using <strong>Zadig</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zadig.akeo.ie/">click_here</a>.</p>
-</li>
-<li><p>Open Zadig find your <strong>USB-connected device</strong>. Go to options and click list All Devices.</p>
-</li>
-</ul>
+
+- Your development host must be connected to your target board via a micro USB OTG cable and the board must be powered with a power cable.
+
+- Install the **winusb driver** using **Zadig** [click_here](https://zadig.akeo.ie/).
+
+- Open Zadig find your **USB-connected device**. Go to options and click list All Devices.
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows-User's\ChangingOptions.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li>The connected USB device would be the <strong>SE Blank XXX</strong> or <strong>USB download gadget</strong>. Select that device and <strong>install</strong> or <strong>reinstall</strong> its driver.</li>
-</ul>
+- The connected USB device would be the **SE Blank XXX** or **USB download gadget**. Select that device and **install** or **reinstall** its driver.
+
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows-User's\selecting the device.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
 <br>
 
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows-User's\InstallingDriver.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UUU-Tool/imx-mfg-uuu-tool_20210311.zip">Click_here</a> to download the <strong>UUU tool</strong> and extract the files. After extracting the files, copy them to <strong>C:&#x2F;Windows&#x2F;System32</strong> directory.</p>
-</li>
-<li><p>Run the Windows <strong>Command Prompt as Administrator</strong> and navigate to the directory where you downloaded UUU tool. Type the following commands,</p>
-</li>
-</ul>
+- [Click_here](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UUU-Tool/imx-mfg-uuu-tool_20210311.zip) to download the **UUU tool** and extract the files. After extracting the files, copy them to **C:/Windows/System32** directory.
+
+- Run the Windows **Command Prompt as Administrator** and navigate to the directory where you downloaded UUU tool. Type the following commands,
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd imx-mfg-uuu-tool_20210311\imx-mfg-uuu-tool\uuu\windows64\</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uuu.exe -b emmc_img (file_path_of_boot_loader) (file_path_of_image_file)</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>Once it is finished, you will see the message it is done.</li>
-</ul>
+- Once it is finished, you will see the message it is done.
+
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows-User's\image booted successfully.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li>Take off all the cables from the carrier, such as the power cord and USB cable. Set the boot settings to <strong>eMMC 1000</strong>.</li>
-</ul>
+- Take off all the cables from the carrier, such as the power cord and USB cable. Set the boot settings to **eMMC 1000**.
+
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows-User's\eMMC_mode.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li><p>Turn it on now by connecting the power cord and HDMI cable.</p>
-</li>
-<li><p>The installed image is visible on your display.</p>
-</li>
-</ul>
-<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageeMMCUsingUUUTool.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ul>
-<li>Change the boot settings is in <strong>recovery mode&#x2F;serial download mode</strong> <strong>0001</strong> on your I-Pi SMARC IMX8M plus. Here, as shown in the below figure the <strong>upper side</strong> of the switch is <strong>‘1’</strong> and <strong>lower side</strong> of the switch is <strong>‘0’</strong>.</li>
-</ul>
+- Turn it on now by connecting the power cord and HDMI cable.
+
+- The installed image is visible on your display.
+
+## Linux Host
+
+- Change the boot settings is in **recovery mode/serial download mode** **0001** on your I-Pi SMARC IMX8M plus. Here, as shown in the below figure the **upper side** of the switch is **'1'** and **lower side** of the switch is **'0'**.
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\BootSettingsButtons.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://download.technexion.com/development_resources/development_tools/installer/imx-mfg-uuu-tool_20210311.zip">Click_here</a> to download the <strong>UUU tool</strong> and extract the files. After extracting the files, copy them to <strong>&#x2F;home</strong> directory.</p>
-</li>
-<li><p>Your development host must be connected to your target board via a micro USB OTG cable and the board must be powered with a power cable.</p>
-</li>
-<li><p>To run the UUU tool, go to the downloaded directory and type the following commands on the linux terminal.</p>
-</li>
-</ul>
+- [Click_here](https://download.technexion.com/development_resources/development_tools/installer/imx-mfg-uuu-tool_20210311.zip) to download the **UUU tool** and extract the files. After extracting the files, copy them to **/home** directory.
+
+- Your development host must be connected to your target board via a micro USB OTG cable and the board must be powered with a power cable.
+
+- To run the UUU tool, go to the downloaded directory and type the following commands on the linux terminal.
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd imx-mfg-uuu-tool_20210311/imx-mfg-uuu-tool/uuu/linux64/</span><br><span class="line">chmod +x uuu</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>Using these UUU commands, you can verify the <strong>USB devices</strong> and <strong>flash the image to eMMC</strong>.</li>
-</ul>
+- Using these UUU commands, you can verify the **USB devices** and **flash the image to eMMC**.
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uuu -lsusb</span><br><span class="line">sudo ./uuu -b emmc_img (file_path_of_boot_loader) (file_path_of_image_file)</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>Once it is finished, you will see the message it is done.</li>
-</ul>
+- Once it is finished, you will see the message it is done.
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\UuuToolFlasheMMC.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li>Take off all the cables from the carrier, such as the power cord and USB cable. Set the boot settings to <strong>eMMC 1000</strong>.</li>
-</ul>
+- Take off all the cables from the carrier, such as the power cord and USB cable. Set the boot settings to **eMMC 1000**.
+
 <img src="HowToFlashImageeMMCUsingUUUTool.assets\Windows-User's\eMMC_mode.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-<ul>
-<li><p>Turn it on now by connecting the power cord and HDMI cable.</p>
-</li>
-<li><p>The installed image is visible on your display.</p>
-</li>
-</ul>
+- Turn it on now by connecting the power cord and HDMI cable.
+
+- The installed image is visible on your display.
+
+
 </div>
               </div>
               <footer class="article-footer">
@@ -259,7 +250,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Boot-from-eMMC-using-UUU-tool"><span class="toc-text">Boot from eMMC using UUU tool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Boot-from-eMMC-using-UUU-tool"><span class="toc-text">Boot from eMMC using UUU tool</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

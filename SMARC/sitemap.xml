@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -170,27 +170,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -254,6 +233,27 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/PreparingabootableUSBdrive.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -310,14 +310,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ModuleIntroduction.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToSetup.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ModuleIntroduction.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -534,14 +534,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial3-HowToBuildDebian10LTS.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial2-HowToFlashYoctoImage.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial2-HowToFlashYoctoImage.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial3-HowToBuildDebian10LTS.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     

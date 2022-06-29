@@ -67,12 +67,12 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="The following figure explains the Boot procedure of LEC-PX30 in I-Pi board.   Boot  order DIP switch specified in the SMARC specification is ignored by the PX30 SOCPX30 SOC has a fixed scan order wher">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/SMARC/PX30BootFlow.assets/image-20200731101641905.png">
+<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/PX30BootFlow.assets/image-20200731101641905.png">
 <meta property="article:published_time" content="2022-03-28T08:27:50.347Z">
 <meta property="article:modified_time" content="2022-03-28T08:27:50.347Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/SMARC/PX30BootFlow.assets/image-20200731101641905.png">
+<meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-px30/PX30BootFlow.assets/image-20200731101641905.png">
   <!-- Google Analytics -->
   
 <script>
@@ -133,7 +133,7 @@
               </header>
               <div class="article-content bullets" itemprop="articleBody">
                 <p>The following figure explains the Boot procedure of LEC-PX30 in I-Pi board. </p>
-<p><img src="/SMARC/PX30BootFlow.assets/image-20200731101641905.png" alt="image-20200731101641905"></p>
+<p><img src="PX30BootFlow.assets/image-20200731101641905.png" alt="image-20200731101641905"></p>
 <p>Boot  order DIP switch specified in the SMARC specification is ignored by the PX30 SOC<br>PX30 SOC has a fixed scan order where the first bootable device is used as boot device. </p>
 <p>On the LEC-PX30 only eMMC and SDMMC are implemented as boot device. </p>
 <p>If both eMMC and SDMMC (SD Card) are accessible, and both have a bootable image, than the eMMC will be used as boot device.<br>In a case like this the only way to boot from the SD Card is to invalidate (overwrite) the bootable image in the eMMC.     </p>
