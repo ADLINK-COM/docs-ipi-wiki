@@ -178,28 +178,32 @@
 <li><p>The QFIL application appears as shown below when you open it.</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
 <li><p>Click ‘select port’ and enter in to 9008 download mode using F_DL key.</p>
 </li>
 <li><p>Since we don’t have the F_DL key, we can use the tweezers to short two points to enter into 9008 download mode instead of using the key.</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\rb_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\rb_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
 <li><p>It is also recommended that you connect the power supply at the same time as you short those two points. Now the port should be detected automatically on QFIL. If not, choose it.</p>
 </li>
 <li><p>Next, select the options as illustrated in the following figure.</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_2.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_2.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
 <li><p>Click the ‘Load Content’ button and select the file ‘contents.xml’.</p>
 </li>
 <li><p>In the folder called ‘LEC-QRB5165_Yocto_ARM_QUALCOMM_QRB5165_4G_1v1.0.0’, you should find a file called contents.xml..</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_3.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_3.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
 <li><p>After it has finished, click on ‘Download Content’.</p>
 </li>
@@ -217,13 +221,21 @@
 </li>
 <li><p>To get started, type the following commands.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">adb devices -l</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">adb reboot bootloader</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot devices</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash abl_a abl.elf</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash abl_b abl.elf</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash system qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash boot_a qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash boot_b qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>The image has been successfully flashed on targeted device. The device is now ready to be used. Now you can turn on your targeted device and connect the ethernet cable with the device so that, it will receive the kernel updates while getting boot-up.</p>
@@ -237,12 +249,14 @@
 <li>username: root</li>
 </ul>
 </li>
-<li>password: oelinux123</li>
-</ul>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /</span><br></pre></td></tr></table></figure>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh ubuntu-desktop.sh</span><br></pre></td></tr></table></figure>
-<ul>
-<li>For login please select “Ubuntu on Wayland”.</li>
+<li><p>password: oelinux123</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh ubuntu-desktop.sh</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>For login please select “Ubuntu on Wayland”.</p>
+</li>
 </ul>
 
               </div>

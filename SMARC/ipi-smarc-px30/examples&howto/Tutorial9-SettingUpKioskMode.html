@@ -157,30 +157,33 @@
 <h3 id="Refer-this-link-for-more-details" class="article-heading"><a href="#Refer-this-link-for-more-details" class="headerlink" title="Refer this link for more details"></a><strong>Refer this link for more details</strong><a onclick="parent.postMessage( {msg: '?page=Tutorial9-SettingUpKioskMode.html#Refer-this-link-for-more-details'}, '*');" class="article-anchor" href="#Refer-this-link-for-more-details" aria-hidden="true"></a></h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://scalefusion.medium.com/what-is-kiosk-mode-how-it-benefits-enterprises-1c31eecc4ad0">https://scalefusion.medium.com/what-is-kiosk-mode-how-it-benefits-enterprises-1c31eecc4ad0</a></p>
 <h2 id="Setting-up-the-Kiosk-mode" class="article-heading"><a href="#Setting-up-the-Kiosk-mode" class="headerlink" title="Setting up the Kiosk mode"></a>Setting up the Kiosk mode<a onclick="parent.postMessage( {msg: '?page=Tutorial9-SettingUpKioskMode.html#Setting-up-the-Kiosk-mode'}, '*');" class="article-anchor" href="#Setting-up-the-Kiosk-mode" aria-hidden="true"></a></h2><p>If you are looking to use your I-Pi SMARC PX30 as a kiosk and lock down the device to a single-purpose system for the public display or any advertisements, here is how it’s done. It can be done in any supported OS.  </p>
 <p>To begin with flashing the images and <a href="../UnBoxing.html">connecting the I-Pi</a>, refer this links</p>
-<p>Here is Ubuntu/Debian/yocto images for you: </p>
+<p>Here is Ubuntu&#x2F;Debian&#x2F;yocto images for you: </p>
 <ol>
-<li><a href="../DebianImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Debian binary images</strong> which built by ADLINK if you need.</li>
-<li><a href="../UbuntuImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Ubuntu binary images</strong> which built by ADLINK if you need.</li>
+<li><p><a href="../DebianImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Debian binary images</strong> which built by ADLINK if you need.</p>
+</li>
+<li><p><a href="../UbuntuImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Ubuntu binary images</strong> which built by ADLINK if you need.</p>
+</li>
 <li><p><a href="../YoctoImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Yocto binary images</strong> which built by ADLINK if you need.</p>
 </li>
-<li><p>Use this command to update and upgrade the terminal packages on Debian/Ubuntu images</p>
+<li><p>Use this command to update and upgrade the terminal packages on Debian&#x2F;Ubuntu images</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Check if you installed chromium or chromium browser</p>
 </li>
-<li><p>If you are using touch screen monitor/TV, and you want to disable the cursor in your kiosk mode, install the unclutter package.</p>
+<li><p>If you are using touch screen monitor&#x2F;TV, and you want to disable the cursor in your kiosk mode, install the unclutter package.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install xdotool unclutter sed</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Now lets proceed setting up the kiosk mode in auto-login mode, so it automatically boots into kiosk mode.</p>
 </li>
 <li><p>The efficient way to start the kiosk from auto-login is AutoStart system which is included with  LXDE, the graphical desktop environment in I-Pi.</p>
 </li>
-<li><p>AutoStart runs a script located at /home/root/.config/xsession/LXDE/autostart, so make this changes in script </p>
+<li><p>AutoStart runs a script located at &#x2F;home&#x2F;root&#x2F;.config&#x2F;xsession&#x2F;LXDE&#x2F;autostart, so make this changes in script </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Xorg:<span class="number">0</span> &amp;</span></span><br><span class="line"><span class="meta">@export DISPLAY=<span class="number">0</span></span></span><br><span class="line"><span class="meta">@Xset s off</span></span><br><span class="line"><span class="meta">@Xset -dpms</span></span><br><span class="line"><span class="meta">@Xset s noblank</span></span><br><span class="line"><span class="meta">@chromium --no-sanbox --kiosk &lt;desired URL path&gt;</span></span><br><span class="line"><span class="meta">@lxpanel --profile LXDE</span></span><br><span class="line"><span class="meta">@pcmanfm --desktop --profile LXDE</span></span><br><span class="line"><span class="meta">@screensaver -no-splash //to disable the screensaver//</span></span><br><span class="line"><span class="meta">@unclutter -idle <span class="number">0.1</span> -root  &amp; //to disable the cursor//</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Save the script and reboot the I-Pi to AutoStart the kiosk mode.</p>
 </li>
-<li>You can change the URL path in the script to change the kiosk mode </li>
+<li><p>You can change the URL path in the script to change the kiosk mode</p>
+</li>
 </ol>
 
               </div>

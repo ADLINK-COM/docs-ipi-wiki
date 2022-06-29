@@ -60,12 +60,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="## How to Flash an Image to the SD Card The procedure describes how to flash an **Ubuntu&#x2F;Debian&#x2F;Yocto** image including u-boot, Linux kernel and filesystem to the SD Card.  * [Flash the Ubuntu&#x2F;Debia">
+  <meta name="description" content="How to Flash an Image to the SD CardThe procedure describes how to flash an Ubuntu&#x2F;Debian&#x2F;Yocto image including u-boot, Linux kernel and filesystem to the SD Card.  Flash the Ubuntu&#x2F;D">
 <meta property="og:type" content="website">
 <meta property="og:title" content="How to Flash an Image to the SD Card">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToFlashImage.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="## How to Flash an Image to the SD Card The procedure describes how to flash an **Ubuntu&#x2F;Debian&#x2F;Yocto** image including u-boot, Linux kernel and filesystem to the SD Card.  * [Flash the Ubuntu&#x2F;Debia">
+<meta property="og:description" content="How to Flash an Image to the SD CardThe procedure describes how to flash an Ubuntu&#x2F;Debian&#x2F;Yocto image including u-boot, Linux kernel and filesystem to the SD Card.  Flash the Ubuntu&#x2F;D">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToFlashImage.assets/rufus_1.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToFlashImage.assets/rufus_2.png">
@@ -134,102 +134,83 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <div class = "bullets">
+                <div class="bullets">
 
-## How to Flash an Image to the SD Card
-The procedure describes how to flash an **Ubuntu/Debian/Yocto** image including u-boot, Linux kernel and filesystem to the SD Card.
-
-* [Flash the Ubuntu/Debian Image](#Flash-a-Ubuntu-Debian-Image)
-* [Flash the Yocto/Android Image](#Flash-a-Yocto-or-Android-Image)
-
-
-
+<h2 id="How-to-Flash-an-Image-to-the-SD-Card" class="article-heading"><a href="#How-to-Flash-an-Image-to-the-SD-Card" class="headerlink" title="How to Flash an Image to the SD Card"></a>How to Flash an Image to the SD Card<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#How-to-Flash-an-Image-to-the-SD-Card'}, '*');" class="article-anchor" href="#How-to-Flash-an-Image-to-the-SD-Card" aria-hidden="true"></a></h2><p>The procedure describes how to flash an <strong>Ubuntu&#x2F;Debian&#x2F;Yocto</strong> image including u-boot, Linux kernel and filesystem to the SD Card.</p>
+<ul>
+<li><a href="#Flash-a-Ubuntu-Debian-Image">Flash the Ubuntu&#x2F;Debian Image</a></li>
+<li><a href="#Flash-a-Yocto-or-Android-Image">Flash the Yocto&#x2F;Android Image</a></li>
+</ul>
 <br>
 
-## Flash a Ubuntu/Debian Image
-
-### Prerequisites
-
-- Download the prebuilt bootable Ubuntu image to the working directory on your development host.
-- In Windows environments, please download [rufus](https://rufus.ie/) to flash the image to the SD Card.
-- In a Linux environment use dd 
-
-​       **Note:** All files will be erased on the SD Card. The size should be preferable 16 GB or larger. For better performance an class 10 SD card or higher is advised.
-
+<h2 id="Flash-a-Ubuntu-x2F-Debian-Image" class="article-heading"><a href="#Flash-a-Ubuntu-x2F-Debian-Image" class="headerlink" title="Flash a Ubuntu&#x2F;Debian Image"></a>Flash a Ubuntu&#x2F;Debian Image<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Flash-a-Ubuntu-x2F-Debian-Image'}, '*');" class="article-anchor" href="#Flash-a-Ubuntu-x2F-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<li>Download the prebuilt bootable Ubuntu image to the working directory on your development host.</li>
+<li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">rufus</a> to flash the image to the SD Card.</li>
+<li>In a Linux environment use dd</li>
+</ul>
+<p>​       <strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger. For better performance an class 10 SD card or higher is advised.</p>
 <br>
 
-### Windows Host
-
-1. Insert an empty MicroSD Card into the development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.
-
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
+<li>Insert an empty MicroSD Card into the development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.</li>
+</ol>
 <center>
-<img align="center" src="HowToFlashImage.assets/rufus_1.png" style="zoom: 67%;" />
+<img align="center" src="HowToFlashImage.assets/rufus_1.png" style="zoom: 67%;">
 </center>
 
 
-2. Press the **SELECT** button and browse to the .img file previously copied to your working directory on the development host. Then click **START** and wait for the process to be finished.
-<center>
-<img align="center" src="HowToFlashImage.assets/rufus_2.png" alt="win32diskimager_load_image" style="zoom: 67%;" />
-</center>
+<ol start="2">
+<li>Press the <strong>SELECT</strong> button and browse to the .img file previously copied to your working directory on the development host. Then click <strong>START</strong> and wait for the process to be finished.<center>
+<img align="center" src="HowToFlashImage.assets/rufus_2.png" alt="win32diskimager_load_image" style="zoom: 67%;">
+</center></li>
+</ol>
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<li><p>Copy the prebuilt bootable Ubuntu image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</p>
+<p><strong>Warning</strong>: Make sure you first properly identify the SD Card device name as for example &#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc. For example insert the SD Card and than check device name with dmesg. Data loss may result if written to the wrong device or in the worst case you kill your development hosts OS. </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
 
 
-
-### Linux Host
-
-1. Copy the prebuilt bootable Ubuntu image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.
-
-   **Warning**: Make sure you first properly identify the SD Card device name as for example /dev/sdb or /dev/sdc. For example insert the SD Card and than check device name with dmesg. Data loss may result if written to the wrong device or in the worst case you kill your development hosts OS. 
-
-   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-
-
-
-2. After dd has completed, enter the following command:
-
-   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
-
-
-
+</li>
+<li><p>After dd has completed, enter the following command:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure></li>
+</ol>
 <br>
 
 
 
-## Flash a Yocto or Android Image
-
-### Prerequisites
-
-- Copy the prebuilt bootable Yocto image to the working directory on your development host.
-- In Windows environments, please download the [Rockchip SD Firmware tool](https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Tools/SDDiskTool_v1.6.rar) to flash the image to the SD Card.
-
-  **Note:** All files will be erased on the SD Card. The size should be preferable 16 GB or larger. For better performance an class 10 SD card or higher is advised.
-
-
+<h2 id="Flash-a-Yocto-or-Android-Image" class="article-heading"><a href="#Flash-a-Yocto-or-Android-Image" class="headerlink" title="Flash a Yocto or Android Image"></a>Flash a Yocto or Android Image<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Flash-a-Yocto-or-Android-Image'}, '*');" class="article-anchor" href="#Flash-a-Yocto-or-Android-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Prerequisites-1'}, '*');" class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
+<li><p>Copy the prebuilt bootable Yocto image to the working directory on your development host.</p>
+</li>
+<li><p>In Windows environments, please download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Tools/SDDiskTool_v1.6.rar">Rockchip SD Firmware tool</a> to flash the image to the SD Card.</p>
+<p><strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger. For better performance an class 10 SD card or higher is advised.</p>
+</li>
+</ul>
 <br>
 
-### Windows Host
-
-Insert an empty MicroSD Card into the development host and execute the Rockchip SD Firmware tool. 
-
-* Run **SD Firmware Tool**  as an administrator
-
-* Select "Choose removable disk" as your SD card
-
-* Choose "Function mode" as **SD Boot**
-
-* Load your build Yocto image as "Firmware" 
-
-then, click the **Create** button to start the process.
+<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImage.html#Windows-Host-1'}, '*');" class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Rockchip SD Firmware tool. </p>
+<ul>
+<li><p>Run <strong>SD Firmware Tool</strong>  as an administrator</p>
+</li>
+<li><p>Select “Choose removable disk” as your SD card</p>
+</li>
+<li><p>Choose “Function mode” as <strong>SD Boot</strong></p>
+</li>
+<li><p>Load your build Yocto image as “Firmware”</p>
+</li>
+</ul>
+<p>then, click the <strong>Create</strong> button to start the process.</p>
 <center>
-<img src="HowToFlashImage.assets/image-20200303115215481.png" alt="image-20200303115215481" style="zoom:80%;" />
+<img src="HowToFlashImage.assets/image-20200303115215481.png" alt="image-20200303115215481" style="zoom:80%;">
 </center>
 * The tool will prompt to the user that data will be lost. Select "Yes" to continue
 
-* Once done, click **OK** and close the SD Firmware Tool 
-
-* Eject the SD card and insert it into the targeted device and power on the device to boot up.
-
-**Note**: There is no need to configure the boot selector of the **LEC-PX30 with Industrial-Pi** for booting from the SD Card. You can directly insert the SD card and power on the system.
-
+<ul>
+<li><p>Once done, click <strong>OK</strong> and close the SD Firmware Tool </p>
+</li>
+<li><p>Eject the SD card and insert it into the targeted device and power on the device to boot up.</p>
+</li>
+</ul>
+<p><strong>Note</strong>: There is no need to configure the boot selector of the <strong>LEC-PX30 with Industrial-Pi</strong> for booting from the SD Card. You can directly insert the SD card and power on the system.</p>
 </div>
 
 <style>
@@ -253,7 +234,7 @@ then, click the **Create** button to start the process.
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Flash-an-Image-to-the-SD-Card"><span class="toc-text">How to Flash an Image to the SD Card</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flash-a-Ubuntu-x2F-Debian-Image"><span class="toc-text">Flash a Ubuntu&#x2F;Debian Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flash-a-Yocto-or-Android-Image"><span class="toc-text">Flash a Yocto or Android Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites-1"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host-1"><span class="toc-text">Windows Host</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

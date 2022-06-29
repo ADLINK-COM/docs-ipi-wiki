@@ -60,17 +60,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="It describes about how to use PM2.5 sensor for monitoring air quality on I-Pi  Hardware Requirement: I-Pi SMARC PX30 Development Kit Monitor, Keyboard and Mouse HDMI Display  Refer this link fo">
+  <meta name="description" content="It describes about how to use PM2.5 sensor for monitoring air quality on I-Pi     Hardware Requirement: I-Pi SMARC PX30 Development Kit Monitor, Keyboard and Mouse HDMI Display  Refer this link">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tutorial 10 - How to enable the air quality monitoring with PM2.5 sensor">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="It describes about how to use PM2.5 sensor for monitoring air quality on I-Pi  Hardware Requirement: I-Pi SMARC PX30 Development Kit Monitor, Keyboard and Mouse HDMI Display  Refer this link fo">
+<meta property="og:description" content="It describes about how to use PM2.5 sensor for monitoring air quality on I-Pi     Hardware Requirement: I-Pi SMARC PX30 Development Kit Monitor, Keyboard and Mouse HDMI Display  Refer this link">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Capture.PNG">
-<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRPxI6GVo1BVh2B-iMgOh8DMqfsUtH1PELzPA&amp;usqp=CAU">
+<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPxI6GVo1BVh2B-iMgOh8DMqfsUtH1PELzPA&usqp=CAU">
 <meta property="og:image" content="https://raw.githubusercontent.com/DFRobot/DFRobotMediaWikiImage/master/Image/_PM2.5-EN.jpg">
-<meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Picture1.jpg">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Picture1.jpg">
 <meta property="article:published_time" content="2022-03-28T08:27:50.440Z">
 <meta property="article:modified_time" content="2022-03-28T08:27:50.440Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
@@ -143,7 +143,10 @@
 </div>
 
 <p>It describes about how to use PM2.5 sensor for monitoring air quality on I-Pi</p>
-<p><img src="Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Capture.PNG" alt="Capture" style="zoom: 80%;"></p>
+<img src="Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Capture.PNG" alt="Capture" style="zoom: 80%;">
+
+
+
 <h2 id="Hardware-Requirement" class="article-heading"><a href="#Hardware-Requirement" class="headerlink" title="Hardware Requirement:"></a><strong>Hardware Requirement:</strong><a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Hardware-Requirement'}, '*');" class="article-anchor" href="#Hardware-Requirement" aria-hidden="true"></a></h2><ol>
 <li>I-Pi SMARC PX30 Development Kit</li>
 <li>Monitor, Keyboard and Mouse</li>
@@ -151,7 +154,7 @@
 </ol>
 <p>Refer this link for I-Pi Connections<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=luzU_IYuRQI">https://www.youtube.com/watch?v=luzU_IYuRQI</a></p>
 <h2 id="Software-Requirement" class="article-heading"><a href="#Software-Requirement" class="headerlink" title="Software Requirement"></a><strong>Software Requirement</strong><a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Software-Requirement'}, '*');" class="article-anchor" href="#Software-Requirement" aria-hidden="true"></a></h2><ol>
-<li>Debian/Ubuntu/Yocto as desired OS. Here is the images for you: <ol>
+<li>Debian&#x2F;Ubuntu&#x2F;Yocto as desired OS. Here is the images for you: <ol>
 <li><a href="../DebianImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Debian binary images</strong> which built by ADLINK if you need.</li>
 <li><a href="../UbuntuImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Ubuntu binary images</strong> which built by ADLINK if you need.</li>
 <li><a href="../YoctoImages.html#Binary-Image-download-Link">The download link</a> for <strong>the latest Yocto binary images</strong> which built by ADLINK if you need.</li>
@@ -161,23 +164,23 @@
 <p>Refer this links flashing the Image in to micro SD card</p>
 <ol>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=-Vq7yLV5thQ&amp;t=11s">https://www.youtube.com/watch?v=-Vq7yLV5thQ&amp;t=11s</a> ( Guide to How to Flash Yocto SD Card image)</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=qunkNOpYzGQ&amp;t=72s">https://www.youtube.com/watch?v=qunkNOpYzGQ&amp;t=72s</a> ( Guide to how to Flash Debian/Ubuntu SD Card image)</li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=qunkNOpYzGQ&amp;t=72s">https://www.youtube.com/watch?v=qunkNOpYzGQ&amp;t=72s</a> ( Guide to how to Flash Debian&#x2F;Ubuntu SD Card image)</li>
 </ol>
 <h3 id="PM2-5-sensor-description" class="article-heading"><a href="#PM2-5-sensor-description" class="headerlink" title="PM2.5 sensor description"></a><strong>PM2.5 sensor description</strong><a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#PM2-5-sensor-description'}, '*');" class="article-anchor" href="#PM2-5-sensor-description" aria-hidden="true"></a></h3><p>PM2.5 laser dust sensor is a digital universal particle concentration sensor, it can be used to obtain the number of suspended particulate matter in a unit volume of air within 0.3 to 10 microns. The Air Quality sensors can be embedded in a variety of concentrations of environment-related instruments suspended particulate matter in the air, to provide timely and accurate concentration data. </p>
-<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRPxI6GVo1BVh2B-iMgOh8DMqfsUtH1PELzPA&amp;usqp=CAU" alt="DFRobot Gravity Laser PM2.5 Air Quality Sensor for Arduino - 華輝WECL STEM"></p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPxI6GVo1BVh2B-iMgOh8DMqfsUtH1PELzPA&usqp=CAU" alt="DFRobot Gravity Laser PM2.5 Air Quality Sensor for Arduino - 華輝WECL STEM"></p>
 <h4 id="How-it-works" class="article-heading"><a href="#How-it-works" class="headerlink" title="How it works"></a><strong>How it works</strong><a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#How-it-works'}, '*');" class="article-anchor" href="#How-it-works" aria-hidden="true"></a></h4><p>This PM2.5 sensor uses a laser scattering theory. And the scattering of laser irradiation in the air suspended particles, while collecting the scattered light at a specific angle, to obtain the scattering intensity versus with time curve. After the microprocessor data collection, it gets the relationship between the time domain and frequency domain by Fourier transform, and then through a series of complex algorithms to obtain the number of particles in the equivalent particle size and volume units of different size.</p>
 <p><img src="https://raw.githubusercontent.com/DFRobot/DFRobotMediaWikiImage/master/Image/_PM2.5-EN.jpg" alt="sensor structure diagram"></p>
 <h4 id="Specifications" class="article-heading"><a href="#Specifications" class="headerlink" title="Specifications"></a><strong>Specifications</strong><a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Specifications'}, '*');" class="article-anchor" href="#Specifications" aria-hidden="true"></a></h4><ul>
 <li>Operating voltage: 4.95 ~ 5.05V</li>
 <li>Maximum electric current: 120mA</li>
 <li>Measuring pm diameter: 0.3-1.0, 1.0-2.5, 2.5-10(um)</li>
-<li>Measuring pm range: 0~500 ug/m3</li>
+<li>Measuring pm range: 0~500 ug&#x2F;m3</li>
 <li>Standby current: ≤200 uA</li>
 <li>Response time: ≤10 s</li>
 <li>Operating temperature range: -20 ~ 50C</li>
 <li>Operating humidity range: 0 ~ 99% RH</li>
 <li>Maximum size: 65 × 42 × 23 (mm)</li>
-<li>MTBF: &gt;= 5 years</li>
+<li>MTBF: &gt;&#x3D; 5 years</li>
 <li>Quick response</li>
 <li>Standard serial input word output</li>
 <li>Second-order multi-point calibration curve</li>
@@ -185,20 +188,24 @@
 </ul>
 <h2 id="Step-1-Updating-Repositories" class="article-heading"><a href="#Step-1-Updating-Repositories" class="headerlink" title="Step 1: Updating Repositories"></a><strong>Step 1:</strong> Updating Repositories<a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Step-1-Updating-Repositories'}, '*');" class="article-anchor" href="#Step-1-Updating-Repositories" aria-hidden="true"></a></h2><p>Insert the SD card and start the development host. Its always better to update your apt repositories in your host machine</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br></pre></td></tr></table></figure>
+
 <h2 id="Step-2-Location-of-directory" class="article-heading"><a href="#Step-2-Location-of-directory" class="headerlink" title="Step 2: Location of directory"></a><strong>Step 2:</strong> Location of directory<a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Step-2-Location-of-directory'}, '*');" class="article-anchor" href="#Step-2-Location-of-directory" aria-hidden="true"></a></h2><p>if you boot your I-Pi with Yocto, go to the following directory</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ cd /usr/share/upm/examples/python/</span><br></pre></td></tr></table></figure>
-<p>If you boot your I-Pi with Debian/Ubuntu, go to the following directory</p>
+
+<p>If you boot your I-Pi with Debian&#x2F;Ubuntu, go to the following directory</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ cd /usr/local/share/upm/examples/python/</span><br></pre></td></tr></table></figure>
+
 <h2 id="Step-3-Sensor-code" class="article-heading"><a href="#Step-3-Sensor-code" class="headerlink" title="Step 3: Sensor code"></a><strong>Step 3:</strong> Sensor code<a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Step-3-Sensor-code'}, '*');" class="article-anchor" href="#Step-3-Sensor-code" aria-hidden="true"></a></h2><p>Then you can find the souce code in this directory named as hka5.py<br>To view the code, type</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo vi hka5.py</span><br></pre></td></tr></table></figure>
 <p>You can also change the time in loop as per your requirement</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">import</span> time, sys, signal, atexit</span><br><span class="line"><span class="keyword">from</span> upm <span class="keyword">import</span> pyupm_hka5 <span class="keyword">as</span> sensorObj</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line"><span class="comment"># Instantiate a HKA5 sensor on uart 0.  We don&#x27;t use the set or</span></span><br><span class="line"><span class="comment"># reset pins, so we pass -1 for them.</span></span><br><span class="line">sensor = sensorObj.HKA5(<span class="number">0</span>, -<span class="number">1</span>, -<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## Exit handlers ##</span></span><br><span class="line"><span class="comment"># This function stops python from printing a stacktrace when you hit control-C</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">SIGINTHandler</span>(<span class="params">signum, frame</span>):</span></span><br><span class="line">    <span class="keyword">raise</span> SystemExit</span><br><span class="line"></span><br><span class="line"><span class="comment"># This function lets you run code on exit</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exitHandler</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Exiting&quot;</span>)</span><br><span class="line">    sys.exit(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Register exit handlers</span></span><br><span class="line">atexit.register(exitHandler)</span><br><span class="line">signal.signal(signal.SIGINT, SIGINTHandler)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update once every 2 seconds and output data</span></span><br><span class="line"><span class="keyword">while</span> (<span class="literal">True</span>):</span><br><span class="line">    sensor.update()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;PM 1  :&quot;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(sensor.getPM1(), end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot; ug/m3&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;PM 2.5:&quot;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(sensor.getPM2_5(), end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot; ug/m3&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;PM 10 :&quot;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(sensor.getPM10(), end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot; ug/m3&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
 <h2 id="Step-4-Execution" class="article-heading"><a href="#Step-4-Execution" class="headerlink" title="Step 4: Execution"></a><strong>Step 4:</strong> Execution<a onclick="parent.postMessage( {msg: '?page=Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.html#Step-4-Execution'}, '*');" class="article-anchor" href="#Step-4-Execution" aria-hidden="true"></a></h2><p>execution the code</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo python3 hka5.py</span><br></pre></td></tr></table></figure>
+
 <p>If you are not the root user, add sudo before the executing commands. The output of PM2.5 sensor changes according to changes in the atmospheric air to indicate the PM levels. The below table shows the index values and their categories</p>
-<p><img src="Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Picture1.jpg" alt="Picture1"></p>
-<p>&lt;/div&gt;</p>
+<p><img src="/SMARC/Tutorial10-HowToEnablePM2.5Sensorspm2.5_sensor.assets/Picture1.jpg" alt="Picture1"></p>
 </div>
+
               </div>
               <footer class="article-footer">
                 <time class="article-footer-updated" datetime="2022-03-28T08:27:50.440Z" itemprop="dateModified">Last updated: 2022-03-28</time>
