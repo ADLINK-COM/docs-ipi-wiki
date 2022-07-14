@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMC.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.html</loc>
     
     <lastmod>2022-07-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMC.html</loc>
     
     <lastmod>2022-07-14</lastmod>
     
@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -121,13 +121,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -135,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -157,6 +150,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToFlashImage.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -191,21 +191,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -219,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -233,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/DebianImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/DebianImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -262,6 +241,27 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToEnableeIQ.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
