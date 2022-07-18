@@ -107,41 +107,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -184,6 +149,41 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/BootToQtDemo.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -212,7 +212,21 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -220,6 +234,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CanderaCGIStudioPage.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/AndroidImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -262,27 +283,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToEnableeIQ.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -702,14 +702,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
