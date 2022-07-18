@@ -86,6 +86,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToFlashTheUbuntuImageOnRB5.html</loc>
+    
+    <lastmod>2022-06-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5.html</loc>
     
     <lastmod>2022-06-28</lastmod>
@@ -101,6 +108,41 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/InstallingNetworkAdapterForWindows.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -149,35 +191,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UnBoxing.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CanderaCGIStudioDemo.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -185,13 +199,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/BootToQtDemo.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CanderaCGIStudioDemo.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -219,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/WindowsImage.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -233,7 +233,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CanderaCGIStudioPage.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -248,6 +248,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CanderaCGIStudioPage.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -331,6 +338,20 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToSetup.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/UserInterfaces.html</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToSetup.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -352,6 +373,20 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/Introduction.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/eIQMLsoftwareDemo.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/Introduction.html</loc>
     
     <lastmod>2022-06-23</lastmod>
@@ -366,7 +401,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/FlashingUbuntuDebianImageintoMicroSD.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CarrierModuleandeIQMachinelearningsoftware.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -380,7 +429,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CanderaCGIStudioDemo.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/CanderaCGIStudioDemo.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/BootToQtDemo.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -394,7 +457,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/YoctoImages.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/YoctoImages.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/UnBoxing.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -408,7 +485,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/UbuntuImages.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/UbuntuImages.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/SoftwarePartners.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -422,7 +513,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToFlashImageeMMC.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashImageeMMC.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToFlashImageSD.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -436,7 +541,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToBuildYocto.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToBuildYocto.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToBuildUbuntu.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -450,6 +569,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToBuildDebian.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToBuildDebian.html</loc>
     
     <lastmod>2022-06-23</lastmod>
@@ -457,7 +583,21 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/ExampleHowto.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ExampleHowto.html</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/DebianImages.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -702,14 +842,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
