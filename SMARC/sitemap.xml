@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageSD.html</loc>
     
     <lastmod>2022-07-14</lastmod>
@@ -17,13 +52,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-07-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/ModuleIntroduction.html</loc>
     
     <lastmod>2022-07-14</lastmod>
     
@@ -86,7 +114,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -100,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UbuntuImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -114,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -122,13 +150,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -212,14 +233,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/DebianImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/DebianImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -283,13 +304,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/HowToSetup.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/CarrierIntroduction.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -597,14 +611,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
@@ -675,6 +689,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/BlockDiagram.html</loc>
+    
+    <lastmod>2022-03-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
@@ -753,7 +774,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-07-14</lastmod>
+    <lastmod>2022-07-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
