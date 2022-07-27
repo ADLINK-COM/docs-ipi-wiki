@@ -102,7 +102,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUboot.html#HowToBuildUboot.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUboot.html'}, '*');}</script>
 
 	</div>
 	
@@ -132,8 +132,8 @@
               <div class="article-content bullets" itemprop="articleBody">
                 <div class="bullets">
 
-<h2 id="How-to-Build-and-Install-custom-U-boot" class="article-heading"><a href="#How-to-Build-and-Install-custom-U-boot" class="headerlink" title="How to Build and Install custom U-boot"></a>How to Build and Install custom U-boot<a class="article-anchor" href="#How-to-Build-and-Install-custom-U-boot" aria-hidden="true"></a></h2><p>Building U-boot on I-Pi SMARC using the LEC-PX30 SMARC module and downloading to the SDcard</p>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<h2 id="How-to-Build-and-Install-custom-U-boot" class="article-heading"><a href="#How-to-Build-and-Install-custom-U-boot" class="headerlink" title="How to Build and Install custom U-boot"></a>How to Build and Install custom U-boot<a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#How-to-Build-and-Install-custom-U-boot'}, '*');" class="article-anchor" href="#How-to-Build-and-Install-custom-U-boot" aria-hidden="true"></a></h2><p>Building U-boot on I-Pi SMARC using the LEC-PX30 SMARC module and downloading to the SDcard</p>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li><p>Development host running recent Ubuntu OS such as 18.04 with compile installed  </p>
 </li>
 <li><p>Make sure it has the development environment installed :</p>
@@ -142,7 +142,7 @@
 <li><p>Download the PX30 buildroot SDK  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/px30_buildroot_es2_sdk_20191218.tar.gz">here</a>  to the development host (around) 8GB)</p>
 </li>
 </ul>
-<h2 id="Building-the-binaries" class="article-heading"><a href="#Building-the-binaries" class="headerlink" title="Building the binaries"></a><strong>Building the binaries</strong><a class="article-anchor" href="#Building-the-binaries" aria-hidden="true"></a></h2><ol>
+<h2 id="Building-the-binaries" class="article-heading"><a href="#Building-the-binaries" class="headerlink" title="Building the binaries"></a><strong>Building the binaries</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#Building-the-binaries'}, '*');" class="article-anchor" href="#Building-the-binaries" aria-hidden="true"></a></h2><ol>
 <li><p>After downloading the SDK, extract it</p>
 </li>
 <li><p>Make sure you are in terminal mode and change directory to the u-boot directory</p>
@@ -153,7 +153,7 @@
 <li><p>Build U-Boot using below command: </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo ./make.sh evb-px30</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Installing-U-boot-on-the-target" class="article-heading"><a href="#Installing-U-boot-on-the-target" class="headerlink" title="Installing U-boot on the target"></a>Installing U-boot on the target<a class="article-anchor" href="#Installing-U-boot-on-the-target" aria-hidden="true"></a></h2><ol>
+<h2 id="Installing-U-boot-on-the-target" class="article-heading"><a href="#Installing-U-boot-on-the-target" class="headerlink" title="Installing U-boot on the target"></a>Installing U-boot on the target<a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#Installing-U-boot-on-the-target'}, '*');" class="article-anchor" href="#Installing-U-boot-on-the-target" aria-hidden="true"></a></h2><ol>
 <li><p>After a successful build you will end up with 3 binary images: </p>
 <ol>
 <li><strong>px30_loader</strong>_vx.xx.xxx.bin<br>this is the Rockchip miniloader flash install it to the miniloader partition on the target.</li>

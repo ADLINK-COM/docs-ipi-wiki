@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildUbuntu.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-07-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ModuleIntroduction.html</loc>
     
     <lastmod>2022-07-20</lastmod>
@@ -16,21 +79,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-07-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-07-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
     
     <lastmod>2022-07-20</lastmod>
     
@@ -45,13 +94,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/CarrierIntroduction.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/CarrierIntroduction.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -149,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -171,20 +206,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -275,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -290,13 +304,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildDebian.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildUbuntu.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -374,13 +381,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/UserInterfaces.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/CarrierIntroduction.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -688,14 +688,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial5-HowToFlashDebianImage.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial4-HowToBuildUbuntu.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial4-HowToBuildUbuntu.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial5-HowToFlashDebianImage.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
@@ -765,14 +765,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
@@ -921,7 +921,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-07-20</lastmod>
+    <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

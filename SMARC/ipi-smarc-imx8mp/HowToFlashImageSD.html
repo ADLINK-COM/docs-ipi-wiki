@@ -106,7 +106,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashImageSD.html#HowToFlashImageSD.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashImageSD.html'}, '*');}</script>
 
 	</div>
 	
@@ -134,7 +134,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Flash-an-Image-to-the-SD-Card" class="article-heading"><a href="#How-to-Flash-an-Image-to-the-SD-Card" class="headerlink" title="How to Flash an Image to the SD Card"></a>How to Flash an Image to the SD Card<a class="article-anchor" href="#How-to-Flash-an-Image-to-the-SD-Card" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="How-to-Flash-an-Image-to-the-SD-Card" class="article-heading"><a href="#How-to-Flash-an-Image-to-the-SD-Card" class="headerlink" title="How to Flash an Image to the SD Card"></a>How to Flash an Image to the SD Card<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#How-to-Flash-an-Image-to-the-SD-Card'}, '*');" class="article-anchor" href="#How-to-Flash-an-Image-to-the-SD-Card" aria-hidden="true"></a></h1><div class="bullets">
 This procedure describes how to flash Ubuntu/Debian/Yocto/Android image to the eMMC.
 
 <ul>
@@ -143,7 +143,7 @@ This procedure describes how to flash Ubuntu/Debian/Yocto/Android image to the e
 <li><p><a href="#Flashing-Yocto-or-Android-Image">Flashing Yocto or Android Image</a></p>
 </li>
 </ul>
-<h2 id="Flashing-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flashing-Ubuntu-or-Debian-Image" class="headerlink" title="Flashing Ubuntu or Debian Image"></a><strong>Flashing Ubuntu or Debian Image</strong><a class="article-anchor" href="#Flashing-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<h2 id="Flashing-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flashing-Ubuntu-or-Debian-Image" class="headerlink" title="Flashing Ubuntu or Debian Image"></a><strong>Flashing Ubuntu or Debian Image</strong><a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Flashing-Ubuntu-or-Debian-Image'}, '*');" class="article-anchor" href="#Flashing-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
 <li>Download the prebuilt bootable Ubuntu image to the working directory on your development host.</li>
 <li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">rufus</a> to flash the image to the SD Card.</li>
 <li>In a Linux environment use <code>dd</code> command.</li>
@@ -156,7 +156,7 @@ This procedure describes how to flash Ubuntu/Debian/Yocto/Android image to the e
 <li><a href="#Windows-Host">Windows Host Users</a></li>
 <li><a href="#Linux-Host">Linux Host Users</a></li>
 </ul>
-<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
 <li><p>Insert an empty MicroSD Card into the development host and execute rufus.exe. It will auto-detected your storage drives.</p>
 </li>
 <li><p>Press the <strong>SELECT</strong> button and browse to the .img file previously downloaded to your working directory in the development host. Then click <strong>START</strong> and wait for the process to be finished.</p>
@@ -164,7 +164,7 @@ This procedure describes how to flash Ubuntu/Debian/Yocto/Android image to the e
 </ol>
 <img src="HowToFlashImageeMMC.assets\rufus_1.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
 
-<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
 <li><p>Copy the prebuilt bootable Ubuntu&#x2F;Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</p>
 <p><strong>Warning</strong>: Make sure you first properly identify the SD Card device name as for example (&#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development host OS.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
@@ -175,14 +175,14 @@ This procedure describes how to flash Ubuntu/Debian/Yocto/Android image to the e
   <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
 
 <p><strong>Note</strong>: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your <code>dd</code> command.</p>
-<h2 id="Flashing-Yocto-or-Android-Image" class="article-heading"><a href="#Flashing-Yocto-or-Android-Image" class="headerlink" title="Flashing Yocto or Android Image"></a>Flashing Yocto or Android Image<a class="article-anchor" href="#Flashing-Yocto-or-Android-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
+<h2 id="Flashing-Yocto-or-Android-Image" class="article-heading"><a href="#Flashing-Yocto-or-Android-Image" class="headerlink" title="Flashing Yocto or Android Image"></a>Flashing Yocto or Android Image<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Flashing-Yocto-or-Android-Image'}, '*');" class="article-anchor" href="#Flashing-Yocto-or-Android-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Prerequisites-1'}, '*');" class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
 <li><p>Copy the prebuilt bootable Yocto image to the working directory on your development host.</p>
 </li>
 <li><p>In Windows environments, please download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">Win32DiskImager</a> to flash the image to the SD Card.</p>
 <p><strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger.</p>
 </li>
 </ul>
-<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.</p>
+<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashImageSD.html#Windows-Host-1'}, '*');" class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.</p>
 <ul>
 <li>The SD card device is automatically detected.</li>
 <li>Choose Image file by clicking on File explorer icon.</li>
