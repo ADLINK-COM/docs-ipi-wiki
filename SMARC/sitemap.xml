@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/CarrierIntroduction.html</loc>
     
     <lastmod>2022-07-27</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
-    
-    <lastmod>2022-07-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
     
     <lastmod>2022-07-27</lastmod>
     
@@ -765,14 +765,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
