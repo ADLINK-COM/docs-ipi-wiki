@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
+    
+    <lastmod>2022-08-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5.html</loc>
+    
+    <lastmod>2022-08-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/CarrierIntroduction.html</loc>
     
     <lastmod>2022-07-27</lastmod>
@@ -149,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5.html</loc>
-    
-    <lastmod>2022-06-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/HowToUpgradeBIOSOnElkhartLake.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -255,13 +262,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UbuntuImage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UserInterfaces.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -849,14 +849,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
@@ -921,7 +921,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-07-27</lastmod>
+    <lastmod>2022-08-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
