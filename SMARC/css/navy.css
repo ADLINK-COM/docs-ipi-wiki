@@ -2233,24 +2233,20 @@ pre .keyword {
 
 
 #ui_mx_front{
-    width: 698px;
+    width: 800px;
     height: auto;
-    display: block;
-    margin-left: 10px;
+    margin-left: 3px;
 }
 
 
 #ui_mx_back{
-    width: 537px;
+    width: 615px;
     height: auto;
-    display: block;
-    margin-left: 36px;
+    margin-left: 43px;
 }
 
-
-
 #ui_mx_pin{
-    width: 323px;
+    width: 370px;
     height: auto;
 }
 
