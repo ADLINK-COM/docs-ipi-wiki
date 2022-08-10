@@ -2246,8 +2246,9 @@ pre .keyword {
 }
 
 #ui_mx_pin{
-    width: 370px;
+    width: 372px;
     height: auto;
+    margin-left: 40px;
 }
 
 #px_carrier{
@@ -2274,7 +2275,6 @@ pre .keyword {
 
   }
 
-
   #elkhart_interface_container{
     width: 596px;
     margin-left: 88px; 
@@ -2284,6 +2284,12 @@ pre .keyword {
     width: 362px;
     margin-left: 38px;
   }
+
+    #ui_mx_pin{
+        width: 357px;
+        height: auto;
+        margin-left: 40px;
+    }
 
 }
 
@@ -2306,9 +2312,7 @@ pre .keyword {
   #image-container{
     width: fit-content;
     height: auto;
-    
   }
-
 
   #logo-container{
     max-width: 83px;
@@ -2331,7 +2335,10 @@ pre .keyword {
     margin-left: 32px;
   }
 
-
+  #ui_mx_pin{
+    width: 317px;
+    margin-left: 37px;
+    }
 }
 
 @media screen and (max-width: 1200px){
@@ -2401,6 +2408,11 @@ pre .keyword {
     display: block;
     margin-left: 19px;
   }
+
+  #ui_mx_pin{
+    width: 265px;
+    margin-left: 84px;
+    }
 }
 
 @media screen and (max-width: 1081px){
@@ -2418,23 +2430,32 @@ pre .keyword {
         width: 240px;
         margin-left: 38px;
     }
+    #ui_mx_pin{
+        width: 240px;
+        margin-left: 52px;
+    }
 }
 
 
 @media screen and (max-width: 1025px){
     #elkhart_interf_container{
-        width: 470px;
+        width: 450px;
     }
 
 
     #elkhart_interface_container{
-        width: 412px;
+        width: 390px;
         margin-left: 60px;
     }
 
     #forty-pin-container{
         width: 249px;
         margin-left: 114px;
+    }
+
+    #ui_mx_pin{
+        width: 236px;
+        margin-left: 98px;
     }
 }
 
@@ -2467,6 +2488,10 @@ pre .keyword {
     #module_pic{
       width: 450px;
     }
+    #ui_mx_pin{
+        width: 317px;
+        margin-left: 38px;
+    }
 }
 
 @media screen and (max-width: 930px){
@@ -2481,6 +2506,11 @@ pre .keyword {
     #forty-pin-container{
         width: 250px;
         margin-left:30px;
+    }
+
+    #ui_mx_pin{
+        width: 250px;
+        margin-left: 31px;
     }
 
 }
@@ -2606,10 +2636,14 @@ pre .keyword {
         margin-left: 79px;
     }
 
-
     #forty-pin-container{
         width: 330px;
         margin-left: 33px;
+    }
+
+    #ui_mx_pin{
+        width: 327px;
+        margin-left: 38px;
     }
 
 }
@@ -2627,6 +2661,11 @@ pre .keyword {
     #forty-pin-container{
         width: 288px;
         margin-left: 29px;
+    }
+
+    #ui_mx_pin{
+        width: 285px;
+        margin-left: 30px;
     }
 
 }
@@ -2813,6 +2852,10 @@ pre .keyword {
         width: 215px;
         margin-left:38px;
     }
+    #ui_mx_pin{
+        width: 215px;
+        margin-left: 80px;
+    }
 
 }
 
@@ -2829,6 +2872,11 @@ pre .keyword {
     #forty-pin-container{
         width: 175px;
         margin-left: 17px;
+    }
+
+    #ui_mx_pin{
+        width: 174px;
+        margin-left: 60px;
     }
 }
 
@@ -2888,5 +2936,11 @@ pre .keyword {
     #forty-pin-container{
         width: 176px;
         margin-left: 18px;
+    }
+
+    #ui_mx_pin{
+        width: 175px;
+        height: auto;
+        margin-left: 60px;
     }
 }
