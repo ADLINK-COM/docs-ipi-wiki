@@ -2179,15 +2179,20 @@ pre .keyword {
 
 
 #logo-container{
-  max-width: 100px;
-  height: 39px;
+  width: 130px;
+  height: auto;
   margin-right: 10px;
 }
 
-#image-container #logo-container img{
-  margin-right: 10px;
-  width: 100%;
+#logo-container img{
+    width: 100%;
 }
+
+#qualcom-logo{
+    width: 100px;
+    height: auto;
+}
+
 
 #SmarcPlus_front{
   width: 727px;
@@ -2232,18 +2237,6 @@ pre .keyword {
 }
 
 
-#ui_mx_front{
-    width: 800px;
-    height: auto;
-    margin-left: 3px;
-}
-
-
-#ui_mx_back{
-    width: 615px;
-    height: auto;
-    margin-left: 43px;
-}
 
 #ui_mx_pin{
     width: 372px;
@@ -2315,10 +2308,12 @@ pre .keyword {
   }
 
   #logo-container{
-    max-width: 83px;
-    max-height: auto;
-    margin-right: 10px;
+    max-width: 95px;
   }
+
+  #qualcom-logo{
+    width: 80px;
+}
 
   #elkhart_interf_container{
     width: 600px;
