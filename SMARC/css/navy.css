@@ -785,7 +785,7 @@ details[open] > summary::before {
     clear: both
 }
 
-@media screen and (min-width:901px) {
+@media screen and (min-width:1001px) {
     .article-inner {
         margin-right: 300px
     }
@@ -811,7 +811,7 @@ details[open] > summary::before {
     opacity: .8
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1001px) {
     #article-toc {
         display: block
     }
@@ -2206,39 +2206,22 @@ pre .keyword {
 }
 
 #elkhart_interf_container{
-  width: fit-content;
+  width: 700px;
   height: auto;
-}
-
-#elkhart_interf{
-  width: 100%;
-  height: auto;
-  margin-left: 35px;
-  display: block;
 }
 
 #elkhart_interface_container{
-  width: 582px;
-  height:100%;
-}
-#elkhart_interface{
-  width: 100%;
+  width: 617px;
   height: auto;
-  margin-left: 56px; 
-  display: block;
+  margin-left: 90px;
 }
 
 #forty-pin-container{
-  width: 305px;
+  width: 374px;
   height: auto;
+  margin-left: 36px;
 }
 
-#forty-pin{
-  width: 100%;
-  height: auto;
-  margin-left: 0px;
-  display: block;
-}
 
 #elkhart_new_container{
   max-width: 400px;
@@ -2291,31 +2274,21 @@ pre .keyword {
   }
 
   #elkhart_interf_container{
-    width: 770px;
-    height: auto;
+    width: 680px;
+
   }
 
-  #elkhart_interf{
-    margin-left: 50px;
-  }
 
   #elkhart_interface_container{
-    width: 560px;
-    height: 100%;
+    width: 596px;
+    margin-left: 88px; 
   }
-
-  #elkhart_interface{
-       margin-left: 80px; 
-    }
 
   #forty-pin-container{
-    width: 290px;
-    height: auto;
+    width: 362px;
+    margin-left: 38px;
   }
 
-  #forty-pin{
-    margin-left: 25px;
-  }
 }
 
 @media screen and (max-width: 1250px){
@@ -2348,37 +2321,21 @@ pre .keyword {
   }
 
   #elkhart_interf_container{
-    width: 670px;
-    height: auto;
-  }
-
-  #elkhart_interf{
-    width: 100%;
-    height: auto;
-    margin-left: 5px;
-    display: block;
+    width: 600px;
+   
   }
 
   #elkhart_interface_container{
-    width: 480px;
-    height:100%;
-  }
-
-  #elkhart_interface{
-    width: 100%;
-    height: auto;
-    margin-left: 45px; 
-    display: block;
+    width: 525px;
+    margin-left: 78px;
   }
 
   #forty-pin-container{
-    width: 260px;
-    height: auto;
+    width: 318px;
+    margin-left: 32px;
   }
 
-  #forty-pin{
-    margin-left: 0px;
-  }
+
 }
 
 @media screen and (max-width: 1200px){
@@ -2396,36 +2353,18 @@ pre .keyword {
     margin-left: 70px;
   }
     #elkhart_interf_container{
-        width: 600px;
-        height: auto;
+        width: 500px;
     }
 
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        margin-left: 5px;
-        display: block;
-    }
 
     #elkhart_interface_container{
-        width: 430px;
-        height:100%;
-    }
-
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 43px; 
-        display: block;
+        width: 440px;
+        margin-left: 67px;
     }
 
     #forty-pin-container{
-        width: 225px;
-        height: auto;
-    }
-
-    #forty-pin{
-        margin-left: 0px;
+        width: 265px;
+        margin-left:27px;
     }
 
     #ui_mx_front{
@@ -2468,6 +2407,41 @@ pre .keyword {
   }
 }
 
+@media screen and (max-width: 1081px){
+    #elkhart_interf_container{
+        width: 450px;
+    }
+
+
+    #elkhart_interface_container{
+        width: 396px;
+        margin-left: 56px;
+    }
+
+    #forty-pin-container{
+        width: 240px;
+        margin-left: 38px;
+    }
+}
+
+
+@media screen and (max-width: 1025px){
+    #elkhart_interf_container{
+        width: 470px;
+    }
+
+
+    #elkhart_interface_container{
+        width: 412px;
+        margin-left: 60px;
+    }
+
+    #forty-pin-container{
+        width: 249px;
+        margin-left: 114px;
+    }
+}
+
 @media screen and (max-width:1000px){
   #SmarcPlus_front{
     width: fit-content;
@@ -2483,18 +2457,52 @@ pre .keyword {
   }
     #elkhart_interf_container{
         width: 596px;
-        height: auto;
+    }
+    #elkhart_interface_container{
+        width: 525px;
+        margin-left: 77px;
     }
 
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        margin-left: 28px;
-        display: block;
+    #forty-pin-container{
+        width: 318px;
+        margin-left:33px;
     }
+
     #module_pic{
       width: fit-content;
     }
+}
+
+@media screen and (max-width: 930px){
+    #elkhart_interf_container{
+        width: 470px;
+    }
+    #elkhart_interface_container{
+        width: 413px;
+        margin-left: 62px;
+    }
+
+    #forty-pin-container{
+        width: 250px;
+        margin-left:30px;
+    }
+
+}
+
+@media screen and (max-width: 920px){
+    #elkhart_interf_container{
+        width: 470px;
+    }
+    #elkhart_interface_container{
+        width: 413px;
+        margin-left: 62px;
+    }
+
+    #forty-pin-container{
+        width: 250px;
+        margin-left:26px;
+    }
+
 }
 
 
@@ -2507,41 +2515,22 @@ pre .keyword {
     margin-left: 22px;
   }
     #elkhart_interf_container{
-        width: 620px;
-        height: auto;
+        width: 450px;
     }
 
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        display: block;
-    }
 
     #elkhart_interface_container{
-        width: 450px;
-        height:100%;
+        width: 392px;
+        margin-left: 58px;
     }
 
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 77px; 
-        display: block;
-    }
 
     #forty-pin-container{
-        width: 240px;
-        height: auto;
-    }
-
-    #forty-pin{
-        margin-left: 35px;
+        width: 238px;
     }
 
     #elkhart_new_container{
         max-width: 350px;
-        height: auto;
     }
 
     #interf_image{
@@ -2616,60 +2605,36 @@ pre .keyword {
 
     #elkhart_interf_container{
         width: 620px;
-        height: auto;
     }
 
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        margin-left: 28px;
-        display: block;
-    }
     #elkhart_interface_container{
-        width: 450px;
-        height:100%;
+        width: 542px;
+        margin-left: 79px;
     }
 
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 44px; 
-        display: block;
-    }
 
     #forty-pin-container{
-        width: 234px;
-        height: auto;
+        width: 330px;
+        margin-left: 33px;
     }
 
-    #forty-pin{
-        margin-left: 0px;
-    }
 }
 
 @media screen and (max-width: 680px){
     #elkhart_interf_container{
-        width: fit-content;
-        height: auto;
+        width: 540px;
     }
 
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        margin-left: 28px;
-        display: block;
-    }
     #elkhart_interface_container{
-        width: 450px;
-        height:100%;
+        width: 473px;
+        margin-left: 68px;
     }
 
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 44px; 
-        display: block;
+    #forty-pin-container{
+        width: 288px;
+        margin-left: 29px;
     }
+
 }
 
 @media screen and (max-width: 600px){
@@ -2692,25 +2657,13 @@ pre .keyword {
     }
 
     #elkhart_interface_container{
-        width: 380px;
-    }
-
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 35px; 
-        display: block;
+        width: 480px;
     }
 
     #forty-pin-container{
-        width: 200px;
-        height: auto;
+        width: 290px;
+        margin-left: 28px;
     }
-
-    #forty-pin{
-        margin-left: 0px;
-    }
-
 
     #ui_mx_front{
         width: 500px;
@@ -2745,35 +2698,20 @@ pre .keyword {
 
 @media screen and (max-width: 520px){
     #elkhart_interf_container{
-        width: fit-content;
-        height: auto;
+        width: 470px;
     }
 
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
 
     #elkhart_interface_container{
-        width: 350px;
-    }
-
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 41px; 
-        display: block;
+        width: 414px;
+        margin-left: 60px;
     }
 
     #forty-pin-container{
-        width: 183px;
-        height: auto;
+        width: 252px;
+        margin-left: 23px;
     }
 
-    #forty-pin{
-        margin-left: 5px;
-    }
 
     #SmarcPlus_front{
         width: fit-content;
@@ -2807,40 +2745,22 @@ pre .keyword {
     }
 
     #elkhart_interf_container{
-        width: fit-content;
-        height: auto;
-    }
-
-    #elkhart_interf{
-        width: 100%;
-        height: auto;
-        padding-left: 0px;
-        display: block;
+        width: 410px;
     }
 
     #elkhart_interface_container{
-        width: 285px;
-        height:100%;
-    }
-
-    #elkhart_interface{
-        width: 100%;
-        height: auto;
-        margin-left: 36px; 
-        display: block;
-    }
-    #module_pic{
-        width: 350px;
-        height: auto;
+        width: 358px;
+        margin-left: 52px;
     }
 
     #forty-pin-container{
-        width: 147px;
-        height: auto;
+        width: 217px;
+        margin-left: 21px;
     }
 
-    #forty-pin{
-        margin-left: 10px;
+    #module_pic{
+        width: 350px;
+        height: auto;
     }
 
     #elkhart_new_container{
@@ -2886,6 +2806,38 @@ pre .keyword {
     }
 }
 
+@media screen and (max-width: 430px){
+    #elkhart_interf_container{
+        width: 405px;
+    }
+    #elkhart_interface_container{
+        width: 355px;
+        margin-left: 51px;
+    }
+
+    #forty-pin-container{
+        width: 215px;
+        margin-left:38px;
+    }
+
+}
+
+@media screen and (max-width: 415px){
+    #elkhart_interf_container{
+        width: 330px;
+    }
+
+    #elkhart_interface_container{
+        width: 289px;
+        margin-left: 42px;
+    }
+
+    #forty-pin-container{
+        width: 175px;
+        margin-left: 17px;
+    }
+}
+
 
 @media screen and (max-width: 400px){
     #SmarcPlus_front{
@@ -2899,6 +2851,20 @@ pre .keyword {
         height: auto;
         display: block;
         margin-left: 46px;
+    }
+
+    #elkhart_interf_container{
+        width: 360px;
+    }
+
+    #elkhart_interface_container{
+        width: 315px;
+        margin-left: 46px;
+    }
+
+    #forty-pin-container{
+        width: 194px;
+        margin-left: 21px;
     }
 }
 
@@ -2915,4 +2881,18 @@ pre .keyword {
       display: block;
       margin-left: 16px;
   }
+
+  #elkhart_interf_container{
+        width: 330px;
+    }
+
+    #elkhart_interface_container{
+        width: 290px;
+        margin-left: 42px;
+    }
+
+    #forty-pin-container{
+        width: 176px;
+        margin-left: 18px;
+    }
 }
