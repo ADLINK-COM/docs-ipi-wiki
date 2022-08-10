@@ -624,7 +624,7 @@ body {
     display: none
 }
 
-@media screen and (min-width: 811px) {
+@media screen and (min-width: 900px) {
     #sidebar {
         display: block
     }
@@ -762,7 +762,7 @@ details[open] > summary::before {
     clear: both
 }
 
-@media screen and (min-width:811px) {
+@media screen and (min-width:900px) {
     #content-inner {
         margin-left: 303px
     }
@@ -2206,12 +2206,12 @@ pre .keyword {
 }
 
 #elkhart_interf_container{
-  width: 700px;
+  width: 707px;
   height: auto;
 }
 
 #elkhart_interface_container{
-  width: 617px;
+  width: 612px;
   height: auto;
   margin-left: 90px;
 }
@@ -2517,18 +2517,25 @@ pre .keyword {
 
 @media screen and (max-width: 920px){
     #elkhart_interf_container{
-        width: 470px;
+        width: 600px;
     }
     #elkhart_interface_container{
-        width: 413px;
-        margin-left: 62px;
+        width: 517px;
+        margin-left: 79px;
     }
 
     #forty-pin-container{
-        width: 250px;
+        width: 300px;
         margin-left:26px;
     }
 
+}
+
+@media screen and (max-width: 900px){
+    #ui_mx_pin{
+        width: 315px;
+        margin-left: 40px;
+    }
 }
 
 
@@ -2541,18 +2548,19 @@ pre .keyword {
     margin-left: 22px;
   }
     #elkhart_interf_container{
-        width: 450px;
+        width: 600px;
     }
 
 
     #elkhart_interface_container{
-        width: 392px;
-        margin-left: 58px;
+        width: 525px;
+        margin-left: 76px;
     }
 
 
     #forty-pin-container{
-        width: 238px;
+        width: 320px;
+        margin-left: 33px;
     }
 
     #elkhart_new_container{
@@ -2595,10 +2603,9 @@ pre .keyword {
     }
 
 
-    #ui_mx_pin{
-        width: 232px;
-        height: auto;
-        margin-left: 24px;
+    #forty-pin-container{
+        width: 300px;
+        margin-left:26px;
     }
 
     #module_pic{
@@ -2817,23 +2824,16 @@ pre .keyword {
 
 
     #ui_mx_back{
-        width: 280px;
-        height: auto;
+        width: 330px;
         display: block;
         margin-left: 14.5px;
-        padding-left: 0px;
     }
-
-    #ui_mx_back img{
-        margin-left: 0px;
-    }
-
 
     #ui_mx_pin{
-        width: 167px;
-        height: auto;
-        margin-right: 42px;
+        width: 215px;
+        margin-left: 40px;
     }
+
     #px_carrier{
         width: 250px;
     }
@@ -2861,12 +2861,12 @@ pre .keyword {
 
 @media screen and (max-width: 415px){
     #elkhart_interf_container{
-        width: 330px;
+        width: 400px;
     }
 
     #elkhart_interface_container{
-        width: 289px;
-        margin-left: 42px;
+        width: 340px;
+        margin-left: 56px;
     }
 
     #forty-pin-container{
