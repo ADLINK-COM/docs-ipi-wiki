@@ -2469,7 +2469,7 @@ pre .keyword {
     }
 
     #module_pic{
-      width: fit-content;
+      width: 450px;
     }
 }
 
@@ -2548,9 +2548,7 @@ pre .keyword {
 
     #module_pic{
         width: fit-content;
-        height: auto;
     }
-
 
     #ui_mx_front{
         width: 500px;
