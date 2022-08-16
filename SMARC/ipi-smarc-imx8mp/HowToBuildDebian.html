@@ -69,8 +69,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildDebian.assets/Capture3.JPG">
 <meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildDebian.assets/gparted3-1583903538497.png">
-<meta property="article:published_time" content="2022-08-12T02:59:24.828Z">
-<meta property="article:modified_time" content="2022-08-12T02:59:24.828Z">
+<meta property="article:published_time" content="2022-08-16T03:11:24.128Z">
+<meta property="article:modified_time" content="2022-08-16T03:11:24.128Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildDebian.assets/Capture3.JPG">
@@ -163,7 +163,7 @@
 <li>Step 4: Replace the Buildroot rootfs image with Debian’s one on Buildroot SD Card image.</li>
 </ul>
 <p>These steps are detailed below.</p>
-<h2 id="Step-1-Preparing-Debian-Root-File-System" class="article-heading"><a href="#Step-1-Preparing-Debian-Root-File-System" class="headerlink" title="Step 1: Preparing Debian Root File System"></a>Step 1: Preparing Debian Root File System<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-1-Preparing-Debian-Root-File-System'}, '*');" class="article-anchor" href="#Step-1-Preparing-Debian-Root-File-System" aria-hidden="true"></a></h2><ol>
+<h2 id="Step-1-Create-a-Debian-Root-File-System" class="article-heading"><a href="#Step-1-Create-a-Debian-Root-File-System" class="headerlink" title="Step 1: Create a Debian Root File System"></a>Step 1: Create a Debian Root File System<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-1-Create-a-Debian-Root-File-System'}, '*');" class="article-anchor" href="#Step-1-Create-a-Debian-Root-File-System" aria-hidden="true"></a></h2><ol>
 <li><p>Create a new working directory and change directory into it.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/imx8mp</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/imx8mp</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -290,7 +290,7 @@
 <img src="HowToBuildDebian.assets/Capture3.JPG" alt="Capture3" style="zoom:67%;">
 
 
-<h2 id="Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" class="article-heading"><a href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" class="headerlink" title="Step 4: Replacing Buildroot Rootfs with Debian Rootfs"></a>Step 4: Replacing Buildroot Rootfs with Debian Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs'}, '*');" class="article-anchor" href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" aria-hidden="true"></a></h2><p>After finishing step 3, get your SD card to connect to the development Linux host PC .</p>
+<h2 id="Step-4-Replacing-buildroot-rootfs-with-Debian-rootfs" class="article-heading"><a href="#Step-4-Replacing-buildroot-rootfs-with-Debian-rootfs" class="headerlink" title="Step 4: Replacing buildroot rootfs with Debian rootfs"></a>Step 4: Replacing buildroot rootfs with Debian rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-4-Replacing-buildroot-rootfs-with-Debian-rootfs'}, '*');" class="article-anchor" href="#Step-4-Replacing-buildroot-rootfs-with-Debian-rootfs" aria-hidden="true"></a></h2><p>After finishing step 3, get your SD card to connect to the development Linux host PC .</p>
 <ol>
 <li><p>Unmount the mounted partitions</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo umount /dev/sdc*</span></span><br></pre></td></tr></table></figure>
@@ -336,7 +336,7 @@
 
 <p>Eject the SD card. You can directly insert SD card and power on the system to boot using the SD card.</p>
 <p>After boot, login to <strong>imx8mp</strong> user using password set in adduser command.</p>
-<p><strong>Note</strong></p>
+<p><strong>Note:</strong></p>
 <p>Use below command to create a Debian image from SD card.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=/dev/sdX of=&lt;image_name&gt;.img bs=&lt;size&gt; count=&lt;size&gt; , sync status=progress</span><br></pre></td></tr></table></figure>
 
@@ -350,7 +350,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-08-12T02:59:24.828Z" itemprop="dateModified">Last updated: 2022-08-12</time>
+                <time class="article-footer-updated" datetime="2022-08-16T03:11:24.128Z" itemprop="dateModified">Last updated: 2022-08-16</time>
                 <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -360,7 +360,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Build-Debian"><span class="toc-text">How to Build Debian</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recommended-Hardware"><span class="toc-text">Recommended Hardware</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-Preparing-Debian-Root-File-System"><span class="toc-text">Step 1: Preparing Debian Root File System</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-the-Rootfs"><span class="toc-text">Configure the Rootfs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-I-x2F-O-Drivers-to-Rootfs"><span class="toc-text">Add I&#x2F;O Drivers to Rootfs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ethernet-amp-CAN-Bus"><span class="toc-text">- Ethernet &amp; CAN Bus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Audio"><span class="toc-text">- Audio</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiFi-x2F-Bluetooth"><span class="toc-text">- WiFi&#x2F;Bluetooth</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IMX219-camera"><span class="toc-text">- IMX219 camera</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enable-I-x2F-O-Interfaces"><span class="toc-text">- Enable I&#x2F;O Interfaces</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adding-MRAA"><span class="toc-text">- Adding MRAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adding-libMALI"><span class="toc-text">- Adding libMALI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-Generating-Buildroot-SD-Card-Image"><span class="toc-text">Step 2: Generating Buildroot SD Card Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card"><span class="toc-text">Step 3: Flashing Buildroot Image to SD Card</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs"><span class="toc-text">Step 4: Replacing Buildroot Rootfs with Debian Rootfs</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Build-Debian"><span class="toc-text">How to Build Debian</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recommended-Hardware"><span class="toc-text">Recommended Hardware</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-Create-a-Debian-Root-File-System"><span class="toc-text">Step 1: Create a Debian Root File System</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-the-Rootfs"><span class="toc-text">Configure the Rootfs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-I-x2F-O-Drivers-to-Rootfs"><span class="toc-text">Add I&#x2F;O Drivers to Rootfs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ethernet-amp-CAN-Bus"><span class="toc-text">- Ethernet &amp; CAN Bus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Audio"><span class="toc-text">- Audio</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WiFi-x2F-Bluetooth"><span class="toc-text">- WiFi&#x2F;Bluetooth</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IMX219-camera"><span class="toc-text">- IMX219 camera</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enable-I-x2F-O-Interfaces"><span class="toc-text">- Enable I&#x2F;O Interfaces</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adding-MRAA"><span class="toc-text">- Adding MRAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adding-libMALI"><span class="toc-text">- Adding libMALI</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-Generating-Buildroot-SD-Card-Image"><span class="toc-text">Step 2: Generating Buildroot SD Card Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card"><span class="toc-text">Step 3: Flashing Buildroot Image to SD Card</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-Replacing-buildroot-rootfs-with-Debian-rootfs"><span class="toc-text">Step 4: Replacing buildroot rootfs with Debian rootfs</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
