@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html</loc>
+    
+    <lastmod>2022-08-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
+    
+    <lastmod>2022-08-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
     
     <lastmod>2022-08-16</lastmod>
@@ -45,13 +59,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildUbuntu.html</loc>
-    
-    <lastmod>2022-08-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html</loc>
     
     <lastmod>2022-08-16</lastmod>
     
@@ -352,13 +359,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
     
     <lastmod>2022-06-24</lastmod>
@@ -366,14 +366,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CanderaCGIStudioDemo.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/BootToQtDemo.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/BootToQtDemo.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CanderaCGIStudioDemo.html</loc>
     
     <lastmod>2022-06-24</lastmod>
     
@@ -478,14 +478,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/eIQMLsoftwareDemo.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/Introduction.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/Introduction.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/examples&howto/eIQMLsoftwareDemo.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     
@@ -870,14 +870,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/index.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
     
