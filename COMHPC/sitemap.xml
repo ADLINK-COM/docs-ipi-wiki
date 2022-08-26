@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_UpdatingMMC.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_UpdatingMMC.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -310,6 +310,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/HowToBuildYocto.html</loc>
     
     <lastmod>2022-08-15</lastmod>
@@ -324,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
+    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -338,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
+    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -346,13 +353,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/EDK2%20problem.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
