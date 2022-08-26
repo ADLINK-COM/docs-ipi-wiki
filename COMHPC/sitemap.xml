@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/overview_components&interfaces.html</loc>
+    <loc>https://docs.ipi.wiki/ava/overview_componentsInterfaces.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -100,6 +100,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
     
     <lastmod>2022-08-15</lastmod>
@@ -108,13 +115,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/firmware_UpdatingMMC.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseOpenOCD.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseOpenOCD.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -310,13 +310,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/HowToBuildYocto.html</loc>
     
     <lastmod>2022-08-15</lastmod>
@@ -325,6 +318,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/HowToBuildYoctoEWAOL.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
+    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
+    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
