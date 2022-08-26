@@ -93,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_Flashing-EDKII-SCP.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_UpdatingMMC.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -121,6 +107,20 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_UpdatingMMC.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
     
     <lastmod>2022-08-15</lastmod>
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_EnablingBMC-LAN.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_A2Versions.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_A2Versions.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_EnablingBMC-LAN.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -226,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
     
     <lastmod>2022-08-15</lastmod>
@@ -240,7 +233,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -248,6 +241,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/HowToReplaceBMCROM.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToBuildEDK2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowDualSPIROMWorks.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowDualSPIROMWorks.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToBuildEDK2.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -317,13 +317,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/HowToBuildYoctoEWAOL.html</loc>
     
     <lastmod>2022-08-15</lastmod>
@@ -331,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToChangeBMCIPaddress.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -339,6 +332,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/GettingStarted_WhatsInTheBox.html</loc>
+    
+    <lastmod>2022-08-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
