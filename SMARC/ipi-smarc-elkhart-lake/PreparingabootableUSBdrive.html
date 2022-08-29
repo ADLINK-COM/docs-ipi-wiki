@@ -111,7 +111,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#PreparingabootableUSBdrive.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,10 +139,10 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Preparing-a-bootable-USB-drive" class="article-heading"><a href="#Preparing-a-bootable-USB-drive" class="headerlink" title="Preparing a bootable USB drive"></a>Preparing a bootable USB drive<a class="article-anchor" href="#Preparing-a-bootable-USB-drive" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="Preparing-a-bootable-USB-drive" class="article-heading"><a href="#Preparing-a-bootable-USB-drive" class="headerlink" title="Preparing a bootable USB drive"></a>Preparing a bootable USB drive<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Preparing-a-bootable-USB-drive'}, '*');" class="article-anchor" href="#Preparing-a-bootable-USB-drive" aria-hidden="true"></a></h1><div class="bullets">
 
 <p>This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium</p>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li>Download the prebuilt bootable image to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/ipi-smarc-elkhart-lake-downloads">click here</a>.<ul>
 <li>Ubuntu <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/focal-desktop-amd64+intel-iot.iso">click here</a></li>
 <li>Windows <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">click here</a></li>
@@ -154,7 +154,7 @@
 <li>In a Linux environment use <code>dd</code> command.</li>
 </ul>
 <p><strong>Note:</strong> All files will be erased on the USB drive. The size should be preferable 16 GB or larger.</p>
-<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><h4 id="Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian" class="article-heading"><a href="#Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian" class="headerlink" title="Rufus as Flashing tool (Ubuntu&#x2F;Windows&#x2F;Debian)"></a>Rufus as Flashing tool (Ubuntu&#x2F;Windows&#x2F;Debian)<a class="article-anchor" href="#Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian" aria-hidden="true"></a></h4><ol>
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><h4 id="Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian" class="article-heading"><a href="#Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian" class="headerlink" title="Rufus as Flashing tool (Ubuntu&#x2F;Windows&#x2F;Debian)"></a>Rufus as Flashing tool (Ubuntu&#x2F;Windows&#x2F;Debian)<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian'}, '*');" class="article-anchor" href="#Rufus-as-Flashing-tool-Ubuntu-x2F-Windows-x2F-Debian" aria-hidden="true"></a></h4><ol>
 <li><p>Insert an empty USB drive into the your development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.</p>
 </li>
 <li><p>Press the <strong>SELECT</strong> button and browse to the .iso file previously downloaded to your working directory on the development host. Then click <strong>START</strong> and wait for the process to be finished.</p>
@@ -162,7 +162,7 @@
 </ol>
 <img src="Preparingabootableusbdrive.assets/rufus.png" alt="rufus_2" style="margin-left: auto; margin-right: auto; display: block;">
 
-<h4 id="Win32DiskImager-as-Flashing-tool-Yocto" class="article-heading"><a href="#Win32DiskImager-as-Flashing-tool-Yocto" class="headerlink" title="Win32DiskImager as Flashing tool (Yocto)"></a>Win32DiskImager as Flashing tool (Yocto)<a class="article-anchor" href="#Win32DiskImager-as-Flashing-tool-Yocto" aria-hidden="true"></a></h4><p>Insert an empty USB drive into the development host and execute the Win32DiskImager tool.</p>
+<h4 id="Win32DiskImager-as-Flashing-tool-Yocto" class="article-heading"><a href="#Win32DiskImager-as-Flashing-tool-Yocto" class="headerlink" title="Win32DiskImager as Flashing tool (Yocto)"></a>Win32DiskImager as Flashing tool (Yocto)<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Win32DiskImager-as-Flashing-tool-Yocto'}, '*');" class="article-anchor" href="#Win32DiskImager-as-Flashing-tool-Yocto" aria-hidden="true"></a></h4><p>Insert an empty USB drive into the development host and execute the Win32DiskImager tool.</p>
 <ul>
 <li><p>The USB device is automatically detected.</p>
 </li>
@@ -173,7 +173,7 @@
 </ul>
 <img src="Preparingabootableusbdrive.assets/win32.png" alt="rufus_2" style="margin-left: auto; margin-right: auto; display: block;">
 
-<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
 <li><p>Download the prebuilt bootable OS to the working directory on your development host. Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
 <p><strong>Warning</strong>: Make sure you first properly identify the USB device, for example (&#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development hosts OS.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>

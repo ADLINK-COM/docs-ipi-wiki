@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-08-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-08-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-08-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-08-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/CarrierIntroduction.html</loc>
     
     <lastmod>2022-08-25</lastmod>
@@ -24,27 +52,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-elkhart-lake/UnBoxing.html</loc>
-    
-    <lastmod>2022-08-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-08-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-08-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ModuleIntroduction.html</loc>
     
     <lastmod>2022-08-25</lastmod>
     
@@ -296,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SupportedOSList.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/U-boot.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/U-boot.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SupportedOSList.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -359,14 +366,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUboot.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -387,14 +394,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/AndroidImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/BlockDiagram.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/BlockDiagram.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/AndroidImages.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -465,13 +472,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/UbuntuImages.html</loc>
-    
-    <lastmod>2022-08-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/ModuleIntroduction.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -597,14 +597,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -646,14 +646,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -786,13 +786,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CanderaCGIStudioDemo.html</loc>
-    
-    <lastmod>2022-08-17</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/BootToQtDemo.html</loc>
     
     <lastmod>2022-08-17</lastmod>
@@ -801,6 +794,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CarrierModuleandeIQMachinelearningsoftware.html</loc>
+    
+    <lastmod>2022-08-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CanderaCGIStudioDemo.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
