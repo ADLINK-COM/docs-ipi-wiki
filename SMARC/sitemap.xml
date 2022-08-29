@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUboot.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUboot.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildDebian.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -387,14 +387,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/BlockDiagram.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/AndroidImages.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/AndroidImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/BlockDiagram.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -786,14 +786,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/BootToQtDemo.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CanderaCGIStudioDemo.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CanderaCGIStudioDemo.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/BootToQtDemo.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -935,7 +935,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

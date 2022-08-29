@@ -14,8 +14,10 @@
   
     
   
+
+  <!--
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-   
+
   <style>
     .pace .pace-progress {
        background: #1E92FB;
@@ -28,6 +30,8 @@
        border-top-color: #1E92FB;
        border-left-color: #1E92FB;
     }
+  -->
+    
   </style>
   <!-- Icon -->
   <link rel="Shortcut Icon" href="/SMARC/images/favicon.ico">
@@ -58,7 +62,7 @@
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/SMARC/css/font/fontawesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
@@ -115,7 +119,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildDebian.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildDebian.html#HowToBuildDebian.html'}, '*');}</script>
 
 	</div>
 	
@@ -143,10 +147,10 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h2 id="How-to-Build-Debian" class="article-heading"><a href="#How-to-Build-Debian" class="headerlink" title="How to Build Debian"></a>How to Build Debian<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#How-to-Build-Debian'}, '*');" class="article-anchor" href="#How-to-Build-Debian" aria-hidden="true"></a></h2><div class="bullets">
+                <h2 id="How-to-Build-Debian" class="article-heading"><a href="#How-to-Build-Debian" class="headerlink" title="How to Build Debian"></a>How to Build Debian<a class="article-anchor" href="#How-to-Build-Debian" aria-hidden="true"></a></h2><div class="bullets">
 
 <p>This procedure describes how to create a Debian SD Card image for <strong>LEC-PX30 with Industrial I-Pi SMARC</strong>. The version of Debian used is 10 (buster).</p>
-<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Recommended-Hardware'}, '*');" class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Debian image creation, a Linux development host with the following configuration is recommended. A development host with adequate processing power and disk space is ideal as the packages can run several GBs in size and the build can take a lot of time.</p>
+<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Debian image creation, a Linux development host with the following configuration is recommended. A development host with adequate processing power and disk space is ideal as the packages can run several GBs in size and the build can take a lot of time.</p>
 <ul>
 <li>Intel Core-i7 processor (&gt;&#x3D; 4 cores)</li>
 <li>8 GB RAM</li>
@@ -165,7 +169,7 @@
 
 
 
-<h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Getting-Started'}, '*');" class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The procedure below replaces the buildroot rootfs with the Debian one.</p>
+<h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The procedure below replaces the buildroot rootfs with the Debian one.</p>
 <ul>
 <li>Step 1: Create a Debian root file system.</li>
 <li>Step 2: Generate Buildroot SD Card Image.</li>
@@ -173,7 +177,7 @@
 <li>Step 4: Replace the buidroot rootfs image with Debian’s one on buildroot SD Card image.</li>
 </ul>
 <p>These steps are detailed below.</p>
-<h2 id="Step-1-Preparing-Debian-Root-File-System" class="article-heading"><a href="#Step-1-Preparing-Debian-Root-File-System" class="headerlink" title="Step 1: Preparing Debian Root File System"></a>Step 1: Preparing Debian Root File System<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-1-Preparing-Debian-Root-File-System'}, '*');" class="article-anchor" href="#Step-1-Preparing-Debian-Root-File-System" aria-hidden="true"></a></h2><ol>
+<h2 id="Step-1-Preparing-Debian-Root-File-System" class="article-heading"><a href="#Step-1-Preparing-Debian-Root-File-System" class="headerlink" title="Step 1: Preparing Debian Root File System"></a>Step 1: Preparing Debian Root File System<a class="article-anchor" href="#Step-1-Preparing-Debian-Root-File-System" aria-hidden="true"></a></h2><ol>
 <li><p>Create a new working directory and change directory into it.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/px30</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/px30</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -188,7 +192,7 @@
 <li><p>Add required apt repositories to sources.list.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;printf &#x27;deb http://deb.debian.org/debian buster main contrib non-free\ndeb-src http://deb.debian.org/debian buster main contrib non-free\n\ndeb http://deb.debian.org/debian-security buster/updates main contrib non-free\ndeb-src http://deb.debian.org/debian-security buster/updates main contrib non-free\n\ndeb http://deb.debian.org/debian buster-updates main contrib non-free\ndeb-src http://deb.debian.org/debian buster-updates main contrib non-free\n\ndeb http://deb.debian.org/debian buster-backports main contrib non-free\ndeb-src http://deb.debian.org/debian buster-backports main contrib non-free\n&#x27; &gt; rootfs/etc/apt/sources.list&quot;</span></span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="Configure-the-Rootfs" class="article-heading"><a href="#Configure-the-Rootfs" class="headerlink" title="Configure the Rootfs"></a>Configure the Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Configure-the-Rootfs'}, '*');" class="article-anchor" href="#Configure-the-Rootfs" aria-hidden="true"></a></h3><ol>
+<h3 id="Configure-the-Rootfs" class="article-heading"><a href="#Configure-the-Rootfs" class="headerlink" title="Configure the Rootfs"></a>Configure the Rootfs<a class="article-anchor" href="#Configure-the-Rootfs" aria-hidden="true"></a></h3><ol>
 <li><p>Add host name to <code>/etc/hostname</code> </p>
 <p>​    Here is an example.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bash -c <span class="string">&quot;echo &#x27;adlink&#x27; &gt; rootfs/etc/hostname&quot;</span></span></span><br></pre></td></tr></table></figure>
@@ -226,18 +230,18 @@
 <li><p>Exit from chroot</p>
  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sync</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">exit</span></span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="Add-I-x2F-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-x2F-O-Drivers-to-Rootfs" class="headerlink" title="Add I&#x2F;O Drivers to Rootfs"></a>Add I&#x2F;O Drivers to Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Add-I-x2F-O-Drivers-to-Rootfs'}, '*');" class="article-anchor" href="#Add-I-x2F-O-Drivers-to-Rootfs" aria-hidden="true"></a></h3><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="- Ethernet &amp; CAN Bus"></a>- Ethernet &amp; CAN Bus<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Ethernet-amp-CAN-Bus'}, '*');" class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
+<h3 id="Add-I-x2F-O-Drivers-to-Rootfs" class="article-heading"><a href="#Add-I-x2F-O-Drivers-to-Rootfs" class="headerlink" title="Add I&#x2F;O Drivers to Rootfs"></a>Add I&#x2F;O Drivers to Rootfs<a class="article-anchor" href="#Add-I-x2F-O-Drivers-to-Rootfs" aria-hidden="true"></a></h3><h4 id="Ethernet-amp-CAN-Bus" class="article-heading"><a href="#Ethernet-amp-CAN-Bus" class="headerlink" title="- Ethernet &amp; CAN Bus"></a>- Ethernet &amp; CAN Bus<a class="article-anchor" href="#Ethernet-amp-CAN-Bus" aria-hidden="true"></a></h4><ol>
 <li><p>Create a directory to copy the Ethernet and CAN kernel modules</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/Kernel-modules.zip">here</a> to download and copy <strong>smsc9500.ko, smscusbnet.ko and mcp25xxfd.ko kernel modules</strong> into rockchip_test folder from host PC.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp &lt;your_path&gt;/*.ko <span class="variable">$HOME</span>/px30/rootfs/home/px30/rockchip_test/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="- Audio"></a>- Audio<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Audio'}, '*');" class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
+<h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="- Audio"></a>- Audio<a class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.zip">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp asound.state <span class="variable">$HOME</span>/px30/rootfs/var/lib/alsa/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="WiFi-x2F-Bluetooth" class="article-heading"><a href="#WiFi-x2F-Bluetooth" class="headerlink" title="- WiFi&#x2F;Bluetooth"></a>- WiFi&#x2F;Bluetooth<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#WiFi-x2F-Bluetooth'}, '*');" class="article-anchor" href="#WiFi-x2F-Bluetooth" aria-hidden="true"></a></h4><ol>
+<h4 id="WiFi-x2F-Bluetooth" class="article-heading"><a href="#WiFi-x2F-Bluetooth" class="headerlink" title="- WiFi&#x2F;Bluetooth"></a>- WiFi&#x2F;Bluetooth<a class="article-anchor" href="#WiFi-x2F-Bluetooth" aria-hidden="true"></a></h4><ol>
 <li><p>Download the <code>rtl_bt.zip</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/rtl_bt.zip">here</a> and extract.</p>
 </li>
 <li><p>Copy the rtl_bt folder which has Bluetooth firmware to file system.</p>
@@ -249,10 +253,10 @@
 <li><p>Remove emulator and resolv.conf file.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm rootfs/usr/bin/qemu-aarch64-static rootfs/etc/resolv.conf</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="IMX219-camera" class="article-heading"><a href="#IMX219-camera" class="headerlink" title="- IMX219 camera"></a>- IMX219 camera<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#IMX219-camera'}, '*');" class="article-anchor" href="#IMX219-camera" aria-hidden="true"></a></h4><p>Download the imx219_camera.tar file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/imx219_camera.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
+<h4 id="IMX219-camera" class="article-heading"><a href="#IMX219-camera" class="headerlink" title="- IMX219 camera"></a>- IMX219 camera<a class="article-anchor" href="#IMX219-camera" aria-hidden="true"></a></h4><p>Download the imx219_camera.tar file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/imx219_camera.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/camera</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf imx219_camera.tar -C <span class="variable">$HOME</span>/camera/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/camera/usr/ <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/camera/etc <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm <span class="variable">$HOME</span>/px30/rootfs/lib/aarch64-linux-gnu/libm.so.6</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp <span class="variable">$HOME</span>/camera/libm.so.6 <span class="variable">$HOME</span>/px30/rootfs/lib/aarch64-linux-gnu/</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="Enable-I-x2F-O-Interfaces" class="article-heading"><a href="#Enable-I-x2F-O-Interfaces" class="headerlink" title="- Enable I&#x2F;O Interfaces"></a>- Enable I&#x2F;O Interfaces<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Enable-I-x2F-O-Interfaces'}, '*');" class="article-anchor" href="#Enable-I-x2F-O-Interfaces" aria-hidden="true"></a></h4><ol>
+<h4 id="Enable-I-x2F-O-Interfaces" class="article-heading"><a href="#Enable-I-x2F-O-Interfaces" class="headerlink" title="- Enable I&#x2F;O Interfaces"></a>- Enable I&#x2F;O Interfaces<a class="article-anchor" href="#Enable-I-x2F-O-Interfaces" aria-hidden="true"></a></h4><ol>
 <li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.zip">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder.</p>
 <p><strong>Note</strong>: It is shell script to insert modules on every reboot</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp Load.sh <span class="variable">$HOME</span>/px30/rootfs/home/adlink/rockchip_test/Load.sh</span></span><br></pre></td></tr></table></figure>
@@ -266,15 +270,15 @@
 <li><p>Give executable permissions.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x <span class="variable">$HOME</span>/px30/rootfs/etc/rc.local</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="- Adding MRAA"></a>- Adding MRAA<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Adding-MRAA'}, '*');" class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
+<h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="- Adding MRAA"></a>- Adding MRAA<a class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
 <li><p>Download the <code>adlink-mraa-master.tar</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/adlink-mraa-master.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir <span class="variable">$HOME</span>/px30/rootfs/usr/lib/pkgconfig</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf adlink-mraa-master.tar -C <span class="variable">$HOME</span>/mraa/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/bin/* <span class="variable">$HOME</span>/px30/rootfs/usr/bin/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/include/* <span class="variable">$HOME</span>/px30/rootfs/usr/include/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/lib/libmraa.so* <span class="variable">$HOME</span>/px30/rootfs/usr/lib/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/lib/pkgconfig/mraa.pc <span class="variable">$HOME</span>/px30/rootfs/usr/lib/pkgconfig/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp -r <span class="variable">$HOME</span>/mraa/usr/share/* <span class="variable">$HOME</span>/px30/rootfs/usr/share/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="Adding-libMALI" class="article-heading"><a href="#Adding-libMALI" class="headerlink" title="- Adding libMALI"></a>- Adding libMALI<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Adding-libMALI'}, '*');" class="article-anchor" href="#Adding-libMALI" aria-hidden="true"></a></h4><ol>
+<h4 id="Adding-libMALI" class="article-heading"><a href="#Adding-libMALI" class="headerlink" title="- Adding libMALI"></a>- Adding libMALI<a class="article-anchor" href="#Adding-libMALI" aria-hidden="true"></a></h4><ol>
 <li><p>Download Debian_libMALI_Integration.zip file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Debian/DebianNecessaryFiles/Debian_libMALI_Integration.zip">here</a> and extract libMALI files to rootfs:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> unzip Debian_libMALI_Integration.zip</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/Debian_libMALI_Integration</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf xserver.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf libmali.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf librga.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tar -axf glmark2-es2.tar.xz -C <span class="variable">$HOME</span>/px30/rootfs/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Step-2-Generating-Buildroot-SD-Card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-Card-Image" class="headerlink" title="Step 2: Generating Buildroot SD Card Image"></a>Step 2: <strong>Generating Buildroot SD Card Image</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-2-Generating-Buildroot-SD-Card-Image'}, '*');" class="article-anchor" href="#Step-2-Generating-Buildroot-SD-Card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200413/px30_buildroot_es2_sdk_20200413.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
+<h2 id="Step-2-Generating-Buildroot-SD-Card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-Card-Image" class="headerlink" title="Step 2: Generating Buildroot SD Card Image"></a>Step 2: <strong>Generating Buildroot SD Card Image</strong><a class="article-anchor" href="#Step-2-Generating-Buildroot-SD-Card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/SDK/v1.0.8-20200413/px30_buildroot_es2_sdk_20200413.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
 <p><strong>Note</strong>: Use <code>iPIsmarc-es2</code> branch and root for creating custom images for SD card. Use <code>git branch</code> command under <strong>px30_buildroot&#x2F;kernel</strong> to check the branch version.</p>
 <ol>
 <li><p>Change directory to px30_buildroot.</p>
@@ -290,7 +294,7 @@
 
 
 <p>The image will be generated as <strong>“update.img”</strong> under rockdev folder and will be used in SD Card.</p>
-<h2 id="Step-3-Flashing-Buildroot-Image-to-SD-Card" class="article-heading"><a href="#Step-3-Flashing-Buildroot-Image-to-SD-Card" class="headerlink" title="Step 3: Flashing Buildroot Image to SD Card"></a>Step 3: <strong>Flashing Buildroot Image to SD Card</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-3-Flashing-Buildroot-Image-to-SD-Card'}, '*');" class="article-anchor" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card" aria-hidden="true"></a></h2><p>Flash image (generated in step 2) to the prepared SD card by using <strong>SD Firmware Tool</strong> (this tool is executed in Windows environment).</p>
+<h2 id="Step-3-Flashing-Buildroot-Image-to-SD-Card" class="article-heading"><a href="#Step-3-Flashing-Buildroot-Image-to-SD-Card" class="headerlink" title="Step 3: Flashing Buildroot Image to SD Card"></a>Step 3: <strong>Flashing Buildroot Image to SD Card</strong><a class="article-anchor" href="#Step-3-Flashing-Buildroot-Image-to-SD-Card" aria-hidden="true"></a></h2><p>Flash image (generated in step 2) to the prepared SD card by using <strong>SD Firmware Tool</strong> (this tool is executed in Windows environment).</p>
 <p><strong>Note:</strong> Before going to flash image to SD card, format it. The size should be at least 8 Gb.</p>
 <ul>
 <li><p>Download the Rufus tool from (<a target="_blank" rel="noopener external nofollow noreferrer" href="https://filehippo.com/download_rufus/">https://filehippo.com/download_rufus/</a>)</p>
@@ -308,7 +312,7 @@
 
 
 
-<h2 id="Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" class="article-heading"><a href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" class="headerlink" title="Step 4: Replacing Buildroot Rootfs with Debian Rootfs"></a>Step 4: Replacing Buildroot Rootfs with Debian Rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildDebian.html#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs'}, '*');" class="article-anchor" href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" aria-hidden="true"></a></h2><p>After finishing step 3, get your SD card to connect to the development Linux host PC .</p>
+<h2 id="Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" class="article-heading"><a href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" class="headerlink" title="Step 4: Replacing Buildroot Rootfs with Debian Rootfs"></a>Step 4: Replacing Buildroot Rootfs with Debian Rootfs<a class="article-anchor" href="#Step-4-Replacing-Buildroot-Rootfs-with-Debian-Rootfs" aria-hidden="true"></a></h2><p>After finishing step 3, get your SD card to connect to the development Linux host PC .</p>
 <ol>
 <li><p>Unmount the mounted partitions</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo umount /dev/sdc*</span></span><br></pre></td></tr></table></figure>
@@ -475,7 +479,10 @@
 <!-- endbuild -->
 
 <!-- Algolia -->
+<!--
 
+-->
 
 </body>
 </html>
+ 
