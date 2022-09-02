@@ -66,12 +66,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="eIQ ML software demo on NXP i.MX 8M Plus development kitThis demo demonstrates the use of eIQ, a machine learning software development environment from NXP that uses ML algorithms. The eIQ software">
+  <meta name="description" content="# eIQ ML software demo on NXP i.MX 8M Plus development kit  This demo demonstrates the use of eIQ, a machine learning software development environment from NXP that uses ML algorithms. The eIQ softw">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/eIQMLsoftwareDemo.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="eIQ ML software demo on NXP i.MX 8M Plus development kitThis demo demonstrates the use of eIQ, a machine learning software development environment from NXP that uses ML algorithms. The eIQ software">
+<meta property="og:description" content="# eIQ ML software demo on NXP i.MX 8M Plus development kit  This demo demonstrates the use of eIQ, a machine learning software development environment from NXP that uses ML algorithms. The eIQ softw">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/eIQMLsoftwareDemo/fig1copy.PNG">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/eIQMLsoftwareDemo/Screen%20Shot%202021-05-10%20at%209.24.25%20AM.png">
@@ -148,7 +148,10 @@
               <div class="article-content bullets" itemprop="articleBody">
                 <div class="bullets">
 
-<h1 id="eIQ-ML-software-demo-on-NXP-i-MX-8M-Plus-development-kit" class="article-heading"><a href="#eIQ-ML-software-demo-on-NXP-i-MX-8M-Plus-development-kit" class="headerlink" title="eIQ ML software demo on NXP i.MX 8M Plus development kit"></a>eIQ ML software demo on NXP i.MX 8M Plus development kit<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#eIQ-ML-software-demo-on-NXP-i-MX-8M-Plus-development-kit'}, '*');" class="article-anchor" href="#eIQ-ML-software-demo-on-NXP-i-MX-8M-Plus-development-kit" aria-hidden="true"></a></h1><p>This demo demonstrates the use of eIQ, a machine learning software development environment from NXP that uses ML algorithms. The eIQ software is integrated into our I-Pi SMARC IMX8M Plus with yocto based linux image for interesting AI application.</p>
+# eIQ ML software demo on NXP i.MX 8M Plus development kit
+
+This demo demonstrates the use of eIQ, a machine learning software development environment from NXP that uses ML algorithms. The eIQ software is integrated into our I-Pi SMARC IMX8M Plus with yocto based linux image for interesting AI application.
+
 <div class="contentiframe">
 
 <iframe class="responsive-iframe" width="640" height="480" src="https://www.youtube.com/embed/0TG4vyJSRY4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -164,45 +167,16 @@
 <h3 id="Softwares-Requirement" class="article-heading"><a href="#Softwares-Requirement" class="headerlink" title="Softwares Requirement"></a>Softwares Requirement<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#Softwares-Requirement'}, '*');" class="article-anchor" href="#Softwares-Requirement" aria-hidden="true"></a></h3><ul>
 <li>Yocto flashed in eMMC</li>
 </ul>
-<h3 id="What-you-will-see-AI-demos" class="article-heading"><a href="#What-you-will-see-AI-demos" class="headerlink" title="What you will see ( AI demos)"></a>What you will see ( AI demos)<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#What-you-will-see-AI-demos'}, '*');" class="article-anchor" href="#What-you-will-see-AI-demos" aria-hidden="true"></a></h3><img src="eIQMLsoftwareDemo/fig1copy.PNG">
-
-
-
+<h3 id="What-you-will-see-AI-demos" class="article-heading"><a href="#What-you-will-see-AI-demos" class="headerlink" title="What you will see ( AI demos)"></a>What you will see ( AI demos)<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#What-you-will-see-AI-demos'}, '*');" class="article-anchor" href="#What-you-will-see-AI-demos" aria-hidden="true"></a></h3><p><img src="eIQMLsoftwareDemo/fig1copy.PNG"></p>
 <h3 id="Object-Detection" class="article-heading"><a href="#Object-Detection" class="headerlink" title="Object Detection"></a>Object Detection<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#Object-Detection'}, '*');" class="article-anchor" href="#Object-Detection" aria-hidden="true"></a></h3><p>Object detection is a computer vision and image processing technique that identifies objects such as people, buildings, or cars in images or videos. The object detection draws bounding boxes around these detected objects, which allows us to see where the identify things are in a given scene. Nowadays, Object detection is a handy application in video surveillance and image retrieval systems.</p>
 <center>
 
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Algorithm</th>
-<th>Inference Enigine</th>
-<th>NPU Inferenceing (ms)</th>
-<th>CPU Inferencing (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Object detection</td>
-<td>Single Shot detection (SSD)</td>
-<td>Tflite 2.3.0</td>
-<td>10.25</td>
-<td>41</td>
-</tr>
-<tr>
-<td>Object detection</td>
-<td>Deep Neural Network (DNN)</td>
-<td>OpenCV 4.2.0</td>
-<td>56</td>
-<td>123.6</td>
-</tr>
-<tr>
-<td>Object detection</td>
-<td>YOLO v3</td>
-<td>Tflite 2.3.0</td>
-<td>102</td>
-<td>225</td>
-</tr>
-</tbody></table>
+| Model       | Algorithm      | Inference Enigine | NPU Inferenceing (ms) | CPU Inferencing (ms)|
+| --------------- |----------------------- |------------------------- |------------------------ |-------------------------- |
+| Object detection        | Single Shot detection (SSD)  | Tflite 2.3.0 | 10.25 |41 |
+| Object detection | Deep Neural Network (DNN) | OpenCV 4.2.0      | 56 | 123.6 |
+| Object detection | YOLO v3 | Tflite 2.3.0 | 102 | 225 |
+
 </center>
 
 <center>
@@ -214,24 +188,10 @@
 <h3 id="Facial-Expression-Dectection" class="article-heading"><a href="#Facial-Expression-Dectection" class="headerlink" title="Facial Expression Dectection"></a>Facial Expression Dectection<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#Facial-Expression-Dectection'}, '*');" class="article-anchor" href="#Facial-Expression-Dectection" aria-hidden="true"></a></h3><p>Facial emotion recognition is the process of detecting human emotions from facial expressions. It is difficult for us humans to recognize emotions in certain situations, and now,  facial expression detection applications have been developed to help people with emotion recognition. This technology is becoming more accurate and will eventually be able to read emotions as well as our brains do or even better. </p>
 <center>
 
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Algorithm</th>
-<th>Inference Enigine</th>
-<th>NPU Inferenceing (ms)</th>
-<th>CPU Inferencing (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Facial Expression detection</td>
-<td>MobileNet</td>
-<td>Tflite 2.3.0</td>
-<td>35</td>
-<td>98</td>
-</tr>
-</tbody></table>
+| Model                       | Algorithm | Inference Enigine | NPU Inferenceing (ms) | CPU Inferencing (ms) |
+| --------------------------- | --------- | ----------------- | --------------------- | -------------------- |
+| Facial Expression detection | MobileNet | Tflite 2.3.0      | 35                    | 98                   |
+
 </center>
 
 <center>
@@ -250,24 +210,10 @@
 <h3 id="Image-Classification" class="article-heading"><a href="#Image-Classification" class="headerlink" title="Image Classification"></a>Image Classification<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#Image-Classification'}, '*');" class="article-anchor" href="#Image-Classification" aria-hidden="true"></a></h3><p>Image classification refers to identifying objects and classifying them into categories based on the basic training set of data containing observation with the known class.</p>
 <center>
 
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Algorithm</th>
-<th>Inference Enigine</th>
-<th>NPU Inferenceing (ms)</th>
-<th>CPU Inferencing (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Image Classification</td>
-<td>MobileNet</td>
-<td>Tflite 2.3.0</td>
-<td>5</td>
-<td>36</td>
-</tr>
-</tbody></table>
+| Model                | Algorithm | Inference Enigine | NPU Inferenceing (ms) | CPU Inferencing (ms) |
+| -------------------- | --------- | ----------------- | --------------------- | -------------------- |
+| Image Classification | MobileNet | Tflite 2.3.0      | 5                     | 36                   |
+
 </center>
 
 <center>
@@ -279,24 +225,10 @@
 <h3 id="Fire-amp-No-Fire-Classification" class="article-heading"><a href="#Fire-amp-No-Fire-Classification" class="headerlink" title="Fire &amp; No Fire Classification"></a>Fire &amp; No Fire Classification<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#Fire-amp-No-Fire-Classification'}, '*');" class="article-anchor" href="#Fire-amp-No-Fire-Classification" aria-hidden="true"></a></h3><p>Fire classification and detection are designed to detect fires in Images or videos. This application has recently played a crucial role in reducing fire losses by alarming users early through early fire detection. These detections ( Fire and no Fire detection) are conducted with the use of complex algorithms.</p>
 <center>
 
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Algorithm</th>
-<th>Inference Enigine</th>
-<th>NPU Inferenceing (ms)</th>
-<th>CPU Inferencing (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Fire &amp; No Fire Classification</td>
-<td>Convolution Neural Network (CNN)</td>
-<td>ArmNN</td>
-<td>7.6</td>
-<td>42.8</td>
-</tr>
-</tbody></table>
+| Model                         | Algorithm                        | Inference Enigine | NPU Inferenceing (ms) | CPU Inferencing (ms) |
+| ----------------------------- | -------------------------------- | ----------------- | --------------------- | -------------------- |
+| Fire & No Fire Classification | Convolution Neural Network (CNN) | ArmNN             | 7.6                   | 42.8                 |
+
 </center>
 
 <center>
@@ -314,24 +246,10 @@
 <h3 id="OpenPose-Detection" class="article-heading"><a href="#OpenPose-Detection" class="headerlink" title="OpenPose Detection"></a>OpenPose Detection<a onclick="parent.postMessage( {msg: '?page=eIQMLsoftwareDemo.html#OpenPose-Detection'}, '*');" class="article-anchor" href="#OpenPose-Detection" aria-hidden="true"></a></h3><p>The pose is a computer vision task that identifies a person’s pose in an image or video. We can also think of pose estimation as the problem of determining the position and orientation of a camera relative to a given person. This is typically done by identifying, locating, and tracking the number of key points on a given object or person. For things, this could be corners or other significant features. And for humans, these key points represent major joints like an elbow, hand, neck, or knee.</p>
 <center>
 
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Algorithm</th>
-<th>Inference Enigine</th>
-<th>NPU Inferenceing (ms)</th>
-<th>CPU Inferencing (ms)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>OpenPose detection</td>
-<td>MobileNet</td>
-<td>Tflite 2.3.0</td>
-<td>48</td>
-<td>118</td>
-</tr>
-</tbody></table>
+| Model              | Algorithm | Inference Enigine | NPU Inferenceing (ms) | CPU Inferencing (ms) |
+| ------------------ | --------- | ----------------- | --------------------- | -------------------- |
+| OpenPose detection | MobileNet | Tflite 2.3.0      | 48                    | 118                  |
+
 </center>
 
 <center>
@@ -345,6 +263,7 @@
 
 
 
+<p>&lt;/div&gt;</p>
 </center></div>
               </div>
               <footer class="article-footer">
@@ -358,7 +277,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#eIQ-ML-software-demo-on-NXP-i-MX-8M-Plus-development-kit"><span class="toc-text">eIQ ML software demo on NXP i.MX 8M Plus development kit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware-Requirement"><span class="toc-text">Hardware Requirement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Softwares-Requirement"><span class="toc-text">Softwares Requirement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-AI-demos"><span class="toc-text">What you will see ( AI demos)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-Detection"><span class="toc-text">Object Detection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Facial-Expression-Dectection"><span class="toc-text">Facial Expression Dectection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-Classification"><span class="toc-text">Image Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fire-amp-No-Fire-Classification"><span class="toc-text">Fire &amp; No Fire Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenPose-Detection"><span class="toc-text">OpenPose Detection</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware-Requirement"><span class="toc-text">Hardware Requirement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Softwares-Requirement"><span class="toc-text">Softwares Requirement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-AI-demos"><span class="toc-text">What you will see ( AI demos)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-Detection"><span class="toc-text">Object Detection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Facial-Expression-Dectection"><span class="toc-text">Facial Expression Dectection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Image-Classification"><span class="toc-text">Image Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fire-amp-No-Fire-Classification"><span class="toc-text">Fire &amp; No Fire Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenPose-Detection"><span class="toc-text">OpenPose Detection</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
