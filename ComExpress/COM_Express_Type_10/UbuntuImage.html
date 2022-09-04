@@ -94,12 +94,12 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/ComExpress/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Installing Ubuntu Focal Fossa 20.04.4 LTS (with Intel Elkhart Lake)                    The following procedures will walk you through the steps for installing Ubuntu Desktop on your target dev">
+  <meta name="description" content="Installing Ubuntu Focal Fossa 20.04.4 LTS (with Intel Elkhart Lake)                 The following procedures will walk you through the steps for installing Ubuntu Desktop on your target device">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/COM_Express_Type_10/UbuntuImage.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Installing Ubuntu Focal Fossa 20.04.4 LTS (with Intel Elkhart Lake)                    The following procedures will walk you through the steps for installing Ubuntu Desktop on your target dev">
+<meta property="og:description" content="Installing Ubuntu Focal Fossa 20.04.4 LTS (with Intel Elkhart Lake)                 The following procedures will walk you through the steps for installing Ubuntu Desktop on your target device">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/COM_Express_Type_10/UbuntuImage.assets/ubuntu_logo_hex.png">
 <meta property="og:image" content="https://docs.ipi.wiki/COM_Express_Type_10/UbuntuImage.assets/UbuntuImage.png">
@@ -177,42 +177,46 @@ $('button').click(function(){
     <img src="UbuntuImage.assets\ubuntu_logo_hex.png" alt="ubuntu_logo_hex">
   </div>
 </div>
-
-
 <div class="bullets">
-
 <p>The following procedures will walk you through the steps for installing Ubuntu Desktop on your target device.</p>
 <ul>
 <li>Using a Windows host, please refer to <a href="#Windows-Host">Windows Host Users</a></li>
 <li>Using a Linux host, please refer to <a href="#Linux-Host">Linux Host Users</a></li>
 </ul>
-<p><br></p>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ol>
+<br>
+<h2 id="Windows-Host" class="article-heading">Windows Host<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2>
+<ol>
 <li>To start, download the Ubuntu image from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/">here</a> (make sure to select the correct one: <strong><em>focal-desktop-amd64+intel-iot.iso</em></strong>).</li>
 </ol>
-<p><img src="UbuntuImage.assets/UbuntuImage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="UbuntuImage.assets/UbuntuImage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="2">
 <li>Before installing Ubuntu Desktop, you need to first write your downloaded ISO to a USB drive to make it into an installation medium. (You can use <strong>rufus</strong> to do so, click <a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/PreparingabootableUSBdrive.html">here</a> for details instructions.)</li>
 </ol>
-<p><br></p>
-<h3 id="Booting-from-USB-flash-drive" class="article-heading"><a href="#Booting-from-USB-flash-drive" class="headerlink" title="Booting from USB flash drive"></a>Booting from USB flash drive<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Booting-from-USB-flash-drive'}, '*');" class="article-anchor" href="#Booting-from-USB-flash-drive" aria-hidden="true"></a></h3><ol>
-<li><p>Insert the USB flash drive into your target device and boot or restart the device. It should recognize the installation medium automatically. If not, try holding <strong>F10</strong> during startup and selecting the USB drive from the system-specific boot menu. (You may also refer to <a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/biossettings.html">here</a> for details instructions.)</p>
+<br>
+<h3 id="Booting-from-USB-flash-drive" class="article-heading">Booting from USB flash drive<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Booting-from-USB-flash-drive'}, '*');" class="article-anchor" href="#Booting-from-USB-flash-drive" aria-hidden="true"></a></h3>
+<ol start="3">
+<li>
+<p>Insert the USB flash drive into your target device and boot or restart the device. It should recognize the installation medium automatically. If not, try holding <strong>F10</strong> during startup and selecting the USB drive from the system-specific boot menu. (You may also refer to <a href="https://docs.ipi.wiki/SMARC/ipi-smarc-elkhart-lake/biossettings.html">here</a> for details instructions.)</p>
 </li>
-<li><p>You should now see the Ubuntu welcome screen. Select <strong>Install Ubuntu</strong> and you’ll be prompted to choose the required settings to process the installation.</p>
+<li>
+<p>You should now see the Ubuntu welcome screen. Select <strong>Install Ubuntu</strong> and you’ll be prompted to choose the required settings to process the installation.</p>
 </li>
 </ol>
-<p><img src="UbuntuImage.assets/pasted%20image%200.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<p><img src="UbuntuImage.assets/pasted%20image%200%20(1).png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<p><br></p>
-<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ol>
-<li><p>Download the Ubuntu 20.04 file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/">here</a> (make sure to select the correct one: <strong><em>focal-desktop-amd64+intel-iot.iso</em></strong>). Once download, copy the prebuilt bootable Ubuntu file to the working directory of your development host.</p>
+<img src="UbuntuImage.assets/pasted%20image%200.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<img src="UbuntuImage.assets/pasted%20image%200%20(1).png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<br>
+<h2 id="Linux-Host" class="article-heading">Linux Host<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2>
+<ol>
+<li>
+<p>Download the Ubuntu 20.04 file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cdimage.ubuntu.com/focal/daily-live/current/">here</a> (make sure to select the correct one: <strong><em>focal-desktop-amd64+intel-iot.iso</em></strong>). Once download, copy the prebuilt bootable Ubuntu file to the working directory of your development host.</p>
 </li>
-<li><p>Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
+<li>
+<p>Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
 <p><strong>Warning</strong>: Make sure to identify  and use the proper USB drive (/dev/sdb or /dev/sdc), such as by using “gparted.” Data loss may occur if you write to the wrong device, and in worst case scenario you may kill your development host’s OS</p>
 </li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>After dd has completed, enter the following command:</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>

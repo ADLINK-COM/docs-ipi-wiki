@@ -172,62 +172,68 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Installing-Windows-10-with-Intel-Elkhart-Lake" class="article-heading"><a href="#Installing-Windows-10-with-Intel-Elkhart-Lake" class="headerlink" title="Installing Windows 10 (with Intel Elkhart Lake)"></a>Installing Windows 10 (with Intel Elkhart Lake)<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Installing-Windows-10-with-Intel-Elkhart-Lake'}, '*');" class="article-anchor" href="#Installing-Windows-10-with-Intel-Elkhart-Lake" aria-hidden="true"></a></h1><div class="bullets">
-
+                <h1 class="article-heading">Installing Windows 10 (with Intel Elkhart Lake)<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#undefined'}, '*');" class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
+<div class="bullets">
 <p>The following procedures will walk you through the steps for installing Windows 10 on your target device.</p>
 <ul>
 <li>Using a Windows host, please refer to <a href="#Windows-Host">Windows Host Users</a></li>
 <li>Using a Linux host, please refer to <a href="#Linux-Host">Linux Host Users</a></li>
 </ul>
-<p><br></p>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ol>
+<br>
+<h2 id="Windows-Host" class="article-heading">Windows Host<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2>
+<ol>
 <li>Before you start, please download the Windows 10 media creation tool from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">here</a>.</li>
 </ol>
-<p><img src="WindowsImage.assets/ImageDownloadPage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
-<li><p>Once downloaded, run <em>media creation tool.exe</em> on your development host system.</p>
+<img src="WindowsImage.assets/ImageDownloadPage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="2">
+<li>
+<p>Once downloaded, run <em>media creation tool.exe</em> on your development host system.</p>
 </li>
-<li><p>Read and <strong>Accept</strong> Windows’ terms and conditions.</p>
+<li>
+<p>Read and <strong>Accept</strong> Windows’ terms and conditions.</p>
 </li>
 </ol>
-<p><img src="WindowsImage.assets/LicenceTerms.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="WindowsImage.assets/LicenceTerms.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="4">
 <li>Select <strong>Create installation media</strong>.</li>
 </ol>
-<p><img src="WindowsImage.assets/Windows10Setup.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="WindowsImage.assets/Windows10Setup.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="5">
 <li>Select the desired <em>Language</em>, <em>Edition</em>, and <em>Architecture</em>.</li>
 </ol>
-<p><img src="WindowsImage.assets/SelectArchitecture.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="WindowsImage.assets/SelectArchitecture.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="6">
 <li>Select <strong>USB flash drive</strong>.</li>
 </ol>
-<p><img src="WindowsImage.assets/ChooseMedia.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="WindowsImage.assets/ChooseMedia.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="6">
 <li>Select your USB drive.</li>
 </ol>
-<p><img src="WindowsImage.assets/SelectUSBFlashDrive.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="WindowsImage.assets/SelectUSBFlashDrive.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="7">
 <li>Once selected, it shall start downloading Windows 10 onto your USB drive. This may take some time depending on your system and network conditions.</li>
 </ol>
-<p><img src="WindowsImage.assets/DownloadingImage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;"></p>
-<ol>
+<img src="WindowsImage.assets/DownloadingImage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
+<ol start="8">
 <li>After the download is finished, you can start flashing it onto your target device by referring to <strong>Flashing via BIOS</strong>.</li>
 </ol>
-<p><br></p>
-<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><ol>
-<li><p>Download the Windows 10 ISO file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">here</a>. Once downloaded, copy the prebuilt bootable Windows 10 ISO file to the working directory of your development host.</p>
+<br>
+<h2 id="Linux-Host" class="article-heading">Linux Host<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2>
+<ol>
+<li>
+<p>Download the Windows 10 ISO file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">here</a>. Once downloaded, copy the prebuilt bootable Windows 10 ISO file to the working directory of your development host.</p>
 </li>
-<li><p>Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
+<li>
+<p>Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
 <p><strong>Warning</strong>: Make sure to identify  and use the proper USB drive (/dev/sdb or /dev/sdc), such as by using “gparted.” Data loss may occur if you write to the wrong device, and in worst case scenario you may kill your development host’s OS</p>
 </li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>After dd has completed, enter the following command:</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li>After dd has completed, enter the following command to finish:</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
@@ -245,7 +251,7 @@ $('button').click(function(){
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Installing-Windows-10-with-Intel-Elkhart-Lake"><span class="toc-text">Installing Windows 10 (with Intel Elkhart Lake)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Installing Windows 10 (with Intel Elkhart Lake)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
