@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/troubleshooting_DIMMs.html</loc>
+    
+    <lastmod>2022-09-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-09-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/ArmSystemReadySR_OSsupport.html</loc>
     
     <lastmod>2022-08-26</lastmod>
@@ -37,21 +51,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/index.html</loc>
-    
-    <lastmod>2022-08-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/troubleshooting_DIMMs.html</loc>
     
     <lastmod>2022-08-15</lastmod>
     
@@ -396,7 +396,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-08-26</lastmod>
+    <lastmod>2022-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
