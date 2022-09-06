@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseDimms.html</loc>
+    
+    <lastmod>2022-09-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/troubleshootingDIMMs.html</loc>
     
     <lastmod>2022-09-06</lastmod>
@@ -79,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_A2Versions.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_A2Versions.html</loc>
+    <loc>https://docs.ipi.wiki/ava/firmware_A1vsA2.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -219,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToReplaceBMCROM.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToReplaceBMCROM.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToSetup.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -247,14 +254,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -317,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
+    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
+    <loc>https://docs.ipi.wiki/ava/GettingStarted_QuickStartGuide.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -345,14 +352,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
+    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
+    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -366,14 +373,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/ArmSystemReadySR_OSsupport.html</loc>
+    <loc>https://docs.ipi.wiki/ava/AmpereAltraNeoverseN1.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/AmpereAltraNeoverseN1.html</loc>
+    <loc>https://docs.ipi.wiki/ava/ArmSystemReadySR_OSsupport.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
