@@ -66,17 +66,20 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows hostIn this tutorial, we describe the procedures on how to flash Ubuntu&#x2F;Debian image into MicroSD Card on Windows environment.   ## Prerequ">
+  <meta name="description" content="Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows hostIn this tutorial, we describe the procedures on how to flash Ubuntu&#x2F;Debian image into MicroSD Card on Windows environment.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows hostIn this tutorial, we describe the procedures on how to flash Ubuntu&#x2F;Debian image into MicroSD Card on Windows environment.   ## Prerequ">
+<meta property="og:description" content="Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows hostIn this tutorial, we describe the procedures on how to flash Ubuntu&#x2F;Debian image into MicroSD Card on Windows environment.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD/rufus11.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/FlashingUbuntuDebianImageintoMicroSD/rufus_2.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD/rufus_3.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD/rufus_4.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD/rufus_5.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/FlashingUbuntuDebianImageintoMicroSD/Screenshot_2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/FlashingUbuntuDebianImageintoMicroSD/yocto_boot_screen.png">
 <meta property="article:published_time" content="2022-08-17T02:01:03.868Z">
 <meta property="article:modified_time" content="2022-08-17T02:01:03.868Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
@@ -113,7 +116,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=FlashingUbuntuDebianImageintoMicroSD.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=FlashingUbuntuDebianImageintoMicroSD.html#FlashingUbuntuDebianImageintoMicroSD.html'}, '*');}</script>
 
 	</div>
 	
@@ -141,76 +144,60 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Flashing-Ubuntu-Debian-Image-into-MicroSD-Card-using-Windows-host" class="article-heading"><a href="#Flashing-Ubuntu-Debian-Image-into-MicroSD-Card-using-Windows-host" class="headerlink" title="Flashing Ubuntu/Debian Image into MicroSD Card using Windows host"></a>Flashing Ubuntu/Debian Image into MicroSD Card using Windows host<a onclick="parent.postMessage( {msg: '?page=FlashingUbuntuDebianImageintoMicroSD.html#Flashing-Ubuntu-Debian-Image-into-MicroSD-Card-using-Windows-host'}, '*');" class="article-anchor" href="#Flashing-Ubuntu-Debian-Image-into-MicroSD-Card-using-Windows-host" aria-hidden="true"></a></h1><p>In this tutorial, we describe the procedures on how to flash <strong>Ubuntu/Debian</strong> image into MicroSD Card on Windows environment.</p>
+                <h1 id="Flashing-Ubuntu-x2F-Debian-Image-into-MicroSD-Card-using-Windows-host" class="article-heading"><a href="#Flashing-Ubuntu-x2F-Debian-Image-into-MicroSD-Card-using-Windows-host" class="headerlink" title="Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows host"></a>Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows host<a class="article-anchor" href="#Flashing-Ubuntu-x2F-Debian-Image-into-MicroSD-Card-using-Windows-host" aria-hidden="true"></a></h1><p>In this tutorial, we describe the procedures on how to flash <strong>Ubuntu&#x2F;Debian</strong> image into MicroSD Card on Windows environment.</p>
 <div class="bullets">
 
-## Prerequisites
-
-### **Hardware Requirement:**
-
-- I-Pi SMARC IMX8M Plus Development Kit
-- Monitor, Keyboard and Mouse
-- HDMI Display
-- MicroSD Card
-
-### **Software Requirement**
-
-- Ubuntu or Debian as your desired OS  [click here](https://www.ipi.wiki/pages/downloads-imx8mplus)
-
-- Rufus tool [click here](https://rufus.ie/)
-
-
-### Steps:
-
-1. Go to your working directory to extract the downloaded Ubuntu/Debian image.
-
-2. Insert an empty MicroSD Card into the card reader and then insert the card reader into the host computer.
-
-3. Open rufus.exe to flash the image into the MicroSD Card, It will auto-detected MicroSD Card as shown below.
-
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><h3 id="Hardware-Requirement" class="article-heading"><a href="#Hardware-Requirement" class="headerlink" title="Hardware Requirement:"></a><strong>Hardware Requirement:</strong><a class="article-anchor" href="#Hardware-Requirement" aria-hidden="true"></a></h3><ul>
+<li>I-Pi SMARC IMX8M Plus Development Kit</li>
+<li>Monitor, Keyboard and Mouse</li>
+<li>HDMI Display</li>
+<li>MicroSD Card</li>
+</ul>
+<h3 id="Software-Requirement" class="article-heading"><a href="#Software-Requirement" class="headerlink" title="Software Requirement"></a><strong>Software Requirement</strong><a class="article-anchor" href="#Software-Requirement" aria-hidden="true"></a></h3><ul>
+<li><p>Ubuntu or Debian as your desired OS  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a></p>
+</li>
+<li><p>Rufus tool <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">click here</a></p>
+</li>
+</ul>
+<h3 id="Steps" class="article-heading"><a href="#Steps" class="headerlink" title="Steps:"></a>Steps:<a class="article-anchor" href="#Steps" aria-hidden="true"></a></h3><ol>
+<li><p>Go to your working directory to extract the downloaded Ubuntu&#x2F;Debian image.</p>
+</li>
+<li><p>Insert an empty MicroSD Card into the card reader and then insert the card reader into the host computer.</p>
+</li>
+<li><p>Open rufus.exe to flash the image into the MicroSD Card, It will auto-detected MicroSD Card as shown below.</p>
+</li>
+</ol>
 <img src="FlashingUbuntuDebianImageintoMicroSD/rufus11.png" alt="rufus_1">
 
-4. Press the **SELECT** button to browse to the .img file in your directory. After selecting the .img file, click **START**. 
-
-![rufus_1](FlashingUbuntuDebianImageintoMicroSD/rufus_2.png)
-
-5. A Warning message will pop up, click **OK**.
-
+<ol start="4">
+<li>Press the <strong>SELECT</strong> button to browse to the .img file in your directory. After selecting the .img file, click <strong>START</strong>.</li>
+</ol>
+<p><img src="/SMARC/FlashingUbuntuDebianImageintoMicroSD/rufus_2.png" alt="rufus_1"></p>
+<ol start="5">
+<li>A Warning message will pop up, click <strong>OK</strong>.</li>
+</ol>
 <img src="FlashingUbuntuDebianImageintoMicroSD/rufus_3.png" alt="rufus_1" style="zoom: 50%;">
 
-6. Click  **OK** to continue
-
+<ol start="6">
+<li>Click  <strong>OK</strong> to continue</li>
+</ol>
 <img src="FlashingUbuntuDebianImageintoMicroSD/rufus_4.png" alt="rufus_1" style="zoom: 50%;">
 
-7. Wait for the process to finish.
-
+<ol start="7">
+<li>Wait for the process to finish.</li>
+</ol>
 <img src="FlashingUbuntuDebianImageintoMicroSD/rufus_5.png" alt="rufus_1" style="zoom: 50%;">
 
-8. After successfully booting, you can now connect to the I-Pi SMARC IMX8M Plus 
-
-​    **Note:**  I-Pi SMARC IMX8M Plus Connections
-
-​                Refer to this link for I-Pi Connections.
-​                https://www.youtube.com/watch?v=Axp5oOVpnDE
-
-9. Power on the board to boot.
-
-
-#### Default home screen for Ubuntu
-
-
-![Screenshot_2](FlashingUbuntuDebianImageintoMicroSD/Screenshot_2.png)
-
-
-
-#### Default home screen for Debian
-
-![yocto_boot_screen](FlashingUbuntuDebianImageintoMicroSD/yocto_boot_screen.png)
-
-
-
-
-
+<ol start="8">
+<li>After successfully booting, you can now connect to the I-Pi SMARC IMX8M Plus</li>
+</ol>
+<p>​    <strong>Note:</strong>  I-Pi SMARC IMX8M Plus Connections</p>
+<p>​                Refer to this link for I-Pi Connections.<br>​                <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=Axp5oOVpnDE">https://www.youtube.com/watch?v=Axp5oOVpnDE</a></p>
+<ol start="9">
+<li>Power on the board to boot.</li>
+</ol>
+<h4 id="Default-home-screen-for-Ubuntu" class="article-heading"><a href="#Default-home-screen-for-Ubuntu" class="headerlink" title="Default home screen for Ubuntu"></a>Default home screen for Ubuntu<a class="article-anchor" href="#Default-home-screen-for-Ubuntu" aria-hidden="true"></a></h4><p><img src="/SMARC/FlashingUbuntuDebianImageintoMicroSD/Screenshot_2.png" alt="Screenshot_2"></p>
+<h4 id="Default-home-screen-for-Debian" class="article-heading"><a href="#Default-home-screen-for-Debian" class="headerlink" title="Default home screen for Debian"></a>Default home screen for Debian<a class="article-anchor" href="#Default-home-screen-for-Debian" aria-hidden="true"></a></h4><p><img src="/SMARC/FlashingUbuntuDebianImageintoMicroSD/yocto_boot_screen.png" alt="yocto_boot_screen"></p>
 <div class="contentiframe">
 
 <iframe class="responsive-iframe" width="640" height="480" src="https://www.youtube.com/embed/SyhULE1yg00" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -229,7 +216,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-Ubuntu-Debian-Image-into-MicroSD-Card-using-Windows-host"><span class="toc-text">Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows host</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-Ubuntu-x2F-Debian-Image-into-MicroSD-Card-using-Windows-host"><span class="toc-text">Flashing Ubuntu&#x2F;Debian Image into MicroSD Card using Windows host</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware-Requirement"><span class="toc-text">Hardware Requirement:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Software-Requirement"><span class="toc-text">Software Requirement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-text">Steps:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Default-home-screen-for-Ubuntu"><span class="toc-text">Default home screen for Ubuntu</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Default-home-screen-for-Debian"><span class="toc-text">Default home screen for Debian</span></a></li></ol></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

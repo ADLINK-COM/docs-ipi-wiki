@@ -66,17 +66,25 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to Build Ubuntu This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC IMX8M Plus with 2G&#x2F;4G Memory. The version of Ubuntu used is 20.04 (Focal Fossa).  ## Recommended Har">
+  <meta name="description" content="How to Build Ubuntu This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC IMX8M Plus with 2G&#x2F;4G Memory. The version of Ubuntu used is 20.04 (Focal Fossa).  Recommended Hardwa">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-1200/HowToBuildUbuntu.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to Build Ubuntu This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC IMX8M Plus with 2G&#x2F;4G Memory. The version of Ubuntu used is 20.04 (Focal Fossa).  ## Recommended Har">
+<meta property="og:description" content="How to Build Ubuntu This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC IMX8M Plus with 2G&#x2F;4G Memory. The version of Ubuntu used is 20.04 (Focal Fossa).  Recommended Hardwa">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/3.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/4.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/7.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/8.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/9.png">
 <meta property="article:published_time" content="2022-08-17T02:01:03.634Z">
 <meta property="article:modified_time" content="2022-08-17T02:01:03.634Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/SMARC/HowToBuildUbuntu/1.png">
   <!-- Google Analytics -->
   
 <script>
@@ -108,7 +116,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUbuntu.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#HowToBuildUbuntu.html'}, '*');}</script>
 
 	</div>
 	
@@ -136,221 +144,210 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Build-Ubuntu" class="article-heading"><a href="#How-to-Build-Ubuntu" class="headerlink" title="How to Build Ubuntu"></a>How to Build Ubuntu<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#How-to-Build-Ubuntu'}, '*');" class="article-anchor" href="#How-to-Build-Ubuntu" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="How-to-Build-Ubuntu" class="article-heading"><a href="#How-to-Build-Ubuntu" class="headerlink" title="How to Build Ubuntu"></a>How to Build Ubuntu<a class="article-anchor" href="#How-to-Build-Ubuntu" aria-hidden="true"></a></h1><div class="bullets">
 This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC IMX8M Plus with 2G/4G Memory. The version of Ubuntu used is 20.04 (Focal Fossa).
 
-## Recommended Hardware
-
-To setup the build environment for Ubuntu image creation, a Linux host with the following configuration is recommended.
-
-- Intel Core-i7 processor (>= 4 cores)
-
-- 8 GB RAM
-
-- 1 TB disk space
-
-- High speed network connectivity
-
-- OS: Ubuntu 18.04 LTS/Ubuntu 16.04 LTS
-
-  <br>
-
-**Update apt repositories list on your host machine and install required packages**
-
+<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Ubuntu image creation, a Linux host with the following configuration is recommended.</p>
+<ul>
+<li><p>Intel Core-i7 processor (&gt;&#x3D; 4 cores)</p>
+</li>
+<li><p>8 GB RAM</p>
+</li>
+<li><p>1 TB disk space</p>
+</li>
+<li><p>High speed network connectivity</p>
+</li>
+<li><p>OS: Ubuntu 18.04 LTS&#x2F;Ubuntu 16.04 LTS</p>
+<br></li>
+</ul>
+<p><strong>Update apt repositories list on your host machine and install required packages</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install build-essential</span><br></pre></td></tr></table></figure>
 
-## Getting Started
-
-The following are the steps required to generate Ubuntu image for **I-Pi SMARC IMX8M Plus**.
-
-**Step 1**: Create a Ubuntu 20.04 root file system.
-**Step 2:** Downloading Yocto IMX8MP image.
-**Step 3:** Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs.
-
-**Note:** Remember to download yocto image respective to memory. For example, Download 2G image, if you are building Ubuntu image for 2G memory and vice versa.
-
+<h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The following are the steps required to generate Ubuntu image for <strong>I-Pi SMARC IMX8M Plus</strong>.</p>
+<p><strong>Step 1</strong>: Create a Ubuntu 20.04 root file system.<br><strong>Step 2:</strong> Downloading Yocto IMX8MP image.<br><strong>Step 3:</strong> Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs.</p>
+<p><strong>Note:</strong> Remember to download yocto image respective to memory. For example, Download 2G image, if you are building Ubuntu image for 2G memory and vice versa.</p>
 <br>
 
-### Step 1: Create a Ubuntu root file system
-
-1. Create a new working directory and change directory into it**
-
+<h3 id="Step-1-Create-a-Ubuntu-root-file-system" class="article-heading"><a href="#Step-1-Create-a-Ubuntu-root-file-system" class="headerlink" title="Step 1: Create a Ubuntu root file system"></a>Step 1: Create a Ubuntu root file system<a class="article-anchor" href="#Step-1-Create-a-Ubuntu-root-file-system" aria-hidden="true"></a></h3><ol>
+<li>Create a new working directory and change directory into it**</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME/imx8mp</span><br><span class="line">$ cd HOME/imx8mp</span><br></pre></td></tr></table></figure>
 
-2. Create a rootfs directory**
-
+<ol start="2">
+<li>Create a rootfs directory**</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ mkdir rootfs</span><br></pre></td></tr></table></figure>
 
-3. Install deboot strap and its dependencies**
-
+<ol start="3">
+<li>Install deboot strap and its dependencies**</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo apt install debootstrap binfmt-support qemu-user-static</span><br><span class="line">$ sudo debootstrap --arch=arm64 --foreign focal rootfs</span><br></pre></td></tr></table></figure>
 
-4. Configure the Rootfs, Add host name to /etc/hostname
-
-Here is an example
-
+<ol start="4">
+<li>Configure the Rootfs, Add host name to &#x2F;etc&#x2F;hostname</li>
+</ol>
+<p>Here is an example</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo bash -c<span class="string">&quot;echo&#x27;adlink&#x27;&gt;rootfs/etc/hostname&quot;</span></span><br></pre></td></tr></table></figure>
 
-5. Add host entry in /etc/hosts
-
+<ol start="5">
+<li>Add host entry in &#x2F;etc&#x2F;hosts</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo bash -c<span class="string">&quot;printf&#x27;127.0.0.1\tlocalhost\n127.0.1.1\tadlink\n\n&#x27;&gt;rootfs/etc/hosts&quot;</span></span><br><span class="line">$ sudo bash -c <span class="string">&quot;echo&#x27;root::0:0:root:/root:/bin/bash&#x27;&gt;rootfs/etc/passwd&quot;</span></span><br></pre></td></tr></table></figure>
 
-6. Prepare QEMU
-
+<ol start="6">
+<li>Prepare QEMU</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo wget https://github.com/multiarch/qemu-user-static/releases/download/v4<span class="number">.2</span><span class="number">.0</span>-<span class="number">6</span>/qemu-aarch64-static -O rootfs/usr/<span class="built_in">bin</span>/qemu-aarch64-static</span><br><span class="line">$ sudo chmod +x rootfs/usr/<span class="built_in">bin</span>/qemu-aarch64-static</span><br></pre></td></tr></table></figure>
 
-7. Get your network ready
-
+<ol start="7">
+<li>Get your network ready</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo cp /etc/resolv.conf rootfs/etc/</span><br></pre></td></tr></table></figure>
 
-8. Mount the proc sys dev file systems
-
+<ol start="8">
+<li>Mount the proc sys dev file systems</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev dev/pts; do sudo mount --bind /$f rootfs/$f; done</span><br></pre></td></tr></table></figure>
 
-9. Change root
-
+<ol start="9">
+<li>Change root</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo chroot rootfs /<span class="built_in">bin</span>/bash</span><br></pre></td></tr></table></figure>
 
-10. Add user name
-
+<ol start="10">
+<li>Add user name</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ /debootstrap/debootstrap --second-stage</span><br><span class="line">$ adduser imx8mp </span><br><span class="line"><span class="comment">#(provide new password and name for the user in the prompt)</span></span><br><span class="line">$ usermod -a -G sudo imx8mp</span><br></pre></td></tr></table></figure>
 
-11. Add required apt repositories to sources.list
-
+<ol start="11">
+<li>Add required apt repositories to sources.list</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ printf <span class="string">&#x27;deb http://ports.ubuntu.com/ubuntu-ports focal main restricted\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal main restricted\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-updates main restricted\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-updates main restricted\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal universe\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal universe\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-updates universe\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-updates universe\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal multiverse\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal multiverse\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-updates multiverse\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-updates multiverse\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-backports main restricted universe multiverse \n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-backports main restricted universe multiverse\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-security main restricted \n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-security main restricted\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-security universe\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-security universe\n\ndeb http://ports.ubuntu.com/ubuntu-ports focal-security multiverse\n# deb-src http://ports.ubuntu.com/ubuntu-ports focal-security multiverse&#x27;</span> &gt; /etc/apt/sources.<span class="built_in">list</span></span><br></pre></td></tr></table></figure>
 
-12. Configure locales
-
-You will be prompted through GUI menu to make certain selections such as date/time/region. Please make the appropriate selections and proceed.
-
+<ol start="12">
+<li>Configure locales</li>
+</ol>
+<p>You will be prompted through GUI menu to make certain selections such as date&#x2F;time&#x2F;region. Please make the appropriate selections and proceed.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ apt update</span><br><span class="line">$ dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
 
-13. Install ubuntu-desktop and necessary packages
-
+<ol start="13">
+<li>Install ubuntu-desktop and necessary packages</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ apt install ubuntu-desktop</span><br><span class="line">$ apt install vim git sudo net-tools ifupdown kmod iputils-ping man wget bash-completion alsa-utils apt-utils usbutils locales i2c-tools netplan.io tightvncserver lm-sensors usbmount build-essential mesa-utils cmake  can-utils sox v4l-utils glmark2</span><br></pre></td></tr></table></figure>
 
-14. Clean up and exit from chroot
-
+<ol start="14">
+<li>Clean up and exit from chroot</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ rm -rf /var/cache/apt/archives/*.deb</span><br><span class="line">$ sync</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
 
-15. Unmount the mounted files
-
+<ol start="15">
+<li>Unmount the mounted files</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">for</span> f <span class="keyword">in</span> proc sys dev/pts dev; do sudo umount rootfs/$f; done</span><br></pre></td></tr></table></figure>
 
-16. Remove emulator and resolv.conf file
-
+<ol start="16">
+<li>Remove emulator and resolv.conf file</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo rm rootfs/usr/<span class="built_in">bin</span>/qemu-aarch64-static rootfs/etc/resolv.conf</span><br></pre></td></tr></table></figure>
 
-17. Use netplan to enable configurations in networking on the system
-
- Create a01-network-manager-all.yaml file under /etc/neplan
-
+<ol start="17">
+<li>Use netplan to enable configurations in networking on the system</li>
+</ol>
+<p> Create a01-network-manager-all.yaml file under &#x2F;etc&#x2F;neplan</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo vim $HOME/imx8mp/rootfs/etc/neplan/01-network-manager-<span class="built_in">all</span>.yaml</span><br></pre></td></tr></table></figure>
 
-18. Add the following content, then save it.
-
- #### Let NetworkManager manage all devices on this system
-
-​                 **network:**
-
-​                             **version: 2**
-
-​                             **renderer: NetworkManager**
-
-19. Make the Root File System
-
-Execute the commands below to make the rootfs.img
-
-Notice that you need change the “count” value according to the size of the “rootfs” folder
-
-Below command will create new rootfs.img file of size 4 GB (3 GB)
-
+<ol start="18">
+<li>Add the following content, then save it.</li>
+</ol>
+<h4 id="Let-NetworkManager-manage-all-devices-on-this-system" class="article-heading"><a href="#Let-NetworkManager-manage-all-devices-on-this-system" class="headerlink" title="Let NetworkManager manage all devices on this system"></a>Let NetworkManager manage all devices on this system<a class="article-anchor" href="#Let-NetworkManager-manage-all-devices-on-this-system" aria-hidden="true"></a></h4><p>​                 <strong>network:</strong></p>
+<p>​                             <strong>version: 2</strong></p>
+<p>​                             <strong>renderer: NetworkManager</strong></p>
+<ol start="19">
+<li>Make the Root File System</li>
+</ol>
+<p>Execute the commands below to make the rootfs.img</p>
+<p>Notice that you need change the “count” value according to the size of the “rootfs” folder</p>
+<p>Below command will create new rootfs.img file of size 4 GB (3 GB)</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ cd</span><br><span class="line">$ dd <span class="keyword">if</span>=/dev/zero of=rootfs.img count=<span class="number">4096</span> status=progress &amp;&amp; sync</span><br><span class="line">$ sudo mkfs.ext4 rootfs.img</span><br><span class="line">$ mkdir rootfs</span><br><span class="line">$ sudo mount rootfs.img rootfs/</span><br><span class="line">$ sudo cp -rfp $HOME/imx8mp/rootfs/*  rootfs/</span><br><span class="line">$ sudo umount rootfs/</span><br></pre></td></tr></table></figure>
 
 <br>
 
-### Step 2: Downloading Yocto imx8mp image
-
-1. Download the Yocto IMX8MP image
-
-For 2G image [click here](https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Yocto/LEC-IMX8MP-2G-IPi-SMARC-PLUS_Hardknott_1v7_20210826.zip)
-
-For 4G image [click here](https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Yocto/LEC-IMX8MP-4G-IPi-SMARC-PLUS_Hardknott_1v7_20210826.zip)
-
-Unzip the file and flash the Image into SD card
-
+<h3 id="Step-2-Downloading-Yocto-imx8mp-image" class="article-heading"><a href="#Step-2-Downloading-Yocto-imx8mp-image" class="headerlink" title="Step 2: Downloading Yocto imx8mp image"></a>Step 2: Downloading Yocto imx8mp image<a class="article-anchor" href="#Step-2-Downloading-Yocto-imx8mp-image" aria-hidden="true"></a></h3><ol>
+<li>Download the Yocto IMX8MP image</li>
+</ol>
+<p>For 2G image <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Yocto/LEC-IMX8MP-2G-IPi-SMARC-PLUS_Hardknott_1v7_20210826.zip">click here</a></p>
+<p>For 4G image <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Yocto/LEC-IMX8MP-4G-IPi-SMARC-PLUS_Hardknott_1v7_20210826.zip">click here</a></p>
+<p>Unzip the file and flash the Image into SD card</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo bunzip2 -dk -f filename</span><br><span class="line">$ sudo dd <span class="keyword">if</span>=filename of=/dev/sdX bs=64M status=progress</span><br></pre></td></tr></table></figure>
 
-(where X will give mounted device id)
-
-### Step 3: Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs
-
-1. Unmount the mounted partitions
-
+<p>(where X will give mounted device id)</p>
+<h3 id="Step-3-Replacing-IMX8MP-yocto-image-rootfs-with-Ubuntu-20-04-rootfs" class="article-heading"><a href="#Step-3-Replacing-IMX8MP-yocto-image-rootfs-with-Ubuntu-20-04-rootfs" class="headerlink" title="Step 3: Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs"></a>Step 3: Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs<a class="article-anchor" href="#Step-3-Replacing-IMX8MP-yocto-image-rootfs-with-Ubuntu-20-04-rootfs" aria-hidden="true"></a></h3><ol>
+<li>Unmount the mounted partitions</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo umount /dev/sdc*</span><br></pre></td></tr></table></figure>
 
-Note: In our case, /dev/sdb is SD card device name
-
-2. Run GParted in the command line
-
+<p>Note: In our case, &#x2F;dev&#x2F;sdb is SD card device name</p>
+<ol start="2">
+<li>Run GParted in the command line</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo gparted</span><br></pre></td></tr></table></figure>
 
-Note: GParted is a free partition editor for graphically managing your disk partitions.
-
-3. Select SD card as highlighted in above corner in below picture
-
-   ![img](HowToBuildUbuntu/1.png) 
-
-4. Select the rootfs partition and select resize option above. Partition 2 (/dev/sdc2) is the rootfs partition in below picture.
-
-  ![img](HowToBuildUbuntu/2.png)
-
-5. Size of rootfs before resize as shown below
-
-![img](HowToBuildUbuntu/3.png)
-
-6. Increase the rootfs size i.e /dev/sdb2 here and click on resize button.
-
-![img](HowToBuildUbuntu/4.png)
-
-7. Save changes and select apply
-
-![img](HowToBuildUbuntu/7.png)
-
-
-
-8. Close the GParted and eject SD card. Also connect your SD Card to the development Linux Host PC.
-
-![img](HowToBuildUbuntu/8.png)
-
-9. Run lsblk command to get the path for mounted rootfs partition.
-
-![img](HowToBuildUbuntu/9.png)
-
-10.  Remove the existing contents as this filesystem is the default build root file system.
-
+<p>Note: GParted is a free partition editor for graphically managing your disk partitions.</p>
+<ol start="3">
+<li><p>Select SD card as highlighted in above corner in below picture</p>
+<p><img src="/SMARC/HowToBuildUbuntu/1.png" alt="img"> </p>
+</li>
+<li><p>Select the rootfs partition and select resize option above. Partition 2 (&#x2F;dev&#x2F;sdc2) is the rootfs partition in below picture.</p>
+</li>
+</ol>
+<p>  <img src="/SMARC/HowToBuildUbuntu/2.png" alt="img"></p>
+<ol start="5">
+<li>Size of rootfs before resize as shown below</li>
+</ol>
+<p><img src="/SMARC/HowToBuildUbuntu/3.png" alt="img"></p>
+<ol start="6">
+<li>Increase the rootfs size i.e &#x2F;dev&#x2F;sdb2 here and click on resize button.</li>
+</ol>
+<p><img src="/SMARC/HowToBuildUbuntu/4.png" alt="img"></p>
+<ol start="7">
+<li>Save changes and select apply</li>
+</ol>
+<p><img src="/SMARC/HowToBuildUbuntu/7.png" alt="img"></p>
+<ol start="8">
+<li>Close the GParted and eject SD card. Also connect your SD Card to the development Linux Host PC.</li>
+</ol>
+<p><img src="/SMARC/HowToBuildUbuntu/8.png" alt="img"></p>
+<ol start="9">
+<li>Run lsblk command to get the path for mounted rootfs partition.</li>
+</ol>
+<p><img src="/SMARC/HowToBuildUbuntu/9.png" alt="img"></p>
+<ol start="10">
+<li>Remove the existing contents as this filesystem is the default build root file system.</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo rm -rf &lt;mount_path&gt;/*</span><br></pre></td></tr></table></figure>
 
-$ sync
-
-11. Create a temporary directory and mount the rootfs.img, which is prepared at Step 1, Preparing Ubuntu Root File System
-
+<p>$ sync</p>
+<ol start="11">
+<li>Create a temporary directory and mount the rootfs.img, which is prepared at Step 1, Preparing Ubuntu Root File System</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME/sd_temp</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo mountrootfs.img $HOME/sd_temp</span><br></pre></td></tr></table></figure>
 
-12. Run the following commands to copy the contents of the ubuntu rootfs.img to the SD card.       
-
+<ol start="12">
+<li>Run the following commands to copy the contents of the ubuntu rootfs.img to the SD card.</li>
+</ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo cp -rfp$HOME/sd_temp/* &lt;mount_path&gt;/</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sync   </span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo umount$HOME/sd_temp</span><br></pre></td></tr></table></figure>
 
-13. Eject the SD card. 
-
-    You can directly insert SD card into the target board and boot using the SD card.
-
+<ol start="13">
+<li><p>Eject the SD card. </p>
+<p>You can directly insert SD card into the target board and boot using the SD card.</p>
+</li>
+</ol>
 </div>
 
 
@@ -368,7 +365,7 @@ $ sync
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Build-Ubuntu"><span class="toc-text">How to Build Ubuntu</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Build-Ubuntu"><span class="toc-text">How to Build Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Recommended-Hardware"><span class="toc-text">Recommended Hardware</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Create-a-Ubuntu-root-file-system"><span class="toc-text">Step 1: Create a Ubuntu root file system</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Let-NetworkManager-manage-all-devices-on-this-system"><span class="toc-text">Let NetworkManager manage all devices on this system</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Downloading-Yocto-imx8mp-image"><span class="toc-text">Step 2: Downloading Yocto imx8mp image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-Replacing-IMX8MP-yocto-image-rootfs-with-Ubuntu-20-04-rootfs"><span class="toc-text">Step 3: Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

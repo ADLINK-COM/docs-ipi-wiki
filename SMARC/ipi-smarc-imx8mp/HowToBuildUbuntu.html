@@ -116,7 +116,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUbuntu.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#HowToBuildUbuntu.html'}, '*');}</script>
 
 	</div>
 	
@@ -144,10 +144,10 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Build-Ubuntu" class="article-heading"><a href="#How-to-Build-Ubuntu" class="headerlink" title="How to Build Ubuntu"></a>How to Build Ubuntu<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#How-to-Build-Ubuntu'}, '*');" class="article-anchor" href="#How-to-Build-Ubuntu" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="How-to-Build-Ubuntu" class="article-heading"><a href="#How-to-Build-Ubuntu" class="headerlink" title="How to Build Ubuntu"></a>How to Build Ubuntu<a class="article-anchor" href="#How-to-Build-Ubuntu" aria-hidden="true"></a></h1><div class="bullets">
 This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC IMX8M Plus with 2G/4G Memory. The version of Ubuntu used is 20.04 (Focal Fossa).
 
-<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Recommended-Hardware'}, '*');" class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Ubuntu image creation, a Linux host with the following configuration is recommended.</p>
+<h2 id="Recommended-Hardware" class="article-heading"><a href="#Recommended-Hardware" class="headerlink" title="Recommended Hardware"></a>Recommended Hardware<a class="article-anchor" href="#Recommended-Hardware" aria-hidden="true"></a></h2><p>To setup the build environment for Ubuntu image creation, a Linux host with the following configuration is recommended.</p>
 <ul>
 <li><p>Intel Core-i7 processor (&gt;&#x3D; 4 cores)</p>
 </li>
@@ -173,12 +173,12 @@ This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC 
 
 
 
-<h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Getting-Started'}, '*');" class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The following are the steps required to generate Ubuntu image for <strong>I-Pi SMARC IMX8M Plus</strong>.</p>
+<h2 id="Getting-Started" class="article-heading"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started<a class="article-anchor" href="#Getting-Started" aria-hidden="true"></a></h2><p>The following are the steps required to generate Ubuntu image for <strong>I-Pi SMARC IMX8M Plus</strong>.</p>
 <p><strong>Step 1</strong>: Create a Ubuntu root file system.<br><strong>Step 2:</strong> Downloading Yocto IMX8MP image.<br><strong>Step 3:</strong> Replacing IMX8MP yocto image rootfs with Ubuntu 20.04 rootfs.</p>
 <p><strong>Note:</strong> Remember to download yocto image respective to memory. For example, Download 2G image, if you are building Ubuntu image for 2G memory and vice versa.</p>
 <br>
 
-<h3 id="Step-1-Create-a-Ubuntu-root-file-system" class="article-heading"><a href="#Step-1-Create-a-Ubuntu-root-file-system" class="headerlink" title="Step 1: Create a Ubuntu root file system"></a>Step 1: Create a Ubuntu root file system<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Step-1-Create-a-Ubuntu-root-file-system'}, '*');" class="article-anchor" href="#Step-1-Create-a-Ubuntu-root-file-system" aria-hidden="true"></a></h3><ol>
+<h3 id="Step-1-Create-a-Ubuntu-root-file-system" class="article-heading"><a href="#Step-1-Create-a-Ubuntu-root-file-system" class="headerlink" title="Step 1: Create a Ubuntu root file system"></a>Step 1: Create a Ubuntu root file system<a class="article-anchor" href="#Step-1-Create-a-Ubuntu-root-file-system" aria-hidden="true"></a></h3><ol>
 <li>Create a new working directory and change directory into it.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir <span class="variable">$HOME</span>/imx8mp</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="variable">$HOME</span>/imx8mp</span></span><br></pre></td></tr></table></figure>
@@ -277,7 +277,7 @@ This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC 
 <ol start="19">
 <li>Add the following content, then save it.</li>
 </ol>
-<h4 id="Let-network-manager-manage-all-devices-on-this-system" class="article-heading"><a href="#Let-network-manager-manage-all-devices-on-this-system" class="headerlink" title="Let network manager manage all devices on this system"></a>Let network manager manage all devices on this system<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Let-network-manager-manage-all-devices-on-this-system'}, '*');" class="article-anchor" href="#Let-network-manager-manage-all-devices-on-this-system" aria-hidden="true"></a></h4><p><strong>network:</strong></p>
+<h4 id="Let-network-manager-manage-all-devices-on-this-system" class="article-heading"><a href="#Let-network-manager-manage-all-devices-on-this-system" class="headerlink" title="Let network manager manage all devices on this system"></a>Let network manager manage all devices on this system<a class="article-anchor" href="#Let-network-manager-manage-all-devices-on-this-system" aria-hidden="true"></a></h4><p><strong>network:</strong></p>
 <p><strong>version: 2</strong></p>
 <p><strong>render: NetworkManager</strong></p>
 <ol start="20">
@@ -290,7 +290,7 @@ This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC 
 
 <br>
 
-<h3 id="Step-2-Downloading-Yocto-imx8mp-image" class="article-heading"><a href="#Step-2-Downloading-Yocto-imx8mp-image" class="headerlink" title="Step 2: Downloading Yocto imx8mp image"></a>Step 2: Downloading Yocto imx8mp image<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Step-2-Downloading-Yocto-imx8mp-image'}, '*');" class="article-anchor" href="#Step-2-Downloading-Yocto-imx8mp-image" aria-hidden="true"></a></h3><ol>
+<h3 id="Step-2-Downloading-Yocto-imx8mp-image" class="article-heading"><a href="#Step-2-Downloading-Yocto-imx8mp-image" class="headerlink" title="Step 2: Downloading Yocto imx8mp image"></a>Step 2: Downloading Yocto imx8mp image<a class="article-anchor" href="#Step-2-Downloading-Yocto-imx8mp-image" aria-hidden="true"></a></h3><ol>
 <li>Download the Yocto IMX8MP image</li>
 </ol>
 <p>For 2G image <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Yocto/LEC-IMX8MP-2G-IPi-SMARC-PLUS_Hardknott_1v7_20210826.zip">click here</a></p>
@@ -299,7 +299,7 @@ This procedure describes how to create Ubuntu image with SD Card for I-Pi SMARC 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo bunzip2 -dk -f filename</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo dd <span class="keyword">if</span>=filename of=/dev/sdX bs=64M status=progress</span></span><br></pre></td></tr></table></figure>
 
 <p>(where X will give mounted device id)</p>
-<h3 id="Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs" class="article-heading"><a href="#Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs" class="headerlink" title="Step 3: Replacing IMX8MP Yocto image rootfs with Ubuntu rootfs"></a>Step 3: Replacing IMX8MP Yocto image rootfs with Ubuntu rootfs<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs'}, '*');" class="article-anchor" href="#Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs" aria-hidden="true"></a></h3><ol>
+<h3 id="Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs" class="article-heading"><a href="#Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs" class="headerlink" title="Step 3: Replacing IMX8MP Yocto image rootfs with Ubuntu rootfs"></a>Step 3: Replacing IMX8MP Yocto image rootfs with Ubuntu rootfs<a class="article-anchor" href="#Step-3-Replacing-IMX8MP-Yocto-image-rootfs-with-Ubuntu-rootfs" aria-hidden="true"></a></h3><ol>
 <li>Unmount the mounted partitions.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo umount /dev/sdc*</span></span><br></pre></td></tr></table></figure>
