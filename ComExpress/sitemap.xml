@@ -2,86 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://docs.ipi.wiki/COM_Express_Type_10/UserInterfaces.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/COM_Express_Type_10/CarrierIntroduction.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/COM_Express_Type_10/ModuleIntroduction.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/COM_Express_Type_10/WindowsImage.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.ipi.wiki/COM_Express_Type_10/UbuntuImage.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/COM_Express_Type_10/PreparingabootableUSBdrive.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/COM_Express_Type_10/index.html</loc>
-    
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.ipi.wiki/COM_Express_Type_10/HowToSetup.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/COM_Express_Type_10/FlashImageThroughUSBDrive.html</loc>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/DriversInstallation.html</loc>
     
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/HowToDeployOpenVINO.html</loc>
+    
+    <lastmod>2022-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/index.html</loc>
+    
+    <lastmod>2022-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/UserInterfaces.html</loc>
+    
+    <lastmod>2022-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/PreparingabootableUSBdrive.html</loc>
+    
+    <lastmod>2022-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/CarrierIntroduction.html</loc>
+    
+    <lastmod>2022-09-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.ipi.wiki/index.html</loc>
     
-    <lastmod>2022-08-26</lastmod>
+    <lastmod>2022-09-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/ModuleIntroduction.html</loc>
+    
+    <lastmod>2022-09-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/COM_Express_Type_10/FlashImageThroughUSBDrive.html</loc>
+    
+    <lastmod>2022-09-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://docs.ipi.wiki/404/index.html</loc>
     
-    <lastmod>2022-08-26</lastmod>
+    <lastmod>2022-09-05</lastmod>
     
   </url>
   
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-09-08</lastmod>
+    <lastmod>2022-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
