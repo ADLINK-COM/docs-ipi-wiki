@@ -93,6 +93,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
+    
+    <lastmod>2022-10-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_UpdateSequence.html</loc>
     
     <lastmod>2022-10-05</lastmod>
@@ -107,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/firmware_PreferredVersions.html</loc>
-    
-    <lastmod>2022-10-05</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_EnablingBMC-LAN.html</loc>
     
     <lastmod>2022-10-05</lastmod>
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/YoctoInstallation.html</loc>
+    <loc>https://docs.ipi.wiki/ava/edk2-firmware-update.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/edk2-firmware-update.html</loc>
+    <loc>https://docs.ipi.wiki/ava/YoctoInstallation.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -163,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
+    <loc>https://docs.ipi.wiki/ava/PX30%20Android10.0%20Image%20Developer%20Guide.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/PX30%20Android10.0%20Image%20Developer%20Guide.html</loc>
+    <loc>https://docs.ipi.wiki/ava/ModuleIntroduction.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseDimms.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashEDK2.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashEDK2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseDimms.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseBMCSerialConsole.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToUpdateEDK2SCP.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/HowToDisableMutipleUSBEntriesOnEDK2.html</loc>
+    <loc>https://docs.ipi.wiki/ava/HowToFlashAllFW.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -324,6 +324,13 @@
   </url>
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/EDK2%20problem.html</loc>
+    
+    <lastmod>2022-10-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/FAQ.html</loc>
     
     <lastmod>2022-10-05</lastmod>
@@ -338,13 +345,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/EDK2%20problem.html</loc>
-    
-    <lastmod>2022-10-05</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ava/GettingStarted_WhatsInTheBox.html</loc>
     
     <lastmod>2022-10-05</lastmod>
@@ -352,14 +352,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
+    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ava/ChassisandCooling.html</loc>
+    <loc>https://docs.ipi.wiki/ava/CentOSInstallation.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -431,7 +431,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2022-10-05</lastmod>
+    <lastmod>2022-10-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
