@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashEDK2.html</loc>
+    
+    <lastmod>2022-10-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ava/firmware_A2Versions.html</loc>
     
     <lastmod>2022-10-05</lastmod>
@@ -192,13 +199,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ava/HowToUseSerialConsole.html</loc>
-    
-    <lastmod>2022-10-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ava/HowToUseDediprogFlashEDK2.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
