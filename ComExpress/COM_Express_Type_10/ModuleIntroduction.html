@@ -102,8 +102,8 @@ $('button').click(function(){
 <meta property="og:description" content="COM Express Type 10 Elkhart Lake COM Express Mini Size Type 10 Module with Atom® x6000              Download Datasheet  Features  Quad-core Intel Atom® Processor SoC Burst Frequency up to 3.0GHz Intel">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/COM_Express_Type_10/ModuleIntroduction.assets/COMeType10ElkhartLakeModule_resize.png">
-<meta property="article:published_time" content="2022-10-12T09:13:03.512Z">
-<meta property="article:modified_time" content="2022-10-12T09:13:03.512Z">
+<meta property="article:published_time" content="2022-11-09T01:25:40.213Z">
+<meta property="article:modified_time" content="2022-11-09T01:25:40.213Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/COM_Express_Type_10/ModuleIntroduction.assets/COMeType10ElkhartLakeModule_resize.png">
@@ -180,10 +180,8 @@ $('button').click(function(){
 <li>Quad-core Intel Atom® Processor SoC</li>
 <li>Burst Frequency up to 3.0GHz</li>
 <li>Intel® Gen11 LP GFX for AI inference based on OpenVINO</li>
-<li>In-band ECC, up to 16GB LPDDR4 at up to 4267 MT/s</li>
-<li>TCC and 2.5GbE with TSN</li>
-<li>Real-time I/O via ARM Cortex-M7 processor</li>
-<li>USB 3.2 10Gbps</li>
+<li>Up to 16GB LPDDR4 at up to 4267 MT/s</li>
+<li>TCC and TSN</li>
 <li>10-years product availability</li>
 </ul>
 <br>
@@ -193,12 +191,11 @@ $('button').click(function(){
 <ul>
 <li>Intel Atom® X6211E 1.30GHz (3.0GHz Burst) 6W (2C/16EU, IBECC/non-ECC)</li>
 </ul>
-<p><strong>Note:</strong> We also have other versions</p>
+<p><strong>Note:</strong> We also have other versions and TCC/IBECC requires specific settings on BIOS (by project basis)</p>
 <ul>
 <li>Intel Atom® x6425E 1.8GHz (3.0GHz Burst) 12W (4C/32EU, IBECC/non-ECC)</li>
 <li>Intel Atom® x6413E 1.5GHz (3.0GHz Burst) 9W (4C/16EU, IBECC/non-ECC)</li>
 <li>Intel Atom® x6211E 1.2GHz (3.0GHz Burst) 6W (2C/16EU, IBECC/non-ECC)</li>
-<li>Intel Atom® x6200FE 1.0GHz 4.5W (2C/No GPU, IBECC/non-ECC)</li>
 <li>Intel Atom® x6425RE 1.9GHz 12W (4C/32EU, IBECC/non-ECC)</li>
 <li>Intel Atom® x6414RE 1.9GHz 9W (4C/16EU, IBECC/non-ECC)</li>
 <li>Intel Atom® x6412RE 1.5GHz 6W (2C/16EU, IBECC/non-ECC)</li>
@@ -235,9 +232,13 @@ $('button').click(function(){
 <li>OpenGL 4.5 and ES 3.2 support</li>
 <li>OpenCL 1.2 support</li>
 </ul>
+<p><strong>DP</strong></p>
+<ul>
+<li>DP1.4 4K@60Hz</li>
+</ul>
 <p><strong>HDMI</strong></p>
 <ul>
-<li>HDMI 2.0b 4K@60 Hz</li>
+<li>HDMI</li>
 </ul>
 <p><strong>LVDS</strong></p>
 <ul>
@@ -245,7 +246,7 @@ $('button').click(function(){
 </ul>
 <p><strong>eDP</strong></p>
 <ul>
-<li>Optional 4-lane support, in place of LVDS</li>
+<li>Optional 4-lane support, in place of LVDS (by project basis)</li>
 </ul>
 <h3 id="Audio" class="article-heading">Audio<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Audio'}, '*');" class="article-anchor" href="#Audio" aria-hidden="true"></a></h3>
 <p><strong>Chipset</strong></p>
@@ -257,40 +258,26 @@ $('button').click(function(){
 <li>Located on carrier miniBASE-10R</li>
 </ul>
 <h3 id="Ethernet" class="article-heading">Ethernet<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Ethernet'}, '*');" class="article-anchor" href="#Ethernet" aria-hidden="true"></a></h3>
-<p><strong>Primary LAN</strong></p>
+<p><strong>LAN</strong></p>
 <ul>
-<li>10/100/1000/ 2.5 Gbit Ethernet with TSN</li>
-</ul>
-<p><strong>Secondary LAN</strong></p>
-<ul>
-<li>10/100/1000/ 2.5 Gbit Ethernet with TSN</li>
+<li>10/100/1000 Ethernet, 2.5GbE (by project basis)</li>
 </ul>
 <h3 id="Extension-Busses" class="article-heading">Extension Busses<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Extension-Busses'}, '*');" class="article-anchor" href="#Extension-Busses" aria-hidden="true"></a></h3>
+<ul>
+<li>4 PCIe x1 Gen3: configurable to x1, x2, x4</li>
+<li>LPC Bus, SMBus, I2C</li>
+</ul>
 <p><strong>USB</strong></p>
 <ul>
 <li>2x USB 3.0, 2x USB 2.0</li>
 </ul>
+<p><strong>SATA</strong></p>
+<ul>
+<li>2x SATA Gen3 6Gb/s</li>
+</ul>
 <p><strong>UART</strong></p>
 <ul>
 <li>2x UART ports with console redirection</li>
-</ul>
-<p><strong>CAN</strong></p>
-<ul>
-<li>2x CAN2.0B only or mixed CAN2.0B and CAN FD mode, data bit rate up to 8 Mbps</li>
-</ul>
-<p><strong>SPI</strong></p>
-<ul>
-<li>2x SPI (optional)</li>
-</ul>
-<p><strong>I<sup>2</sup>C</strong></p>
-<ul>
-<li>
-<p>Four I2C interfaces</p>
-<ul>
-<li>Support for 7-bit and 10-bit address mode</li>
-<li>Software programmable clock frequency of 100 kbit/s in Standard-mode, 400 kbit/s in the Fast-mode or 1 Mbit/s in Fast-mode Plus</li>
-</ul>
-</li>
 </ul>
 <p><strong>GPIO/SD</strong></p>
 <ul>
@@ -300,11 +287,7 @@ $('button').click(function(){
 <h3 id="System-Storage" class="article-heading">System Storage<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#System-Storage'}, '*');" class="article-anchor" href="#System-Storage" aria-hidden="true"></a></h3>
 <p><strong>eMMC</strong></p>
 <ul>
-<li>eMMC 5.0 (16/32/64GB by build option)</li>
-</ul>
-<p><strong>SATA</strong></p>
-<ul>
-<li>1x SATA Gen3 6Gb/s</li>
+<li>eMMC 5.0 (32/64GB by build option)</li>
 </ul>
 <h3 id="SEMA®-Board-Controller" class="article-heading">SEMA® Board Controller<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#SEMA®-Board-Controller'}, '*');" class="article-anchor" href="#SEMA®-Board-Controller" aria-hidden="true"></a></h3>
 <ul>
@@ -366,7 +349,7 @@ $('button').click(function(){
 <h3 id="Operating-Systems" class="article-heading">Operating Systems<a onclick="parent.postMessage( {msg: '?page=ModuleIntroduction.html#Operating-Systems'}, '*');" class="article-anchor" href="#Operating-Systems" aria-hidden="true"></a></h3>
 <p><strong>Standard Support</strong></p>
 <ul>
-<li>Windows, Ubuntu, Yocto</li>
+<li>Windows 10 IoT Enterprise, Yocto, Ubuntu</li>
 </ul>
 <p><strong>Extended Support (BSP)</strong></p>
 <ul>
@@ -376,7 +359,7 @@ $('button').click(function(){
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-10-12T09:13:03.512Z" itemprop="dateModified">Last updated: 2022-10-12</time>
+                <time class="article-footer-updated" datetime="2022-11-09T01:25:40.213Z" itemprop="dateModified">Last updated: 2022-11-09</time>
                 <a href="HowToSetup.html" class="article-footer-prev" title="How To Setup"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="CarrierIntroduction.html" class="article-footer-next" title="Carrier Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
