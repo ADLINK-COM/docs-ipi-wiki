@@ -84,8 +84,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/FlashingYoctoImageOneMMC.assets/AdlinkLogo.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/FlashingYoctoImageOneMMC.assets/ChooseUsbBootOverride.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/FlashingYoctoImageOneMMC.assets/BootFromeMMC.png">
-<meta property="article:published_time" content="2022-11-30T09:18:13.472Z">
-<meta property="article:modified_time" content="2022-11-30T09:18:13.472Z">
+<meta property="article:published_time" content="2022-11-30T09:34:20.074Z">
+<meta property="article:modified_time" content="2022-11-30T09:34:20.074Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-elkhart-lake/FlashingYoctoImageOneMMC.assets/Warning.png">
@@ -154,46 +154,26 @@
 <li>Download the latest Yocto image from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/ipi-smarc-elkhart-lake-downloads">here</a></li>
 <li>Prepare an empty USB drive with 64 GB</li>
 </ul>
-<br>
-
-<h3 id="Prepare-your-USB-drive" class="article-heading"><a href="#Prepare-your-USB-drive" class="headerlink" title="Prepare your USB drive"></a>Prepare your USB drive<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Prepare-your-USB-drive'}, '*');" class="article-anchor" href="#Prepare-your-USB-drive" aria-hidden="true"></a></h3><ol>
-<li><p>On your Linux host device, extract the downloaded image.</p>
-</li>
-<li><p>Insert the USB drive into your host device and unmount it by executing the following command:</p>
-</li>
-</ol>
+<p><br></p>
+<h3 id="Prepare-your-USB-drive" class="article-heading"><a href="#Prepare-your-USB-drive" class="headerlink" title="Prepare your USB drive"></a>Prepare your USB drive<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Prepare-your-USB-drive'}, '*');" class="article-anchor" href="#Prepare-your-USB-drive" aria-hidden="true"></a></h3><p><strong>1.</strong> On your Linux host device, extract the downloaded image.</p>
+<p><strong>2.</strong> Insert the USB drive into your host device and unmount it by executing the following command:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo umount /dev/sd[x]</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>Go into the directory where your image file is extracted, and then flash the Yocto image into your USB drive:</li>
-</ol>
+<p><strong>3.</strong> Go into the directory where your image file is extracted, and then flash the Yocto image into your USB drive:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=&lt;image_name&gt;.wic of=/dev/sd[x] status=progress</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><p>Once completed, remove the USB drive form your host device and re-insert it. Now, you shall see 4 partitions named: <strong>msdos</strong>, <strong>primary</strong>, <strong>data</strong>, and <strong>unallocated</strong>.</p>
-</li>
-<li><p>Install <strong>Gparted</strong> tool on your host system, in order to modify the partitions size, using the following command:</p>
-</li>
-</ol>
+<p><strong>4.</strong> Once completed, remove the USB drive form your host device and re-insert it. Now, you shall see 4 partitions named: <strong>msdos</strong>, <strong>primary</strong>, <strong>data</strong>, and <strong>unallocated</strong>.</p>
+<p><strong>5.</strong> Install <strong>Gparted</strong> tool on your host system, in order to modify the partitions size, using the following command:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install gparted</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>Open the <strong>Gparted</strong> tool.</li>
-</ol>
+<p><strong>6.</strong> Open the <strong>Gparted</strong> tool.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo gparted</span><br></pre></td></tr></table></figure>
-
 <p>If you a warning, as exemplified below, click <strong>Fix</strong> to continue.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/Warning.png" alt="Warning">
 </div>
 </center>
-7. Select your USB drive and resize the **/data** partition size as shown below.
 
-
-
+<p><strong>7.</strong> Select your USB drive and resize the <strong>/data</strong> partition size as shown below.</p>
 <center>
   <div>
     <img src="FlashingYoctoImageOneMMC.assets/ChooseUsbData.png" alt="ChooseUsbData">
@@ -201,9 +181,7 @@
 </center>
 
 
-<ol start="8">
-<li>Resize the <strong>&#x2F;data</strong> partition from 1GB to 10GB and click <strong>Resize&#x2F;Move</strong>.</li>
-</ol>
+<p><strong>8.</strong> Resize the <strong>/data</strong> partition from 1GB to 10GB and click <strong>Resize/Move</strong>.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/ExtendSize.png" alt="EXtendSize">
@@ -211,9 +189,7 @@
 </center>
 
 
-<ol start="9">
-<li>Click the <strong>Green color tick mark</strong> to process the resizing.</li>
-</ol>
+<p><strong>9.</strong> Click the <strong>Green color tick mark</strong> to process the resizing.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/CompleteAction.png" alt="CompleteAction">
@@ -221,9 +197,7 @@
 </center>
 
 
-<ol start="10">
-<li>Once completed, the following <em>Compelted Operations</em> is displayed. Close the  <strong>Gparted</strong> tool.</li>
-</ol>
+<p><strong>10.</strong> Once completed, the following <em>Compelted Operations</em> is displayed. Close the  <strong>Gparted</strong> tool.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/CompletedAction.png" alt="CompletedAction">
@@ -231,30 +205,19 @@
 </center>
 
 
-<ol start="11">
-<li>Copy the download image into <strong>&#x2F;data</strong> partition using the following commands. This shall take some time.</li>
-</ol>
+<p><strong>11.</strong> Copy the download image into <strong>/data</strong> partition using the following commands. This shall take some time.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo cp -v &lt;image_name&gt;.wic /media/&lt;user_name&gt;/data/</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-
-<ol start="12">
-<li>Once finished, remove your USB drive.</li>
-</ol>
-<br>
-
-<h3 id="Prepare-the-targeted-device" class="article-heading"><a href="#Prepare-the-targeted-device" class="headerlink" title="Prepare the targeted device"></a>Prepare the targeted device<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Prepare-the-targeted-device'}, '*');" class="article-anchor" href="#Prepare-the-targeted-device" aria-hidden="true"></a></h3><ol>
-<li>Make sure that your target device has connected all required accessories and cables such as keyboard, mouse, USB drive, network LAN, and HDMI display.</li>
-<li>After startup, press [ESC] on your keyboard upon seeing the ADLINK logo as exemplified below to enter the boot menu.</li>
-</ol>
+<p><strong>12.</strong> Once finished, remove your USB drive.</p>
+<p><br></p>
+<h3 id="Prepare-the-targeted-device" class="article-heading"><a href="#Prepare-the-targeted-device" class="headerlink" title="Prepare the targeted device"></a>Prepare the targeted device<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Prepare-the-targeted-device'}, '*');" class="article-anchor" href="#Prepare-the-targeted-device" aria-hidden="true"></a></h3><p><strong>1.</strong> Make sure that your target device has connected all required accessories and cables such as keyboard, mouse, USB drive, network LAN, and HDMI display.<br><strong>2.</strong> After startup, press [ESC] on your keyboard upon seeing the ADLINK logo as exemplified below to enter the boot menu.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/AdlinkLogo.png" alt="AdlinkLogo">
 </div>
 </center>
-3. The *Main* section of the boot menu appears, where you can see detailed information of your device.
-4. In the Boot section, select and enter **Boot Option #1** to set your USB drive as the first boot option. If you cannot find your USB drive in the **Boot** section, please check within the  **Boot Override** section and select it to continue.
 
+<p><strong>3.</strong> The <em>Main</em> section of the boot menu appears, where you can see detailed information of your device.<br><strong>4.</strong> In the Boot section, select and enter <strong>Boot Option #1</strong> to set your USB drive as the first boot option. If you cannot find your USB drive in the <strong>Boot</strong> section, please check within the  <strong>Boot Override</strong> section and select it to continue.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/ChooseUsbBootOverride.png" alt="ChooseUsbBootOverride">
@@ -262,38 +225,25 @@
 </center>
 
 
-<ol start="5">
-<li><p>Now, it shall boot the Yocto image form the USB drive and log in as <strong>root</strong>.</p>
-</li>
-<li><p>To flash the Yocto image via eMMC, you can type the following commands in the terminal in sequence. This may take some time.</p>
-</li>
-</ol>
+<p><strong>5.</strong> Now, it shall boot the Yocto image form the USB drive and log in as <strong>root</strong>.</p>
+<p><strong>6.</strong> To flash the Yocto image via eMMC, you can type the following commands in the terminal in sequence. This may take some time.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /data</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=&lt;image_name&gt;.wic of=/dev/media/mmcblk0 status=progress</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li>Once completed, reboot your target device and change the boot option to <strong>eMMC</strong> as exemplified below.</li>
-</ol>
+<p><strong>7.</strong> Once completed, reboot your target device and change the boot option to <strong>eMMC</strong> as exemplified below.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/BootFromeMMC.png" alt="BootFromeMMC">
 </div>
 </center>
 
-<ol start="8">
-<li><strong>Save &amp; Exi</strong>t from the boot menu and log in as a <strong>root</strong> to finish.</li>
-</ol>
+<p><strong>8.</strong> <strong>Save &amp; Exi</strong>t from the boot menu and log in as a <strong>root</strong> to finish.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-11-30T09:18:13.472Z" itemprop="dateModified">Last updated: 2022-11-30</time>
+                <time class="article-footer-updated" datetime="2022-11-30T09:34:20.074Z" itemprop="dateModified">Last updated: 2022-11-30</time>
                 <a href="WindowsImage.html" class="article-footer-prev" title="Windows"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SemaUtility.html" class="article-footer-next" title="Sema Utility"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
