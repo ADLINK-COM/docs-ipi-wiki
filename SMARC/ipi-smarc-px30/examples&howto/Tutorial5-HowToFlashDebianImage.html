@@ -11,6 +11,9 @@
   <!-- Canonical links -->
   <link rel="canonical" href="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial5-HowToFlashDebianImage.html">
   <!-- Alternative links -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   
     
   
@@ -31,7 +34,7 @@
        border-left-color: #1E92FB;
     }
   -->
-    
+
   </style>
   <!-- Icon -->
   <link rel="Shortcut Icon" href="/SMARC/images/favicon.ico">
@@ -66,17 +69,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="title: Tutorial 5 - How to flash Debian&#x2F;Ubuntu image       Please refer to the following links to describe the detailed steps how to flash an Debian&#x2F;Ubuntu image including u-boot, Linux kern">
+  <meta name="description" content="Tutorial 5 - How to flash Debian&#x2F;Ubuntu image         Please refer to the following links to describe the detailed steps how to flash an Debian&#x2F;Ubuntu image including u-boot, Linux kernel an">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial5-HowToFlashDebianImage.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="title: Tutorial 5 - How to flash Debian&#x2F;Ubuntu image       Please refer to the following links to describe the detailed steps how to flash an Debian&#x2F;Ubuntu image including u-boot, Linux kern">
+<meta property="og:description" content="Tutorial 5 - How to flash Debian&#x2F;Ubuntu image         Please refer to the following links to describe the detailed steps how to flash an Debian&#x2F;Ubuntu image including u-boot, Linux kernel an">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/DebianImages.assets/Screenshot_2020-04-23_07-31-23-1587627343117.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/UbuntuImages.assets/Screenshot_2020-01-08_11-51-14.png">
-<meta property="article:published_time" content="2022-08-25T08:07:09.260Z">
-<meta property="article:modified_time" content="2022-08-25T08:07:09.260Z">
+<meta property="article:published_time" content="2022-12-06T07:15:13.172Z">
+<meta property="article:modified_time" content="2022-12-06T07:15:13.172Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-px30/DebianImages.assets/Screenshot_2020-04-23_07-31-23-1587627343117.png">
@@ -139,9 +142,11 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h2 id="title-Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image" class="article-heading"><a href="#title-Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image" class="headerlink" title="title: Tutorial 5 - How to flash Debian&#x2F;Ubuntu image"></a>title: Tutorial 5 - How to flash Debian&#x2F;Ubuntu image<a onclick="parent.postMessage( {msg: '?page=Tutorial5-HowToFlashDebianImage.html#title-Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image'}, '*');" class="article-anchor" href="#title-Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image" aria-hidden="true"></a></h2><div class="contentiframe">
+                <h2 id="Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image" class="article-heading"><a href="#Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image" class="headerlink" title="Tutorial 5 - How to flash Debian&#x2F;Ubuntu image"></a>Tutorial 5 - How to flash Debian&#x2F;Ubuntu image<a onclick="parent.postMessage( {msg: '?page=Tutorial5-HowToFlashDebianImage.html#Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image'}, '*');" class="article-anchor" href="#Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image" aria-hidden="true"></a></h2><div class="contentiframe">
 
+<center>
 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/qunkNOpYzGQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
 
 </div>
 
@@ -157,7 +162,9 @@
 <br>
 
 <h3 id="What-you-will-see-using-ADLINK-Debian-image-with-xfce-desktop" class="article-heading"><a href="#What-you-will-see-using-ADLINK-Debian-image-with-xfce-desktop" class="headerlink" title="What you will see (using ADLINK Debian image with xfce desktop)"></a>What you will see (using ADLINK Debian image with xfce desktop)<a onclick="parent.postMessage( {msg: '?page=Tutorial5-HowToFlashDebianImage.html#What-you-will-see-using-ADLINK-Debian-image-with-xfce-desktop'}, '*');" class="article-anchor" href="#What-you-will-see-using-ADLINK-Debian-image-with-xfce-desktop" aria-hidden="true"></a></h3><p>Boot the system with the SD card placed in the slot located on the carrier, once booted you will see the login screen:</p>
+<center>
 <img src="../DebianImages.assets/Screenshot_2020-04-23_07-31-23-1587627343117.png" alt="Screenshot_2020-04-23_07-31-23">
+</center>
 
 <p><strong>Note:</strong> The kernel used is not Debian native. Debian rootfs image which is bootstrapped by the PX30 u-boot &amp; Kernel.</p>
 <br>
@@ -169,7 +176,9 @@
 <br>
 
 <h3 id="What-you-will-see-using-ADLINK-Ubuntu-image-with-xfce-desktop" class="article-heading"><a href="#What-you-will-see-using-ADLINK-Ubuntu-image-with-xfce-desktop" class="headerlink" title="What you will see (using ADLINK Ubuntu image with xfce desktop)"></a>What you will see (using ADLINK Ubuntu image with xfce desktop)<a onclick="parent.postMessage( {msg: '?page=Tutorial5-HowToFlashDebianImage.html#What-you-will-see-using-ADLINK-Ubuntu-image-with-xfce-desktop'}, '*');" class="article-anchor" href="#What-you-will-see-using-ADLINK-Ubuntu-image-with-xfce-desktop" aria-hidden="true"></a></h3><p>Boot the system with the SD card placed in the slot located on the carrier, once booted you will see the login screen:</p>
+<center>
 <img src="../UbuntuImages.assets/Screenshot_2020-01-08_11-51-14.png" alt="Screenshot_2020-04-23_07-31-23">
+</center>
 
 <p><strong>Note:</strong> The kernel used is not Ubuntu native. Ubuntu rootfs image which is bootstrapped by the PX30 u-boot &amp; Kernel.</p>
 <br>
@@ -181,7 +190,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2022-08-25T08:07:09.260Z" itemprop="dateModified">Last updated: 2022-08-25</time>
+                <time class="article-footer-updated" datetime="2022-12-06T07:15:13.172Z" itemprop="dateModified">Last updated: 2022-12-06</time>
                 <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -191,7 +200,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image"><span class="toc-text">title: Tutorial 5 - How to flash Debian&#x2F;Ubuntu image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-using-ADLINK-Debian-image-with-xfce-desktop"><span class="toc-text">What you will see (using ADLINK Debian image with xfce desktop)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Usernames-and-passwords"><span class="toc-text">Usernames and passwords</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-using-ADLINK-Ubuntu-image-with-xfce-desktop"><span class="toc-text">What you will see (using ADLINK Ubuntu image with xfce desktop)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Usernames-and-passwords-1"><span class="toc-text">Usernames and passwords</span></a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tutorial-5-How-to-flash-Debian-x2F-Ubuntu-image"><span class="toc-text">Tutorial 5 - How to flash Debian&#x2F;Ubuntu image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-using-ADLINK-Debian-image-with-xfce-desktop"><span class="toc-text">What you will see (using ADLINK Debian image with xfce desktop)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Usernames-and-passwords"><span class="toc-text">Usernames and passwords</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you-will-see-using-ADLINK-Ubuntu-image-with-xfce-desktop"><span class="toc-text">What you will see (using ADLINK Ubuntu image with xfce desktop)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Usernames-and-passwords-1"><span class="toc-text">Usernames and passwords</span></a></li></ol></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
