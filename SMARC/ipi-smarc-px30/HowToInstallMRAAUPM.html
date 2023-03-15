@@ -69,12 +69,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="## What is MRAA&#x2F;UPM    Eclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches">
+  <meta name="description" content="What is MRAA&#x2F;UPMEclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numb">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToInstallMRAAUPM.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="## What is MRAA&#x2F;UPM    Eclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches">
+<meta property="og:description" content="What is MRAA&#x2F;UPMEclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numb">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToInstallMRAA.assets/image-20201013143405250.png">
 <meta property="article:published_time" content="2023-03-15T03:16:36.835Z">
@@ -113,7 +113,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#HowToInstallMRAAUPM.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html'}, '*');}</script>
 
 	</div>
 	
@@ -141,133 +141,115 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <div class = "bullets">
+                <div class="bullets">
 
-## What is MRAA/UPM 
-
-
-Eclipse MRAA/UPM is a C/C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names/numbering matches the board that you are on. Use of libmraa does not tie you to specific hardware with board detection done at runtime you can create portable code that will work across the supported platforms.
-
-The intent is to make it easier for developers and sensor manufacturers to map their sensors & actuators on top of supported hardware and to allow control of low level communication protocol by high level languages & constructs. Also. please refer to [Introduction to MRAA](https://projects.eclipse.org/proposals/eclipse-mraa) & [Introduction to UPM](https://upm.mraa.io/) for more details.
-
+<h2 id="What-is-MRAA-x2F-UPM" class="article-heading"><a href="#What-is-MRAA-x2F-UPM" class="headerlink" title="What is MRAA&#x2F;UPM"></a>What is MRAA&#x2F;UPM<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#What-is-MRAA-x2F-UPM'}, '*');" class="article-anchor" href="#What-is-MRAA-x2F-UPM" aria-hidden="true"></a></h2><p>Eclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches the board that you are on. Use of libmraa does not tie you to specific hardware with board detection done at runtime you can create portable code that will work across the supported platforms.</p>
+<p>The intent is to make it easier for developers and sensor manufacturers to map their sensors &amp; actuators on top of supported hardware and to allow control of low level communication protocol by high level languages &amp; constructs. Also. please refer to <a target="_blank" rel="noopener external nofollow noreferrer" href="https://projects.eclipse.org/proposals/eclipse-mraa">Introduction to MRAA</a> &amp; <a target="_blank" rel="noopener external nofollow noreferrer" href="https://upm.mraa.io/">Introduction to UPM</a> for more details.</p>
 <center>
-<img src="HowToInstallMRAA.assets/image-20201013143405250.png" alt="image-20201013143405250" style="zoom: 33%;" />
+<img src="HowToInstallMRAA.assets/image-20201013143405250.png" alt="image-20201013143405250" style="zoom: 33%;">
 </center>
 
-**Note:** 
-
-1. By default, MRAA/UPM library is already on PX30 Yocto/Ubuntu/Debian images. 
-
-3. ADLINK MRAA libraries has been contributed to [**Eclipse MRAA GitHub**]( https://github.com/eclipse/mraa) which is supported on **LEC-PX30 & LEC-AL-AI with industrial I-Pi SMARC** 
-
+<p><strong>Note:</strong> </p>
+<ol>
+<li><p>By default, MRAA&#x2F;UPM library is already on PX30 Yocto&#x2F;Ubuntu&#x2F;Debian images. </p>
+</li>
+<li><p>ADLINK MRAA libraries has been contributed to <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/eclipse/mraa"><strong>Eclipse MRAA GitHub</strong></a> which is supported on <strong>LEC-PX30 &amp; LEC-AL-AI with industrial I-Pi SMARC</strong></p>
+</li>
+</ol>
 <br>
 
 
-##  How to build & install MRAA/UPM on Yocto/Ubuntu/Debian
-
-* [Guideline to Debian](HowToInstallMRAAUPM.html#Debian)
-* [Guideline to Ubuntu](HowToInstallMRAAUPM.html#Ubuntu)
-* [Guideline to Yocto](HowToInstallMRAAUPM.html#Yocto)
-
+<h2 id="How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" class="article-heading"><a href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" class="headerlink" title="How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian"></a>How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian'}, '*');" class="article-anchor" href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" aria-hidden="true"></a></h2><ul>
+<li><a href="HowToInstallMRAAUPM.html#Debian">Guideline to Debian</a></li>
+<li><a href="HowToInstallMRAAUPM.html#Ubuntu">Guideline to Ubuntu</a></li>
+<li><a href="HowToInstallMRAAUPM.html#Yocto">Guideline to Yocto</a></li>
+</ul>
 <br>
 
-### Debian
-
-#### Building & Installing MRAA
-
-1. Install required dependencies.
-
+<h3 id="Debian" class="article-heading"><a href="#Debian" class="headerlink" title="Debian"></a>Debian<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Debian'}, '*');" class="article-anchor" href="#Debian" aria-hidden="true"></a></h3><h4 id="Building-amp-Installing-MRAA" class="article-heading"><a href="#Building-amp-Installing-MRAA" class="headerlink" title="Building &amp; Installing MRAA"></a>Building &amp; Installing MRAA<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-MRAA'}, '*');" class="article-anchor" href="#Building-amp-Installing-MRAA" aria-hidden="true"></a></h4><ol>
+<li>Install required dependencies.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git build-essential swig3.0 python-dev libnode-dev cmake libjson-c-dev</span><br></pre></td></tr></table></figure>
 
-2. Before compiling MRAA/UPM source, need to downgrade the already installed cmake utility. Please download cmake.zip form [here](https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/cmake.zip).
-
+<ol start="2">
+<li>Before compiling MRAA&#x2F;UPM source, need to downgrade the already installed cmake utility. Please download cmake.zip form <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/cmake.zip">here</a>.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt purge --autoremove cmake</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> unzip cmake.zip</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> cmake</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo dpkg -i *.deb</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-3. Download MRAA source from GitHub and compile.
-
+<ol start="3">
+<li>Download MRAA source from GitHub and compile.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/eclipse/mraa.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cmake /home/adlink/mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-**Note**: If user requires adlink test applications apply patch and build. please download git patch from [here](https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/mraa.patch).
-
+<p><strong>Note</strong>: If user requires adlink test applications apply patch and build. please download git patch from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/mraa.patch">here</a>.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/eclipse/mraa.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git apply mraa.patch</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cmake /home/adlink/mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-5. After install user can remove mraa source.
-
+<ol start="5">
+<li>After install user can remove mraa source.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf mraa</span><br></pre></td></tr></table></figure>
 
-**Note:** Example applications get installed into **/usr/local/share/mraa/examples/c**
-
-#### Building & Installing UPM
-1. Install required dependencies
-
+<p><strong>Note:</strong> Example applications get installed into <strong>&#x2F;usr&#x2F;local&#x2F;share&#x2F;mraa&#x2F;examples&#x2F;c</strong></p>
+<h4 id="Building-amp-Installing-UPM" class="article-heading"><a href="#Building-amp-Installing-UPM" class="headerlink" title="Building &amp; Installing UPM"></a>Building &amp; Installing UPM<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-UPM'}, '*');" class="article-anchor" href="#Building-amp-Installing-UPM" aria-hidden="true"></a></h4><ol>
+<li>Install required dependencies</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install automake libpcre3-dev bison pkg-config libnode-dev  python3-distutils python3-dev libjpeg-dev</span></span><br></pre></td></tr></table></figure>
 
-2. Download SWIG source and compile.
-
+<ol start="2">
+<li>Download SWIG source and compile.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/swig/swig.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> swig</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./autogen.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./configure</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-3. Download UPM source and compile.
-
+<ol start="3">
+<li>Download UPM source and compile.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/eclipse/upm.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> upm</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir build</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> build</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cmake .. <span class="string">&quot;-DBUILDEXAMPLES=on&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-4. After installing, user can remove swig and upm sources.
-
+<ol start="4">
+<li>After installing, user can remove swig and upm sources.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -rf swig</span> </span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -rf upm</span></span><br></pre></td></tr></table></figure>
 
-5. Update LD_LIBRARY_PATH.
-
+<ol start="5">
+<li>Update LD_LIBRARY_PATH.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ldconfig</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
-### Ubuntu
-
-#### Building & Installing MRAA 
-
-1. Install required dependencies.
-
+<h3 id="Ubuntu" class="article-heading"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Ubuntu'}, '*');" class="article-anchor" href="#Ubuntu" aria-hidden="true"></a></h3><h4 id="Building-amp-Installing-MRAA-1" class="article-heading"><a href="#Building-amp-Installing-MRAA-1" class="headerlink" title="Building &amp; Installing MRAA"></a>Building &amp; Installing MRAA<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-MRAA-1'}, '*');" class="article-anchor" href="#Building-amp-Installing-MRAA-1" aria-hidden="true"></a></h4><ol>
+<li>Install required dependencies.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git build-essential swig3.0 python-dev nodejs-dev cmake libjson-c-dev</span><br></pre></td></tr></table></figure>
 
-2. Download MRAA source from GitHub and compile.
-
+<ol start="2">
+<li>Download MRAA source from GitHub and compile.</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/eclipse/mraa.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cmake /home/adlink/mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-**Note:** If user requires adlink test applications apply patch and build. Please download git patch from [here](https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/mraa.patch).
-
+<p><strong>Note:</strong> If user requires adlink test applications apply patch and build. Please download git patch from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/mraa.patch">here</a>.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/eclipse/mraa.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git apply mraa.patch</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cmake /home/adlink/mraa</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-After install user can remove mraa source.
-
+<p>After install user can remove mraa source.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf mraa</span><br></pre></td></tr></table></figure>
 
-**Note:** Example applications get installed into **/usr/local/share/mraa/examples/c**
-
-#### Building & Installing UPM   
-
-Install required dependencies on ubuntu.
-
+<p><strong>Note:</strong> Example applications get installed into <strong>&#x2F;usr&#x2F;local&#x2F;share&#x2F;mraa&#x2F;examples&#x2F;c</strong></p>
+<h4 id="Building-amp-Installing-UPM-1" class="article-heading"><a href="#Building-amp-Installing-UPM-1" class="headerlink" title="Building &amp; Installing UPM"></a>Building &amp; Installing UPM<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-UPM-1'}, '*');" class="article-anchor" href="#Building-amp-Installing-UPM-1" aria-hidden="true"></a></h4><p>Install required dependencies on ubuntu.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install automake libpcre3-dev bison pkg-config nodejs-dev python3-distutils python3-dev libjpeg-dev</span></span><br></pre></td></tr></table></figure>
 
-Download SWIG source and compile.
-
+<p>Download SWIG source and compile.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/swig/swig.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> swig</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./autogen.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./configure</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-Download UPM source and compile.
-
+<p>Download UPM source and compile.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/eclipse/upm.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> upm</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir build</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> build</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cmake .. <span class="string">&quot;-DBUILDEXAMPLES=on&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
 
-After installing, user can remove swig and upm sources.
-
+<p>After installing, user can remove swig and upm sources.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -rf swig</span> </span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -rf upm</span></span><br></pre></td></tr></table></figure>
 
-Update LD_LIBRARY_PATH.
-
+<p>Update LD_LIBRARY_PATH.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ldconfig</span></span><br></pre></td></tr></table></figure>
 
-### Yocto
-
-Intel mraa recipe is [here](http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-iot-middleware/tree/recipes-devtools?h=daisy) and please add it to your building Yocto.
-
+<h3 id="Yocto" class="article-heading"><a href="#Yocto" class="headerlink" title="Yocto"></a>Yocto<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Yocto'}, '*');" class="article-anchor" href="#Yocto" aria-hidden="true"></a></h3><p>Intel mraa recipe is <a target="_blank" rel="noopener external nofollow noreferrer" href="http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-iot-middleware/tree/recipes-devtools?h=daisy">here</a> and please add it to your building Yocto.</p>
 </div>
 
 <style>
@@ -291,7 +273,7 @@ Intel mraa recipe is [here](http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-MRAA-x2F-UPM"><span class="toc-text">What is MRAA&#x2F;UPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian"><span class="toc-text">How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Debian"><span class="toc-text">Debian</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-amp-Installing-MRAA"><span class="toc-text">Building &amp; Installing MRAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-amp-Installing-UPM"><span class="toc-text">Building &amp; Installing UPM</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu"><span class="toc-text">Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-amp-Installing-MRAA-1"><span class="toc-text">Building &amp; Installing MRAA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-amp-Installing-UPM-1"><span class="toc-text">Building &amp; Installing UPM</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yocto"><span class="toc-text">Yocto</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

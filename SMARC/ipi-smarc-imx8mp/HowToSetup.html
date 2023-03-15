@@ -111,7 +111,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToSetup.html#HowToSetup.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToSetup.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,11 +139,11 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h2 id="Quick-Start-Instructions" class="article-heading"><a href="#Quick-Start-Instructions" class="headerlink" title="Quick Start Instructions"></a>Quick Start Instructions<a class="article-anchor" href="#Quick-Start-Instructions" aria-hidden="true"></a></h2><p> All kits are shipped with a USB (UMS) enabled Uboot loader. All instructions provided below assume that your kit is in the state as you received it originally.</p>
+                <h2 id="Quick-Start-Instructions" class="article-heading"><a href="#Quick-Start-Instructions" class="headerlink" title="Quick Start Instructions"></a>Quick Start Instructions<a onclick="parent.postMessage( {msg: '?page=HowToSetup.html#Quick-Start-Instructions'}, '*');" class="article-anchor" href="#Quick-Start-Instructions" aria-hidden="true"></a></h2><p> All kits are shipped with a USB (UMS) enabled Uboot loader. All instructions provided below assume that your kit is in the state as you received it originally.</p>
 <ul>
 <li><p>From here on your I-PI Kit is referred to as “target”, and for example your notebook is referred to as “development host”</p>
 </li>
-<li><p>Download a prebuilt image  (Yocto/Ubuntu/Android/Debian) from our downloads page to your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a>.</p>
+<li><p>Download a prebuilt image  (Yocto&#x2F;Ubuntu&#x2F;Android&#x2F;Debian) from our downloads page to your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a>.</p>
 </li>
 <li><p>Connect the power cable, mouse, keyboard, HDMI cable and LAN cable to the target and power it up.</p>
 </li>
@@ -157,7 +157,9 @@
 </li>
 </ul>
 <p><strong>Note</strong> that after flashing your image to the eMMC, the bootloader gets over written by a non USB (UMS) enabled bootloader !<br>To recreate the factory situation of being able to connect to eMMC storage from the host system, you can also boot a SDcard that conatincs the same USB enabled bootloader that you can download here</p>
-<p>  <br></p>
+  <br>
+
+
 <p><strong>Watch our video on quick start connections out of the box and booting into Wayland</strong>:</p>
 <center>
 

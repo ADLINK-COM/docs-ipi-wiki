@@ -69,12 +69,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to enable eIQ on IMX8MP  This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.  - [TensorFlowLite](#Enabling-NPU-and-CPU-on-TensorFlowLite)  - [OpenCV](#Enabling-">
+  <meta name="description" content="How to enable eIQ on IMX8MP  This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.  TensorFlowLite  OpenCV   Prerequisites Download the prebuilt full Yocto Image (2G&amp;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToEnableeIQ.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to enable eIQ on IMX8MP  This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.  - [TensorFlowLite](#Enabling-NPU-and-CPU-on-TensorFlowLite)  - [OpenCV](#Enabling-">
+<meta property="og:description" content="How to enable eIQ on IMX8MP  This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.  TensorFlowLite  OpenCV   Prerequisites Download the prebuilt full Yocto Image (2G&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToEnableeIQ.assets/GraceHopper.jpg">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToEnableeIQ.assets/ObjectDetectionImage.jpg">
@@ -115,7 +115,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToEnableeIQ.html#HowToEnableeIQ.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToEnableeIQ.html'}, '*');}</script>
 
 	</div>
 	
@@ -143,140 +143,110 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-enable-eIQ-on-IMX8MP" class="article-heading"><a href="#How-to-enable-eIQ-on-IMX8MP" class="headerlink" title="How to enable eIQ on IMX8MP"></a>How to enable eIQ on IMX8MP<a class="article-anchor" href="#How-to-enable-eIQ-on-IMX8MP" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="How-to-enable-eIQ-on-IMX8MP" class="article-heading"><a href="#How-to-enable-eIQ-on-IMX8MP" class="headerlink" title="How to enable eIQ on IMX8MP"></a>How to enable eIQ on IMX8MP<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#How-to-enable-eIQ-on-IMX8MP'}, '*');" class="article-anchor" href="#How-to-enable-eIQ-on-IMX8MP" aria-hidden="true"></a></h1><div class="bullets">
 
-This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.
-
-- [TensorFlowLite](#Enabling-NPU-and-CPU-on-TensorFlowLite)
-
-- [OpenCV](#Enabling-CPU-on-OpenCV)
-
-## **Prerequisites**
-- Download the prebuilt full Yocto Image (2G/4G). Use any of the following methods to flash the Yocto Image on the targeted device,
-  - Flashing the image in SD card [click here](HowToFlashImageSD.html).
-  - Flashing the image in eMMC [click here](HowToFlashImageeMMC.html).
-  - Flashing the image in eMMC using UUU tool [click here](HowToFlashImageeMMCUsingUUUTool.html).
-
-- Once flashed the Yocto Image on targeted device turn on it and go to the Yocto terminal which is located on your left corner top side of the screen.
-
-- According to the NXP source by far the NPU only enabled on armNN, ONNX, TensorFlowLite and DeepViewRT rest of them run on CPU only.
-
-## Enabling NPU and CPU on TensorFlowLite
-TensorFlow Lite is an open-source software library focused on running machine learning models and embedded devices. It enables on-device machine learning inference with low latency and small binary size.
-
-#### Features
-- TensorFlow Lite v2.5.0
-- Multithreaded computation with acceleration using Arm Neon SIMD instructions on Cortex-A cores.
-- Parallel computation using GPU/NPU hardware acceleration.
-- C++ and Python API (supported Python version 3).
-
-A Yocto Linux BSP Image with machine learning layer included by default contains a simple preinstalled example called 'label_image' usable with image classification models. The example file is located at: `/usr/bin/tensorflow-lite-2.5.0/examples`.
-
-Go to:
-
+<p>This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.</p>
+<ul>
+<li><p><a href="#Enabling-NPU-and-CPU-on-TensorFlowLite">TensorFlowLite</a></p>
+</li>
+<li><p><a href="#Enabling-CPU-on-OpenCV">OpenCV</a></p>
+</li>
+</ul>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<li><p>Download the prebuilt full Yocto Image (2G&#x2F;4G). Use any of the following methods to flash the Yocto Image on the targeted device,</p>
+<ul>
+<li>Flashing the image in SD card <a href="HowToFlashImageSD.html">click here</a>.</li>
+<li>Flashing the image in eMMC <a href="HowToFlashImageeMMC.html">click here</a>.</li>
+<li>Flashing the image in eMMC using UUU tool <a href="HowToFlashImageeMMCUsingUUUTool.html">click here</a>.</li>
+</ul>
+</li>
+<li><p>Once flashed the Yocto Image on targeted device turn on it and go to the Yocto terminal which is located on your left corner top side of the screen.</p>
+</li>
+<li><p>According to the NXP source by far the NPU only enabled on armNN, ONNX, TensorFlowLite and DeepViewRT rest of them run on CPU only.</p>
+</li>
+</ul>
+<h2 id="Enabling-NPU-and-CPU-on-TensorFlowLite" class="article-heading"><a href="#Enabling-NPU-and-CPU-on-TensorFlowLite" class="headerlink" title="Enabling NPU and CPU on TensorFlowLite"></a>Enabling NPU and CPU on TensorFlowLite<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Enabling-NPU-and-CPU-on-TensorFlowLite'}, '*');" class="article-anchor" href="#Enabling-NPU-and-CPU-on-TensorFlowLite" aria-hidden="true"></a></h2><p>TensorFlow Lite is an open-source software library focused on running machine learning models and embedded devices. It enables on-device machine learning inference with low latency and small binary size.</p>
+<h4 id="Features" class="article-heading"><a href="#Features" class="headerlink" title="Features"></a>Features<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Features'}, '*');" class="article-anchor" href="#Features" aria-hidden="true"></a></h4><ul>
+<li>TensorFlow Lite v2.5.0</li>
+<li>Multithreaded computation with acceleration using Arm Neon SIMD instructions on Cortex-A cores.</li>
+<li>Parallel computation using GPU&#x2F;NPU hardware acceleration.</li>
+<li>C++ and Python API (supported Python version 3).</li>
+</ul>
+<p>A Yocto Linux BSP Image with machine learning layer included by default contains a simple preinstalled example called ‘label_image’ usable with image classification models. The example file is located at: <code>/usr/bin/tensorflow-lite-2.5.0/examples</code>.</p>
+<p>Go to:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/bin/tensorflow-lite-2.5.0/examples</span><br></pre></td></tr></table></figure>
 
 
 <img src="HowToEnableeIQ.assets\GraceHopper.jpg" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-This is a sample image we used to test the CPU and NPU. You can use your own image but it must be in (.bmp) format.
-
-To run the example with mobilenet model on the CPU, use the following command,
-
+<p>This is a sample image we used to test the CPU and NPU. You can use your own image but it must be in (.bmp) format.</p>
+<p>To run the example with mobilenet model on the CPU, use the following command,</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./label_image -m mobilenet_v1_1.0_224_quant.tflite -i grace_hopper.bmp -l labels.txt</span><br></pre></td></tr></table></figure>
 
-The output of a successful classification for the 'grace_hopper.bmp' input image is as follows:
-
+<p>The output of a successful classification for the ‘grace_hopper.bmp’ input image is as follows:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Loaded model mobilenet_v1_1.0_224_quant.tflite</span><br><span class="line">resolved reporter</span><br><span class="line">invoked</span><br><span class="line">average time: 39.271 ms</span><br><span class="line">0.780392: 653 military uniform</span><br><span class="line">0.105882: 907 Windsor tie</span><br><span class="line">0.0156863: 458 bow tie</span><br><span class="line">0.0117647: 466 bulletproof vest</span><br><span class="line">0.00784314: 835 suit</span><br></pre></td></tr></table></figure>
 
-To run the example application on the CPU with using the XNNPACK delegate, use the -x 1 switch,
-
+<p>To run the example application on the CPU with using the XNNPACK delegate, use the -x 1 switch,</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./label_image -m mobilenet_v1_1.0_224_quant.tflite -i grace_hopper.bmp -l labels.txt -x 1</span><br></pre></td></tr></table></figure>
 
-To run the example with the same model on the GPU/NPU hardware accelerator, add the -a 1 (for NNAPI Delegate) or -V 1 (for VX Delegate) command line argument. To differentiate between the 3D GPU and the NPU, use the USE_GPU_INFERENCE switch. For example, to run the model accelerated on the NPU hardware using NNAPI Delegate, use this command:
-
+<p>To run the example with the same model on the GPU&#x2F;NPU hardware accelerator, add the -a 1 (for NNAPI Delegate) or -V 1 (for VX Delegate) command line argument. To differentiate between the 3D GPU and the NPU, use the USE_GPU_INFERENCE switch. For example, to run the model accelerated on the NPU hardware using NNAPI Delegate, use this command:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">USE_GPU_INFERENCE=0 ./label_image -m mobilenet_v1_1.0_224_quant.tflite -i grace_hopper.bmp -l labels.txt -a 1</span><br></pre></td></tr></table></figure>
 
-The output with NPU acceleration enabled should be as follows:
-
+<p>The output with NPU acceleration enabled should be as follows:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Loaded model mobilenet_v1_1.0_224_quant.tflite</span><br><span class="line">resolved reporter</span><br><span class="line">INFO: Created TensorFlow Lite delegate for NNAPI.</span><br><span class="line">Applied NNAPI delegate.</span><br><span class="line">invoked</span><br><span class="line">average time: 2.967 ms</span><br><span class="line">0.74902: 653 military uniform</span><br><span class="line">0.121569: 907 Windsor tie</span><br><span class="line">0.0196078: 458 bow tie</span><br><span class="line">0.0117647: 466 bulletproof vest</span><br><span class="line">0.00784314: 835 suit</span><br></pre></td></tr></table></figure>
-### Running Benchmark Applications
-A Yocto Linux BSP image with machine learning layer included by default contains a pre-installed benchmarking application. It performs a simple TensorFlow Lite model inference and prints benchmarking information. The application binary file is located at: /usr/bin/tensorflow-lite-2.5.0/examples.
-
-Go to the directory:
-
+<h3 id="Running-Benchmark-Applications" class="article-heading"><a href="#Running-Benchmark-Applications" class="headerlink" title="Running Benchmark Applications"></a>Running Benchmark Applications<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Running-Benchmark-Applications'}, '*');" class="article-anchor" href="#Running-Benchmark-Applications" aria-hidden="true"></a></h3><p>A Yocto Linux BSP image with machine learning layer included by default contains a pre-installed benchmarking application. It performs a simple TensorFlow Lite model inference and prints benchmarking information. The application binary file is located at: &#x2F;usr&#x2F;bin&#x2F;tensorflow-lite-2.5.0&#x2F;examples.</p>
+<p>Go to the directory:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/bin/tensorflow-lite-2.5.0/examples</span><br></pre></td></tr></table></figure>
 
-To run the benchmark with computation on CPU, use the following command:
-
+<p>To run the benchmark with computation on CPU, use the following command:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./benchmark_model --graph=mobilenet_v1_1.0_224_quant.tflite</span><br></pre></td></tr></table></figure>
 
-You can optionally specify the number of threads with the --num_threads=X parameter to run the inference on multiple cores. For highest performance, set X to the number of cores available.
-
-The output of the benchmarking application should be similar to:
-
+<p>You can optionally specify the number of threads with the –num_threads&#x3D;X parameter to run the inference on multiple cores. For highest performance, set X to the number of cores available.</p>
+<p>The output of the benchmarking application should be similar to:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">STARTING!</span><br><span class="line">Duplicate flags: num_threads</span><br><span class="line">Min num runs: [50]</span><br><span class="line">Min runs duration (seconds): [1]</span><br><span class="line">Max runs duration (seconds): [150]</span><br><span class="line">Inter-run delay (seconds): [-1]</span><br><span class="line">Num threads: [1]</span><br><span class="line">Use caching: [0]</span><br><span class="line">Benchmark name: []</span><br><span class="line">Output prefix: []</span><br><span class="line">Min warmup runs: [1]</span><br><span class="line">Min warmup runs duration (seconds): [0.5]</span><br><span class="line">Graph: [mobilenet_v1_1.0_224_quant.tflite]</span><br><span class="line">Input layers: []</span><br><span class="line">Input shapes: []</span><br><span class="line">Input value ranges: []</span><br><span class="line">Input layer values files: []</span><br><span class="line">Allow fp16 : [0]</span><br><span class="line">Require full delegation : [0]</span><br><span class="line">Enable op profiling: [0]</span><br><span class="line">Max profiling buffer entries: [1024]</span><br><span class="line">CSV File to export profiling data to: []</span><br><span class="line">Enable platform-wide tracing: [0]</span><br><span class="line">#threads used for CPU inference: [1]</span><br><span class="line">Max number of delegated partitions : [0]</span><br><span class="line">Min nodes per partition : [0]</span><br><span class="line">Loaded model mobilenet_v1_1.0_224_quant.tflite</span><br><span class="line">The input model file size (MB): 4.27635</span><br><span class="line">Initialized session in 93.252ms.</span><br><span class="line">Running benchmark for at least 1 iterations and at least 0.5 seconds but terminate if exceeding</span><br><span class="line">150 seconds.</span><br><span class="line">count=4 first=147477 curr=140410 min=140279 max=147477 avg=142382 std=2971</span><br><span class="line">Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding</span><br><span class="line">150 seconds.</span><br><span class="line">count=50 first=140422 curr=140269 min=140269 max=140532 avg=140391 std=67</span><br><span class="line">Inference timings in us: Init: 93252, First inference: 147477, Warmup (avg): 142382, Inference</span><br><span class="line">(avg): 140391</span><br><span class="line">Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the</span><br><span class="line">actual memory footprint of the model at runtime. Take the information at your discretion.</span><br><span class="line">Peak memory footprint (MB): init=3.14062 overall=10.043</span><br></pre></td></tr></table></figure>
 
-To run the inference using the XNNPACK delegate, add the --use_xnnpack=true switch:
-
+<p>To run the inference using the XNNPACK delegate, add the –use_xnnpack&#x3D;true switch:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./benchmark_model --graph=mobilenet_v1_1.0_224_quant.tflite --use_xnnpack=true</span><br></pre></td></tr></table></figure>
 
-To run the inference using the GPU/NPU hardware accelerator, add the --use_nnapi=true (for NNAPI Delegate) or -- use_vxdelegate=true (for VX Delegate) switch:
-
+<p>To run the inference using the GPU&#x2F;NPU hardware accelerator, add the –use_nnapi&#x3D;true (for NNAPI Delegate) or – use_vxdelegate&#x3D;true (for VX Delegate) switch:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./benchmark_model --graph=mobilenet_v1_1.0_224_quant.tflite --use_nnapi=true</span><br></pre></td></tr></table></figure>
 
-The output with GPU/NPU module acceleration enabled should be similar to:
-
+<p>The output with GPU&#x2F;NPU module acceleration enabled should be similar to:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">STARTING!</span><br><span class="line">Duplicate flags: num_threads</span><br><span class="line">Min num runs: [50]</span><br><span class="line">Min runs duration (seconds): [1]</span><br><span class="line">Max runs duration (seconds): [150]</span><br><span class="line">Inter-run delay (seconds): [-1]</span><br><span class="line">Num threads: [1]</span><br><span class="line">Use caching: [0]</span><br><span class="line">Benchmark name: []</span><br><span class="line">Output prefix: []</span><br><span class="line">Min warmup runs: [1]</span><br><span class="line">Min warmup runs duration (seconds): [0.5]</span><br><span class="line">Graph: [mobilenet_v1_1.0_224_quant.tflite]</span><br><span class="line">Input layers: []</span><br><span class="line">Input shapes: []</span><br><span class="line">Input value ranges: []</span><br><span class="line">Input layer values files: []</span><br><span class="line">Allow fp16 : [0]</span><br><span class="line">Require full delegation : [0]</span><br><span class="line">Enable op profiling: [0]</span><br><span class="line">Max profiling buffer entries: [1024]</span><br><span class="line">CSV File to export profiling data to: []</span><br><span class="line">Enable platform-wide tracing: [0]</span><br><span class="line">#threads used for CPU inference: [1]</span><br><span class="line">Max number of delegated partitions : [0]</span><br><span class="line">Min nodes per partition : [0]</span><br><span class="line">Loaded model mobilenet_v1_1.0_224_quant.tflite</span><br><span class="line">INFO: Created TensorFlow Lite delegate for NNAPI.</span><br><span class="line">Applied NNAPI delegate, and the model graph will be completely executed w/ the delegate.</span><br><span class="line">The input model file size (MB): 4.27635</span><br><span class="line">Initialized session in 18.648ms.</span><br><span class="line">Running benchmark for at least 1 iterations and at least 0.5 seconds but terminate if exceeding</span><br><span class="line">150 seconds.</span><br><span class="line">count=1 curr=5969598</span><br><span class="line">Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding</span><br><span class="line">150 seconds.</span><br><span class="line">count=306 first=3321 curr=3171 min=3161 max=3321 avg=3188.46 std=18</span><br><span class="line">Inference timings in us: Init: 18648, First inference: 5969598, Warmup (avg): 5.9696e+06, Inference</span><br><span class="line">(avg): 3188.46</span><br><span class="line">Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the</span><br><span class="line">actual memory footprint of the model at runtime. Take the information at your discretion.</span><br><span class="line">Peak memory footprint (MB): init=7.60938 overall=33.7773</span><br></pre></td></tr></table></figure>
 
-## Enabling CPU on OpenCV
-
-OpenCV is an open-source computer vision library and one of its modules, called ML, provides traditional machine learning algorithms. OpenCV offers a unified solution for both neural network inference (DNN module) and classic machine learning algorithms (ML module).
-
-### Features
-- OpenCV 4.5.2
-- C++ and Python API (supported Python version 3)
-- Only CPU computation is supported
-- Input image or live camera (webcam) is supported
-
-OpenCV DNN demos (binaries) are located at: /usr/share/OpenCV/samples/bin.
-
-Input data, and model configurations are located at: /usr/share/opencv4/testdata/dnn.
-
-To check the OpenCV sample algorithms, we don't need to install anything new because everything is already installed. Before running the DNN model, you have to copy all the content from the below link, create a file called model.yaml, and paste all the content into it. Copy the classes from the following link as well. Using a USB pen drive, copy the model.yaml file and classes file, then connect the USB pen drive to the carrier module.
-
-To download model.yaml click here(https://raw.githubusercontent.com/opencv/opencv/4.5.2/samples/dnn/models.yml)
-
-To download classes for the model click here(https://github.com/arunponnusamy/object-detection-opencv/blob/master/yolov3.txt)
-
-To copy the model.yaml file from the USB pen drive to yocto follow the commands:
+<h2 id="Enabling-CPU-on-OpenCV" class="article-heading"><a href="#Enabling-CPU-on-OpenCV" class="headerlink" title="Enabling CPU on OpenCV"></a>Enabling CPU on OpenCV<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Enabling-CPU-on-OpenCV'}, '*');" class="article-anchor" href="#Enabling-CPU-on-OpenCV" aria-hidden="true"></a></h2><p>OpenCV is an open-source computer vision library and one of its modules, called ML, provides traditional machine learning algorithms. OpenCV offers a unified solution for both neural network inference (DNN module) and classic machine learning algorithms (ML module).</p>
+<h3 id="Features-1" class="article-heading"><a href="#Features-1" class="headerlink" title="Features"></a>Features<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Features-1'}, '*');" class="article-anchor" href="#Features-1" aria-hidden="true"></a></h3><ul>
+<li>OpenCV 4.5.2</li>
+<li>C++ and Python API (supported Python version 3)</li>
+<li>Only CPU computation is supported</li>
+<li>Input image or live camera (webcam) is supported</li>
+</ul>
+<p>OpenCV DNN demos (binaries) are located at: &#x2F;usr&#x2F;share&#x2F;OpenCV&#x2F;samples&#x2F;bin.</p>
+<p>Input data, and model configurations are located at: &#x2F;usr&#x2F;share&#x2F;opencv4&#x2F;testdata&#x2F;dnn.</p>
+<p>To check the OpenCV sample algorithms, we don’t need to install anything new because everything is already installed. Before running the DNN model, you have to copy all the content from the below link, create a file called model.yaml, and paste all the content into it. Copy the classes from the following link as well. Using a USB pen drive, copy the model.yaml file and classes file, then connect the USB pen drive to the carrier module.</p>
+<p>To download model.yaml click here(<a target="_blank" rel="noopener external nofollow noreferrer" href="https://raw.githubusercontent.com/opencv/opencv/4.5.2/samples/dnn/models.yml">https://raw.githubusercontent.com/opencv/opencv/4.5.2/samples/dnn/models.yml</a>)</p>
+<p>To download classes for the model click here(<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/arunponnusamy/object-detection-opencv/blob/master/yolov3.txt">https://github.com/arunponnusamy/object-detection-opencv/blob/master/yolov3.txt</a>)</p>
+<p>To copy the model.yaml file from the USB pen drive to yocto follow the commands:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df -h</span><br><span class="line"></span><br><span class="line">cd /run/media/sda1 (or) sdb1</span><br><span class="line"></span><br><span class="line">cp model.yaml /usr/share/OpenCV/samples/bin (for model.yaml)</span><br><span class="line"></span><br><span class="line">cp object_detection_classes_yolov3.txt /usr/share/opencv4/testdata/dnn (for classes)</span><br></pre></td></tr></table></figure>
 
-### YOLO object detection example
-
-Running the C++ example with image input from the default location:
-
+<h3 id="YOLO-object-detection-example" class="article-heading"><a href="#YOLO-object-detection-example" class="headerlink" title="YOLO object detection example"></a>YOLO object detection example<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#YOLO-object-detection-example'}, '*');" class="article-anchor" href="#YOLO-object-detection-example" aria-hidden="true"></a></h3><p>Running the C++ example with image input from the default location:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/usr/share/OpenCV/samples/data/dnn</span><br></pre></td></tr></table></figure>
 
 
-Executing with image or video file:
-
+<p>Executing with image or video file:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./example_dnn_object_detection --config=[PATH-TO-DARKNET]/cfg/yolo.cfg --model=[PATH-TO-DARKNET]/yolo.weights --classes=[PATH-TO-DARKNET]/object_detection_classes_yolov3.txt --width=416 --height=416 --scale=0.00392 --input=[PATH-TO-IMAGE-OR-VIDEO-FILE] –rgb</span><br></pre></td></tr></table></figure>
 
 
-For our case,
-
+<p>For our case,</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./example_dnn_object_detection --config=/usr/share/opencv4/testdata/dnn/yolov3.cfg --model=/usr/share/opencv4/testdata/dnn/yolov3.weights –-classes=/usr/share/opencv4/testdata/dnn/object_detection_classes_yolov3.txt --width=416 --height=416 --scale=0.00392 --input=/usr/share/opencv4/testdata/dnn/dog416.png –rgb</span><br></pre></td></tr></table></figure>
 
 <img src="HowToEnableeIQ.assets\ObjectDetectionImage.jpg" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
 
-Executing with live webcam:
-
+<p>Executing with live webcam:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./example_dnn_object_detection --config=[PATH-TO-DARKNET]/cfg/yolo.cfg --model=[PATH-TO-DARKNET]/yolo.weights --classes=[PATH-TO-DARKNET]/object_detection_classes_yolov3.txt --width=416 --height=416 --scale=0.00392 --device=[CAMERA_DEV_NUMBER] –rgb</span><br></pre></td></tr></table></figure>
 
 
-For our case,
-
+<p>For our case,</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./example_dnn_object_detection --config=/usr/share/opencv4/testdata/dnn/yolov3.cfg --model=/usr/share/opencv4/testdata/dnn/yolov3.weights –-classes=/usr/share/opencv4/testdata/dnn/object_detection_classes_yolov3.txt --width=416 --height=416 --scale=0.00392 --device=1 –rgb</span><br></pre></td></tr></table></figure>
 
 
@@ -295,7 +265,7 @@ For our case,
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-enable-eIQ-on-IMX8MP"><span class="toc-text">How to enable eIQ on IMX8MP</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-enable-eIQ-on-IMX8MP"><span class="toc-text">How to enable eIQ on IMX8MP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enabling-NPU-and-CPU-on-TensorFlowLite"><span class="toc-text">Enabling NPU and CPU on TensorFlowLite</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Running-Benchmark-Applications"><span class="toc-text">Running Benchmark Applications</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enabling-CPU-on-OpenCV"><span class="toc-text">Enabling CPU on OpenCV</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Features-1"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#YOLO-object-detection-example"><span class="toc-text">YOLO object detection example</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

@@ -69,12 +69,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Candera CGI Studio demo on I-Pi SMARC PX30 devkit  This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC PX30  For requirements and how to set up your environment an">
+  <meta name="description" content="Candera CGI Studio demo on I-Pi SMARC PX30 devkit  This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC PX30 For requirements and how to set up your environment and">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/CanderaCGIStudioDemo.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Candera CGI Studio demo on I-Pi SMARC PX30 devkit  This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC PX30  For requirements and how to set up your environment an">
+<meta property="og:description" content="Candera CGI Studio demo on I-Pi SMARC PX30 devkit  This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC PX30 For requirements and how to set up your environment and">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial11-CanderaCGIStudioDemo.assets/Homaa.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial11-CanderaCGIStudioDemo.assets/Homab.png">
@@ -115,7 +115,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#CanderaCGIStudioDemo.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html'}, '*');}</script>
 
 	</div>
 	
@@ -143,87 +143,69 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit" class="article-heading"><a href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit" class="headerlink" title="Candera CGI Studio demo on I-Pi SMARC PX30 devkit"></a>Candera CGI Studio demo on I-Pi SMARC PX30 devkit<a class="article-anchor" href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit" class="article-heading"><a href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit" class="headerlink" title="Candera CGI Studio demo on I-Pi SMARC PX30 devkit"></a>Candera CGI Studio demo on I-Pi SMARC PX30 devkit<a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit'}, '*');" class="article-anchor" href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit" aria-hidden="true"></a></h1><div class="bullets">
 
-This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC PX30
-
-For requirements and how to set up your environment and appropriate utilities, refer to following document:
-
-Android Support documentation for I-Pi SMARC PX30 [click here](../AndroidImages.html)
-
-## Prerequisites
-
-### **Hardware Requirement:**
-
-1. I-Pi SMARC PX30 Development Kit
-2. Monitor, Keyboard and Mouse
-3. HDMI Display
-
-### **Software Requirement**
-
-Android as desired OS [click here](https://www.ipi.wiki/pages/downloads-px30)
-
-Refer this link for flashing the Image in to micro SD card
-
-(How to Flash Yocto /Android into the SD Card)
-
-https://www.youtube.com/watch?v=-Vq7yLV5thQ&t=11s
-
-**Note**: You can also download the Image along with Android and CGI Demo [click here](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-PX30/Images/SoftwarePartner/PX30_Android_CGI_demo.zip).
-
-#### Step 1: I-Pi SMARC PX30 Connections
-
-Refer this link for I-Pi Connections
-<https: www.youtube.com watch?v="luzU_IYuRQI">
-
-#### **Step 2**: Deploying
-
-- Deploying on an Android device simply happens by clicking on APP icon on the home screen
-
-- You need to connect I-Pi SMARC PX30 with android image by MICRO USB OTG cable to your host computer
-
-- To get the application working, two files must be deployed on the target device locally which means, the files must be placed in rootfs of the device
-
-  - [x] Application/**homa.cfg.sample**à /sdcard/**homa.cfg**
-
-  - [x] Application/Assets/**AssetLibCff_Android_Target.bin** à /sdcard/**AssetLibCff.bin**
-
-This can be done by drag and drop utilizing Explorer or by the **adb** command line tool on power shell
-
-Refer the below image.
-
+<p>This procedure describes a quick guide for deploying HOMA Demo for Android on I-Pi SMARC PX30</p>
+<p>For requirements and how to set up your environment and appropriate utilities, refer to following document:</p>
+<p>Android Support documentation for I-Pi SMARC PX30 <a href="../AndroidImages.html">click here</a></p>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><h3 id="Hardware-Requirement" class="article-heading"><a href="#Hardware-Requirement" class="headerlink" title="Hardware Requirement:"></a><strong>Hardware Requirement:</strong><a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Hardware-Requirement'}, '*');" class="article-anchor" href="#Hardware-Requirement" aria-hidden="true"></a></h3><ol>
+<li>I-Pi SMARC PX30 Development Kit</li>
+<li>Monitor, Keyboard and Mouse</li>
+<li>HDMI Display</li>
+</ol>
+<h3 id="Software-Requirement" class="article-heading"><a href="#Software-Requirement" class="headerlink" title="Software Requirement"></a><strong>Software Requirement</strong><a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Software-Requirement'}, '*');" class="article-anchor" href="#Software-Requirement" aria-hidden="true"></a></h3><p>Android as desired OS <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-px30">click here</a></p>
+<p>Refer this link for flashing the Image in to micro SD card</p>
+<p>(How to Flash Yocto &#x2F;Android into the SD Card)</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=-Vq7yLV5thQ&amp;t=11s">https://www.youtube.com/watch?v=-Vq7yLV5thQ&amp;t=11s</a></p>
+<p><strong>Note</strong>: You can also download the Image along with Android and CGI Demo <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-PX30/Images/SoftwarePartner/PX30_Android_CGI_demo.zip">click here</a>.</p>
+<h4 id="Step-1-I-Pi-SMARC-PX30-Connections" class="article-heading"><a href="#Step-1-I-Pi-SMARC-PX30-Connections" class="headerlink" title="Step 1: I-Pi SMARC PX30 Connections"></a>Step 1: I-Pi SMARC PX30 Connections<a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Step-1-I-Pi-SMARC-PX30-Connections'}, '*');" class="article-anchor" href="#Step-1-I-Pi-SMARC-PX30-Connections" aria-hidden="true"></a></h4><p>Refer this link for I-Pi Connections<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=luzU_IYuRQI">https://www.youtube.com/watch?v=luzU_IYuRQI</a></p>
+<h4 id="Step-2-Deploying" class="article-heading"><a href="#Step-2-Deploying" class="headerlink" title="Step 2: Deploying"></a><strong>Step 2</strong>: Deploying<a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Step-2-Deploying'}, '*');" class="article-anchor" href="#Step-2-Deploying" aria-hidden="true"></a></h4><ul>
+<li><p>Deploying on an Android device simply happens by clicking on APP icon on the home screen</p>
+</li>
+<li><p>You need to connect I-Pi SMARC PX30 with android image by MICRO USB OTG cable to your host computer</p>
+</li>
+<li><p>To get the application working, two files must be deployed on the target device locally which means, the files must be placed in rootfs of the device</p>
+<ul>
+<li><p><input checked disabled type="checkbox"> 
+Application&#x2F;<strong>homa.cfg.sample</strong>à &#x2F;sdcard&#x2F;<strong>homa.cfg</strong></p>
+</li>
+<li><p><input checked disabled type="checkbox"> 
+Application&#x2F;Assets&#x2F;<strong>AssetLibCff_Android_Target.bin</strong> à &#x2F;sdcard&#x2F;<strong>AssetLibCff.bin</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>This can be done by drag and drop utilizing Explorer or by the <strong>adb</strong> command line tool on power shell</p>
+<p>Refer the below image.</p>
 <center>
 <img src="Tutorial11-CanderaCGIStudioDemo.assets/Homaa.png" alt="image-20201102150712556">
 </center>
 
-#### Installing App from Zip package
-
-If you just got a ZIP package containing the APK (android application), asset file and config file, you don’t need any of the steps described before. You only need to install following files:
-
-- homa-arm64-v8a-debug.apk
-
--         homa.cfg
--         AssetLibCff.bin
-
-You can do this by utilizing explorer by drag and drop, or much more convenient and faster by utilizing adb command on powershell
-
+<h4 id="Installing-App-from-Zip-package" class="article-heading"><a href="#Installing-App-from-Zip-package" class="headerlink" title="Installing App from Zip package"></a>Installing App from Zip package<a onclick="parent.postMessage( {msg: '?page=CanderaCGIStudioDemo.html#Installing-App-from-Zip-package'}, '*');" class="article-anchor" href="#Installing-App-from-Zip-package" aria-hidden="true"></a></h4><p>If you just got a ZIP package containing the APK (android application), asset file and config file, you don’t need any of the steps described before. You only need to install following files:</p>
+<ul>
+<li><p>homa-arm64-v8a-debug.apk</p>
+</li>
+<li><pre><code>    homa.cfg
+</code></pre>
+</li>
+<li><pre><code>    AssetLibCff.bin
+</code></pre>
+</li>
+</ul>
+<p>You can do this by utilizing explorer by drag and drop, or much more convenient and faster by utilizing adb command on powershell</p>
 <center>
 <img src="Tutorial11-CanderaCGIStudioDemo.assets/Homab.png" alt="image-20201102150712556">
 </center>
 
-**Note:** If you experience an error like shown in following trial, try the **-t** switch
-
+<p><strong>Note:</strong> If you experience an error like shown in following trial, try the <strong>-t</strong> switch</p>
 <center>
 <img src="Tutorial11-CanderaCGIStudioDemo.assets/Homac.png" alt="image-20201102150712556">
 </center>
 
-**Explanation:**
-
-**-g** : Grant all permissions during install (not important, just for convenience). If you omit this switch, android will ask you to grant permissions.
-
-**-t** : Set test Only flag to false. Only necessary if you face the mentioned error.
-
-</https:></div>
+<p><strong>Explanation:</strong></p>
+<p><strong>-g</strong> : Grant all permissions during install (not important, just for convenience). If you omit this switch, android will ask you to grant permissions.</p>
+<p><strong>-t</strong> : Set test Only flag to false. Only necessary if you face the mentioned error.</p>
+</div>
 
               </div>
               <footer class="article-footer">
@@ -237,7 +219,7 @@ You can do this by utilizing explorer by drag and drop, or much more convenient 
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit"><span class="toc-text">Candera CGI Studio demo on I-Pi SMARC PX30 devkit</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Candera-CGI-Studio-demo-on-I-Pi-SMARC-PX30-devkit"><span class="toc-text">Candera CGI Studio demo on I-Pi SMARC PX30 devkit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware-Requirement"><span class="toc-text">Hardware Requirement:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Software-Requirement"><span class="toc-text">Software Requirement</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-1-I-Pi-SMARC-PX30-Connections"><span class="toc-text">Step 1: I-Pi SMARC PX30 Connections</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-2-Deploying"><span class="toc-text">Step 2: Deploying</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Installing-App-from-Zip-package"><span class="toc-text">Installing App from Zip package</span></a></li></ol></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

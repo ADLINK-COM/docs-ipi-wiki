@@ -115,7 +115,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingQfil.html#HowToFlashTheUbuntuImageOnRB5UsingQfil.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingQfil.html'}, '*');}</script>
 
 	</div>
 	
@@ -143,11 +143,11 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-From-eMMC" class="article-heading"><a href="#Boot-From-eMMC" class="headerlink" title="Boot From eMMC"></a>Boot From eMMC<a class="article-anchor" href="#Boot-From-eMMC" aria-hidden="true"></a></h1><p>This document provides detailed instructions on how to flash the image to eMMC of I-Pi SMARC RB5 Plus using Windows.</p>
+                <h1 id="Boot-From-eMMC" class="article-heading"><a href="#Boot-From-eMMC" class="headerlink" title="Boot From eMMC"></a>Boot From eMMC<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingQfil.html#Boot-From-eMMC'}, '*');" class="article-anchor" href="#Boot-From-eMMC" aria-hidden="true"></a></h1><p>This document provides detailed instructions on how to flash the image to eMMC of I-Pi SMARC RB5 Plus using Windows.</p>
 <ul>
 <li><a href="#Windows-Host">Windows Host Users</a></li>
 </ul>
-<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites(Windows)"></a><strong>Prerequisites</strong>(Windows)<a class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites(Windows)"></a><strong>Prerequisites</strong>(Windows)<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingQfil.html#Prerequisites-Windows'}, '*');" class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><ul>
 <li><p>Please make sure the following driver installed on your development host if not please install them.</p>
 <ul>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/downloads/qualcomm-hs-usb-qdloader-9008/">Qualcomm HS-USB QDLoader 9008 Driver</a></li>
@@ -161,13 +161,13 @@
 <li><p>You can download the image from the following <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-QRB5165/SW/LEC-QRB5165_Yocto_ARM_QUALCOMM_QRB5165_4G_1v1.0.15.zip">link</a> (file size 33GB).</p>
 </li>
 </ul>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingQfil.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
 <li><p>Make sure you installed all the requirement files. Now, you can flash the latest image using the ADB tool.</p>
 </li>
 <li><p>Set the boot setting to eMMC 1000.</p>
 </li>
 </ul>
-<h3 id="Flashing-the-image-using-QFIL" class="article-heading"><a href="#Flashing-the-image-using-QFIL" class="headerlink" title="Flashing the image using QFIL"></a>Flashing the image using QFIL<a class="article-anchor" href="#Flashing-the-image-using-QFIL" aria-hidden="true"></a></h3><ul>
+<h3 id="Flashing-the-image-using-QFIL" class="article-heading"><a href="#Flashing-the-image-using-QFIL" class="headerlink" title="Flashing the image using QFIL"></a>Flashing the image using QFIL<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingQfil.html#Flashing-the-image-using-QFIL'}, '*');" class="article-anchor" href="#Flashing-the-image-using-QFIL" aria-hidden="true"></a></h3><ul>
 <li><p>Make sure you have connected all the necessary cables (USB OTG cable, Keyboard &amp; Mouse, Ethernet) with the targeted device.</p>
 </li>
 <li><p>Connect the USB OTG cable from your development host to targeted device.</p>
@@ -177,23 +177,28 @@
 <li><p>Open QFIL and select everything as shown the below figure.</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_1.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
-<li>Click ‘select port’ and enter in to 9008 download mode using F_DL key.</li>
-<li>The F_DL key button is mounted on top of the module.</li>
+<li><p>Click ‘select port’ and enter in to 9008 download mode using F_DL key.</p>
+</li>
+<li><p>The F_DL key button is mounted on top of the module.</p>
+</li>
 <li><p>Connect the power supply at the same time as you pressing the F_DL key. Now the port should have been detected automatically on QFIL. If not, choose it.</p>
 </li>
 <li><p>Next, select the options as illustrated in the following figure.</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_2.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_2.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
 <li><p>Click the ‘Load Content’ button and select the file ‘contents.xml’.</p>
 </li>
 <li><p>In the folder called ‘LEC-QRB5165_Yocto_ARM_QUALCOMM_QRB5165_4G_1v1.0.0’, you should find a file called contents.xml..</p>
 </li>
 </ul>
-<p><img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_3.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;"></p>
+<img src="HowToFlashTheUbuntuImageOnRB5.assets\qfil_3.png" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
+
 <ul>
 <li>After it has finished, click on ‘Download Content’.</li>
 <li>It will notify you when the download is complete.</li>
@@ -225,7 +230,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToFlashTheUbuntuImageOnRB5UsingAdb.html" class="sidebar-link first">Boot From eMMC</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="sidebar-link first">Qualcomm Neural Processing SDK</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="HowToFlashTheUbuntuImageOnRB5UsingAdb.html" class="sidebar-link first">Boot From UFS</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="sidebar-link first">Qualcomm Neural Processing SDK</a></details></strong>
   </div>
 </aside>
     </div>
@@ -271,7 +276,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToFlashTheUbuntuImageOnRB5UsingAdb.html" class="mobile-nav-link first">Boot From eMMC</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="mobile-nav-link first">Qualcomm Neural Processing SDK</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="HowToFlashTheUbuntuImageOnRB5UsingAdb.html" class="mobile-nav-link first">Boot From UFS</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="mobile-nav-link first">Qualcomm Neural Processing SDK</a></details></strong>
     
   </div>
   

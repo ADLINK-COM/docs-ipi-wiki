@@ -69,12 +69,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Boot from eMMC This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.  - [Flashing UMS Image on eMMC](#Flashing-U">
+  <meta name="description" content="Boot from eMMC This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.   Flashing UMS Image on eMMC Flashing Image">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/BootFromeMMC.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Boot from eMMC This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.  - [Flashing UMS Image on eMMC](#Flashing-U">
+<meta property="og:description" content="Boot from eMMC This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.   Flashing UMS Image on eMMC Flashing Image">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/BootFromeMMC.assets/BootSettingsIMX8MP.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/BootFromeMMC.assets/win32_1.PNG">
@@ -116,7 +116,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromeMMC.html#BootFromeMMC.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromeMMC.html'}, '*');}</script>
 
 	</div>
 	
@@ -144,118 +144,104 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-from-eMMC" class="article-heading"><a href="#Boot-from-eMMC" class="headerlink" title="Boot from eMMC"></a>Boot from eMMC<a class="article-anchor" href="#Boot-from-eMMC" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="Boot-from-eMMC" class="article-heading"><a href="#Boot-from-eMMC" class="headerlink" title="Boot from eMMC"></a>Boot from eMMC<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Boot-from-eMMC'}, '*');" class="article-anchor" href="#Boot-from-eMMC" aria-hidden="true"></a></h1><div class="bullets">
 This document provides the detailed instructions of how to flash the image to eMMC of I-Pi SMARC IMX8M plus for both Windows and Linux users.
 
-- [Flashing UMS Image on eMMC](#Flashing-UMS-Image-on-eMMC)
-- [Flashing Image on eMMC](#Flashing-Image-on-eMMC)
-
-## **Flashing UMS Image on eMMC**
-
-### **Prerequisites**
-
-- Download the prebuilt image to the working directory on your development host [click here](https://www.ipi.wiki/pages/downloads-imx8mplus).
-
-- Prepare your target board by connecting the power cord and the micro USB OTG cable to the development host.
-
-- Make sure your boot loader switches are in SD card (0110).
-
-
-
-  <img src="BootFromeMMC.assets\BootSettingsIMX8MP.png" alt="logo" style="zoom:30%; margin-left: auto; margin-right: auto; display: block;">
-
-## Windows Host
-
-- Our system typically comes with ready-to-use features. So we will flash the UMS image onto eMMC before shipping.
-- If you want to flash the UMS on eMMC again, you can start from the [Flashing UMS Image on eMMC](#Flashing-UMS-Image-on-eMMC) and then follow the [Flashing Image on eMMC](#Flashing-Image-on-eMMC). If you do not want to flash the UMS on eMMC again, simply skip the Flashing UMS Image on eMMC.
-- Install on your development host Win32DiskImager [click here](https://win32diskimager.download/). It is used to flash your system image.
-- Please click_here to download the [2G](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UMS/LEC-IMX8MP-2G-IPi-SMARC-PLUS_UMS_20210802.zip) and [4G](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UMS/LEC-IMX8MP-4G-IPi-SMARC-PLUS_UMS_20210802.zip) UMS Image for IMX8MP. Take an empty Micro SD card flash the UMS image on it using Win32DiskImager.
-- Put the flashed Micro SD card in the Micro SD card slot of your target device and make sure the boot settings are SD card (0110).
-- Your targeted device should now be connected to your development host via the micro USB OTG cable and power cord.
-- The targeted device will have the appearance of a storage device on your development host.
-- Flash the UMS image again with Win32DiskImager by selecting the targeted device. During this flash, the UMS image will be loaded into eMMC and the SD card.
-
+<ul>
+<li><a href="#Flashing-UMS-Image-on-eMMC">Flashing UMS Image on eMMC</a></li>
+<li><a href="#Flashing-Image-on-eMMC">Flashing Image on eMMC</a></li>
+</ul>
+<h2 id="Flashing-UMS-Image-on-eMMC" class="article-heading"><a href="#Flashing-UMS-Image-on-eMMC" class="headerlink" title="Flashing UMS Image on eMMC"></a><strong>Flashing UMS Image on eMMC</strong><a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Flashing-UMS-Image-on-eMMC'}, '*');" class="article-anchor" href="#Flashing-UMS-Image-on-eMMC" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<li><p>Download the prebuilt image to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-imx8mplus">click here</a>.</p>
+</li>
+<li><p>Prepare your target board by connecting the power cord and the micro USB OTG cable to the development host.</p>
+</li>
+<li><p>Make sure your boot loader switches are in SD card (0110).</p>
+<img src="BootFromeMMC.assets\BootSettingsIMX8MP.png" alt="logo" style="zoom:30%; margin-left: auto; margin-right: auto; display: block;"></li>
+</ul>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
+<li>Our system typically comes with ready-to-use features. So we will flash the UMS image onto eMMC before shipping.</li>
+<li>If you want to flash the UMS on eMMC again, you can start from the <a href="#Flashing-UMS-Image-on-eMMC">Flashing UMS Image on eMMC</a> and then follow the <a href="#Flashing-Image-on-eMMC">Flashing Image on eMMC</a>. If you do not want to flash the UMS on eMMC again, simply skip the Flashing UMS Image on eMMC.</li>
+<li>Install on your development host Win32DiskImager <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">click here</a>. It is used to flash your system image.</li>
+<li>Please click_here to download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UMS/LEC-IMX8MP-2G-IPi-SMARC-PLUS_UMS_20210802.zip">2G</a> and <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8MP/Images/UMS/LEC-IMX8MP-4G-IPi-SMARC-PLUS_UMS_20210802.zip">4G</a> UMS Image for IMX8MP. Take an empty Micro SD card flash the UMS image on it using Win32DiskImager.</li>
+<li>Put the flashed Micro SD card in the Micro SD card slot of your target device and make sure the boot settings are SD card (0110).</li>
+<li>Your targeted device should now be connected to your development host via the micro USB OTG cable and power cord.</li>
+<li>The targeted device will have the appearance of a storage device on your development host.</li>
+<li>Flash the UMS image again with Win32DiskImager by selecting the targeted device. During this flash, the UMS image will be loaded into eMMC and the SD card.</li>
+</ul>
 <img src="BootFromeMMC.assets\win32_1.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
 
-- Once you have flashed the image onto the eMMC. Disconnect all the cables and remove the SD card.
-- Ensure the boot setting is eMMC (1000), then power-on the board and connect the micro USB OTG cable with the targeted device to your development host.
-- The targeted device will eventually appear on your development host's storage devices list.
-
-## **Flashing Image on eMMC**
-
-This procedure describes how to flash **Ubuntu/Debian/Yocto/Android** image to the eMMC.
-
-* [Flash Ubuntu or Debian Image](#Flashing-Ubuntu-or-Debian-Image)
-
-* [Flash Yocto or Android Image](#Flashing-Yocto-or-Android-Image)
-
-## **Flashing Ubuntu or Debian Image**
-
-### Prerequisites
-
-- Download the prebuilt bootable Ubuntu image to the working directory on your development host.
-- In Windows environments, please download [rufus](https://rufus.ie/) to flash the image to the SD Card.
-- In a Linux environment use ``` dd ``` command.
-
- **Note:** All files will be erased on the SD Card. The size should be preferable 16 GB or larger.
-
-* [Windows Host Users](#Windows-Host)
-* [Linux Host Users](#Linux-Host)
-
-### Windows Host
-
-1. Insert an empty MicroSD Card into the development host and execute rufus.exe. It will auto-detected your storage drives.
-
-2. Press the **SELECT** button and browse to the .img file previously downloaded to your working directory in the development host. Then click **START** and wait for the process to be finished.
-
+<ul>
+<li>Once you have flashed the image onto the eMMC. Disconnect all the cables and remove the SD card.</li>
+<li>Ensure the boot setting is eMMC (1000), then power-on the board and connect the micro USB OTG cable with the targeted device to your development host.</li>
+<li>The targeted device will eventually appear on your development host’s storage devices list.</li>
+</ul>
+<h2 id="Flashing-Image-on-eMMC" class="article-heading"><a href="#Flashing-Image-on-eMMC" class="headerlink" title="Flashing Image on eMMC"></a><strong>Flashing Image on eMMC</strong><a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Flashing-Image-on-eMMC'}, '*');" class="article-anchor" href="#Flashing-Image-on-eMMC" aria-hidden="true"></a></h2><p>This procedure describes how to flash <strong>Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android</strong> image to the eMMC.</p>
+<ul>
+<li><p><a href="#Flashing-Ubuntu-or-Debian-Image">Flash Ubuntu or Debian Image</a></p>
+</li>
+<li><p><a href="#Flashing-Yocto-or-Android-Image">Flash Yocto or Android Image</a></p>
+</li>
+</ul>
+<h2 id="Flashing-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flashing-Ubuntu-or-Debian-Image" class="headerlink" title="Flashing Ubuntu or Debian Image"></a><strong>Flashing Ubuntu or Debian Image</strong><a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Flashing-Ubuntu-or-Debian-Image'}, '*');" class="article-anchor" href="#Flashing-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Prerequisites-1'}, '*');" class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
+<li>Download the prebuilt bootable Ubuntu image to the working directory on your development host.</li>
+<li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">rufus</a> to flash the image to the SD Card.</li>
+<li>In a Linux environment use <code>dd</code> command.</li>
+</ul>
+<p> <strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger.</p>
+<ul>
+<li><a href="#Windows-Host">Windows Host Users</a></li>
+<li><a href="#Linux-Host">Linux Host Users</a></li>
+</ul>
+<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Windows-Host-1'}, '*');" class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><ol>
+<li><p>Insert an empty MicroSD Card into the development host and execute rufus.exe. It will auto-detected your storage drives.</p>
+</li>
+<li><p>Press the <strong>SELECT</strong> button and browse to the .img file previously downloaded to your working directory in the development host. Then click <strong>START</strong> and wait for the process to be finished.</p>
+</li>
+</ol>
 <img src="BootFromeMMC.assets\rufus_1.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
 
-### Linux Host
-
-1. Copy the prebuilt bootable Ubuntu/Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.
-
-   **Warning**: Make sure you first properly identify the SD Card device name as for example (/dev/sdb or /dev/sdc) by using "gparted". Data loss may result if written into the wrong device or in the worst case you kill your development host's OS.
-
-   <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-
-2. After dd has completed, enter the following command:
-
-
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<li><p>Copy the prebuilt bootable Ubuntu&#x2F;Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</p>
+<p><strong>Warning</strong>: Make sure you first properly identify the SD Card device name as for example (&#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development host’s OS.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sudo dd <span class="keyword">if</span>=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>After dd has completed, enter the following command:</p>
+</li>
+</ol>
   <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
 
-**Note**: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your ``` dd ``` command.
-
-## Flashing Yocto or Android Image
-
-### Prerequisites
-
-- Copy the prebuilt bootable Yocto image to the working directory on your development host.
-
-- In Windows environments, please download the [Win32DiskImager](https://win32diskimager.download/) to flash the image to the SD Card.
-
-  **Note:** All files will be erased on the SD Card. The size should be preferable 16 GB or larger.
-
-### Windows Host
-
-Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.
-
-- The SD card device is automatically detected.
-- Choose Image file by clicking on File explorer icon.
-- Select the image form the downloaded directory of development host, then click the **Write** button to start the process.
-
+<p><strong>Note</strong>: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your <code>dd</code> command.</p>
+<h2 id="Flashing-Yocto-or-Android-Image" class="article-heading"><a href="#Flashing-Yocto-or-Android-Image" class="headerlink" title="Flashing Yocto or Android Image"></a>Flashing Yocto or Android Image<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Flashing-Yocto-or-Android-Image'}, '*');" class="article-anchor" href="#Flashing-Yocto-or-Android-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-2" class="article-heading"><a href="#Prerequisites-2" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Prerequisites-2'}, '*');" class="article-anchor" href="#Prerequisites-2" aria-hidden="true"></a></h3><ul>
+<li><p>Copy the prebuilt bootable Yocto image to the working directory on your development host.</p>
+</li>
+<li><p>In Windows environments, please download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">Win32DiskImager</a> to flash the image to the SD Card.</p>
+<p><strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger.</p>
+</li>
+</ul>
+<h3 id="Windows-Host-2" class="article-heading"><a href="#Windows-Host-2" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=BootFromeMMC.html#Windows-Host-2'}, '*');" class="article-anchor" href="#Windows-Host-2" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.</p>
+<ul>
+<li>The SD card device is automatically detected.</li>
+<li>Choose Image file by clicking on File explorer icon.</li>
+<li>Select the image form the downloaded directory of development host, then click the <strong>Write</strong> button to start the process.</li>
+</ul>
 <img src="BootFromeMMC.assets\win32_2.PNG" alt="logo" style="zoom:100%; margin-left: auto; margin-right: auto; display: block;">
 
-- The tool will prompt to the user that data will be lost. Select "Yes" to continue
-
-- Once done, click **OK** and and it will show the message that **Write successful**.
-
-- Eject the SD card and insert it into the target board and power on the board to boot up.
-
-**Note:**
-1. If you want to use Linux development host for flashing **Yocto/Android**, you can use ``` dd ``` command as shown for **Ubuntu/Debian**.
-
-2. Make sure the boot loader on the carrier board is set according to the SD card or eMMC as you boot.
-
+<ul>
+<li><p>The tool will prompt to the user that data will be lost. Select “Yes” to continue</p>
+</li>
+<li><p>Once done, click <strong>OK</strong> and and it will show the message that <strong>Write successful</strong>.</p>
+</li>
+<li><p>Eject the SD card and insert it into the target board and power on the board to boot up.</p>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ol>
+<li><p>If you want to use Linux development host for flashing <strong>Yocto&#x2F;Android</strong>, you can use <code>dd</code> command as shown for <strong>Ubuntu&#x2F;Debian</strong>.</p>
+</li>
+<li><p>Make sure the boot loader on the carrier board is set according to the SD card or eMMC as you boot.</p>
+</li>
+</ol>
 </div>
               </div>
               <footer class="article-footer">
@@ -269,7 +255,7 @@ Insert an empty MicroSD Card into the development host and execute the Win32Disk
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Boot-from-eMMC"><span class="toc-text">Boot from eMMC</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Boot-from-eMMC"><span class="toc-text">Boot from eMMC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Flashing-UMS-Image-on-eMMC"><span class="toc-text">Flashing UMS Image on eMMC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flashing-Image-on-eMMC"><span class="toc-text">Flashing Image on eMMC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flashing-Ubuntu-or-Debian-Image"><span class="toc-text">Flashing Ubuntu or Debian Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites-1"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host-1"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flashing-Yocto-or-Android-Image"><span class="toc-text">Flashing Yocto or Android Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisites-2"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host-2"><span class="toc-text">Windows Host</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>

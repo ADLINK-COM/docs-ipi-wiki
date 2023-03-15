@@ -121,7 +121,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToUpgradeBIOSOnElkhartLake.html#HowToUpgradeBIOSOnElkhartLake.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToUpgradeBIOSOnElkhartLake.html'}, '*');}</script>
 
 	</div>
 	
@@ -149,57 +149,72 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake" class="article-heading"><a href="#How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake" class="headerlink" title="How to Upgrade BIOS on I-Pi SAMRC Elkhart Lake"></a>How to Upgrade BIOS on I-Pi SAMRC Elkhart Lake<a class="article-anchor" href="#How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake" class="article-heading"><a href="#How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake" class="headerlink" title="How to Upgrade BIOS on I-Pi SAMRC Elkhart Lake"></a>How to Upgrade BIOS on I-Pi SAMRC Elkhart Lake<a onclick="parent.postMessage( {msg: '?page=HowToUpgradeBIOSOnElkhartLake.html#How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake'}, '*');" class="article-anchor" href="#How-to-Upgrade-BIOS-on-I-Pi-SAMRC-Elkhart-Lake" aria-hidden="true"></a></h1><div class="bullets">
 
 <p>This document provides detailed instructions for upgrading the BIOS on I-Pi SMARC Elkhart Lake.</p>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
-<li>Download the latest BIOS file <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-Elkhartlake/BIOS/LEC-EL.zip">click here</a>.</li>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=HowToUpgradeBIOSOnElkhartLake.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<li><p>Download the latest BIOS file <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-Elkhartlake/BIOS/LEC-EL.zip">click here</a>.</p>
+</li>
 <li><p>Copy the downloaded BIOS file to a USB pen drive.</p>
-<h2 id="Changing-the-Boot-Option" class="article-heading"><a href="#Changing-the-Boot-Option" class="headerlink" title="Changing the Boot Option"></a>Changing the Boot Option<a class="article-anchor" href="#Changing-the-Boot-Option" aria-hidden="true"></a></h2></li>
+<h2 id="Changing-the-Boot-Option" class="article-heading"><a href="#Changing-the-Boot-Option" class="headerlink" title="Changing the Boot Option"></a>Changing the Boot Option<a onclick="parent.postMessage( {msg: '?page=HowToUpgradeBIOSOnElkhartLake.html#Changing-the-Boot-Option'}, '*');" class="article-anchor" href="#Changing-the-Boot-Option" aria-hidden="true"></a></h2></li>
 <li><p>Ensure your targeted device(I-Pi SMARC Elkhart Lake) is equipped with all necessary devices and cables such as a keyboard, mouse, USB pen drive, Ethernet cable, and HDMI.</p>
 </li>
-<li>While the device is powered on, you’ll see the Adlink logo as shown in below figure and you’ll need to press the ‘Del’ key on your keyboard to enter the boot menu.</li>
+<li><p>While the device is powered on, you’ll see the Adlink logo as shown in below figure and you’ll need to press the ‘Del’ key on your keyboard to enter the boot menu.</p>
+</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\AdlinkLogo.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\AdlinkLogo.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
 <ul>
 <li>In the ‘main section’ of the boot menu, you will see the current BIOS version (0.15.10) displayed as shown below.</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\BIOSMainMenu.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\BIOSMainMenu.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
 <ul>
 <li><p>You can move into the boot section by pressing the right arrow key.</p>
 </li>
 <li><p>As shown in the following figure, click Boot Option #1 and select your USB pen drive as the first option.</p>
 </li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\BootMenuOptionOrder.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\BootMenuOptionOrder.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
 <ul>
 <li>Next, move to the ‘save &amp; exit’ section and click ‘Save Changes and Reset’ as shown below figure.</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\SaveExit.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
-<h2 id="Entering-into-the-Shell-Mode" class="article-heading"><a href="#Entering-into-the-Shell-Mode" class="headerlink" title="Entering into the Shell Mode"></a>Entering into the Shell Mode<a class="article-anchor" href="#Entering-into-the-Shell-Mode" aria-hidden="true"></a></h2><ul>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\SaveExit.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
+<h2 id="Entering-into-the-Shell-Mode" class="article-heading"><a href="#Entering-into-the-Shell-Mode" class="headerlink" title="Entering into the Shell Mode"></a>Entering into the Shell Mode<a onclick="parent.postMessage( {msg: '?page=HowToUpgradeBIOSOnElkhartLake.html#Entering-into-the-Shell-Mode'}, '*');" class="article-anchor" href="#Entering-into-the-Shell-Mode" aria-hidden="true"></a></h2><ul>
 <li>This time do not touch anything, it will automatically enter shell mode and type the following commands, as shown in the following figures.</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\ConsoleFS0.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\ConsoleFS0.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fs0:</span><br></pre></td></tr></table></figure>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\ConsolePbios.png" alt="SMARC-module-logo_500px" style="zoom:67s%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\ConsolePbios.png" alt="SMARC-module-logo_500px" style="zoom:67s%; margin-left: auto; margin-right: auto; display: block; "> 
+
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd LEC-EL</span><br></pre></td></tr></table></figure>
+
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd bios</span><br></pre></td></tr></table></figure>
+
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pBIOS.nsh</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Upon typing all the commands shown above, it will enter the next stage as shown below figure, press ‘Enter’ to start the BIOS upgrade process. </li>
+<li>Upon typing all the commands shown above, it will enter the next stage as shown below figure, press ‘Enter’ to start the BIOS upgrade process.</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\ConsolePbiosEnter.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\ConsolePbiosEnter.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
 <ul>
 <li>After the upgrade is complete, the screen will display some messages as shown below.</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\BIOSUpgradedRestart.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\BIOSUpgradedRestart.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
 <ul>
 <li>You can now reset the targeted device by pressing the reset button.</li>
 <li>To access the boot menu, press the key ‘Del’ on the keyboard. A BIOS version will appear as (1.00.10).</li>
 </ul>
-<p><img src="HowToUpgradeBIOSOnElkhartLake.assets\BIOSUpgraded.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> </p>
+<img src="HowToUpgradeBIOSOnElkhartLake.assets\BIOSUpgraded.png" alt="SMARC-module-logo_500px" style="zoom:67%; margin-left: auto; margin-right: auto; display: block; "> 
+
 <ul>
 <li>In the end, your BIOS version was successfully upgraded. Later, the boot menu options can then be modified as desired.</li>
 </ul>

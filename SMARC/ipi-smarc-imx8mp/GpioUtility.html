@@ -69,12 +69,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M PlusThis document provides detailed instructions for utilizing the 40-Pin I&#x2F;O Headers on I-Pi SMARC IMX8M Plus. Prerequisites GPIO libraries are included">
+  <meta name="description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M Plus This document provides detailed instructions for utilizing the 40-Pin I&#x2F;O Headers on I-Pi SMARC IMX8M Plus.  Prerequisites GPIO libraries are i">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M PlusThis document provides detailed instructions for utilizing the 40-Pin I&#x2F;O Headers on I-Pi SMARC IMX8M Plus. Prerequisites GPIO libraries are included">
+<meta property="og:description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M Plus This document provides detailed instructions for utilizing the 40-Pin I&#x2F;O Headers on I-Pi SMARC IMX8M Plus.  Prerequisites GPIO libraries are i">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-15T03:16:35.501Z">
 <meta property="article:modified_time" content="2023-03-15T03:16:35.501Z">
@@ -111,7 +111,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=GpioUtility.html#GpioUtility.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=GpioUtility.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,12 +139,14 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="40-Pin-I-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus" class="article-heading"><a href="#40-Pin-I-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus" class="headerlink" title="40-Pin I/O Headers Utility on I-Pi SAMRC IMX8M Plus"></a>40-Pin I/O Headers Utility on I-Pi SAMRC IMX8M Plus<a class="article-anchor" href="#40-Pin-I-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus" aria-hidden="true"></a></h1><p><div class="bullets"><br>This document provides detailed instructions for utilizing the 40-Pin I/O Headers on I-Pi SMARC IMX8M Plus.</div></p>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+                <h1 id="40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus" class="article-heading"><a href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus" class="headerlink" title="40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M Plus"></a>40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M Plus<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus'}, '*');" class="article-anchor" href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus" aria-hidden="true"></a></h1><div class="bullets">
+This document provides detailed instructions for utilizing the 40-Pin I/O Headers on I-Pi SMARC IMX8M Plus.
+
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li>GPIO libraries are included with our image by default.</li>
 <li>Power up the targeted device with all the necessary cables such as HDMI, keyboard, mouse and ethernet cable.</li>
 </ul>
-<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><h3 id="1-Getting-Started" class="article-heading"><a href="#1-Getting-Started" class="headerlink" title="1. Getting Started"></a>1. Getting Started<a class="article-anchor" href="#1-Getting-Started" aria-hidden="true"></a></h3><ul>
+<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><h3 id="1-Getting-Started" class="article-heading"><a href="#1-Getting-Started" class="headerlink" title="1. Getting Started"></a>1. Getting Started<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#1-Getting-Started'}, '*');" class="article-anchor" href="#1-Getting-Started" aria-hidden="true"></a></h3><ul>
 <li><p>Install “hexer” for editing the binary files.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install hexer</span><br></pre></td></tr></table></figure>
 </li>
@@ -153,28 +155,31 @@
 </li>
 <li><p>Enter into the terminal as a root user using the below command,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">su root</span><br></pre></td></tr></table></figure>
+
 <p><strong>Note:</strong> All the commands require administrator privileges and run as root user.</p>
 </li>
 </ul>
-<h3 id="2-Utilizing-the-Pin-Headers-with-Linux" class="article-heading"><a href="#2-Utilizing-the-Pin-Headers-with-Linux" class="headerlink" title="2. Utilizing the Pin Headers with Linux"></a>2. Utilizing the Pin Headers with Linux<a class="article-anchor" href="#2-Utilizing-the-Pin-Headers-with-Linux" aria-hidden="true"></a></h3><h4 id="2-1-Voltage-Monitor" class="article-heading"><a href="#2-1-Voltage-Monitor" class="headerlink" title="2.1 Voltage Monitor"></a>2.1 Voltage Monitor<a class="article-anchor" href="#2-1-Voltage-Monitor" aria-hidden="true"></a></h4><ul>
+<h3 id="2-Utilizing-the-Pin-Headers-with-Linux" class="article-heading"><a href="#2-Utilizing-the-Pin-Headers-with-Linux" class="headerlink" title="2. Utilizing the Pin Headers with Linux"></a>2. Utilizing the Pin Headers with Linux<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#2-Utilizing-the-Pin-Headers-with-Linux'}, '*');" class="article-anchor" href="#2-Utilizing-the-Pin-Headers-with-Linux" aria-hidden="true"></a></h3><h4 id="2-1-Voltage-Monitor" class="article-heading"><a href="#2-1-Voltage-Monitor" class="headerlink" title="2.1 Voltage Monitor"></a>2.1 Voltage Monitor<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#2-1-Voltage-Monitor'}, '*');" class="article-anchor" href="#2-1-Voltage-Monitor" aria-hidden="true"></a></h4><ul>
 <li><p>Open the terminal type the following command,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /sys/class/regulator</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>To get the hardware monitor input voltage and get the respective voltage description</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat &lt;regulator index&gt;/microvolts</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat &lt;regulator index&gt;/name</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>In the example below, user is reading the voltage and description of id 1</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat regulator.1/microvolts</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat regulator.1/name</span><br></pre></td></tr></table></figure>
-</li>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat regulator.1/name</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="2-2-GPIO" class="article-heading"><a href="#2-2-GPIO" class="headerlink" title="2.2 GPIO"></a>2.2 GPIO<a class="article-anchor" href="#2-2-GPIO" aria-hidden="true"></a></h4><ul>
+<h4 id="2-2-GPIO" class="article-heading"><a href="#2-2-GPIO" class="headerlink" title="2.2 GPIO"></a>2.2 GPIO<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#2-2-GPIO'}, '*');" class="article-anchor" href="#2-2-GPIO" aria-hidden="true"></a></h4><ul>
 <li><p>Open the terminal type the following command,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /sys/class/gpio</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>To export the GPIO pin</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo N &gt; export (N should replace with gpio chip base number)</span><br></pre></td></tr></table></figure>
+
 <p>In below example 497 is the gpio chip base number for pin-7 in IMX8MP.</p>
 <p>Ex:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 497 &gt; export</span><br></pre></td></tr></table></figure>
@@ -189,10 +194,9 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat gpio497/value</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>To write the value of a pin</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; gpio497/value</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; gpio497/value</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h5 id="2-2-1-GPIO-Pin-Configurations" class="article-heading"><a href="#2-2-1-GPIO-Pin-Configurations" class="headerlink" title="2.2.1 GPIO Pin Configurations"></a>2.2.1 GPIO Pin Configurations<a class="article-anchor" href="#2-2-1-GPIO-Pin-Configurations" aria-hidden="true"></a></h5><ul>
+<h5 id="2-2-1-GPIO-Pin-Configurations" class="article-heading"><a href="#2-2-1-GPIO-Pin-Configurations" class="headerlink" title="2.2.1 GPIO Pin Configurations"></a>2.2.1 GPIO Pin Configurations<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#2-2-1-GPIO-Pin-Configurations'}, '*');" class="article-anchor" href="#2-2-1-GPIO-Pin-Configurations" aria-hidden="true"></a></h5><ul>
 <li><p>On CN1001 expansion connector E_GPIO and S_GPIO is available. These GPIO pins are mapped by to following numbers:</p>
 <p><strong>S_GPIO(MRAA) numbers are:</strong></p>
 <p>​    pin7 - 497</p>
@@ -212,32 +216,32 @@
 <p>​    pin40 - 469</p>
 </li>
 </ul>
-<h4 id="2-3-Storage" class="article-heading"><a href="#2-3-Storage" class="headerlink" title="2.3 Storage"></a>2.3 Storage<a class="article-anchor" href="#2-3-Storage" aria-hidden="true"></a></h4><ul>
+<h4 id="2-3-Storage" class="article-heading"><a href="#2-3-Storage" class="headerlink" title="2.3 Storage"></a>2.3 Storage<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#2-3-Storage'}, '*');" class="article-anchor" href="#2-3-Storage" aria-hidden="true"></a></h4><ul>
 <li><p>To read the storage area,</p>
-<p>hexdump /sys/bus/nvmem/devices/<nvmem index>/nvmem</nvmem></p>
+<p>hexdump &#x2F;sys&#x2F;bus&#x2F;nvmem&#x2F;devices&#x2F;<nvmem index>&#x2F;nvmem</nvmem></p>
 <p>For example:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexdump /sys/bus/nvmem/devices/imx-octp0/nvmem</span><br></pre></td></tr></table></figure></li>
 <li><p>To write the storage area</p>
-<p>hexer /sys/bus/nvmem/devices/<nvmem index>/nvmem</nvmem></p>
+<p>hexer &#x2F;sys&#x2F;bus&#x2F;nvmem&#x2F;devices&#x2F;<nvmem index>&#x2F;nvmem</nvmem></p>
 <p>For example:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexer /sys/bus/nvmem/devices/imx-octp0/nvmem</span><br></pre></td></tr></table></figure>
+
 <p>Hexer will open a nvmem file in editor mode. To edit the data press <strong>r</strong> (replace) and enter new data then press <strong>ESC</strong> key and <strong>:wq</strong> to save. Then read the same file using hexdump to check saved changes.</p>
 </li>
 </ul>
-<h4 id="2-4-Backlight" class="article-heading"><a href="#2-4-Backlight" class="headerlink" title="2.4 Backlight"></a>2.4 Backlight<a class="article-anchor" href="#2-4-Backlight" aria-hidden="true"></a></h4><ul>
+<h4 id="2-4-Backlight" class="article-heading"><a href="#2-4-Backlight" class="headerlink" title="2.4 Backlight"></a>2.4 Backlight<a onclick="parent.postMessage( {msg: '?page=GpioUtility.html#2-4-Backlight'}, '*');" class="article-anchor" href="#2-4-Backlight" aria-hidden="true"></a></h4><ul>
 <li><p>Open the terminal type the following command,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /sys/class/backlight</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>To Set the current Backlight Enable State to either ON / OFF</p>
-<p>echo <mode> &gt; lvds_backlight/bl_power</mode></p>
+<li><p>To Set the current Backlight Enable State to either ON &#x2F; OFF</p>
+<p>echo <mode> &gt; lvds_backlight&#x2F;bl_power</mode></p>
 <p>For Example,</p>
 <ul>
 <li><p>To enable the backlight,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; lvds_backlight/bl_power</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>To Disable the backlight,</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; lvds_backlight/bl_power</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; lvds_backlight/bl_power</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>To get the current Backlight Brightness level</p>
@@ -245,14 +249,14 @@
 </li>
 <li><p>To Set the current Backlight brightness level</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &lt;level&gt; &gt; lvds_backlight/brightness</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>For Example, to set the brightness level of 78,</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 78 &gt; lvds_backlight/brightness</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 78 &gt; lvds_backlight/brightness</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
-
+</div>
               </div>
               <footer class="article-footer">
                 <time class="article-footer-updated" datetime="2023-03-15T03:16:35.501Z" itemprop="dateModified">Last updated: 2023-03-15</time>
@@ -265,7 +269,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#40-Pin-I-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus"><span class="toc-text">40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M Plus</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Getting-Started"><span class="toc-text">1. Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Utilizing-the-Pin-Headers-with-Linux"><span class="toc-text">2. Utilizing the Pin Headers with Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Voltage-Monitor"><span class="toc-text">2.1 Voltage Monitor</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-GPIO"><span class="toc-text">2.2 GPIO</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-GPIO-Pin-Configurations"><span class="toc-text">2.2.1 GPIO Pin Configurations</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Storage"><span class="toc-text">2.3 Storage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-Backlight"><span class="toc-text">2.4 Backlight</span></a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SAMRC-IMX8M-Plus"><span class="toc-text">40-Pin I&#x2F;O Headers Utility on I-Pi SAMRC IMX8M Plus</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Getting-Started"><span class="toc-text">1. Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Utilizing-the-Pin-Headers-with-Linux"><span class="toc-text">2. Utilizing the Pin Headers with Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Voltage-Monitor"><span class="toc-text">2.1 Voltage Monitor</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-GPIO"><span class="toc-text">2.2 GPIO</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-GPIO-Pin-Configurations"><span class="toc-text">2.2.1 GPIO Pin Configurations</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Storage"><span class="toc-text">2.3 Storage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-Backlight"><span class="toc-text">2.4 Backlight</span></a></li></ol></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
