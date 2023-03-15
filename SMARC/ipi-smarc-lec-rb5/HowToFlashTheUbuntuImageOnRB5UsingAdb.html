@@ -111,7 +111,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingAdb.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingAdb.html#HowToFlashTheUbuntuImageOnRB5UsingAdb.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,11 +139,11 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-From-eMMC" class="article-heading"><a href="#Boot-From-eMMC" class="headerlink" title="Boot From eMMC"></a>Boot From eMMC<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingAdb.html#Boot-From-eMMC'}, '*');" class="article-anchor" href="#Boot-From-eMMC" aria-hidden="true"></a></h1><p>This document provides detailed instructions on how to flash the image to eMMC of I-Pi SMARC RB5 using Windows.</p>
+                <h1 id="Boot-From-eMMC" class="article-heading"><a href="#Boot-From-eMMC" class="headerlink" title="Boot From eMMC"></a>Boot From eMMC<a class="article-anchor" href="#Boot-From-eMMC" aria-hidden="true"></a></h1><p>This document provides detailed instructions on how to flash the image to eMMC of I-Pi SMARC RB5 using Windows.</p>
 <ul>
 <li><a href="#Windows-Host">Windows Host Users</a></li>
 </ul>
-<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites(Windows)"></a><strong>Prerequisites</strong>(Windows)<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingAdb.html#Prerequisites-Windows'}, '*');" class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites(Windows)"></a><strong>Prerequisites</strong>(Windows)<a class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><ul>
 <li><p>Please make sure the following driver installed on your development host if not please install them.</p>
 <ul>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.android.com/studio/run/win-usb">Android USB Driver</a></li>
@@ -157,18 +157,18 @@
 <li><p>You can download the image from the following <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-RB5/Images/LEC_QRB5_BSP_Image_1V17_2023_02_24.zip">link</a>.</p>
 </li>
 </ul>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingAdb.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ul>
 <li><p>Make sure you installed all the requirement files. Now, you can flash the latest image using the ADB tool.</p>
 </li>
 <li><p>Set the boot setting to eMMC 1000.</p>
 </li>
 </ul>
-<h3 id="Flashing-the-image-using-ADB-tool" class="article-heading"><a href="#Flashing-the-image-using-ADB-tool" class="headerlink" title="Flashing the image using ADB tool"></a>Flashing the image using ADB tool<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5UsingAdb.html#Flashing-the-image-using-ADB-tool'}, '*');" class="article-anchor" href="#Flashing-the-image-using-ADB-tool" aria-hidden="true"></a></h3><ul>
+<h3 id="Flashing-the-image-using-ADB-tool" class="article-heading"><a href="#Flashing-the-image-using-ADB-tool" class="headerlink" title="Flashing the image using ADB tool"></a>Flashing the image using ADB tool<a class="article-anchor" href="#Flashing-the-image-using-ADB-tool" aria-hidden="true"></a></h3><ul>
 <li><p>Power up the target device with all the necessary cables (USB OTG cable, Keyboard &amp; Mouse, Ethernet).</p>
 </li>
 <li><p>Connect the USB OTG cable from your development host to targeted device.</p>
 </li>
-<li><p>You can open the <strong>cmd prompt</strong> in the title bar (image downloaded directory&#x2F;BSP_Images) by going to the image downloaded directory.</p>
+<li><p>You can open the <strong>cmd prompt</strong> in the title bar (image downloaded directory/BSP_Images) by going to the image downloaded directory.</p>
 </li>
 <li><p>Otherwise, navigate to the image downloaded directory.</p>
 </li>
@@ -183,15 +183,10 @@
 </li>
 <li><p>Your target device should have been listed here as a fast boot device. Start to flash the image using the below command..</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash abl_a abl.elf</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash abl_b abl.elf</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash system qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash boot_a qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot flash boot_b qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>The image has been successfully flashed on targeted device and it will be rebooted by itself. The device is now ready to be used.</p>
@@ -211,8 +206,8 @@
 </li>
 <li><p>To get download the ubuntu desktop type the the following command.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start gui</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">journalctl -xefu gui</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">journalctl -xefu gui</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 <li><p>It may take 30 min to install all the necessary files be patience.</p>

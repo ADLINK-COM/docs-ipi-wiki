@@ -120,7 +120,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#FlashingYoctoImageOneMMC.html'}, '*');}</script>
 
 	</div>
 	
@@ -148,31 +148,24 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Yocto-with-Intel-Elkhart-Lake" class="article-heading"><a href="#Yocto-with-Intel-Elkhart-Lake" class="headerlink" title="Yocto (with Intel Elkhart Lake)"></a>Yocto (with Intel Elkhart Lake)<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Yocto-with-Intel-Elkhart-Lake'}, '*');" class="article-anchor" href="#Yocto-with-Intel-Elkhart-Lake" aria-hidden="true"></a></h1><p>The following provides detailed steps on how to install Yocto image(s) on your target device using a bootable USB drive.</p>
-<h4 id="Before-you-start" class="article-heading"><a href="#Before-you-start" class="headerlink" title="Before you start"></a>Before you start<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Before-you-start'}, '*');" class="article-anchor" href="#Before-you-start" aria-hidden="true"></a></h4><ul>
+                <h1 id="Yocto-with-Intel-Elkhart-Lake" class="article-heading"><a href="#Yocto-with-Intel-Elkhart-Lake" class="headerlink" title="Yocto (with Intel Elkhart Lake)"></a>Yocto (with Intel Elkhart Lake)<a class="article-anchor" href="#Yocto-with-Intel-Elkhart-Lake" aria-hidden="true"></a></h1><p>The following provides detailed steps on how to install Yocto image(s) on your target device using a bootable USB drive.</p>
+<h4 id="Before-you-start" class="article-heading"><a href="#Before-you-start" class="headerlink" title="Before you start"></a>Before you start<a class="article-anchor" href="#Before-you-start" aria-hidden="true"></a></h4><ul>
 <li>Prepare an Linux-based host system</li>
 <li>Download the latest Yocto image from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/ipi-smarc-elkhart-lake-downloads">here</a></li>
 <li>Prepare an empty USB drive with 64 GB</li>
 </ul>
-<br>
-
-<h3 id="Prepare-your-USB-drive" class="article-heading"><a href="#Prepare-your-USB-drive" class="headerlink" title="Prepare your USB drive"></a>Prepare your USB drive<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Prepare-your-USB-drive'}, '*');" class="article-anchor" href="#Prepare-your-USB-drive" aria-hidden="true"></a></h3><p><strong>1.</strong> On your Linux host device, extract the downloaded image.</p>
+<p><br></p>
+<h3 id="Prepare-your-USB-drive" class="article-heading"><a href="#Prepare-your-USB-drive" class="headerlink" title="Prepare your USB drive"></a>Prepare your USB drive<a class="article-anchor" href="#Prepare-your-USB-drive" aria-hidden="true"></a></h3><p><strong>1.</strong> On your Linux host device, extract the downloaded image.</p>
 <p><strong>2.</strong> Insert the USB drive into your host device and unmount it by executing the following command:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo umount /dev/sd[x]</span><br></pre></td></tr></table></figure>
-
 <p><strong>3.</strong> Go into the directory where your image file is extracted, and then flash the Yocto image into your USB drive:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=&lt;image_name&gt;.wic of=/dev/sd[x] status=progress</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-
-
 <p><strong>4.</strong> Once completed, remove the USB drive form your host device and re-insert it. Now, you shall see 4 partitions named: <strong>msdos</strong>, <strong>primary</strong>, <strong>data</strong>, and <strong>unallocated</strong>.</p>
 <p><strong>5.</strong> Install <strong>Gparted</strong> tool on your host system, in order to modify the partitions size, using the following command:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install gparted</span><br></pre></td></tr></table></figure>
-
 <p><strong>6.</strong> Open the <strong>Gparted</strong> tool.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo gparted</span><br></pre></td></tr></table></figure>
-
 <p>If you a warning, as exemplified below, click <strong>Fix</strong> to continue.</p>
 <center>
 <div>
@@ -180,7 +173,7 @@
 </div>
 </center>
 
-<p><strong>7.</strong> Select your USB drive and resize the <strong>&#x2F;data</strong> partition size as shown below.</p>
+<p><strong>7.</strong> Select your USB drive and resize the <strong>/data</strong> partition size as shown below.</p>
 <center>
   <div>
     <img src="FlashingYoctoImageOneMMC.assets/ChooseUsbData.png" alt="ChooseUsbData">
@@ -188,7 +181,7 @@
 </center>
 
 
-<p><strong>8.</strong> Resize the <strong>&#x2F;data</strong> partition from 1GB to 10GB and click <strong>Resize&#x2F;Move</strong>.</p>
+<p><strong>8.</strong> Resize the <strong>/data</strong> partition from 1GB to 10GB and click <strong>Resize/Move</strong>.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/ExtendSize.png" alt="EXtendSize">
@@ -212,15 +205,12 @@
 </center>
 
 
-<p><strong>11.</strong> Copy the download image into <strong>&#x2F;data</strong> partition using the following commands. This shall take some time.</p>
+<p><strong>11.</strong> Copy the download image into <strong>/data</strong> partition using the following commands. This shall take some time.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo cp -v &lt;image_name&gt;.wic /media/&lt;user_name&gt;/data/</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-
 <p><strong>12.</strong> Once finished, remove your USB drive.</p>
-<br>
-
-<h3 id="Prepare-the-targeted-device" class="article-heading"><a href="#Prepare-the-targeted-device" class="headerlink" title="Prepare the targeted device"></a>Prepare the targeted device<a onclick="parent.postMessage( {msg: '?page=FlashingYoctoImageOneMMC.html#Prepare-the-targeted-device'}, '*');" class="article-anchor" href="#Prepare-the-targeted-device" aria-hidden="true"></a></h3><p><strong>1.</strong> Make sure that your target device has connected all required accessories and cables such as keyboard, mouse, USB drive, network LAN, and HDMI display.<br><strong>2.</strong> After startup, press [ESC] on your keyboard upon seeing the ADLINK logo as exemplified below to enter the boot menu.</p>
+<p><br></p>
+<h3 id="Prepare-the-targeted-device" class="article-heading"><a href="#Prepare-the-targeted-device" class="headerlink" title="Prepare the targeted device"></a>Prepare the targeted device<a class="article-anchor" href="#Prepare-the-targeted-device" aria-hidden="true"></a></h3><p><strong>1.</strong> Make sure that your target device has connected all required accessories and cables such as keyboard, mouse, USB drive, network LAN, and HDMI display.<br><strong>2.</strong> After startup, press [ESC] on your keyboard upon seeing the ADLINK logo as exemplified below to enter the boot menu.</p>
 <center>
 <div>
   <img src="FlashingYoctoImageOneMMC.assets/AdlinkLogo.png" alt="AdlinkLogo">
@@ -238,15 +228,10 @@
 <p><strong>5.</strong> Now, it shall boot the Yocto image form the USB drive and log in as <strong>root</strong>.</p>
 <p><strong>6.</strong> To flash the Yocto image via eMMC, you can type the following commands in the terminal in sequence. This may take some time.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /data</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=&lt;image_name&gt;.wic of=/dev/media/mmcblk0 status=progress</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
 <p><strong>7.</strong> Once completed, reboot your target device and change the boot option to <strong>eMMC</strong> as exemplified below.</p>
 <center>
 <div>

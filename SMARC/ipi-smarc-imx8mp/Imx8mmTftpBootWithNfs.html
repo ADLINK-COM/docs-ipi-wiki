@@ -69,12 +69,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="TFTP Boot with NFSBelow describes how to boot a target device from TFTP with NFS.   Before you start Prepare your Linux host device for the server setup. Make sure the target device(I-Pi SMARC IMX8MM)">
+  <meta name="description" content="TFTP Boot with NFSBelow describes how to boot a target device from TFTP with NFS.   ### Before you start  - Prepare your Linux host device for the server setup. - Make sure the target device(I-Pi SMAR">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/Imx8mmTftpBootWithNfs.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="TFTP Boot with NFSBelow describes how to boot a target device from TFTP with NFS.   Before you start Prepare your Linux host device for the server setup. Make sure the target device(I-Pi SMARC IMX8MM)">
+<meta property="og:description" content="TFTP Boot with NFSBelow describes how to boot a target device from TFTP with NFS.   ### Before you start  - Prepare your Linux host device for the server setup. - Make sure the target device(I-Pi SMAR">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-15T03:16:35.564Z">
 <meta property="article:modified_time" content="2023-03-15T03:16:35.564Z">
@@ -111,7 +111,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=Imx8mmTftpBootWithNfs.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=Imx8mmTftpBootWithNfs.html#Imx8mmTftpBootWithNfs.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,42 +139,44 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="TFTP-Boot-with-NFS" class="article-heading"><a href="#TFTP-Boot-with-NFS" class="headerlink" title="TFTP Boot with NFS"></a>TFTP Boot with NFS<a onclick="parent.postMessage( {msg: '?page=Imx8mmTftpBootWithNfs.html#TFTP-Boot-with-NFS'}, '*');" class="article-anchor" href="#TFTP-Boot-with-NFS" aria-hidden="true"></a></h1><p>Below describes how to boot a target device from TFTP with NFS.</p>
+                <h1 id="TFTP-Boot-with-NFS" class="article-heading"><a href="#TFTP-Boot-with-NFS" class="headerlink" title="TFTP Boot with NFS"></a>TFTP Boot with NFS<a class="article-anchor" href="#TFTP-Boot-with-NFS" aria-hidden="true"></a></h1><p>Below describes how to boot a target device from TFTP with NFS.</p>
 <div class="bullets">
 
-<h3 id="Before-you-start" class="article-heading"><a href="#Before-you-start" class="headerlink" title="Before you start"></a>Before you start<a onclick="parent.postMessage( {msg: '?page=Imx8mmTftpBootWithNfs.html#Before-you-start'}, '*');" class="article-anchor" href="#Before-you-start" aria-hidden="true"></a></h3><ul>
-<li>Prepare your Linux host device for the server setup.</li>
-<li>Make sure the target device(I-Pi SMARC IMX8MM) and the host device are connected to the same network.</li>
-</ul>
-<p><strong>Note:</strong> The following procedures have been tested with Ubuntu 18.04 and 20.04 only.</p>
-<h2 id="Prepare-your-Yocto-Hardknott-1v6-image" class="article-heading"><a href="#Prepare-your-Yocto-Hardknott-1v6-image" class="headerlink" title="Prepare your Yocto Hardknott 1v6 image"></a>Prepare your Yocto Hardknott 1v6 image<a onclick="parent.postMessage( {msg: '?page=Imx8mmTftpBootWithNfs.html#Prepare-your-Yocto-Hardknott-1v6-image'}, '*');" class="article-anchor" href="#Prepare-your-Yocto-Hardknott-1v6-image" aria-hidden="true"></a></h2><ol>
-<li><p>Download and extract the Yocto Hardknott 1v6 image for your target device from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8M/Yocto/LEC-iMX8MM_ARM_NXP_iMX8M-Mini_1V6.0.0/LEC-iMX8MM_1v6_DQAC.tar.bz2">here</a>.</p>
-</li>
-<li><p>Connect an empty SD card to the host device.</p>
-</li>
-<li><p>Type the following command to flash the image onto the SD card,</p>
-</li>
-</ol>
+### Before you start
+
+- Prepare your Linux host device for the server setup.
+- Make sure the target device(I-Pi SMARC IMX8MM) and the host device are connected to the same network.
+
+**Note:** The following procedures have been tested with Ubuntu 18.04 and 20.04 only.
+
+
+
+## Prepare your Yocto Hardknott 1v6 image
+
+1. Download and extract the Yocto Hardknott 1v6 image for your target device from [here](https://hq0epm0west0us0storage.blob.core.windows.net/$web/public/SMARC/LEC-iMX8M/Yocto/LEC-iMX8MM_ARM_NXP_iMX8M-Mini_1V6.0.0/LEC-iMX8MM_1v6_DQAC.tar.bz2).
+
+2. Connect an empty SD card to the host device.
+
+3. Type the following command to flash the image onto the SD card,
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=&lt;image_file_path&gt; of=&lt;/dev/sd[x]&gt; bs=1M status=progress</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li><p>Once it’s get done, insert the SD card into the target device and boot from it (0110).</p>
-</li>
-<li><p>On your target device, log in as a ‘root’ and verify the image.</p>
-</li>
-<li><p>Turn off the device and remove the SD card to finish.</p>
-</li>
-</ol>
+4. Once it's get done, insert the SD card into the target device and boot from it (0110).
+
+5. On your target device, log in as a 'root' and verify the image.
+
+6. Turn off the device and remove the SD card to finish.
+
 <br>
 
-<h3 id="Prepare-your-host-device" class="article-heading"><a href="#Prepare-your-host-device" class="headerlink" title="Prepare your host device"></a>Prepare your host device<a onclick="parent.postMessage( {msg: '?page=Imx8mmTftpBootWithNfs.html#Prepare-your-host-device'}, '*');" class="article-anchor" href="#Prepare-your-host-device" aria-hidden="true"></a></h3><ol start="7">
-<li><p>Connect the removed SD card into your host device.</p>
-</li>
-<li><p>Type the following commands in your host device terminal.</p>
-</li>
-</ol>
+### Prepare your host device
+
+7. Connect the removed SD card into your host device.
+
+8. Type the following commands in your host device terminal.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir imx8mm1v6</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp -rv /media/raman/boot /imx8mm1v6</span><br></pre></td></tr></table></figure>
@@ -185,66 +187,56 @@
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
 
-<ol start="9">
-<li>Install the TFTP and NFS into your host device.</li>
-</ol>
+9. Install the TFTP and NFS into your host device.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install tftpd-hda</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install nfs-kernel-server</span><br></pre></td></tr></table></figure>
 
-<ol start="10">
-<li>Type the following commands to check the IP address of your host device,</li>
-</ol>
+10. Type the following commands to check the IP address of your host device,
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ip route</span><br></pre></td></tr></table></figure>
 
-<ol start="11">
-<li>Set up the tftpd-hda configurations.</li>
-</ol>
+11. Set up the tftpd-hda configurations.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/default/tftpd-hda</span><br></pre></td></tr></table></figure>
 
-<ol start="12">
-<li>Make a file as mentioned below and set your tftp boot path.</li>
-</ol>
+12. Make a file as mentioned below and set your tftp boot path.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">TFTP_USERNAME=&quot;tftp&quot;</span><br><span class="line">TFTP_DIRECTORY=&quot;/home/raman/imx8mm1v6/boot&quot;</span><br><span class="line">TFTP_ADDRESS=&quot;:69&quot;</span><br><span class="line">TFTP_OPTIONS=&quot;-l -c -s&quot;</span><br></pre></td></tr></table></figure>
 
-<ol start="13">
-<li>Start the tftpd-hda.service by typing the following commands,</li>
-</ol>
+13. Start the tftpd-hda.service by typing the following commands,
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl enable tftpd-hda.service</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start tftpd-hda.service</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status tftpd-hda.service</span><br></pre></td></tr></table></figure>
 
-<ol start="14">
-<li>Set up the nfs-kernel server.</li>
-</ol>
+14. Set up the nfs-kernel server.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/exports</span><br></pre></td></tr></table></figure>
 
-<ol start="15">
-<li>Add the following line into &#x2F;etc&#x2F;exports and add the subnet of your IP address. (for ex. mine : 192.168.0.56)</li>
-</ol>
+15. Add the following line into /etc/exports and add the subnet of your IP address. (for ex. mine : 192.168.0.56)
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/home/raman/imx8mm1v6/rootfs 192.168.0.*(rw,sync,no_root_squash,no_subtree_check)</span><br></pre></td></tr></table></figure>
 
-<ol start="16">
-<li>Export all of them into your host device.</li>
-</ol>
+16. Export all of them into your host device.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo exportfs -a</span><br></pre></td></tr></table></figure>
 
-<ol start="17">
-<li>Start the nfs-kernel-server.service by typing the following commands,</li>
-</ol>
+17. Start the nfs-kernel-server.service by typing the following commands,
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl enable nfs-kernel-server.service</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start nfs-kernel-server.service</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status nfs-kernel-server.service</span><br></pre></td></tr></table></figure>
 
-<ol start="18">
-<li>Give permission to the directories.</li>
-</ol>
+18. Give permission to the directories.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chmod 777 imx8mm1v6/</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd imx8mm1v6/</span><br></pre></td></tr></table></figure>
@@ -275,26 +267,22 @@
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo chown root.root imx8mm1v6/</span><br></pre></td></tr></table></figure>
 
-<ol start="19">
-<li>Install the required net-tools on your host device.</li>
-</ol>
+19. Install the required net-tools on your host device.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install net-tools</span><br></pre></td></tr></table></figure>
 
-<ol start="20">
-<li>Check your network and set up the net and netmask on your host device.</li>
-</ol>
+20. Check your network and set up the net and netmask on your host device.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>In our case,</li>
-</ul>
+* In our case,
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo  route add -net 192.168.0.0 netmask 255.255.255.0 dev en02</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ip route</span><br></pre></td></tr></table></figure>
 
-<ol start="21">
-<li>Set up the permission.</li>
-</ol>
+21. Set up the permission.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd imx8mm1v6/rootfs</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls -l</span><br></pre></td></tr></table></figure>
@@ -307,9 +295,8 @@
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd</span><br></pre></td></tr></table></figure>
 
-<ol start="22">
-<li>Restart the server and you can check its status.</li>
-</ol>
+22. Restart the server and you can check its status.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart tftpd-hpa.service</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status tftpd-hpa.service</span><br></pre></td></tr></table></figure>
@@ -318,21 +305,18 @@
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status nfs-kernel-server.service</span><br></pre></td></tr></table></figure>
 
-<ol start="23">
-<li>Take the 1v6 Yocto-image-flashed SD card and connect it to the host device. Copy the 1v6 Yocto image into SD card &#x2F;rootfs&#x2F;home.</li>
-</ol>
+23. Take the 1v6 Yocto-image-flashed SD card and connect it to the host device. Copy the 1v6 Yocto image into SD card /rootfs/home.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo cp -v &lt;image_path&gt; /media/raman/rootfs/home/</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
 
-<ol start="24">
-<li><p>Connect the SD card to the target device and change its boot setting to SD card (0110).</p>
-</li>
-<li><p>Then, connect the serial log reader device from your target device to the host device. You may use minicom to read the serial logs.</p>
-</li>
-<li><p>Power up the target device, enter as a ‘root’ and flash the image to the eMMC by typing the following commands on the minicom terminal,</p>
-</li>
-</ol>
+24. Connect the SD card to the target device and change its boot setting to SD card (0110).
+
+25. Then, connect the serial log reader device from your target device to the host device. You may use minicom to read the serial logs.
+
+26. Power up the target device, enter as a 'root' and flash the image to the eMMC by typing the following commands on the minicom terminal,
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /home</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
@@ -341,25 +325,22 @@
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
 
-<ol start="27">
-<li><p>Remove the SD card from the target device and change the boot setting to eMMC (1000).</p>
-</li>
-<li><p>Power up the target device and set up the u-boot environment.</p>
-</li>
-<li><p>Upon starting the target device, run press any key immediately to get the u-boot&#x3D;&gt; on the minicom terminal.</p>
-</li>
-<li><p>Add the following environment variables to your u-boot and save them.</p>
-</li>
-</ol>
+27. Remove the SD card from the target device and change the boot setting to eMMC (1000).
+
+28. Power up the target device and set up the u-boot environment.
+
+29. Upon starting the target device, run press any key immediately to get the u-boot=> on the minicom terminal.
+
+30. Add the following environment variables to your u-boot and save them.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">setenv serverip 192.168.0.4</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">setenv nfsroot /home/raman/imx8mm1v6/rootfs</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">saveenv</span><br></pre></td></tr></table></figure>
 
-<ol start="31">
-<li>Once it’s saved, you can type the following command to start the TFTP boot with NFS on the target device.</li>
-</ol>
+31. Once it's saved, you can type the following command to start the TFTP boot with NFS on the target device.
+
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">run netboot</span><br></pre></td></tr></table></figure>
 
 
@@ -378,7 +359,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TFTP-Boot-with-NFS"><span class="toc-text">TFTP Boot with NFS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Before-you-start"><span class="toc-text">Before you start</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-your-Yocto-Hardknott-1v6-image"><span class="toc-text">Prepare your Yocto Hardknott 1v6 image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prepare-your-host-device"><span class="toc-text">Prepare your host device</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TFTP-Boot-with-NFS"><span class="toc-text">TFTP Boot with NFS</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
