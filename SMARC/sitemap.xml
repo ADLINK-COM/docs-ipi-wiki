@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/SerialLogReadSER.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/SerialLogReadSER.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/SerialLogReadUART.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/SerialLogReadUART.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToSetup.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/UserInterfaces.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToSetup.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-1200/UserInterfaces.html</loc>
+    
+    <lastmod>2023-03-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/BootFromSDCard.html</loc>
     
     <lastmod>2023-03-16</lastmod>
@@ -65,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial9-SettingUpKioskMode.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial8-howToEnableSerialCommunication.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial8-howToEnableSerialCommunication.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/examples&howto/Tutorial9-SettingUpKioskMode.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -184,13 +240,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/SemaPX30Features.html</loc>
     
     <lastmod>2023-03-15</lastmod>
@@ -198,7 +247,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SupportedOSList.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SMARCModuleOverview.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -206,6 +255,13 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-px30/U-boot.html</loc>
+    
+    <lastmod>2023-03-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/SupportedOSList.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -233,14 +289,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/MechanicalandThermal.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/MechanicalandThermal.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/HowToSetup.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -310,14 +366,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CanderaCGIStudioPage.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-px30/CANDERACGIStudio.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -373,21 +429,7 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/UserInterfaces.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/UnBoxing.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-lec-rb5/HowToSetup.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -443,14 +485,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CarrierModuleandeIQMachinelearningsoftware.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CanderaCGIStudioDemo.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CanderaCGIStudioDemo.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/examples&howto/CarrierModuleandeIQMachinelearningsoftware.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -464,14 +506,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/UserInterfaces.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/YoctoImages.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -506,14 +548,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToFlashImageeMMCUsingUUUTool.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToSetup.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -541,14 +583,14 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/GpioUtility.html</loc>
+    <loc>https://docs.ipi.wiki/ipi-smarc-imx8mp/ExampleHowto.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -737,55 +779,6 @@
   </url>
   
   <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/eIQMLsoftwareDemo.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/Introduction.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/FlashingUbuntuDebianImageintoMicroSD.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CanderaCGIStudioDemo.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/CarrierModuleandeIQMachinelearningsoftware.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/UserInterfaces.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/examples&howto/BootToQtDemo.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-1200/UnBoxing.html</loc>
     
     <lastmod>2023-03-15</lastmod>
@@ -794,13 +787,6 @@
   
   <url>
     <loc>https://docs.ipi.wiki/ipi-smarc-1200/ModuleIntroduction.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://docs.ipi.wiki/ipi-smarc-1200/HowToSetup.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -837,7 +823,7 @@
 
   <url>
     <loc>https://docs.ipi.wiki/</loc>
-    <lastmod>2023-03-16</lastmod>
+    <lastmod>2023-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
