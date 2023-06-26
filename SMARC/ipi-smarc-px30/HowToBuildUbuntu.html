@@ -86,8 +86,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted6.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/gparted3-1583903538497.png">
 <meta property="og:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/lsblk_output-1583903709858.png">
-<meta property="article:published_time" content="2023-03-15T03:16:36.827Z">
-<meta property="article:modified_time" content="2023-03-15T03:16:36.827Z">
+<meta property="article:published_time" content="2023-06-26T04:01:23.064Z">
+<meta property="article:modified_time" content="2023-06-26T04:01:23.064Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildUbuntu.assets/image-20200309102707320.png">
@@ -236,7 +236,7 @@
 <li><p>Create a directory to copy the Ethernet and CAN kernel modules</p>
  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo mkdir $HOME/temp/home/adlink/rockchip_test</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Ubuntu-kernel-module_2020-02-24.zip">here</a> to download and copy  <strong>smsc9500.ko,  smscusbnet.ko and mcp25xxfd.ko kernel modules</strong> into rockchip_test folder from development host PC. </p>
+<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Ubuntu-kernel-module_2020-02-24.zip">here</a> to download and copy  <strong>smsc9500.ko,  smscusbnet.ko and mcp25xxfd.ko kernel modules</strong> into rockchip_test folder from development host PC. </p>
  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo cp &lt;your_path&gt;/*.ko $HOME/temp/home/adlink/rockchip_test/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Use Netplan to enables easily configuring networking on system. Please create a <code>01-network-manager-all.yaml</code> file under &#x2F;etc&#x2F;netplan</p>
@@ -248,25 +248,25 @@
 </li>
 </ol>
 <h4 id="Audio" class="article-heading"><a href="#Audio" class="headerlink" title="- Audio"></a>- Audio<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Audio'}, '*');" class="article-anchor" href="#Audio" aria-hidden="true"></a></h4><ol>
-<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.zip">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
+<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/asound.zip">here</a> to download <strong>asound.state</strong> file and copy to <code>/var/lib/alsa/</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo cp asound.state $HOME/temp/var/lib/alsa/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Enable-I-x2F-O-Interfaces" class="article-heading"><a href="#Enable-I-x2F-O-Interfaces" class="headerlink" title="- Enable I&#x2F;O Interfaces"></a>- Enable I&#x2F;O Interfaces<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Enable-I-x2F-O-Interfaces'}, '*');" class="article-anchor" href="#Enable-I-x2F-O-Interfaces" aria-hidden="true"></a></h4><ol>
-<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.zip">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder. </p>
+<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/Load.zip">here</a> to download and copy <strong>Load.sh</strong> file to the <code>rockchip_test</code>folder. </p>
 <p><strong>Note</strong>: it is shell script to insert modules on every reboot </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo cp Load.sh $HOME/temp/home/adlink/rockchip_test/Load.sh</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Give execute permissions to script</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo chmod +x $HOME/temp/home/adlink/rockchip_test/Load.sh</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/rc.zip">here</a> to download and copy <strong>rc.local</strong> to <code>temp/etc/</code> </p>
+<li><p>Please click <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/rc.zip">here</a> to download and copy <strong>rc.local</strong> to <code>temp/etc/</code> </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo cp rc.local $HOME/temp/etc/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Give executable permissions.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo chmod +x $HOME/temp/etc/rc.local</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="Adding-MRAA" class="article-heading"><a href="#Adding-MRAA" class="headerlink" title="- Adding MRAA"></a>- Adding MRAA<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Adding-MRAA'}, '*');" class="article-anchor" href="#Adding-MRAA" aria-hidden="true"></a></h4><ol>
-<li><p>Download the <code>adlink-mraa-master.tar</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/adlink-mraa-master.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
+<li><p>Download the <code>adlink-mraa-master.tar</code> file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/Images/Ubuntu/UbuntuNecessaryFiles/adlink-mraa-master.tar">here</a> and extract and copy the binaries, applications and libraries to respective folders:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mkdir $HOME/mraa</span><br><span class="line">$ tar -xvf adlink-mraa-master.tar -C $HOME/mraa/</span><br><span class="line">$ sudo cp -r $HOME/mraa/usr/bin/* $HOME/temp/usr/bin/</span><br><span class="line">$ sudo cp -r $HOME/mraa/usr/include/* $HOME/temp/usr/include/</span><br><span class="line">$ sudo cp -r $HOME/mraa/usr/lib/libmraa.so* $HOME/temp/usr/lib/</span><br><span class="line">$ sudo cp -r $HOME/mraa/usr/lib/pkgconfig/mraa.pc $HOME/temp/usr/lib/pkgconfig/</span><br><span class="line">$ sudo cp -r $HOME/mraa/usr/share/* $HOME/temp/usr/share/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="Make-the-Root-File-System" class="article-heading"><a href="#Make-the-Root-File-System" class="headerlink" title="Make the Root File System"></a>Make the Root File System<a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Make-the-Root-File-System'}, '*');" class="article-anchor" href="#Make-the-Root-File-System" aria-hidden="true"></a></h3><p>Execute the commands below to make the rootfs.img. Notice that you need change the “count” value according to the size of the “temp” folder.</p>
@@ -280,7 +280,7 @@ $ sudo umount rootfs/
 $ e2fsck -p -f rootfs.img
 </code></pre>
 <p> The final root files system rootfs.img is ready.</p>
-<h2 id="Step-2-Generating-Buildroot-SD-card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-card-Image" class="headerlink" title="Step 2: Generating Buildroot SD card Image"></a>Step 2: <strong>Generating Buildroot SD card Image</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Step-2-Generating-Buildroot-SD-card-Image'}, '*');" class="article-anchor" href="#Step-2-Generating-Buildroot-SD-card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/public/SMARC/LEC-PX30/SDK/px30_buildroot_es2_sdk_20200422.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
+<h2 id="Step-2-Generating-Buildroot-SD-card-Image" class="article-heading"><a href="#Step-2-Generating-Buildroot-SD-card-Image" class="headerlink" title="Step 2: Generating Buildroot SD card Image"></a>Step 2: <strong>Generating Buildroot SD card Image</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Step-2-Generating-Buildroot-SD-card-Image'}, '*');" class="article-anchor" href="#Step-2-Generating-Buildroot-SD-card-Image" aria-hidden="true"></a></h2><p>Download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backuppublic/SMARC/LEC-PX30/SDK/px30_buildroot_es2_sdk_20200422.tar.gz">LEC-PX30 Buildroot SDK</a> and extract it.</p>
 <p><strong>Note</strong>: Use <code>iPIsmarc-es2</code> branch and root for Creating Custom Images for SD Card Creating Custom Images for SD Card Building. Use <code>git branch</code> command under <strong>px30_buildroot&#x2F;kernel</strong> to check the branch version.</p>
 <p>Change directory to px30_buildroot.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> px30_buildroot</span></span><br></pre></td></tr></table></figure>
@@ -289,7 +289,7 @@ $ e2fsck -p -f rootfs.img
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./build.sh</span></span><br></pre></td></tr></table></figure>
 
 <p>After you run “.&#x2F;build.sh”, a menu config screen will appear as shown below. Select <strong>“Exit”</strong> as shown below.</p>
-<img src="HowToBuildUbuntu.assets/image-20200309102707320.png" alt="img" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
+<img src="HowToBuildUbuntu.assets/image-20200309102707320.png" alt="img" style="margin-left: auto; margin-right: auto; display: block;">
 
 
 
@@ -297,14 +297,14 @@ $ e2fsck -p -f rootfs.img
 <h2 id="Step-3-Flashing-buildroot-image-to-SD-Card" class="article-heading"><a href="#Step-3-Flashing-buildroot-image-to-SD-Card" class="headerlink" title="Step 3: Flashing buildroot image to SD Card"></a>Step 3: <strong>Flashing buildroot image to SD Card</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUbuntu.html#Step-3-Flashing-buildroot-image-to-SD-Card'}, '*');" class="article-anchor" href="#Step-3-Flashing-buildroot-image-to-SD-Card" aria-hidden="true"></a></h2><p>Flash image (generated in Step2) to the prepared SD card by using <strong>SD Firmware Tool</strong> (this tool is executed on Windows environment)</p>
 <p><strong>Note:</strong> Before going to flash image to SD card, format it. The size should be at least 8 Gb.</p>
 <ul>
-<li><p>Download the SD Firmware Tool from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-PX30/Tools/SDDiskTool_v1.6.rar">SD Firmware Tool Download Link</a></p>
+<li><p>Download the SD Firmware Tool from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/Tools/SDDiskTool_v1.6.rar">SD Firmware Tool Download Link</a></p>
 </li>
 <li><p>Use <strong>SD Firmware Tool</strong> to prepare a bootable SD card. </p>
 </li>
 <li><p>Run <strong>SD Firmware Tool</strong>  as a administrator.</p>
 </li>
 <li><p>Select “Removable Disk” as SD card.  Choose “Function Mode” as SD boot. Load the SD card image as “Firmware” as shown below.</p>
-<img src="HowToBuildUbuntu.assets/SDFwTool.png" alt="img" style="zoom: 100%; margin-left: auto; margin-right: auto; display: block;">
+<img src="HowToBuildUbuntu.assets/SDFwTool.png" alt="img" style="margin-left: auto; margin-right: auto; display: block;">
 
 
 </li>
@@ -399,7 +399,7 @@ $ e2fsck -p -f rootfs.img
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-03-15T03:16:36.827Z" itemprop="dateModified">Last updated: 2023-03-15</time>
+                <time class="article-footer-updated" datetime="2023-06-26T04:01:23.064Z" itemprop="dateModified">Last updated: 2023-06-26</time>
                 <a href="BootFromSDCard.html" class="article-footer-prev" title="Boot From SD Card"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToBuildDebian.html" class="article-footer-next" title="How to Build Debian"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
