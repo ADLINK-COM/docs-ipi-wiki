@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildYocto.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildYocto.html">
   <!-- Alternative links -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -69,19 +69,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to Build Yocto LinuxThe Yocto Project (YP) is an open source collaboration project that helps developers create custom Linux-based systems regardless of the hardware architecture.  We provide meta">
+  <meta name="description" content="How to Build Yocto The Yocto Project (YP) is an open source collaboration project that helps developers create custom Linux-based systems regardless of the hardware architecture. This procedure will h">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-px30/HowToBuildYocto.html">
+<meta property="og:url" content="https://docs.ipi.wiki/ipi-smarc-imx8mp/HowToBuildYocto.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to Build Yocto LinuxThe Yocto Project (YP) is an open source collaboration project that helps developers create custom Linux-based systems regardless of the hardware architecture.  We provide meta">
+<meta property="og:description" content="How to Build Yocto The Yocto Project (YP) is an open source collaboration project that helps developers create custom Linux-based systems regardless of the hardware architecture. This procedure will h">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.phytec.eu/fileadmin/_processed_/csm_yocto_project_eebe407216.png">
-<meta property="article:published_time" content="2023-06-14T01:45:17.789Z">
-<meta property="article:modified_time" content="2023-06-14T01:45:17.789Z">
+<meta property="article:published_time" content="2023-06-14T01:45:14.752Z">
+<meta property="article:modified_time" content="2023-06-14T01:45:14.752Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.phytec.eu/fileadmin/_processed_/csm_yocto_project_eebe407216.png">
   <!-- Google Analytics -->
   
 <script>
@@ -107,7 +105,7 @@
       <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
       
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
-      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link current header">menu.ipi-smarc-px30</a></div>
+      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link current header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
       <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
@@ -141,14 +139,116 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h2 id="How-to-Build-Yocto-Linux" class="article-heading"><a href="#How-to-Build-Yocto-Linux" class="headerlink" title="How to Build Yocto Linux"></a>How to Build Yocto Linux<a class="article-anchor" href="#How-to-Build-Yocto-Linux" aria-hidden="true"></a></h2><p><img align="right" src="https://www.phytec.eu/fileadmin/_processed_/csm_yocto_project_eebe407216.png" style="zoom: 67%;">The Yocto Project (YP) is an open source collaboration project that helps developers create custom Linux-based systems regardless of the hardware architecture. </p>
-<p>We provide <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink/meta-adlink-rockchip">meta-adlink-rockchip</a> is an Yocto BSP layer for LEC-PX30 with Industrial Pi. </p>
-<p>Please refer to the following <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/meta-adlink-rockchip/wiki/01.-Build-Yocto-Image-on-LEC-PX30-with-IPi-SMARC">page</a> to guide you how to build Yocto Linux.  </p>
+                <h1 id="How-to-Build-Yocto" class="article-heading"><a href="#How-to-Build-Yocto" class="headerlink" title="How to Build Yocto"></a><strong>How to Build Yocto</strong><a class="article-anchor" href="#How-to-Build-Yocto" aria-hidden="true"></a></h1><div class="bullets">
+The Yocto Project (YP) is an open source collaboration project that helps developers create custom Linux-based systems regardless of the hardware architecture. This procedure will help you build Yocto image for I-Pi SMARC IMX8M Plus.
+<br>
+
+<h2 id="1-Set-up-a-build-host-environment" class="article-heading"><a href="#1-Set-up-a-build-host-environment" class="headerlink" title="1. Set up a build host environment"></a><strong>1. Set up a build host environment</strong><a class="article-anchor" href="#1-Set-up-a-build-host-environment" aria-hidden="true"></a></h2><h4 id="1-1-Recommended-Hardware-for-the-host" class="article-heading"><a href="#1-1-Recommended-Hardware-for-the-host" class="headerlink" title="1.1 Recommended Hardware for the host"></a>1.1 <strong>Recommended Hardware for the host</strong><a class="article-anchor" href="#1-1-Recommended-Hardware-for-the-host" aria-hidden="true"></a></h4><ul>
+<li>Intel Core-i7 Processor (&gt;&#x3D; 4 cores)</li>
+<li>at least 8GB Memory</li>
+<li>at least 500GB Disk space</li>
+<li>Ubuntu <strong>18.04 LTS 64bit</strong> or later version for Yocto Project Build</li>
+<li>High speed network connectivity</li>
+</ul>
+<h4 id="1-2-Install-the-following-packages-in-your-host" class="article-heading"><a href="#1-2-Install-the-following-packages-in-your-host" class="headerlink" title="1.2 Install the following packages in your host"></a>1.2 <strong>Install the following packages in your host</strong><a class="article-anchor" href="#1-2-Install-the-following-packages-in-your-host" aria-hidden="true"></a></h4><p><strong>Note:</strong></p>
+<p>In order to use the build system, your host development system must meet the following versions requirements for Git, tar and Python:</p>
+<ul>
+<li>Git 1.8.3.1 or greater</li>
+<li>tar 1.28 or greater</li>
+<li>Python 3.5.0 or greater</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3 -V</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install zstd</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install liblz4-tool</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install curl</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install git</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git --version</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-3-Essential-host-Packages-required-to-be-installed-in-your-host" class="article-heading"><a href="#1-3-Essential-host-Packages-required-to-be-installed-in-your-host" class="headerlink" title="1.3 Essential host Packages required to be installed in your host"></a>1.3 <strong>Essential host Packages required to be installed in your host</strong><a class="article-anchor" href="#1-3-Essential-host-Packages-required-to-be-installed-in-your-host" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install gawk wget git git-core diffstat unzip texinfo gcc-multilib build-essential \</span></span><br><span class="line"><span class="bash">chrpath socat cpio python python3 python3-pip python3-pexpect \</span></span><br><span class="line"><span class="bash">python3-git python3-jinja2 libegl1-mesa pylint3 rsync bc bison \</span></span><br><span class="line"><span class="bash">xz-utils debianutils iputils-ping libsdl1.2-dev xterm \</span></span><br><span class="line"><span class="bash">language-pack-en coreutils texi2html file docbook-utils \</span></span><br><span class="line"><span class="bash">python-pysqlite2 help2man desktop-file-utils \</span></span><br><span class="line"><span class="bash">libgl1-mesa-dev libglu1-mesa-dev mercurial autoconf automake \</span></span><br><span class="line"><span class="bash">groff curl lzop asciidoc u-boot-tools libreoffice-writer \</span></span><br><span class="line"><span class="bash">sshpass ssh-askpass zip xz-utils kpartx vim screen</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install make xsltproc docbook-utils fop dblatex xmlto</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong></p>
+<p>Please <strong>Don’t</strong> use the root account to build Yocto. It might cause unpredictable errors.</p>
+<h4 id="1-4-“Google-repo”-packages-required-to-be-installed-in-your-host" class="article-heading"><a href="#1-4-“Google-repo”-packages-required-to-be-installed-in-your-host" class="headerlink" title="1.4 “Google repo” packages required to be installed in your host"></a>1.4 <strong>“Google repo” packages required to be installed in your host</strong><a class="article-anchor" href="#1-4-“Google-repo”-packages-required-to-be-installed-in-your-host" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir ~/bin (this step may not be needed <span class="keyword">if</span> the bin folder already exists)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod a+x ~/bin/repo</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">export</span> PATH=~/bin:<span class="variable">$PATH</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-5-Before-starting-to-build-the-source-make-sure-that-git-is-set-up-properly-with-the-commands-below" class="article-heading"><a href="#1-5-Before-starting-to-build-the-source-make-sure-that-git-is-set-up-properly-with-the-commands-below" class="headerlink" title="1.5 Before starting to build the source, make sure that git is set up properly with the commands below"></a>1.5 <strong>Before starting to build the source, make sure that git is set up properly with the commands below</strong><a class="article-anchor" href="#1-5-Before-starting-to-build-the-source-make-sure-that-git-is-set-up-properly-with-the-commands-below" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.name <span class="string">&quot;Your_Name&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.email <span class="string">&quot;Your_Email&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git config --list</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="2-Fetch-the-source-from-the-git-location-as-below" class="article-heading"><a href="#2-Fetch-the-source-from-the-git-location-as-below" class="headerlink" title="2. Fetch the source from the git location as below"></a>2. Fetch the source from the git location as below<a class="article-anchor" href="#2-Fetch-the-source-from-the-git-location-as-below" aria-hidden="true"></a></h2><h4 id="2-1-Create-the-working-directory-as-we-have-to-create-“imx-yocto-bsp”" class="article-heading"><a href="#2-1-Create-the-working-directory-as-we-have-to-create-“imx-yocto-bsp”" class="headerlink" title="2.1 Create the working directory as we have to create “imx-yocto-bsp”"></a>2.1 <strong>Create the working directory as we have to create “imx-yocto-bsp”</strong><a class="article-anchor" href="#2-1-Create-the-working-directory-as-we-have-to-create-“imx-yocto-bsp”" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir imx-yocto-bsp</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> imx-yocto-bsp</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-Start-to-download-the-source" class="article-heading"><a href="#2-2-Start-to-download-the-source" class="headerlink" title="2.2 **Start to download the source **"></a>2.2 **Start to download the source **<a class="article-anchor" href="#2-2-Start-to-download-the-source" aria-hidden="true"></a></h4><ul>
+<li><font size="3" color="red">Attention: current default branch for build image is “hardknott”. For other branches build such as kirkstone, please refer to our ADLINK <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/meta-adlink-nxp" style="color:red; text-decoration:underline;">GitHub repository</a> for paired manifest  .xml accordingly!</font></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> repo init -u https://github.com/ADLINK/adlink-manifest -b lec-imx-yocto-hardknott -m adlink-lec-imx8mp-yocto-hardknott_1v5.xml</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> repo sync</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> MACHINE=lec-imx8mp DISTRO=fsl-imx-xwayland <span class="built_in">source</span> adlink-imx-setup-release.sh -b &lt;build_dir&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-Required-setting-in-conf-x2F-local-conf" class="article-heading"><a href="#2-3-Required-setting-in-conf-x2F-local-conf" class="headerlink" title="2.3 Required setting in conf&#x2F;local.conf"></a><strong>2.3 Required setting in conf&#x2F;local.conf</strong><a class="article-anchor" href="#2-3-Required-setting-in-conf-x2F-local-conf" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vi &lt;build_dir&gt;/conf/local.conf</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sets the LPDDR4 DRAM size, available options are: LPDDR4_2GB, LPDDR4_2GK, LPDDR4_4GB, LPDDR4_8GB</span></span><br><span class="line">UBOOT_EXTRA_CONFIGS = &quot;LPDDR4_2GB&quot;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="3-Build-the-Image" class="article-heading"><a href="#3-Build-the-Image" class="headerlink" title="3. Build the Image"></a>3. Build the Image<a class="article-anchor" href="#3-Build-the-Image" aria-hidden="true"></a></h3><p>Choose the Image recipe with the supported hardware</p>
+<table>
+<thead>
+<tr>
+<th align="left">Module name</th>
+<th align="left">Yocto branch</th>
+<th align="left">bitbake command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">lec-imx8mp + wayland desktop (GUI) + weston graphics</td>
+<td align="left">hardknott</td>
+<td align="left"><code>$ bitbake imx-image-full</code></td>
+</tr>
+<tr>
+<td align="left">lec-imx8mp + wayland desktop (GUI) + weston graphics</td>
+<td align="left">hardknott</td>
+<td align="left"><code>$ bitbake imx-image-multimedia</code></td>
+</tr>
+<tr>
+<td align="left">lec-imx8mp + console (CLI)</td>
+<td align="left">hardknott</td>
+<td align="left"><code>$ bitbake core-image-minimal</code></td>
+</tr>
+<tr>
+<td align="left">lec-imx8mp + xwayland desktop (GUI) + wayland graphics and X11</td>
+<td align="left">hardknott</td>
+<td align="left"><code>$ bitbake imx-image-full</code></td>
+</tr>
+<tr>
+<td align="left">lec-imx8mp + xwayland desktop (GUI) + wayland graphics and X11</td>
+<td align="left">hardknott</td>
+<td align="left"><code>$ bitbake imx-image-multimedia</code></td>
+</tr>
+</tbody></table>
+<p>Run the following command on your host system to provoke the yocto image building process.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> bitbake imx-image-full</span></span><br></pre></td></tr></table></figure>
+
+<p>After the build is complete, disk images will be located at work-dir&#x2F;build-dir&#x2F;tmp&#x2F;deploy&#x2F;image&#x2F;lec-imx8mp&#x2F;</p>
+<h4 id="3-1-Image-is-generated-as-wic-bz2-use-below-command-to-unzip" class="article-heading"><a href="#3-1-Image-is-generated-as-wic-bz2-use-below-command-to-unzip" class="headerlink" title="3.1 Image is generated as wic.bz2, use below command to unzip"></a>3.1 Image is generated as wic.bz2, use below command to unzip<a class="article-anchor" href="#3-1-Image-is-generated-as-wic-bz2-use-below-command-to-unzip" aria-hidden="true"></a></h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> bunzip2 -dk -f &lt;image_name&gt;.wic.bz2</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="4-Next-action-deploying-the-image" class="article-heading"><a href="#4-Next-action-deploying-the-image" class="headerlink" title="4. Next action deploying the image"></a>4. Next action deploying the image<a class="article-anchor" href="#4-Next-action-deploying-the-image" aria-hidden="true"></a></h3><ul>
+<li><p>Deploying the image through <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/imx8mp-docs?page=HowToFlashImageSD.html">SD card</a>.</p>
+</li>
+<li><p>Deploying the image through <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/imx8mp-docs?page=HowToFlashImageeMMC.html">eMMC</a>.</p>
+</li>
+</ul>
+</div>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-06-14T01:45:17.789Z" itemprop="dateModified">Last updated: 2023-06-14</time>
-                <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2023-06-14T01:45:14.752Z" itemprop="dateModified">Last updated: 2023-06-14</time>
+                <a href="HowToFlashImageeMMCUsingUUUTool.html" class="article-footer-prev" title="UUU Tool with eMMC"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToBuildUbuntu.html" class="article-footer-next" title="How to Build Ubuntu"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -157,7 +257,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Build-Yocto-Linux"><span class="toc-text">How to Build Yocto Linux</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Build-Yocto"><span class="toc-text">How to Build Yocto</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Set-up-a-build-host-environment"><span class="toc-text">1. Set up a build host environment</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-Recommended-Hardware-for-the-host"><span class="toc-text">1.1 Recommended Hardware for the host</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-Install-the-following-packages-in-your-host"><span class="toc-text">1.2 Install the following packages in your host</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-Essential-host-Packages-required-to-be-installed-in-your-host"><span class="toc-text">1.3 Essential host Packages required to be installed in your host</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-%E2%80%9CGoogle-repo%E2%80%9D-packages-required-to-be-installed-in-your-host"><span class="toc-text">1.4 “Google repo” packages required to be installed in your host</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-Before-starting-to-build-the-source-make-sure-that-git-is-set-up-properly-with-the-commands-below"><span class="toc-text">1.5 Before starting to build the source, make sure that git is set up properly with the commands below</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Fetch-the-source-from-the-git-location-as-below"><span class="toc-text">2. Fetch the source from the git location as below</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Create-the-working-directory-as-we-have-to-create-%E2%80%9Cimx-yocto-bsp%E2%80%9D"><span class="toc-text">2.1 Create the working directory as we have to create “imx-yocto-bsp”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-Start-to-download-the-source"><span class="toc-text">2.2 **Start to download the source **</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Required-setting-in-conf-x2F-local-conf"><span class="toc-text">2.3 Required setting in conf&#x2F;local.conf</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Build-the-Image"><span class="toc-text">3. Build the Image</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Image-is-generated-as-wic-bz2-use-below-command-to-unzip"><span class="toc-text">3.1 Image is generated as wic.bz2, use below command to unzip</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Next-action-deploying-the-image"><span class="toc-text">4. Next action deploying the image</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -166,7 +266,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="DebianImages.html" class="sidebar-link">Debian</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="BootFromSDCard.html" class="sidebar-link first">Boot From SD Card</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="sidebar-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="sidebar-link">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="sidebar-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="DebianImages.html" class="sidebar-link">Debian</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="GpioUtility.html" class="sidebar-link">GPIO Utility</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadSER.html" class="sidebar-link first">How to Read Console Output</a><a href="BootFromSDCard.html" class="sidebar-link">Boot From SD Card</a><a href="BootFromeMMC.html" class="sidebar-link">Boot From eMMC</a><a href="HowToFlashImageeMMCUsingUUUTool.html" class="sidebar-link">UUU Tool with eMMC</a><a href="HowToBuildYocto.html" class="sidebar-link current">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="ArmSystemready.html" class="sidebar-link">How to Build Arm System Ready Image</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing on NPU</summary><a href="AIInferencingOnNPU.html" class="sidebar-link first">AI Inferencing</a><a href="HowToEnableeIQ.html" class="sidebar-link">How to Enable eIQ</a></details></strong><strong class="sidebar-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
   </div>
 </aside>
     </div>
@@ -208,11 +308,11 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link current header">menu.ipi-smarc-px30</a>
+      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link current header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="DebianImages.html" class="mobile-nav-link">Debian</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="BootFromSDCard.html" class="mobile-nav-link first">Boot From SD Card</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="mobile-nav-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="mobile-nav-link">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="mobile-nav-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="DebianImages.html" class="mobile-nav-link">Debian</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="GpioUtility.html" class="mobile-nav-link">GPIO Utility</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadSER.html" class="mobile-nav-link first">How to Read Console Output</a><a href="BootFromSDCard.html" class="mobile-nav-link">Boot From SD Card</a><a href="BootFromeMMC.html" class="mobile-nav-link">Boot From eMMC</a><a href="HowToFlashImageeMMCUsingUUUTool.html" class="mobile-nav-link">UUU Tool with eMMC</a><a href="HowToBuildYocto.html" class="mobile-nav-link current">How to Build Yocto</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="ArmSystemready.html" class="mobile-nav-link">How to Build Arm System Ready Image</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="AIInferencingOnNPU.html" class="mobile-nav-link first">AI Inferencing</a><a href="HowToEnableeIQ.html" class="mobile-nav-link">How to Enable eIQ</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
     
   </div>
   
