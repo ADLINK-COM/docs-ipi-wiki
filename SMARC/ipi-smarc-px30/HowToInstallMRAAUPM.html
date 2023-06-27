@@ -113,7 +113,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#HowToInstallMRAAUPM.html'}, '*');}</script>
 
 	</div>
 	
@@ -143,7 +143,7 @@
               <div class="article-content bullets" itemprop="articleBody">
                 <div class="bullets">
 
-<h2 id="What-is-MRAA-x2F-UPM" class="article-heading"><a href="#What-is-MRAA-x2F-UPM" class="headerlink" title="What is MRAA&#x2F;UPM"></a>What is MRAA&#x2F;UPM<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#What-is-MRAA-x2F-UPM'}, '*');" class="article-anchor" href="#What-is-MRAA-x2F-UPM" aria-hidden="true"></a></h2><p>Eclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches the board that you are on. Use of libmraa does not tie you to specific hardware with board detection done at runtime you can create portable code that will work across the supported platforms.</p>
+<h2 id="What-is-MRAA-x2F-UPM" class="article-heading"><a href="#What-is-MRAA-x2F-UPM" class="headerlink" title="What is MRAA&#x2F;UPM"></a>What is MRAA&#x2F;UPM<a class="article-anchor" href="#What-is-MRAA-x2F-UPM" aria-hidden="true"></a></h2><p>Eclipse MRAA&#x2F;UPM is a C&#x2F;C++ library with bindings to Java, Python and JavaScript to interface with the IO, with a structured and sensors API where port names&#x2F;numbering matches the board that you are on. Use of libmraa does not tie you to specific hardware with board detection done at runtime you can create portable code that will work across the supported platforms.</p>
 <p>The intent is to make it easier for developers and sensor manufacturers to map their sensors &amp; actuators on top of supported hardware and to allow control of low level communication protocol by high level languages &amp; constructs. Also. please refer to <a target="_blank" rel="noopener external nofollow noreferrer" href="https://projects.eclipse.org/proposals/eclipse-mraa">Introduction to MRAA</a> &amp; <a target="_blank" rel="noopener external nofollow noreferrer" href="https://iotdk.intel.com/docs/master/upm/">Introduction to UPM</a> for more details.</p>
 <center>
 <img src="HowToInstallMRAA.assets/image-20201013143405250.png" alt="image-20201013143405250" style="width: 33%;">
@@ -159,14 +159,14 @@
 <br>
 
 
-<h2 id="How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" class="article-heading"><a href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" class="headerlink" title="How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian"></a>How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian'}, '*');" class="article-anchor" href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" aria-hidden="true"></a></h2><ul>
+<h2 id="How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" class="article-heading"><a href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" class="headerlink" title="How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian"></a>How to build &amp; install MRAA&#x2F;UPM on Yocto&#x2F;Ubuntu&#x2F;Debian<a class="article-anchor" href="#How-to-build-amp-install-MRAA-x2F-UPM-on-Yocto-x2F-Ubuntu-x2F-Debian" aria-hidden="true"></a></h2><ul>
 <li><a href="HowToInstallMRAAUPM.html#Debian">Guideline to Debian</a></li>
 <li><a href="HowToInstallMRAAUPM.html#Ubuntu">Guideline to Ubuntu</a></li>
 <li><a href="HowToInstallMRAAUPM.html#Yocto">Guideline to Yocto</a></li>
 </ul>
 <br>
 
-<h3 id="Debian" class="article-heading"><a href="#Debian" class="headerlink" title="Debian"></a>Debian<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Debian'}, '*');" class="article-anchor" href="#Debian" aria-hidden="true"></a></h3><h4 id="Building-amp-Installing-MRAA" class="article-heading"><a href="#Building-amp-Installing-MRAA" class="headerlink" title="Building &amp; Installing MRAA"></a>Building &amp; Installing MRAA<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-MRAA'}, '*');" class="article-anchor" href="#Building-amp-Installing-MRAA" aria-hidden="true"></a></h4><ol>
+<h3 id="Debian" class="article-heading"><a href="#Debian" class="headerlink" title="Debian"></a>Debian<a class="article-anchor" href="#Debian" aria-hidden="true"></a></h3><h4 id="Building-amp-Installing-MRAA" class="article-heading"><a href="#Building-amp-Installing-MRAA" class="headerlink" title="Building &amp; Installing MRAA"></a>Building &amp; Installing MRAA<a class="article-anchor" href="#Building-amp-Installing-MRAA" aria-hidden="true"></a></h4><ol>
 <li>Install required dependencies.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git build-essential swig3.0 python-dev libnode-dev cmake libjson-c-dev</span><br></pre></td></tr></table></figure>
@@ -190,7 +190,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf mraa</span><br></pre></td></tr></table></figure>
 
 <p><strong>Note:</strong> Example applications get installed into <strong>&#x2F;usr&#x2F;local&#x2F;share&#x2F;mraa&#x2F;examples&#x2F;c</strong></p>
-<h4 id="Building-amp-Installing-UPM" class="article-heading"><a href="#Building-amp-Installing-UPM" class="headerlink" title="Building &amp; Installing UPM"></a>Building &amp; Installing UPM<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-UPM'}, '*');" class="article-anchor" href="#Building-amp-Installing-UPM" aria-hidden="true"></a></h4><ol>
+<h4 id="Building-amp-Installing-UPM" class="article-heading"><a href="#Building-amp-Installing-UPM" class="headerlink" title="Building &amp; Installing UPM"></a>Building &amp; Installing UPM<a class="article-anchor" href="#Building-amp-Installing-UPM" aria-hidden="true"></a></h4><ol>
 <li>Install required dependencies</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install automake libpcre3-dev bison pkg-config libnode-dev  python3-distutils python3-dev libjpeg-dev</span></span><br></pre></td></tr></table></figure>
@@ -217,7 +217,7 @@
 
 <br>
 
-<h3 id="Ubuntu" class="article-heading"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Ubuntu'}, '*');" class="article-anchor" href="#Ubuntu" aria-hidden="true"></a></h3><h4 id="Building-amp-Installing-MRAA-1" class="article-heading"><a href="#Building-amp-Installing-MRAA-1" class="headerlink" title="Building &amp; Installing MRAA"></a>Building &amp; Installing MRAA<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-MRAA-1'}, '*');" class="article-anchor" href="#Building-amp-Installing-MRAA-1" aria-hidden="true"></a></h4><ol>
+<h3 id="Ubuntu" class="article-heading"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu<a class="article-anchor" href="#Ubuntu" aria-hidden="true"></a></h3><h4 id="Building-amp-Installing-MRAA-1" class="article-heading"><a href="#Building-amp-Installing-MRAA-1" class="headerlink" title="Building &amp; Installing MRAA"></a>Building &amp; Installing MRAA<a class="article-anchor" href="#Building-amp-Installing-MRAA-1" aria-hidden="true"></a></h4><ol>
 <li>Install required dependencies.</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git build-essential swig3.0 python-dev nodejs-dev cmake libjson-c-dev</span><br></pre></td></tr></table></figure>
@@ -234,7 +234,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf mraa</span><br></pre></td></tr></table></figure>
 
 <p><strong>Note:</strong> Example applications get installed into <strong>&#x2F;usr&#x2F;local&#x2F;share&#x2F;mraa&#x2F;examples&#x2F;c</strong></p>
-<h4 id="Building-amp-Installing-UPM-1" class="article-heading"><a href="#Building-amp-Installing-UPM-1" class="headerlink" title="Building &amp; Installing UPM"></a>Building &amp; Installing UPM<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Building-amp-Installing-UPM-1'}, '*');" class="article-anchor" href="#Building-amp-Installing-UPM-1" aria-hidden="true"></a></h4><p>Install required dependencies on ubuntu.</p>
+<h4 id="Building-amp-Installing-UPM-1" class="article-heading"><a href="#Building-amp-Installing-UPM-1" class="headerlink" title="Building &amp; Installing UPM"></a>Building &amp; Installing UPM<a class="article-anchor" href="#Building-amp-Installing-UPM-1" aria-hidden="true"></a></h4><p>Install required dependencies on ubuntu.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install automake libpcre3-dev bison pkg-config nodejs-dev python3-distutils python3-dev libjpeg-dev</span></span><br></pre></td></tr></table></figure>
 
 <p>Download SWIG source and compile.</p>
@@ -249,7 +249,7 @@
 <p>Update LD_LIBRARY_PATH.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ldconfig</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Yocto" class="article-heading"><a href="#Yocto" class="headerlink" title="Yocto"></a>Yocto<a onclick="parent.postMessage( {msg: '?page=HowToInstallMRAAUPM.html#Yocto'}, '*');" class="article-anchor" href="#Yocto" aria-hidden="true"></a></h3><p>Intel mraa recipe is <a target="_blank" rel="noopener external nofollow noreferrer" href="http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-iot-middleware/tree/recipes-devtools?h=daisy">here</a> and please add it to your building Yocto.</p>
+<h3 id="Yocto" class="article-heading"><a href="#Yocto" class="headerlink" title="Yocto"></a>Yocto<a class="article-anchor" href="#Yocto" aria-hidden="true"></a></h3><p>Intel mraa recipe is <a target="_blank" rel="noopener external nofollow noreferrer" href="http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-iot-middleware/tree/recipes-devtools?h=daisy">here</a> and please add it to your building Yocto.</p>
 </div>
 
 <style>

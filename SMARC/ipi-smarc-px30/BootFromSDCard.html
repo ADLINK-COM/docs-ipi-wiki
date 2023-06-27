@@ -115,7 +115,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromSDCard.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromSDCard.html#BootFromSDCard.html'}, '*');}</script>
 
 	</div>
 	
@@ -143,7 +143,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="title_container" class="article-heading"><a href="#title_container_bootSD"></a>Boot From SD Card<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#title_container'}, '*');" class="article-anchor" href="#title_container" aria-hidden="true"></a></h1>
+                <h1 id="title_container" class="article-heading"><a href="#title_container_bootSD"></a>Boot From SD Card<a class="article-anchor" href="#title_container" aria-hidden="true"></a></h1>
 
 <p>This procedure describes how to flash Ubuntu&#x2F;Debian&#x2F;Yocto&#x2F;Android image to the eMMC.</p>
 <ul>
@@ -151,7 +151,7 @@
 <li><a href="#Flashing-Yocto-Image">Flashing Yocto Image</a></li>
 <li><a href="#Flashing-Android-Image">Flashing Android Image</a></li>
 </ul>
-<h2 id="Flashing-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flashing-Ubuntu-or-Debian-Image" class="headerlink" title="Flashing Ubuntu or Debian Image"></a>Flashing Ubuntu or Debian Image<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Flashing-Ubuntu-or-Debian-Image'}, '*');" class="article-anchor" href="#Flashing-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<h2 id="Flashing-Ubuntu-or-Debian-Image" class="article-heading"><a href="#Flashing-Ubuntu-or-Debian-Image" class="headerlink" title="Flashing Ubuntu or Debian Image"></a>Flashing Ubuntu or Debian Image<a class="article-anchor" href="#Flashing-Ubuntu-or-Debian-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
 <li>Download the prebuilt bootable Ubuntu image to the working directory on your development host.</li>
 <li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">rufus</a> to flash the image to the SD Card.</li>
 <li>In a Linux environment use <strong>dd</strong> command.</li>
@@ -166,7 +166,7 @@
 <li><a href="#Windows-Host">Windows Host Users</a></li>
 <li><a href="#Linux-Host">Linux Host Users</a></li>
 </ul>
-<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
 <li>Insert an empty MicroSD Card into the development host and execute rufus.exe. It will auto-detected your storage drives.</li>
 <li>Press the <strong>SELECT</strong> button and browse to the .img file previously downloaded to your working directory in the development host. Then click <strong>START</strong> and wait for the process to be finished.</li>
 </ol>
@@ -174,7 +174,7 @@
     <img src="BootFromSDCard.assets\rufus_1.png" alt="logo" style=" width: 55%; margin-left: auto; margin-right: auto; display: block;">
 </center>
 
-<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
 <li>Copy the prebuilt bootable Ubuntu&#x2F;Debian image to the working directory on your development host. Insert an empty SD Card into the development host and enter the following command to copy the .img to the SD Card.</li>
 </ol>
 <p><strong>Warning:</strong> Make sure you first properly identify the SD Card device name as for example (&#x2F;dev&#x2F;sdb or &#x2F;dev&#x2F;sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development host OS.<br>    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure></p>
@@ -182,12 +182,12 @@
 <li>After dd has completed, enter the following command: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p><strong>Note:</strong> You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your <strong>dd</strong> command.</p>
-<h2 id="Flashing-Yocto-Image" class="article-heading"><a href="#Flashing-Yocto-Image" class="headerlink" title="Flashing Yocto Image"></a>Flashing Yocto Image<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Flashing-Yocto-Image'}, '*');" class="article-anchor" href="#Flashing-Yocto-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Prerequisites-1'}, '*');" class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
+<h2 id="Flashing-Yocto-Image" class="article-heading"><a href="#Flashing-Yocto-Image" class="headerlink" title="Flashing Yocto Image"></a>Flashing Yocto Image<a class="article-anchor" href="#Flashing-Yocto-Image" aria-hidden="true"></a></h2><h3 id="Prerequisites-1" class="article-heading"><a href="#Prerequisites-1" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites-1" aria-hidden="true"></a></h3><ul>
 <li>Copy the prebuilt bootable Yocto image to the working directory on your development host.</li>
 <li>In Windows environments, please download the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://win32diskimager.download/">Win32DiskImager</a> to flash the image to the SD Card.</li>
 </ul>
 <p><strong>Note:</strong> All files will be erased on the SD Card. The size should be preferable 16 GB or larger.</p>
-<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Windows-Host-1'}, '*');" class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.</p>
+<h3 id="Windows-Host-1" class="article-heading"><a href="#Windows-Host-1" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host-1" aria-hidden="true"></a></h3><p>Insert an empty MicroSD Card into the development host and execute the Win32DiskImager tool.</p>
 <ul>
 <li>The SD card device is automatically detected.</li>
 <li>Choose Image file by clicking on File explorer icon.</li>
@@ -197,7 +197,7 @@
 
 <p><strong>note:</strong></p>
 <p>The tool will prompt to the user that data will be lost. Select “Yes” to continue.<br>    - Once done, click  <strong>OK</strong> and and it will show the message that <strong>Write successful</strong>.<br>    - Eject the SD card and insert it into the target board and power on the board to boot up.</p>
-<h2 id="Flashing-Android-Image" class="article-heading"><a href="#Flashing-Android-Image" class="headerlink" title="Flashing Android Image"></a>Flashing Android Image<a onclick="parent.postMessage( {msg: '?page=BootFromSDCard.html#Flashing-Android-Image'}, '*');" class="article-anchor" href="#Flashing-Android-Image" aria-hidden="true"></a></h2><ol>
+<h2 id="Flashing-Android-Image" class="article-heading"><a href="#Flashing-Android-Image" class="headerlink" title="Flashing Android Image"></a>Flashing Android Image<a class="article-anchor" href="#Flashing-Android-Image" aria-hidden="true"></a></h2><ol>
 <li><p>Copy the prebuilt bootable Android image to the working directory on your development host.</p>
 </li>
 <li><p>Connect an empty SD card to the host device.</p>
