@@ -1,1 +1,1 @@
-# docs-ipi-wiki.
+# docs-ipi-wiki
