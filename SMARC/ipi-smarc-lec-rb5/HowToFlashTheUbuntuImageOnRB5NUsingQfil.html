@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/SMARC/ipi-smarc-px30/HowToBuildUboot.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5NUsingQfil.html">
   <!-- Alternative links -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -69,17 +69,21 @@
   <!-- RSS -->
   <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to Build and Install custom U-bootBuilding U-boot on I-Pi SMARC using the LEC-PX30 SMARC module and downloading to the SDcard Prerequisites Development host running recent Ubuntu OS such as 18.0">
+  <meta name="description" content="Flashing Ubuntu using QFIL Note: It is recommended to flash using ADB. Please use this method only if the device crashed while flashing the image and the bootloader fails to start.  This document prov">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/SMARC/ipi-smarc-px30/HowToBuildUboot.html">
+<meta property="og:url" content="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5NUsingQfil.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to Build and Install custom U-bootBuilding U-boot on I-Pi SMARC using the LEC-PX30 SMARC module and downloading to the SDcard Prerequisites Development host running recent Ubuntu OS such as 18.0">
+<meta property="og:description" content="Flashing Ubuntu using QFIL Note: It is recommended to flash using ADB. Please use this method only if the device crashed while flashing the image and the bootloader fails to start.  This document prov">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-08-31T10:12:28.012Z">
-<meta property="article:modified_time" content="2023-08-31T10:12:28.012Z">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-layout.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-f_dl.png">
+<meta property="og:image" content="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/qfil-ui.png">
+<meta property="article:published_time" content="2023-08-31T10:12:26.753Z">
+<meta property="article:modified_time" content="2023-08-31T10:12:26.753Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/SMARC/ipi-smarc-lec-rb5/HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-layout.png">
   <!-- Google Analytics -->
   
 <script>
@@ -105,13 +109,13 @@
       <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
       
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
-      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link current header">menu.ipi-smarc-px30</a></div>
+      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
       <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToBuildUboot.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,67 +143,76 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <div class="bullets">
-
-<h2 id="How-to-Build-and-Install-custom-U-boot" class="article-heading"><a href="#How-to-Build-and-Install-custom-U-boot" class="headerlink" title="How to Build and Install custom U-boot"></a>How to Build and Install custom U-boot<a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#How-to-Build-and-Install-custom-U-boot'}, '*');" class="article-anchor" href="#How-to-Build-and-Install-custom-U-boot" aria-hidden="true"></a></h2><p>Building U-boot on I-Pi SMARC using the LEC-PX30 SMARC module and downloading to the SDcard</p>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
-<li><p>Development host running recent Ubuntu OS such as 18.04 with compile installed  </p>
+                <h1 id="Flashing-Ubuntu-using-QFIL" class="article-heading"><a href="#Flashing-Ubuntu-using-QFIL" class="headerlink" title="Flashing Ubuntu using QFIL"></a>Flashing Ubuntu using QFIL<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Flashing-Ubuntu-using-QFIL'}, '*');" class="article-anchor" href="#Flashing-Ubuntu-using-QFIL" aria-hidden="true"></a></h1><blockquote>
+<p><strong>Note:</strong> It is recommended to <a href="./HowToFlashTheUbuntuImageOnRB5NUsingAdb.html">flash using ADB</a>. Please use this method only if the device crashed while flashing the image and the bootloader fails to start.</p>
+</blockquote>
+<p>This document provides detailed instructions on how to flash the image to eMMC of I-Pi SMARC RB5N using QFIL on Windows.</p>
+<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites (Windows)"></a><strong>Prerequisites</strong> (Windows)<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Prerequisites-Windows'}, '*');" class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><p>Please make sure the following software is installed on the host device.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/downloads/qualcomm-hs-usb-qdloader-9008/">Qualcomm HS-USB QDLoader 9008 Driver</a></p>
 </li>
-<li><p>Make sure it has the development environment installed :</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install build-essential</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Download the PX30 buildroot SDK  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hq0epm0west0us0storage.blob.core.windows.net/backupdevelopment/LEC-PX30/SDK/px30_buildroot_es2_sdk_20191218.tar.gz">here</a>  to the development host (around 8GB)</p>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://qpsttool.com/">QPST</a> (The QFIL tool comes bundled with this)</p>
 </li>
 </ul>
-<h2 id="Building-the-binaries" class="article-heading"><a href="#Building-the-binaries" class="headerlink" title="Building the binaries"></a><strong>Building the binaries</strong><a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#Building-the-binaries'}, '*');" class="article-anchor" href="#Building-the-binaries" aria-hidden="true"></a></h2><ol>
-<li><p>After downloading the SDK, extract it</p>
-</li>
-<li><p>Make sure you are in terminal mode and change directory to the u-boot directory</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd px30_buildroot/u-boot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>The SDK comes standard with buildroot optimized config file for the module in question<br>If any changes are needed such as modifying the kernel type or location you can make those in the RK_UBOOT_DEFCONFIG section in px30_buildroot&#x2F;u-boot&#x2F;device&#x2F;rockchip&#x2F;.BoardConfig.mk </p>
-</li>
-<li><p>Build U-Boot using below command: </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo ./make.sh evb-px30</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="Installing-U-boot-on-the-target" class="article-heading"><a href="#Installing-U-boot-on-the-target" class="headerlink" title="Installing U-boot on the target"></a>Installing U-boot on the target<a onclick="parent.postMessage( {msg: '?page=HowToBuildUboot.html#Installing-U-boot-on-the-target'}, '*');" class="article-anchor" href="#Installing-U-boot-on-the-target" aria-hidden="true"></a></h2><ol>
-<li><p>After a successful build you will end up with 3 binary images: </p>
+<p>Please contact <a href="kothandaraman.k@adlinktech.com">the administrator</a> for the image.</p>
+<h2 id="Board-layout" class="article-heading"><a href="#Board-layout" class="headerlink" title="Board layout"></a>Board layout<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Board-layout'}, '*');" class="article-anchor" href="#Board-layout" aria-hidden="true"></a></h2><center>
+  <div>
+    <img src="./HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-layout.png" alt="img">
+    <img src="./HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-f_dl.png" alt="img">
+  </div>
+</center>
+
 <ol>
-<li><strong>px30_loader</strong>_vx.xx.xxx.bin<br>this is the Rockchip miniloader flash install it to the miniloader partition on the target.</li>
+<li>USB OTG connector</li>
+<li>Power jack</li>
+<li>UART Pins (See <a href="./SerialLogReadUART.html">How to Read Console Output</a>)</li>
+<li>F_DL button</li>
+</ol>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><h3 id="Enabling-download-mode" class="article-heading"><a href="#Enabling-download-mode" class="headerlink" title="Enabling download mode"></a>Enabling download mode<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Enabling-download-mode'}, '*');" class="article-anchor" href="#Enabling-download-mode" aria-hidden="true"></a></h3><p>Make sure the device is fully powered off and the USB OTG cable is not connected.</p>
+<ul>
+<li><p>Hold the F_DL button and power on the device by plugging in the power cable while keeping the F_DL button depressed.</p>
+</li>
+<li><p>Release the F_DL button</p>
+</li>
+<li><p>Connect the USB OTG cable from your development host to targeted device.</p>
+</li>
+<li><p>The device should now be in download mode.</p>
+</li>
+</ul>
+<h3 id="Flashing-the-image" class="article-heading"><a href="#Flashing-the-image" class="headerlink" title="Flashing the image"></a>Flashing the image<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Flashing-the-image'}, '*');" class="article-anchor" href="#Flashing-the-image" aria-hidden="true"></a></h3><ul>
+<li>Start the QFIL application</li>
+</ul>
+<center>
+  <div>
+    <img src="./HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/qfil-ui.png" alt="img">
+  </div>
+</center>
+
+<ol>
+<li><p>Select your device, it will be detected as <strong>Qualcomm HS-USB QDLoader 9008</strong>.</p>
+</li>
+<li><p>Select the “Flat Build” option</p>
+</li>
+<li><p>Browse for the <code>prog_firehose_ddr.elf</code> file, which is inside the <code>ufw</code> folder inside your NON-HLOS image folder.</p>
+</li>
+<li><p>Select all <code>rawprogram_*.xml</code> files inside the <code>ufw</code> folder, then select all <code>patch*.xml</code> files.</p>
+</li>
+<li><p>Make sure the storage type should be set to “ufs”.</p>
+</li>
+<li><p>Start the download.</p>
+</li>
 </ol>
 <ul>
-<li><strong>trust.img</strong>: ARM Trusted Firmware, Please flash this binary to trust partition</li>
-<li><strong>uboot.img</strong>: The U-Boot image, Please flash this binary to uboot partition</li>
+<li><p>After the download is finished, remove the USB OTG cable and power cable</p>
+</li>
+<li><p>For the first boot, first re-insert the USB OTG cable before re-inserting the power cable</p>
+</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">u-boot/</span><br><span class="line">├── px30_loader_v1.11.115.bin</span><br><span class="line">├── trust.img</span><br><span class="line">└── uboot.img</span><br></pre></td></tr></table></figure></li>
-</ol>
-</div>
-
-<style>
-.bullets ul li {
-    list-style-type: disc;
- }
- .bullets ol li {
-    list-style-type: decimal;
- }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-08-31T10:12:28.012Z" itemprop="dateModified">Last updated: 2023-08-31</time>
-                <a href="HowToBuildDebian.html" class="article-footer-prev" title="How to Build Debian"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToInstallMRAAUPM.html" class="article-footer-next" title="How to Install MRAA&UPM"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2023-08-31T10:12:26.753Z" itemprop="dateModified">Last updated: 2023-08-31</time>
+                <a href="HowToFlashTheUbuntuImageOnRB5NUsingAdb.html" class="article-footer-prev" title="Flashing Ubuntu using ADB"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="NeuralProcessingSDKForAI.html" class="article-footer-next" title="Qualcomm Neural Processing SDK"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -208,7 +221,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Build-and-Install-custom-U-boot"><span class="toc-text">How to Build and Install custom U-boot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-the-binaries"><span class="toc-text">Building the binaries</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing-U-boot-on-the-target"><span class="toc-text">Installing U-boot on the target</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-Ubuntu-using-QFIL"><span class="toc-text">Flashing Ubuntu using QFIL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites-Windows"><span class="toc-text">Prerequisites (Windows)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Board-layout"><span class="toc-text">Board layout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enabling-download-mode"><span class="toc-text">Enabling download mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-the-image"><span class="toc-text">Flashing the image</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -217,7 +230,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="sidebar-link first">Yocto</a><a href="UbuntuImages.html" class="sidebar-link">Ubuntu</a><a href="AndroidImages.html" class="sidebar-link">Android</a><a href="DebianImages.html" class="sidebar-link">Debian</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="BootFromSDCard.html" class="sidebar-link first">Boot From SD Card</a><a href="HowToBuildUbuntu.html" class="sidebar-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="sidebar-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="sidebar-link current">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="sidebar-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="sidebar-link">Examples & How-to</a></details></strong><strong class="sidebar-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="sidebar-link first">CANDERA CGI Studio</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadUART.html" class="sidebar-link first">How to Read Console Output</a><a href="HowToFlashTheUbuntuImageOnRB5NUsingAdb.html" class="sidebar-link">Flashing Ubuntu using ADB</a><a href="HowToFlashTheUbuntuImageOnRB5NUsingQfil.html" class="sidebar-link current">Flashing Ubuntu using QFIL</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="sidebar-link first">Qualcomm Neural Processing SDK</a></details></strong>
   </div>
 </aside>
     </div>
@@ -259,11 +272,11 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link current header">menu.ipi-smarc-px30</a>
+      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoImages.html" class="mobile-nav-link first">Yocto</a><a href="UbuntuImages.html" class="mobile-nav-link">Ubuntu</a><a href="AndroidImages.html" class="mobile-nav-link">Android</a><a href="DebianImages.html" class="mobile-nav-link">Debian</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="BootFromSDCard.html" class="mobile-nav-link first">Boot From SD Card</a><a href="HowToBuildUbuntu.html" class="mobile-nav-link">How to Build Ubuntu</a><a href="HowToBuildDebian.html" class="mobile-nav-link">How to Build Debian</a><a href="HowToBuildUboot.html" class="mobile-nav-link current">How to Build U-boot</a><a href="HowToInstallMRAAUPM.html" class="mobile-nav-link">How to Install MRAA&UPM</a><a href="ExampleHowto.html" class="mobile-nav-link">Examples & How-to</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Partners</summary><a href="CanderaCGIStudioPage.html" class="mobile-nav-link first">CANDERA CGI Studio</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadUART.html" class="mobile-nav-link first">How to Read Console Output</a><a href="HowToFlashTheUbuntuImageOnRB5NUsingAdb.html" class="mobile-nav-link">Flashing Ubuntu using ADB</a><a href="HowToFlashTheUbuntuImageOnRB5NUsingQfil.html" class="mobile-nav-link current">Flashing Ubuntu using QFIL</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="mobile-nav-link first">Qualcomm Neural Processing SDK</a></details></strong>
     
   </div>
   
