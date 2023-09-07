@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/SMARC/ipi-smarc-1200/UfsFormat.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/smarc/ipi-smarc-1200/UfsFormat.html">
   <!-- Alternative links -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -37,7 +37,7 @@
 
   </style>
   <!-- Icon -->
-  <link rel="Shortcut Icon" href="/SMARC/images/favicon.ico">
+  <link rel="Shortcut Icon" href="/smarc/images/favicon.ico">
   <!-- CSS -->
 
   <script
@@ -60,24 +60,24 @@
 
   <!-- build:css build/css/navy.css -->
   
-<link rel="stylesheet" href="/SMARC/css/navy.css">
+<link rel="stylesheet" href="/smarc/css/navy.css">
 
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/SMARC/css/font/fontawesome.min.css">
+  <link rel="stylesheet" href="/smarc/css/font/fontawesome.min.css">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
   <!-- RSS -->
-  <link rel="alternate" href="/SMARC/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="Formatting UFS(Universal Flash Storage) This document provides detailed instructions on formatting the UFS of I-Pi SMARC 1200 for Linux users.    Prerequisites Be prepared with the target device(I-Pi">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/SMARC/ipi-smarc-1200/UfsFormat.html">
+<meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-1200/UfsFormat.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="Formatting UFS(Universal Flash Storage) This document provides detailed instructions on formatting the UFS of I-Pi SMARC 1200 for Linux users.    Prerequisites Be prepared with the target device(I-Pi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-08-31T10:12:22.983Z">
-<meta property="article:modified_time" content="2023-08-31T10:12:22.983Z">
+<meta property="article:published_time" content="2023-09-07T03:45:04.504Z">
+<meta property="article:modified_time" content="2023-09-07T03:45:04.504Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -105,13 +105,13 @@
       <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
       
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
-      <div style="display:inline-block"><div class="btn-group"><a href="/SMARC/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
+      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
       <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=UfsFormat.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=UfsFormat.html#UfsFormat.html'}, '*');}</script>
 
 	</div>
 	
@@ -139,17 +139,17 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Formatting-UFS-Universal-Flash-Storage" class="article-heading"><a href="#Formatting-UFS-Universal-Flash-Storage" class="headerlink" title="Formatting UFS(Universal Flash Storage)"></a>Formatting UFS(Universal Flash Storage)<a onclick="parent.postMessage( {msg: '?page=UfsFormat.html#Formatting-UFS-Universal-Flash-Storage'}, '*');" class="article-anchor" href="#Formatting-UFS-Universal-Flash-Storage" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="Formatting-UFS-Universal-Flash-Storage" class="article-heading"><a href="#Formatting-UFS-Universal-Flash-Storage" class="headerlink" title="Formatting UFS(Universal Flash Storage)"></a>Formatting UFS(Universal Flash Storage)<a class="article-anchor" href="#Formatting-UFS-Universal-Flash-Storage" aria-hidden="true"></a></h1><div class="bullets">
 This document provides detailed instructions on formatting the UFS of I-Pi SMARC 1200 for Linux users.
 
 
 
-<h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=UfsFormat.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
 <li>Be prepared with the target device(I-Pi SMARC 1200) and power cable, USB to Micro cable.</li>
 <li>For I-Pi SMARC 1200, the boot switch must be <strong>1001</strong> on the target device.</li>
 <li>The Linux host must be Ubuntu 18.04 or later.</li>
 </ul>
-<h3 id="The-steps-to-follow-when-formatting-the-UFS" class="article-heading"><a href="#The-steps-to-follow-when-formatting-the-UFS" class="headerlink" title="The steps to follow when formatting the UFS"></a>The steps to follow when formatting the UFS<a onclick="parent.postMessage( {msg: '?page=UfsFormat.html#The-steps-to-follow-when-formatting-the-UFS'}, '*');" class="article-anchor" href="#The-steps-to-follow-when-formatting-the-UFS" aria-hidden="true"></a></h3><ul>
+<h3 id="The-steps-to-follow-when-formatting-the-UFS" class="article-heading"><a href="#The-steps-to-follow-when-formatting-the-UFS" class="headerlink" title="The steps to follow when formatting the UFS"></a>The steps to follow when formatting the UFS<a class="article-anchor" href="#The-steps-to-follow-when-formatting-the-UFS" aria-hidden="true"></a></h3><ul>
 <li><p>Install the modemanger API tool on your host device.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install modemmanger</span><br></pre></td></tr></table></figure>
 </li>
@@ -179,7 +179,7 @@ This document provides detailed instructions on formatting the UFS of I-Pi SMARC
 </div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-08-31T10:12:22.983Z" itemprop="dateModified">Last updated: 2023-08-31</time>
+                <time class="article-footer-updated" datetime="2023-09-07T03:45:04.504Z" itemprop="dateModified">Last updated: 2023-09-07</time>
                 <a href="BootFromUFS.html" class="article-footer-prev" title="Boot From UFS"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
@@ -240,7 +240,7 @@ This document provides detailed instructions on formatting the UFS of I-Pi SMARC
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/SMARC/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/SMARC/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
+      <a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
@@ -253,13 +253,13 @@ This document provides detailed instructions on formatting the UFS of I-Pi SMARC
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
 
-<script src="/SMARC/js/lang_select.js"></script>
+<script src="/smarc/js/lang_select.js"></script>
 
 
-<script src="/SMARC/js/toc.js"></script>
+<script src="/smarc/js/toc.js"></script>
 
 
-<script src="/SMARC/js/mobile_nav.js"></script>
+<script src="/smarc/js/mobile_nav.js"></script>
 
 <!-- endbuild -->
 
