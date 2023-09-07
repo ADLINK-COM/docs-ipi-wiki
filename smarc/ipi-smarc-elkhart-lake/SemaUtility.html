@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/SemaUtility.html">
+  <!-- Alternative links -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  -->
+
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/smarc/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+<!--
+  Hotjar Tracking Code for https://ipi.wiki
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/smarc/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/smarc/css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="SEMA Utility on I-Pi SAMRC Elkhart Lake This document provides detailed instructions on how to use SEMA on I-Pi SMARC Elkhart Lake.     Prerequisites [For Windows only] Download the latest Microsoft V">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/SemaUtility.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="SEMA Utility on I-Pi SAMRC Elkhart Lake This document provides detailed instructions on how to use SEMA on I-Pi SMARC Elkhart Lake.     Prerequisites [For Windows only] Download the latest Microsoft V">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-07T03:45:05.754Z">
+<meta property="article:modified_time" content="2023-09-07T03:45:05.754Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=SemaUtility.html#SemaUtility.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="SEMA-Utility-on-I-Pi-SAMRC-Elkhart-Lake" class="article-heading"><a href="#SEMA-Utility-on-I-Pi-SAMRC-Elkhart-Lake" class="headerlink" title="SEMA Utility on I-Pi SAMRC Elkhart Lake"></a>SEMA Utility on I-Pi SAMRC Elkhart Lake<a class="article-anchor" href="#SEMA-Utility-on-I-Pi-SAMRC-Elkhart-Lake" aria-hidden="true"></a></h1><div class="bullets">
+This document provides detailed instructions on how to use SEMA on I-Pi SMARC Elkhart Lake.
+
+<br>
+
+
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<li><strong>[For Windows only]</strong> Download the latest Microsoft Visual C++ redistributable (X64) from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">here</a>.</li>
+<li><strong>[For Windows&#x2F;Linux]</strong> Download the latest SEMA source code file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/ipi-smarc-elkhart-lake-downloads">here</a>.</li>
+</ul>
+<p>Once set, click one of the below to follow the instructions corresponding to your OS:</p>
+<ul>
+<li><a href="#Windows-Host">Windows Host Users</a></li>
+<li><a href="#Linux-Host">Linux Host Users</a></li>
+</ul>
+<br>
+
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><ol>
+<li>Install Microsoft Visual C++ redistributable on your targeted device.</li>
+<li>Go to the directory to which SEMA is downloaded (SEMA-4.0_Windows&#x2F;Installer&#x2F;) and execute “ADLINK_SEMA_Package_installer” file on your targeted device to install the SEMA source file.</li>
+<li>Open PowerShell and type the following command:</li>
+</ol>
+<ul>
+<li><pre><code class="shell">Semautil
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">You should see the output as exemplified below. To see the details of the commands listed, simply execute the following commands as needed.</span><br><span class="line"></span><br><span class="line">```shell</span><br><span class="line">PS C:\Users\adlink&gt; Semautil</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">- Display this screen:</span><br><span class="line">        semautil /h</span><br><span class="line"></span><br><span class="line">- Watch Dog:</span><br><span class="line">        semautil /w    for information on watchdog and related function</span><br><span class="line"></span><br><span class="line">- Storage:</span><br><span class="line">        semautil /s    for information on storage and related function</span><br><span class="line"></span><br><span class="line">- Smart FAN control:</span><br><span class="line">        semautil /f    for information on fan control and related function</span><br><span class="line"></span><br><span class="line">- System monitor-Board Info:</span><br><span class="line">        semautil /i    for information on monitor-board info and related function</span><br><span class="line"></span><br><span class="line">- Voltage monitor:</span><br><span class="line">        semautil /v    for information on voltage monitor and related function</span><br><span class="line"></span><br><span class="line">- Error log:</span><br><span class="line">        semautil /e    for information on error log and related function</span><br><span class="line"></span><br><span class="line">- GPIO:</span><br><span class="line">        semautil /g    for information on GPIO and related function</span><br><span class="line"></span><br><span class="line">- Exception Description:</span><br><span class="line">        semautil /x    for information on exception description and related function</span><br><span class="line"></span><br><span class="line">- Board values:</span><br><span class="line">        semautil /d    for information on board values and related function</span><br><span class="line"></span><br><span class="line">- LVDS Backlight control:</span><br><span class="line">        semautil /b    for information on LVDS backlight control and related function</span><br><span class="line"></span><br><span class="line">- Generic I2C Read/Write:</span><br><span class="line">        semautil /i2c  for information on generic I2C read/write and related function</span><br><span class="line"></span><br><span class="line">- BIOS source:</span><br><span class="line">        semautil /src  for information on BIOS source and related function</span><br></pre></td></tr></table></figure>
+
+</code></pre>
+</li>
+<li><p>To see the monitor-board info, execute the commands listed below.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">PS C:\Users\adlink&gt; semautil /i</span><br><span class="line"></span><br><span class="line">- System monitor-Board Info:</span><br><span class="line">  1. semautil /i get_bd_info [EApi ID]</span><br><span class="line">  2. semautil /i set_bd_info [EApi ID] [new info]</span><br><span class="line">       1  : Board manufacturer name</span><br><span class="line">       2  : Board name</span><br><span class="line">       3  : Board serial number</span><br><span class="line">       4  : Board BIOS revision</span><br><span class="line">       5  : HW revision</span><br><span class="line">       6  : Board platform type</span><br><span class="line">       7  : BMC Bootloader revision</span><br><span class="line">       8  : BMC application revision</span><br><span class="line">       9  : Board restart event</span><br><span class="line">       10 : Board repair date</span><br><span class="line">       11 : Board manufacturer date</span><br><span class="line">       12 : Board MAC address</span><br><span class="line">       13 : Board 2nd HW revision number</span><br><span class="line">       14 : Board 2nd serial</span><br><span class="line">PS C:\Users\adlink&gt; semautil /i get_bd_info 1</span><br><span class="line"></span><br><span class="line">ADLINK Technology Inc.</span><br><span class="line">PS C:\Users\adlink&gt; semautil /i get_bd_info 2</span><br><span class="line"></span><br><span class="line">LEC-EL</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>e.g. If you enter voltage monitor and execute the following commands in sequence, you shall get a similar output on your targeted device.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">PS C:\Users\adlink&gt; semautil /v</span><br><span class="line"></span><br><span class="line">- Voltage monitor:</span><br><span class="line">  1. semautil /v get_voltage [Channel (0 - 15)]</span><br><span class="line">PS C:\Users\adlink&gt; semautil /v get_voltage 2</span><br><span class="line"></span><br><span class="line">Voltage : 4854 mv</span><br><span class="line">Description : VIN</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="4">
+<li>You can enter different sections to access and execute its related functions as needed.</li>
+</ol>
+<br>
+
+<h2 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2><h3 id="1-Getting-Started" class="article-heading"><a href="#1-Getting-Started" class="headerlink" title="1. Getting Started"></a>1. Getting Started<a class="article-anchor" href="#1-Getting-Started" aria-hidden="true"></a></h3><ol>
+<li>Install <strong>git</strong> utility to download and compile the ADLINK SEMA module for Linux by executing the following command.</li>
+</ol>
+  <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Install <strong>Hexer</strong> for editing the binary files.</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install hexer</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Install <strong>i2c-tools</strong>.</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install i2c-tools</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2-Compiling-SEMA-Linux-Package" class="article-heading"><a href="#2-Compiling-SEMA-Linux-Package" class="headerlink" title="2. Compiling SEMA Linux Package"></a>2. Compiling SEMA Linux Package<a class="article-anchor" href="#2-Compiling-SEMA-Linux-Package" aria-hidden="true"></a></h3><ol>
+<li><p>Download the SEMA source code.</p>
+</li>
+<li><p>Open the terminal and go into the downloaded directory.</p>
+</li>
+<li><p>Compile them. Once the compilation succeeds, the following kernel modules and executables are generated.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>driver&#x2F;adl-bmc.ko</td>
+<td>SEMA Linux BMC Driver Core Module</td>
+</tr>
+<tr>
+<td>driver&#x2F;adl-bmc-boardinfo.ko</td>
+<td>SEMA Linux BMC Board Information Driver Module</td>
+</tr>
+<tr>
+<td>driver&#x2F;adl-bmc-vm.ko</td>
+<td>SEMA Linux BMC Voltage Monitor Driver Module</td>
+</tr>
+<tr>
+<td>driver&#x2F;adl-bmc-hwmon.ko</td>
+<td>SEMA Linux BMC Smart Fan and Hardware Monitor Driver Module</td>
+</tr>
+<tr>
+<td>driver&#x2F;adl-bmc-wdt.ko</td>
+<td>SEMA Linux BMC Watchdog Driver Module</td>
+</tr>
+<tr>
+<td>driver&#x2F;adl-bmc-nvmem.ko</td>
+<td>SEMA Linux BMC NVMEM Driver Module</td>
+</tr>
+<tr>
+<td>driver&#x2F;adl-bmc-bklight.ko</td>
+<td>SEMA Linux BMC Backlight Driver Module</td>
+</tr>
+<tr>
+<td>wdogtest</td>
+<td>SEMA Linux Watchdog Test application</td>
+</tr>
+<tr>
+<td>adltest</td>
+<td>SEMA Linux Command Line Utility</td>
+</tr>
+</tbody></table>
+  <br>
+
+<h3 id="3-Installing-SEMA-Linux-Kernel-Drivers" class="article-heading"><a href="#3-Installing-SEMA-Linux-Kernel-Drivers" class="headerlink" title="3. Installing SEMA Linux Kernel Drivers"></a>3. Installing SEMA Linux Kernel Drivers<a class="article-anchor" href="#3-Installing-SEMA-Linux-Kernel-Drivers" aria-hidden="true"></a></h3><ul>
+<li><p>Execute the commands listed below to install SEMA-related device drivers.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd SEMA_4.0_Linux_SandBox</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe i2c_i801</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-i2c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-boardinfo</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-vm</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-wdt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-hwmon</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-nvmem</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe adl-bmc-bklight</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install the native GPIO driver by executing the following commands in sequence:</p>
+<ol>
+<li><p>Load the native GPIO driver:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo modprobe gpio-pca953x</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Once loaded, configure the GPIO device:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo pca9535 0x20 &gt; /sys/bus/i2c/devices/i2c-12/new_device</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong> Here, i2c-12 is used due to SMBus being located at bus 12. 0x20 is the GPIO device slave address.</p>
+<br></li>
+</ol>
+</li>
+</ul>
+<h3 id="4-Using-the-SEMA-Linux-Module" class="article-heading"><a href="#4-Using-the-SEMA-Linux-Module" class="headerlink" title="4. Using the SEMA Linux Module"></a>4. Using the SEMA Linux Module<a class="article-anchor" href="#4-Using-the-SEMA-Linux-Module" aria-hidden="true"></a></h3><h4 id="4-1-Board-Information" class="article-heading"><a href="#4-1-Board-Information" class="headerlink" title="4.1 Board Information"></a>4.1 Board Information<a class="article-anchor" href="#4-1-Board-Information" aria-hidden="true"></a></h4><ul>
+<li><p>To get the board manufacturer name:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/manufacturer_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board name:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/board_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board serial number:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/serial_number</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board BIOS version:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/dmi/id/bios_version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board hardware version:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/hw_rev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board bootloader version:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/bmc_boot_version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get BMC application version:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/bmc_application_version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get BMC capabilities:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/capabilities</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get BMC extended capabilities:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/capabilities_ext </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get BMC flags:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/bmc_flags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get BMC status:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/bmc_status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board main power current:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/main_current</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board VCORE voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_vcore</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 2V5 voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_2v5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 3V3 voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_3v3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board VBAT voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_vbat</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 5V voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_5v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 5VSB voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_5vsb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 12V voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_12v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board GFX-VCORE voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_gfx_vcore</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 1V05 voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_1v05</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board 1V5 voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_1v5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the board VIN voltage value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/voltage_vin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get current position error log:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/cur_pos_error_log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To set the position (of read pointer) and get immediate error log:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /sys/bus/platform/devices/adl-bmc-boardinfo/information/error_log</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/error_log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To set error number and get error number description immediately:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 88 &gt; /sys/bus/platform/devices/adl-bmc-boardinfo/information/err_num_des</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/err_num_des</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To set exception code and get exception description:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; /sys/bus/platform/devices/adl-bmc-boardinfo/information/exc_des</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-boardinfo/information/exc_des</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<h4 id="4-2-Voltage-Monitor" class="article-heading"><a href="#4-2-Voltage-Monitor" class="headerlink" title="4.2 Voltage Monitor"></a>4.2 Voltage Monitor<a class="article-anchor" href="#4-2-Voltage-Monitor" aria-hidden="true"></a></h4><p>The number of regulator devices and their names may change due to platform (LEC-AL, cExpress-WL, etc) and the number of times the monitor driver is loaded and unloaded. To confirm the device names that is created by our driver, check the <code>/sys/bus/platform/devices/adl-bmc-vm/regulator/</code> path.</p>
+<ul>
+<li><p>e.g.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls /sys/bus/platform/devices/adl-bmc-vm/regulator/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Output (LEC-AL): regulator.1 regulator.2 regulator.3 regulator.4 regulator.5 regulator.6 regulator.7 regulator.8     </p>
+<p>For voltage id 1, need to replace <regulator index> with regulator.1</regulator></p>
+</li>
+<li><p>To get the hardware monitor input voltage and get the respective voltage description:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/regulator/&lt;regulator index&gt;/microvolts</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/regulator/&lt;regulator index&gt;/name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>e.g. When the user is reading the voltage and description of id 1</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/regulator/regulator.1/microvolts</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/regulator/regulator.1/name</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<h4 id="4-3-Watchdog" class="article-heading"><a href="#4-3-Watchdog" class="headerlink" title="4.3 Watchdog"></a>4.3 Watchdog<a class="article-anchor" href="#4-3-Watchdog" aria-hidden="true"></a></h4><ul>
+<li><p>To start the watchdog:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /dev/watchdog0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To stop the watchdog:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo “V” &gt; /dev/watchdog0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To trigger &#x2F; ping the watchdog:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wdogtest –ping</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To update the watchdog timeout value. </p>
+<ul>
+<li><p>To set the watchdog timeout out value, use the following format:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wdogtest –timeout=&lt;time in seconds&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>The example below sets the watchdog timeout value as 20 seconds</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wdogtest –timeout=20</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>To get the information about the watchdog state:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/watchdog/watchdog0/state</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the configured watchdog timeout value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/watchdog/watchdog0/timeout</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the current watchdog timeout value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/watchdog/watchdog0/timeleft</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get minimum&#x2F;maximum watchdog timeout value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/sys/bus/platform/devices/adl-bmc-wdt/Capabilities/wdt_min_timeout</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/sys/bus/platform/devices/adl-bmc-wdt/Capabilities/wdt_max_timeout</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To start &#x2F; update the power up watchdog timer value</p>
+<ul>
+<li><p>To update timeout out value, use the following format:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &lt;timeout&gt; &gt; /sys/bus/platform/devices/adl-bmc-wdt/Capabilities/PwrUpWDog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>The example below sets the power up watchdog timer timeout value as 1000 seconds</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1000 &gt; /sys/bus/platform/devices/adl-bmc-wdt/Capabilities/PwrUpWDog</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>To get the power up watchdog timer value:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-wdt/Capabilities/PwrUpWDog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To stop the power up watchdog timer:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; /sys/bus/platform/devices/adl-bmc-wdt/Capabilities/PwrUpWDog</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<h4 id="4-4-GPIO" class="article-heading"><a href="#4-4-GPIO" class="headerlink" title="4.4 GPIO"></a>4.4 GPIO<a class="article-anchor" href="#4-4-GPIO" aria-hidden="true"></a></h4><ul>
+<li><p>To export the GPIO pin:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo N &gt; /sys/class/gpio/export (N should replace with gpio chip base number)</span><br></pre></td></tr></table></figure>
+
+<p>e.g. when 251 is the GPIO chip base number in LEC-AL:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 251 &gt; /sys/class/gpio/export</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To read the direction of a pin:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/gpio/gpio251/direction</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To write the direction of a pin:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo in &gt; /sys/class/gpio/gpio251/direction</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To read the value of a pin:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/gpio/gpio251/value</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To write the value of a pin:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /sys/class/gpio/gpio251/value</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<h4 id="4-5-Hardware-Monitor-and-Fan" class="article-heading"><a href="#4-5-Hardware-Monitor-and-Fan" class="headerlink" title="4.5 Hardware Monitor and Fan"></a>4.5 Hardware Monitor and Fan<a class="article-anchor" href="#4-5-Hardware-Monitor-and-Fan" aria-hidden="true"></a></h4><p>The device name may be different due to the platform used (LEC-EL, cExpress-WL, etc.). To confirm the device name that is created by our driver, check the <em>&#x2F;sys&#x2F;bus&#x2F;platform&#x2F;devices&#x2F;adl-bmc-hwmon&#x2F;hwmon&#x2F;</em> path.</p>
+<p>e.g.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls /sys/bus/platform/devices/adl-bmc-hwmon/hwmon/</span><br></pre></td></tr></table></figure>
+
+<p>Output: hwmon2</p>
+<p>In the above example, our device is hwmon2, so should replace hwmonX with hwmon2 in the following commands.</p>
+<ul>
+<li><p>To set temperature set points (1-4):</p>
+<p>echo <temperature> &gt; &#x2F;sys&#x2F;class&#x2F;hwmon&#x2F;hwmonX&#x2F;device&#x2F;fan<fan id>_auto_point<set point number>_temp</set></fan></temperature></p>
+<p>In the example below, the user is setting temperature of set point 1 and Fan ID as 1 (SEMA_EAPI_ID_FAN_CPU) with temperature as 10</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 10 &gt; /sys/class/hwmon/hwmon2/device/fan1_auto_point1_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get temperature set points (1-4):</p>
+<p>cat &#x2F;sys&#x2F;class&#x2F;hwmon&#x2F;hwmonX&#x2F;device&#x2F;fan<fan id>_auto_point<set point number>_temp</set></fan></p>
+<p>In the example below, the user is getting temperature of set point 1 and fan ID 1 (SEMA_EAPI_ID_FAN_CPU) </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmon2/device/fan1_auto_point1_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To set PWM set points (1-4):</p>
+<p>echo <pwm value> &gt; &#x2F;sys&#x2F;class&#x2F;hwmon&#x2F;hwmonX&#x2F;device&#x2F;fan<fan id>_auto_point<set point number>_pwm</set></fan></pwm></p>
+<p>In the example below, user is setting PWM value of set point 1 and fan ID 1 (SEMA_EAPI_ID_FAN_CPU) with PWM level as 10</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 10 &gt; /sys/class/hwmon/hwmon2/device/fan1_auto_point1_pwm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get PWM set points (1-4):</p>
+<p>cat &#x2F;sys&#x2F;class&#x2F;hwmon&#x2F;hwmonX&#x2F;device&#x2F;fan<fan id>_auto_point<set point number>_pwm </set></fan></p>
+<p>In the example below, user is getting PWM value of set point 2 and fan ID as 2 (SEMA_EAPI_ID_FAN_SYSTEM_1 ).</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmon2/device/fan2_auto_point2_pwm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To set the fan to one of the following modes:</p>
+<ul>
+<li>SEMA_FAN_AUTO (0)</li>
+<li>SEMA_FAN_OFF (1)</li>
+<li>SEMA_FAN_ON (2)</li>
+<li>SEMA_FAN_AUTO_SOFT_FAN (3)</li>
+</ul>
+</li>
+<li><p>To set fan m:</p>
+<p>echo <fan mode> &gt; &#x2F;sys&#x2F;class&#x2F;hwmon&#x2F;hwmonX&#x2F;device&#x2F;fan1_enable</fan></p>
+<p>In the example below, user is setting fan mode as 1</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /sys/class/hwmon/hwmon2/device/fan1_enable</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get fan mode:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmon2/device/fan1_enable</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Temperature sources are:</p>
+<p>0 &#x3D; CPU Temperature</p>
+<p>1 &#x3D; Board Temperature</p>
+</li>
+<li><p>To set the temperature source:</p>
+<p>echo <temperature source> &#x2F;sys&#x2F;class&#x2F;hwmon&#x2F;hwmonX&#x2F;device&#x2F;fan1_auto_channels_temp</temperature></p>
+<p>In the example below, user is setting temperature source as 1 (Board temperature)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /sys/class/hwmon/hwmon2/device/fan1_auto_channels_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get the temperature source:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmon2/device/fan1_auto_channels_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get CPU’s current temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/cpu_cur_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get CPU minimum temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/cpu_min_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get CPU maximum temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/cpu_max_temp </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get CPU startup temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/cpu_startup_temp</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong> If the four entries are not found, use adltest application to get the required information.</p>
+</li>
+<li><p>To get system1’s current temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys1_cur_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system1 minimum temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys1_min_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system1 maximum temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys1_max_temp </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system1 startup temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys1_startup_temp</span><br></pre></td></tr></table></figure></li>
+<li><p>To get system2’s current temperature</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys2_cur_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system2 minimum temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys2_min_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system2 maximum temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys2_max_temp </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system2 start up temperature:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys2_startup_temp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get CPU fan speed:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/cpu_fan_speed</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system1 fan speed:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys1_fan_speed</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system2 fan speed:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys2_fan_speed</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To get system3 fan speed:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/hwmon/hwmonX/device/sys3_fan_speed</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<h4 id="4-6-Storage" class="article-heading"><a href="#4-6-Storage" class="headerlink" title="4.6 Storage"></a>4.6 Storage<a class="article-anchor" href="#4-6-Storage" aria-hidden="true"></a></h4><ul>
+<li><p>To get the storage capabilities:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/platform/devices/adl-bmc-nvmem/capabilities/nvmemcap</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To read the storage area:</p>
+<p>hexdump &#x2F;sys&#x2F;bus&#x2F;nvmem&#x2F;devices&#x2F;<nvmem index>&#x2F;nvmem</nvmem></p>
+<p>e.g.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexdump /sys/bus/nvmem/devices/nvmem544/nvmem</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To write the storage area:</p>
+<p>hexer &#x2F;sys&#x2F;bus&#x2F;nvmem&#x2F;devices&#x2F;<nvmem index>&#x2F;nvmem</nvmem></p>
+<p>e.g.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexer /sys/bus/nvmem/devices/nvmem544/nvmem</span><br></pre></td></tr></table></figure>
+
+<p>Hexer will open a nvmem file in editor mode. To edit the data press, <strong>[r]</strong> (replace) and enter new data, then press <strong>[ESC]</strong> and type <strong>:wq</strong> to save. Then read the same file using hexdump to check the changes saved.</p>
+<br></li>
+</ul>
+<h4 id="4-7-Backlight" class="article-heading"><a href="#4-7-Backlight" class="headerlink" title="4.7 Backlight"></a>4.7 Backlight<a class="article-anchor" href="#4-7-Backlight" aria-hidden="true"></a></h4><ul>
+<li><p>To get the current Backlight Enable State:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/backlight/adl-bmc-bklight/bl_power</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To Set the current Backlight Enable State to either ON &#x2F; OFF</p>
+<p>echo <mode> &gt; &#x2F;sys&#x2F;class&#x2F;backlight&#x2F;adl-bmc-bklight&#x2F;bl_power</mode></p>
+<p>e.g.</p>
+<ul>
+<li><p>To enable the backlight:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /sys/class/backlight/adl-bmc-bklight/bl_power</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To disable the backlight:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; /sys/class/backlight/adl-bmc-bklight/bl_power</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>To get the current Backlight Brightness level:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat /sys/class/backlight/adl-bmc-bklight/actual_brightness</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To Set the current Backlight brightness level:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &lt;level&gt; &gt; /sys/class/backlight/adl-bmc-bklight/brightness</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>e.g.</p>
+<p>To set the brightness level of 78:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 78 &gt; /sys/class/backlight/adl-bmc-bklight/brightness</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<h3 id="5-Test-Scripts" class="article-heading"><a href="#5-Test-Scripts" class="headerlink" title="5. Test Scripts"></a>5. Test Scripts<a class="article-anchor" href="#5-Test-Scripts" aria-hidden="true"></a></h3><ul>
+<li><p>The following are the test scripts for testing individual drivers. Before running the script, change its permissions.</p>
+<p>e.g.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo chmod a+x gpiotest.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong> All commands require administrator privileges and must be run as root user.</p>
+</li>
+</ul>
+</div>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-09-07T03:45:05.754Z" itemprop="dateModified">Last updated: 2023-09-07</time>
+                <a href="FlashingYoctoImageOneMMC.html" class="article-footer-prev" title="Yocto"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SEMA-Utility-on-I-Pi-SAMRC-Elkhart-Lake"><span class="toc-text">SEMA Utility on I-Pi SAMRC Elkhart Lake</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Getting-Started"><span class="toc-text">1. Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Compiling-SEMA-Linux-Package"><span class="toc-text">2. Compiling SEMA Linux Package</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Installing-SEMA-Linux-Kernel-Drivers"><span class="toc-text">3. Installing SEMA Linux Kernel Drivers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Using-the-SEMA-Linux-Module"><span class="toc-text">4. Using the SEMA Linux Module</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-Board-Information"><span class="toc-text">4.1 Board Information</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-Voltage-Monitor"><span class="toc-text">4.2 Voltage Monitor</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-Watchdog"><span class="toc-text">4.3 Watchdog</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-GPIO"><span class="toc-text">4.4 GPIO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-Hardware-Monitor-and-Fan"><span class="toc-text">4.5 Hardware Monitor and Fan</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-Storage"><span class="toc-text">4.6 Storage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-7-Backlight"><span class="toc-text">4.7 Backlight</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Test-Scripts"><span class="toc-text">5. Test Scripts</span></a></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="InstallingNetworkAdapterForWindows.html" class="sidebar-link first">Network Adaptor for Windows</a><a href="PreparingabootableUSBdrive.html" class="sidebar-link">Prepare your USB Drive</a><a href="FlashImageThroughUSBDrive.html" class="sidebar-link">Changing the Boot Option</a><a href="HowToDeployOpenVINO.html" class="sidebar-link">Deploying OpenVINO™ Toolkit</a><a href="HowToInstallIntelWiFi6EAX210Driver.html" class="sidebar-link">Installing Intel WiFi6EAX210 Driver</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link">Windows</a><a href="FlashingYoctoImageOneMMC.html" class="sidebar-link">Yocto</a><a href="SemaUtility.html" class="sidebar-link current">Sema Utility</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/ADLINKTECH/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_smarc" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/channel/UC5N0wFxt_mPucg7CC2sZSLQ" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li></ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2021, <a href="/" title="">I-Pi SMARC</a></small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="InstallingNetworkAdapterForWindows.html" class="mobile-nav-link first">Network Adaptor for Windows</a><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link">Prepare your USB Drive</a><a href="FlashImageThroughUSBDrive.html" class="mobile-nav-link">Changing the Boot Option</a><a href="HowToDeployOpenVINO.html" class="mobile-nav-link">Deploying OpenVINO™ Toolkit</a><a href="HowToInstallIntelWiFi6EAX210Driver.html" class="mobile-nav-link">Installing Intel WiFi6EAX210 Driver</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link">Windows</a><a href="FlashingYoctoImageOneMMC.html" class="mobile-nav-link">Yocto</a><a href="SemaUtility.html" class="mobile-nav-link current">Sema Utility</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/smarc/js/lang_select.js"></script>
+
+
+<script src="/smarc/js/toc.js"></script>
+
+
+<script src="/smarc/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+<!--
+
+-->
+
+</body>
+</html>
+ 
