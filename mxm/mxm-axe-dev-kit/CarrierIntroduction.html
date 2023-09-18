@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/mxm_axe_dev_kit/index.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/mxm/mxm-axe-dev-kit/CarrierIntroduction.html">
   <!-- Alternative links -->
   
     
@@ -94,19 +94,21 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/mxm/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="MXM AXe Dev Kit   The Devkit The MXM-AXe Dev Kit is a MXM 3.1 Type A-based graphics solution development kit powered by Intel® Arc™ GPU with hardware ray tracing units, 4GB GDDR6 memory, along with su">
+  <meta name="description" content="MXM-AXe Dev Kit PCIe-to-MXM adapter supporting ADLINK Mobile PCI Express Modules with NVIDIA® Quadro® embedded GPUs.              Download Datasheet Note: As of now only the DP1 - DP4 ports can work w">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/mxm_axe_dev_kit/index.html">
+<meta property="og:url" content="https://docs.ipi.wiki/mxm/mxm-axe-dev-kit/CarrierIntroduction.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="MXM AXe Dev Kit   The Devkit The MXM-AXe Dev Kit is a MXM 3.1 Type A-based graphics solution development kit powered by Intel® Arc™ GPU with hardware ray tracing units, 4GB GDDR6 memory, along with su">
+<meta property="og:description" content="MXM-AXe Dev Kit PCIe-to-MXM adapter supporting ADLINK Mobile PCI Express Modules with NVIDIA® Quadro® embedded GPUs.              Download Datasheet Note: As of now only the DP1 - DP4 ports can work w">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/mxm_axe_dev_kit/index.assets/image-20230510104934279.png">
-<meta property="article:published_time" content="2023-05-10T08:24:17.852Z">
-<meta property="article:modified_time" content="2023-05-10T08:24:17.852Z">
+<meta property="og:image" content="https://docs.ipi.wiki/mxm/mxm-axe-dev-kit/CarrierIntroduction.assets/EGX-MXM-AD-F_resize.png">
+<meta property="og:image" content="https://docs.ipi.wiki/mxm/mxm-axe-dev-kit/CarrierIntroduction.assets/functional-diagram.png">
+<meta property="og:image" content="https://docs.ipi.wiki/mxm/mxm-axe-dev-kit/CarrierIntroduction.assets/mechanical-drawing.png">
+<meta property="article:published_time" content="2023-09-18T05:11:22.458Z">
+<meta property="article:modified_time" content="2023-09-18T05:11:22.458Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/mxm_axe_dev_kit/index.assets/image-20230510104934279.png">
+<meta name="twitter:image" content="https://docs.ipi.wiki/mxm/mxm-axe-dev-kit/CarrierIntroduction.assets/EGX-MXM-AD-F_resize.png">
   <!-- Google Analytics -->
   
 <script>
@@ -138,7 +140,7 @@ $('button').click(function(){
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=index.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=CarrierIntroduction.html'}, '*');}</script>
 
 	</div>
 	
@@ -166,22 +168,74 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 class="article-heading">MXM AXe Dev Kit<a onclick="parent.postMessage( {msg: '?page=index.html#undefined'}, '*');" class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
-<img src="index.assets/image-20230510104934279.png" style="width:60%;">
-<br>
-<h2 id="The-Devkit" class="article-heading">The Devkit<a onclick="parent.postMessage( {msg: '?page=index.html#The-Devkit'}, '*');" class="article-anchor" href="#The-Devkit" aria-hidden="true"></a></h2>
-<p>The MXM-AXe Dev Kit is a MXM 3.1 Type A-based graphics solution development kit powered by Intel® Arc™ GPU with hardware ray tracing units, 4GB GDDR6 memory, along with support for 4x display output, PCIe Gen4 x8 input, and AV1 hardware acceleration.</p>
-<p>It comes preassembled with a fanned heatsink and a PCIe-to-MXM adapter card for supporting DP output and PCIe Gen4 input.</p>
-<br>
-<h2 id="The-Module" class="article-heading">The Module<a onclick="parent.postMessage( {msg: '?page=index.html#The-Module'}, '*');" class="article-anchor" href="#The-Module" aria-hidden="true"></a></h2>
-<p>With up to 8 hardware ray-tracing cores, 128 execution units, and 8x PCIe Gen4 at 50W TGP, the featured module — ADLINK’s MXM-AXe — enhances responsiveness, precision, and reliability for graphics-demanding, time-sensitive edge applications in sectors such as commercial/casino gaming, healthcare, media processing, and transportation.</p>
-<p>The module leverages Intel’s well-established graphics ecosystems, such as OpenVINO™ for AI and Intel® OneAPI management tools, that edge developers have enjoyed and relied on for years. More than a new line of GPUs, but one that makes your migration from integrated to discrete graphics seamless as ever.</p>
-<p>Supporting Intel® Deep Link technology, MXM-AXe can be paired with 12th and 13th Gen Intel Core processors for even elevated performance and power efficiency by automated workload allocation between integrated GPU, discrete GPU, and CPU.</p>
+                <h1 class="article-heading">MXM-AXe Dev Kit<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
+<p>PCIe-to-MXM adapter supporting ADLINK Mobile PCI Express Modules with NVIDIA® Quadro® embedded GPUs.</p>
+<center>
+  <div>
+    <img src="CarrierIntroduction.assets/EGX-MXM-AD-F_resize.png" alt="SMARC-module-logo_500px" style="width:65%;">
+  </div>
+</center>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.adlinktech.com/Products/Embedded_Graphics/embedded-graphics-solutions/EGX-MXM-AD?lang=en">Download Datasheet</a></p>
+<p><strong>Note:</strong> As of now only the DP1 - DP4 ports can work with the Intel ARC GPU.</p>
+<h3 id="Features" class="article-heading">Features<a class="article-anchor" href="#Features" aria-hidden="true"></a></h3>
+<ul>
+<li>MXM 3.1 Type A, Type B, Type B+ compatible.</li>
+<li>Supports NVIDIA® Quadro® embedded GPUs.</li>
+<li>6 DP++ connectors support up to 4 display outputs.</li>
+<li>PCIe Gen4 support (optional, dependent on GPU specifications).</li>
+</ul>
+<h3 id="Specifications" class="article-heading">Specifications?<a class="article-anchor" href="#Specifications" aria-hidden="true"></a></h3>
+<h4 id="Supported-MXM-Modules" class="article-heading">Supported MXM Modules<a class="article-anchor" href="#Supported-MXM-Modules" aria-hidden="true"></a></h4>
+<ul>
+<li>MXM 3.1 Type A, Type B, Type B+ compatible.</li>
+</ul>
+<h4 id="Display-outputs" class="article-heading">Display outputs<a class="article-anchor" href="#Display-outputs" aria-hidden="true"></a></h4>
+<ul>
+<li>6 DP++ via DP 1.4 connectors.</li>
+<li>max. 4 simultaneous outputs.</li>
+</ul>
+<h4 id="Resolution" class="article-heading">Resolution<a class="article-anchor" href="#Resolution" aria-hidden="true"></a></h4>
+<ul>
+<li>Max. 7680 x 4320, dependent on MXM module.</li>
+</ul>
+<h4 id="Fan-connectors" class="article-heading">Fan connectors<a class="article-anchor" href="#Fan-connectors" aria-hidden="true"></a></h4>
+<ul>
+<li>12V DC fan power connector.</li>
+</ul>
+<h4 id="Ext-Power-Input" class="article-heading">Ext. Power Input<a class="article-anchor" href="#Ext-Power-Input" aria-hidden="true"></a></h4>
+<ul>
+<li>Supports external power for MXM module, up to 120W.</li>
+</ul>
+<h4 id="PCIe" class="article-heading">PCIe<a class="article-anchor" href="#PCIe" aria-hidden="true"></a></h4>
+<ul>
+<li>PCIe Gen3 x16 (Gen4 design reserved).</li>
+</ul>
+<h4 id="Operating-system" class="article-heading">Operating system<a class="article-anchor" href="#Operating-system" aria-hidden="true"></a></h4>
+<ul>
+<li>Windows 10, Linux driver supported.</li>
+</ul>
+<h4 id="Operating-temperature" class="article-heading">Operating temperature<a class="article-anchor" href="#Operating-temperature" aria-hidden="true"></a></h4>
+<ul>
+<li>-40°C to 85°C.</li>
+</ul>
+<h4 id="Operating-humidity" class="article-heading">Operating humidity<a class="article-anchor" href="#Operating-humidity" aria-hidden="true"></a></h4>
+<ul>
+<li>~95% @40C (non-condensing).</li>
+</ul>
+<h4 id="Dimensions" class="article-heading">Dimensions<a class="article-anchor" href="#Dimensions" aria-hidden="true"></a></h4>
+<ul>
+<li>235.95mm x 162.2mm.</li>
+</ul>
+<h3 id="Functional-diagram" class="article-heading">Functional diagram<a class="article-anchor" href="#Functional-diagram" aria-hidden="true"></a></h3>
+<img src="CarrierIntroduction.assets/functional-diagram.png">
+<h3 id="Mechanical-drawing" class="article-heading">Mechanical drawing<a class="article-anchor" href="#Mechanical-drawing" aria-hidden="true"></a></h3>
+<img src="CarrierIntroduction.assets/mechanical-drawing.png">
+
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-05-10T08:24:17.852Z" itemprop="dateModified">Last updated: 2023-05-10</time>
-                <a href="UnBoxing.html" class="article-footer-next" title="What's in the Box?"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2023-09-18T05:11:22.458Z" itemprop="dateModified">Last updated: 2023-09-18</time>
+                <a href="ModuleIntroduction.html" class="article-footer-prev" title="Module Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
             </div>
@@ -190,7 +244,7 @@ $('button').click(function(){
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">MXM AXe Dev Kit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Devkit"><span class="toc-text">The Devkit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Module"><span class="toc-text">The Module</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">MXM-AXe Dev Kit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Specifications"><span class="toc-text">Specifications?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Supported-MXM-Modules"><span class="toc-text">Supported MXM Modules</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Display-outputs"><span class="toc-text">Display outputs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Resolution"><span class="toc-text">Resolution</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fan-connectors"><span class="toc-text">Fan connectors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ext-Power-Input"><span class="toc-text">Ext. Power Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PCIe"><span class="toc-text">PCIe</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Operating-system"><span class="toc-text">Operating system</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Operating-temperature"><span class="toc-text">Operating temperature</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Operating-humidity"><span class="toc-text">Operating humidity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dimensions"><span class="toc-text">Dimensions</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functional-diagram"><span class="toc-text">Functional diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mechanical-drawing"><span class="toc-text">Mechanical drawing</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -199,7 +253,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="index.html" class="sidebar-link current first">Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="UnBoxing.html" class="sidebar-link first">What's in the Box?</a><a href="InstallingGraphicsDriverForWindows.html" class="sidebar-link">Installing Driver</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details open></strong>
+    <strong class="sidebar-title"><details open><summary>Overview</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="UnBoxing.html" class="sidebar-link first">What's in the Box?</a><a href="InstallingGraphicsDriverForWindows.html" class="sidebar-link">Installing Driver</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link current">Carrier Introduction</a></details></strong>
   </div>
 </aside>
     </div>
@@ -245,7 +299,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="index.html" class="mobile-nav-link current first">Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="UnBoxing.html" class="mobile-nav-link first">What's in the Box?</a><a href="InstallingGraphicsDriverForWindows.html" class="mobile-nav-link">Installing Driver</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details open></strong>
+      <strong class="mobile-nav-title"><details open><summary>Overview</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="UnBoxing.html" class="mobile-nav-link first">What's in the Box?</a><a href="InstallingGraphicsDriverForWindows.html" class="mobile-nav-link">Installing Driver</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link current">Carrier Introduction</a></details></strong>
     
   </div>
   
