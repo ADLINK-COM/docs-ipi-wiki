@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/com-express/com-express-type6-alp/PreparingabootableUSBdrive.html">
   <!-- Alternative links -->
   
     
@@ -34,7 +34,7 @@
   -->
 
   <!-- Icon -->
-  <link rel="Shortcut Icon" href="/ComExpress/images/favicon.ico">
+  <link rel="Shortcut Icon" href="/com-express/images/favicon.ico">
   <!-- CSS -->
 
   <script
@@ -85,34 +85,28 @@ $('button').click(function(){
 
   <!-- build:css build/css/navy.css -->
   
-<link rel="stylesheet" href="/ComExpress/css/navy.css">
+<link rel="stylesheet" href="/com-express/css/navy.css">
 
   <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/ComExpress//css/font/fontawesome.min.css">
+  <link rel="stylesheet" href="/com-express//css/font/fontawesome.min.css">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
   <!-- RSS -->
-  <link rel="alternate" href="/ComExpress/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Installing Windows 10 (with Intel Elkhart Lake)  The following procedures will walk you through the steps for installing Windows 10 on your target device.   Using a Windows host, please refer to Windo">
+  <meta name="description" content="Preparing a bootable USB drive  This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium Prerequisites  Download the prebuilt bootable image to the w">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.html">
+<meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type6-alp/PreparingabootableUSBdrive.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Installing Windows 10 (with Intel Elkhart Lake)  The following procedures will walk you through the steps for installing Windows 10 on your target device.   Using a Windows host, please refer to Windo">
+<meta property="og:description" content="Preparing a bootable USB drive  This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium Prerequisites  Download the prebuilt bootable image to the w">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/ImageDownloadPage.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/LicenceTerms.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/Windows10Setup.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/SelectArchitecture.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/ChooseMedia.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/SelectUSBFlashDrive.png">
-<meta property="og:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/DownloadingImage.png">
-<meta property="article:published_time" content="2023-06-29T03:47:09.913Z">
-<meta property="article:modified_time" content="2023-06-29T03:47:09.913Z">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type6-alp/Preparingabootableusbdrive.assets/rufus.png">
+<meta property="article:published_time" content="2023-09-18T02:14:14.730Z">
+<meta property="article:modified_time" content="2023-09-18T02:14:14.730Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/ComExpress/COM_Express_Type_10/WindowsImage.assets/ImageDownloadPage.png">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type6-alp/Preparingabootableusbdrive.assets/rufus.png">
   <!-- Google Analytics -->
   
 <script>
@@ -138,13 +132,13 @@ $('button').click(function(){
       <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
       
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
-      <div style="display:inline-block"><div class="btn-group"><a href="/ComExpress/ComExpress/" class="main-nav-link  header">menu.comexpress</a></div>
+      <div style="display:inline-block"><div class="btn-group"><a href="/com-express/com-express/" class="main-nav-link  header">menu.comexpress</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
       <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=WindowsImage.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html'}, '*');}</script>
 
 	</div>
 	
@@ -172,82 +166,49 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 class="article-heading">Installing Windows 10 (with Intel Elkhart Lake)<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#undefined'}, '*');" class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
+                <h1 class="article-heading">Preparing a bootable USB drive<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#undefined'}, '*');" class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
 <div class="bullets">
-<p>The following procedures will walk you through the steps for installing Windows 10 on your target device.</p>
+<p>This procedure describes how to Flash the ISO/IMG file into USB drive and make it as an installation medium</p>
+<h2 id="Prerequisites" class="article-heading">Prerequisites<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2>
 <ul>
-<li>
-<p>Using a Windows host, please refer to <a href="#Windows-Host">Windows Host Users</a></p>
-</li>
-<li>
-<p>Using a Linux host, please refer to <a href="#Linux-Host">Linux Host Users</a></p>
-</li>
+<li>Download the prebuilt bootable image to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/com-express-type-6-alder-lake-download">click here</a>.
+<ul>
+<li>Ubuntu (Not available)</li>
+<li>Windows <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">click here</a></li>
 </ul>
-<p><strong>Note:</strong> As the current version of this module does not include eMMC storage, you must connect the external hard drive via SATA cable. Therefore, you need to flash the image from a bootable USB stick to an external hard drive.</p>
-<br>
-<h2 id="Windows-Host" class="article-heading">Windows Host<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2>
-<ol>
-<li>Before you start, please download the Windows 10 media creation tool from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">here</a>.</li>
-</ol>
-<img src="WindowsImage.assets/ImageDownloadPage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="2">
-<li>
-<p>Once downloaded, run <em>media creation tool.exe</em> on your development host system.</p>
 </li>
-<li>
-<p>Read and <strong>Accept</strong> Windows’ terms and conditions.</p>
-</li>
-</ol>
-<img src="WindowsImage.assets/LicenceTerms.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="4">
-<li>Select <strong>Create installation media</strong>.</li>
-</ol>
-<img src="WindowsImage.assets/Windows10Setup.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="5">
-<li>Select the desired <em>Language</em>, <em>Edition</em>, and <em>Architecture</em>.</li>
-</ol>
-<img src="WindowsImage.assets/SelectArchitecture.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="6">
-<li>Select <strong>USB flash drive</strong>.</li>
-</ol>
-<img src="WindowsImage.assets/ChooseMedia.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="6">
-<li>Select your USB drive.</li>
-</ol>
-<img src="WindowsImage.assets/SelectUSBFlashDrive.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="7">
-<li>Once selected, it shall start downloading Windows 10 onto your USB drive. This may take some time depending on your system and network conditions.</li>
-</ol>
-<img src="WindowsImage.assets/DownloadingImage.png" alt="img" style="margin-left: auto; margin-right: auto; display: block; zoom: 100%;">
-<ol start="8">
-<li>This tool will automatically create your USB drive as a bootable drive with the Windows image. After the download is finished, you can start flashing it onto your targeted device.</li>
-</ol>
-<br>
-<h2 id="Linux-Host" class="article-heading">Linux Host<a onclick="parent.postMessage( {msg: '?page=WindowsImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2>
+<li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">Rufus</a>. (Rufus is flashing tool for <strong>.iso</strong> format)</li>
+<li>In a Linux environment use <code>dd</code> command.</li>
+</ul>
+<p><strong>Note:</strong> All files will be erased on the USB drive. The size should be preferable 16 GB or larger.</p>
+<h3 id="Windows-Host" class="article-heading">Windows Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3>
+<h4 id="Rufus-as-Flashing-tool-Ubuntu-Windows" class="article-heading">Rufus as Flashing tool (Ubuntu/Windows)<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Rufus-as-Flashing-tool-Ubuntu-Windows'}, '*');" class="article-anchor" href="#Rufus-as-Flashing-tool-Ubuntu-Windows" aria-hidden="true"></a></h4>
 <ol>
 <li>
-<p>Download the Windows 10 ISO file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">here</a>. Once downloaded, copy the prebuilt bootable Windows 10 ISO file to the working directory of your development host.</p>
+<p>Insert an empty USB drive into the your development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.</p>
 </li>
 <li>
-<p>Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
-<p><strong>Warning</strong>: Make sure to identify  and use the proper USB drive (/dev/sdb or /dev/sdc), such as by using “gparted.” Data loss may occur if you write to the wrong device, and in worst case scenario you may kill your development host’s OS</p>
+<p>Press the <strong>SELECT</strong> button and browse to the .iso file previously downloaded to your working directory on the development host. Then click <strong>START</strong> and wait for the process to be finished.</p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>After dd has completed, enter the following command:</li>
-</ol>
+<img src="Preparingabootableusbdrive.assets/rufus.png" alt="rufus_2" style="margin-left: auto; margin-right: auto; display: block;">
+<h3 id="Linux-Host" class="article-heading">Linux Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3>
+<ol>
+<li>
+<p>Download the prebuilt bootable OS to the working directory on your development host. Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
+<p><strong>Warning</strong>: Make sure you first properly identify the USB device, for example (/dev/sdb or /dev/sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development hosts OS.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>After dd has completed, enter the following command to finish:</li>
+<p>After dd has completed, enter the following command:</p>
+</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
-<p><strong>Note</strong>: You can also flash Yocto and Android images using a Linux host, but make sure to type the correct image format using <code>dd</code> command.</p>
+<p><strong>Note</strong>: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your <code>dd</code> command.</p>
 </div>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-06-29T03:47:09.913Z" itemprop="dateModified">Last updated: 2023-06-29</time>
-                <a href="UbuntuImage.html" class="article-footer-prev" title="Ubuntu"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SemaUtility.html" class="article-footer-next" title="Sema Utility"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2023-09-18T02:14:14.730Z" itemprop="dateModified">Last updated: 2023-09-18</time>
+                <a href="WindowsImage.html" class="article-footer-prev" title="Windows"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="HowToDeployOpenVINO.html" class="article-footer-next" title="Deploying OpenVINO™ Toolkit"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -256,7 +217,7 @@ $('button').click(function(){
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Installing Windows 10 (with Intel Elkhart Lake)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Preparing a bootable USB drive</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Rufus-as-Flashing-tool-Ubuntu-Windows"><span class="toc-text">Rufus as Flashing tool (Ubuntu&#x2F;Windows)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -265,7 +226,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="HowToSetup.html" class="sidebar-link">Setup</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link current">Windows</a><a href="SemaUtility.html" class="sidebar-link">Sema Utility</a><a href="YoctoImageInstalling.html" class="sidebar-link">Yocto</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="sidebar-link first">Preparing Bootable USB</a><a href="FlashImageThroughUSBDrive.html" class="sidebar-link">Changing Boot Option</a></details open></strong><strong class="sidebar-title"><details open><summary>AI Inferencing</summary><a href="HowToDeployOpenVINO.html" class="sidebar-link first">Deploying OpenVINO™ Toolkit</a></details open></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="HowToSetup.html" class="sidebar-link">Setup</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link">Windows</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="sidebar-link current first">Preparing Bootable USB</a><a href="HowToDeployOpenVINO.html" class="sidebar-link">Deploying OpenVINO™ Toolkit</a></details open></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="UpdateBIOS.html" class="sidebar-link first">Upgrading BIOS</a></details open></strong>
   </div>
 </aside>
     </div>
@@ -307,11 +268,11 @@ $('button').click(function(){
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/ComExpress/ComExpress/" class="mobile-nav-link  header">menu.comexpress</a>
+      <a href="/com-express/com-express/" class="mobile-nav-link  header">menu.comexpress</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">Setup</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link current">Windows</a><a href="SemaUtility.html" class="mobile-nav-link">Sema Utility</a><a href="YoctoImageInstalling.html" class="mobile-nav-link">Yocto</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link first">Preparing Bootable USB</a><a href="FlashImageThroughUSBDrive.html" class="mobile-nav-link">Changing Boot Option</a></details open></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing</summary><a href="HowToDeployOpenVINO.html" class="mobile-nav-link first">Deploying OpenVINO™ Toolkit</a></details open></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">Setup</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link">Windows</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link current first">Preparing Bootable USB</a><a href="HowToDeployOpenVINO.html" class="mobile-nav-link">Deploying OpenVINO™ Toolkit</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="UpdateBIOS.html" class="mobile-nav-link first">Upgrading BIOS</a></details open></strong>
     
   </div>
   
@@ -320,13 +281,13 @@ $('button').click(function(){
   <!-- Scripts -->
 <!-- build:js build/js/main.js -->
 
-<script src="/ComExpress/js/lang_select.js"></script>
+<script src="/com-express/js/lang_select.js"></script>
 
 
-<script src="/ComExpress/js/toc.js"></script>
+<script src="/com-express/js/toc.js"></script>
 
 
-<script src="/ComExpress/js/mobile_nav.js"></script>
+<script src="/com-express/js/mobile_nav.js"></script>
 
 <!-- endbuild -->
 
