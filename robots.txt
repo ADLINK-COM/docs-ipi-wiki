@@ -1,7 +1,8 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
+
+
 
 User-agent: *
 Allow: /
+Disallow: /COMHPC/
 
 Sitemap: https://www.docs.ipi.wiki/sitemap.xml
