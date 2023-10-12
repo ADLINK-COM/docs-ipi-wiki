@@ -1,8 +1,7 @@
-
-
-
 User-agent: *
-Allow: /
-Disallow: /COMHPC/
+
+Disallow: /COMHPC
+Disallow:/ComExpress
+Disallow:/SMARC
 
 Sitemap: https://www.docs.ipi.wiki/sitemap.xml
