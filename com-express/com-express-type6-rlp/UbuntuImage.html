@@ -172,7 +172,7 @@ $('button').click(function(){
                 <div id="top_box">
   <div>
     <h1 id="title_container" class="article-heading"><a href="#title_container"></a>Installing Ubuntu Focal Fossa 20.04.4 LTS (with Intel Raptor Lake-P)
-  <a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#title_container'}, '*');" class="article-anchor" href="#title_container" aria-hidden="true"></a></h1></div>
+  <a class="article-anchor" href="#title_container" aria-hidden="true"></a></h1></div>
   <div id="image_logo">
     <img src="UbuntuImage.assets/ubuntu_logo_hex.png" alt="ubuntu_logo_hex">
   </div>
@@ -189,7 +189,7 @@ $('button').click(function(){
 </ul>
 <p><strong>Note:</strong> As the current version of this module does not include eMMC storage, you must connect the hard drive. Therefore, you need to flash the image from a bootable USB stick to a hard drive.</p>
 <br>
-<h2 id="Windows-Host" class="article-heading">Windows Host<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2>
+<h2 id="Windows-Host" class="article-heading">Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2>
 <ol>
 <li>To start, download the Ubuntu image from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://ubuntu.com/download/iot/intel-iot">here</a> (make sure to select the correct one: <strong><em>focal-desktop-amd64+intel-iot.iso</em></strong>).</li>
 </ol>
@@ -198,7 +198,7 @@ $('button').click(function(){
 <li>Before installing Ubuntu Desktop, you need to first write your downloaded ISO to a USB drive to make it into an installation medium. (You can use <strong>rufus</strong> to do)</li>
 </ol>
 <br>
-<h3 id="Booting-from-USB-flash-drive" class="article-heading">Booting from USB flash drive<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Booting-from-USB-flash-drive'}, '*');" class="article-anchor" href="#Booting-from-USB-flash-drive" aria-hidden="true"></a></h3>
+<h3 id="Booting-from-USB-flash-drive" class="article-heading">Booting from USB flash drive<a class="article-anchor" href="#Booting-from-USB-flash-drive" aria-hidden="true"></a></h3>
 <ol start="3">
 <li>
 <p>Insert the USB flash drive into your target device and boot or restart the device. It should recognize the installation medium automatically. If not, try holding <strong>F10</strong> during start up and selecting the USB drive from the system-specific boot menu.</p>
@@ -210,7 +210,7 @@ $('button').click(function(){
 <img src="UbuntuImage.assets/pasted%20image%200.png" alt="img" style="margin-left: auto; margin-right: auto; display: block;">
 <img src="UbuntuImage.assets/pasted%20image%200%20(1).png" alt="img" style="margin-left: auto; margin-right: auto; display: block;">
 <br>
-<h2 id="Linux-Host" class="article-heading">Linux Host<a onclick="parent.postMessage( {msg: '?page=UbuntuImage.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2>
+<h2 id="Linux-Host" class="article-heading">Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2>
 <ol>
 <li>
 <p>Download the Ubuntu 20.04 file from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://ubuntu.com/download/iot/intel-iot">here</a> (make sure to select the correct one: <strong><em>focal-desktop-amd64+intel-iot.iso</em></strong>). Once download, copy the prebuilt bootable Ubuntu file to the working directory of your development host.</p>
@@ -249,7 +249,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="HowToSetup.html" class="sidebar-link">Setup</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link current first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link">Windows</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="sidebar-link first">Preparing Bootable USB</a><a href="HowToDeployOpenVINO.html" class="sidebar-link">Deploying OpenVINO™ Toolkit</a></details open></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="UpdateBIOS.html" class="sidebar-link first">Upgrading BIOS</a></details open></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="HowToSetup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link current first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link">Windows</a></details></strong><strong class="sidebar-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="sidebar-link first">Preparing Bootable USB</a><a href="HowToDeployOpenVINO.html" class="sidebar-link">Deploying OpenVINO™ Toolkit</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="UpdateBIOS.html" class="sidebar-link first">Upgrading BIOS</a></details></strong>
   </div>
 </aside>
     </div>
@@ -264,11 +264,16 @@ $('button').click(function(){
       <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
             <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
           </li></ul>
-    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
                   <a class="social-icons__link" target="_blank" href="https://www.facebook.com/ADLINKTECH/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
                   </a>
-                </li><li class="social-icons__item">
-                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_smarc" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
                   </a>
                 </li><li class="social-icons__item">
                   <a class="social-icons__link" target="_blank" href="https://www.youtube.com/channel/UC5N0wFxt_mPucg7CC2sZSLQ" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
@@ -279,7 +284,7 @@ $('button').click(function(){
             <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
           </li></ul>
     </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
-        <small class="site-footer__copyright-content">© 2021, <a href="/" title="">I-Pi SMARC</a></small>
+        <small class="site-footer__copyright-content">© 2023, <a href="/" title="">I-Pi</a></small>
         <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
       </div>
     </div>
@@ -295,7 +300,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">Setup</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link current first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link">Windows</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link first">Preparing Bootable USB</a><a href="HowToDeployOpenVINO.html" class="mobile-nav-link">Deploying OpenVINO™ Toolkit</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="UpdateBIOS.html" class="mobile-nav-link first">Upgrading BIOS</a></details open></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link current first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link">Windows</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link first">Preparing Bootable USB</a><a href="HowToDeployOpenVINO.html" class="mobile-nav-link">Deploying OpenVINO™ Toolkit</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="UpdateBIOS.html" class="mobile-nav-link first">Upgrading BIOS</a></details></strong>
     
   </div>
   
