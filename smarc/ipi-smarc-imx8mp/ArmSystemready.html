@@ -114,7 +114,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=ArmSystemready.html#ArmSystemready.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=ArmSystemready.html'}, '*');}</script>
 
 	</div>
 	
@@ -142,8 +142,8 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="ARM-System-Ready-Image-Evaluation-for-IMX8MP" class="article-heading"><a href="#ARM-System-Ready-Image-Evaluation-for-IMX8MP" class="headerlink" title="ARM System Ready Image Evaluation for IMX8MP"></a>ARM System Ready Image Evaluation for IMX8MP<a class="article-anchor" href="#ARM-System-Ready-Image-Evaluation-for-IMX8MP" aria-hidden="true"></a></h1><p>This document provides detailed instructions for evaluating ARM System Ready Image on IMX8MP</p>
-<h4 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h4><ul>
+                <h1 id="ARM-System-Ready-Image-Evaluation-for-IMX8MP" class="article-heading"><a href="#ARM-System-Ready-Image-Evaluation-for-IMX8MP" class="headerlink" title="ARM System Ready Image Evaluation for IMX8MP"></a>ARM System Ready Image Evaluation for IMX8MP<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#ARM-System-Ready-Image-Evaluation-for-IMX8MP'}, '*');" class="article-anchor" href="#ARM-System-Ready-Image-Evaluation-for-IMX8MP" aria-hidden="true"></a></h1><p>This document provides detailed instructions for evaluating ARM System Ready Image on IMX8MP</p>
+<h4 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h4><ul>
 <li><p>A Linux-based host system is used for the entire processing of this document</p>
 </li>
 <li><p>ARM cross-platform compilation is only possible with Ubuntu 18.04 LTS</p>
@@ -154,7 +154,7 @@
 <li><p>Install related Ubuntu packages</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libncurses5-dev zlib1g-dev gawk flex patch git-core g++ subversion bison</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps" class="article-heading"><a href="#ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps" class="headerlink" title="ARM System Ready for IMX8MP can be evaluated by following the below steps:"></a>ARM System Ready for IMX8MP can be evaluated by following the below steps:<a class="article-anchor" href="#ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps" aria-hidden="true"></a></h2><ol>
+<h2 id="ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps" class="article-heading"><a href="#ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps" class="headerlink" title="ARM System Ready for IMX8MP can be evaluated by following the below steps:"></a>ARM System Ready for IMX8MP can be evaluated by following the below steps:<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps'}, '*');" class="article-anchor" href="#ARM-System-Ready-for-IMX8MP-can-be-evaluated-by-following-the-below-steps" aria-hidden="true"></a></h2><ol>
 <li><p>Setup Toolchain</p>
 </li>
 <li><p>Compile U-boot</p>
@@ -169,7 +169,7 @@
 </li>
 </ol>
 <p><strong>Note:</strong> In this case, we used the Fedora installer. The same procedure can be followed with other images by simply changing the name of your installer file.</p>
-<h3 id="Step-1-Setup-Toolchain" class="article-heading"><a href="#Step-1-Setup-Toolchain" class="headerlink" title="Step 1: Setup Toolchain"></a>Step 1: Setup Toolchain<a class="article-anchor" href="#Step-1-Setup-Toolchain" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-1-Setup-Toolchain" class="article-heading"><a href="#Step-1-Setup-Toolchain" class="headerlink" title="Step 1: Setup Toolchain"></a>Step 1: Setup Toolchain<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Step-1-Setup-Toolchain'}, '*');" class="article-anchor" href="#Step-1-Setup-Toolchain" aria-hidden="true"></a></h3><ul>
 <li><p>Make a directory called toolchain</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir ~/toolchain</span><br></pre></td></tr></table></figure>
 </li>
@@ -181,7 +181,7 @@
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -xJf gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu.tar.xz</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="Step-2-Compile-U-boot" class="article-heading"><a href="#Step-2-Compile-U-boot" class="headerlink" title="Step 2: Compile U-boot"></a>Step 2: Compile U-boot<a class="article-anchor" href="#Step-2-Compile-U-boot" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-2-Compile-U-boot" class="article-heading"><a href="#Step-2-Compile-U-boot" class="headerlink" title="Step 2: Compile U-boot"></a>Step 2: Compile U-boot<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Step-2-Compile-U-boot'}, '*');" class="article-anchor" href="#Step-2-Compile-U-boot" aria-hidden="true"></a></h3><ul>
 <li><p>Clone our ADLINK u-boot binary into the ~&#x2F;toolchain directory</p>
 <ul>
 <li>Depending on your needs, you may need access to clone our repository, so please contact our administrator.</li>
@@ -218,7 +218,7 @@
 <li><p>When it has completed, the flash.bin file will be created in the directory <code>~/toolchain/u-boot-adlink/imx-mkimage/iMX8M/</code></p>
 </li>
 </ul>
-<h3 id="Step-3-Prepare-emmc-img" class="article-heading"><a href="#Step-3-Prepare-emmc-img" class="headerlink" title="Step 3: Prepare emmc.img"></a>Step 3: Prepare emmc.img<a class="article-anchor" href="#Step-3-Prepare-emmc-img" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-3-Prepare-emmc-img" class="article-heading"><a href="#Step-3-Prepare-emmc-img" class="headerlink" title="Step 3: Prepare emmc.img"></a>Step 3: Prepare emmc.img<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Step-3-Prepare-emmc-img'}, '*');" class="article-anchor" href="#Step-3-Prepare-emmc-img" aria-hidden="true"></a></h3><ul>
 <li><p>Download the eMMC base image from azure and extract them into ~&#x2F;toolchain&#x2F;u-boot&#x2F;. This is a simple image with FAT partition containing kernel image and dtb</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://hq0epm0west0us0storage.blob.core.windows.net/development/LEC-iMX8MP/System-Ready/emmc.img.tar.xz</span><br></pre></td></tr></table></figure>
 
@@ -227,7 +227,7 @@
 <li><p>Add u-boot binary created in “Step 2” to emmc.img</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dd if=imx-mkimage/iMX8M/flash.bin of=emmc.img bs=1k seek=32 conv=notrunc</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="Step-4-Flash-emmc-img" class="article-heading"><a href="#Step-4-Flash-emmc-img" class="headerlink" title="Step 4: Flash emmc.img"></a>Step 4: Flash emmc.img<a class="article-anchor" href="#Step-4-Flash-emmc-img" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-4-Flash-emmc-img" class="article-heading"><a href="#Step-4-Flash-emmc-img" class="headerlink" title="Step 4: Flash emmc.img"></a>Step 4: Flash emmc.img<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Step-4-Flash-emmc-img'}, '*');" class="article-anchor" href="#Step-4-Flash-emmc-img" aria-hidden="true"></a></h3><ul>
 <li><p>Flash the emmc.img into the eMMC using the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/imx8mp-docs?page=HowToFlashImageeMMCUsingUUUTool.html">UUU tool</a></p>
 </li>
 <li><p>In “Linux Host” section, you will find the below command to flash emmc image:</p>
@@ -238,7 +238,7 @@
 <li><p>Replace “file_path_of_image_file” with “emmc.img” created in Step 3.</p>
 </li>
 </ul>
-<h3 id="Step-5-Prepare-Fedora-bootable-SD-card" class="article-heading"><a href="#Step-5-Prepare-Fedora-bootable-SD-card" class="headerlink" title="Step 5: Prepare Fedora bootable SD card"></a>Step 5: Prepare Fedora bootable SD card<a class="article-anchor" href="#Step-5-Prepare-Fedora-bootable-SD-card" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-5-Prepare-Fedora-bootable-SD-card" class="article-heading"><a href="#Step-5-Prepare-Fedora-bootable-SD-card" class="headerlink" title="Step 5: Prepare Fedora bootable SD card"></a>Step 5: Prepare Fedora bootable SD card<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Step-5-Prepare-Fedora-bootable-SD-card'}, '*');" class="article-anchor" href="#Step-5-Prepare-Fedora-bootable-SD-card" aria-hidden="true"></a></h3><ul>
 <li><p>Download the official Fedora IoT installer image</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://download.fedoraproject.org/pub/alt/iot/34/IoT/aarch64/iso/Fedora-IoT-IoT-ostree-aarch64-34-20210801.0.iso</span><br></pre></td></tr></table></figure>
 </li>
@@ -247,7 +247,7 @@
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="Step-6-Boot-in-to-Fedora-GRUB" class="article-heading"><a href="#Step-6-Boot-in-to-Fedora-GRUB" class="headerlink" title="Step 6: Boot in to Fedora GRUB"></a>Step 6: Boot in to Fedora GRUB<a class="article-anchor" href="#Step-6-Boot-in-to-Fedora-GRUB" aria-hidden="true"></a></h3><ul>
+<h3 id="Step-6-Boot-in-to-Fedora-GRUB" class="article-heading"><a href="#Step-6-Boot-in-to-Fedora-GRUB" class="headerlink" title="Step 6: Boot in to Fedora GRUB"></a>Step 6: Boot in to Fedora GRUB<a onclick="parent.postMessage( {msg: '?page=ArmSystemready.html#Step-6-Boot-in-to-Fedora-GRUB'}, '*');" class="article-anchor" href="#Step-6-Boot-in-to-Fedora-GRUB" aria-hidden="true"></a></h3><ul>
 <li>Connect bootable SD card to the board</li>
 <li>Set boot switch configuration for eMMC boot and power on the board</li>
 <li>Now, u-boot should automatically boot in to Fedora IOT</li>
@@ -293,7 +293,7 @@
     <div class="grid__item  small--one-whole site-footer-item-tall">
     <ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list">
       <li class="social-icons__item">
-                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/ADLINKTECH/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
                   </a>
                 </li>
                 
@@ -301,7 +301,7 @@
                   <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
                   </a>
                 </li><li class="social-icons__item">
-                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/channel/UC5N0wFxt_mPucg7CC2sZSLQ" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
                   </a>
                 </li>
                 <li class="social-icons__item">
@@ -316,7 +316,7 @@
             <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
           </li></ul>
     </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
-        <small class="site-footer__copyright-content">© 2023, <a href="/" title="">I-Pi</a></small>
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
         <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
       </div>
     </div>
