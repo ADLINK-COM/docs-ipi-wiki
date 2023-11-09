@@ -118,7 +118,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#HowToFlashTheUbuntuImageOnRB5NUsingQfil.html'}, '*');}</script>
 
 	</div>
 	
@@ -146,19 +146,19 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Flashing-Ubuntu-using-QFIL" class="article-heading"><a href="#Flashing-Ubuntu-using-QFIL" class="headerlink" title="Flashing Ubuntu using QFIL"></a>Flashing Ubuntu using QFIL<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Flashing-Ubuntu-using-QFIL'}, '*');" class="article-anchor" href="#Flashing-Ubuntu-using-QFIL" aria-hidden="true"></a></h1><blockquote>
+                <h1 id="Flashing-Ubuntu-using-QFIL" class="article-heading"><a href="#Flashing-Ubuntu-using-QFIL" class="headerlink" title="Flashing Ubuntu using QFIL"></a>Flashing Ubuntu using QFIL<a class="article-anchor" href="#Flashing-Ubuntu-using-QFIL" aria-hidden="true"></a></h1><blockquote>
 <p><strong>Note:</strong> It is recommended to <a href="./HowToFlashTheUbuntuImageOnRB5NUsingAdb.html">flash using ADB</a>. Please use this method only if the device crashed while flashing the image and the bootloader fails to start.</p>
 </blockquote>
 <p>This document provides detailed instructions on how to flash the image to eMMC of I-Pi SMARC RB5N using QFIL on Windows.</p>
-<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites (Windows)"></a><strong>Prerequisites</strong> (Windows)<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Prerequisites-Windows'}, '*');" class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><p>Please make sure the following software is installed on the host device.</p>
+<h2 id="Prerequisites-Windows" class="article-heading"><a href="#Prerequisites-Windows" class="headerlink" title="Prerequisites (Windows)"></a><strong>Prerequisites</strong> (Windows)<a class="article-anchor" href="#Prerequisites-Windows" aria-hidden="true"></a></h2><p>Please make sure the following software is installed on the host device.</p>
 <ul>
 <li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/downloads/qualcomm-hs-usb-qdloader-9008/">Qualcomm HS-USB QDLoader 9008 Driver</a></p>
 </li>
 <li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://qpsttool.com/">QPST</a> (The QFIL tool comes bundled with this)</p>
 </li>
 </ul>
-<p>Please contact <a href="mailto:&#105;&#112;&#x69;&#46;&#x77;&#x69;&#x6b;&#x69;&#64;&#x61;&#x64;&#108;&#x69;&#110;&#107;&#x74;&#x65;&#x63;&#104;&#46;&#99;&#x6f;&#109;" rel="external nofollow noreferrer">&#105;&#112;&#x69;&#46;&#x77;&#x69;&#x6b;&#x69;&#64;&#x61;&#x64;&#108;&#x69;&#110;&#107;&#x74;&#x65;&#x63;&#104;&#46;&#99;&#x6f;&#109;</a> for the image.</p>
-<h2 id="Board-layout" class="article-heading"><a href="#Board-layout" class="headerlink" title="Board layout"></a>Board layout<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Board-layout'}, '*');" class="article-anchor" href="#Board-layout" aria-hidden="true"></a></h2><center>
+<p>Please contact <a href="mailto:&#105;&#x70;&#105;&#x2e;&#x77;&#x69;&#107;&#x69;&#x40;&#x61;&#x64;&#x6c;&#105;&#110;&#x6b;&#116;&#101;&#99;&#x68;&#x2e;&#99;&#x6f;&#x6d;" rel="external nofollow noreferrer">&#105;&#x70;&#105;&#x2e;&#x77;&#x69;&#107;&#x69;&#x40;&#x61;&#x64;&#x6c;&#105;&#110;&#x6b;&#116;&#101;&#99;&#x68;&#x2e;&#99;&#x6f;&#x6d;</a> for the image.</p>
+<h2 id="Board-layout" class="article-heading"><a href="#Board-layout" class="headerlink" title="Board layout"></a>Board layout<a class="article-anchor" href="#Board-layout" aria-hidden="true"></a></h2><center>
   <div>
     <img src="./HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-layout.png" alt="img">
     <img src="./HowToFlashTheUbuntuImageOnRB5NUsingQfil.assets/rb5n-f_dl.png" alt="img">
@@ -171,7 +171,7 @@
 <li>UART Pins (See <a href="./SerialLogReadUART.html">How to Read Console Output</a>)</li>
 <li>F_DL button</li>
 </ol>
-<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><h3 id="Enabling-download-mode" class="article-heading"><a href="#Enabling-download-mode" class="headerlink" title="Enabling download mode"></a>Enabling download mode<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Enabling-download-mode'}, '*');" class="article-anchor" href="#Enabling-download-mode" aria-hidden="true"></a></h3><p>Make sure the device is fully powered off and the USB OTG cable is not connected.</p>
+<h2 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2><h3 id="Enabling-download-mode" class="article-heading"><a href="#Enabling-download-mode" class="headerlink" title="Enabling download mode"></a>Enabling download mode<a class="article-anchor" href="#Enabling-download-mode" aria-hidden="true"></a></h3><p>Make sure the device is fully powered off and the USB OTG cable is not connected.</p>
 <ul>
 <li><p>Hold the F_DL button and power on the device by plugging in the power cable while keeping the F_DL button depressed.</p>
 </li>
@@ -182,7 +182,7 @@
 <li><p>The device should now be in download mode.</p>
 </li>
 </ul>
-<h3 id="Flashing-the-image" class="article-heading"><a href="#Flashing-the-image" class="headerlink" title="Flashing the image"></a>Flashing the image<a onclick="parent.postMessage( {msg: '?page=HowToFlashTheUbuntuImageOnRB5NUsingQfil.html#Flashing-the-image'}, '*');" class="article-anchor" href="#Flashing-the-image" aria-hidden="true"></a></h3><ul>
+<h3 id="Flashing-the-image" class="article-heading"><a href="#Flashing-the-image" class="headerlink" title="Flashing the image"></a>Flashing the image<a class="article-anchor" href="#Flashing-the-image" aria-hidden="true"></a></h3><ul>
 <li>Start the QFIL application</li>
 </ul>
 <center>
@@ -267,7 +267,7 @@
                   <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
                 </li>
                 <li class="social-icons__item">
-                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
                 </li>
                 </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
       <span class="visually-hidden">Payment methods</span>
