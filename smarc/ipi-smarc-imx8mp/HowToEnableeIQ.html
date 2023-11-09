@@ -64,7 +64,7 @@
 
   <!-- endbuild -->
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/smarc/css/font/fontawesome.min.css">
@@ -118,7 +118,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToEnableeIQ.html#HowToEnableeIQ.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=HowToEnableeIQ.html'}, '*');}</script>
 
 	</div>
 	
@@ -146,7 +146,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-enable-eIQ-on-IMX8MP" class="article-heading"><a href="#How-to-enable-eIQ-on-IMX8MP" class="headerlink" title="How to enable eIQ on IMX8MP"></a>How to enable eIQ on IMX8MP<a class="article-anchor" href="#How-to-enable-eIQ-on-IMX8MP" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="How-to-enable-eIQ-on-IMX8MP" class="article-heading"><a href="#How-to-enable-eIQ-on-IMX8MP" class="headerlink" title="How to enable eIQ on IMX8MP"></a>How to enable eIQ on IMX8MP<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#How-to-enable-eIQ-on-IMX8MP'}, '*');" class="article-anchor" href="#How-to-enable-eIQ-on-IMX8MP" aria-hidden="true"></a></h1><div class="bullets">
 
 <p>This document provides detailed instructions for enabling eIQ on I-Pi SMARC IMX8M plus.</p>
 <ul>
@@ -155,7 +155,7 @@
 <li><p><a href="#Enabling-CPU-on-OpenCV">OpenCV</a></p>
 </li>
 </ul>
-<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li><p>Download the prebuilt full Yocto Image (2G&#x2F;4G). Use any of the following methods to flash the Yocto Image on the targeted device,</p>
 <ul>
 <li>Flashing the image in SD card <a href="HowToFlashImageSD.html">click here</a>.</li>
@@ -168,8 +168,8 @@
 <li><p>According to the NXP source by far the NPU only enabled on armNN, ONNX, TensorFlowLite and DeepViewRT rest of them run on CPU only.</p>
 </li>
 </ul>
-<h2 id="Enabling-NPU-and-CPU-on-TensorFlowLite" class="article-heading"><a href="#Enabling-NPU-and-CPU-on-TensorFlowLite" class="headerlink" title="Enabling NPU and CPU on TensorFlowLite"></a>Enabling NPU and CPU on TensorFlowLite<a class="article-anchor" href="#Enabling-NPU-and-CPU-on-TensorFlowLite" aria-hidden="true"></a></h2><p>TensorFlow Lite is an open-source software library focused on running machine learning models and embedded devices. It enables on-device machine learning inference with low latency and small binary size.</p>
-<h4 id="Features" class="article-heading"><a href="#Features" class="headerlink" title="Features"></a>Features<a class="article-anchor" href="#Features" aria-hidden="true"></a></h4><ul>
+<h2 id="Enabling-NPU-and-CPU-on-TensorFlowLite" class="article-heading"><a href="#Enabling-NPU-and-CPU-on-TensorFlowLite" class="headerlink" title="Enabling NPU and CPU on TensorFlowLite"></a>Enabling NPU and CPU on TensorFlowLite<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Enabling-NPU-and-CPU-on-TensorFlowLite'}, '*');" class="article-anchor" href="#Enabling-NPU-and-CPU-on-TensorFlowLite" aria-hidden="true"></a></h2><p>TensorFlow Lite is an open-source software library focused on running machine learning models and embedded devices. It enables on-device machine learning inference with low latency and small binary size.</p>
+<h4 id="Features" class="article-heading"><a href="#Features" class="headerlink" title="Features"></a>Features<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Features'}, '*');" class="article-anchor" href="#Features" aria-hidden="true"></a></h4><ul>
 <li>TensorFlow Lite v2.5.0</li>
 <li>Multithreaded computation with acceleration using Arm Neon SIMD instructions on Cortex-A cores.</li>
 <li>Parallel computation using GPU&#x2F;NPU hardware acceleration.</li>
@@ -197,7 +197,7 @@
 
 <p>The output with NPU acceleration enabled should be as follows:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Loaded model mobilenet_v1_1.0_224_quant.tflite</span><br><span class="line">resolved reporter</span><br><span class="line">INFO: Created TensorFlow Lite delegate for NNAPI.</span><br><span class="line">Applied NNAPI delegate.</span><br><span class="line">invoked</span><br><span class="line">average time: 2.967 ms</span><br><span class="line">0.74902: 653 military uniform</span><br><span class="line">0.121569: 907 Windsor tie</span><br><span class="line">0.0196078: 458 bow tie</span><br><span class="line">0.0117647: 466 bulletproof vest</span><br><span class="line">0.00784314: 835 suit</span><br></pre></td></tr></table></figure>
-<h3 id="Running-Benchmark-Applications" class="article-heading"><a href="#Running-Benchmark-Applications" class="headerlink" title="Running Benchmark Applications"></a>Running Benchmark Applications<a class="article-anchor" href="#Running-Benchmark-Applications" aria-hidden="true"></a></h3><p>A Yocto Linux BSP image with machine learning layer included by default contains a pre-installed benchmarking application. It performs a simple TensorFlow Lite model inference and prints benchmarking information. The application binary file is located at: &#x2F;usr&#x2F;bin&#x2F;tensorflow-lite-2.5.0&#x2F;examples.</p>
+<h3 id="Running-Benchmark-Applications" class="article-heading"><a href="#Running-Benchmark-Applications" class="headerlink" title="Running Benchmark Applications"></a>Running Benchmark Applications<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Running-Benchmark-Applications'}, '*');" class="article-anchor" href="#Running-Benchmark-Applications" aria-hidden="true"></a></h3><p>A Yocto Linux BSP image with machine learning layer included by default contains a pre-installed benchmarking application. It performs a simple TensorFlow Lite model inference and prints benchmarking information. The application binary file is located at: &#x2F;usr&#x2F;bin&#x2F;tensorflow-lite-2.5.0&#x2F;examples.</p>
 <p>Go to the directory:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/bin/tensorflow-lite-2.5.0/examples</span><br></pre></td></tr></table></figure>
 
@@ -217,8 +217,8 @@
 <p>The output with GPU&#x2F;NPU module acceleration enabled should be similar to:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">STARTING!</span><br><span class="line">Duplicate flags: num_threads</span><br><span class="line">Min num runs: [50]</span><br><span class="line">Min runs duration (seconds): [1]</span><br><span class="line">Max runs duration (seconds): [150]</span><br><span class="line">Inter-run delay (seconds): [-1]</span><br><span class="line">Num threads: [1]</span><br><span class="line">Use caching: [0]</span><br><span class="line">Benchmark name: []</span><br><span class="line">Output prefix: []</span><br><span class="line">Min warmup runs: [1]</span><br><span class="line">Min warmup runs duration (seconds): [0.5]</span><br><span class="line">Graph: [mobilenet_v1_1.0_224_quant.tflite]</span><br><span class="line">Input layers: []</span><br><span class="line">Input shapes: []</span><br><span class="line">Input value ranges: []</span><br><span class="line">Input layer values files: []</span><br><span class="line">Allow fp16 : [0]</span><br><span class="line">Require full delegation : [0]</span><br><span class="line">Enable op profiling: [0]</span><br><span class="line">Max profiling buffer entries: [1024]</span><br><span class="line">CSV File to export profiling data to: []</span><br><span class="line">Enable platform-wide tracing: [0]</span><br><span class="line">#threads used for CPU inference: [1]</span><br><span class="line">Max number of delegated partitions : [0]</span><br><span class="line">Min nodes per partition : [0]</span><br><span class="line">Loaded model mobilenet_v1_1.0_224_quant.tflite</span><br><span class="line">INFO: Created TensorFlow Lite delegate for NNAPI.</span><br><span class="line">Applied NNAPI delegate, and the model graph will be completely executed w/ the delegate.</span><br><span class="line">The input model file size (MB): 4.27635</span><br><span class="line">Initialized session in 18.648ms.</span><br><span class="line">Running benchmark for at least 1 iterations and at least 0.5 seconds but terminate if exceeding</span><br><span class="line">150 seconds.</span><br><span class="line">count=1 curr=5969598</span><br><span class="line">Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding</span><br><span class="line">150 seconds.</span><br><span class="line">count=306 first=3321 curr=3171 min=3161 max=3321 avg=3188.46 std=18</span><br><span class="line">Inference timings in us: Init: 18648, First inference: 5969598, Warmup (avg): 5.9696e+06, Inference</span><br><span class="line">(avg): 3188.46</span><br><span class="line">Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the</span><br><span class="line">actual memory footprint of the model at runtime. Take the information at your discretion.</span><br><span class="line">Peak memory footprint (MB): init=7.60938 overall=33.7773</span><br></pre></td></tr></table></figure>
 
-<h2 id="Enabling-CPU-on-OpenCV" class="article-heading"><a href="#Enabling-CPU-on-OpenCV" class="headerlink" title="Enabling CPU on OpenCV"></a>Enabling CPU on OpenCV<a class="article-anchor" href="#Enabling-CPU-on-OpenCV" aria-hidden="true"></a></h2><p>OpenCV is an open-source computer vision library and one of its modules, called ML, provides traditional machine learning algorithms. OpenCV offers a unified solution for both neural network inference (DNN module) and classic machine learning algorithms (ML module).</p>
-<h3 id="Features-1" class="article-heading"><a href="#Features-1" class="headerlink" title="Features"></a>Features<a class="article-anchor" href="#Features-1" aria-hidden="true"></a></h3><ul>
+<h2 id="Enabling-CPU-on-OpenCV" class="article-heading"><a href="#Enabling-CPU-on-OpenCV" class="headerlink" title="Enabling CPU on OpenCV"></a>Enabling CPU on OpenCV<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Enabling-CPU-on-OpenCV'}, '*');" class="article-anchor" href="#Enabling-CPU-on-OpenCV" aria-hidden="true"></a></h2><p>OpenCV is an open-source computer vision library and one of its modules, called ML, provides traditional machine learning algorithms. OpenCV offers a unified solution for both neural network inference (DNN module) and classic machine learning algorithms (ML module).</p>
+<h3 id="Features-1" class="article-heading"><a href="#Features-1" class="headerlink" title="Features"></a>Features<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#Features-1'}, '*');" class="article-anchor" href="#Features-1" aria-hidden="true"></a></h3><ul>
 <li>OpenCV 4.5.2</li>
 <li>C++ and Python API (supported Python version 3)</li>
 <li>Only CPU computation is supported</li>
@@ -232,7 +232,7 @@
 <p>To copy the model.yaml file from the USB pen drive to yocto follow the commands:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df -h</span><br><span class="line"></span><br><span class="line">cd /run/media/sda1 (or) sdb1</span><br><span class="line"></span><br><span class="line">cp model.yaml /usr/share/OpenCV/samples/bin (for model.yaml)</span><br><span class="line"></span><br><span class="line">cp object_detection_classes_yolov3.txt /usr/share/opencv4/testdata/dnn (for classes)</span><br></pre></td></tr></table></figure>
 
-<h3 id="YOLO-object-detection-example" class="article-heading"><a href="#YOLO-object-detection-example" class="headerlink" title="YOLO object detection example"></a>YOLO object detection example<a class="article-anchor" href="#YOLO-object-detection-example" aria-hidden="true"></a></h3><p>Running the C++ example with image input from the default location:</p>
+<h3 id="YOLO-object-detection-example" class="article-heading"><a href="#YOLO-object-detection-example" class="headerlink" title="YOLO object detection example"></a>YOLO object detection example<a onclick="parent.postMessage( {msg: '?page=HowToEnableeIQ.html#YOLO-object-detection-example'}, '*');" class="article-anchor" href="#YOLO-object-detection-example" aria-hidden="true"></a></h3><p>Running the C++ example with image input from the default location:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/usr/share/OpenCV/samples/data/dnn</span><br></pre></td></tr></table></figure>
 
 
@@ -299,16 +299,21 @@
                   <a class="social-icons__link" target="_blank" href="https://www.facebook.com/ADLINKTECH/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
                   </a>
                 </li>
-                <li class="social-icons__item">
-                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
-                </li>
+                
                 <li class="social-icons__item">
                   <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
                   </a>
                 </li><li class="social-icons__item">
                   <a class="social-icons__link" target="_blank" href="https://www.youtube.com/channel/UC5N0wFxt_mPucg7CC2sZSLQ" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
                   </a>
-                </li></ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
       <span class="visually-hidden">Payment methods</span>
       <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
             <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
