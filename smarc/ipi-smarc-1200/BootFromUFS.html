@@ -108,13 +108,13 @@
       <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
       
       <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
-      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a></div>
+      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-1200/" class="main-nav-link current header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="main-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="main-nav-link  header">menu.ipi-smarc-rb5</a></div>
       <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
       <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromUFS.html#BootFromUFS.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromUFS.html'}, '*');}</script>
 
 	</div>
 	
@@ -142,18 +142,18 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-From-UFS" class="article-heading"><a href="#Boot-From-UFS" class="headerlink" title="Boot From UFS"></a>Boot From UFS<a class="article-anchor" href="#Boot-From-UFS" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="Boot-From-UFS" class="article-heading"><a href="#Boot-From-UFS" class="headerlink" title="Boot From UFS"></a>Boot From UFS<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Boot-From-UFS'}, '*');" class="article-anchor" href="#Boot-From-UFS" aria-hidden="true"></a></h1><div class="bullets">
 This document provides detailed instructions of how to flash the Yocto image to UFS of I-Pi SMARC 1200 for Linux users.
 
  
 
-<h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
 <li>Make sure you have installed the AIoT tool on your Linux host device. If not, install them by <a href="AIoTToolInstallation.html">clicking here</a>.</li>
 <li>Be prepared with the target device(I-Pi SMARC 1200) and power cable, USB to Micro cable.</li>
 <li>For I-Pi SMARC 1200, the boot switch must be <strong>1001</strong> on the target device.</li>
 <li>The Linux host must be Ubuntu 18.04 or later.</li>
 </ul>
-<h2 id="Flashing-the-Yocto-Image-to-UFS" class="article-heading"><a href="#Flashing-the-Yocto-Image-to-UFS" class="headerlink" title="Flashing the Yocto Image to UFS"></a>Flashing the Yocto Image to UFS<a class="article-anchor" href="#Flashing-the-Yocto-Image-to-UFS" aria-hidden="true"></a></h2><ul>
+<h2 id="Flashing-the-Yocto-Image-to-UFS" class="article-heading"><a href="#Flashing-the-Yocto-Image-to-UFS" class="headerlink" title="Flashing the Yocto Image to UFS"></a>Flashing the Yocto Image to UFS<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Flashing-the-Yocto-Image-to-UFS'}, '*');" class="article-anchor" href="#Flashing-the-Yocto-Image-to-UFS" aria-hidden="true"></a></h2><ul>
 <li><p>Download the prebuilt Yocto image files by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/i-pi-smarc-1200-download">clicking here</a>.</p>
 </li>
 <li><p>Unzip the downloaded image file.</p>
@@ -178,7 +178,7 @@ This document provides detailed instructions of how to flash the Yocto image to 
 <li><p>A reboot will be automatically initiated when the image flashing process has been completed.</p>
 </li>
 </ul>
-<h2 id="Changing-Audio-Codec" class="article-heading"><a href="#Changing-Audio-Codec" class="headerlink" title="Changing Audio Codec"></a>Changing Audio Codec<a class="article-anchor" href="#Changing-Audio-Codec" aria-hidden="true"></a></h2><ul>
+<h2 id="Changing-Audio-Codec" class="article-heading"><a href="#Changing-Audio-Codec" class="headerlink" title="Changing Audio Codec"></a>Changing Audio Codec<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Changing-Audio-Codec'}, '*');" class="article-anchor" href="#Changing-Audio-Codec" aria-hidden="true"></a></h2><ul>
 <li><p>By default it comes with TLV 320 codec. If the customer would like to change the codec, change the device tree as mentioned below,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_lec-mtk-i1200-ufs.dtb#conf-audio-wm8960.dtbo&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> reboot</span></span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -258,7 +258,7 @@ This document provides detailed instructions of how to flash the Yocto image to 
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a>
+      <a href="/smarc/ipi-smarc-1200/" class="mobile-nav-link current header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="mobile-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="mobile-nav-link  header">menu.ipi-smarc-rb5</a>
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
