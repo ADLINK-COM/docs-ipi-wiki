@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/UbuntuGpioUtility.html">
+  <!-- Alternative links -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  -->
+
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/smarc/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+<!--
+  Hotjar Tracking Code for https://ipi.wiki
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/smarc/css/navy.css">
+
+  <!-- endbuild -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/smarc/css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="GPIO Utility on I-Pi SMARC LEC-EL  This document provides detailed instructions for utilizing the gpio pins on the I-Pi SMARC LEC-EL module based on Ubuntu. Prerequisites GPIO libraries are included w">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/UbuntuGpioUtility.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="GPIO Utility on I-Pi SMARC LEC-EL  This document provides detailed instructions for utilizing the gpio pins on the I-Pi SMARC LEC-EL module based on Ubuntu. Prerequisites GPIO libraries are included w">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/sudosu.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/gpiodetect.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/gpiochipcat.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/gpioexport.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/exportgpiodetails.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/input1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/input2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/output1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/output2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/high1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/high2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/low1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/low2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semainstall1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semainstal2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semainstall3.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semainstall4.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/sx1509.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/sx1509export.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/i2c.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/i2c6.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semautilcmd.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semagpiodtct.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/export.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/semagpioexportpins.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/serdir1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/setdir.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/setlevl2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/setlevel.png">
+<meta property="article:published_time" content="2024-03-18T06:52:25.058Z">
+<meta property="article:modified_time" content="2024-03-18T06:52:25.058Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-elkhart-lake/ubuntugpioutility.assets/sudosu.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-1200/" class="main-nav-link  header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="main-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="main-nav-link  header">menu.ipi-smarc-rb5</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=UbuntuGpioUtility.html#UbuntuGpioUtility.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="GPIO-Utility-on-I-Pi-SMARC-LEC-EL" class="article-heading"><a href="#GPIO-Utility-on-I-Pi-SMARC-LEC-EL" class="headerlink" title="GPIO Utility on I-Pi SMARC LEC-EL"></a>GPIO Utility on I-Pi SMARC LEC-EL<a class="article-anchor" href="#GPIO-Utility-on-I-Pi-SMARC-LEC-EL" aria-hidden="true"></a></h1><p>  This document provides detailed instructions for utilizing the gpio pins on the I-Pi SMARC LEC-EL module based on Ubuntu.</p>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<li>GPIO libraries are included with our image by default.</li>
+<li>Power up the targeted device with all the necessary cables, such as HDMI, keyboard, mouse, and ethernet cable.</li>
+</ul>
+<h2 id="Utilizing-the-GPIO-Pins-with-Linux" class="article-heading"><a href="#Utilizing-the-GPIO-Pins-with-Linux" class="headerlink" title="Utilizing the GPIO Pins with Linux"></a><strong>Utilizing the GPIO Pins with Linux</strong><a class="article-anchor" href="#Utilizing-the-GPIO-Pins-with-Linux" aria-hidden="true"></a></h2><ul>
+<li><p>Open the terminal and type the following command to navigate to gpio</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /sys/class/gpio</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>The <code>/sys/class/gpio</code> can only be accessed as <code>root</code> by default, so log in as root.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo su </span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/sudosu.png">
+</center>
+
+</li>
+<li><p>To view the details of Gpiochip.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpiodetect</span></span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink# gpiodetect</span><br><span class="line">gpiochip0 [INTC1020:00] (67 lines)</span><br><span class="line">gpiochip1 [INTC1020:01] (113 lines)</span><br><span class="line">gpiochip2 [INTC1020:03] (47 lines)</span><br><span class="line">gpiochip3 [INTC1020:04] (80 lines)</span><br><span class="line">gpiochip4 [INTC1020:05] (8 lines)</span><br><span class="line">root@adlink-LEC-EL:/home/adlink# </span><br><span class="line"></span><br><span class="line">	(or)</span><br><span class="line"><span class="meta">	</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat /sys/kernel/debug/gpio</span> </span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink# cat /sys/kernel/debug/gpio </span><br><span class="line">gpiochip4: GPIOs 197-204, parent: platform/INTC1020:05, INTC1020:05:</span><br><span class="line"></span><br><span class="line">gpiochip3: GPIOs 205-284, parent: platform/INTC1020:04, INTC1020:04:</span><br><span class="line"></span><br><span class="line">gpiochip2: GPIOs 285-331, parent: platform/INTC1020:03, INTC1020:03:</span><br><span class="line"></span><br><span class="line">gpiochip1: GPIOs 332-444, parent: platform/INTC1020:01, INTC1020:01:</span><br><span class="line"></span><br><span class="line">gpiochip0: GPIOs 445-511, parent: platform/INTC1020:00, INTC1020:00:</span><br><span class="line">root@adlink-LEC-EL:/home/adlink# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<center>
+  <img src="ubuntugpioutility.assets/gpiodetect.png">
+</center>
+<center>
+  <img src="ubuntugpioutility.assets/gpiochipcat.png">
+</center>
+</li>
+<li><p>To export the GPIO pin.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo N &gt; export (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# echo 286 &gt; export </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# ls</span><br><span class="line">export  gpio286  gpiochip197  gpiochip205  gpiochip285  gpiochip332  gpiochip445  unexport</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# </span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/gpioexport.png">
+</center>
+</li>
+<li><p>To read the exported pin details, you can use the command <strong>cat</strong>.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd gpioN                   (N should replace with gpio chip base number)</span><br><span class="line">ls</span><br><span class="line">cat direction </span><br><span class="line">cat value</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# cd gpio286</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# ls</span><br><span class="line">active_low  device  direction  edge  power  subsystem  uevent  value</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat direction </span><br><span class="line">in</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat value</span><br><span class="line">0</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# </span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/exportgpiodetails.png">
+</center>
+</li>
+<li><p>To read the direction and value of a pin.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Direction:</span><br><span class="line"></span><br><span class="line">cat /sys/class/gpio/gpioN/direction  (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/# cat /sys/class/gpio/gpio286/direction </span><br><span class="line">in</span><br><span class="line">			or</span><br><span class="line">			</span><br><span class="line">cd /sys/class/gpio/gpioN</span><br><span class="line">cat direction </span><br><span class="line"> </span><br><span class="line">root@adlink-LEC-EL:/home/adlink# cd /sys/class/gpio/gpio286</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat direction </span><br><span class="line">in</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# </span><br><span class="line"></span><br><span class="line">Value:</span><br><span class="line"></span><br><span class="line">cat /sys/class/gpio/gpioN/value    (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/# cat /sys/class/gpio/gpio286/value </span><br><span class="line">0</span><br><span class="line">root@adlink-LEC-EL:/# </span><br><span class="line"></span><br><span class="line"> 						or</span><br><span class="line">cd /sys/class/gpio/gpioN</span><br><span class="line">cat value </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat value </span><br><span class="line">0</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# </span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>To write the direction of a pin to input.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo in &gt; /sys/class/gpio/gpioN/direction  (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/# echo in &gt; /sys/class/gpio/gpio286/direction </span><br><span class="line">root@adlink-LEC-EL:/# cat /sys/class/gpio/gpio286/direction </span><br><span class="line">in</span><br><span class="line">root@adlink-LEC-EL:/#  </span><br><span class="line">    </span><br><span class="line">  						or </span><br><span class="line">  						</span><br><span class="line">cd /sys/class/gpio/gpioN</span><br><span class="line">echo in&gt; direction </span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink# cd /sys/class/gpio/gpio286</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# echo in &gt; direction </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat direction </span><br><span class="line">in</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/input1.png">
+</center>
+<center>
+  <img src="ubuntugpioutility.assets/input2.png">
+</center>
+
+</li>
+<li><p>To write the direction of a pin to output.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo out &gt; /sys/class/gpio/gpioN/direction  (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/# echo out &gt; /sys/class/gpio/gpio286/direction  </span><br><span class="line">root@adlink-LEC-EL:/# cat /sys/class/gpio/gpio286/direction </span><br><span class="line">out</span><br><span class="line">root@adlink-LEC-EL:/# </span><br><span class="line"> </span><br><span class="line">    </span><br><span class="line">  						or </span><br><span class="line">  						</span><br><span class="line">cd /sys/class/gpio/gpioN</span><br><span class="line">echo out&gt; direction </span><br><span class="line">   </span><br><span class="line">root@adlink-LEC-EL:/home/adlink# cd /sys/class/gpio/gpio286</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# echo out &gt; direction </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat direction </span><br><span class="line">out</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# </span><br></pre></td></tr></table></figure></li>
+</ul>
+<center>
+  <img src="ubuntugpioutility.assets/output1.png">
+</center>
+<center>
+  <img src="ubuntugpioutility.assets/output2.png">
+</center>
+
+<ul>
+<li><p>To write the value of a pin to a high.</p>
+<p><strong>Note:</strong> Make sure the direction is <strong>out</strong> when trying to change the value to high or low.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; /sys/class/gpio/gpioN/value     (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/# echo 1  &gt; /sys/class/gpio/gpio286/value </span><br><span class="line">root@adlink-LEC-EL:/# cat /sys/class/gpio/gpio286/value </span><br><span class="line">1</span><br><span class="line">root@adlink-LEC-EL:/#                                                                               </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">							or</span><br><span class="line">cd /sys/class/gpio/gpioN</span><br><span class="line">echo 1 &gt; value</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# echo 1 &gt; value </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat value </span><br><span class="line">1</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# </span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/high1.png">
+</center>
+<center>
+  <img src="ubuntugpioutility.assets/high2.png">
+</center>
+</li>
+<li><p>To write the value of a pin to a low.</p>
+<p><strong>Note:</strong> Make sure the direction is <strong>out</strong> when you are trying to change the value to high or low.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; /sys/class/gpio/gpioN/value</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/# echo 0  &gt; /sys/class/gpio/gpio286/value </span><br><span class="line">root@adlink-LEC-EL:/# cat /sys/class/gpio/gpio286/value </span><br><span class="line">0</span><br><span class="line">root@adlink-LEC-EL:/# </span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">						or</span><br><span class="line">						</span><br><span class="line">cd /sys/class/gpio/gpioN</span><br><span class="line">echo 0 &gt; value</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# echo 0 &gt; value </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286# cat value </span><br><span class="line">0</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio286#</span><br></pre></td></tr></table></figure>
+<center>
+  <img src="ubuntugpioutility.assets/low1.png">
+</center>
+
+<center>
+  <img src="ubuntugpioutility.assets/low2.png">
+</center></li>
+</ul>
+<h2 id="Access-I2C-GPIO-Expander-SX1509" class="article-heading"><a href="#Access-I2C-GPIO-Expander-SX1509" class="headerlink" title="Access I2C GPIO Expander SX1509"></a><strong>Access I2C GPIO Expander SX1509</strong><a class="article-anchor" href="#Access-I2C-GPIO-Expander-SX1509" aria-hidden="true"></a></h2><p>The SX1509 I2C GPIO expander, connected to the ADLINK I2C bus, can be accessed exclusively through the ADLINK SEMA Utility.</p>
+<h3 id="ADLINK-SEMA-Utility-Installation-on-Ubuntu" class="article-heading"><a href="#ADLINK-SEMA-Utility-Installation-on-Ubuntu" class="headerlink" title="ADLINK SEMA Utility Installation on Ubuntu"></a><strong>ADLINK SEMA Utility Installation on Ubuntu</strong><a class="article-anchor" href="#ADLINK-SEMA-Utility-Installation-on-Ubuntu" aria-hidden="true"></a></h3><ul>
+<li>It provides a set of functions to control GPIO pins.</li>
+<li>Only supports the specific external GPIO controller: SX1509  I&#x2F;O expander on LEC-EL Module.</li>
+</ul>
+<p>Please follow the steps below to install the SEMA-4.x EC Package in Ubuntu.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt install build-essential git hexer i2c-tools</span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/semainstall1.png" alt="semainstall1" style="width:63%;">
+</center>
+
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install uuid-dev</span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/semainstal2.png" alt="semainstal2" style="width:63%;">
+
+</center>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/ADLINK/sema-linux.git -b sema-ec</span><br><span class="line">cd sema-linux</span><br></pre></td></tr></table></figure>
+<center>
+  <img src="ubuntugpioutility.assets/semainstall3.png" alt="semainstall3" style="width:63%;">
+</center>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo make</span><br></pre></td></tr></table></figure>
+
+<center>
+  <img srcp="ubuntugpioutility.assets/semainsall.png">
+</center>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo make install</span><br><span class="line">sudo modprobe -a adl-ec adl-ec-boardinfo adl-ec-vm adl-ec-wdt adl-ec-hwmon adl-ec-nvmem adl-ec-bklight adl-ec-i2c adl-ec-gpio adl-ec-nvmem-sec</span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/semainstall4.png" alt="semainstall4" style="width: 67%;">
+</center>
+
+<p>Note: You can verify the ADLINK SEMA Utility by using <strong>i2cdetect -l</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">i2cdetect -l</span><br><span class="line"></span><br><span class="line">adlink@adlink-LEC-EL:~/sema-linux$ i2cdetect -l</span><br><span class="line">i2c-3	unknown   	Synopsys DesignWare I2C adapter 	N/A</span><br><span class="line">i2c-1	unknown   	SMBus I801 adapter at efa0      	N/A</span><br><span class="line">i2c-6	unknown   	ADLINK BMC I2C adapter bus 2    	N/A</span><br><span class="line">i2c-4	unknown   	Synopsys DesignWare I2C adapter 	N/A</span><br><span class="line">i2c-2	unknown   	Synopsys DesignWare I2C adapter 	N/A</span><br><span class="line">i2c-0	unknown   	SMBus CMI adapter cmi           	N/A</span><br><span class="line">i2c-7	unknown   	ADLINK BMC I2C adapter bus 3    	N/A</span><br><span class="line">i2c-5	unknown   	ADLINK BMC I2C adapter bus 1    	N/A</span><br><span class="line">adlink@adlink-LEC-EL:~/sema-linux$ </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Accessing-SX1509-GPIO-Pins" class="article-heading"><a href="#Accessing-SX1509-GPIO-Pins" class="headerlink" title="Accessing SX1509 GPIO Pins"></a><strong>Accessing SX1509 GPIO Pins</strong><a class="article-anchor" href="#Accessing-SX1509-GPIO-Pins" aria-hidden="true"></a></h3><center>
+  <img src="ubuntugpioutility.assets/sx1509.png">
+</center>
+
+<p>For Ubuntu users on the EC controller, after installing the SX1509  kernel driver on their target device, they can use the GPIO sysfs Interface and SEMA GPIO EAPI function to access GPIO pins.</p>
+<p> After loading the kernel driver, configure the SX1509 GPIO driver by executing the following command.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo sx1509 0x3e &gt; /sys/bus/i2c/devices/i2c-X/new_device    (X is the i2c bus SEMA(BMC) and SX1509 connected)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# echo sx1509 0x3e &gt; /sys/bus/i2c/devices/i2c-6/new_device</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# </span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/sx1509export.png">
+</center>
+
+
+<p><strong>Note</strong>: Here, i2c-6 is used since SMBus is located at bus 6. 0x3e is the GPIO device slave address. Please refer to the screenshot below to find the i2c bus number and GPIO device address.</p>
+<center>
+  <img src="ubuntugpioutility.assets/i2c.png">
+
+  <img src="ubuntugpioutility.assets/i2c6.png">
+</center>
+
+
+<h4 id="Using-SEMA-GPIO-EAPI-Function-and-GPIO-sysfs-Interface" class="article-heading"><a href="#Using-SEMA-GPIO-EAPI-Function-and-GPIO-sysfs-Interface" class="headerlink" title="Using SEMA GPIO EAPI Function and GPIO sysfs Interface"></a><strong>Using SEMA GPIO EAPI Function and GPIO sysfs Interface</strong><a class="article-anchor" href="#Using-SEMA-GPIO-EAPI-Function-and-GPIO-sysfs-Interface" aria-hidden="true"></a></h4><p>To view the SEMA GPIO Commands</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd sema-linux</span><br><span class="line">semautil /g</span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/semautilcmd.png">
+</center>
+
+<ul>
+<li><p>To view the details of Gpiochip</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# cat /sys/kernel/debug/gpio </span><br><span class="line">gpiochip5: GPIOs 189-196, parent: platform/adl-ec-acpi, adl-ec-gpio:</span><br><span class="line"></span><br><span class="line">gpiochip4: GPIOs 197-204, parent: platform/INTC1020:05, INTC1020:05:</span><br><span class="line"></span><br><span class="line">gpiochip3: GPIOs 205-284, parent: platform/INTC1020:04, INTC1020:04:</span><br><span class="line"></span><br><span class="line">gpiochip2: GPIOs 285-331, parent: platform/INTC1020:03, INTC1020:03:</span><br><span class="line"></span><br><span class="line">gpiochip1: GPIOs 332-444, parent: platform/INTC1020:01, INTC1020:01:</span><br><span class="line"></span><br><span class="line">gpiochip0: GPIOs 445-511, parent: platform/INTC1020:00, INTC1020:00:</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux#</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Note: Here, gpiochip5(gpiochip189) was the loaded one.</p>
+<center>
+  <img src="ubuntugpioutility.assets/semagpiodtct.png">
+</center>
+</li>
+<li><p>To export the GPIO pins in SX1509</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo N &gt; export (N should replace with gpio chip base number)</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# echo 189 &gt; export </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# ls</span><br><span class="line">export  gpio189  gpiochip189  gpiochip197  gpiochip205  gpiochip285  gpiochip332  gpiochip445  unexport</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio# echo 190 &gt; export </span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio#</span><br></pre></td></tr></table></figure>
+
+<center>
+  <img src="ubuntugpioutility.assets/export.png">
+
+  <img src="ubuntugpioutility.assets/semagpioexportpins.png">
+</center>
+</li>
+<li><p>To read the direction and value of a pin</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Using SEMA GPIO EAPI Function</span><br><span class="line"></span><br><span class="line">semautil /g get_direction [GPIO Bit]    </span><br><span class="line">semautil /g get_level     [GPIO Bit]</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_direction 7</span><br><span class="line">Direction : Input</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_level 7 </span><br><span class="line">Level: High</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux#</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Using GPIO sysfs Interface</span><br><span class="line"></span><br><span class="line">cat direction (or) cat /sys/class/gpio/gpioN/direction</span><br><span class="line">cat value (or)  cat /sys/class/gpio/gpioN/value</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio189# cat direction </span><br><span class="line">in</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio189# cat value </span><br><span class="line">0</span><br><span class="line">root@adlink-LEC-EL:/sys/class/gpio/gpio189#</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>To write the direction of a pin to input or output</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Using SEMA GPIO EAPI Function</span><br><span class="line"></span><br><span class="line">semautil /g set_direction [GPIO Bit]                  [0 - Output or 1 - Input]</span><br><span class="line"> </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_direction 7</span><br><span class="line">Direction : Output</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g set_direction 7 1</span><br><span class="line">Direction updated successfully</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_direction 7</span><br><span class="line">Direction : Input</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g set_direction 7 0</span><br><span class="line">Direction updated successfully</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_direction 7</span><br><span class="line">Direction : Output</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux#</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Using GPIO sysfs Interface</span><br><span class="line"></span><br><span class="line">echo in &gt; /sys/class/gpio/gpioN/direction               (N should replace with gpio chip base number)</span><br><span class="line">echo out &gt; /sys/class/gpio/gpioN/direction </span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# echo in &gt; /sys/class/gpio/gpio195/direction </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_direction 7</span><br><span class="line">Direction : Input </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# echo out &gt; /sys/class/gpio/gpio195/direction </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_direction 7</span><br><span class="line">Direction : Output</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# </span><br></pre></td></tr></table></figure>
+
+<center>
+    <img src="ubuntugpioutility.assets/serdir1.png">
+</center>
+
+<p> Note: Can check the successful execution by command <strong>cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;gpio</strong></p>
+<center>
+  <img src="ubuntugpioutility.assets/setdir.png">
+</center>
+</li>
+<li><p>To write the value of a pin to low or high</p>
+<p><strong>Note:</strong> Make sure the direction is <strong>out</strong> when you are trying to change the value to high or low.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Using SEMA GPIO EAPI Function</span><br><span class="line"></span><br><span class="line">semautil /g set_level [GPIO Bit]                                  [0 - Low or 1 - High]</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g set_level 7 1</span><br><span class="line">GPIO Level updated successfully</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_level 7 </span><br><span class="line">Level: High</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g set_level 7 0</span><br><span class="line">GPIO Level updated successfully</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_level 7 </span><br><span class="line">Level: Low</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Using GPIO sysfs Interface</span><br><span class="line"></span><br><span class="line">echo 1 &gt; /sys/class/gpio/gpioN/value</span><br><span class="line">echo 0 &gt; /sys/class/gpio/gpioN/value</span><br><span class="line"></span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# echo 0 &gt; /sys/class/gpio/gpio195/value </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_level 7 </span><br><span class="line">Level: Low</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# echo 1 &gt; /sys/class/gpio/gpio195/value </span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux# semautil /g get_level 7 </span><br><span class="line">Level: High</span><br><span class="line">root@adlink-LEC-EL:/home/adlink/sema-linux#</span><br></pre></td></tr></table></figure>
+
+
+<center>
+  <img src="ubuntugpioutility.assets/setlevl2.png">
+  
+  <img src="ubuntugpioutility.assets/setlevel.png" alt="setlevel">
+</center></li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2024-03-18T06:52:25.058Z" itemprop="dateModified">Last updated: 2024-03-18</time>
+                <a href="YoctoGpioUtility.html" class="article-footer-prev" title="Yocto-based GPIO utility"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UbuntuImage.html" class="article-footer-next" title="Ubuntu"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GPIO-Utility-on-I-Pi-SMARC-LEC-EL"><span class="toc-text">GPIO Utility on I-Pi SMARC LEC-EL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Utilizing-the-GPIO-Pins-with-Linux"><span class="toc-text">Utilizing the GPIO Pins with Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Access-I2C-GPIO-Expander-SX1509"><span class="toc-text">Access I2C GPIO Expander SX1509</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ADLINK-SEMA-Utility-Installation-on-Ubuntu"><span class="toc-text">ADLINK SEMA Utility Installation on Ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accessing-SX1509-GPIO-Pins"><span class="toc-text">Accessing SX1509 GPIO Pins</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Using-SEMA-GPIO-EAPI-Function-and-GPIO-sysfs-Interface"><span class="toc-text">Using SEMA GPIO EAPI Function and GPIO sysfs Interface</span></a></li></ol></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="InstallingNetworkAdapterForWindows.html" class="sidebar-link first">Network Adaptor for Windows</a><a href="PreparingabootableUSBdrive.html" class="sidebar-link">Prepare your USB Drive</a><a href="FlashImageThroughUSBDrive.html" class="sidebar-link">Changing the Boot Option</a><a href="HowToDeployOpenVINO.html" class="sidebar-link">Deploying OpenVINO™ Toolkit</a><a href="HowToInstallIntelWiFi6EAX210Driver.html" class="sidebar-link">Installing Intel WiFi6EAX210 Driver</a><a href="YoctoGpioUtility.html" class="sidebar-link">Yocto-based GPIO utility</a><a href="UbuntuGpioUtility.html" class="sidebar-link current">Ubuntu-based GPIO utility</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link">Windows</a><a href="FlashingYoctoImageOneMMC.html" class="sidebar-link">Yocto</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall">
+    <ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list">
+      <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/smarc/ipi-smarc-1200/" class="mobile-nav-link  header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="mobile-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="mobile-nav-link  header">menu.ipi-smarc-rb5</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="InstallingNetworkAdapterForWindows.html" class="mobile-nav-link first">Network Adaptor for Windows</a><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link">Prepare your USB Drive</a><a href="FlashImageThroughUSBDrive.html" class="mobile-nav-link">Changing the Boot Option</a><a href="HowToDeployOpenVINO.html" class="mobile-nav-link">Deploying OpenVINO™ Toolkit</a><a href="HowToInstallIntelWiFi6EAX210Driver.html" class="mobile-nav-link">Installing Intel WiFi6EAX210 Driver</a><a href="YoctoGpioUtility.html" class="mobile-nav-link">Yocto-based GPIO utility</a><a href="UbuntuGpioUtility.html" class="mobile-nav-link current">Ubuntu-based GPIO utility</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link">Windows</a><a href="FlashingYoctoImageOneMMC.html" class="mobile-nav-link">Yocto</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/smarc/js/lang_select.js"></script>
+
+
+<script src="/smarc/js/toc.js"></script>
+
+
+<script src="/smarc/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+<!--
+
+-->
+
+</body>
+</html>
+ 
