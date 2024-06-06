@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/com-hpc/ot2it/index.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.html">
   <!-- Alternative links -->
   
     
@@ -96,17 +96,30 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/ot2it/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Introducing the I-Pi OT2ITADLINK’s OT2IT brings the ease of using the Arduino ecosystem into industrial automation. Providing a bridge between OT (Operational Technology) and IT (Informational Technol">
+  <meta name="description" content="Arduino IDE Environment Setup1. Download and InstallationDownload and install the latest version of Arduino IDE from https:&#x2F;&#x2F;www.arduino.cc&#x2F;en&#x2F;software  [!NOTE] First-time users set up the Arduino IDE">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/com-hpc/ot2it/index.html">
+<meta property="og:url" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Introducing the I-Pi OT2ITADLINK’s OT2IT brings the ease of using the Arduino ecosystem into industrial automation. Providing a bridge between OT (Operational Technology) and IT (Informational Technol">
+<meta property="og:description" content="Arduino IDE Environment Setup1. Download and InstallationDownload and install the latest version of Arduino IDE from https:&#x2F;&#x2F;www.arduino.cc&#x2F;en&#x2F;software  [!NOTE] First-time users set up the Arduino IDE">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-05-27T08:04:20.987Z">
-<meta property="article:modified_time" content="2024-05-27T08:04:20.987Z">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoSetup1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoSetup2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoSetup3.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoSetup4.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoPreferences.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/AddUrl.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/BoardManager.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/AvrBoards.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoSamdboard.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/AdlinkSamdboard.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/AdlinkOt2it.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/BoardVerification.png">
+<meta property="article:published_time" content="2024-06-03T09:05:23.919Z">
+<meta property="article:modified_time" content="2024-06-03T09:05:23.919Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupArduinoIDEEnvironment.assets/ArduinoSetup1.png">
   <!-- Google Analytics -->
   
 <script>
@@ -138,7 +151,7 @@ $('button').click(function(){
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=index.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=SetupArduinoIDEEnvironment.html'}, '*');}</script>
 
 	</div>
 	
@@ -166,15 +179,34 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h2 id="Introducing-the-I-Pi-OT2IT" class="article-heading"><a href="#Introducing-the-I-Pi-OT2IT" class="headerlink" title="Introducing the I-Pi OT2IT"></a>Introducing the I-Pi OT2IT<a class="article-anchor" href="#Introducing-the-I-Pi-OT2IT" aria-hidden="true"></a></h2><p>ADLINK’s OT2IT brings the ease of using the Arduino ecosystem into industrial automation. Providing a bridge between OT (Operational Technology) and IT (Informational Technology), hence the name OT2IT, developers can utilize Arduino software/hardware to swiftly start their prototyping work without the need for difficult porting. This shortens their time-to-market while reducing costs significantly.</p>
-<p>The OT2IT features a rugged alternative that is industry ready, either standalone or combined with a host computer, attached to a DIN rail. The OT functionality offers digital inputs, digital outputs for solenoids/transistors, analog inputs (current/voltage), PWM outputs, true analog outputs, RTD inputs, sensors, and 24V DC power input.</p>
-<p>You can easily install your board right out of the Arduino board manager using Arduino IDE, with host computer communication with supported through Serial over USB or 100BASE-TX LAN over the Firmata protocol.</p>
-<p>Using the Firmata protocol, users can monitor, control, and manage industrial processes. It enables the offloading of non-real-time processes to a host computer, giving the resource-constrained MCU some breathing room to focus on time-sensitive tasks, as well as making the collection of real-time data trivially easy.</p>
+                <h1 id="Arduino-IDE-Environment-Setup" class="article-heading"><a href="#Arduino-IDE-Environment-Setup" class="headerlink" title="Arduino IDE Environment Setup"></a>Arduino IDE Environment Setup<a class="article-anchor" href="#Arduino-IDE-Environment-Setup" aria-hidden="true"></a></h1><h2 id="1-Download-and-Installation" class="article-heading"><a href="#1-Download-and-Installation" class="headerlink" title="1. Download and Installation"></a>1. Download and Installation<a class="article-anchor" href="#1-Download-and-Installation" aria-hidden="true"></a></h2><p>Download and install the latest version of Arduino IDE from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>First-time users set up the Arduino IDE as shown below and install all supported device software.</p>
+</blockquote>
+<p><img src="SetupArduinoIDEEnvironment.assets/ArduinoSetup1.png"></p>
+<p><img src="SetupArduinoIDEEnvironment.assets/ArduinoSetup2.png"></p>
+<p><img src="SetupArduinoIDEEnvironment.assets/ArduinoSetup3.png"></p>
+<p><img src="SetupArduinoIDEEnvironment.assets/ArduinoSetup4.png"></p>
+<h2 id="2-Setting-Preferences" class="article-heading"><a href="#2-Setting-Preferences" class="headerlink" title="2. Setting Preferences"></a>2. Setting Preferences<a class="article-anchor" href="#2-Setting-Preferences" aria-hidden="true"></a></h2><p><strong>1.</strong> Upon the successful installation, open Arduino IDE and go to [File] —&gt; [Preference]</p>
+<p><img src="SetupArduinoIDEEnvironment.assets/ArduinoPreferences.png" alt="Arduinopreferences"></p>
+<p><strong>2.</strong> Add URL <a target="_blank" rel="noopener external nofollow noreferrer" href="https://raw.githubusercontent.com/ADLINK/OT2IT/main/packages_adlink_ot2it.json">https://raw.githubusercontent.com/ADLINK/OT2IT/main/packages_adlink_ot2it.json</a> in ‘Additional boards manager URLs’ and click ‘OK’</p>
+<p><img src="SetupArduinoIDEEnvironment.assets/AddUrl.png"></p>
+<p><strong>3.</strong> Go to [tools] —&gt; [Board] —&gt; [Boards Manager] to download the configurations and related libraries</p>
+<p><img src="SetupArduinoIDEEnvironment.assets/BoardManager.png">  </p>
+<h2 id="3-Board-Support-Packages" class="article-heading"><a href="#3-Board-Support-Packages" class="headerlink" title="3. Board Support Packages"></a>3. Board Support Packages<a class="article-anchor" href="#3-Board-Support-Packages" aria-hidden="true"></a></h2><p><strong>1.</strong> Install Arduino AVR, Arduino SAMD, and Adlink SAMD support on Boards Manager, as shown in the screen below</p>
+<p><img src="SetupArduinoIDEEnvironment.assets/AvrBoards.png"></p>
+<p><img src="SetupArduinoIDEEnvironment.assets/ArduinoSamdboard.png"></p>
+<p><img src="SetupArduinoIDEEnvironment.assets/AdlinkSamdboard.png"> </p>
+<p><strong>2.</strong> Once successfully installed, you will see the boards list on [tools] —&gt; [Board] —&gt; [Boards Manager], select “Adlink OT2IT”</p>
+<p><img src="SetupArduinoIDEEnvironment.assets/AdlinkOt2it.png" alt="adlinkot2it" style="width:90%;"></p>
+<p><strong>3.</strong> Verify the Board name on [tools] —&gt; [Board]</p>
+<p><img src="SetupArduinoIDEEnvironment.assets/BoardVerification.png" alt="boardverification" style="width:90%;"></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2024-05-27T08:04:20.987Z" itemprop="dateModified">Last updated: 2024-05-27</time>
-                <a href="Specification.html" class="article-footer-next" title="Specification"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2024-06-03T09:05:23.919Z" itemprop="dateModified">Last updated: 2024-06-03</time>
+                <a href="FlashingGuideUF2Bootloader.html" class="article-footer-prev" title="Flash bootloader"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="SetupFirmwata.html" class="article-footer-next" title="Setup & Test the Firmata"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -183,7 +215,7 @@ $('button').click(function(){
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introducing-the-I-Pi-OT2IT"><span class="toc-text">Introducing the I-Pi OT2IT</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Arduino-IDE-Environment-Setup"><span class="toc-text">Arduino IDE Environment Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Download-and-Installation"><span class="toc-text">1. Download and Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Setting-Preferences"><span class="toc-text">2. Setting Preferences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Board-Support-Packages"><span class="toc-text">3. Board Support Packages</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -192,7 +224,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link current first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="sidebar-link first">Specification</a><a href="BlockDiagram.html" class="sidebar-link">Block Diagram</a><a href="SignalTerminology.html" class="sidebar-link">Signal Terminology</a><a href="ITInterface.html" class="sidebar-link">IT Interface</a><a href="Mechanical.html" class="sidebar-link">Mechanical</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="sidebar-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="sidebar-link">Setup Arduino IDE Environment</a><a href="SetupFirmwata.html" class="sidebar-link">Setup & Test the Firmata</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="sidebar-link first">Specification</a><a href="BlockDiagram.html" class="sidebar-link">Block Diagram</a><a href="SignalTerminology.html" class="sidebar-link">Signal Terminology</a><a href="ITInterface.html" class="sidebar-link">IT Interface</a><a href="Mechanical.html" class="sidebar-link">Mechanical</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="sidebar-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="sidebar-link current">Setup Arduino IDE Environment</a><a href="SetupFirmwata.html" class="sidebar-link">Setup & Test the Firmata</a></details></strong>
   </div>
 </aside>
     </div>
@@ -246,7 +278,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link current first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="mobile-nav-link first">Specification</a><a href="BlockDiagram.html" class="mobile-nav-link">Block Diagram</a><a href="SignalTerminology.html" class="mobile-nav-link">Signal Terminology</a><a href="ITInterface.html" class="mobile-nav-link">IT Interface</a><a href="Mechanical.html" class="mobile-nav-link">Mechanical</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="mobile-nav-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="mobile-nav-link">Setup Arduino IDE Environment</a><a href="SetupFirmwata.html" class="mobile-nav-link">Setup & Test the Firmata</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="mobile-nav-link first">Specification</a><a href="BlockDiagram.html" class="mobile-nav-link">Block Diagram</a><a href="SignalTerminology.html" class="mobile-nav-link">Signal Terminology</a><a href="ITInterface.html" class="mobile-nav-link">IT Interface</a><a href="Mechanical.html" class="mobile-nav-link">Mechanical</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="mobile-nav-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="mobile-nav-link current">Setup Arduino IDE Environment</a><a href="SetupFirmwata.html" class="mobile-nav-link">Setup & Test the Firmata</a></details></strong>
     
   </div>
   
