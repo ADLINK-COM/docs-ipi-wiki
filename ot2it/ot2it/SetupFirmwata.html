@@ -180,8 +180,8 @@ $('button').click(function(){
 <meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupFirmwata.assets/WriteFlash.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupFirmwata.assets/ReadFlash.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupFirmwata.assets/ResetCounter.png">
-<meta property="article:published_time" content="2024-06-06T02:25:13.800Z">
-<meta property="article:modified_time" content="2024-06-06T02:25:13.800Z">
+<meta property="article:published_time" content="2024-06-06T02:26:55.742Z">
+<meta property="article:modified_time" content="2024-06-06T02:26:55.742Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/com-hpc/ot2it/SetupFirmwata.assets/InstallSetup1.png">
@@ -244,7 +244,7 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Setup-and-Test-the-Firmata-for-I-Pi-OT2IT" class="article-heading"><a href="#Setup-and-Test-the-Firmata-for-I-Pi-OT2IT" class="headerlink" title="Setup and Test the Firmata for I-Pi OT2IT"></a>Setup and Test the Firmata for I-Pi OT2IT<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Setup-and-Test-the-Firmata-for-I-Pi-OT2IT'}, '*');" class="article-anchor" href="#Setup-and-Test-the-Firmata-for-I-Pi-OT2IT" aria-hidden="true"></a></h1><h2 id="Setup-Firmmata-on-OT2IT-Hardware" class="article-heading"><a href="#Setup-Firmmata-on-OT2IT-Hardware" class="headerlink" title="Setup Firmmata on OT2IT Hardware"></a>Setup Firmmata on OT2IT Hardware<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Setup-Firmmata-on-OT2IT-Hardware'}, '*');" class="article-anchor" href="#Setup-Firmmata-on-OT2IT-Hardware" aria-hidden="true"></a></h2><p>Follow the steps to download I-PI-OT2IT MCU application file:</p>
+                <h1 id="Setup-and-Test-the-Firmata-for-I-Pi-OT2IT" class="article-heading"><a href="#Setup-and-Test-the-Firmata-for-I-Pi-OT2IT" class="headerlink" title="Setup and Test the Firmata for I-Pi OT2IT"></a>Setup and Test the Firmata for I-Pi OT2IT<a class="article-anchor" href="#Setup-and-Test-the-Firmata-for-I-Pi-OT2IT" aria-hidden="true"></a></h1><h2 id="Setup-Firmmata-on-OT2IT-Hardware" class="article-heading"><a href="#Setup-Firmmata-on-OT2IT-Hardware" class="headerlink" title="Setup Firmmata on OT2IT Hardware"></a>Setup Firmmata on OT2IT Hardware<a class="article-anchor" href="#Setup-Firmmata-on-OT2IT-Hardware" aria-hidden="true"></a></h2><p>Follow the steps to download I-PI-OT2IT MCU application file:</p>
 <p><strong>1.</strong> Download and install the latest version of the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/shumatech/BOSSA/releases">BOSSA</a> tool</p>
    <font color="red">**Note:**</font> First time installer complete the installation setup by clicking "Next" as shown in the screenshots and install device software.
 
@@ -298,13 +298,13 @@ $('button').click(function(){
 <p>   <img src="SetupFirmwata.assets/WriteCode.png"></p>
 <p><strong>8.</strong> When the code has been written, you can see a successful window. Then power off and power on the device to run the new application</p>
 <p>   <img src="SetupFirmwata.assets/SuccessfullyWritten.png"></p>
-<h2 id="Setup-Firmata-on-Host-System" class="article-heading"><a href="#Setup-Firmata-on-Host-System" class="headerlink" title="Setup Firmata on Host System"></a>Setup Firmata on Host System<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Setup-Firmata-on-Host-System'}, '*');" class="article-anchor" href="#Setup-Firmata-on-Host-System" aria-hidden="true"></a></h2><h3 id="pyFirmata-Installation" class="article-heading"><a href="#pyFirmata-Installation" class="headerlink" title="pyFirmata Installation"></a>pyFirmata Installation<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#pyFirmata-Installation'}, '*');" class="article-anchor" href="#pyFirmata-Installation" aria-hidden="true"></a></h3><p>Download pyFirmata (Python interface) by using following command.</p>
+<h2 id="Setup-Firmata-on-Host-System" class="article-heading"><a href="#Setup-Firmata-on-Host-System" class="headerlink" title="Setup Firmata on Host System"></a>Setup Firmata on Host System<a class="article-anchor" href="#Setup-Firmata-on-Host-System" aria-hidden="true"></a></h2><h3 id="pyFirmata-Installation" class="article-heading"><a href="#pyFirmata-Installation" class="headerlink" title="pyFirmata Installation"></a>pyFirmata Installation<a class="article-anchor" href="#pyFirmata-Installation" aria-hidden="true"></a></h3><p>Download pyFirmata (Python interface) by using following command.</p>
 <p>The preferred way to install is with <a target="_blank" rel="noopener external nofollow noreferrer" href="https://pip.pypa.io/en/latest/">pip</a>:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyFirmata</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/PythonInstallation.png"></p>
 <p>You can also install from source with <font color="red"><strong>python setup.py install</strong></font>. You will need to have <a target="_blank" rel="noopener external nofollow noreferrer" href="https://pypi.python.org/pypi/setuptools">setuptools</a> installed:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/tino/pyFirmata</span><br><span class="line">cd pyFirmata</span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
-<h3 id="Update-COM-Port" class="article-heading"><a href="#Update-COM-Port" class="headerlink" title="Update COM Port"></a>Update COM Port<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Update-COM-Port'}, '*');" class="article-anchor" href="#Update-COM-Port" aria-hidden="true"></a></h3><ul>
+<h3 id="Update-COM-Port" class="article-heading"><a href="#Update-COM-Port" class="headerlink" title="Update COM Port"></a>Update COM Port<a class="article-anchor" href="#Update-COM-Port" aria-hidden="true"></a></h3><ul>
 <li>Find the “device_port” in the Firmware file. Ex: (C:\Users\Downloads\I-PI-OT2IT-MCU-V1.08\firmata\V1.04)</li>
 </ul>
 <p><img src="SetupFirmwata.assets/UpdateCOMPort1.png"></p>
@@ -312,19 +312,19 @@ $('button').click(function(){
 <li>Update “device_port” according to the COM port selected in the hardware setup</li>
 </ul>
 <p><img src="SetupFirmwata.assets/ChangeCOMPort.png"></p>
-<h2 id="Test-Firmwata" class="article-heading"><a href="#Test-Firmwata" class="headerlink" title="Test Firmwata"></a>Test Firmwata<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Test-Firmwata'}, '*');" class="article-anchor" href="#Test-Firmwata" aria-hidden="true"></a></h2><ol>
+<h2 id="Test-Firmwata" class="article-heading"><a href="#Test-Firmwata" class="headerlink" title="Test Firmwata"></a>Test Firmwata<a class="article-anchor" href="#Test-Firmwata" aria-hidden="true"></a></h2><ol>
 <li>Power off the system</li>
 <li>Power on the system</li>
 <li>Connect USB cable to the USB port and a host PC</li>
 <li>Run command mode under firmata</li>
 </ol>
-<h3 id="Firmata-Version" class="article-heading"><a href="#Firmata-Version" class="headerlink" title="Firmata Version"></a>Firmata Version<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Firmata-Version'}, '*');" class="article-anchor" href="#Firmata-Version" aria-hidden="true"></a></h3><p>Run the command to get firmata command version.</p>
+<h3 id="Firmata-Version" class="article-heading"><a href="#Firmata-Version" class="headerlink" title="Firmata Version"></a>Firmata Version<a class="article-anchor" href="#Firmata-Version" aria-hidden="true"></a></h3><p>Run the command to get firmata command version.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -v 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/FirmataVersion.png"></p>
-<h3 id="MCU-Version" class="article-heading"><a href="#MCU-Version" class="headerlink" title="MCU Version"></a>MCU Version<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#MCU-Version'}, '*');" class="article-anchor" href="#MCU-Version" aria-hidden="true"></a></h3><p>Run the command to get MCU version.</p>
+<h3 id="MCU-Version" class="article-heading"><a href="#MCU-Version" class="headerlink" title="MCU Version"></a>MCU Version<a class="article-anchor" href="#MCU-Version" aria-hidden="true"></a></h3><p>Run the command to get MCU version.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -m 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/MCUVersion.png"></p>
-<h3 id="LED-Test" class="article-heading"><a href="#LED-Test" class="headerlink" title="LED Test"></a>LED Test<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#LED-Test'}, '*');" class="article-anchor" href="#LED-Test" aria-hidden="true"></a></h3><div class="table-container">
+<h3 id="LED-Test" class="article-heading"><a href="#LED-Test" class="headerlink" title="LED Test"></a>LED Test<a class="article-anchor" href="#LED-Test" aria-hidden="true"></a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -351,16 +351,16 @@ $('button').click(function(){
 <p>Turn On LED RED</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -o 11,1</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/LEDOn.png"></p>
-<p><img src="SetupFirmwata.assets/LEDOnImage.png" alt="LED On Image" width="width:20%;"></p>
+<p><img src="SetupFirmwata.assets/LEDOnImage.png" alt="LED On Image"></p>
 <p>Turn Off LED RED</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -o 11,0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/LEDOff.png"></p>
-<p><img src="SetupFirmwata.assets/LEDOffImage.jpg" alt="LED Off Image" width="width:20%;"></p>
-<h3 id="Check-Buttons" class="article-heading"><a href="#Check-Buttons" class="headerlink" title="Check Buttons"></a>Check Buttons<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Check-Buttons'}, '*');" class="article-anchor" href="#Check-Buttons" aria-hidden="true"></a></h3><h4 id="Reset-Button-SWI201" class="article-heading"><a href="#Reset-Button-SWI201" class="headerlink" title="Reset Button (SWI201)"></a>Reset Button (SWI201)<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Reset-Button-SWI201'}, '*');" class="article-anchor" href="#Reset-Button-SWI201" aria-hidden="true"></a></h4><ul>
+<p><img src="SetupFirmwata.assets/LEDOffImage.jpg" alt="LED Off Image"></p>
+<h3 id="Check-Buttons" class="article-heading"><a href="#Check-Buttons" class="headerlink" title="Check Buttons"></a>Check Buttons<a class="article-anchor" href="#Check-Buttons" aria-hidden="true"></a></h3><h4 id="Reset-Button-SWI201" class="article-heading"><a href="#Reset-Button-SWI201" class="headerlink" title="Reset Button (SWI201)"></a>Reset Button (SWI201)<a class="article-anchor" href="#Reset-Button-SWI201" aria-hidden="true"></a></h4><ul>
 <li>When button is pressed, LED goes [ COM11 port missing ]</li>
 <li>When button is released, LED comes back [ COM11 port comes back ]</li>
 </ul>
-<h4 id="Key-1-Button-SWI202" class="article-heading"><a href="#Key-1-Button-SWI202" class="headerlink" title="Key 1 Button (SWI202)"></a>Key 1 Button (SWI202)<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Key-1-Button-SWI202'}, '*');" class="article-anchor" href="#Key-1-Button-SWI202" aria-hidden="true"></a></h4><ul>
+<h4 id="Key-1-Button-SWI202" class="article-heading"><a href="#Key-1-Button-SWI202" class="headerlink" title="Key 1 Button (SWI202)"></a>Key 1 Button (SWI202)<a class="article-anchor" href="#Key-1-Button-SWI202" aria-hidden="true"></a></h4><ul>
 <li><p>It reads GPIO status</p>
 <p>Press key 1 and run the command.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -i 8 </span><br></pre></td></tr></table></figure>
@@ -372,7 +372,7 @@ $('button').click(function(){
 <p> <img src="SetupFirmwata.assets/Key1Low.png"></p>
 </li>
 </ul>
-<h4 id="Key-2-Button-SWI203" class="article-heading"><a href="#Key-2-Button-SWI203" class="headerlink" title="Key 2 Button (SWI203)"></a>Key 2 Button (SWI203)<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Key-2-Button-SWI203'}, '*');" class="article-anchor" href="#Key-2-Button-SWI203" aria-hidden="true"></a></h4><ul>
+<h4 id="Key-2-Button-SWI203" class="article-heading"><a href="#Key-2-Button-SWI203" class="headerlink" title="Key 2 Button (SWI203)"></a>Key 2 Button (SWI203)<a class="article-anchor" href="#Key-2-Button-SWI203" aria-hidden="true"></a></h4><ul>
 <li><p>It reads GPIO status</p>
 <p>Press key 2 and run the command. </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -i 9 </span><br></pre></td></tr></table></figure>
@@ -384,26 +384,26 @@ $('button').click(function(){
 </li>
 </ul>
 <p><img src="SetupFirmwata.assets/Key2Low.png"></p>
-<h3 id="SD-Card-Function" class="article-heading"><a href="#SD-Card-Function" class="headerlink" title="SD Card Function"></a>SD Card Function<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#SD-Card-Function'}, '*');" class="article-anchor" href="#SD-Card-Function" aria-hidden="true"></a></h3><h4 id="Create-Directory" class="article-heading"><a href="#Create-Directory" class="headerlink" title="Create Directory"></a>Create Directory<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Create-Directory'}, '*');" class="article-anchor" href="#Create-Directory" aria-hidden="true"></a></h4><p>Run the command to create a directory.</p>
+<h3 id="SD-Card-Function" class="article-heading"><a href="#SD-Card-Function" class="headerlink" title="SD Card Function"></a>SD Card Function<a class="article-anchor" href="#SD-Card-Function" aria-hidden="true"></a></h3><h4 id="Create-Directory" class="article-heading"><a href="#Create-Directory" class="headerlink" title="Create Directory"></a>Create Directory<a class="article-anchor" href="#Create-Directory" aria-hidden="true"></a></h4><p>Run the command to create a directory.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f m,&quot;/DIR0&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/MakeDirectory.png"></p>
-<h4 id="Create-File" class="article-heading"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Create-File'}, '*');" class="article-anchor" href="#Create-File" aria-hidden="true"></a></h4><p>Run the command to create a file “TEST0.TXT” under “DIR0”.</p>
+<h4 id="Create-File" class="article-heading"><a href="#Create-File" class="headerlink" title="Create File"></a>Create File<a class="article-anchor" href="#Create-File" aria-hidden="true"></a></h4><p>Run the command to create a file “TEST0.TXT” under “DIR0”.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f c,&quot;/DIR0/TEST0.TXT&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/CreateFile.png"></p>
-<h4 id="Open-File" class="article-heading"><a href="#Open-File" class="headerlink" title="Open File"></a>Open File<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Open-File'}, '*');" class="article-anchor" href="#Open-File" aria-hidden="true"></a></h4><p>Run the command to open “TEST0.TXT” file under “DIR0” directory.</p>
+<h4 id="Open-File" class="article-heading"><a href="#Open-File" class="headerlink" title="Open File"></a>Open File<a class="article-anchor" href="#Open-File" aria-hidden="true"></a></h4><p>Run the command to open “TEST0.TXT” file under “DIR0” directory.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f o,&quot;/DIR0/TEST0.TXT&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/OpenFile.png"></p>
-<h4 id="Open-Directory" class="article-heading"><a href="#Open-Directory" class="headerlink" title="Open Directory"></a>Open Directory<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Open-Directory'}, '*');" class="article-anchor" href="#Open-Directory" aria-hidden="true"></a></h4><p>Run the command to open “DIR0” directory.</p>
+<h4 id="Open-Directory" class="article-heading"><a href="#Open-Directory" class="headerlink" title="Open Directory"></a>Open Directory<a class="article-anchor" href="#Open-Directory" aria-hidden="true"></a></h4><p>Run the command to open “DIR0” directory.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f o,&quot;/DIR0&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/OpenDirectory.png"></p>
-<h4 id="List-Files" class="article-heading"><a href="#List-Files" class="headerlink" title="List Files"></a>List Files<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#List-Files'}, '*');" class="article-anchor" href="#List-Files" aria-hidden="true"></a></h4><p>Run the command to list the files.</p>
+<h4 id="List-Files" class="article-heading"><a href="#List-Files" class="headerlink" title="List Files"></a>List Files<a class="article-anchor" href="#List-Files" aria-hidden="true"></a></h4><p>Run the command to list the files.</p>
 <p><font color="red"><strong>Note:</strong></font> Before you list the file, open the directory</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f l,0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/ListFiles.png"></p>
 <p> For the list of intermediately created files, run this command.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f l,1</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/ContinueToListFiles.png"></p>
-<h4 id="Write-Data" class="article-heading"><a href="#Write-Data" class="headerlink" title="Write Data"></a>Write Data<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Write-Data'}, '*');" class="article-anchor" href="#Write-Data" aria-hidden="true"></a></h4><p>Run the command to write data “1234567890” as a string.</p>
+<h4 id="Write-Data" class="article-heading"><a href="#Write-Data" class="headerlink" title="Write Data"></a>Write Data<a class="article-anchor" href="#Write-Data" aria-hidden="true"></a></h4><p>Run the command to write data “1234567890” as a string.</p>
 <p><font color="red"><strong>Note:</strong></font> Before you write your data, open the file</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f w,0,&quot;1234567890&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/WriteData.png"></p>
@@ -413,7 +413,7 @@ $('button').click(function(){
 <p>Run the command to write as a character.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f w,2,65,66,67,68</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/WriteCharacters.png"></p>
-<h4 id="Read-Data" class="article-heading"><a href="#Read-Data" class="headerlink" title="Read Data"></a>Read Data<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Read-Data'}, '*');" class="article-anchor" href="#Read-Data" aria-hidden="true"></a></h4><p>Run the command to read data from the beginning.</p>
+<h4 id="Read-Data" class="article-heading"><a href="#Read-Data" class="headerlink" title="Read Data"></a>Read Data<a class="article-anchor" href="#Read-Data" aria-hidden="true"></a></h4><p>Run the command to read data from the beginning.</p>
 <p><font color="red"><strong>Note:</strong></font> Before you read your data, open the file.</p>
 <p><font color="red"><strong>Note:</strong></font> At most, 255 bytes can be read.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo  python FwataTest.py -f r,0</span><br></pre></td></tr></table></figure>
@@ -421,13 +421,13 @@ $('button').click(function(){
 <p> Run this command if you want to continue reading after writing another data.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f r,1</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/ContinueToRead.png"></p>
-<h4 id="Delete-File" class="article-heading"><a href="#Delete-File" class="headerlink" title="Delete File"></a>Delete File<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Delete-File'}, '*');" class="article-anchor" href="#Delete-File" aria-hidden="true"></a></h4><p>Run the command to delete the file “TEST0.TXT”.</p>
+<h4 id="Delete-File" class="article-heading"><a href="#Delete-File" class="headerlink" title="Delete File"></a>Delete File<a class="article-anchor" href="#Delete-File" aria-hidden="true"></a></h4><p>Run the command to delete the file “TEST0.TXT”.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f d,&quot;/DIR0/TEST0.TX</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/DeleteFile.png"></p>
-<h4 id="Delete-Directory" class="article-heading"><a href="#Delete-Directory" class="headerlink" title="Delete Directory"></a>Delete Directory<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Delete-Directory'}, '*');" class="article-anchor" href="#Delete-Directory" aria-hidden="true"></a></h4><p>Run the command to delete the directory “/DIR0”, there should be no file under “/DIR0”.</p>
+<h4 id="Delete-Directory" class="article-heading"><a href="#Delete-Directory" class="headerlink" title="Delete Directory"></a>Delete Directory<a class="article-anchor" href="#Delete-Directory" aria-hidden="true"></a></h4><p>Run the command to delete the directory “/DIR0”, there should be no file under “/DIR0”.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -f k,&quot;/DIR0&quot;</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/DeleteDirectory.png"></p>
-<h3 id="Test-RS485-Bus" class="article-heading"><a href="#Test-RS485-Bus" class="headerlink" title="Test RS485 Bus"></a>Test RS485 Bus<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Test-RS485-Bus'}, '*');" class="article-anchor" href="#Test-RS485-Bus" aria-hidden="true"></a></h3><h4 id="Set-Baud-Rate" class="article-heading"><a href="#Set-Baud-Rate" class="headerlink" title="Set Baud Rate"></a>Set Baud Rate<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Set-Baud-Rate'}, '*');" class="article-anchor" href="#Set-Baud-Rate" aria-hidden="true"></a></h4><p>Run the command to get the baud rate of RS485.</p>
+<h3 id="Test-RS485-Bus" class="article-heading"><a href="#Test-RS485-Bus" class="headerlink" title="Test RS485 Bus"></a>Test RS485 Bus<a class="article-anchor" href="#Test-RS485-Bus" aria-hidden="true"></a></h3><h4 id="Set-Baud-Rate" class="article-heading"><a href="#Set-Baud-Rate" class="headerlink" title="Set Baud Rate"></a>Set Baud Rate<a class="article-anchor" href="#Set-Baud-Rate" aria-hidden="true"></a></h4><p>Run the command to get the baud rate of RS485.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -u 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/CheckRS485BaudRate.png"></p>
 <p>Run the command to set baud rate.</p>
@@ -465,7 +465,7 @@ $('button').click(function(){
 </tbody>
 </table>
 </div>
-<h4 id="Testing-RS485-Bus-Port" class="article-heading"><a href="#Testing-RS485-Bus-Port" class="headerlink" title="Testing RS485 Bus Port"></a>Testing RS485 Bus Port<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Testing-RS485-Bus-Port'}, '*');" class="article-anchor" href="#Testing-RS485-Bus-Port" aria-hidden="true"></a></h4><p>Connect serial port (USB to RS485) in device 2 and use the -D option to specify the path to the desired serial port. For example, to use /dev/ttyUSB0, run minicom like this:</p>
+<h4 id="Testing-RS485-Bus-Port" class="article-heading"><a href="#Testing-RS485-Bus-Port" class="headerlink" title="Testing RS485 Bus Port"></a>Testing RS485 Bus Port<a class="article-anchor" href="#Testing-RS485-Bus-Port" aria-hidden="true"></a></h4><p>Connect serial port (USB to RS485) in device 2 and use the -D option to specify the path to the desired serial port. For example, to use /dev/ttyUSB0, run minicom like this:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">minicom -D /dev/ttyUSB0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/Minicom.png" alt="Minicom" style="width:170%;"></p>
 <p>Run the command to send (ASCII) data through RS485 from device 1.</p>
@@ -478,15 +478,15 @@ $('button').click(function(){
 <p>Run the command to receive the respective ASCII values.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -s 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/ReceiveDataRS485.png"></p>
-<h3 id="Pin-Value" class="article-heading"><a href="#Pin-Value" class="headerlink" title="Pin Value"></a>Pin Value<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Pin-Value'}, '*');" class="article-anchor" href="#Pin-Value" aria-hidden="true"></a></h3><p>Run the commands to get pins value.</p>
+<h3 id="Pin-Value" class="article-heading"><a href="#Pin-Value" class="headerlink" title="Pin Value"></a>Pin Value<a class="article-anchor" href="#Pin-Value" aria-hidden="true"></a></h3><p>Run the commands to get pins value.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -y 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/PinValue1.png"></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -y 1</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/PinValue2.png"></p>
-<h3 id="Temperature" class="article-heading"><a href="#Temperature" class="headerlink" title="Temperature"></a>Temperature<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Temperature'}, '*');" class="article-anchor" href="#Temperature" aria-hidden="true"></a></h3><p>Run the command to get temperature.</p>
+<h3 id="Temperature" class="article-heading"><a href="#Temperature" class="headerlink" title="Temperature"></a>Temperature<a class="article-anchor" href="#Temperature" aria-hidden="true"></a></h3><p>Run the command to get temperature.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -t 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/Temperature.png"></p>
-<h3 id="Digital-Input" class="article-heading"><a href="#Digital-Input" class="headerlink" title="Digital Input"></a>Digital Input<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Digital-Input'}, '*');" class="article-anchor" href="#Digital-Input" aria-hidden="true"></a></h3><p>Run the commands to check DI default state.</p>
+<h3 id="Digital-Input" class="article-heading"><a href="#Digital-Input" class="headerlink" title="Digital Input"></a>Digital Input<a class="article-anchor" href="#Digital-Input" aria-hidden="true"></a></h3><p>Run the commands to check DI default state.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -i 0</span><br><span class="line">sudo python FwataTest.py -i 1</span><br><span class="line">sudo python FwataTest.py -i 2</span><br><span class="line">sudo python FwataTest.py -i 3</span><br><span class="line">sudo python FwataTest.py -i 4</span><br><span class="line">sudo python FwataTest.py -i 5</span><br><span class="line">sudo python FwataTest.py -i 6</span><br><span class="line">sudo python FwataTest.py -i 7</span><br></pre></td></tr></table></figure>
 <p><font color="red"><strong>Note:</strong></font> Default (Low) should return ‘True’</p>
 <p><font color="red"><strong>Note:</strong></font> DI 7 should return ‘False’ default</p>
@@ -497,7 +497,7 @@ $('button').click(function(){
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -i 0</span><br><span class="line">sudo python FwataTest.py -i 1</span><br><span class="line">sudo python FwataTest.py -i 2</span><br><span class="line">sudo python FwataTest.py -i 3</span><br><span class="line">sudo python FwataTest.py -i 4</span><br><span class="line">sudo python FwataTest.py -i 5</span><br><span class="line">sudo python FwataTest.py -i 6</span><br></pre></td></tr></table></figure>
 <p> <font color="red"><strong>Note:</strong></font> Connect to (High) should return ‘False’</p>
 <p><img src="SetupFirmwata.assets/DigitalInputHigh.png"></p>
-<h3 id="Digital-Output" class="article-heading"><a href="#Digital-Output" class="headerlink" title="Digital Output"></a>Digital Output<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Digital-Output'}, '*');" class="article-anchor" href="#Digital-Output" aria-hidden="true"></a></h3><p><font color="red"><strong>Note:</strong></font> Pin number =&gt; 0 - 7 for Digital Output</p>
+<h3 id="Digital-Output" class="article-heading"><a href="#Digital-Output" class="headerlink" title="Digital Output"></a>Digital Output<a class="article-anchor" href="#Digital-Output" aria-hidden="true"></a></h3><p><font color="red"><strong>Note:</strong></font> Pin number =&gt; 0 - 7 for Digital Output</p>
 <p>Run the command to make DO0_MCUIO high.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -o 0,1</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/DigitalOutputHigh.png"></p>
@@ -506,21 +506,21 @@ $('button').click(function(){
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -o 0,0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/DigitalOutputLow.png"></p>
 <p><font color="red"><strong>Note:</strong></font> Check if the DO0 pin is Low when set 0</p>
-<h3 id="Relay-Output" class="article-heading"><a href="#Relay-Output" class="headerlink" title="Relay Output"></a>Relay Output<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Relay-Output'}, '*');" class="article-anchor" href="#Relay-Output" aria-hidden="true"></a></h3><p><font color="red"><strong>Note:</strong></font> Pin number =&gt; 8 - 10 for Relay Output</p>
+<h3 id="Relay-Output" class="article-heading"><a href="#Relay-Output" class="headerlink" title="Relay Output"></a>Relay Output<a class="article-anchor" href="#Relay-Output" aria-hidden="true"></a></h3><p><font color="red"><strong>Note:</strong></font> Pin number =&gt; 8 - 10 for Relay Output</p>
 <p>Run the command to turn off DORO0.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -o 8,1</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/RelayOutputOff.png"></p>
 <p>Run the command to turn on DORO0.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -o 8,0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/RelayOutputOn.png"></p>
-<h3 id="Analog-Voltage-Input-AIV0" class="article-heading"><a href="#Analog-Voltage-Input-AIV0" class="headerlink" title="Analog Voltage Input (AIV0)"></a>Analog Voltage Input (AIV0)<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Analog-Voltage-Input-AIV0'}, '*');" class="article-anchor" href="#Analog-Voltage-Input-AIV0" aria-hidden="true"></a></h3><p>Run the command to set AO1 as 10V</p>
+<h3 id="Analog-Voltage-Input-AIV0" class="article-heading"><a href="#Analog-Voltage-Input-AIV0" class="headerlink" title="Analog Voltage Input (AIV0)"></a>Analog Voltage Input (AIV0)<a class="article-anchor" href="#Analog-Voltage-Input-AIV0" aria-hidden="true"></a></h3><p>Run the command to set AO1 as 10V</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -b 1,4095</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/AnalogVoltageInput1.png"></p>
 <p>Short AO1 - AIV0 and run the command</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -a 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/AnalongVoltageInput2.png"></p>
 <p><font color="red"><strong>Note:</strong></font> Should return around 10V</p>
-<h3 id="Analog-Current-Input" class="article-heading"><a href="#Analog-Current-Input" class="headerlink" title="Analog Current Input"></a>Analog Current Input<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Analog-Current-Input'}, '*');" class="article-anchor" href="#Analog-Current-Input" aria-hidden="true"></a></h3><p>Run the command to set AO1 to 3.3V.</p>
+<h3 id="Analog-Current-Input" class="article-heading"><a href="#Analog-Current-Input" class="headerlink" title="Analog Current Input"></a>Analog Current Input<a class="article-anchor" href="#Analog-Current-Input" aria-hidden="true"></a></h3><p>Run the command to set AO1 to 3.3V.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -b 1,1352 </span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/AnalogCurrentInput1.png"></p>
 <p><font color="red"><strong>Note:</strong></font> Voltage drop to 2.836V when connect to AI pin</p>
@@ -543,7 +543,7 @@ $('button').click(function(){
 <p>Short AO1 - AII_P3 and run the command.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -a 6 </span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/AnalogCurrentInput7.png"></p>
-<h3 id="Analog-Output" class="article-heading"><a href="#Analog-Output" class="headerlink" title="Analog Output"></a>Analog Output<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Analog-Output'}, '*');" class="article-anchor" href="#Analog-Output" aria-hidden="true"></a></h3><p>Run the command to set AO0 to 10 V.</p>
+<h3 id="Analog-Output" class="article-heading"><a href="#Analog-Output" class="headerlink" title="Analog Output"></a>Analog Output<a class="article-anchor" href="#Analog-Output" aria-hidden="true"></a></h3><p>Run the command to set AO0 to 10 V.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -b 0,4095</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/AnalogOutput0.1.png"></p>
 <p><font color="red"><strong>Note:</strong></font> Check if AO0 is10V when set 4095</p>
@@ -559,36 +559,36 @@ $('button').click(function(){
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -b 1,0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/AnalogOutput1.0.png"></p>
 <p><font color="red"><strong>Note:</strong></font> Check if AO1 is 0V when set 0</p>
-<h3 id="To-Get-Flash-via-QSPI" class="article-heading"><a href="#To-Get-Flash-via-QSPI" class="headerlink" title="To Get Flash via QSPI"></a>To Get Flash via QSPI<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#To-Get-Flash-via-QSPI'}, '*');" class="article-anchor" href="#To-Get-Flash-via-QSPI" aria-hidden="true"></a></h3><h4 id="Get-Flash-ID" class="article-heading"><a href="#Get-Flash-ID" class="headerlink" title="Get Flash ID"></a>Get Flash ID<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Get-Flash-ID'}, '*');" class="article-anchor" href="#Get-Flash-ID" aria-hidden="true"></a></h4><p>Run the command to get flash id.</p>
+<h3 id="To-Get-Flash-via-QSPI" class="article-heading"><a href="#To-Get-Flash-via-QSPI" class="headerlink" title="To Get Flash via QSPI"></a>To Get Flash via QSPI<a class="article-anchor" href="#To-Get-Flash-via-QSPI" aria-hidden="true"></a></h3><h4 id="Get-Flash-ID" class="article-heading"><a href="#Get-Flash-ID" class="headerlink" title="Get Flash ID"></a>Get Flash ID<a class="article-anchor" href="#Get-Flash-ID" aria-hidden="true"></a></h4><p>Run the command to get flash id.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo  python FwataTest.py -q 0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/FlashId.png"></p>
-<h4 id="Erase-Flash" class="article-heading"><a href="#Erase-Flash" class="headerlink" title="Erase Flash"></a>Erase Flash<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Erase-Flash'}, '*');" class="article-anchor" href="#Erase-Flash" aria-hidden="true"></a></h4><p>Run the command to erase chip.</p>
+<h4 id="Erase-Flash" class="article-heading"><a href="#Erase-Flash" class="headerlink" title="Erase Flash"></a>Erase Flash<a class="article-anchor" href="#Erase-Flash" aria-hidden="true"></a></h4><p>Run the command to erase chip.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -q 1,0</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/EraseFlash.png"></p>
-<h4 id="Sector-Erase-Flash" class="article-heading"><a href="#Sector-Erase-Flash" class="headerlink" title="Sector Erase Flash"></a>Sector Erase Flash<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Sector-Erase-Flash'}, '*');" class="article-anchor" href="#Sector-Erase-Flash" aria-hidden="true"></a></h4><p>Run the command to erase sector 5.</p>
+<h4 id="Sector-Erase-Flash" class="article-heading"><a href="#Sector-Erase-Flash" class="headerlink" title="Sector Erase Flash"></a>Sector Erase Flash<a class="article-anchor" href="#Sector-Erase-Flash" aria-hidden="true"></a></h4><p>Run the command to erase sector 5.</p>
 <p><font color="red"><strong>Note:</strong></font> Sector number = 0 —&gt; 2047</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -q 1,1,5</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/EraseSector.png"></p>
-<h4 id="Block-Erase-Flash" class="article-heading"><a href="#Block-Erase-Flash" class="headerlink" title="Block Erase Flash"></a>Block Erase Flash<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Block-Erase-Flash'}, '*');" class="article-anchor" href="#Block-Erase-Flash" aria-hidden="true"></a></h4><p>Run the command to erase block 7.</p>
+<h4 id="Block-Erase-Flash" class="article-heading"><a href="#Block-Erase-Flash" class="headerlink" title="Block Erase Flash"></a>Block Erase Flash<a class="article-anchor" href="#Block-Erase-Flash" aria-hidden="true"></a></h4><p>Run the command to erase block 7.</p>
 <p><font color="red"><strong>Note:</strong></font> Block number = 0 —&gt; 127</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -q 1,2,7</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/EraseBlock.png"></p>
-<h4 id="Write-Flash" class="article-heading"><a href="#Write-Flash" class="headerlink" title="Write Flash"></a>Write Flash<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Write-Flash'}, '*');" class="article-anchor" href="#Write-Flash" aria-hidden="true"></a></h4><p>Write data 0,1,2,3,4,5,6 at address 256.</p>
+<h4 id="Write-Flash" class="article-heading"><a href="#Write-Flash" class="headerlink" title="Write Flash"></a>Write Flash<a class="article-anchor" href="#Write-Flash" aria-hidden="true"></a></h4><p>Write data 0,1,2,3,4,5,6 at address 256.</p>
 <p>Example: To write data 0,1,2,3,4,5,6 at address 256</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -q 2,256,0,1,2,3,4,5,6</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/WriteFlash.png"></p>
-<h4 id="Read-Flash" class="article-heading"><a href="#Read-Flash" class="headerlink" title="Read Flash"></a>Read Flash<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Read-Flash'}, '*');" class="article-anchor" href="#Read-Flash" aria-hidden="true"></a></h4><p>Run the command to read flash data.</p>
+<h4 id="Read-Flash" class="article-heading"><a href="#Read-Flash" class="headerlink" title="Read Flash"></a>Read Flash<a class="article-anchor" href="#Read-Flash" aria-hidden="true"></a></h4><p>Run the command to read flash data.</p>
 <p>For Example: To read 10 bytes data at address 256</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -q 3,256,10</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/ReadFlash.png"></p>
-<h3 id="Reset-Counter" class="article-heading"><a href="#Reset-Counter" class="headerlink" title="Reset Counter"></a>Reset Counter<a onclick="parent.postMessage( {msg: '?page=SetupFirmwata.html#Reset-Counter'}, '*');" class="article-anchor" href="#Reset-Counter" aria-hidden="true"></a></h3><p> When the device has been reset (power on), the counter will be 1, and then increase 1 each time following command request.</p>
+<h3 id="Reset-Counter" class="article-heading"><a href="#Reset-Counter" class="headerlink" title="Reset Counter"></a>Reset Counter<a class="article-anchor" href="#Reset-Counter" aria-hidden="true"></a></h3><p> When the device has been reset (power on), the counter will be 1, and then increase 1 each time following command request.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo python FwataTest.py -g</span><br></pre></td></tr></table></figure>
 <p><img src="SetupFirmwata.assets/ResetCounter.png"></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2024-06-06T02:25:13.800Z" itemprop="dateModified">Last updated: 2024-06-06</time>
-                <a href="SetupArduinoIDEEnvironment.html" class="article-footer-prev" title="Setup Arduino IDE Environment"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+                <time class="article-footer-updated" datetime="2024-06-06T02:26:55.742Z" itemprop="dateModified">Last updated: 2024-06-06</time>
+                <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -606,7 +606,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="sidebar-link first">Specification</a><a href="BlockDiagram.html" class="sidebar-link">Block Diagram</a><a href="SignalTerminology.html" class="sidebar-link">Signal Terminology</a><a href="ITInterface.html" class="sidebar-link">IT Interface</a><a href="Mechanical.html" class="sidebar-link">Mechanical</a></details open></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="sidebar-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="sidebar-link">Setup Arduino IDE Environment</a><a href="SetupFirmwata.html" class="sidebar-link current">Setup & Test the Firmata</a></details open></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="sidebar-link first">Specification</a><a href="BlockDiagram.html" class="sidebar-link">Block Diagram</a><a href="SignalTerminology.html" class="sidebar-link">Signal Terminology</a><a href="ITInterface.html" class="sidebar-link">IT Interface</a><a href="Mechanical.html" class="sidebar-link">Mechanical</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="sidebar-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="sidebar-link">Setup Arduino IDE Environment</a></details></strong>
   </div>
 </aside>
     </div>
@@ -660,7 +660,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="mobile-nav-link first">Specification</a><a href="BlockDiagram.html" class="mobile-nav-link">Block Diagram</a><a href="SignalTerminology.html" class="mobile-nav-link">Signal Terminology</a><a href="ITInterface.html" class="mobile-nav-link">IT Interface</a><a href="Mechanical.html" class="mobile-nav-link">Mechanical</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="mobile-nav-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="mobile-nav-link">Setup Arduino IDE Environment</a><a href="SetupFirmwata.html" class="mobile-nav-link current">Setup & Test the Firmata</a></details open></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="Specification.html" class="mobile-nav-link first">Specification</a><a href="BlockDiagram.html" class="mobile-nav-link">Block Diagram</a><a href="SignalTerminology.html" class="mobile-nav-link">Signal Terminology</a><a href="ITInterface.html" class="mobile-nav-link">IT Interface</a><a href="Mechanical.html" class="mobile-nav-link">Mechanical</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="FlashingGuideUF2Bootloader.html" class="mobile-nav-link first">Flash bootloader</a><a href="SetupArduinoIDEEnvironment.html" class="mobile-nav-link">Setup Arduino IDE Environment</a></details></strong>
     
   </div>
   
