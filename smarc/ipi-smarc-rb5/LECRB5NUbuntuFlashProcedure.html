@@ -92,9 +92,14 @@
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/QFIL_F07.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/QFIL_F08.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/QFIL_F09.png">
-<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/ubulogn.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/adbdev.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/adbdev1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv02.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv03.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv04.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/adlinklogin.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/ub01.jpg">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/adlinklogin.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/ub01.jpg">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv01.png">
@@ -106,8 +111,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv07.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/updatedrv08.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/adbdev.png">
-<meta property="article:published_time" content="2024-06-17T05:06:14.287Z">
-<meta property="article:modified_time" content="2024-06-17T05:06:14.287Z">
+<meta property="article:published_time" content="2024-08-06T09:07:24.012Z">
+<meta property="article:modified_time" content="2024-08-06T09:07:24.012Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5/LEC-RB5UserGuide.assets/adbdriver.png">
@@ -174,13 +179,13 @@
 <p><strong>The Ubuntu OS is only for evaluation purposes(Internal use). If it is for commercial use, you need to get a license from Canonical. Canonical’s IP policy can be found here: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://ubuntu.com/embedding/faqs">https://ubuntu.com/embedding/faqs</a>.</strong></p>
 </blockquote>
 <p>This document provides detailed information on flashing Ubuntu OS on the I-Pi SMARC RB5.</p>
-<h2 id="1-Prerequisites" class="article-heading"><a href="#1-Prerequisites" class="headerlink" title="1. Prerequisites"></a>1. Prerequisites<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#1-Prerequisites'}, '*');" class="article-anchor" href="#1-Prerequisites" aria-hidden="true"></a></h2><ul>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li><p>To flash the OS on the I-Pi SMARC RB5, you need a Windows PC (Windows 10&#x2F;Windows 11).</p>
 </li>
 <li><p>Download the prebuilt Ubuntu image files by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/i-pi-smarc-rb5-download">clicking here</a>.</p>
 </li>
 </ul>
-<h3 id="1-1-Download-and-Install-ADB-and-Fastboot-drivers" class="article-heading"><a href="#1-1-Download-and-Install-ADB-and-Fastboot-drivers" class="headerlink" title="1.1 Download and Install ADB and Fastboot drivers"></a>1.1 Download and Install ADB and Fastboot drivers<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#1-1-Download-and-Install-ADB-and-Fastboot-drivers'}, '*');" class="article-anchor" href="#1-1-Download-and-Install-ADB-and-Fastboot-drivers" aria-hidden="true"></a></h3><p><strong>1.</strong> Please download the ADB and Fastboot drivers and install them using the link provided below.</p>
+<h3 id="Download-and-Install-ADB-and-Fastboot-drivers" class="article-heading"><a href="#Download-and-Install-ADB-and-Fastboot-drivers" class="headerlink" title="Download and Install ADB and Fastboot drivers"></a>Download and Install ADB and Fastboot drivers<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Download-and-Install-ADB-and-Fastboot-drivers'}, '*');" class="article-anchor" href="#Download-and-Install-ADB-and-Fastboot-drivers" aria-hidden="true"></a></h3><p><strong>1.</strong> Please download the ADB and Fastboot drivers and install them using the link provided below.</p>
 <ul>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://adb.clockworkmod.com/">Android USB Driver</a></li>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696">ADB Fastboot Tool</a></li>
@@ -191,7 +196,7 @@
     
 
 <p><strong>Note:</strong> If you encounter the “0 Files Copied Error,” download and install the “15_Second_ADB_Installer_v1.3.0” version, as the latest version might not be compatible with your computer’s Windows version.</p>
-<h3 id="1-2-Download-the-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" class="article-heading"><a href="#1-2-Download-the-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" class="headerlink" title="1.2 Download the QPST Tool and QUALCOMM USB Driver to Flash the Image"></a>1.2 Download the QPST Tool and QUALCOMM USB Driver to Flash the Image<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#1-2-Download-the-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image'}, '*');" class="article-anchor" href="#1-2-Download-the-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" aria-hidden="true"></a></h3><p><strong>1.</strong> Please download the driver below,</p>
+<h3 id="Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" class="article-heading"><a href="#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" class="headerlink" title="Download QPST Tool and QUALCOMM USB Driver to Flash the Image"></a>Download QPST Tool and QUALCOMM USB Driver to Flash the Image<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image'}, '*');" class="article-anchor" href="#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" aria-hidden="true"></a></h3><p><strong>1.</strong> Please download the driver below,</p>
 <ul>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/downloads/qualcomm-hs-usb-qdloader-9008/">USB driver</a></li>
 </ul>
@@ -209,8 +214,8 @@
 </center>
 
 <p><strong>4.</strong> After installing QPST, the Qualcomm Flash Image Loader (QFIL) Tool will be installed on your PC. Please open the QFIL Tool (Search bar -&gt; Application -&gt; QFIL).</p>
-<h2 id="2-How-to-Flash-the-Image" class="article-heading"><a href="#2-How-to-Flash-the-Image" class="headerlink" title="2.  How to Flash the Image"></a>2.  How to Flash the Image<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#2-How-to-Flash-the-Image'}, '*');" class="article-anchor" href="#2-How-to-Flash-the-Image" aria-hidden="true"></a></h2><p>To initiate the flashing process for the Ubuntu image, it is essential to first transition the module into Emergency Download (EDL) mode. Once the module is in EDL mode, the Ubuntu image can be flashed using either Qualcomm Flash Image Loader (QFIL) or Android Debug Bridge (ADB).</p>
-<h3 id="2-1-Enter-into-EDL-Emergency-Download-Mode" class="article-heading"><a href="#2-1-Enter-into-EDL-Emergency-Download-Mode" class="headerlink" title="2.1 Enter into EDL(Emergency Download) Mode"></a>2.1 Enter into EDL(Emergency Download) Mode<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#2-1-Enter-into-EDL-Emergency-Download-Mode'}, '*');" class="article-anchor" href="#2-1-Enter-into-EDL-Emergency-Download-Mode" aria-hidden="true"></a></h3><center>
+<h2 id="How-to-Flash-the-Image" class="article-heading"><a href="#How-to-Flash-the-Image" class="headerlink" title="How to Flash the Image"></a>How to Flash the Image<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#How-to-Flash-the-Image'}, '*');" class="article-anchor" href="#How-to-Flash-the-Image" aria-hidden="true"></a></h2><p>To initiate the flashing process for the Ubuntu image, it is essential to first transition the module into Emergency Download (EDL) mode. Once the module is in EDL mode, the Ubuntu image can be flashed using either Qualcomm Flash Image Loader (QFIL) or Android Debug Bridge (ADB).</p>
+<h3 id="Enter-into-EDL-Emergency-Download-Mode" class="article-heading"><a href="#Enter-into-EDL-Emergency-Download-Mode" class="headerlink" title="Enter into EDL(Emergency Download) Mode"></a>Enter into EDL(Emergency Download) Mode<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Enter-into-EDL-Emergency-Download-Mode'}, '*');" class="article-anchor" href="#Enter-into-EDL-Emergency-Download-Mode" aria-hidden="true"></a></h3><center>
    <img src="LEC-RB5UserGuide.assets/RB5N.png" style="width:60%;">     
 </center>
 
@@ -222,7 +227,7 @@
 <p><strong>6.</strong> Press the <strong>F_DL Key Button</strong> on the module</p>
 <p><strong>7.</strong> Hold the <strong>F_DL Key Button</strong> and power on the module by connecting the power cable.</p>
 <p><strong>8.</strong> Release the  <strong>F_DL Key Button</strong> and connect the <strong>Micro USB</strong> cable.</p>
-<h3 id="2-2-Flashing-on-Module-QFIL" class="article-heading"><a href="#2-2-Flashing-on-Module-QFIL" class="headerlink" title="2.2 Flashing on Module (QFIL)"></a>2.2 Flashing on Module (QFIL)<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#2-2-Flashing-on-Module-QFIL'}, '*');" class="article-anchor" href="#2-2-Flashing-on-Module-QFIL" aria-hidden="true"></a></h3><p><strong>1.</strong> The image being flashed contains the NON HIGH LEVEL OPERATING SYSTEM (NON-HLOS)  firmware, boot-loader, kernel, and file-system.<br><strong>2.</strong> Please use the QFIL Tool and follow the steps below.<br><strong>3.</strong> Make sure image path is short in host PC from drive as below.</p>
+<h3 id="Flashing-on-Module-QFIL" class="article-heading"><a href="#Flashing-on-Module-QFIL" class="headerlink" title="Flashing on Module (QFIL)"></a>Flashing on Module (QFIL)<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Flashing-on-Module-QFIL'}, '*');" class="article-anchor" href="#Flashing-on-Module-QFIL" aria-hidden="true"></a></h3><p><strong>1.</strong> The image being flashed contains the NON HIGH LEVEL OPERATING SYSTEM (NON-HLOS)  firmware, boot-loader, kernel, and file-system.<br><strong>2.</strong> Please use the QFIL Tool and follow the steps below.<br><strong>3.</strong> Make sure image path is short in host PC from drive as below.</p>
    <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">windows_Drive:\LEC-RB5-8G--UBUNTU_20_04_xx\LEC-RB5-8G-NON-HLOS-UBUNTU_20_04-xx</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>4.</strong> Enter the module into Download mode (refer to section 2.0 for instructions).After LEC-RB5 Enters into EDL mode -&gt; QFIL Tool will detect LEC-RB5 module as <strong>Qualcomm HS-USB QDLoader 9008</strong>.</p>
@@ -270,13 +275,21 @@
 </center>
 
 <p><font color="red"><strong>Attention:   After the image flashed successfully, the target device automatically reset itself. Don’t turn off (or) Reset the target device manually. It causes the image packages to break, resulting in the inability to boot.</strong></font></p>
-<p><strong>12.</strong> Now, wait for the Ubuntu terminal to show up on the target HDMI.</p>
-<center>
-   <img src="LEC-RB5UserGuide.assets\ubulogn.png">
-</center>
-
-
-<p><strong>13.</strong> After this, you can only see the CLI(Command Line Interface). You can install the desktop based on your needs.</p>
+<h3 id="Flashing-on-Module-QDL-linux-only" class="article-heading"><a href="#Flashing-on-Module-QDL-linux-only" class="headerlink" title="Flashing on Module (QDL, linux-only)"></a>Flashing on Module (QDL, linux-only)<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Flashing-on-Module-QDL-linux-only'}, '*');" class="article-anchor" href="#Flashing-on-Module-QDL-linux-only" aria-hidden="true"></a></h3><p> This is an alternative to flashing with QFIL, using an open-source tool called Qualcomm Download (QDL).</p>
+<p> Please note this method only works on Linux. On Ubuntu, qdl can easily be installed using snap: </p>
+<p> <code>snap install qdl</code></p>
+<p> If you prefer to compile the software yourself, the source can be found on the Linaro website: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://git.codelinaro.org/linaro/qcomlt/qdl">https://git.codelinaro.org/linaro/qcomlt/qdl</a></p>
+<ol>
+<li>Open a terminal and navigate to the <code>ufs</code> folder inside the NON-HLOS folder.</li>
+<li>Make sure the device is in EDL mode</li>
+<li>Flash the software using the following command:</li>
+</ol>
+<p> <code>sudo qdl --include ./ --storage ufs ./prog_firehose_ddr.elf rawprogram*.xml patch*.xml</code></p>
+<ol start="4">
+<li>The module does not restart automatically. Remove the power and USB cables.</li>
+<li>Plug in the USB cable before plugging the power cable back in. Your device should now boot into the operating system.</li>
+</ol>
+<h3 id="Flashing-on-Module-ADB" class="article-heading"><a href="#Flashing-on-Module-ADB" class="headerlink" title="Flashing on Module (ADB)"></a>Flashing on Module (ADB)<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Flashing-on-Module-ADB'}, '*');" class="article-anchor" href="#Flashing-on-Module-ADB" aria-hidden="true"></a></h3><p><strong>13.</strong> After this, you can only see the CLI(Command Line Interface). You can install the desktop based on your needs.</p>
 <p><strong>14.</strong> Login credentials are below,</p>
 <pre><code>**User:** adlink 
 
@@ -317,7 +330,29 @@
 <p><strong>9.</strong> Enter into Fastboot mode.</p>
    <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> fastboot flash boot_a qti<span class="literal">-ubuntu</span><span class="literal">-robotics</span><span class="literal">-image</span><span class="literal">-qrb5165</span><span class="literal">-rb5</span><span class="literal">-boot</span>.img</span><br><span class="line"><span class="variable">$</span> fastboot flash boot_b qti<span class="literal">-ubuntu</span><span class="literal">-robotics</span><span class="literal">-image</span><span class="literal">-qrb5165</span><span class="literal">-rb5</span><span class="literal">-boot</span>.img</span><br><span class="line"><span class="variable">$</span> fastboot flash system qti<span class="literal">-ubuntu</span><span class="literal">-robotics</span><span class="literal">-image</span><span class="literal">-qrb5165</span><span class="literal">-rb5</span>-  sysfs.ext4</span><br><span class="line"><span class="variable">$</span> fastboot flash abl_a abl.elf</span><br><span class="line"><span class="variable">$</span> fastboot flash abl_b abl.elf</span><br><span class="line"><span class="variable">$</span> fastboot reboot</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-4-Logging-in-to-Wayland-Desktop" class="article-heading"><a href="#2-4-Logging-in-to-Wayland-Desktop" class="headerlink" title="2.4 Logging in to Wayland Desktop"></a>2.4 Logging in to Wayland Desktop<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#2-4-Logging-in-to-Wayland-Desktop'}, '*');" class="article-anchor" href="#2-4-Logging-in-to-Wayland-Desktop" aria-hidden="true"></a></h3><p><strong>1.</strong> After this, you can only see the CLI(Command Line Interface). You can install the desktop based on your needs.<br><strong>2.</strong> Once the desktop is installed, you will see the desktop login page. Select “<strong>Ubuntu with Wayland</strong>“ and log in to the desktop using the following credentials:                  </p>
+<p><font color="red"><strong>Attention :   After, the image flashed successfully, the target device automatically reset by itself. Don’t turn off (or) Reset the target device manually. It causes the image packages to break, resulting in the inability to boot.</strong></font></p>
+<h4 id="Troubleshooting-Qualcomm-USB-driver-yellow-bang" class="article-heading"><a href="#Troubleshooting-Qualcomm-USB-driver-yellow-bang" class="headerlink" title="Troubleshooting Qualcomm USB driver (yellow bang)"></a><strong>Troubleshooting Qualcomm USB driver (yellow bang)</strong><a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Troubleshooting-Qualcomm-USB-driver-yellow-bang'}, '*');" class="article-anchor" href="#Troubleshooting-Qualcomm-USB-driver-yellow-bang" aria-hidden="true"></a></h4>   <center>
+      <img src="LEC-RB5UserGuide.assets/updatedrv01.png">
+   </center>
+   <br>
+
+<ol>
+<li><p>The driver may have to be manually selected and updated as detailed in the screenshots below.  </p>
+</li>
+<li><p>Right click on <strong>Android</strong> select Update drivers.  </p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv02.png">
+      
+   <img src="LEC-RB5UserGuide.assets/updatedrv03.png">
+               
+   <img src="LEC-RB5UserGuide.assets/updatedrv04.png">                            
+</center>
+<br>
+</li>
+<li><p>The driver is already present in the system at this stage and should be available in the list as ‘<strong>Android ADB Interface’</strong>.</p>
+</li>
+</ol>
+<p><strong>1.</strong> After this, you can only see the CLI(Command Line Interface). You can install the desktop based on your needs.<br><strong>2.</strong> Once the desktop is installed, you will see the desktop login page. Select “<strong>Ubuntu with Wayland</strong>“ and log in to the desktop using the following credentials:                  </p>
 <p>​    <strong>User:</strong> adlink</p>
 <p>​    <strong>Password:</strong> adlink123</p>
 <p><strong>Note</strong>: If the ‘<strong>Ubuntu with Wayland</strong>’ context menu item is not visible, please click on the user icon, and it should pop up.</p>
@@ -329,7 +364,26 @@
    <img src="LEC-RB5UserGuide.assets\ub01.jpg" alt="ub01" style="width: 60%;">
 </center>
 
-<h3 id="2-5-Enabling-the-network-manager" class="article-heading"><a href="#2-5-Enabling-the-network-manager" class="headerlink" title="2.5 Enabling the network manager"></a>2.5 Enabling the network manager<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#2-5-Enabling-the-network-manager'}, '*');" class="article-anchor" href="#2-5-Enabling-the-network-manager" aria-hidden="true"></a></h3><p>The network manager needs to be reinstalled after installing the desktop environment. To enable it, follow the below command on the RB5 Ubuntu desktop terminal.</p>
+<h3 id="Logging-in-to-Wayland-Desktop" class="article-heading"><a href="#Logging-in-to-Wayland-Desktop" class="headerlink" title="Logging in to Wayland Desktop"></a>Logging in to Wayland Desktop<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Logging-in-to-Wayland-Desktop'}, '*');" class="article-anchor" href="#Logging-in-to-Wayland-Desktop" aria-hidden="true"></a></h3><ol>
+<li><p>After updating the image, Ubuntu desktop will be installed automatically.</p>
+</li>
+<li><p>During the installation process, please do not turn off the module.</p>
+</li>
+<li><p>Once the desktop is installed, you will see the desktop login page. Select “<strong>Ubuntu with Wayland</strong>“ and log in to the desktop using the following credentials:                  </p>
+<p> <strong>User:</strong> adlink </p>
+<p> <strong>Password:</strong> adlink123</p>
+</li>
+</ol>
+<p><strong>Note</strong>: In case the ‘<strong>Ubuntu with Wayland</strong>’ context menu item is not visible, please click on the user icon and it should pop-up.</p>
+   <center>
+   <img src="LEC-RB5UserGuide.assets/adlinklogin.png" style="widht:80%;">
+
+   <img src="LEC-RB5UserGuide.assets/ub01.jpg" style="widht:80%;">
+
+   </center>
+   <br>
+
+<h3 id="Enbling-the-network-manager" class="article-heading"><a href="#Enbling-the-network-manager" class="headerlink" title="Enbling the network manager"></a>Enbling the network manager<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Enbling-the-network-manager'}, '*');" class="article-anchor" href="#Enbling-the-network-manager" aria-hidden="true"></a></h3><p>The network manager needs to be reinstalled after installing the desktop environment. Follow the below command on the RB5 Ubuntu desktop terminal. It will enable the network manager.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> su</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">&quot;nameserver 8.8.8.8&quot;</span>&gt;&gt;/etc/resolv.conf</span></span><br></pre></td></tr></table></figure>
@@ -338,7 +392,7 @@
 
 
 
-<h3 id="2-6-Erasing-image-from-Module" class="article-heading"><a href="#2-6-Erasing-image-from-Module" class="headerlink" title="2.6 Erasing image from Module"></a>2.6 Erasing image from Module<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#2-6-Erasing-image-from-Module'}, '*');" class="article-anchor" href="#2-6-Erasing-image-from-Module" aria-hidden="true"></a></h3><p>To erase the images on the module, follow the steps below.</p>
+<h3 id="Erasing-image-from-Module" class="article-heading"><a href="#Erasing-image-from-Module" class="headerlink" title="Erasing image from Module"></a>Erasing image from Module<a onclick="parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#Erasing-image-from-Module'}, '*');" class="article-anchor" href="#Erasing-image-from-Module" aria-hidden="true"></a></h3><p>To erase the images on the module, follow the steps below.</p>
 <p><strong>1.</strong> Check LEC-RB5 detected on the host.</p>
    <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> adb devices </span><br></pre></td></tr></table></figure>
 
@@ -397,7 +451,7 @@
 </center>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2024-06-17T05:06:14.287Z" itemprop="dateModified">Last updated: 2024-06-17</time>
+                <time class="article-footer-updated" datetime="2024-08-06T09:07:24.012Z" itemprop="dateModified">Last updated: 2024-08-06</time>
                 <a href="SerialLogReadUART.html" class="article-footer-prev" title="How to Read Console Output"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="NeuralProcessingSDKForAI.html" class="article-footer-next" title="Qualcomm Neural Processing SDK"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -407,7 +461,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-Guide-for-Ubuntu-OS-on-I-Pi-SMARC-RB5"><span class="toc-text">Flashing Guide for Ubuntu OS on I-Pi SMARC RB5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Prerequisites"><span class="toc-text">1. Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Download-and-Install-ADB-and-Fastboot-drivers"><span class="toc-text">1.1 Download and Install ADB and Fastboot drivers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Download-the-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image"><span class="toc-text">1.2 Download the QPST Tool and QUALCOMM USB Driver to Flash the Image</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-How-to-Flash-the-Image"><span class="toc-text">2.  How to Flash the Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Enter-into-EDL-Emergency-Download-Mode"><span class="toc-text">2.1 Enter into EDL(Emergency Download) Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Flashing-on-Module-QFIL"><span class="toc-text">2.2 Flashing on Module (QFIL)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Flashing-on-Module-ADB"><span class="toc-text">2.3 Flashing on Module (ADB)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Logging-in-to-Wayland-Desktop"><span class="toc-text">2.4 Logging in to Wayland Desktop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-Enabling-the-network-manager"><span class="toc-text">2.5 Enabling the network manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-Erasing-image-from-Module"><span class="toc-text">2.6 Erasing image from Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-Troubleshooting-Qualcomm-USB-driver-yellow-bang"><span class="toc-text">2.7 Troubleshooting Qualcomm USB driver (yellow bang)</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-Guide-for-Ubuntu-OS-on-I-Pi-SMARC-RB5"><span class="toc-text">Flashing Guide for Ubuntu OS on I-Pi SMARC RB5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Download-and-Install-ADB-and-Fastboot-drivers"><span class="toc-text">Download and Install ADB and Fastboot drivers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image"><span class="toc-text">Download QPST Tool and QUALCOMM USB Driver to Flash the Image</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Flash-the-Image"><span class="toc-text">How to Flash the Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enter-into-EDL-Emergency-Download-Mode"><span class="toc-text">Enter into EDL(Emergency Download) Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-on-Module-QFIL"><span class="toc-text">Flashing on Module (QFIL)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-on-Module-QDL-linux-only"><span class="toc-text">Flashing on Module (QDL, linux-only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-on-Module-ADB"><span class="toc-text">Flashing on Module (ADB)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Flashing-on-Module-ADB"><span class="toc-text">2.3 Flashing on Module (ADB)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Troubleshooting-Qualcomm-USB-driver-yellow-bang"><span class="toc-text">Troubleshooting Qualcomm USB driver (yellow bang)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logging-in-to-Wayland-Desktop"><span class="toc-text">Logging in to Wayland Desktop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enbling-the-network-manager"><span class="toc-text">Enbling the network manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erasing-image-from-Module"><span class="toc-text">Erasing image from Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-Troubleshooting-Qualcomm-USB-driver-yellow-bang"><span class="toc-text">2.7 Troubleshooting Qualcomm USB driver (yellow bang)</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
