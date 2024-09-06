@@ -319,7 +319,7 @@ $('button').click(function(){
 <tr>
 <td>Get Sensor Reading</td>
 <td><code>ipmitool sensor get &lt;sensor_name&gt;</code></td>
-<td>Retrieves the current reading for a specific sensor. \<sensor_name\> is the name of the sensor you want to query.</sensor_name\></td>
+<td>Retrieves the current reading for a specific sensor. &lt;sensor_name&gt; is the name of the sensor you want to query.</sensor_name&gt;</td>
 </tr>
 <tr>
 <td>Sensor Readings Summary</td>
@@ -344,12 +344,12 @@ $('button').click(function(){
 <tr>
 <td>Get Sensor Reading by ID</td>
 <td><code>ipmitool sensor reading &lt;sensor_id&gt;</code></td>
-<td>Retrieves the current reading for a sensor identified by its ID. \<sensor_id\> is the numerical identifier of the sensor.</sensor_id\></td>
+<td>Retrieves the current reading for a sensor identified by its ID. &lt;sensor_id&gt; is the numerical identifier of the sensor.&lt;sensor_id&gt;</td>
 </tr>
 <tr>
 <td>Get Thresholds for a Sensor</td>
 <td><code>ipmitool sensor thresh &lt;sensor_name&gt; all</code></td>
-<td>Retrieves the threshold settings for a specific sensor. \<sensor_name\> is the name of the sensor.</sensor_name\></td>
+<td>Retrieves the threshold settings for a specific sensor. &lt;sensor_name&gt; is the name of the sensor.&lt;sensor_name&gt;</td>
 </tr>
 <tr>
 <td>Show Sensor Status</td>
@@ -387,7 +387,7 @@ $('button').click(function(){
 <tr>
 <td>Chassis Identify with Timeout</td>
 <td><code>ipmitool chassis identify &lt;seconds&gt;</code></td>
-<td>Activates the chassis identify LED for a specified duration. \<seconds\> is the number of seconds the LED should remain active.</seconds\></td>
+<td>Activates the chassis identify LED for a specified duration. &lt;seconds&gt; is the number of seconds the LED should remain active.</seconds&gt;</td>
 </tr>
 <tr>
 <td>Chassis Identify Off</td>
@@ -402,7 +402,7 @@ $('button').click(function(){
 <tr>
 <td>Set Front Panel LED</td>
 <td><code>ipmitool chassis frontpanel &lt;state&gt;</code></td>
-<td>Sets the state of the front panel LED. \<state\> can be on or off.</state\></td>
+<td>Sets the state of the front panel LED. &lt;state&gt; can be on or off.</state&gt;</td>
 </tr>
 <tr>
 <td>Get Front Panel LED Status</td>
@@ -441,7 +441,7 @@ $('button').click(function(){
 <tr>
 <td>Set User Privilege Level</td>
 <td><code>ipmitool user priv &lt;user_id&gt; &lt;privilege&gt; &lt;channel&gt;</code></td>
-<td>Sets the privilege level for the specified user ID on a specified channel. \<privilege\> can be 1 (Callback), 2 (User), 3 (Operator), or 4 (Administrator). \<channel\> is usually 1 for LAN.</channel\></privilege\></td>
+<td>Sets the privilege level for the specified user ID on a specified channel. &lt;privilege&gt; can be 1 (Callback), 2 (User), 3 (Operator), or 4 (Administrator). &lt;channel&gt; is usually 1 for LAN.</channel&gt;</privilege&gt;</td>
 </tr>
 <tr>
 <td>Enable User</td>
@@ -461,9 +461,9 @@ $('button').click(function(){
 <tr>
 <td>Set User Access</td>
 <td><code>ipmitool user set access &lt;user_id&gt; &lt;channel&gt; &lt;access&gt;</code></td>
-<td>Configures the access settings for the specified user on the specified channel. \<access\> can be callin=on\</access\></td>
-<td>off, link=on\</td>
-<td>off, ipmi=on\</td>
+<td>Configures the access settings for the specified user on the specified channel. &lt;access&gt; can be callin=on&lt;/access&gt;</td>
+<td>off, link=on&lt;/td>
+<td>off, ipmi=on&lt;/td>
 <td>off.</td>
 </tr>
 <tr>
@@ -492,7 +492,7 @@ $('button').click(function(){
 <tbody>
 <tr>
 <td><strong>Starting SOL  Session</strong>  To start a SOL  session using IPMI, you generally use the sol activate command. Here’s the  typical syntax:</td>
-<td><code>ipmitool -H  &lt;BMC_IP&gt; -U &lt;username&gt; -P &lt;password&gt; sol activate</code><br>- \<bmc_ip\>:  Replace this with the IP address or hostname of your BMC.<br>- \<username\>  and \<password\>: Replace these with your BMC login credentials.</password\></username\></bmc_ip\></td>
+<td><code>ipmitool -H  &lt;BMC_IP&gt; -U &lt;username&gt; -P &lt;password&gt; sol activate</code><br>- &lt;bmc_ip&gt;:  Replace this with the IP address or hostname of your BMC.<br>- &lt;username&gt;  and &lt;password&gt;: Replace these with your BMC login credentials.</password&gt;</username&gt;</bmc_ip&gt;</td>
 <td>Example:  <code>ipmitool -H  192.168.1.100 -U admin -P password sol activate</code><br>This command  initiates a SOL session with the BMC.</td>
 </tr>
 <tr>
@@ -508,7 +508,7 @@ $('button').click(function(){
 </li>
 <li><p><strong>IPMI Tool (ipmitool)</strong>: Ensure that ipmitool is installed on your system. It’s a common command-line interface for managing BMCs and provides various capabilities including SOL session management.</p>
 </li>
-<li><p><strong>Authentication</strong>: Replace \<username\> and \<password\> with your actual BMC login credentials.</password\></username\></p>
+<li><p><strong>Authentication</strong>: Replace &lt;username&gt; and &lt;password&gt; with your actual BMC login credentials.</password&gt;</username&gt;</p>
 </li>
 <li><p><strong>BMC IP Address</strong>: Use the correct IP address or hostname of your BMC.</p>
 </li>
@@ -538,7 +538,7 @@ $('button').click(function(){
 <tr>
 <td>Send Key Stroke:</td>
 <td><code>send_key_stroke &lt;key&gt;</code></td>
-<td>Sends a specific key stroke to the remote server. \<key\> is the key you want to send, such as Ctrl, Alt, Del, etc.</key\></td>
+<td>Sends a specific key stroke to the remote server. &lt;key&gt; is the key you want to send, such as Ctrl, Alt, Del, etc.</key&gt;</td>
 </tr>
 <tr>
 <td>Send Key Combination:</td>
@@ -576,7 +576,7 @@ $('button').click(function(){
 <tr>
 <td>Adjust Video Quality</td>
 <td><code>adjust_video_quality &lt;quality&gt;</code></td>
-<td>Adjusts the quality of the video redirection stream. \<quality\> can be values like low, medium, or high.</quality\></td>
+<td>Adjusts the quality of the video redirection stream. &lt;quality&gt; can be values like low, medium, or high.</quality&gt;</td>
 </tr>
 <tr>
 <td>Full-Screen Mode</td>
@@ -609,7 +609,7 @@ $('button').click(function(){
 <tr>
 <td>Set Redirection Timeout:</td>
 <td><code>set_redirection_timeout &lt;time&gt;</code></td>
-<td>Sets a timeout value for the redirection session. \<time\> is specified in seconds or minutes.</time\></td>
+<td>Sets a timeout value for the redirection session. &lt;time&gt; is specified in seconds or minutes.</time&gt;</td>
 </tr>
 </tbody>
 </table>
@@ -628,7 +628,7 @@ $('button').click(function(){
 <tr>
 <td>Set Terminal Mode</td>
 <td><code>set_terminal_mode &lt;mode&gt;</code></td>
-<td>Sets the terminal to a specific mode. \<mode\> can be values like text, graphics, or secure.</mode\></td>
+<td>Sets the terminal to a specific mode. &lt;mode&gt; can be values like text, graphics, or secure.&lt;mode&gt;</td>
 </tr>
 <tr>
 <td>Enable Echo:</td>
@@ -643,32 +643,32 @@ $('button').click(function(){
 <tr>
 <td>Set Baud Rate:</td>
 <td><code>set_baud_rate &lt;rate&gt;</code></td>
-<td>Sets the baud rate for serial communication. \<rate\> is the desired baud rate, such as 9600, 19200, etc</rate\></td>
+<td>Sets the baud rate for serial communication. &lt;rate&gt; is the desired baud rate, such as 9600, 19200, etc&lt;rate&gt;</td>
 </tr>
 <tr>
 <td>Set Parity</td>
 <td><code>set_parity &lt;parity&gt;</code></td>
-<td>Configures the parity bit for serial communication. \<parity\> can be none, even, odd, mark, or space.</parity\></td>
+<td>Configures the parity bit for serial communication. &lt;parity&gt; can be none, even, odd, mark, or space.&lt;parity&gt;</td>
 </tr>
 <tr>
 <td>Set Data Bits</td>
 <td><code>set_data_bits &lt;bits&gt;</code></td>
-<td>Sets the number of data bits per character for serial communication. \<bits\> can be values like 7 or 8.</bits\></td>
+<td>Sets the number of data bits per character for serial communication. &lt;bits&gt; can be values like 7 or 8.&lt;bits&gt;</td>
 </tr>
 <tr>
 <td>Set Stop Bits:</td>
 <td><code>set_stop_bits &lt;bits&gt;</code></td>
-<td>Configures the number of stop bits used in serial communication. \<bits\> can be 1 or 2.</bits\></td>
+<td>Configures the number of stop bits used in serial communication. &lt;bits&gt; can be 1 or 2.&lt;bits&gt;</td>
 </tr>
 <tr>
 <td>Set Flow Control:</td>
 <td><code>set_flow_control &lt;type&gt;</code></td>
-<td>Configures flow control for serial communication. \<type\> can be none, hardware, or software.</type\></td>
+<td>Configures flow control for serial communication. &lt;type&gt; can be none, hardware, or software.&lt;type&gt;</td>
 </tr>
 <tr>
 <td>Set Terminal Size:</td>
 <td><code>set_terminal_size &lt;rows&gt; &lt;cols&gt;</code></td>
-<td>Sets the size of the terminal window. \<rows\> and \<cols\> specify the number of rows and columns, respectively.</cols\></rows\></td>
+<td>Sets the size of the terminal window. &lt;rows&gt; and &lt;cols&gt; specify the number of rows and columns, respectively.&lt;cols&gt;&lt;rows&gt;</td>
 </tr>
 <tr>
 <td>Reset Terminal</td>
@@ -678,7 +678,7 @@ $('button').click(function(){
 <tr>
 <td>Set Terminal Encoding</td>
 <td><code>set_terminal_encoding &lt;encoding&gt;</code></td>
-<td>Sets the character encoding for the terminal. \<encoding\> can be values like UTF-8, ISO-8859-1, etc.</encoding\></td>
+<td>Sets the character encoding for the terminal. &lt;encoding&gt; can be values like UTF-8, ISO-8859-1, etc.&lt;encoding&gt;</td>
 </tr>
 <tr>
 <td>Enable/Disable Line Wrapping</td>
