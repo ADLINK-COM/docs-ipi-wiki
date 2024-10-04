@@ -103,12 +103,12 @@ $('button').click(function(){
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="IntroductionThe ADLINK RunBMC module is a hardware and software building block mainly for out-of-band management usage. It is based on ASPEED AST2600 BMC chip and comply with BMC daughter board I&#x2F;O sp">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/runbmc/media/image1.emf">
-<meta property="article:published_time" content="2024-09-13T05:56:48.506Z">
-<meta property="article:modified_time" content="2024-09-12T05:02:14.014Z">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/runbmc/1-1_Introcution.assets/RunBMC%20Function%20block%20diagram.jpg">
+<meta property="article:published_time" content="2024-10-04T06:30:37.090Z">
+<meta property="article:modified_time" content="2024-10-04T06:30:37.090Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/com-hpc/runbmc/media/image1.emf">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-hpc/runbmc/1-1_Introcution.assets/RunBMC%20Function%20block%20diagram.jpg">
   <!-- Google Analytics -->
   
 <script>
@@ -168,16 +168,20 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Introduction" class="article-heading"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction<a onclick="parent.postMessage( {msg: '?page=index.html#Introduction'}, '*');" class="article-anchor" href="#Introduction" aria-hidden="true"></a></h1><p>The ADLINK RunBMC module is a hardware and software building block mainly for out-of-band management usage. It is based on ASPEED AST2600 BMC chip and comply with BMC daughter board I/O specification Rev1.4.1 which defined by Open Compute Project (OCP).</p>
+                <h1 id="Introduction" class="article-heading"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction<a class="article-anchor" href="#Introduction" aria-hidden="true"></a></h1><p>The ADLINK RunBMC module is a hardware and software building block mainly for out-of-band management usage. It is based on ASPEED AST2600 BMC chip and comply with BMC daughter board I/O specification Rev1.4.1 which defined by Open Compute Project (OCP).</p>
 <p>The OCP’s specification defines the interface between the Baseboard Management Controller (BMC) subsystem and hardware platforms, such as network or compute boards. Nowadays, PICMG Computer on Module specification, such as COM Express R3.1 and COM-HPC R1.x specification, also upgrade to support out-of-band management feature by using Module Management Controller (MMC) on module and communicate with BMC mainly through IPMB interfaces. By combination of these modules, customer can quickly emulate the functionality of their end product for software development and hardware verification.</p>
-<h2 id="RunBMC-Function-block-diagrams" class="article-heading"><a href="#RunBMC-Function-block-diagrams" class="headerlink" title="RunBMC Function block diagrams"></a>RunBMC Function block diagrams<a onclick="parent.postMessage( {msg: '?page=index.html#RunBMC-Function-block-diagrams'}, '*');" class="article-anchor" href="#RunBMC-Function-block-diagrams" aria-hidden="true"></a></h2><p><img src="media/image1.emf" alt></p>
+<p><br></p>
+<h2 id="RunBMC-Function-block-diagrams" class="article-heading"><a href="#RunBMC-Function-block-diagrams" class="headerlink" title="RunBMC Function block diagrams"></a>RunBMC Function block diagrams<a class="article-anchor" href="#RunBMC-Function-block-diagrams" aria-hidden="true"></a></h2><center>
+    <img width="75%" src="1-1_Introcution.assets/RunBMC Function block diagram.jpg">
+</center>
+
 <p>The ADLINK RunBMC module provides PCIe, USB interfaces for KVM function, VGA output for local diagnostic purpose, multiple UART for Serial Over LAN and debug purpose, Ethernet interface dedicated for out-of-band management usage, multiple system FAN management and multiple I2C, SMBus, GPIOs, SPI for further expansion, such as sensor monitoring, trigger events and even remote firmware update.</p>
 <p>The ADLINK RunBMC module interfaces with hardware platforms through a 260 pin SODIMM DDR4 connector, which can mount into a mating SODIMM DDR4 socket.</p>
 <p>The ADLINK RunBMC module can be used with selected ADLINK’s COM-HPC and COM Express module and its reference carrier board, but no limit to. Please contact your local ADLINK representative for more detail.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2024-09-12T05:02:14.014Z" itemprop="dateModified">Last updated: 2024-09-12</time>
+                <time class="article-footer-updated" datetime="2024-10-04T06:30:37.090Z" itemprop="dateModified">Last updated: 2024-10-04</time>
                 <a href="1-2_Unboxing.html" class="article-footer-next" title="Unboxing"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -196,7 +200,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link current first">Introduction</a><a href="1-2_Unboxing.html" class="sidebar-link">Unboxing</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="2-1_Module_Instruction.html" class="sidebar-link first">Module Instruction</a><a href="2-2_Carrier_Instruction.html" class="sidebar-link">Carrier Instruction</a></details open></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="3-1_Software Specification.html" class="sidebar-link first">Software Specification</a></details open></strong><strong class="sidebar-title"><details open><summary>Software Procedure</summary><a href="BMC_SW_usermanual_1H_IPMI.html" class="sidebar-link first">IPMI Command</a></details open></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link current first">Introduction</a><a href="1-2_Unboxing.html" class="sidebar-link">Unboxing</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="2-1_ModuleInstruction.html" class="sidebar-link first">Module Instruction</a><a href="2-2_CarrierInstruction.html" class="sidebar-link">Carrier Instruction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="3-1_SoftwareSpecification.html" class="sidebar-link first">Software Specification</a></details></strong><strong class="sidebar-title"><details open><summary>Installation</summary><a href="4-1_ModuleInstallation.html" class="sidebar-link first">Module Installation</a><a href="4-2_InitialPowerAndStatusCheck.html" class="sidebar-link">Initial power-up and basic checks</a></details></strong><strong class="sidebar-title"><details open><summary>Software Procedure</summary><a href="5-2_BMC_SW_usermanual_1H_IPMI.html" class="sidebar-link first">IPMI Command</a><a href="5-3_SOLCommand.html" class="sidebar-link">Serial Over LAN (SOL) Method</a><a href="5-4_WebUIInterfaces.html" class="sidebar-link">WebUI Interfaces</a></details></strong>
   </div>
 </aside>
     </div>
@@ -250,7 +254,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link current first">Introduction</a><a href="1-2_Unboxing.html" class="mobile-nav-link">Unboxing</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="2-1_Module_Instruction.html" class="mobile-nav-link first">Module Instruction</a><a href="2-2_Carrier_Instruction.html" class="mobile-nav-link">Carrier Instruction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="3-1_Software Specification.html" class="mobile-nav-link first">Software Specification</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Software Procedure</summary><a href="BMC_SW_usermanual_1H_IPMI.html" class="mobile-nav-link first">IPMI Command</a></details open></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link current first">Introduction</a><a href="1-2_Unboxing.html" class="mobile-nav-link">Unboxing</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="2-1_ModuleInstruction.html" class="mobile-nav-link first">Module Instruction</a><a href="2-2_CarrierInstruction.html" class="mobile-nav-link">Carrier Instruction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="3-1_SoftwareSpecification.html" class="mobile-nav-link first">Software Specification</a></details></strong><strong class="mobile-nav-title"><details open><summary>Installation</summary><a href="4-1_ModuleInstallation.html" class="mobile-nav-link first">Module Installation</a><a href="4-2_InitialPowerAndStatusCheck.html" class="mobile-nav-link">Initial power-up and basic checks</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Procedure</summary><a href="5-2_BMC_SW_usermanual_1H_IPMI.html" class="mobile-nav-link first">IPMI Command</a><a href="5-3_SOLCommand.html" class="mobile-nav-link">Serial Over LAN (SOL) Method</a><a href="5-4_WebUIInterfaces.html" class="mobile-nav-link">WebUI Interfaces</a></details></strong>
     
   </div>
   

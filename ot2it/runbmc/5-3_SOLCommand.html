@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/com-hpc/runbmc/5-3_SOLCommand.html">
+  <!-- Alternative links -->
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  -->
+
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/ot2it/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+  jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+  });
+
+  $('button').addClass('btn-primary').text('Switch to Orange Tab');
+  $('button').click(function(){
+        $('#tabs a[href=#orange]').tab('show');
+  });
+
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+});
+
+$('button').addClass('btn-primary').text('Switch to Orange Tab');
+$('button').click(function(){
+      $('#tabs a[href=#ava]').tab('show');
+});
+
+</script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+ <!-- Hotjar Tracking Code for https://ipi.wiki 
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/ot2it/css/navy.css">
+
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/ot2it//css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/ot2it/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Serial Over LAN (SOL) Commands:Console redirection: Commands to start or stop SOL sessions.     Command Description     Starting SOL SessionTo start a SOL session using IPMI, you generally use the sol">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/com-hpc/runbmc/5-3_SOLCommand.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Serial Over LAN (SOL) Commands:Console redirection: Commands to start or stop SOL sessions.     Command Description     Starting SOL SessionTo start a SOL session using IPMI, you generally use the sol">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-04T04:58:17.876Z">
+<meta property="article:modified_time" content="2024-10-04T04:58:17.876Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/ot2it/ot2it/" class="main-nav-link  header">menu.OT2IT</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=5-3_SOLCommand.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="Serial-Over-LAN-SOL-Commands" class="article-heading"><a href="#Serial-Over-LAN-SOL-Commands" class="headerlink" title="Serial Over LAN (SOL) Commands:"></a>Serial Over LAN (SOL) Commands:<a class="article-anchor" href="#Serial-Over-LAN-SOL-Commands" aria-hidden="true"></a></h1><h2 id="Console-redirection-Commands-to-start-or-stop-SOL-sessions" class="article-heading"><a href="#Console-redirection-Commands-to-start-or-stop-SOL-sessions" class="headerlink" title="Console redirection: Commands to start or stop SOL sessions."></a>Console redirection: Commands to start or stop SOL sessions.<a class="article-anchor" href="#Console-redirection-Commands-to-start-or-stop-SOL-sessions" aria-hidden="true"></a></h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starting SOL Session</strong><br>To start a SOL session using IPMI, you generally use the sol activate command.</td>
+<td><code>ipmitool -H &lt;BMC_IP&gt; -U &lt;username&gt; -P &lt;password&gt; sol activate</code><br>- <code>&lt;BMC_IP&gt;</code>: Replace this with the IP address or hostname of your BMC.<br>- <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code>: Replace these with your BMC login credentials.</td>
+<td>Example:<br><code>ipmitool -H 192.168.1.100 -U admin -P password sol activate</code><br>This command initiates a SOL session with the BMC.</td>
+</tr>
+<tr>
+<td><strong>Stopping SOL Session</strong><br>To stop a SOL session, you typically use the sol deactivate command.</td>
+<td><code>ipmitool -H &lt;BMC_IP&gt; -U &lt;username&gt; -P &lt;password&gt; sol deactivate</code></td>
+<td>Example:<br><code>ipmitool -H 192.168.1.100 -U admin -P password sol deactivate</code><br>This command terminates the current SOL session with the BMC.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Additional Notes</strong></p>
+<ul>
+<li><p><strong>IPMI Tool (ipmitool)</strong>: Ensure that <code>ipmitool</code> is installed on your system. It’s a common command-line interface for managing BMCs and provides various capabilities including SOL session management.</p>
+</li>
+<li><p><strong>Authentication</strong>: Replace <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code> with your actual BMC login credentials.</p>
+</li>
+<li><p><strong>BMC IP Address</strong>: Use the correct IP address or hostname of your BMC.</p>
+</li>
+</ul>
+<p>These commands should help you start and stop SOL sessions via the BMC using IPMI commands as outlined in the user guide provided by BMC for your specific hardware or software setup. Always refer to the latest BMC documentation or user guide for any updates or specific instructions tailored to your system.</p>
+<p><br></p>
+<h2 id="Keyboard-and-video-redirection-Commands-to-redirect-keyboard-and-video-input-output" class="article-heading"><a href="#Keyboard-and-video-redirection-Commands-to-redirect-keyboard-and-video-input-output" class="headerlink" title="Keyboard and video redirection: Commands to redirect keyboard and video input/output."></a>Keyboard and video redirection: Commands to redirect keyboard and video input/output.<a class="article-anchor" href="#Keyboard-and-video-redirection-Commands-to-redirect-keyboard-and-video-input-output" aria-hidden="true"></a></h2><p>These commands can vary slightly depending on the specific BMC implementation, but generally, they include functionality for managing remote keyboard and video interfaces. Here’s a list of common commands and their explanations:</p>
+<p><br></p>
+<h3 id="Keyboard-Redirection-Commands" class="article-heading"><a href="#Keyboard-Redirection-Commands" class="headerlink" title="Keyboard Redirection Commands"></a>Keyboard Redirection Commands<a class="article-anchor" href="#Keyboard-Redirection-Commands" aria-hidden="true"></a></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Start Keyboard Redirection</strong></td>
+<td><code>start_kbd_redirection</code></td>
+<td>Initiates the redirection of keyboard input from the local console to the remote server.</td>
+</tr>
+<tr>
+<td><strong>Stop Keyboard Redirection</strong></td>
+<td><code>stop_kbd_redirection</code></td>
+<td>Terminates the ongoing keyboard redirection session, returning control to the local console.</td>
+</tr>
+<tr>
+<td><strong>Send Key Stroke</strong></td>
+<td><code>send_key_stroke &lt;key&gt;</code></td>
+<td>Sends a specific key stroke to the remote server. <code>&lt;key&gt;</code> is the key you want to send, such as Ctrl, Alt, Del, etc.</td>
+</tr>
+<tr>
+<td><strong>Send Key Combination</strong></td>
+<td><code>send_key_combination &lt;key1&gt;+&lt;key2&gt;</code></td>
+<td>Sends a combination of keys to the remote server, such as Ctrl+Alt+Del.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<h3 id="Video-Redirection-Commands" class="article-heading"><a href="#Video-Redirection-Commands" class="headerlink" title="Video Redirection Commands"></a>Video Redirection Commands<a class="article-anchor" href="#Video-Redirection-Commands" aria-hidden="true"></a></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Start Video Redirection</strong></td>
+<td><code>start_video_redirection</code></td>
+<td>Initiates the redirection of video output from the remote server to the local console.</td>
+</tr>
+<tr>
+<td><strong>Stop Video Redirection</strong></td>
+<td><code>stop_video_redirection</code></td>
+<td>Ends the ongoing video redirection session.</td>
+</tr>
+<tr>
+<td><strong>Capture Screenshot</strong></td>
+<td><code>capture_screenshot</code></td>
+<td>Captures a screenshot of the current video output from the remote server and saves it to a specified location.</td>
+</tr>
+<tr>
+<td><strong>Adjust Video Quality</strong></td>
+<td><code>adjust_video_quality &lt;quality&gt;</code></td>
+<td>Adjusts the quality of the video redirection stream. <code>&lt;quality&gt;</code> can be values like low, medium, or high.</td>
+</tr>
+<tr>
+<td><strong>Full-Screen Mode</strong></td>
+<td><code>toggle_full_screen</code></td>
+<td>Toggles between full-screen mode and windowed mode for video redirection.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<h3 id="General-Redirection-Commands" class="article-heading"><a href="#General-Redirection-Commands" class="headerlink" title="General Redirection Commands"></a>General Redirection Commands<a class="article-anchor" href="#General-Redirection-Commands" aria-hidden="true"></a></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start All Redirection</td>
+<td><code>start_all_redirection</code></td>
+<td>Simultaneously starts both keyboard and video redirection sessions.</td>
+</tr>
+<tr>
+<td>Stop All Redirection</td>
+<td><code>stop_all_redirection</code></td>
+<td>Simultaneously stops both keyboard and video redirection sessions.</td>
+</tr>
+<tr>
+<td>Set Redirection Timeout</td>
+<td><code>set_redirection_timeout &lt;time&gt;</code></td>
+<td>Sets a timeout value for the redirection session. <code>&lt;time&gt;</code> is specified in seconds or minutes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>These commands are typically executed through a BMC interface, such as a web console or command-line utility. Ensure you refer to the specific BMC documentation for your hardware, as the exact syntax and available commands may vary.</p>
+<p><br></p>
+<h2 id="Terminal-modes-Commands-to-adjust-terminal-modes-and-settings" class="article-heading"><a href="#Terminal-modes-Commands-to-adjust-terminal-modes-and-settings" class="headerlink" title="Terminal modes: Commands to adjust terminal modes and settings."></a>Terminal modes: Commands to adjust terminal modes and settings.<a class="article-anchor" href="#Terminal-modes-Commands-to-adjust-terminal-modes-and-settings" aria-hidden="true"></a></h2><h3 id="Terminal-Modes-Commands" class="article-heading"><a href="#Terminal-Modes-Commands" class="headerlink" title="Terminal Modes Commands"></a>Terminal Modes Commands<a class="article-anchor" href="#Terminal-Modes-Commands" aria-hidden="true"></a></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Terminal Mode</strong></td>
+<td><code>set_terminal_mode &lt;mode&gt;</code></td>
+<td>Sets the terminal to a specific mode. <code>&lt;mode&gt;</code> can be values like text, graphics, or secure.</td>
+</tr>
+<tr>
+<td><strong>Enable Echo</strong></td>
+<td><code>enable_echo</code></td>
+<td>Enables echoing of characters typed by the user, which is useful for normal interaction.</td>
+</tr>
+<tr>
+<td><strong>Disable Echo</strong></td>
+<td><code>disable_echo</code></td>
+<td>Disables echoing of characters typed by the user, often used for password entry or secure input.</td>
+</tr>
+<tr>
+<td><strong>Set Baud Rate</strong></td>
+<td><code>set_baud_rate &lt;rate&gt;</code></td>
+<td>Sets the baud rate for serial communication. <code>&lt;rate&gt;</code> is the desired baud rate, such as 9600, 19200, etc.</td>
+</tr>
+<tr>
+<td><strong>Set Parity</strong></td>
+<td><code>set_parity &lt;parity&gt;</code></td>
+<td>Configures the parity bit for serial communication. <code>&lt;parity&gt;</code> can be none, even, odd, mark, or space.</td>
+</tr>
+<tr>
+<td><strong>Set Data Bits</strong></td>
+<td><code>set_data_bits &lt;bits&gt;</code></td>
+<td>Sets the number of data bits per character for serial communication. <code>&lt;bits&gt;</code> can be values like 7 or 8.</td>
+</tr>
+<tr>
+<td><strong>Set Stop Bits</strong></td>
+<td><code>set_stop_bits &lt;bits&gt;</code></td>
+<td>Configures the number of stop bits used in serial communication. <code>&lt;bits&gt;</code> can be 1 or 2.</td>
+</tr>
+<tr>
+<td><strong>Set Flow Control</strong></td>
+<td><code>set_flow_control &lt;type&gt;</code></td>
+<td>Configures flow control for serial communication. <code>&lt;type&gt;</code> can be none, hardware, or software.</td>
+</tr>
+<tr>
+<td><strong>Set Terminal Size</strong></td>
+<td><code>set_terminal_size &lt;rows&gt; &lt;cols&gt;</code></td>
+<td>Sets the size of the terminal window. <code>&lt;rows&gt;</code> and <code>&lt;cols&gt;</code> specify the number of rows and columns, respectively.</td>
+</tr>
+<tr>
+<td><strong>Reset Terminal</strong></td>
+<td><code>reset_terminal</code></td>
+<td>Resets the terminal settings to their default values.</td>
+</tr>
+<tr>
+<td><strong>Set Terminal Encoding</strong></td>
+<td><code>set_terminal_encoding &lt;encoding&gt;</code></td>
+<td>Sets the character encoding for the terminal. <code>&lt;encoding&gt;</code> can be values like UTF-8, ISO-8859-1, etc.</td>
+</tr>
+<tr>
+<td><strong>Enable/Disable Line Wrapping</strong></td>
+<td><code>toggle_line_wrapping</code></td>
+<td>Toggles the line wrapping setting of the terminal.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<h2 id="Terminal-Settings-Commands" class="article-heading"><a href="#Terminal-Settings-Commands" class="headerlink" title="Terminal Settings Commands"></a>Terminal Settings Commands<a class="article-anchor" href="#Terminal-Settings-Commands" aria-hidden="true"></a></h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Command</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Terminal Color Scheme</strong></td>
+<td><code>set_color_scheme &lt;scheme&gt;</code></td>
+<td>Changes the terminal’s color scheme. <code>&lt;scheme&gt;</code> can be values like <code>default</code>, <code>light</code>, <code>dark</code>, etc.</td>
+</tr>
+<tr>
+<td><strong>Set Cursor Style</strong></td>
+<td><code>set_cursor_style &lt;style&gt;</code></td>
+<td>Sets the cursor style in the terminal. <code>&lt;style&gt;</code> can be <code>block</code>, <code>underline</code>, or <code>beam</code>.</td>
+</tr>
+<tr>
+<td><strong>Enable/Disable Bell</strong></td>
+<td><code>toggle_bell</code></td>
+<td>Toggles the audible bell on or off.</td>
+</tr>
+<tr>
+<td><strong>Set Terminal Title</strong></td>
+<td><code>set_terminal_title &lt;title&gt;</code></td>
+<td>Sets the title of the terminal window. <code>&lt;title&gt;</code> is the desired title string.</td>
+</tr>
+<tr>
+<td><strong>Enable/Disable Scrollback Buffer</strong></td>
+<td><code>toggle_scrollback_buffer</code></td>
+<td>Toggles the scrollback buffer on or off, allowing you to review previous output.</td>
+</tr>
+<tr>
+<td><strong>Set Scrollback Buffer Size</strong></td>
+<td><code>set_scrollback_buffer_size &lt;size&gt;</code></td>
+<td>Sets the size of the scrollback buffer. <code>&lt;size&gt;</code> specifies the number of lines to keep in the buffer.</td>
+</tr>
+<tr>
+<td><strong>Set Terminal Font Size</strong></td>
+<td><code>set_font_size &lt;size&gt;</code></td>
+<td>Changes the font size of the terminal text. <code>&lt;size&gt;</code> is the desired font size.</td>
+</tr>
+<tr>
+<td><strong>Enable/Disable Blinking Cursor</strong></td>
+<td><code>toggle_blinking_cursor</code></td>
+<td>Toggles the blinking cursor feature on or off.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>These commands help in configuring and customizing the terminal to suit specific needs and preferences. The exact syntax and availability of these commands might vary depending on the BMC implementation, so it’s advisable to refer to the specific documentation for your hardware.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2024-10-04T04:58:17.876Z" itemprop="dateModified">Last updated: 2024-10-04</time>
+                <a href="5-2_BMC_SW_usermanual_1H_IPMI.html" class="article-footer-prev" title="IPMI Command"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="5-4_WebUIInterfaces.html" class="article-footer-next" title="WebUI Interfaces"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Serial-Over-LAN-SOL-Commands"><span class="toc-text">Serial Over LAN (SOL) Commands:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Console-redirection-Commands-to-start-or-stop-SOL-sessions"><span class="toc-text">Console redirection: Commands to start or stop SOL sessions.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Keyboard-and-video-redirection-Commands-to-redirect-keyboard-and-video-input-output"><span class="toc-text">Keyboard and video redirection: Commands to redirect keyboard and video input&#x2F;output.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Keyboard-Redirection-Commands"><span class="toc-text">Keyboard Redirection Commands</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Video-Redirection-Commands"><span class="toc-text">Video Redirection Commands</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#General-Redirection-Commands"><span class="toc-text">General Redirection Commands</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Terminal-modes-Commands-to-adjust-terminal-modes-and-settings"><span class="toc-text">Terminal modes: Commands to adjust terminal modes and settings.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Terminal-Modes-Commands"><span class="toc-text">Terminal Modes Commands</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Terminal-Settings-Commands"><span class="toc-text">Terminal Settings Commands</span></a></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="1-2_Unboxing.html" class="sidebar-link">Unboxing</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="2-1_ModuleInstruction.html" class="sidebar-link first">Module Instruction</a><a href="2-2_CarrierInstruction.html" class="sidebar-link">Carrier Instruction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="3-1_SoftwareSpecification.html" class="sidebar-link first">Software Specification</a></details></strong><strong class="sidebar-title"><details open><summary>Installation</summary><a href="4-1_ModuleInstallation.html" class="sidebar-link first">Module Installation</a><a href="4-2_InitialPowerAndStatusCheck.html" class="sidebar-link">Initial power-up and basic checks</a></details></strong><strong class="sidebar-title"><details open><summary>Software Procedure</summary><a href="5-2_BMC_SW_usermanual_1H_IPMI.html" class="sidebar-link first">IPMI Command</a><a href="5-3_SOLCommand.html" class="sidebar-link current">Serial Over LAN (SOL) Method</a><a href="5-4_WebUIInterfaces.html" class="sidebar-link">WebUI Interfaces</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/ot2it/ot2it/" class="mobile-nav-link  header">menu.OT2IT</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="1-2_Unboxing.html" class="mobile-nav-link">Unboxing</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="2-1_ModuleInstruction.html" class="mobile-nav-link first">Module Instruction</a><a href="2-2_CarrierInstruction.html" class="mobile-nav-link">Carrier Instruction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="3-1_SoftwareSpecification.html" class="mobile-nav-link first">Software Specification</a></details></strong><strong class="mobile-nav-title"><details open><summary>Installation</summary><a href="4-1_ModuleInstallation.html" class="mobile-nav-link first">Module Installation</a><a href="4-2_InitialPowerAndStatusCheck.html" class="mobile-nav-link">Initial power-up and basic checks</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Procedure</summary><a href="5-2_BMC_SW_usermanual_1H_IPMI.html" class="mobile-nav-link first">IPMI Command</a><a href="5-3_SOLCommand.html" class="mobile-nav-link current">Serial Over LAN (SOL) Method</a><a href="5-4_WebUIInterfaces.html" class="mobile-nav-link">WebUI Interfaces</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/ot2it/js/lang_select.js"></script>
+
+
+<script src="/ot2it/js/toc.js"></script>
+
+
+<script src="/ot2it/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html> 
