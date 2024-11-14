@@ -1,0 +1,82 @@
+PS C:\Users\adlink> Semautil
+
+Usage:
+- Display this screen:
+        semautil /h
+
+- Watch Dog:
+        semautil /w    for more help rleated to watchdog functions
+
+- Storage:
+        semautil /s    for more help rleated to storage functions
+
+- Smart FAN control:
+        semautil /f    for more help rleated to fan control functions
+
+- System monitor-Board Info:
+        semautil /i    for more help rleated to system monitor-board Info functions
+
+- Voltage monitor:
+        semautil /v    for more help rleated to voltage monitor functions
+
+- Error log:
+        semautil /e    for more help rleated to error log functions
+
+- GPIO:
+        semautil /g    for more help rleated to gpio functions
+
+- Exception Description:
+        semautil /x    for more help rleated to exception description functions
+
+- Board values:
+        semautil /d    for more help rleated to board values functions
+
+- LVDS Backlight control:
+        semautil /b    for more help rleated to LVDS backlid control functions
+
+- Generic I2C Read/Write:
+        semautil /i2c  for more help rleated to generic I2C read/write functions
+
+- BIOS source:
+        semautil /src  for more help rleated to BIOS source functions
+
+------------------------------------------------------------------------------------
+
+PS C:\Users\adlink> semautil /i
+
+- System monitor-Board Info:
+  1. semautil /i get_bd_info [EApi ID]
+  2. semautil /i set_bd_info [EApi ID] [new info]
+       1  : Board manufacturer name
+       2  : Board name
+       3  : Board serial number
+       4  : Board BIOS revision
+       5  : HW revision
+       6  : Board platform type
+       7  : BMC Bootloader revision
+       8  : BMC application revision
+       9  : Board restart event
+       10 : Board repair date
+       11 : Board manufacturer date
+       12 : Board MAC address
+       13 : Board 2nd HW revision number
+       14 : Board 2nd serial
+PS C:\Users\adlink> semautil /i get_bd_info 1
+
+ADLINK Technology Inc.
+PS C:\Users\adlink> semautil /i get_bd_info 2
+
+LEC-EL
+
+--------------------------------------------------------------------------------------
+
+PS C:\Users\adlink> semautil /v
+
+- Voltage monitor:
+  1. semautil /v get_voltage [Channel (0 - 15)]
+PS C:\Users\adlink> semautil /v get_voltage 2
+
+Voltage : 4854 mv
+Description : VIN
+
+--------------------------------------------------------------------------------------
