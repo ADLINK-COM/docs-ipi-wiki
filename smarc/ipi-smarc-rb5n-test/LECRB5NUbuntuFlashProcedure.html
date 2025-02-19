@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LECRB5NUbuntuFlashProcedure.html">
+  <!-- Alternative links -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  -->
+
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/smarc/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+<!--
+  Hotjar Tracking Code for https://ipi.wiki
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/smarc/css/navy.css">
+
+  <!-- endbuild -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/smarc/css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Flashing Guide for Ubuntu OS on I-Pi SMARC RB5N The Ubuntu OS is only for evaluation purposes(Internal use). If it is for commercial use, you need to get a license from Canonical. Canonical’s IP polic">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LECRB5NUbuntuFlashProcedure.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Flashing Guide for Ubuntu OS on I-Pi SMARC RB5N The Ubuntu OS is only for evaluation purposes(Internal use). If it is for commercial use, you need to get a license from Canonical. Canonical’s IP polic">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adbdriver.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/usbdri.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QPST.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/RB5N.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/firehousecpngig.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F02.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F03.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F05.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F06.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F07.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F08.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/QFIL_F09.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adbdev.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adbdev1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv02.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv03.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv04.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adlinklogin.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/ub01.jpg">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adlinklogin.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/ub01.jpg">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv02.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv03.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv04.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv05.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv06.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv07.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/updatedrv08.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adbdev.png">
+<meta property="article:published_time" content="2025-02-19T02:07:02.334Z">
+<meta property="article:modified_time" content="2025-02-19T02:07:02.334Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5UserGuide.assets/adbdriver.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-1200/" class="main-nav-link  header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="main-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="main-nav-link  header">menu.ipi-smarc-rb5</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=LECRB5NUbuntuFlashProcedure.html#LECRB5NUbuntuFlashProcedure.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="Flashing-Guide-for-Ubuntu-OS-on-I-Pi-SMARC-RB5N" class="article-heading"><a href="#Flashing-Guide-for-Ubuntu-OS-on-I-Pi-SMARC-RB5N" class="headerlink" title="Flashing Guide for Ubuntu OS on I-Pi SMARC RB5N"></a>Flashing Guide for Ubuntu OS on I-Pi SMARC RB5N<a class="article-anchor" href="#Flashing-Guide-for-Ubuntu-OS-on-I-Pi-SMARC-RB5N" aria-hidden="true"></a></h1><blockquote>
+<p><strong>The Ubuntu OS is only for evaluation purposes(Internal use). If it is for commercial use, you need to get a license from Canonical. Canonical’s IP policy can be found here: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://ubuntu.com/embedding/faqs">https://ubuntu.com/embedding/faqs</a>.</strong></p>
+</blockquote>
+<p>This document provides detailed information on flashing Ubuntu OS on the I-Pi SMARC RB5N.</p>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+<li><p>To flash the OS on the I-Pi SMARC RB5N, you need a Windows PC (Windows 10&#x2F;Windows 11).</p>
+</li>
+<li><p>Download the prebuilt Ubuntu image files by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/i-pi-smarc-rb5n-download">clicking here</a>.</p>
+</li>
+</ul>
+<h3 id="Download-and-Install-ADB-and-Fastboot-drivers" class="article-heading"><a href="#Download-and-Install-ADB-and-Fastboot-drivers" class="headerlink" title="Download and Install ADB and Fastboot drivers"></a>Download and Install ADB and Fastboot drivers<a class="article-anchor" href="#Download-and-Install-ADB-and-Fastboot-drivers" aria-hidden="true"></a></h3><p><strong>1.</strong> Please download the ADB and Fastboot drivers and install them using the link provided below.</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://adb.clockworkmod.com/">Android USB Driver</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696">ADB Fastboot Tool</a></li>
+</ul>
+<center>
+   <img src="LEC-RB5UserGuide.assets/adbdriver.png">
+</center>  
+
+<p><strong>Note:</strong> If you encounter the “0 Files Copied Error,” download and install the “15_Second_ADB_Installer_v1.3.0” version, as the latest version might not be compatible with your computer’s Windows version.</p>
+<h3 id="Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" class="article-heading"><a href="#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" class="headerlink" title="Download QPST Tool and QUALCOMM USB Driver to Flash the Image"></a>Download QPST Tool and QUALCOMM USB Driver to Flash the Image<a class="article-anchor" href="#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image" aria-hidden="true"></a></h3><p><strong>1.</strong> Please download the driver below,</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/downloads/qualcomm-hs-usb-qdloader-9008/">USB driver</a></li>
+</ul>
+<p><strong>2.</strong> When installing the USB driver, please select the setup type as <strong>ETHERNET-DHCP</strong>.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/usbdri.png">
+</center>
+
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://qpsttool.com/">QPST TOOL</a></li>
+</ul>
+<p><strong>3.</strong> Please select <strong>Complete</strong> during installation as mentioned below.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/QPST.png">
+</center>
+
+<p><strong>4.</strong> After installing QPST, the Qualcomm Flash Image Loader (QFIL) Tool will be installed on your PC. Please open the QFIL Tool (Search bar -&gt; Application -&gt; QFIL).</p>
+<h2 id="How-to-Flash-the-Image" class="article-heading"><a href="#How-to-Flash-the-Image" class="headerlink" title="How to Flash the Image"></a>How to Flash the Image<a class="article-anchor" href="#How-to-Flash-the-Image" aria-hidden="true"></a></h2><p>To initiate the flashing process for the Ubuntu image, it is essential to first transition the module into Emergency Download (EDL) mode. Once the module is in EDL mode, the Ubuntu image can be flashed using either Qualcomm Flash Image Loader (QFIL) or Android Debug Bridge (ADB).</p>
+<h3 id="Enter-into-EDL-Emergency-Download-Mode" class="article-heading"><a href="#Enter-into-EDL-Emergency-Download-Mode" class="headerlink" title="Enter into EDL(Emergency Download) Mode"></a>Enter into EDL(Emergency Download) Mode<a class="article-anchor" href="#Enter-into-EDL-Emergency-Download-Mode" aria-hidden="true"></a></h3><center>
+   <img src="LEC-RB5UserGuide.assets/RB5N.png" style="width:60%;">
+</center>
+
+<p><strong>1.</strong> Micro USB.</p>
+<p><strong>2.</strong> Power jack.</p>
+<p><strong>3.</strong> UART Pins (See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/rb5n-docs?page=SerialLogReadUART.html">How to Read Console Output</a>).</p>
+<p><strong>4.</strong> F_DL button (requires removal of the heatsink).</p>
+<p><strong>5.</strong> Follow these steps to enter into EDL mode.</p>
+<p><strong>6.</strong> Press the <strong>F_DL Key Button</strong> on the module</p>
+<p><strong>7.</strong> Hold the <strong>F_DL Key Button</strong> and power on the module by connecting the power cable.</p>
+<p><strong>8.</strong> Release the  <strong>F_DL Key Button</strong> and connect the <strong>Micro USB</strong> cable.</p>
+<h3 id="Flashing-on-Module-QFIL" class="article-heading"><a href="#Flashing-on-Module-QFIL" class="headerlink" title="Flashing on Module (QFIL)"></a>Flashing on Module (QFIL)<a class="article-anchor" href="#Flashing-on-Module-QFIL" aria-hidden="true"></a></h3><p><strong>1.</strong> The image being flashed contains the NON HIGH LEVEL OPERATING SYSTEM (NON-HLOS)  firmware, boot-loader, kernel, and file-system.<br><strong>2.</strong> Please use the QFIL Tool and follow the steps below.<br><strong>3.</strong> Make sure image path is short in host PC from drive as below.</p>
+   <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">windows_Drive:\LEC-RB5-8G--UBUNTU_20_04_xx\LEC-RB5-8G-NON-HLOS-UBUNTU_20_04-xx</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>4.</strong> Enter the module into Download mode (refer to section 2.0 for instructions).After LEC-RB5 Enters into EDL mode -&gt; QFIL Tool will detect LEC-RB5 module as <strong>Qualcomm HS-USB QDLoader 9008</strong>.</p>
+<p><strong>5.</strong> Open QFIL Tool ,click <strong>Select Port</strong> and make sure that the COM port is detected.</p>
+<p><strong>6.</strong> Choose the <strong>Flat build</strong> option.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F01.png" style="width: 60%;">
+</center>
+
+<p><strong>7.</strong> In ‘<strong>Configuration</strong>’ menu, select ‘<strong>FireHose Configuration</strong>’ and edit the configuration as shown in the image below.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets\firehousecpngig.png" style="width: 25%;">
+</center>
+
+<p><strong>8.</strong> Go to the “Browse “ tab.</p>
+<p><strong>9.</strong> select prog_firehose_ddr.elf</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F02.png" style="width: 60%;"> 
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F03.png" style="width: 60%;">
+</center>
+
+<p><strong>10.</strong> Go to “LOAD XML” tab,select all .xml file.   </p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F05.png" style="width: 60%;">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F06.png" style="width: 60%;">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F07.png" style="width: 60%;">
+</center>
+
+<p><strong>11.</strong> Click download.The QFIL start will process and notify download succeed,Once completed</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F08.png" style="width: 60%;">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/QFIL_F09.png" style="width: 60%;">
+</center>
+
+<font color="red">
+   <strong>Attention:   After the image flashed successfully, the target device automatically reset itself. Don't turn off (or) Reset the target device manually. It causes the image packages to break, resulting in the inability to boot.</strong>
+</font>
+
+<h3 id="Flashing-on-Module-QDL-linux-only" class="article-heading"><a href="#Flashing-on-Module-QDL-linux-only" class="headerlink" title="Flashing on Module (QDL, linux-only)"></a>Flashing on Module (QDL, linux-only)<a class="article-anchor" href="#Flashing-on-Module-QDL-linux-only" aria-hidden="true"></a></h3><p> This is an alternative to flashing with QFIL, using an open-source tool called Qualcomm Download (QDL).</p>
+<p> Please note this method only works on Linux. On Ubuntu, qdl can easily be installed using snap: </p>
+<p> <code>snap install qdl</code></p>
+<p> If you prefer to compile the software yourself, the source can be found on the Linaro website: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://git.codelinaro.org/linaro/qcomlt/qdl">https://git.codelinaro.org/linaro/qcomlt/qdl</a></p>
+<ol>
+<li>Open a terminal and navigate to the <code>ufs</code> folder inside the NON-HLOS folder.</li>
+<li>Make sure the device is in EDL mode</li>
+<li>Flash the software using the following command:</li>
+</ol>
+<p> <code>sudo qdl --include ./ --storage ufs ./prog_firehose_ddr.elf rawprogram*.xml patch*.xml</code></p>
+<ol start="4">
+<li>The module does not restart automatically. Remove the power and USB cables.</li>
+<li>Plug in the USB cable before plugging the power cable back in. Your device should now boot into the operating system.</li>
+</ol>
+<h3 id="Flashing-on-Module-ADB" class="article-heading"><a href="#Flashing-on-Module-ADB" class="headerlink" title="Flashing on Module (ADB)"></a>Flashing on Module (ADB)<a class="article-anchor" href="#Flashing-on-Module-ADB" aria-hidden="true"></a></h3><p><strong>13.</strong> After this, you can only see the CLI(Command Line Interface). You can install the desktop based on your needs.</p>
+<p><strong>14.</strong> Login credentials are below,</p>
+<p>   <strong>User:</strong> adlink</p>
+<p>   <strong>Password:</strong> adlink123</p>
+<p><strong>15.</strong> Once installation is completed, we have Ubuntu login on target HDMI. Proceed to log into the Ubuntu Wayland desktop as detailed in <strong>2.3 Logging in to Wayland Desktop</strong>.</p>
+<p><strong>16.</strong> You also need to enable&#x2F;restart the network manager. For instructions, refer to section <strong>2.4, Enabling the network manager</strong>.</p>
+<h3 id="2-3-Flashing-on-Module-ADB" class="article-heading"><a href="#2-3-Flashing-on-Module-ADB" class="headerlink" title="2.3 Flashing on Module (ADB)"></a>2.3 Flashing on Module (ADB)<a class="article-anchor" href="#2-3-Flashing-on-Module-ADB" aria-hidden="true"></a></h3><p> You can skip this section if you prefer to update the entire image using the QFIL tool, as detailed in section 2.1<br> <strong>If you wish to update only the Bootloader, kernel, and Filesystem and not the NON-HLOS firmware, follow the steps below:</strong></p>
+<p> The image being flashed contains the kernel and file system.<br> Please use the ADB Tool and follow the steps below. </p>
+<p><strong>1.</strong> Image needed “qti-ubuntu-robotics-image-qrb5165-rb5-boot.img”, “qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4” and “abl.elf”.  </p>
+<p><strong>2.</strong> Image can be found on the path :</p>
+<p>​    <strong>FHD HDMI</strong> : &#x2F;LEC-RB5-8G–UBUNTU_20_04_xx&#x2F;LEC-RB5-8G-HLOS-UBUNTU_20_04_xx&#x2F;LEC-RB5-8G-FHD-UBUNTU_20_04_xx&#x2F;</p>
+<p>​    <strong>4K  HDMI</strong>  :&#x2F;LEC-RB5-8G–UBUNTU_20_04_xx&#x2F;LLEC-RB5-8G-HLOS-UBUNTU_20_04_xx&#x2F;LEC-RB5-8G-4K-BUNTU_20_04_xx&#x2F;     </p>
+<p><strong>3.</strong> Power on the Target board and connect the USB OTG&#x2F;Micro USB between Target and the Host PC.</p>
+<p><strong>4.</strong> Open the command prompt.</p>
+<p><strong>5.</strong>  Go to &#x2F;LEC-RB5-8G–UBUNTU_20_04_xx&#x2F;LEC-RB5-8G-HLOS-UBUNTU_20_04_xx&#x2F;LEC-RB5-8G-FHD-UBUNTU_20_04_xx&#x2F; (for FHD).</p>
+<p><strong>6.</strong> Check that the target board (LEC-RB5) was detected using the command below.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> /LEC<span class="literal">-RB5</span><span class="literal">-8G</span>-<span class="literal">-UBUNTU_20_04_xx</span>/LEC<span class="literal">-RB5</span><span class="literal">-8G</span><span class="literal">-HLOS</span>-  UBUNTU_20_04_xx/LEC<span class="literal">-RB5</span><span class="literal">-8G</span><span class="literal">-FHD</span><span class="literal">-UBUNTU_20_04_xx</span>/</span><br><span class="line"><span class="variable">$</span> adb devices </span><br></pre></td></tr></table></figure>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets\adbdev.png">
+</center>
+
+<font color="red">
+   <strong>Note: If the "#adb devices” command shows no device, please check your Device Manager for any yellow bang in the Qualcomm USB driver for troubleshooting. Refer section 2.6</strong>
+</font>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets\adbdev1.png">
+</center>
+
+<p><strong>7.</strong> Enter into ADB mode.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> adb root</span><br><span class="line"><span class="variable">$</span> adb reboot bootloader</span><br></pre></td></tr></table></figure>
+
+<p><strong>8.</strong> Check module detected.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> fastboot devices</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong> If your device is not listed, please check the device manager for yellow bang and update the driver (refer to 2.2.1).</p>
+<p><strong>9.</strong> Enter into Fastboot mode.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> fastboot flash boot_a qti<span class="literal">-ubuntu</span><span class="literal">-robotics</span><span class="literal">-image</span><span class="literal">-qrb5165</span><span class="literal">-rb5</span><span class="literal">-boot</span>.img</span><br><span class="line"><span class="variable">$</span> fastboot flash boot_b qti<span class="literal">-ubuntu</span><span class="literal">-robotics</span><span class="literal">-image</span><span class="literal">-qrb5165</span><span class="literal">-rb5</span><span class="literal">-boot</span>.img</span><br><span class="line"><span class="variable">$</span> fastboot flash system qti<span class="literal">-ubuntu</span><span class="literal">-robotics</span><span class="literal">-image</span><span class="literal">-qrb5165</span><span class="literal">-rb5</span>-  sysfs.ext4</span><br><span class="line"><span class="variable">$</span> fastboot flash abl_a abl.elf</span><br><span class="line"><span class="variable">$</span> fastboot flash abl_b abl.elf</span><br><span class="line"><span class="variable">$</span> fastboot reboot</span><br></pre></td></tr></table></figure>
+
+<font color="red">
+   <strong>
+      Attention :   After, the image flashed successfully, the target device automatically reset by itself. Don't turn off (or) Reset the target device manually. It causes the image packages to break, resulting in the inability to boot.
+   <strong>
+</strong></strong></font>
+
+<h4 id="Troubleshooting-Qualcomm-USB-driver-yellow-bang" class="article-heading"><a href="#Troubleshooting-Qualcomm-USB-driver-yellow-bang" class="headerlink" title="Troubleshooting Qualcomm USB driver (yellow bang)"></a>Troubleshooting Qualcomm USB driver (yellow bang)<a class="article-anchor" href="#Troubleshooting-Qualcomm-USB-driver-yellow-bang" aria-hidden="true"></a></h4><center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv01.png">
+</center>
+<br>
+
+<ol>
+<li><p>The driver may have to be manually selected and updated as detailed in the screenshots below.  </p>
+</li>
+<li><p>Right click on <strong>Android</strong> select Update drivers.</p>
+</li>
+</ol>
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv02.png">
+   <img src="LEC-RB5UserGuide.assets/updatedrv03.png">
+   <img src="LEC-RB5UserGuide.assets/updatedrv04.png">
+</center>
+<br>
+
+<ol start="3">
+<li>The driver is already present in the system at this stage and should be available in the list as ‘<strong>Android ADB Interface’</strong>.</li>
+</ol>
+<p><strong>1.</strong> After this, you can only see the CLI(Command Line Interface). You can install the desktop based on your needs.<br><strong>2.</strong> Once the desktop is installed, you will see the desktop login page. Select “<strong>Ubuntu with Wayland</strong>“ and log in to the desktop using the following credentials:</p>
+<p>​   <strong>User:</strong> adlink</p>
+<p>   <strong>Password:</strong> adlink123</p>
+<p><strong>Note</strong>: If the ‘<strong>Ubuntu with Wayland</strong>’ context menu item is not visible, please click on the user icon, and it should pop up.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets\adlinklogin.png" alt="adlinklogin" style="width: 60%;">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets\ub01.jpg" alt="ub01" style="width: 60%;">
+</center>
+
+<h3 id="Logging-in-to-Wayland-Desktop" class="article-heading"><a href="#Logging-in-to-Wayland-Desktop" class="headerlink" title="Logging in to Wayland Desktop"></a>Logging in to Wayland Desktop<a class="article-anchor" href="#Logging-in-to-Wayland-Desktop" aria-hidden="true"></a></h3><ol>
+<li><p>After updating the image, Ubuntu desktop will be installed automatically.</p>
+</li>
+<li><p>During the installation process, please do not turn off the module.</p>
+</li>
+<li><p>Once the desktop is installed, you will see the desktop login page. Select “<strong>Ubuntu with Wayland</strong>“ and log in to the desktop using the following credentials:</p>
+<p><strong>User:</strong> adlink</p>
+<p><strong>Password:</strong> adlink123</p>
+</li>
+</ol>
+<p><strong>Note</strong>: In case the ‘<strong>Ubuntu with Wayland</strong>’ context menu item is not visible, please click on the user icon and it should pop-up.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/adlinklogin.png" style="width:80%;">
+   <img src="LEC-RB5UserGuide.assets/ub01.jpg" style="width:80%;">
+</center>
+<br>
+
+<h3 id="Enbling-the-network-manager" class="article-heading"><a href="#Enbling-the-network-manager" class="headerlink" title="Enbling the network manager"></a>Enbling the network manager<a class="article-anchor" href="#Enbling-the-network-manager" aria-hidden="true"></a></h3><p>The network manager needs to be reinstalled after installing the desktop environment. Follow the below command on the RB5N Ubuntu desktop terminal. It will enable the network manager.</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> su</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">echo</span> <span class="string">&quot;nameserver 8.8.8.8&quot;</span>&gt;&gt;/etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> apt reinstall wpasupplicant network<span class="literal">-manager</span> <span class="literal">-y</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Erasing-image-from-Module" class="article-heading"><a href="#Erasing-image-from-Module" class="headerlink" title="Erasing image from Module"></a>Erasing image from Module<a class="article-anchor" href="#Erasing-image-from-Module" aria-hidden="true"></a></h3><p>To erase the images on the module, follow the steps below.</p>
+<p><strong>1.</strong> Check LEC-RB5 detected on the host.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> adb devices </span><br></pre></td></tr></table></figure>
+
+<p><strong>2.</strong> Enter the module into ADB mode.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> adb root</span><br><span class="line"><span class="variable">$</span> adb reboot bootloader</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.</strong> Check module detected on host.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> fastboot devices  </span><br></pre></td></tr></table></figure>
+
+<p><strong>4.</strong> Run the below command to erase the kernel and filesystem.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> fastboot <span class="built_in">erase</span> system</span><br><span class="line"><span class="variable">$</span> fastboot <span class="built_in">erase</span> boot_a</span><br><span class="line"><span class="variable">$</span> fastboot <span class="built_in">erase</span> boot_b</span><br><span class="line"><span class="variable">$</span> fastboot reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-7-Troubleshooting-Qualcomm-USB-driver-yellow-bang" class="article-heading"><a href="#2-7-Troubleshooting-Qualcomm-USB-driver-yellow-bang" class="headerlink" title="2.7 Troubleshooting Qualcomm USB driver (yellow bang)"></a>2.7 Troubleshooting Qualcomm USB driver (yellow bang)<a class="article-anchor" href="#2-7-Troubleshooting-Qualcomm-USB-driver-yellow-bang" aria-hidden="true"></a></h3><center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv01.png">
+</center>
+
+<p><strong>1.</strong> The driver may have to be manually selected and updated as detailed in the screenshots below.</p>
+<p><strong>2.</strong> Right click on <strong>Android</strong> select Update drivers.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv02.png">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv03.png">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv04.png">
+</center>
+
+<p><strong>3.</strong> The driver is already present in the system at this stage and should be available in the list as ‘<strong>Android ADB Interface’</strong>.</p>
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv05.png">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv06.png">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv07.png">
+</center>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/updatedrv08.png">
+</center>
+
+<p><strong>4.</strong> After updating driver,check adb devices in command prompt.</p>
+   <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> adb devices </span><br></pre></td></tr></table></figure>
+
+<center>
+   <img src="LEC-RB5UserGuide.assets/adbdev.png">
+</center>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2025-02-19T02:07:02.334Z" itemprop="dateModified">Last updated: 2025-02-19</time>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flashing-Guide-for-Ubuntu-OS-on-I-Pi-SMARC-RB5N"><span class="toc-text">Flashing Guide for Ubuntu OS on I-Pi SMARC RB5N</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Download-and-Install-ADB-and-Fastboot-drivers"><span class="toc-text">Download and Install ADB and Fastboot drivers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Download-QPST-Tool-and-QUALCOMM-USB-Driver-to-Flash-the-Image"><span class="toc-text">Download QPST Tool and QUALCOMM USB Driver to Flash the Image</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Flash-the-Image"><span class="toc-text">How to Flash the Image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enter-into-EDL-Emergency-Download-Mode"><span class="toc-text">Enter into EDL(Emergency Download) Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-on-Module-QFIL"><span class="toc-text">Flashing on Module (QFIL)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-on-Module-QDL-linux-only"><span class="toc-text">Flashing on Module (QDL, linux-only)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flashing-on-Module-ADB"><span class="toc-text">Flashing on Module (ADB)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Flashing-on-Module-ADB"><span class="toc-text">2.3 Flashing on Module (ADB)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Troubleshooting-Qualcomm-USB-driver-yellow-bang"><span class="toc-text">Troubleshooting Qualcomm USB driver (yellow bang)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logging-in-to-Wayland-Desktop"><span class="toc-text">Logging in to Wayland Desktop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enbling-the-network-manager"><span class="toc-text">Enbling the network manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erasing-image-from-Module"><span class="toc-text">Erasing image from Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-Troubleshooting-Qualcomm-USB-driver-yellow-bang"><span class="toc-text">2.7 Troubleshooting Qualcomm USB driver (yellow bang)</span></a></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall">
+    <ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list">
+      <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/smarc/ipi-smarc-1200/" class="mobile-nav-link  header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="mobile-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="mobile-nav-link  header">menu.ipi-smarc-rb5</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="GPIOUtility.html" class="mobile-nav-link first">GPIO Utility</a><a href="UART.html" class="mobile-nav-link">UART</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadUART.html" class="mobile-nav-link first">How to Read Console Output</a><a href="LECRB5NUbuntuFlashProcedure.html" class="mobile-nav-link current">Flashing Ubuntu</a><a href="LEC-RB5N-8G-YOCTO-FLASH-PROCEDURE_SOP.html" class="mobile-nav-link">Flashing Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="mobile-nav-link first">Qualcomm Neural Processing SDK</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/smarc/js/lang_select.js"></script>
+
+
+<script src="/smarc/js/toc.js"></script>
+
+
+<script src="/smarc/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+<!--
+
+-->
+
+</body>
+</html>
+ 

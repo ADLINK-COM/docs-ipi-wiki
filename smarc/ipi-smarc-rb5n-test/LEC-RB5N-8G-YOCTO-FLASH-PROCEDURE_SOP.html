@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N-8G-YOCTO-FLASH-PROCEDURE_SOP.html">
+  <!-- Alternative links -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  -->
+
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/smarc/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+<!--
+  Hotjar Tracking Code for https://ipi.wiki
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/smarc/css/navy.css">
+
+  <!-- endbuild -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/smarc/css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="1 PrerequisiteTo enter into EDL mode, a Windows PC (Windows 10&#x2F;11) is required. For flashing, you can either use Windows or Ubuntu of your choice. 1.0 Download and Install ADB and Fastboot Driver">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N-8G-YOCTO-FLASH-PROCEDURE_SOP.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="1 PrerequisiteTo enter into EDL mode, a Windows PC (Windows 10&#x2F;11) is required. For flashing, you can either use Windows or Ubuntu of your choice. 1.0 Download and Install ADB and Fastboot Driver">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/adbdriver.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/usbdri.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QPST.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/RB5N.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F02.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F03.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F06.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F07.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F08.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/QFIL_F09.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv02.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv03.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv04.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv05.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv06.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv07.png">
+<meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv08.png">
+<meta property="article:published_time" content="2025-02-19T01:27:54.624Z">
+<meta property="article:modified_time" content="2025-02-19T01:27:54.624Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/adbdriver.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/smarc/ipi-smarc-1200/" class="main-nav-link  header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="main-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="main-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="main-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="main-nav-link  header">menu.ipi-smarc-rb5</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=LEC-RB5N-8G-YOCTO-FLASH-PROCEDURE_SOP.html#LEC-RB5N-8G-YOCTO-FLASH-PROCEDURE_SOP.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h3 id="1-Prerequisite" class="article-heading"><a href="#1-Prerequisite" class="headerlink" title="1 Prerequisite"></a><strong>1 Prerequisite</strong><a class="article-anchor" href="#1-Prerequisite" aria-hidden="true"></a></h3><p>To enter into <strong>EDL mode</strong>, a <strong>Windows PC</strong> (Windows 10&#x2F;11) is required. For flashing, you can either use <strong>Windows</strong> or <strong>Ubuntu</strong> of your choice.</p>
+<h4 id="1-0-Download-and-Install-ADB-and-Fastboot-Drivers" class="article-heading"><a href="#1-0-Download-and-Install-ADB-and-Fastboot-Drivers" class="headerlink" title="1.0 Download and Install ADB and Fastboot Drivers"></a><strong>1.0 Download and Install ADB and Fastboot Drivers</strong><a class="article-anchor" href="#1-0-Download-and-Install-ADB-and-Fastboot-Drivers" aria-hidden="true"></a></h4><p>Before proceeding with any flashing or updates, make sure to download and install the <strong>ADB and Fastboot drivers</strong>. These drivers are necessary for your PC to communicate with the LEC-RB5N module.</p>
+<p>You can download the required drivers from the following links:</p>
+<ul>
+<li><strong>Android USB Driver:</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://adb.clockworkmod.com/">Download Here</a></li>
+<li><strong>ADB Fastboot Tool:</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696">Download Here</a></li>
+</ul>
+<img src="LEC-RB5N_UserGuide.assets/adbdriver.png">
+
+<p><strong>Note:</strong> If you encounter the “<strong>0 Files Copied Error</strong>” during the flashing process, it may be due to compatibility issues with the latest ADB drivers. In this case, download and install the <strong>15_Second_ADB_Installer_v1.3.0</strong> version instead.</p>
+<h4 id="1-1-Download-QPST-Tool-and-Qualcomm-USB-Driver-to-Flash-Image" class="article-heading"><a href="#1-1-Download-QPST-Tool-and-Qualcomm-USB-Driver-to-Flash-Image" class="headerlink" title="1.1 Download QPST Tool and Qualcomm USB Driver to Flash Image"></a><strong>1.1 Download QPST Tool and Qualcomm USB Driver to Flash Image</strong><a class="article-anchor" href="#1-1-Download-QPST-Tool-and-Qualcomm-USB-Driver-to-Flash-Image" aria-hidden="true"></a></h4><p>For the first-time flashing process, you will also need to download the <strong>Qualcomm Product Support Tool (QPST)</strong> and the <strong>Qualcomm USB driver</strong>. These are essential to load the image onto the LEC-RB5N module via <strong>QFIL Tool</strong>.</p>
+<p>Please note: <strong>You will need a QUALCOMM account with special privileges to access the driver and tool.</strong> To obtain new login access, please contact <strong>Qualcomm&#x2F;ADLINK</strong>.</p>
+<ul>
+<li><p><strong>USB Driver:</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://createpoint.qti.qualcomm.com/tools/#suite/190/41888">QUD.WIN.1.1 INSTALLER</a><br>When installing the USB driver, select the setup type as <strong>ETHERNET-DHCP</strong>.</p>
+<img src="LEC-RB5N_UserGuide.assets/usbdri.png">
+</li>
+<li><p><strong>QPST Tool:</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://createpoint.qti.qualcomm.com/tools/#suite/285/46220">QPST.WIN.2.7 INSTALLER</a><br>During installation, choose the <strong>Complete</strong> setup option.</p>
+<img src="LEC-RB5N_UserGuide.assets/QPST.png"></li>
+</ul>
+<p>Once the QPST Tool is installed, the Qualcomm Flash Image Loader (QFIL) Tool will be available on your PC. You can open QFIL by searching for it in the Windows search bar under <strong>Applications</strong>.</p>
+<h3 id="2-How-to-Flash-Image" class="article-heading"><a href="#2-How-to-Flash-Image" class="headerlink" title="2 How to Flash Image"></a><strong>2 How to Flash Image</strong><a class="article-anchor" href="#2-How-to-Flash-Image" aria-hidden="true"></a></h3><p><strong>Note:</strong> This step is only required ,If module was Empty. If Module has been already flashed , Skip this section</p>
+<p><strong>2.2  Flashing BSP Image (Released )</strong></p>
+<p><strong>2.3  Flashing BSP Image (Yocto Build)</strong></p>
+<p>Non-HLOS Image available at  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/i-pi-smarc-rb5n-download">https://www.ipi.wiki/pages/i-pi-smarc-rb5n-download</a></p>
+<h4 id="2-0-Enter-into-EDL-Mode" class="article-heading"><a href="#2-0-Enter-into-EDL-Mode" class="headerlink" title="2.0 Enter into EDL Mode"></a><strong>2.0 Enter into EDL Mode</strong><a class="article-anchor" href="#2-0-Enter-into-EDL-Mode" aria-hidden="true"></a></h4><p> To enter <strong>Emergency Download (EDL) Mode</strong>. Follow these steps:</p>
+<img src="LEC-RB5N_UserGuide.assets/RB5N.png" style="zoom: 67%;">
+
+<ol>
+<li>Press the <strong>F_DL Key Button</strong> on the module.</li>
+<li>While holding the <strong>F_DL Key Button</strong>, power on the module by connecting the power cable.</li>
+<li>Once the module powers on, release the <strong>F_DL Key Button</strong> and connect the <strong>OTG USB</strong> cable to the module.</li>
+</ol>
+<h4 id="2-1-Flashing-on-Module" class="article-heading"><a href="#2-1-Flashing-on-Module" class="headerlink" title="2.1 Flashing on Module"></a>2.1 Flashing on Module<a class="article-anchor" href="#2-1-Flashing-on-Module" aria-hidden="true"></a></h4><p>To Flash the image, Use the <strong>QFIL Tool</strong> and follow the steps below. The image being flashed includes the <strong>NON-HIGH LEVEL OPERATING SYSTEM (NON-HLOS)</strong> firmware, bootloader, kernel, and file system.</p>
+<h4 id="Image-Path" class="article-heading"><a href="#Image-Path" class="headerlink" title="Image Path:"></a><strong>Image Path:</strong><a class="article-anchor" href="#Image-Path" aria-hidden="true"></a></h4><p>Ensure that the image path on your host PC is short (e.g., from the root drive):</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#windows_Drive:/LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-NON-HLOS-YOCTO-XX-XX/</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>First, enter the module into <strong>EDL Mode</strong> (refer to <strong>Section 2.0</strong> for instructions).</p>
+<ul>
+<li>Once the LEC-RB5N enters EDL mode, the QFIL Tool will detect the module as <strong>Qualcomm HS-USB QDLoader 9008</strong>.</li>
+</ul>
+</li>
+<li><p>To enter into EDL mode, a Windows PC (Windows 10&#x2F;11) is required. For flashing , you can either use Windows or Ubuntu of your choice.To enter into EDL mode, a Windows PC (Windows 10&#x2F;11) is required. For flashing , you can either use Windows or Ubuntu of your choice.Open the <strong>QFIL Tool</strong> and verify that the COM port is detected.</p>
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F01.png" style="zoom:67%;"></li>
+</ol>
+<h4 id="Configuring-the-Module-for-Flashing" class="article-heading"><a href="#Configuring-the-Module-for-Flashing" class="headerlink" title="Configuring the Module for Flashing:"></a><strong>Configuring the Module for Flashing:</strong><a class="article-anchor" href="#Configuring-the-Module-for-Flashing" aria-hidden="true"></a></h4><p>To configure the module for flashing, follow these steps:</p>
+<ol>
+<li><p>Select the “<strong>FLAT</strong>“ build option.</p>
+</li>
+<li><p><strong>Select the configuration as shown in the image below for flashing the module.</strong><br>Make sure the module is detected in the QFIL Tool before proceeding.</p>
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F02.png" style="zoom:67%;"></li>
+</ol>
+<h4 id="Flashing-Steps" class="article-heading"><a href="#Flashing-Steps" class="headerlink" title="Flashing Steps:"></a><strong>Flashing Steps:</strong><a class="article-anchor" href="#Flashing-Steps" aria-hidden="true"></a></h4><ol>
+<li><p>Click on the <strong>“Browse”</strong> tab and select <strong>prog_firehose_ddr.elf</strong>.</p>
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F03.png" style="zoom:67%;">
+</li>
+<li><p>Go to the <strong>“LOAD XML”</strong> tab and select all the <strong>.xml</strong> files needed for flashing.</p>
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F06.png" style="zoom:67%;">
+</li>
+<li><p>Once everything is configured, click <strong>Download</strong>. The flashing process will begin and notify you once the download is complete. After flashing, the module will enter into <strong>Fastboot mode</strong>.</p>
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F07.png" style="zoom:67%;"></li>
+</ol>
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F08.png" style="zoom:67%;">
+
+<img src="LEC-RB5N_UserGuide.assets/QFIL_F09.png" style="zoom:67%;">
+
+
+
+<p><strong>Attention:   After the image flashed  successfully, the target device automatically reset itself and enters into Fastboot mode. Do not turn off (or) Reset the target device manually,It causes the image packages to break, resulting in the inability to boot.</strong></p>
+<h3 id="2-2-Flashing-BSP-Image-Released" class="article-heading"><a href="#2-2-Flashing-BSP-Image-Released" class="headerlink" title="2.2 Flashing BSP Image (Released )"></a><strong>2.2 Flashing BSP Image (Released )</strong><a class="article-anchor" href="#2-2-Flashing-BSP-Image-Released" aria-hidden="true"></a></h3><p>Once the module is flashed (using the QFIL tool), you can proceed with updating the <strong>Board Support Package (BSP)</strong>, which includes the kernel and filesystem.</p>
+<h4 id="Required-Images" class="article-heading"><a href="#Required-Images" class="headerlink" title="Required Images:"></a><strong>Required Images:</strong><a class="article-anchor" href="#Required-Images" aria-hidden="true"></a></h4><p>For updating the BSP, you will need the following images:</p>
+<ol>
+<li><strong>qti-yocto-robotics-image-qrb5165-rb5-boot.img</strong></li>
+<li><strong>qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</strong></li>
+<li><strong>abl.elf</strong></li>
+</ol>
+<p>These images can be found in the directory:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-HLOS-YOCTO-XX-XX/</span><br></pre></td></tr></table></figure>
+
+<h4 id="Steps-to-Update-BSP-Image" class="article-heading"><a href="#Steps-to-Update-BSP-Image" class="headerlink" title="Steps to Update BSP Image:"></a><strong>Steps to Update BSP Image:</strong><a class="article-anchor" href="#Steps-to-Update-BSP-Image" aria-hidden="true"></a></h4><ol>
+<li><p>Connect the <strong>USB OTG</strong> cable between the target board and the Host PC.</p>
+</li>
+<li><p><strong>Open the command prompt</strong> on the host PC.</p>
+</li>
+<li><p>Navigate to the directory where the BSP images are located:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> /LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-HLOS-YOCTO-XX-XX/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To check if the target board (LEC-RB5N) is detected, run the following command:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot devices -l</span></span><br></pre></td></tr></table></figure>
+
+<p>If the board is not listed, ensure that the <strong>Qualcomm USB driver</strong> is correctly installed (refer to the <strong>Device Manager</strong> for any yellow exclamation marks).</p>
+</li>
+<li><p>Once the board is detected, use <strong>Fastboot</strong> to flash the images:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_a qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_b qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash system qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash abl_a abl.elf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash abl_b abl.elf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot reboot</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="To-Use-ADB-Shell" class="article-heading"><a href="#To-Use-ADB-Shell" class="headerlink" title="To Use ADB Shell"></a><strong>To Use ADB Shell</strong><a class="article-anchor" href="#To-Use-ADB-Shell" aria-hidden="true"></a></h3><p>After updating the BSP image , if you need to interact with the device, you can use <strong>ADB shell</strong> </p>
+<h4 id="Steps-to-Use-ADB-Shell" class="article-heading"><a href="#Steps-to-Use-ADB-Shell" class="headerlink" title="Steps to Use ADB Shell:"></a><strong>Steps to Use ADB Shell:</strong><a class="article-anchor" href="#Steps-to-Use-ADB-Shell" aria-hidden="true"></a></h4><ol>
+<li><p><strong>Connect a USB Micro Cable</strong> between your host PC and the LEC-RB5N module.</p>
+</li>
+<li><p>Run the following command to verify that the device is detected:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#adb devices -l</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>This will list the connected devices. If the device is not listed, check the <strong>Device Manager</strong> for any issues with the <strong>Qualcomm USB driver</strong>. <strong>The driver may have to be manually selected and updated</strong> as detailed in the screenshots below.</p>
+<img src="LEC-RB5N_UserGuide.assets/updatedrv01.png">
+
+<img src="LEC-RB5N_UserGuide.assets/updatedrv02.png">
+
+<img src="LEC-RB5N_UserGuide.assets/updatedrv03.png">
+
+<img src="LEC-RB5N_UserGuide.assets/updatedrv04.png">
+
+<p> <strong>If the driver is already present in the system at this stage and should be available in the list as ‘Android ADB Interface’</strong>.</p>
+<img src="LEC-RB5N_UserGuide.assets/updatedrv05.png">
+
+<img src="LEC-RB5N_UserGuide.assets/updatedrv06.png">
+
+<img src="LEC-RB5N_UserGuide.assets/updatedrv07.png">
+
+<img src="LEC-RB5N_UserGuide.assets/updatedrv08.png">
+
+<ol start="3">
+<li><p>If the device is listed correctly, enter the <strong>ADB shell</strong> by running:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> adb shell</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="2-3-Flashing-BSP-Image-Yocto-Build" class="article-heading"><a href="#2-3-Flashing-BSP-Image-Yocto-Build" class="headerlink" title="2.3 Flashing BSP Image (Yocto Build)"></a><strong>2.3 Flashing BSP Image (Yocto Build)</strong><a class="article-anchor" href="#2-3-Flashing-BSP-Image-Yocto-Build" aria-hidden="true"></a></h3><p>If you prefer to flash image build using yocto in <strong>Linux environment</strong> (Ubuntu), follow the steps below . </p>
+<p>Make sure you have the required tools installed on your Ubuntu system. Use the following commands to install them:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> sudo apt-get -y install img2simg gzip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo apt install android-tools-adb android-tools-fastboot</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Steps-to-Flash-Image-Using-Yocto-Build" class="article-heading"><a href="#Steps-to-Flash-Image-Using-Yocto-Build" class="headerlink" title="Steps to Flash Image Using Yocto Build:"></a><strong>Steps to Flash Image Using Yocto Build:</strong><a class="article-anchor" href="#Steps-to-Flash-Image-Using-Yocto-Build" aria-hidden="true"></a></h4><ol>
+<li><p>Navigate to the Yocto build output directory.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> /path/to/yocto/build/output/</span> </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Decompress image :</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> gzip -fdk rpb-&lt;MACHINE_NAME&gt;.ext4.gz</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Convert the decompressed image:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> img2simg rpb-&lt;MACHINE_NAME&gt;.ext4 qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Copy the boot image:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> cp boot-&lt;MACHINE_NAME&gt;.img qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Check if the LEC-RB5N module is detected using the following command:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot devices</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Flash the images:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_a qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_b qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash system qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot reboot</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="2-4-Erasing-Image-from-Module" class="article-heading"><a href="#2-4-Erasing-Image-from-Module" class="headerlink" title="2.4 Erasing Image from Module"></a><strong>2.4 Erasing Image from Module</strong><a class="article-anchor" href="#2-4-Erasing-Image-from-Module" aria-hidden="true"></a></h3><p>In case you need to erase the images on the module, follow the steps below to remove the kernel, filesystem, and boot images from the LEC-RB5N.</p>
+<h4 id="Steps-to-Erase-Image-from-Module" class="article-heading"><a href="#Steps-to-Erase-Image-from-Module" class="headerlink" title="Steps to Erase Image from Module:"></a><strong>Steps to Erase Image from Module:</strong><a class="article-anchor" href="#Steps-to-Erase-Image-from-Module" aria-hidden="true"></a></h4><ol>
+<li><p>Power on the module and connect the OTG USB cable between the module and your host PC.</p>
+</li>
+<li><p>Check if the LEC-RB5N is detected on your host system using the following command:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> adb devices</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> adb shell</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enter the module into fastboot mode by running the following command on Target module:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fastboot.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>Module will reset and Enter into fastboot mode.</p>
+</li>
+<li><p>Verify the module is detected in Fastboot mode in host PC:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot devicess</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Run the following commands to erase Module:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase boot_a</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase boot_b</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase abl_a</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase abl_b</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot reboot</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To reinstall Yocto Image, refer to <strong>Section 2.1: Flashing the Module</strong>.</p>
+</li>
+</ol>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2025-02-19T01:27:54.624Z" itemprop="dateModified">Last updated: 2025-02-19</time>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Prerequisite"><span class="toc-text">1 Prerequisite</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-0-Download-and-Install-ADB-and-Fastboot-Drivers"><span class="toc-text">1.0 Download and Install ADB and Fastboot Drivers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-Download-QPST-Tool-and-Qualcomm-USB-Driver-to-Flash-Image"><span class="toc-text">1.1 Download QPST Tool and Qualcomm USB Driver to Flash Image</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-How-to-Flash-Image"><span class="toc-text">2 How to Flash Image</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-0-Enter-into-EDL-Mode"><span class="toc-text">2.0 Enter into EDL Mode</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Flashing-on-Module"><span class="toc-text">2.1 Flashing on Module</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Image-Path"><span class="toc-text">Image Path:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Configuring-the-Module-for-Flashing"><span class="toc-text">Configuring the Module for Flashing:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flashing-Steps"><span class="toc-text">Flashing Steps:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Flashing-BSP-Image-Released"><span class="toc-text">2.2 Flashing BSP Image (Released )</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Required-Images"><span class="toc-text">Required Images:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Steps-to-Update-BSP-Image"><span class="toc-text">Steps to Update BSP Image:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#To-Use-ADB-Shell"><span class="toc-text">To Use ADB Shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Steps-to-Use-ADB-Shell"><span class="toc-text">Steps to Use ADB Shell:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Flashing-BSP-Image-Yocto-Build"><span class="toc-text">2.3 Flashing BSP Image (Yocto Build)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Steps-to-Flash-Image-Using-Yocto-Build"><span class="toc-text">Steps to Flash Image Using Yocto Build:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Erasing-Image-from-Module"><span class="toc-text">2.4 Erasing Image from Module</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Steps-to-Erase-Image-from-Module"><span class="toc-text">Steps to Erase Image from Module:</span></a></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall">
+    <ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list">
+      <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/smarc/ipi-smarc-1200/" class="mobile-nav-link  header">menu.ipi-smarc-1200</a><a href="/smarc/ipi-smarc-elkahrt-lake/" class="mobile-nav-link  header">menu.ipi-smarc-elkhart-lake</a><a href="/smarc/ipi-smarc-imx8mp/" class="mobile-nav-link  header">menu.ipi-smarc-imx8mp</a><a href="/smarc/ipi-smarc-px30/" class="mobile-nav-link  header">menu.ipi-smarc-px30</a><a href="/smarc/ipi-smarc-rb5/" class="mobile-nav-link  header">menu.ipi-smarc-rb5</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="GPIOUtility.html" class="mobile-nav-link first">GPIO Utility</a><a href="UART.html" class="mobile-nav-link">UART</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadUART.html" class="mobile-nav-link first">How to Read Console Output</a><a href="LECRB5NUbuntuFlashProcedure.html" class="mobile-nav-link">Flashing Ubuntu</a><a href="LEC-RB5N-8G-YOCTO-FLASH-PROCEDURE_SOP.html" class="mobile-nav-link current">Flashing Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing on NPU</summary><a href="NeuralProcessingSDKForAI.html" class="mobile-nav-link first">Qualcomm Neural Processing SDK</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/smarc/js/lang_select.js"></script>
+
+
+<script src="/smarc/js/toc.js"></script>
+
+
+<script src="/smarc/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+<!--
+
+-->
+
+</body>
+</html>
+ 
