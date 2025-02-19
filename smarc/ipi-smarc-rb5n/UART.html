@@ -163,9 +163,8 @@
 <p>SER1  TX (PIN 3)     -         SER2 RX (PIN 7)</p>
 <p>SER1  RX (PIN 1)     -         SER2 TX (PIN 9)</p>
 <h3 id="Configuration" class="article-heading"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration<a class="article-anchor" href="#Configuration" aria-hidden="true"></a></h3><p>To transmit and receive data without an end device connected, ensure that UART power control is turned on.</p>
-<pre><code>echo on &gt;  /sys/devices/platform/soc/a94000.qcom,qup_uart/power/control 
-echo on &gt;  /sys/devices/platform/soc/88c000.qcom,qup_uart/power/control
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo on &gt;  /sys/devices/platform/soc/a94000.qcom,qup_uart/power/control </span><br><span class="line">echo on &gt;  /sys/devices/platform/soc/88c000.qcom,qup_uart/power/control</span><br></pre></td></tr></table></figure>
+
 <h3 id="Transmitting-and-Receiving-Data-via-UART" class="article-heading"><a href="#Transmitting-and-Receiving-Data-via-UART" class="headerlink" title="Transmitting and Receiving Data via UART"></a>Transmitting and Receiving Data via UART<a class="article-anchor" href="#Transmitting-and-Receiving-Data-via-UART" aria-hidden="true"></a></h3><p>Follow these steps to set up data transfer between SER1 and SER2 using two terminals:</p>
 <p>Note: Open two terminal sessions (via HDMI or ADB).</p>
 <p>Transmitting via SER1:</p>

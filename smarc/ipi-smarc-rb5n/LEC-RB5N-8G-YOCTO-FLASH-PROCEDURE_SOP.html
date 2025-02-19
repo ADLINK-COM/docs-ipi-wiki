@@ -98,8 +98,8 @@
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv06.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv07.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/updatedrv08.png">
-<meta property="article:published_time" content="2025-02-14T07:34:26.365Z">
-<meta property="article:modified_time" content="2025-02-14T07:34:26.365Z">
+<meta property="article:published_time" content="2025-02-19T01:27:54.624Z">
+<meta property="article:modified_time" content="2025-02-19T01:27:54.624Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/LEC-RB5N_UserGuide.assets/adbdriver.png">
@@ -196,8 +196,8 @@
 </ol>
 <h4 id="2-1-Flashing-on-Module" class="article-heading"><a href="#2-1-Flashing-on-Module" class="headerlink" title="2.1 Flashing on Module"></a>2.1 Flashing on Module<a class="article-anchor" href="#2-1-Flashing-on-Module" aria-hidden="true"></a></h4><p>To Flash the image, Use the <strong>QFIL Tool</strong> and follow the steps below. The image being flashed includes the <strong>NON-HIGH LEVEL OPERATING SYSTEM (NON-HLOS)</strong> firmware, bootloader, kernel, and file system.</p>
 <h4 id="Image-Path" class="article-heading"><a href="#Image-Path" class="headerlink" title="Image Path:"></a><strong>Image Path:</strong><a class="article-anchor" href="#Image-Path" aria-hidden="true"></a></h4><p>Ensure that the image path on your host PC is short (e.g., from the root drive):</p>
-<pre><code>#windows_Drive:/LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-NON-HLOS-YOCTO-XX-XX/
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#windows_Drive:/LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-NON-HLOS-YOCTO-XX-XX/</span><br></pre></td></tr></table></figure>
+
 <ol>
 <li><p>First, enter the module into <strong>EDL Mode</strong> (refer to <strong>Section 2.0</strong> for instructions).</p>
 <ul>
@@ -239,40 +239,30 @@
 <li><strong>abl.elf</strong></li>
 </ol>
 <p>These images can be found in the directory:</p>
-<pre><code class="shell">/LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-HLOS-YOCTO-XX-XX/
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-HLOS-YOCTO-XX-XX/</span><br></pre></td></tr></table></figure>
+
 <h4 id="Steps-to-Update-BSP-Image" class="article-heading"><a href="#Steps-to-Update-BSP-Image" class="headerlink" title="Steps to Update BSP Image:"></a><strong>Steps to Update BSP Image:</strong><a class="article-anchor" href="#Steps-to-Update-BSP-Image" aria-hidden="true"></a></h4><ol>
 <li><p>Connect the <strong>USB OTG</strong> cable between the target board and the Host PC.</p>
 </li>
 <li><p><strong>Open the command prompt</strong> on the host PC.</p>
 </li>
 <li><p>Navigate to the directory where the BSP images are located:</p>
-<pre><code class="shell"># cd /LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-HLOS-YOCTO-XX-XX/
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> /LEC-RB5N-8G-YOCTO-XX-XX/LEC-RB5N-8G-HLOS-YOCTO-XX-XX/</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>To check if the target board (LEC-RB5N) is detected, run the following command:</p>
-<pre><code class="shell"># fastboot devices -l
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot devices -l</span></span><br></pre></td></tr></table></figure>
+
 <p>If the board is not listed, ensure that the <strong>Qualcomm USB driver</strong> is correctly installed (refer to the <strong>Device Manager</strong> for any yellow exclamation marks).</p>
 </li>
 <li><p>Once the board is detected, use <strong>Fastboot</strong> to flash the images:</p>
-<pre><code class="shell"># fastboot flash boot_a qti-yocto-robotics-image-qrb5165-rb5-boot.img
-# fastboot flash boot_b qti-yocto-robotics-image-qrb5165-rb5-boot.img
-# fastboot flash system qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4
-# fastboot flash abl_a abl.elf
-# fastboot flash abl_b abl.elf
-# fastboot reboot
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_a qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_b qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash system qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash abl_a abl.elf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash abl_b abl.elf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot reboot</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="To-Use-ADB-Shell" class="article-heading"><a href="#To-Use-ADB-Shell" class="headerlink" title="To Use ADB Shell"></a><strong>To Use ADB Shell</strong><a class="article-anchor" href="#To-Use-ADB-Shell" aria-hidden="true"></a></h3><p>After updating the BSP image , if you need to interact with the device, you can use <strong>ADB shell</strong> </p>
 <h4 id="Steps-to-Use-ADB-Shell" class="article-heading"><a href="#Steps-to-Use-ADB-Shell" class="headerlink" title="Steps to Use ADB Shell:"></a><strong>Steps to Use ADB Shell:</strong><a class="article-anchor" href="#Steps-to-Use-ADB-Shell" aria-hidden="true"></a></h4><ol>
 <li><p><strong>Connect a USB Micro Cable</strong> between your host PC and the LEC-RB5N module.</p>
 </li>
 <li><p>Run the following command to verify that the device is detected:</p>
-<pre><code>#adb devices -l
-</code></pre>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#adb devices -l</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>This will list the connected devices. If the device is not listed, check the <strong>Device Manager</strong> for any issues with the <strong>Qualcomm USB driver</strong>. <strong>The driver may have to be manually selected and updated</strong> as detailed in the screenshots below.</p>
 <img src="LEC-RB5N_UserGuide.assets/updatedrv01.png">
@@ -294,69 +284,48 @@
 
 <ol start="3">
 <li><p>If the device is listed correctly, enter the <strong>ADB shell</strong> by running:</p>
-<pre><code class="shell"># adb shell
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> adb shell</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="2-3-Flashing-BSP-Image-Yocto-Build" class="article-heading"><a href="#2-3-Flashing-BSP-Image-Yocto-Build" class="headerlink" title="2.3 Flashing BSP Image (Yocto Build)"></a><strong>2.3 Flashing BSP Image (Yocto Build)</strong><a class="article-anchor" href="#2-3-Flashing-BSP-Image-Yocto-Build" aria-hidden="true"></a></h3><p>If you prefer to flash image build using yocto in <strong>Linux environment</strong> (Ubuntu), follow the steps below . </p>
 <p>Make sure you have the required tools installed on your Ubuntu system. Use the following commands to install them:</p>
-<pre><code class="shell"># sudo apt-get -y install img2simg gzip
-# sudo apt install android-tools-adb android-tools-fastboot
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> sudo apt-get -y install img2simg gzip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo apt install android-tools-adb android-tools-fastboot</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="Steps-to-Flash-Image-Using-Yocto-Build" class="article-heading"><a href="#Steps-to-Flash-Image-Using-Yocto-Build" class="headerlink" title="Steps to Flash Image Using Yocto Build:"></a><strong>Steps to Flash Image Using Yocto Build:</strong><a class="article-anchor" href="#Steps-to-Flash-Image-Using-Yocto-Build" aria-hidden="true"></a></h4><ol>
 <li><p>Navigate to the Yocto build output directory.</p>
-<pre><code class="shell"># cd /path/to/yocto/build/output/ 
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span> /path/to/yocto/build/output/</span> </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Decompress image :</p>
-<pre><code class="shell"># gzip -fdk rpb-&lt;MACHINE_NAME&gt;.ext4.gz
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> gzip -fdk rpb-&lt;MACHINE_NAME&gt;.ext4.gz</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Convert the decompressed image:</p>
-<pre><code class="shell"># img2simg rpb-&lt;MACHINE_NAME&gt;.ext4 qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> img2simg rpb-&lt;MACHINE_NAME&gt;.ext4 qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Copy the boot image:</p>
-<pre><code class="shell"># cp boot-&lt;MACHINE_NAME&gt;.img qti-yocto-robotics-image-qrb5165-rb5-boot.img
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> cp boot-&lt;MACHINE_NAME&gt;.img qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Check if the LEC-RB5N module is detected using the following command:</p>
-<pre><code class="shell"># fastboot devices
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot devices</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Flash the images:</p>
-<pre><code class="shell"># fastboot flash boot_a qti-yocto-robotics-image-qrb5165-rb5-boot.img
-# fastboot flash boot_b qti-yocto-robotics-image-qrb5165-rb5-boot.img
-# fastboot flash system qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4
-# fastboot reboot
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_a qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash boot_b qti-yocto-robotics-image-qrb5165-rb5-boot.img</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot flash system qti-yocto-robotics-image-qrb5165-rb5-sysfs.ext4</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot reboot</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="2-4-Erasing-Image-from-Module" class="article-heading"><a href="#2-4-Erasing-Image-from-Module" class="headerlink" title="2.4 Erasing Image from Module"></a><strong>2.4 Erasing Image from Module</strong><a class="article-anchor" href="#2-4-Erasing-Image-from-Module" aria-hidden="true"></a></h3><p>In case you need to erase the images on the module, follow the steps below to remove the kernel, filesystem, and boot images from the LEC-RB5N.</p>
 <h4 id="Steps-to-Erase-Image-from-Module" class="article-heading"><a href="#Steps-to-Erase-Image-from-Module" class="headerlink" title="Steps to Erase Image from Module:"></a><strong>Steps to Erase Image from Module:</strong><a class="article-anchor" href="#Steps-to-Erase-Image-from-Module" aria-hidden="true"></a></h4><ol>
 <li><p>Power on the module and connect the OTG USB cable between the module and your host PC.</p>
 </li>
 <li><p>Check if the LEC-RB5N is detected on your host system using the following command:</p>
-<pre><code class="shell"># adb devices
-# adb shell
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> adb devices</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> adb shell</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Enter the module into fastboot mode by running the following command on Target module:</p>
-<pre><code class="shell"># /etc/fastboot.sh
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fastboot.sh</span></span><br></pre></td></tr></table></figure>
+
 <p>Module will reset and Enter into fastboot mode.</p>
 </li>
 <li><p>Verify the module is detected in Fastboot mode in host PC:</p>
-<pre><code class="shell"># fastboot devicess
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot devicess</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Run the following commands to erase Module:</p>
-<pre><code class="shell"># fastboot erase boot_a
-# fastboot erase boot_b
-# fastboot erase abl_a 
-# fastboot erase abl_b 
-# fastboot reboot
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase boot_a</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase boot_b</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase abl_a</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot erase abl_b</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> fastboot reboot</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>To reinstall Yocto Image, refer to <strong>Section 2.1: Flashing the Module</strong>.</p>
 </li>
@@ -364,7 +333,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2025-02-14T07:34:26.365Z" itemprop="dateModified">Last updated: 2025-02-14</time>
+                <time class="article-footer-updated" datetime="2025-02-19T01:27:54.624Z" itemprop="dateModified">Last updated: 2025-02-19</time>
                 <a href="LECRB5NUbuntuFlashProcedure.html" class="article-footer-prev" title="Flashing Ubuntu"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="NeuralProcessingSDKForAI.html" class="article-footer-next" title="Qualcomm Neural Processing SDK"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

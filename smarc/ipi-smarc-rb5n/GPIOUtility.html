@@ -72,19 +72,19 @@
   <!-- RSS -->
   <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5This document provides detailed instructions for utilizing the GPIO pins on the I-Pi SMARC RB5 module based on Linux. Prerequisites Power up the target">
+  <meta name="description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5NThis document provides detailed instructions for utilizing the GPIO pins on the I-Pi SMARC RB5N module based on Linux. Prerequisites Power up the targ">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/GPIOUtility.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5This document provides detailed instructions for utilizing the GPIO pins on the I-Pi SMARC RB5 module based on Linux. Prerequisites Power up the target">
+<meta property="og:description" content="40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5NThis document provides detailed instructions for utilizing the GPIO pins on the I-Pi SMARC RB5N module based on Linux. Prerequisites Power up the targ">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/GPIOUtility.assets/lec-rb5-001.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/GPIOUtility.assets/lec-rb5-002.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/GPIOUtility.assets/lec-rb5-003.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/GPIOUtility.assets/lec-rb5-004.png">
-<meta property="article:published_time" content="2024-10-22T06:11:38.239Z">
-<meta property="article:modified_time" content="2024-10-22T06:11:38.239Z">
+<meta property="article:published_time" content="2025-02-19T02:05:02.510Z">
+<meta property="article:modified_time" content="2025-02-19T02:05:02.510Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-rb5n/GPIOUtility.assets/lec-rb5-001.png">
@@ -147,7 +147,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5" class="article-heading"><a href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5" class="headerlink" title="40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5"></a>40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5<a class="article-anchor" href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5" aria-hidden="true"></a></h1><p>This document provides detailed instructions for utilizing the GPIO pins on the I-Pi SMARC RB5 module based on Linux.</p>
+                <h1 id="40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5N" class="article-heading"><a href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5N" class="headerlink" title="40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5N"></a>40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5N<a class="article-anchor" href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5N" aria-hidden="true"></a></h1><p>This document provides detailed instructions for utilizing the GPIO pins on the I-Pi SMARC RB5N module based on Linux.</p>
 <h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li>Power up the target device with HDMI ,Serial terminal or ADB shell.</li>
 </ul>
@@ -157,10 +157,8 @@
 <li><p>To export the GPIO pin.</p>
 </li>
 </ul>
-<pre><code>cd /sys/class/gpio
-echo N &gt; export (N should replace with gpio base number)
-cd gpioN       
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /sys/class/gpio</span><br><span class="line">echo N &gt; export (N should replace with gpio base number)</span><br><span class="line">cd gpioN       </span><br></pre></td></tr></table></figure>
+
 <blockquote class="note info"><p><strong>Note:</strong> The GPIO  base number may differ for different modules.</p>
 </blockquote>
 
@@ -171,10 +169,8 @@ cd gpioN
 <ul>
 <li>To read GPIO Pin Attributes</li>
 </ul>
-<pre><code>cat direction
-cat edge
-cat value
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat direction</span><br><span class="line">cat edge</span><br><span class="line">cat value</span><br></pre></td></tr></table></figure>
+
 <center>
    <img src="GPIOUtility.assets/lec-rb5-002.png">
 </center>
@@ -183,13 +179,13 @@ cat value
 <ul>
 <li>To set GPIO direction as input</li>
 </ul>
-<pre><code>echo in &gt; direction
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo in &gt; direction</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>To read the value of a pin</li>
 </ul>
-<pre><code>cat value
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat value</span><br></pre></td></tr></table></figure>
+
 <center>
    <img src="GPIOUtility.assets/lec-rb5-003.png">
 </center>
@@ -198,18 +194,18 @@ cat value
 <ul>
 <li>To write the direction of a pin to output</li>
 </ul>
-<pre><code>echo out &gt; direction
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo out &gt; direction</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>To write the value of a pin to high</li>
 </ul>
-<pre><code>echo 1 &gt; value
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo 1 &gt; value</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>To write the value of a pin to low</li>
 </ul>
-<pre><code>echo 0 &gt; value
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo 0 &gt; value</span><br></pre></td></tr></table></figure>
+
 <center>
    <img src="GPIOUtility.assets/lec-rb5-004.png">
 </center>
@@ -217,34 +213,14 @@ cat value
 <p><strong>GPIO Pin Configurations</strong></p>
 <p>On CN1001 expansion connector E_GPIO and S_GPIO is available. These GPIO pins are mapped by to following numbers</p>
 <p><strong>S_GPIO</strong>:</p>
-<pre><code>S_GPIO_Name  CN1001_Pin_Number     Sysfs_Index
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">S_GPIO_Name  CN1001_Pin_Number 	Sysfs_Index</span><br><span class="line"></span><br><span class="line">S_GPIO06 		pin07 		 398    </span><br><span class="line">S_GPIO07  		pin12 		 451       </span><br><span class="line">S_GPIO08 		pin11 		 485       </span><br><span class="line">S_GPIO09  		pin13		 486      </span><br><span class="line">S_GPIO010  		pin15 		 488  </span><br><span class="line">S_GPIO011  		pin16		 490   </span><br><span class="line">S_GPIO012   		pin18		 492   </span><br><span class="line">S_GPIO013   		pin22		 494   </span><br></pre></td></tr></table></figure>
 
-S_GPIO06         pin07          398    
-S_GPIO07          pin12          451       
-S_GPIO08         pin11          485       
-S_GPIO09          pin13         486      
-S_GPIO010          pin15          488  
-S_GPIO011          pin16         490   
-S_GPIO012           pin18         492   
-S_GPIO013           pin22         494   
-</code></pre>
 <p><strong>E_GPIO</strong></p>
-<pre><code>E_GPIO_Name  CN1001_Pin_Number     Sysfs_Index
-
-E_GPIO1_0           pin29          275    
-E_GPIO1_1            pin31         276    
-E_GPIO1_2           pin32          277    
-E_GPIO1_3           pin33          278    
-E_GPIO1_4           pin35          279        
-E_GPIO1_5           pin36          280    
-E_GPIO1_6           pin37          281    
-E_GPIO1_7           pin38          282    
-E_GPIO1_8           pin40         283  
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">E_GPIO_Name  CN1001_Pin_Number 	Sysfs_Index</span><br><span class="line"></span><br><span class="line">E_GPIO1_0   		pin29 		 275    </span><br><span class="line">E_GPIO1_1    		pin31		 276    </span><br><span class="line">E_GPIO1_2   		pin32 		 277    </span><br><span class="line">E_GPIO1_3   		pin33 		 278    </span><br><span class="line">E_GPIO1_4   		pin35 		 279        </span><br><span class="line">E_GPIO1_5   		pin36 		 280    </span><br><span class="line">E_GPIO1_6   		pin37 		 281    </span><br><span class="line">E_GPIO1_7   		pin38 		 282    </span><br><span class="line">E_GPIO1_8   		pin40		 283  </span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2024-10-22T06:11:38.239Z" itemprop="dateModified">Last updated: 2024-10-22</time>
+                <time class="article-footer-updated" datetime="2025-02-19T02:05:02.510Z" itemprop="dateModified">Last updated: 2025-02-19</time>
                 <a href="CarrierIntroduction.html" class="article-footer-prev" title="Carrier Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UART.html" class="article-footer-next" title="UART"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -254,7 +230,7 @@ E_GPIO1_8           pin40         283
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5"><span class="toc-text">40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Utilizing-the-GPIO-Pins-with-Linux"><span class="toc-text">Utilizing the GPIO Pins with Linux</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#40-Pin-I-x2F-O-Headers-Utility-on-I-Pi-SMARC-RB5N"><span class="toc-text">40-Pin I&#x2F;O Headers Utility on I-Pi SMARC RB5N</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Utilizing-the-GPIO-Pins-with-Linux"><span class="toc-text">Utilizing the GPIO Pins with Linux</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
