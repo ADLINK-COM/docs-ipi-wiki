@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://docs.ipi.wiki/osm/osm-imx93/TestInterface.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/osm/osm-imx93/YoctoFlash.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/osm/osm-imx93/ReadConsole.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/osm/osm-imx93/index.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/osm/index.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://docs.ipi.wiki/osm/404/index.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>https://docs.ipi.wiki/osm</loc>
+    <lastmod>2025-03-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
+  
+</urlset>
