@@ -122,7 +122,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=ReadConsole.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=ReadConsole.html#ReadConsole.html'}, '*');}</script>
 
 	</div>
 	
@@ -150,51 +150,50 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Reading-Data-from-the-Serial-Port" class="article-heading"><a href="#Reading-Data-from-the-Serial-Port" class="headerlink" title="Reading Data from the Serial Port"></a>Reading Data from the Serial Port<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Reading-Data-from-the-Serial-Port'}, '*');" class="article-anchor" href="#Reading-Data-from-the-Serial-Port" aria-hidden="true"></a></h1><h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
+                <h1 id="Reading-Data-from-the-Serial-Port" class="article-heading"><a href="#Reading-Data-from-the-Serial-Port" class="headerlink" title="Reading Data from the Serial Port"></a>Reading Data from the Serial Port<a class="article-anchor" href="#Reading-Data-from-the-Serial-Port" aria-hidden="true"></a></h1><h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><ul>
 <li>Linux users must have <strong>Minicom</strong> installed for serial port communication.</li>
 <li>Windows users must have the <strong>Putty</strong> application installed to communicate via the serial port.</li>
 </ul>
-<h2 id="Host-Users" class="article-heading"><a href="#Host-Users" class="headerlink" title="Host Users"></a>Host Users<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Host-Users'}, '*');" class="article-anchor" href="#Host-Users" aria-hidden="true"></a></h2><ul>
+<h2 id="Host-Users" class="article-heading"><a href="#Host-Users" class="headerlink" title="Host Users"></a>Host Users<a class="article-anchor" href="#Host-Users" aria-hidden="true"></a></h2><ul>
 <li>Linux Host</li>
 <li>Windows Host</li>
 </ul>
-<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Linux-Host" class="article-heading"><a href="#Linux-Host" class="headerlink" title="Linux Host"></a>Linux Host<a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3><ol>
 <li><p>Install the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.intel.com/content/www/us/en/docs/programmable/683536/current/minicom-installation.html">minicom</a> software on your host device.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install minicom</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Connect the serial cable between the target device and the host device as illustrated in the image below</p>
-<img src="ReadConsole.assets\SerialLogReadSER.png" style="zoom:80%;">
+<p><img src="ReadConsole.assets\SerialLogReadSER.png" style="zoom:80%;"></p>
 </li>
 <li><p>Open a terminal and launch Minicom by running the following command:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo minicom -s</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>A configuration menu will be displayed.</p>
-<img src="ReadConsole.assets\Minicom.png">
+<p><img src="ReadConsole.assets\Minicom.png"></p>
 </li>
 <li><p>Under the <strong>serial port setup</strong> choose the following settings,</p>
 </li>
 </ol>
 <ul>
-<li><p>Serial device: <strong>&#x2F;dev&#x2F;ttyUSB0</strong> (edit to match the system as necessary)</p>
-</li>
-<li><p>Bps&#x2F;Par&#x2F;Bits: <strong>115200 8N1</strong></p>
-</li>
-<li><p>Hardware Flow Control: <strong>No</strong></p>
-</li>
+<li>Serial device: <strong>/dev/ttyUSB0</strong> (edit to match the system as necessary)</li>
+<li>Bps/Par/Bits: <strong>115200 8N1</strong></li>
+<li>Hardware Flow Control: <strong>No</strong></li>
 <li><p>Software Flow Control: <strong>No</strong></p>
- <img src="ReadConsole.assets\MinicomSettings.png"></li>
+<p> <img src="ReadConsole.assets\MinicomSettings.png"></p>
+</li>
 </ul>
-<ol start="6">
+<ol>
 <li><p>Press <strong>[ESC]</strong> to go back to the main configuration menu.</p>
 </li>
 <li><p>Choose <strong>Exit</strong> to close the menu.</p>
-<img src="ReadConsole.assets\Screenshot from 2025-03-24 11-11-03.png" style="zoom: 55%;"></li>
+<p><img src="ReadConsole.assets\Screenshot from 2025-03-24 11-11-03.png" style="zoom: 55%;"></p>
+</li>
 </ol>
-<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
+<h3 id="Windows-Host" class="article-heading"><a href="#Windows-Host" class="headerlink" title="Windows Host"></a>Windows Host<a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3><ol>
 <li><p>Install the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://apps.microsoft.com/store/detail/putty/XPFNZKSKLBP7RJ">PuTTY</a> software on your host device.</p>
 </li>
 <li><p>Connect the serial cable as shown in the below picture from the target device to the host device.</p>
-<img src="ReadConsole.assets\SerialLogReadSER.png" style="zoom:80%;">
+<p><img src="ReadConsole.assets\SerialLogReadSER.png" style="zoom:80%;"></p>
 </li>
 <li><p>Launch the PuTTY software.</p>
 </li>
@@ -203,9 +202,9 @@
 <p>Speed: <strong>115200</strong></p>
 <p>Click <strong>Only on clean exit</strong></p>
 <p>Click <strong>Open</strong></p>
-<img src="ReadConsole.assets\Putty.png">
-
-<img src="ReadConsole.assets\ReadConsole_Win.png" style="zoom:60%;"></li>
+<p><img src="ReadConsole.assets\Putty.png"></p>
+<p><img src="ReadConsole.assets\ReadConsole_Win.png" style="zoom:60%;"></p>
+</li>
 </ol>
 
               </div>
@@ -229,7 +228,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="index.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YocToBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="index.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a></details></strong>
   </div>
 </aside>
     </div>
@@ -287,7 +286,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="index.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YocToBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="index.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a></details></strong>
     
   </div>
   
