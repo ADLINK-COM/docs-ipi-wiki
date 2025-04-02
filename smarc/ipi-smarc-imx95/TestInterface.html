@@ -126,7 +126,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=TestInterface.html#TestInterface.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=TestInterface.html'}, '*');}</script>
 
 	</div>
 	
@@ -154,7 +154,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Use-x2F-Test-Interface-Guide" class="article-heading"><a href="#How-to-Use-x2F-Test-Interface-Guide" class="headerlink" title="How to Use&#x2F;Test Interface Guide"></a>How to Use&#x2F;Test Interface Guide<a class="article-anchor" href="#How-to-Use-x2F-Test-Interface-Guide" aria-hidden="true"></a></h1><h2 id="1-I2C" class="article-heading"><a href="#1-I2C" class="headerlink" title="1) I2C"></a>1) I2C<a class="article-anchor" href="#1-I2C" aria-hidden="true"></a></h2><ul>
+                <h1 id="How-to-Use-x2F-Test-Interface-Guide" class="article-heading"><a href="#How-to-Use-x2F-Test-Interface-Guide" class="headerlink" title="How to Use&#x2F;Test Interface Guide"></a>How to Use&#x2F;Test Interface Guide<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#How-to-Use-x2F-Test-Interface-Guide'}, '*');" class="article-anchor" href="#How-to-Use-x2F-Test-Interface-Guide" aria-hidden="true"></a></h1><h2 id="1-I2C" class="article-heading"><a href="#1-I2C" class="headerlink" title="1) I2C"></a>1) I2C<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#1-I2C'}, '*');" class="article-anchor" href="#1-I2C" aria-hidden="true"></a></h2><ul>
 <li>Use the following command to display all available I2C buses</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ i2cdetect -l</span><br></pre></td></tr></table></figure>
@@ -174,7 +174,7 @@
 </blockquote>
 <img src="TestInterface.assets\i2c1.png">
 
-<h2 id="2-GPIO" class="article-heading"><a href="#2-GPIO" class="headerlink" title="2) GPIO"></a>2) GPIO<a class="article-anchor" href="#2-GPIO" aria-hidden="true"></a></h2><p>This table lists the corresponding pin numbers for the CN1001 MRAA, CHIPSET, and GPIO interfaces. It provides the mapping for GPIO pins used in testing the GPIO interface,</p>
+<h2 id="2-GPIO" class="article-heading"><a href="#2-GPIO" class="headerlink" title="2) GPIO"></a>2) GPIO<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#2-GPIO'}, '*');" class="article-anchor" href="#2-GPIO" aria-hidden="true"></a></h2><p>This table lists the corresponding pin numbers for the CN1001 MRAA, CHIPSET, and GPIO interfaces. It provides the mapping for GPIO pins used in testing the GPIO interface,</p>
 <p><strong>For SX1509 GPIO</strong>, <strong>the assignments are:</strong></p>
 <table>
 <thead>
@@ -287,20 +287,20 @@
 
 <img src="TestInterface.assets\GPIO.png">
 
-<h2 id="3-SPI" class="article-heading"><a href="#3-SPI" class="headerlink" title="3) SPI"></a>3) SPI<a class="article-anchor" href="#3-SPI" aria-hidden="true"></a></h2><ul>
+<h2 id="3-SPI" class="article-heading"><a href="#3-SPI" class="headerlink" title="3) SPI"></a>3) SPI<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#3-SPI'}, '*');" class="article-anchor" href="#3-SPI" aria-hidden="true"></a></h2><ul>
 <li>Connect pins 19 and 21 on CN1001 header to establish a link between SPI0 RX and TX.</li>
 <li>Similarly Connect pins 27 and 28 on CN1602 header to establish a link between SPI1 RX and TX.</li>
 <li>Subsequently, run the spidev_test command to transmit data from SPI TX to RX. The command executed is as follows:</li>
 </ul>
-<h3 id="SPI0" class="article-heading"><a href="#SPI0" class="headerlink" title="SPI0"></a>SPI0<a class="article-anchor" href="#SPI0" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ spidev_test -D /dev/spidev0.0 -p <span class="string">&quot;12345&quot;</span> -v</span><br></pre></td></tr></table></figure>
+<h3 id="SPI0" class="article-heading"><a href="#SPI0" class="headerlink" title="SPI0"></a>SPI0<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#SPI0'}, '*');" class="article-anchor" href="#SPI0" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ spidev_test -D /dev/spidev0.0 -p <span class="string">&quot;12345&quot;</span> -v</span><br></pre></td></tr></table></figure>
 
 <img src="TestInterface.assets\spidev0.png">
 
-<h3 id="SPI1" class="article-heading"><a href="#SPI1" class="headerlink" title="SPI1"></a>SPI1<a class="article-anchor" href="#SPI1" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ spidev_test -D /dev/spidev1.0 -p <span class="string">&quot;12345&quot;</span> -v</span><br></pre></td></tr></table></figure>
+<h3 id="SPI1" class="article-heading"><a href="#SPI1" class="headerlink" title="SPI1"></a>SPI1<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#SPI1'}, '*');" class="article-anchor" href="#SPI1" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ spidev_test -D /dev/spidev1.0 -p <span class="string">&quot;12345&quot;</span> -v</span><br></pre></td></tr></table></figure>
 
 <img src="TestInterface.assets\spidev.png">
 
-<h2 id="4-CAN" class="article-heading"><a href="#4-CAN" class="headerlink" title="4) CAN"></a>4) CAN<a class="article-anchor" href="#4-CAN" aria-hidden="true"></a></h2><p>To configure the <strong>CAN interface</strong>, make the following connections on the <strong>CN1602 header</strong>:</p>
+<h2 id="4-CAN" class="article-heading"><a href="#4-CAN" class="headerlink" title="4) CAN"></a>4) CAN<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#4-CAN'}, '*');" class="article-anchor" href="#4-CAN" aria-hidden="true"></a></h2><p>To configure the <strong>CAN interface</strong>, make the following connections on the <strong>CN1602 header</strong>:</p>
 <ul>
 <li><strong>CAN0_H (Pin 13) → CAN1_H (Pin 14)</strong></li>
 <li><strong>CAN0_L (Pin 15) → CAN1_L (Pin 16)</strong></li>
@@ -317,7 +317,7 @@
 <p>The output will appear on Terminal 1.</p>
 <img src="TestInterface.assets\IMG_6311.JPG">
 
-<h2 id="5-Ethernet" class="article-heading"><a href="#5-Ethernet" class="headerlink" title="5) Ethernet"></a>5) Ethernet<a class="article-anchor" href="#5-Ethernet" aria-hidden="true"></a></h2><p>Use the command below to obtain Ethernet information, which will display details related to the Ethernet connection.</p>
+<h2 id="5-Ethernet" class="article-heading"><a href="#5-Ethernet" class="headerlink" title="5) Ethernet"></a>5) Ethernet<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#5-Ethernet'}, '*');" class="article-anchor" href="#5-Ethernet" aria-hidden="true"></a></h2><p>Use the command below to obtain Ethernet information, which will display details related to the Ethernet connection.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ifconfig eth0</span><br></pre></td></tr></table></figure>
 
 <img src="TestInterface.assets\ifconfig0.png">
@@ -331,7 +331,7 @@
 
 <img src="TestInterface.assets\ping.png">
 
-<h2 id="6-Audio-Line-In-x2F-Line-Out" class="article-heading"><a href="#6-Audio-Line-In-x2F-Line-Out" class="headerlink" title="6) Audio(Line-In&#x2F;Line-Out)"></a>6) Audio(Line-In&#x2F;Line-Out)<a class="article-anchor" href="#6-Audio-Line-In-x2F-Line-Out" aria-hidden="true"></a></h2><p>The below command is used to test the audio interface by playing a specified <code>.wav</code> file through the selected audio device (<code>plughw:0,0</code>).</p>
+<h2 id="6-Audio-Line-In-x2F-Line-Out" class="article-heading"><a href="#6-Audio-Line-In-x2F-Line-Out" class="headerlink" title="6) Audio(Line-In&#x2F;Line-Out)"></a>6) Audio(Line-In&#x2F;Line-Out)<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#6-Audio-Line-In-x2F-Line-Out'}, '*');" class="article-anchor" href="#6-Audio-Line-In-x2F-Line-Out" aria-hidden="true"></a></h2><p>The below command is used to test the audio interface by playing a specified <code>.wav</code> file through the selected audio device (<code>plughw:0,0</code>).</p>
 <blockquote>
 <p>Replace <code>&lt;audiofile&gt;</code> with the desired file to check audio output.</p>
 </blockquote>
@@ -339,13 +339,13 @@
 
 <img src="TestInterface.assets\audio.png">
 
-<h2 id="7-SD" class="article-heading"><a href="#7-SD" class="headerlink" title="7) SD"></a>7) SD<a class="article-anchor" href="#7-SD" aria-hidden="true"></a></h2><p>To confirm the presence of the SD card,Insert the SD card in board, then power on the board and execute the command below.</p>
+<h2 id="7-SD" class="article-heading"><a href="#7-SD" class="headerlink" title="7) SD"></a>7) SD<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#7-SD'}, '*');" class="article-anchor" href="#7-SD" aria-hidden="true"></a></h2><p>To confirm the presence of the SD card,Insert the SD card in board, then power on the board and execute the command below.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ lsblk</span><br></pre></td></tr></table></figure>
 
 <p>The output should show the connected block devices. Typically, an SD card is recognized as a device such as &#x2F;dev&#x2F;mmcblk0, &#x2F;dev&#x2F;sdX, or similar.</p>
 <img src="TestInterface.assets\sd.png">
 
-<h2 id="8-Camera-USB" class="article-heading"><a href="#8-Camera-USB" class="headerlink" title="8) Camera(USB)"></a>8) Camera(USB)<a class="article-anchor" href="#8-Camera-USB" aria-hidden="true"></a></h2><p>The USB webcam was evaluated using the following command</p>
+<h2 id="8-Camera-USB" class="article-heading"><a href="#8-Camera-USB" class="headerlink" title="8) Camera(USB)"></a>8) Camera(USB)<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#8-Camera-USB'}, '*');" class="article-anchor" href="#8-Camera-USB" aria-hidden="true"></a></h2><p>The USB webcam was evaluated using the following command</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,width=1280,height=720 ! waylandsink.</span><br></pre></td></tr></table></figure>
 
 <blockquote>
