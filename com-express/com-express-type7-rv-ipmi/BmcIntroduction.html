@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.html">
+  <!-- Alternative links -->
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  -->
+
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/com-express/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+  jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+  });
+
+  $('button').addClass('btn-primary').text('Switch to Orange Tab');
+  $('button').click(function(){
+        $('#tabs a[href=#orange]').tab('show');
+  });
+
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+});
+
+$('button').addClass('btn-primary').text('Switch to Orange Tab');
+$('button').click(function(){
+      $('#tabs a[href=#ava]').tab('show');
+});
+
+</script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+ <!-- Hotjar Tracking Code for https://ipi.wiki 
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  -->
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/com-express/css/navy.css">
+
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/com-express//css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Smart Efficiency for Limitless Edge Management  RunBMC-AST2600 module is an ASPEED AST2600 BMC chip-based hardware and software solution as your building block for quick prototyping and saving your To">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Smart Efficiency for Limitless Edge Management  RunBMC-AST2600 module is an ASPEED AST2600 BMC chip-based hardware and software solution as your building block for quick prototyping and saving your To">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/runbmc.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/bmc-key-element.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/bmc-hw-interface.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/runbmc-ast2600-and-type7-carrier-a1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/BTN_EVENT.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/bmc-dimension.png">
+<meta property="article:published_time" content="2025-06-06T06:07:29.501Z">
+<meta property="article:modified_time" content="2025-06-06T06:07:29.501Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/runbmc.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/com-express/com-express/" class="main-nav-link  header">menu.comexpress</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BmcIntroduction.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 class="article-heading">Smart Efficiency for Limitless Edge Management<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
+<img src="BmcIntroduction.assets/runbmc.png" style="width: 80%;">
+<p><strong>RunBMC-AST2600</strong> module is an ASPEED AST2600 BMC chip-based hardware and software solution as your building block for quick prototyping and saving your Total Cost of Ownership.</p>
+<p>Building block concept leverages RunBMC module form factor that is defined by BMC daughter board I/O from OCP.</p>
+<p>RunBMC-AST2600 module is designed to interface with host system, such as COM Express module, via PCIe/USB for KVM and UART for SOL and IPMB for monitoring CPU related temperature, voltage, current, and several I2C/SMB/GPIOs.</p>
+<p>Some of the interfaces will be accessed either through IPMItool (command line) or WebUI, get detail from <strong>IPMI Software Support</strong></p>
+<h2 id="Specification" class="article-heading">Specification<a class="article-anchor" href="#Specification" aria-hidden="true"></a></h2>
+<img src="BmcIntroduction.assets/bmc-key-element.png" style="width: 100%;">
+<h3 id="Core-Feature" class="article-heading">Core Feature<a class="article-anchor" href="#Core-Feature" aria-hidden="true"></a></h3>
+<ul>
+<li>
+<p>Remote management usage, up to 1000Mbit/s speed</p>
+</li>
+<li>
+<p>Remote HTLM5 based KVM (graphics) console</p>
+</li>
+<li>
+<p>Virtual Media and IOS images</p>
+</li>
+<li>
+<p>Remote server power control</p>
+</li>
+<li>
+<p>Remote Serial over LAN (text console)</p>
+</li>
+<li>
+<p>Event Log support</p>
+</li>
+<li>
+<p>Hardware Monitoring (Voltage,RPM,Temperature,CPUStatus…etc)</p>
+</li>
+<li>
+<p>Overall health display on the main page (dashboard)</p>
+</li>
+<li>
+<p>Out of band management through shared or dedicated LAN</p>
+</li>
+<li>
+<p>Option to change LAN connection interface at Runtime</p>
+</li>
+<li>
+<p>System Firewall</p>
+</li>
+<li>
+<p>LDAP/AD/RADIUS Support</p>
+</li>
+<li>
+<p>Remote <s>BIOS</s>/BMC Update</p>
+</li>
+<li>
+<p>Event Log Filter</p>
+</li>
+<li>
+<p>User Management</p>
+</li>
+<li>
+<p>Media Redirection Settings</p>
+</li>
+<li>
+<p>PAM Order Settings</p>
+</li>
+<li>
+<p>SSL settings</p>
+</li>
+<li>
+<p>SMTP Settings</p>
+</li>
+<li>
+<p>FRU Information</p>
+</li>
+</ul>
+<h3 id="Hardware-Interface" class="article-heading">Hardware Interface<a class="article-anchor" href="#Hardware-Interface" aria-hidden="true"></a></h3>
+<p>Interface and pin-out leverages RunBMC Rev. 1.4.1 specifications.</p>
+<img src="BmcIntroduction.assets/bmc-hw-interface.png" style="width: 100%;">
+<ul>
+<li>1x PCIe Gen2</li>
+<li>1x USB</li>
+<li>1x VGA</li>
+<li>1x RGMII</li>
+<li>8x PWM and maximum 16x TACH</li>
+<li>Up to 12x I2C and multiple GPIOs (for user)</li>
+<li>Up to 3x UART and multiple GPIOs (for user)</li>
+<li>GPIOs (some of them are used for communication with CPU, some of them are free for user)</li>
+<li>1x LPC</li>
+<li>multiple SPI (not for user)</li>
+<li>Misc. and Watchdog</li>
+</ul>
+<h2 id="Block-Diagram" class="article-heading">Block Diagram<a class="article-anchor" href="#Block-Diagram" aria-hidden="true"></a></h2>
+<p>Diagram below illustrates how the RunBMC module interfaces with COM Express Type 7 Module/Carrier.</p>
+<img src="BmcIntroduction.assets/runbmc-ast2600-and-type7-carrier-a1.png" style="width: 80%;">
+<p><strong>Note</strong> : interfaces marked with * are not enabled. Interfaces marked with a dash could be enabled by specific HW/FW rework.</p>
+<h2 id="Pinout-Signal-Description" class="article-heading">Pinout &amp; Signal Description<a class="article-anchor" href="#Pinout-Signal-Description" aria-hidden="true"></a></h2>
+<h3 id="Pin-Summary" class="article-heading">Pin Summary<a class="article-anchor" href="#Pin-Summary" aria-hidden="true"></a></h3>
+<p>The table below shows a comprehensible list of all signal pins supported on the 260-pin RunBMC edge connectors as defined by RunBMC Rev. 1.4.1 specification. Signals described in the specification but not supported on the RunBMC-AST2600 are marked with <s>strikethrough</s>. In addition, most pins are multi-functional, thus are dependent on the firmware porting. Get the default features in <strong>Signal Description</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Pin#</strong></th>
+<th><strong>Name</strong></th>
+<th></th>
+<th><strong>Name</strong></th>
+<th>Pin#</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>VDD_12V_STBY</td>
+<td></td>
+<td>VDD_RGMII_REF</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>VDD3_3V_STBY</td>
+<td></td>
+<td>VDD3_3V_STBY</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>VDD3_3V_STBY</td>
+<td></td>
+<td>VDD3_3V_STBY</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>VDD3_3V_STBY</td>
+<td></td>
+<td>GND</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>GND</td>
+<td></td>
+<td>DACG</td>
+<td>10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>GND</td>
+<td></td>
+<td>DACB</td>
+<td>12</td>
+</tr>
+<tr>
+<td>13</td>
+<td><s>GPIO0_SGPMLD</s></td>
+<td></td>
+<td>DACR</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td><s>GPIO1_SGPMI</s></td>
+<td></td>
+<td>VGAHS</td>
+<td>16</td>
+</tr>
+<tr>
+<td>17</td>
+<td><s>GPIO3_SGPMO</s></td>
+<td></td>
+<td>VGAVS</td>
+<td>18</td>
+</tr>
+<tr>
+<td>19</td>
+<td><s>GPIO5_SGPMCK</s></td>
+<td></td>
+<td>DDCCLK</td>
+<td>20</td>
+</tr>
+<tr>
+<td>21</td>
+<td>CONSOLERX (UART5)</td>
+<td></td>
+<td>DDCDAT</td>
+<td>22</td>
+</tr>
+<tr>
+<td>23</td>
+<td>CONSOLETX (UART5)</td>
+<td></td>
+<td>GND</td>
+<td>24</td>
+</tr>
+<tr>
+<td><s>25</s></td>
+<td><s>GPIO7</s></td>
+<td></td>
+<td>PWM0</td>
+<td>26</td>
+</tr>
+<tr>
+<td>27</td>
+<td>PWM2</td>
+<td></td>
+<td>PWM1</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>PWM4</td>
+<td></td>
+<td>PWM3</td>
+<td>30</td>
+</tr>
+<tr>
+<td>31</td>
+<td>PWM6</td>
+<td></td>
+<td>PWM5</td>
+<td>32</td>
+</tr>
+<tr>
+<td>33</td>
+<td>GND</td>
+<td></td>
+<td>PWM7</td>
+<td>34</td>
+</tr>
+<tr>
+<td>35</td>
+<td><s>GPIO15 (as UART1_CTS)</s></td>
+<td></td>
+<td>GPIO19 (as UART2_CTS, for SOL)</td>
+<td>36</td>
+</tr>
+<tr>
+<td>37</td>
+<td><s>GPIO17 (as UART1_RTC)</s></td>
+<td></td>
+<td>GPIO20 (as UART2_RTS, for SOL)</td>
+<td>38</td>
+</tr>
+<tr>
+<td>39</td>
+<td>GND</td>
+<td></td>
+<td>PASSTHRU2_OUT (as RST_BTN)</td>
+<td>40</td>
+</tr>
+<tr>
+<td>41</td>
+<td><s>UART1RX_GPIO23</s></td>
+<td></td>
+<td>UART2RX (for SOL)</td>
+<td>42</td>
+</tr>
+<tr>
+<td>43</td>
+<td><s>UART1TX_GPIO0</s></td>
+<td></td>
+<td>UART2TX (for SOL)</td>
+<td>44</td>
+</tr>
+<tr>
+<td>45</td>
+<td>GND</td>
+<td></td>
+<td>GPIO25 (as BMC_LED)</td>
+<td>46</td>
+</tr>
+<tr>
+<td>47</td>
+<td>I2C8SCL</td>
+<td></td>
+<td>I2C13SCL</td>
+<td>48</td>
+</tr>
+<tr>
+<td>49</td>
+<td>I2C8SDA</td>
+<td></td>
+<td>I2C13SDA</td>
+<td>50</td>
+</tr>
+<tr>
+<td>51</td>
+<td>GND</td>
+<td></td>
+<td>GND</td>
+<td>52</td>
+</tr>
+<tr>
+<td>53</td>
+<td>I2C7SCL</td>
+<td></td>
+<td>I2C6SCL (as SMBus)</td>
+<td>54</td>
+</tr>
+<tr>
+<td>55</td>
+<td>I2C7SDA</td>
+<td></td>
+<td>I2C6SDA (as SMBus)</td>
+<td>56</td>
+</tr>
+<tr>
+<td>57</td>
+<td>GND</td>
+<td></td>
+<td>GND</td>
+<td>58</td>
+</tr>
+<tr>
+<td>59</td>
+<td>FWSPIWP#</td>
+<td></td>
+<td>I2C5SCL</td>
+<td>60</td>
+</tr>
+<tr>
+<td>61</td>
+<td>GPIO37 (as part of FWSPI usage)</td>
+<td></td>
+<td>I2C5SDA</td>
+<td>62</td>
+</tr>
+<tr>
+<td>63</td>
+<td>FWSPICS0#</td>
+<td></td>
+<td>GND</td>
+<td>64</td>
+</tr>
+<tr>
+<td>65</td>
+<td>FWSPIMOSI_IO0</td>
+<td></td>
+<td>GPIO38 (as SMBus_ALERT)</td>
+<td>66</td>
+</tr>
+<tr>
+<td>67</td>
+<td>FWSPIMISO_IO1</td>
+<td></td>
+<td>GPIO39 (as Board_ID)</td>
+<td>68</td>
+</tr>
+<tr>
+<td>69</td>
+<td>FWSPI_IO2_GPIO41</td>
+<td></td>
+<td>GPIO40 (as Board_ID)</td>
+<td>70</td>
+</tr>
+<tr>
+<td>71</td>
+<td>FWSPI_IO3_GPIO43</td>
+<td></td>
+<td>GPIO42 (as Board_ID)</td>
+<td>72</td>
+</tr>
+<tr>
+<td>73</td>
+<td>FWSPICK</td>
+<td></td>
+<td>GPIO44</td>
+<td>74</td>
+</tr>
+<tr>
+<td>75</td>
+<td>FWSPICS1#</td>
+<td></td>
+<td><s>PASSTHRU1_OUT (as PWR_BTN)</s></td>
+<td>76</td>
+</tr>
+<tr>
+<td>77</td>
+<td><s>PWRGD</s></td>
+<td></td>
+<td>TACH0</td>
+<td>78</td>
+</tr>
+<tr>
+<td>79</td>
+<td>GPIO47 (as Carrier_HOT)</td>
+<td></td>
+<td>TACH1</td>
+<td>80</td>
+</tr>
+<tr>
+<td>81</td>
+<td>GPIO49 (as UID_LED)</td>
+<td></td>
+<td>TACH2</td>
+<td>82</td>
+</tr>
+<tr>
+<td><s>83</s></td>
+<td><s>WDTRST2_GPIO51</s></td>
+<td></td>
+<td>TACH3</td>
+<td>84</td>
+</tr>
+<tr>
+<td>85</td>
+<td>GPIO53 (as Power_Good_3V3)</td>
+<td></td>
+<td>TACH4</td>
+<td>86</td>
+</tr>
+<tr>
+<td><s>87</s></td>
+<td><s>GPIO55</s></td>
+<td></td>
+<td>TACH5</td>
+<td>88</td>
+</tr>
+<tr>
+<td>89</td>
+<td>GPIO57</td>
+<td></td>
+<td>TACH6</td>
+<td>90</td>
+</tr>
+<tr>
+<td><s>91</s></td>
+<td><s>WDTRST1_GPIO59</s></td>
+<td></td>
+<td>TACH7</td>
+<td>92</td>
+</tr>
+<tr>
+<td><s>93</s></td>
+<td><s>GPIO61</s></td>
+<td></td>
+<td><s>TACH8</s></td>
+<td><s>94</s></td>
+</tr>
+<tr>
+<td><s>95</s></td>
+<td>GPIO63</td>
+<td></td>
+<td><s>TACH9</s></td>
+<td><s>96</s></td>
+</tr>
+<tr>
+<td>97</td>
+<td>CPU_RST#</td>
+<td></td>
+<td><s>TACH10</s></td>
+<td><s>98</s></td>
+</tr>
+<tr>
+<td>99</td>
+<td>GPIO67</td>
+<td></td>
+<td><s>TACH11</s></td>
+<td><s>100</s></td>
+</tr>
+<tr>
+<td>101</td>
+<td>GPIO69 (as SUS_S3)</td>
+<td></td>
+<td><s>TACH12</s></td>
+<td><s>102</s></td>
+</tr>
+<tr>
+<td>103</td>
+<td>GPIO71 (as SUS_S4)</td>
+<td></td>
+<td><s>TACH13</s></td>
+<td><s>104</s></td>
+</tr>
+<tr>
+<td>105</td>
+<td>GPIO73</td>
+<td></td>
+<td><s>TACH14</s></td>
+<td><s>106</s></td>
+</tr>
+<tr>
+<td><s>107</s></td>
+<td><s>GPIO75 (as BIOS_SPI_CS)</s></td>
+<td></td>
+<td><s>TACH15</s></td>
+<td><s>108</s></td>
+</tr>
+<tr>
+<td>109</td>
+<td>GPIO76</td>
+<td></td>
+<td>GND</td>
+<td>110</td>
+</tr>
+<tr>
+<td><s>111</s></td>
+<td><s>PECIVDD</s></td>
+<td></td>
+<td><s>PECI</s></td>
+<td><s>112</s></td>
+</tr>
+<tr>
+<td>113</td>
+<td>GPIO77</td>
+<td></td>
+<td>GND</td>
+<td>114</td>
+</tr>
+<tr>
+<td>115</td>
+<td>GPIO79 (as PWR_BTN)</td>
+<td></td>
+<td><s>SPI2CK_GPIO78</s></td>
+<td><s>116</s></td>
+</tr>
+<tr>
+<td>117</td>
+<td>GPIO81 (as MUX_SEL_UART2)</td>
+<td></td>
+<td><s>SPI2MISO_GPIO80</s></td>
+<td><s>118</s></td>
+</tr>
+<tr>
+<td>119</td>
+<td>GPIO83 (as THERMTRIP)</td>
+<td></td>
+<td><s>SPI2MOSI_GPIO82</s></td>
+<td><s>120</s></td>
+</tr>
+<tr>
+<td>121</td>
+<td>GPIO85 (as PWR_BTN monitor)</td>
+<td></td>
+<td><s>SPI2CS0#_GPIO84</s></td>
+<td><s>122</s></td>
+</tr>
+<tr>
+<td>123</td>
+<td>I2C2SCL</td>
+<td></td>
+<td><s>SPI2CS1#_GPIO86</s></td>
+<td><s>124</s></td>
+</tr>
+<tr>
+<td>125</td>
+<td>I2C2SDA</td>
+<td></td>
+<td>GND</td>
+<td>126</td>
+</tr>
+<tr>
+<td>127</td>
+<td>GND</td>
+<td></td>
+<td>I2C1SCL</td>
+<td><s>128</s></td>
+</tr>
+<tr>
+<td>129</td>
+<td>GPIO91</td>
+<td></td>
+<td>I2C1SDA</td>
+<td><s>130</s></td>
+</tr>
+<tr>
+<td>131</td>
+<td>GPIO93</td>
+<td></td>
+<td>GND</td>
+<td>132</td>
+</tr>
+<tr>
+<td>133</td>
+<td>GND</td>
+<td></td>
+<td><s>I2C4SCL_GPIO94</s></td>
+<td><s>134</s></td>
+</tr>
+<tr>
+<td>135</td>
+<td>GPIO95</td>
+<td></td>
+<td><s>I2C4SDA_GPIO96</s></td>
+<td><s>136</s></td>
+</tr>
+<tr>
+<td>137</td>
+<td>GPIO97</td>
+<td></td>
+<td>GPIO98 (as I2C_ALERT)</td>
+<td>138</td>
+</tr>
+<tr>
+<td>139</td>
+<td>GND</td>
+<td></td>
+<td>GPIO99</td>
+<td>140</td>
+</tr>
+<tr>
+<td>141</td>
+<td>I2C12SCL</td>
+<td></td>
+<td>PERSTN</td>
+<td>142</td>
+</tr>
+<tr>
+<td>143</td>
+<td>I2C12SDA</td>
+<td></td>
+<td>GPIO102</td>
+<td>144</td>
+</tr>
+<tr>
+<td>145</td>
+<td>GND</td>
+<td></td>
+<td>GPIO103</td>
+<td>146</td>
+</tr>
+<tr>
+<td>147</td>
+<td>PERXN</td>
+<td></td>
+<td>GPIO104</td>
+<td>148</td>
+</tr>
+<tr>
+<td>149</td>
+<td>PERXP</td>
+<td></td>
+<td>GPIO105</td>
+<td>150</td>
+</tr>
+<tr>
+<td>151</td>
+<td>GND</td>
+<td></td>
+<td>VDD_LPC3V3_ESPI1V8</td>
+<td>152</td>
+</tr>
+<tr>
+<td>153</td>
+<td>PETXN</td>
+<td></td>
+<td>GPIO106</td>
+<td>154</td>
+</tr>
+<tr>
+<td>155</td>
+<td>PETXP</td>
+<td></td>
+<td>GPIO107</td>
+<td>156</td>
+</tr>
+<tr>
+<td>157</td>
+<td>GND</td>
+<td></td>
+<td>GPIO108</td>
+<td>158</td>
+</tr>
+<tr>
+<td>159</td>
+<td>PEREFCLKN</td>
+<td></td>
+<td><s>GPIO109 (as RST_BTN monitor)</s></td>
+<td>160</td>
+</tr>
+<tr>
+<td>161</td>
+<td>PEREFCLKP</td>
+<td></td>
+<td><s>JTAG1TRST</s></td>
+<td><s>162</s></td>
+</tr>
+<tr>
+<td>163</td>
+<td>GND</td>
+<td></td>
+<td><s>JTAG1TDO</s></td>
+<td><s>164</s></td>
+</tr>
+<tr>
+<td>165</td>
+<td>LPCRST#_ESPIRST#</td>
+<td></td>
+<td><s>JTAG1TDI</s></td>
+<td><s>166</s></td>
+</tr>
+<tr>
+<td>167</td>
+<td>LPCD1_ESPID1</td>
+<td></td>
+<td><s>JTAG1RTCK</s></td>
+<td><s>168</s></td>
+</tr>
+<tr>
+<td>169</td>
+<td>LPCD0_ESPID0</td>
+<td></td>
+<td><s>JTAG1TCK</s></td>
+<td><s>170</s></td>
+</tr>
+<tr>
+<td>171</td>
+<td>LPCIRQ#_ESPIALERT#</td>
+<td></td>
+<td><s>JTAG1TMS</s></td>
+<td><s>172</s></td>
+</tr>
+<tr>
+<td>173</td>
+<td>LPCFRAME#_ESPICS#</td>
+<td></td>
+<td>ADC0</td>
+<td>174</td>
+</tr>
+<tr>
+<td>175</td>
+<td>LPCD3_ESPID3</td>
+<td></td>
+<td>ADC1</td>
+<td>176</td>
+</tr>
+<tr>
+<td>177</td>
+<td>LPCD2_ESPID2</td>
+<td></td>
+<td>ADC2</td>
+<td>178</td>
+</tr>
+<tr>
+<td>179</td>
+<td>LPCCLK_ESPICLK</td>
+<td></td>
+<td>ADC3</td>
+<td>180</td>
+</tr>
+<tr>
+<td>181</td>
+<td>I2C9SCL</td>
+<td></td>
+<td>ADC4</td>
+<td>182</td>
+</tr>
+<tr>
+<td>183</td>
+<td>I2C9SDA</td>
+<td></td>
+<td>ADC5</td>
+<td>184</td>
+</tr>
+<tr>
+<td>185</td>
+<td>GND</td>
+<td></td>
+<td>ADC6</td>
+<td>186</td>
+</tr>
+<tr>
+<td>187</td>
+<td>I2C10SCL</td>
+<td></td>
+<td>ADC7</td>
+<td>188</td>
+</tr>
+<tr>
+<td>189</td>
+<td>I2C10SDA</td>
+<td></td>
+<td><s>SYSCS#_GPIO112</s></td>
+<td><s>190</s></td>
+</tr>
+<tr>
+<td>191</td>
+<td>GND</td>
+<td></td>
+<td><s>SYSMISO_GPO1</s></td>
+<td><s>192</s></td>
+</tr>
+<tr>
+<td>193</td>
+<td>GPIO113</td>
+<td></td>
+<td><s>SYSMOSI_GPO2</s></td>
+<td><s>194</s></td>
+</tr>
+<tr>
+<td>195</td>
+<td>GPIO115</td>
+<td></td>
+<td><s>SYSCK_GPIO114</s></td>
+<td><s>196</s></td>
+</tr>
+<tr>
+<td>197</td>
+<td>GND</td>
+<td></td>
+<td>SPI1CS0#</td>
+<td>198</td>
+</tr>
+<tr>
+<td>199</td>
+<td>I2C11SCL</td>
+<td></td>
+<td>SPI1MOSI_IO0</td>
+<td>200</td>
+</tr>
+<tr>
+<td>201</td>
+<td>I2C11SDA</td>
+<td></td>
+<td>SPI1MISO_IO1</td>
+<td>202</td>
+</tr>
+<tr>
+<td>203</td>
+<td>GND</td>
+<td></td>
+<td>SPI1_IO2</td>
+<td>204</td>
+</tr>
+<tr>
+<td>205</td>
+<td>I2C3SCL (as IPMB)</td>
+<td></td>
+<td>SPI1_IO3</td>
+<td>206</td>
+</tr>
+<tr>
+<td>207</td>
+<td>I2C3SDA (as IPMB)</td>
+<td></td>
+<td>SPI1CK</td>
+<td>208</td>
+</tr>
+<tr>
+<td>209</td>
+<td>GPIO123</td>
+<td></td>
+<td>SPI1CS1#</td>
+<td>210</td>
+</tr>
+<tr>
+<td>211</td>
+<td>GPIO125</td>
+<td></td>
+<td>GND</td>
+<td>212</td>
+</tr>
+<tr>
+<td>213</td>
+<td>GPIO126</td>
+<td></td>
+<td><s>RMIIMDIO</s></td>
+<td><s>214</s></td>
+</tr>
+<tr>
+<td>215</td>
+<td>GND</td>
+<td></td>
+<td><s>RMIICRSDV</s></td>
+<td><s>216</s></td>
+</tr>
+<tr>
+<td>217</td>
+<td>USB2A_HD_DN</td>
+<td></td>
+<td><s>RMIIMDC</s></td>
+<td><s>218</s></td>
+</tr>
+<tr>
+<td>219</td>
+<td>USB2A_HD_DP</td>
+<td></td>
+<td><s>RMIIRCLKI</s></td>
+<td><s>220</s></td>
+</tr>
+<tr>
+<td>221</td>
+<td>GND</td>
+<td></td>
+<td><s>RMIIRXER</s></td>
+<td><s>222</s></td>
+</tr>
+<tr>
+<td><s>223</s></td>
+<td><s>USB2B_D_DN</s></td>
+<td></td>
+<td><s>RMIITXEN</s></td>
+<td><s>224</s></td>
+</tr>
+<tr>
+<td><s>225</s></td>
+<td><s>USB2B_D_DP</s></td>
+<td></td>
+<td>GND</td>
+<td>226</td>
+</tr>
+<tr>
+<td>227</td>
+<td>GND</td>
+<td></td>
+<td><s>RMIIRXD0</s></td>
+<td><s>228</s></td>
+</tr>
+<tr>
+<td>229</td>
+<td>RGMIITXD0</td>
+<td></td>
+<td><s>RMIIRXD1</s></td>
+<td><s>230</s></td>
+</tr>
+<tr>
+<td>231</td>
+<td>RGMIIRXTD0</td>
+<td></td>
+<td>GND</td>
+<td>232</td>
+</tr>
+<tr>
+<td>233</td>
+<td>GND</td>
+<td></td>
+<td><s>RMIITXD0</s></td>
+<td><s>234</s></td>
+</tr>
+<tr>
+<td>235</td>
+<td>RGMIIRXD1</td>
+<td></td>
+<td><s>RMIITXD1</s></td>
+<td><s>236</s></td>
+</tr>
+<tr>
+<td>237</td>
+<td>RGMIITXD1</td>
+<td></td>
+<td>GND</td>
+<td>238</td>
+</tr>
+<tr>
+<td>239</td>
+<td>GND</td>
+<td></td>
+<td>RGMIITXCK</td>
+<td>240</td>
+</tr>
+<tr>
+<td>241</td>
+<td>RGMIITXD2</td>
+<td></td>
+<td>RGMIIRXCTL</td>
+<td>242</td>
+</tr>
+<tr>
+<td>243</td>
+<td>RGMIIRXD2</td>
+<td></td>
+<td>RGMIITXCTL</td>
+<td>244</td>
+</tr>
+<tr>
+<td>245</td>
+<td>GND</td>
+<td></td>
+<td>RGMIIMDC</td>
+<td>246</td>
+</tr>
+<tr>
+<td>247</td>
+<td>RGMIIRXD3</td>
+<td></td>
+<td>RGMIIMDIO</td>
+<td>248</td>
+</tr>
+<tr>
+<td>249</td>
+<td>RGMIITXD3</td>
+<td></td>
+<td>RGMIIRXCK</td>
+<td>250</td>
+</tr>
+<tr>
+<td>251</td>
+<td>GND</td>
+<td></td>
+<td>GPI0</td>
+<td>252</td>
+</tr>
+<tr>
+<td>253</td>
+<td>BMC_RESET#</td>
+<td></td>
+<td>GPI1</td>
+<td>254</td>
+</tr>
+<tr>
+<td>255</td>
+<td>GPI3</td>
+<td></td>
+<td>GPI2</td>
+<td>256</td>
+</tr>
+<tr>
+<td>257</td>
+<td>GPI5</td>
+<td></td>
+<td>GPI4</td>
+<td>258</td>
+</tr>
+<tr>
+<td>259</td>
+<td>GPI7</td>
+<td></td>
+<td>GPI6</td>
+<td>260</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>All the SPI interfaces, such as FWSPI, SPI1, SPI2, SYSSPI, are for engineering testing purpose, not for user usage</li>
+<li>Pin.117 (GPIO81) is used as MUX selection for UART2. UART2 come from BMC. the default is connecting UART from BMC and UART from CPU for SOL function</li>
+<li>Pin.121 (GPIO85) is used for monitoring the Power Button event. a input pin to BMC. Pin.76 (PASSTHRU1_OUT) is output pin from BMC and is used to trigger the Power Button behavior</li>
+</ul>
+<h3 id="Signal-Description" class="article-heading">Signal Description<a class="article-anchor" href="#Signal-Description" aria-hidden="true"></a></h3>
+<p>Most interfaces defined by OCP RunBMC specification are multi-functional usage, dependent on<br>
+firmware porting. A default setting will be marked in “Description (default firmware)”</p>
+<h4 id="ADC" class="article-heading">ADC<a class="article-anchor" href="#ADC" aria-hidden="true"></a></h4>
+<p>Analog-to-Digital Conversion</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Pin#</th>
+<th>Description (default function)</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADC0</td>
+<td>174</td>
+<td>Voltage monitor for 12V_ATX_4P</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC1</td>
+<td>176</td>
+<td>Voltage monitor for 12V</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC2</td>
+<td>178</td>
+<td>Voltage monitor for 5VSB</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC3</td>
+<td>180</td>
+<td>Voltage monitor for 5V</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC4</td>
+<td>182</td>
+<td>Voltage monitor for 3V3SB</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC5</td>
+<td>184</td>
+<td>Voltage monitor for 3V3</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC6</td>
+<td>186</td>
+<td>Voltage monitor for RTC coin battery</td>
+<td></td>
+</tr>
+<tr>
+<td>ADC7</td>
+<td>188</td>
+<td>Voltage monitor for 1V8SB</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="PCIe" class="article-heading">PCIe<a class="article-anchor" href="#PCIe" aria-hidden="true"></a></h4>
+<p>Up to PCIe Gen2 x1 lane connection. This interface shall be capable of PCI-Express “Endpoint” functionality</p>
+<p>Connect to CPU as KVM function</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PERXN</td>
+<td>147</td>
+<td>PCI-Express Receive Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>PERXP</td>
+<td>149</td>
+<td>PCI-Express Receive Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>PETXN</td>
+<td>153</td>
+<td>PCI-Express Transmit Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>PETXP</td>
+<td>155</td>
+<td>PCI-Express Transmit Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>PEREFCLKN</td>
+<td>159</td>
+<td>PCI-Express Reference Clock Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>PEREFCLKP</td>
+<td>161</td>
+<td>PCI-Express Reference Clock Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>PERSTN</td>
+<td>142</td>
+<td>PCI-Express Reset Signal, Active-low</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Ethernet-and-RGMII" class="article-heading">Ethernet and RGMII<a class="article-anchor" href="#Ethernet-and-RGMII" aria-hidden="true"></a></h4>
+<p>Connect to a LAN controller for dedicated management Ethernet port</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGMIITXD0</td>
+<td>229</td>
+<td>1000BASE-T Differential Pair Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIITXD1</td>
+<td>237</td>
+<td>1000BASE-T Differential Pair Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIITXD2</td>
+<td>241</td>
+<td>1000BASE-T Differential Pair Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIITXD3</td>
+<td>249</td>
+<td>1000BASE-T Differential Pair Positive</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIRXTD0</td>
+<td>231</td>
+<td>1000BASE-T Differential Pair Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIRXD1</td>
+<td>235</td>
+<td>1000BASE-T Differential Pair Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIRXD2</td>
+<td>243</td>
+<td>1000BASE-T Differential Pair Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIRXD3</td>
+<td>247</td>
+<td>1000BASE-T Differential Pair Negative</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIITXCK</td>
+<td>240</td>
+<td>PHY LED Signal 1</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIRXCTL</td>
+<td>242</td>
+<td>PHY LED Signal 2</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIITXCTL</td>
+<td>244</td>
+<td>PHY LED Signal 3</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIMDC</td>
+<td>246</td>
+<td>Management Interface Clock Output</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIMDIO</td>
+<td>248</td>
+<td>Management Interface Data Input / Output</td>
+<td></td>
+</tr>
+<tr>
+<td>RGMIIRXCK</td>
+<td>250</td>
+<td>RGMII Receive Clock</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="VGA" class="article-heading">VGA<a class="article-anchor" href="#VGA" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DACB</td>
+<td>10</td>
+<td>DAC B channel output</td>
+<td></td>
+</tr>
+<tr>
+<td>DACG</td>
+<td>12</td>
+<td>DAC G channel output</td>
+<td></td>
+</tr>
+<tr>
+<td>DACR</td>
+<td>14</td>
+<td>DAC R channel output</td>
+<td></td>
+</tr>
+<tr>
+<td>VGAHS</td>
+<td>16</td>
+<td>VGA horizontal sync output</td>
+<td></td>
+</tr>
+<tr>
+<td>VGAVS</td>
+<td>18</td>
+<td>VGA vertical sync output</td>
+<td></td>
+</tr>
+<tr>
+<td>DDCCLK</td>
+<td>20</td>
+<td>VGA DDC clock</td>
+<td></td>
+</tr>
+<tr>
+<td>DDCDAT</td>
+<td>22</td>
+<td>VGA DDC data</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="USB2A-Host-Device" class="article-heading">USB2A ~~Host/~~Device<a class="article-anchor" href="#USB2A-Host-Device" aria-hidden="true"></a></h4>
+<p>The Interface shall provide a USB interface capable of <s>both USB host and</s> USB device functionality, called USB2A.</p>
+<p><strong>Note</strong>: only support USB device at current implementation. and the only usage is to connect to USB from CPU as KVM function.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB2A_HD_DN</td>
+<td>217</td>
+<td>USB Device</td>
+<td>only for KVM</td>
+</tr>
+<tr>
+<td>USB2A_HD_DP</td>
+<td>219</td>
+<td>USB Device</td>
+<td>only for KVM</td>
+</tr>
+</tbody>
+</table>
+<h4 id="LPC-ESPI" class="article-heading">LPC/ESPI<a class="article-anchor" href="#LPC-ESPI" aria-hidden="true"></a></h4>
+<p>The Interface provides both a Low Pin Count (LPC) and Enhanced Serial Peripheral Bus (eSPI) combined onto the same physical pins. The RunBMC module designer may choose to multiplex with hardware if software pin multiplexing is not supported between these interfaces on the BMC SoC.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPCRST#_ESPIRST#</td>
+<td>165</td>
+<td>Active-low bus reset input</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCD1_ESPID1</td>
+<td>167</td>
+<td>Address &amp; Data bus bits 0 to 3</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCD0_ESPID0</td>
+<td>169</td>
+<td>Address &amp; Data bus bits 0 to 3</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCIRQ#_ESPIALERT#</td>
+<td>171</td>
+<td>Serial Interrupt Request Output</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCFRAME#_ESPICS#</td>
+<td>173</td>
+<td>Frame</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCD3_ESPID3</td>
+<td>175</td>
+<td>Address &amp; Data bus bits 0 to 3</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCD2_ESPID2</td>
+<td>177</td>
+<td>Address &amp; Data bus bits 0 to 3</td>
+<td>Default as LPC</td>
+</tr>
+<tr>
+<td>LPCCLK_ESPICLK</td>
+<td>179</td>
+<td>Bus Clock Input (33.3 MHz)</td>
+<td>Default as LPC</td>
+</tr>
+</tbody>
+</table>
+<h4 id="I2C" class="article-heading">I2C<a class="article-anchor" href="#I2C" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description</strong></th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I2C1SCL</td>
+<td>128</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C1SDA</td>
+<td>130</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C2SCL</td>
+<td>123</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C2SDA</td>
+<td>125</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C3SCL</td>
+<td>205</td>
+<td>I2C Serial Clock</td>
+<td>as IPMB feature</td>
+</tr>
+<tr>
+<td>I2C3SDA</td>
+<td>207</td>
+<td>I2C Serial Data</td>
+<td>as IPMB feature</td>
+</tr>
+<tr>
+<td><s>I2C4SCL</s></td>
+<td><s>134</s></td>
+<td><s>I2C Serial Clock</s></td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td><s>I2C4SDA</s></td>
+<td><s>136</s></td>
+<td><s>I2C Serial Data</s></td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>I2C5SCL</td>
+<td>60</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C5SDA</td>
+<td>62</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C6SCL</td>
+<td>54</td>
+<td>I2C Serial Clock</td>
+<td>as SSIF feature</td>
+</tr>
+<tr>
+<td>I2C6SDA</td>
+<td>56</td>
+<td>I2C Serial Data</td>
+<td>as SSIF feature</td>
+</tr>
+<tr>
+<td>I2C7SCL</td>
+<td>53</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C7SDA</td>
+<td>55</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C8SCL</td>
+<td>47</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Slave</td>
+</tr>
+<tr>
+<td>I2C8SDA</td>
+<td>49</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Slave</td>
+</tr>
+<tr>
+<td>I2C9SCL</td>
+<td>181</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Mater<br>connect to a thermal sensor</td>
+</tr>
+<tr>
+<td>I2C9SDA</td>
+<td>183</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Mater<br>connect to a thermal sensor</td>
+</tr>
+<tr>
+<td>I2C10SCL</td>
+<td>187</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C10SDA</td>
+<td>189</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C11SCL</td>
+<td>199</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C11SDA</td>
+<td>201</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C12SCL</td>
+<td>141</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C12SDA</td>
+<td>143</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C13SCL_</td>
+<td>48</td>
+<td>I2C Serial Clock</td>
+<td>I2C, BMC as Master</td>
+</tr>
+<tr>
+<td>I2C13SDA</td>
+<td>50</td>
+<td>I2C Serial Data</td>
+<td>I2C, BMC as Master</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>I2C6 used as SSIF and connect to PCH. PCH located on COMe module</li>
+<li>I2C8 used as I2C and as Slave mode. connect to COMe module’s I2C</li>
+</ul>
+<h4 id="UART" class="article-heading">UART<a class="article-anchor" href="#UART" aria-hidden="true"></a></h4>
+<p>One UART connects to COMe module for Serial Over LAN feature. The other UART, named as CONSOLE (UART5), is used for default BMC console output</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO19</td>
+<td>36</td>
+<td>Porting  as UART2 CTS</td>
+<td>as SOL</td>
+</tr>
+<tr>
+<td>GPIO20</td>
+<td>38</td>
+<td>Porting  as UART2 RTS</td>
+<td>as SOL</td>
+</tr>
+<tr>
+<td>UART2RX</td>
+<td>42</td>
+<td>UART2 Receive  Data</td>
+<td>as SOL</td>
+</tr>
+<tr>
+<td>UART2TX</td>
+<td>44</td>
+<td>UART2 Transmit  Data</td>
+<td>as SOL</td>
+</tr>
+<tr>
+<td>CONSOLERX</td>
+<td>21</td>
+<td>Console UART Receive  Data (UART5)</td>
+<td>for BMC debug</td>
+</tr>
+<tr>
+<td>CONSOLETX</td>
+<td>23</td>
+<td>Console UART Transmit Data (UART5)</td>
+<td>for BMC debug</td>
+</tr>
+<tr>
+<td><s>GPIO15</s></td>
+<td><s>35</s></td>
+<td><s>Porting  as UART1 CTS</s></td>
+<td>Not Supported</td>
+</tr>
+<tr>
+<td><s>GPIO17</s></td>
+<td><s>37</s></td>
+<td><s>Porting  as UART1 RTS</s></td>
+<td>Not Supported</td>
+</tr>
+<tr>
+<td><s>UART1RX_GPIO23</s></td>
+<td><s>41</s></td>
+<td><s>UART1 Receive  Data</s></td>
+<td>Not Supported</td>
+</tr>
+<tr>
+<td><s>UART1TX_GPIO0</s></td>
+<td><s>43</s></td>
+<td><s>UART1 Transmit  Data</s></td>
+<td>Not Supported</td>
+</tr>
+</tbody>
+</table>
+<h4 id="PWM-TACH" class="article-heading">PWM/TACH<a class="article-anchor" href="#PWM-TACH" aria-hidden="true"></a></h4>
+<p>Maximum 8x PWM outputs. Driven from the BMC, these outputs are intended to drive fans or pump resent in the system.</p>
+<p>Maximum 16x Tachometer inputs to the BMC.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description  (default function)</strong></th>
+<th><strong>Note</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PWM0</td>
+<td>26</td>
+<td>Pulse Width  Modulation Channel 0</td>
+<td></td>
+</tr>
+<tr>
+<td>PWM1</td>
+<td>28</td>
+<td>Pulse Width  Modulation Channel 1</td>
+<td></td>
+</tr>
+<tr>
+<td>PWM2</td>
+<td>27</td>
+<td>Pulse Width  Modulation Channel 2</td>
+<td></td>
+</tr>
+<tr>
+<td>PWM3</td>
+<td>30</td>
+<td>Pulse Width  Modulation Channel 3</td>
+<td></td>
+</tr>
+<tr>
+<td>PWM4</td>
+<td>29</td>
+<td>Pulse Width  Modulation Channel 4</td>
+<td>BOM option required</td>
+</tr>
+<tr>
+<td>PWM5</td>
+<td>32</td>
+<td>Pulse Width  Modulation Channel 5</td>
+<td>BOM option required</td>
+</tr>
+<tr>
+<td>PWM6</td>
+<td>31</td>
+<td>Pulse Width  Modulation Channel 6</td>
+<td></td>
+</tr>
+<tr>
+<td>PWM7</td>
+<td>34</td>
+<td>Pulse Width  Modulation Channel 7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description</strong></th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TACH0</td>
+<td>78</td>
+<td>Use as FAN0 Tacho function</td>
+<td></td>
+</tr>
+<tr>
+<td>TACH1</td>
+<td>80</td>
+<td>Use as FAN1 Tacho function</td>
+<td></td>
+</tr>
+<tr>
+<td>TACH2</td>
+<td>82</td>
+<td>Use as FAN2 Tacho function</td>
+<td></td>
+</tr>
+<tr>
+<td>TACH3</td>
+<td>84</td>
+<td>Use as FAN3 Tacho function</td>
+<td></td>
+</tr>
+<tr>
+<td>TACH4</td>
+<td>86</td>
+<td>Use as FAN4 Tacho function</td>
+<td>BOM option required</td>
+</tr>
+<tr>
+<td>TACH5</td>
+<td>88</td>
+<td>Use as FAN5 Tacho function</td>
+<td>BOM option required</td>
+</tr>
+<tr>
+<td>TACH6</td>
+<td>90</td>
+<td>Tachometer Input 6</td>
+<td></td>
+</tr>
+<tr>
+<td>TACH7</td>
+<td>92</td>
+<td>Tachometer Input 7</td>
+<td></td>
+</tr>
+<tr>
+<td>TACH8</td>
+<td>94</td>
+<td>Tachometer Input 8</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH9</td>
+<td>96</td>
+<td>Tachometer Input 9</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH10</td>
+<td>98</td>
+<td>Tachometer Input 10</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH11</td>
+<td>100</td>
+<td>Tachometer Input 11</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH12</td>
+<td>102</td>
+<td>Tachometer Input 12</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH13</td>
+<td>104</td>
+<td>Tachometer Input 13</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH14</td>
+<td>106</td>
+<td>Tachometer Input 14</td>
+<td>Default not enabled</td>
+</tr>
+<tr>
+<td>TACH15</td>
+<td>108</td>
+<td>Tachometer Input 15</td>
+<td>Default not enabled</td>
+</tr>
+</tbody>
+</table>
+<h4 id="GPIO-GPI-GPO" class="article-heading">GPIO/GPI/GPO<a class="article-anchor" href="#GPIO-GPI-GPO" aria-hidden="true"></a></h4>
+<p>Many pins defined by RunBMC specification are multi-functional and dependent on firmware setting. The table below indicates the pins defined as GPI or GPIO or GPO and for user usage. It can be accessed through OEM command, get detail on <strong>IPMI Software Support</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Pin#</th>
+<th>Description</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPI0</td>
+<td>252</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI1</td>
+<td>254</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI2</td>
+<td>256</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI3</td>
+<td>255</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI4</td>
+<td>258</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI5</td>
+<td>257</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI6</td>
+<td>260</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPI7</td>
+<td>259</td>
+<td>General Purpose Input</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO123</td>
+<td>209</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO125</td>
+<td>211</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO126</td>
+<td>213</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO91</td>
+<td>129</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO93</td>
+<td>131</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO113</td>
+<td>193</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO115</td>
+<td>195</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO95</td>
+<td>135</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO97</td>
+<td>137</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO102</td>
+<td>144</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO103</td>
+<td>146</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO104</td>
+<td>148</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO105</td>
+<td>150</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO44</td>
+<td>74</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO57</td>
+<td>89</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO63</td>
+<td>95</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO73</td>
+<td>105</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO76</td>
+<td>109</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO77</td>
+<td>113</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO98</td>
+<td>138</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO99</td>
+<td>140</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO106</td>
+<td>154</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO107</td>
+<td>156</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO37</td>
+<td>61</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+<tr>
+<td>GPIO67</td>
+<td>99</td>
+<td>General Purpose Input and Output</td>
+<td>OEM command</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Button-Event" class="article-heading">Button Event<a class="article-anchor" href="#Button-Event" aria-hidden="true"></a></h4>
+<p>Several pins are used for button related behavior, illustrated below</p>
+<img src="BmcIntroduction.assets/BTN_EVENT.png" style="width: 80%;">
+<h4 id="Others" class="article-heading">Others<a class="article-anchor" href="#Others" aria-hidden="true"></a></h4>
+<p>Several pins are used for specific feature, listed below</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Pin #</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Comment</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO25</td>
+<td>46</td>
+<td>GPIO</td>
+<td>as BMC_LED</td>
+</tr>
+<tr>
+<td>GPIO39</td>
+<td>68</td>
+<td>GPIO</td>
+<td>as PCB ID recognization</td>
+</tr>
+<tr>
+<td>GPIO40</td>
+<td>70</td>
+<td>GPIO</td>
+<td>as PCB ID recognization</td>
+</tr>
+<tr>
+<td>GPIO42</td>
+<td>72</td>
+<td>GPIO</td>
+<td>as PCB ID recognization</td>
+</tr>
+<tr>
+<td>GPIO47</td>
+<td>79</td>
+<td>GPIO</td>
+<td>as Carrier_Hot indicator</td>
+</tr>
+<tr>
+<td>GPIO49</td>
+<td>81</td>
+<td>GPIO</td>
+<td>as UID_LED</td>
+</tr>
+<tr>
+<td>GPIO53</td>
+<td>85</td>
+<td>GPIO</td>
+<td>as Power Good indicator for 3V3 power rail</td>
+</tr>
+<tr>
+<td><s>GPIO55</s></td>
+<td><s>87</s></td>
+<td><s>GPIO</s></td>
+<td>Not Supported</td>
+</tr>
+<tr>
+<td>GPIO69</td>
+<td>101</td>
+<td>GPIO</td>
+<td>as SUS_S3</td>
+</tr>
+<tr>
+<td>GPIO71</td>
+<td>103</td>
+<td>GPIO</td>
+<td>as SUS_S4</td>
+</tr>
+<tr>
+<td><s>GPIO75</s></td>
+<td><s>107</s></td>
+<td><s>GPIO</s></td>
+<td>Not Supported <br><s>as BIOS Chip Select Pin</s></td>
+</tr>
+<tr>
+<td>GPIO81</td>
+<td>117</td>
+<td>GPIO</td>
+<td>as MUX Selection Pin for UART2. SOL as default</td>
+</tr>
+<tr>
+<td>GPIO83</td>
+<td>119</td>
+<td>GPIO</td>
+<td>as event of CPU thermal shutdown, input pin</td>
+</tr>
+<tr>
+<td>GPIO108</td>
+<td>158</td>
+<td>GPIO</td>
+<td>as I2C_ALERT</td>
+</tr>
+<tr>
+<td>GPIO38</td>
+<td>66</td>
+<td>GPIO</td>
+<td>as SMBus_ALERT</td>
+</tr>
+<tr>
+<td>CPU_RST#</td>
+<td>97</td>
+<td>Host CPU Reset Monitor</td>
+<td>as monitoring of Host CPU reset reset, input pin</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Mechanical" class="article-heading">Mechanical<a class="article-anchor" href="#Mechanical" aria-hidden="true"></a></h2>
+<h3 id="Form-Factor-Specification" class="article-heading">Form Factor &amp; Specification<a class="article-anchor" href="#Form-Factor-Specification" aria-hidden="true"></a></h3>
+<p>Leverage OCP RunBMC Rev. 1.4.1 specification. Dimensions are 69.6mm x 32mm</p>
+<p>Fit into DDR4 SO-DIMM socket</p>
+<img src="BmcIntroduction.assets/bmc-dimension.png" style="width: 80%;">
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2025-06-06T06:07:29.501Z" itemprop="dateModified">Last updated: 2025-06-06</time>
+                <a href="CarrierIntroduction.html" class="article-footer-prev" title="Carrier Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Smart Efficiency for Limitless Edge Management</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Specification"><span class="toc-text">Specification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Core-Feature"><span class="toc-text">Core Feature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware-Interface"><span class="toc-text">Hardware Interface</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Block-Diagram"><span class="toc-text">Block Diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pinout-Signal-Description"><span class="toc-text">Pinout &amp; Signal Description</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pin-Summary"><span class="toc-text">Pin Summary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Signal-Description"><span class="toc-text">Signal Description</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ADC"><span class="toc-text">ADC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PCIe"><span class="toc-text">PCIe</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ethernet-and-RGMII"><span class="toc-text">Ethernet and RGMII</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VGA"><span class="toc-text">VGA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#USB2A-Host-Device"><span class="toc-text">USB2A ~~Host&#x2F;~~Device</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LPC-ESPI"><span class="toc-text">LPC&#x2F;ESPI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I2C"><span class="toc-text">I2C</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UART"><span class="toc-text">UART</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PWM-TACH"><span class="toc-text">PWM&#x2F;TACH</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GPIO-GPI-GPO"><span class="toc-text">GPIO&#x2F;GPI&#x2F;GPO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Button-Event"><span class="toc-text">Button Event</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Others"><span class="toc-text">Others</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mechanical"><span class="toc-text">Mechanical</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Form-Factor-Specification"><span class="toc-text">Form Factor &amp; Specification</span></a></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link current">BMC Introduction</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/com-express/com-express/" class="mobile-nav-link  header">menu.comexpress</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link current">BMC Introduction</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/com-express/js/lang_select.js"></script>
+
+
+<script src="/com-express/js/toc.js"></script>
+
+
+<script src="/com-express/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html> 

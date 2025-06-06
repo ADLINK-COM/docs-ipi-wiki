@@ -1,0 +1,2943 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.html">
+  <!-- Alternative links -->
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  -->
+
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/com-express/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+  jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+  });
+
+  $('button').addClass('btn-primary').text('Switch to Orange Tab');
+  $('button').click(function(){
+        $('#tabs a[href=#orange]').tab('show');
+  });
+
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+});
+
+$('button').addClass('btn-primary').text('Switch to Orange Tab');
+$('button').click(function(){
+      $('#tabs a[href=#ava]').tab('show');
+});
+
+</script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+ <!-- Hotjar Tracking Code for https://ipi.wiki 
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  -->
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/com-express/css/navy.css">
+
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/com-express//css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Express-BASE7 R3.1 Carrier Board Reference Carrier for COM Express Type 7 Module  This page aims to highlight the capabilities of the Express-BASE7 R3.1 Carrier Board. Features PCIe Gen4, 10G Ethernet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Express-BASE7 R3.1 Carrier Board Reference Carrier for COM Express Type 7 Module  This page aims to highlight the capabilities of the Express-BASE7 R3.1 Carrier Board. Features PCIe Gen4, 10G Ethernet">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/carrier.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/location.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/a1-function-diagram-nouart1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/type7-feature.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/connector-location.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/jp5.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/gbe.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/usb-rear.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/a1-usb-hub.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/a1-JP14.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/com01-uart01.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/btns.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/leds.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/24-pin-atx.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/20-pin-atx.png">
+<meta property="article:published_time" content="2025-06-06T06:07:29.599Z">
+<meta property="article:modified_time" content="2025-06-06T06:07:29.599Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/CarrierIntroduction.assets/carrier.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/com-express/com-express/" class="main-nav-link  header">menu.comexpress</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=CarrierIntroduction.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 class="article-heading">Express-BASE7 R3.1 Carrier Board<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
+<h2 id="Reference-Carrier-for-COM-Express-Type-7-Module" class="article-heading">Reference Carrier for COM Express Type 7 Module<a class="article-anchor" href="#Reference-Carrier-for-COM-Express-Type-7-Module" aria-hidden="true"></a></h2>
+<img src="CarrierIntroduction.assets/carrier.png" style="width: 90%;">
+<p>This page aims to highlight the capabilities of the Express-BASE7 R3.1 Carrier Board.</p>
+<h2 id="Features" class="article-heading">Features<a class="article-anchor" href="#Features" aria-hidden="true"></a></h2>
+<p><strong>PCIe Gen4</strong>, <strong>10G Ethernet</strong>, <strong>Remote management BMC</strong>, and other interfaces summarized in the table below are their maximum feature sets. Interfaces available are also subjected to the module’s offering. Please check the bottom of this page for details <strong>Feature Support Matrix</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Maximum Feature</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI Express</td>
+<td>1x PCIe Gen4x16 slot<br>2x PCIe Gen4x4 slot <br>1x PCIe Gen4x8 slot</td>
+<td></td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>4x 10GbE <br>1x 2.5GbE at RJ-45<br>1x mgt. GbE at RJ-45</td>
+<td>Note_1 <br>Rear I/O<br>Rear I/O, Note_2</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>4x USB3.x/2.0 at Type A<br>2x USB3.x/2.0 at header<br>1x USB3.x/2.0 at Type E</td>
+<td>Rear I/O <br>Front Panel <br>Front Panel</td>
+</tr>
+<tr>
+<td>SATA</td>
+<td>2x SATA</td>
+<td></td>
+</tr>
+<tr>
+<td>Display</td>
+<td>1x VGA  at DB9</td>
+<td>Note_2</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>2x UART at DB9 <br><s>1x UART at DB9</s> <br>1x UART at header</td>
+<td>Rear I/O <br><s>Rear I/O, Note_2</s> <br>Note_2</td>
+</tr>
+<tr>
+<td>FAN</td>
+<td>1x FAN for COM module <br>4x FAN</td>
+<td><br>Note_2</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>8x GPIO</td>
+<td></td>
+</tr>
+<tr>
+<td>SMB/I2C</td>
+<td>1x SMB <br>1x I2C</td>
+<td></td>
+</tr>
+<tr>
+<td>Misc.</td>
+<td>Button, LED, voltage etc…</td>
+<td>Front Panel</td>
+</tr>
+<tr>
+<td>Button</td>
+<td>Power BTN, Reset BTN</td>
+<td></td>
+</tr>
+<tr>
+<td>LED</td>
+<td>S3, 5VSB, WDT, HDD, Power_ON</td>
+<td></td>
+</tr>
+<tr>
+<td>Power Input</td>
+<td>24 + 4 pin</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: Table above mainly focuses on the interfaces sourced from CPU (COM Express module). Get details from <strong>BMC Introduction</strong> about the interfaces offered by the BMC.</p>
+<p><strong>Note_1</strong> : Insert additional 10G Ethernet adapter card into PCIe x16 slot (proprietary pinout). The slot marked as 10G-KR</p>
+<p><strong>Note_2</strong> : These function are enabled if the BMC module is inserted into dedicated DDR socket (proprietary pinout). The slot marked as RunBMC</p>
+<h2 id="Component-Location" class="article-heading">Component Location<a class="article-anchor" href="#Component-Location" aria-hidden="true"></a></h2>
+<img src="CarrierIntroduction.assets/location.png" style="width: 100%;">   
+<h2 id="Functional-Diagram" class="article-heading">Functional Diagram<a class="article-anchor" href="#Functional-Diagram" aria-hidden="true"></a></h2>
+<img src="CarrierIntroduction.assets/a1-function-diagram-nouart1.png" style="width: 90%;">
+<h2 id="Connectors-Headers-and-Pinouts" class="article-heading">Connectors, Headers and Pinouts<a class="article-anchor" href="#Connectors-Headers-and-Pinouts" aria-hidden="true"></a></h2>
+<h3 id="Carrier-Board-Signals-Type-7" class="article-heading">Carrier Board Signals - Type 7<a class="article-anchor" href="#Carrier-Board-Signals-Type-7" aria-hidden="true"></a></h3>
+<img src="CarrierIntroduction.assets/type7-feature.png" style="width: 95%;">
+<p>New Features of COM Express <strong>R3.1</strong> Type 7</p>
+<ul>
+<li>add support for PCIe Gen4</li>
+<li>add second PCIe Clock</li>
+<li>add IPMB interface for Platform Management</li>
+<li>update 10G Ethernet Interface to support CEI side-band signaling</li>
+</ul>
+<h3 id="Connector-Location-and-Pinout-Compatibility" class="article-heading">Connector Location and Pinout Compatibility<a class="article-anchor" href="#Connector-Location-and-Pinout-Compatibility" aria-hidden="true"></a></h3>
+<p>Connector positions and pinouts comply with the pinout and signal descriptions within PICMG® COM.0 - COM Express Module Base specification, Revision 3.1. This document includes description of pinouts, signal descriptions and mechanical characteristics of the COM Express specification. The Express-BASE7 R3.1 is compatible with COM Express modules in Basic and Compact form factor, Type 7 pinout, COM.0 Rev. 3.1.</p>
+<img src="CarrierIntroduction.assets/connector-location.png" style="width: 80%;">
+<h3 id="Carrier-Board-Design" class="article-heading">Carrier Board Design<a class="article-anchor" href="#Carrier-Board-Design" aria-hidden="true"></a></h3>
+<p>Express-BASE7 R3.1 follows the PICMG COM Express Carrier Design Guide where possible, and its design and schematic have been fully verified. It is recommended to utilize them as references for your carrier board design.</p>
+<h3 id="COM-Express-R3-1-Type-7-Board-to-board-Connectors" class="article-heading">COM Express R3.1 Type 7 Board-to-board Connectors<a class="article-anchor" href="#COM-Express-R3-1-Type-7-Board-to-board-Connectors" aria-hidden="true"></a></h3>
+<p><strong>ROW_AB</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Name</th>
+<th></th>
+<th>Pin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B1</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>GBE0_MDI3-</td>
+<td></td>
+<td>B2</td>
+<td>GBE0_ACT#</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>GBE0_MDI3+</td>
+<td></td>
+<td>B3</td>
+<td>LPC_FRAME#/ESPI_CS0#</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>GBE0_LINK_MID#</td>
+<td></td>
+<td>B4</td>
+<td>LPC_AD0/ESPI_IO_0</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>GBE0_LINK_MAX#</td>
+<td></td>
+<td>B5</td>
+<td>LPC_AD1/ESPI_IO_1</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>GBE0_MDI2-</td>
+<td></td>
+<td>B6</td>
+<td>LPC_AD2/ESPI_IO_2</td>
+</tr>
+<tr>
+<td>A7</td>
+<td>GBE0_MDI2+</td>
+<td></td>
+<td>B7</td>
+<td>LPC_AD3/ESPI_IO_3</td>
+</tr>
+<tr>
+<td>A8</td>
+<td>GBE0_LINK#</td>
+<td></td>
+<td>B8</td>
+<td>LPC_DRQ0#/ESPI_ALERT0#</td>
+</tr>
+<tr>
+<td>A9</td>
+<td>GBE0_MDI1-</td>
+<td></td>
+<td>B9</td>
+<td>LPC_DRQ1#/ESPI_ALERT1#</td>
+</tr>
+<tr>
+<td>A10</td>
+<td>GBE0_MDI1+</td>
+<td></td>
+<td>B10</td>
+<td>LPC_CLK/ESPI_CK</td>
+</tr>
+<tr>
+<td>A11</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B11</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A12</td>
+<td>GBE0_MDI0-</td>
+<td></td>
+<td>B12</td>
+<td>PWRBTN#</td>
+</tr>
+<tr>
+<td>A13</td>
+<td>GBE0_MDI0+</td>
+<td></td>
+<td>B13</td>
+<td>SMB_CK</td>
+</tr>
+<tr>
+<td>A14</td>
+<td><s>GBE0_CTREF</s></td>
+<td></td>
+<td>B14</td>
+<td>SMB_DAT</td>
+</tr>
+<tr>
+<td>A15</td>
+<td>SUS_S3#</td>
+<td></td>
+<td>B15</td>
+<td>SMB_ALERT#</td>
+</tr>
+<tr>
+<td>A16</td>
+<td>SATA0_TX+</td>
+<td></td>
+<td>B16</td>
+<td>SATA1_TX+</td>
+</tr>
+<tr>
+<td>A17</td>
+<td>SATA0_TX-</td>
+<td></td>
+<td>B17</td>
+<td>SATA1_TX-</td>
+</tr>
+<tr>
+<td>A18</td>
+<td>SUS_S4#</td>
+<td></td>
+<td>B18</td>
+<td>SUS_STAT#/ESPI_RESET#</td>
+</tr>
+<tr>
+<td>A19</td>
+<td>SATA0_RX+</td>
+<td></td>
+<td>B19</td>
+<td>SATA1_RX+</td>
+</tr>
+<tr>
+<td>A20</td>
+<td>SATA0_RX-</td>
+<td></td>
+<td>B20</td>
+<td>SATA1_RX-</td>
+</tr>
+<tr>
+<td>A21</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B21</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A22</td>
+<td>PCIE_TX15+</td>
+<td></td>
+<td>B22</td>
+<td>PCIE_RX15+</td>
+</tr>
+<tr>
+<td>A23</td>
+<td>PCIE_TX15-</td>
+<td></td>
+<td>B23</td>
+<td>PCIE_RX15-</td>
+</tr>
+<tr>
+<td>A24</td>
+<td>SUS_S5#</td>
+<td></td>
+<td>B24</td>
+<td>PWR_OK</td>
+</tr>
+<tr>
+<td>A25</td>
+<td>PCIE_TX14+</td>
+<td></td>
+<td>B25</td>
+<td>PCIE_RX14+</td>
+</tr>
+<tr>
+<td>A26</td>
+<td>PCIE_TX14-</td>
+<td></td>
+<td>B26</td>
+<td>PCIE_RX14-</td>
+</tr>
+<tr>
+<td>A27</td>
+<td><s>BATLOW#</s></td>
+<td></td>
+<td>B27</td>
+<td>WDT</td>
+</tr>
+<tr>
+<td>A28</td>
+<td>(S)ATA_ACT#</td>
+<td></td>
+<td>B28</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>A29</td>
+<td>RSVD</td>
+<td></td>
+<td>B29</td>
+<td>PCIE_CK_REF1+</td>
+</tr>
+<tr>
+<td>A30</td>
+<td>RSVD</td>
+<td></td>
+<td>B30</td>
+<td>PCIE_CK_REF1-</td>
+</tr>
+<tr>
+<td>A31</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B31</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A32</td>
+<td>IPMB_CLK</td>
+<td></td>
+<td>B32</td>
+<td>SPKR</td>
+</tr>
+<tr>
+<td>A33</td>
+<td>IPMB_DAT</td>
+<td></td>
+<td>B33</td>
+<td>I2C_CK</td>
+</tr>
+<tr>
+<td>A34</td>
+<td>BIOS_DIS0#/ESPI_SAFS</td>
+<td></td>
+<td>B34</td>
+<td>I2C_DAT</td>
+</tr>
+<tr>
+<td>A35</td>
+<td>THRMTRIP#</td>
+<td></td>
+<td>B35</td>
+<td><s>THRM#</s></td>
+</tr>
+<tr>
+<td>A36</td>
+<td>PCIE_TX13+</td>
+<td></td>
+<td>B36</td>
+<td>PCIE_RX13+</td>
+</tr>
+<tr>
+<td>A37</td>
+<td>PCIE_TX13-</td>
+<td></td>
+<td>B37</td>
+<td>PCIE_RX13-</td>
+</tr>
+<tr>
+<td>A38</td>
+<td>GND</td>
+<td></td>
+<td>B38</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>A39</td>
+<td>PCIE_TX12+</td>
+<td></td>
+<td>B39</td>
+<td>PCIE_RX12+</td>
+</tr>
+<tr>
+<td>A40</td>
+<td>PCIE_TX12-</td>
+<td></td>
+<td>B40</td>
+<td>PCIE_RX12-</td>
+</tr>
+<tr>
+<td>A41</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B41</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A42</td>
+<td>USB2-</td>
+<td></td>
+<td>B42</td>
+<td>USB3-</td>
+</tr>
+<tr>
+<td>A43</td>
+<td>USB2+</td>
+<td></td>
+<td>B43</td>
+<td>USB3+</td>
+</tr>
+<tr>
+<td>A44</td>
+<td>USB_2_3_OC#</td>
+<td></td>
+<td>B44</td>
+<td>USB_0_1_OC#</td>
+</tr>
+<tr>
+<td>A45</td>
+<td>USB0-</td>
+<td></td>
+<td>B45</td>
+<td>USB1-</td>
+</tr>
+<tr>
+<td>A46</td>
+<td>USB0+</td>
+<td></td>
+<td>B46</td>
+<td>USB1+</td>
+</tr>
+<tr>
+<td>A47</td>
+<td>VCC_RTC</td>
+<td></td>
+<td>B47</td>
+<td>ESPI_EN#</td>
+</tr>
+<tr>
+<td>A48</td>
+<td>RSMRST_OUT#</td>
+<td></td>
+<td>B48</td>
+<td><s>USB0_HOST_PRSNT</s></td>
+</tr>
+<tr>
+<td>A49</td>
+<td><s>GBE0_SDP</s></td>
+<td></td>
+<td>B49</td>
+<td>SYS_RESET#</td>
+</tr>
+<tr>
+<td>A50</td>
+<td>LPC_SERIRQ/ESPI_CS1#</td>
+<td></td>
+<td>B50</td>
+<td>CB_RESET#</td>
+</tr>
+<tr>
+<td>A51</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B51</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A52</td>
+<td>PCIE_TX5+</td>
+<td></td>
+<td>B52</td>
+<td>PCIE_RX5+</td>
+</tr>
+<tr>
+<td>A53</td>
+<td>PCIE_TX5-</td>
+<td></td>
+<td>B53</td>
+<td>PCIE_RX5-</td>
+</tr>
+<tr>
+<td>A54</td>
+<td>GPI0</td>
+<td></td>
+<td>B54</td>
+<td>GPO1</td>
+</tr>
+<tr>
+<td>A55</td>
+<td>PCIE_TX4+</td>
+<td></td>
+<td>B55</td>
+<td>PCIE_RX4+</td>
+</tr>
+<tr>
+<td>A56</td>
+<td>PCIE_TX4-</td>
+<td></td>
+<td>B56</td>
+<td>PCIE_RX4-</td>
+</tr>
+<tr>
+<td>A57</td>
+<td>GND</td>
+<td></td>
+<td>B57</td>
+<td>GPO2</td>
+</tr>
+<tr>
+<td>A58</td>
+<td>PCIE_TX3+</td>
+<td></td>
+<td>B58</td>
+<td>PCIE_RX3+</td>
+</tr>
+<tr>
+<td>A59</td>
+<td>PCIE_TX3-</td>
+<td></td>
+<td>B59</td>
+<td>PCIE_RX3-</td>
+</tr>
+<tr>
+<td>A60</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B60</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A61</td>
+<td>PCIE_TX2+</td>
+<td></td>
+<td>B61</td>
+<td>PCIE_RX2+</td>
+</tr>
+<tr>
+<td>A62</td>
+<td>PCIE_TX2-</td>
+<td></td>
+<td>B62</td>
+<td>PCIE_RX2-</td>
+</tr>
+<tr>
+<td>A63</td>
+<td>GPI1</td>
+<td></td>
+<td>B63</td>
+<td>GPO3</td>
+</tr>
+<tr>
+<td>A64</td>
+<td>PCIE_TX1+</td>
+<td></td>
+<td>B64</td>
+<td>PCIE_RX1+</td>
+</tr>
+<tr>
+<td>A65</td>
+<td>PCIE_TX1-</td>
+<td></td>
+<td>B65</td>
+<td>PCIE_RX1-</td>
+</tr>
+<tr>
+<td>A66</td>
+<td>GND</td>
+<td></td>
+<td>B66</td>
+<td>WAKE0#</td>
+</tr>
+<tr>
+<td>A67</td>
+<td>GPI2</td>
+<td></td>
+<td>B67</td>
+<td>WAKE1#</td>
+</tr>
+<tr>
+<td>A68</td>
+<td>PCIE_TX0+</td>
+<td></td>
+<td>B68</td>
+<td>PCIE_RX0+</td>
+</tr>
+<tr>
+<td>A69</td>
+<td>PCIE_TX0-</td>
+<td></td>
+<td>B69</td>
+<td>PCIE_RX0-</td>
+</tr>
+<tr>
+<td>A70</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B70</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A71</td>
+<td>PCIE_TX8+</td>
+<td></td>
+<td>B71</td>
+<td>PCIE_RX8+</td>
+</tr>
+<tr>
+<td>A72</td>
+<td>PCIE_TX8-</td>
+<td></td>
+<td>B72</td>
+<td>PCIE_RX8-</td>
+</tr>
+<tr>
+<td>A73</td>
+<td>GND</td>
+<td></td>
+<td>B73</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>A74</td>
+<td>PCIE_TX9+</td>
+<td></td>
+<td>B74</td>
+<td>PCIE_RX9+</td>
+</tr>
+<tr>
+<td>A75</td>
+<td>PCIE_TX9-</td>
+<td></td>
+<td>B75</td>
+<td>PCIE_RX9-</td>
+</tr>
+<tr>
+<td>A76</td>
+<td>GND</td>
+<td></td>
+<td>B76</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>A77</td>
+<td>PCIE_TX10+</td>
+<td></td>
+<td>B77</td>
+<td>PCIE_RX10+</td>
+</tr>
+<tr>
+<td>A78</td>
+<td>PCIE_TX10-</td>
+<td></td>
+<td>B78</td>
+<td>PCIE_RX10-</td>
+</tr>
+<tr>
+<td>A79</td>
+<td>GND</td>
+<td></td>
+<td>B79</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>A80</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B80</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A81</td>
+<td>PCIE_TX11+</td>
+<td></td>
+<td>B81</td>
+<td>PCIE_RX11+</td>
+</tr>
+<tr>
+<td>A82</td>
+<td>PCIE_TX11-</td>
+<td></td>
+<td>B82</td>
+<td>PCIE_RX11-</td>
+</tr>
+<tr>
+<td>A83</td>
+<td>GND</td>
+<td></td>
+<td>B83</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>A84</td>
+<td>NCSI_TX_EN</td>
+<td></td>
+<td>B84</td>
+<td>VCC_5V_SBY</td>
+</tr>
+<tr>
+<td>A85</td>
+<td>GPI3</td>
+<td></td>
+<td>B85</td>
+<td>VCC_5V_SBY</td>
+</tr>
+<tr>
+<td>A86</td>
+<td>RSVD</td>
+<td></td>
+<td>B86</td>
+<td>VCC_5V_SBY</td>
+</tr>
+<tr>
+<td>A87</td>
+<td>GND</td>
+<td></td>
+<td>B87</td>
+<td>VCC_5V_SBY</td>
+</tr>
+<tr>
+<td>A88</td>
+<td>PCIE0_CK_REF+</td>
+<td></td>
+<td>B88</td>
+<td>BIOS_DIS1#</td>
+</tr>
+<tr>
+<td>A89</td>
+<td>PCIE0_CK_REF-</td>
+<td></td>
+<td>B89</td>
+<td>NSCI_RX_ER</td>
+</tr>
+<tr>
+<td>A90</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B90</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A91</td>
+<td>SPI_POWER</td>
+<td></td>
+<td>B91</td>
+<td>NCSI_CLK_IN</td>
+</tr>
+<tr>
+<td>A92</td>
+<td>SPI_MISO</td>
+<td></td>
+<td>B92</td>
+<td>NCSI_RXD1</td>
+</tr>
+<tr>
+<td>A93</td>
+<td>GPO0</td>
+<td></td>
+<td>B93</td>
+<td>NCSI_RXD0</td>
+</tr>
+<tr>
+<td>A94</td>
+<td>SPI_CLK</td>
+<td></td>
+<td>B94</td>
+<td>NCSI_CRS_DV</td>
+</tr>
+<tr>
+<td>A95</td>
+<td>SPI_MOSI</td>
+<td></td>
+<td>B95</td>
+<td>NCSI_TXD1</td>
+</tr>
+<tr>
+<td>A96</td>
+<td>TPM_PP</td>
+<td></td>
+<td>B96</td>
+<td>NCSI_TXD0</td>
+</tr>
+<tr>
+<td>A97</td>
+<td><s>TYPE10#</s></td>
+<td></td>
+<td>B97</td>
+<td>SPI_CS#</td>
+</tr>
+<tr>
+<td>A98</td>
+<td>SER0_TX</td>
+<td></td>
+<td>B98</td>
+<td><s>NCSI_ARB_IN</s></td>
+</tr>
+<tr>
+<td>A99</td>
+<td>SER0_RX</td>
+<td></td>
+<td>B99</td>
+<td><s>NCSI_ARB_OUT</s></td>
+</tr>
+<tr>
+<td>A100</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B100</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>A101</td>
+<td>SER1_TX</td>
+<td></td>
+<td>B101</td>
+<td>FAN_PWMOUT</td>
+</tr>
+<tr>
+<td>A102</td>
+<td>SER1_RX</td>
+<td></td>
+<td>B102</td>
+<td>FAN_TACHIN</td>
+</tr>
+<tr>
+<td>A103</td>
+<td>LID#</td>
+<td></td>
+<td>B103</td>
+<td>SLEEP#</td>
+</tr>
+<tr>
+<td>A104</td>
+<td>VCC_12V</td>
+<td></td>
+<td>B104</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>A105</td>
+<td>VCC_12V</td>
+<td></td>
+<td>B105</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>A106</td>
+<td>VCC_12V</td>
+<td></td>
+<td>B106</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>A107</td>
+<td>VCC_12V</td>
+<td></td>
+<td>B107</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>A108</td>
+<td>VCC_12V</td>
+<td></td>
+<td>B108</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>A109</td>
+<td>VCC_12V</td>
+<td></td>
+<td>B109</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>A110</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>B110</td>
+<td>GND (FIXED)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ROW_CD</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Name</th>
+<th></th>
+<th>Pin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D1</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>GND</td>
+<td></td>
+<td>D2</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>USB_SSRX0-</td>
+<td></td>
+<td>D3</td>
+<td>USB_SSTX0-</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>USB_SSRX0+</td>
+<td></td>
+<td>D4</td>
+<td>USB_SSTX0+</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>GND</td>
+<td></td>
+<td>D5</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>USB_SSRX1-</td>
+<td></td>
+<td>D6</td>
+<td>USB_SSTX1-</td>
+</tr>
+<tr>
+<td>C7</td>
+<td>USB_SSRX1+</td>
+<td></td>
+<td>D7</td>
+<td>USB_SSTX1+</td>
+</tr>
+<tr>
+<td>C8</td>
+<td>GND</td>
+<td></td>
+<td>D8</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C9</td>
+<td>USB_SSRX2-</td>
+<td></td>
+<td>D9</td>
+<td>USB_SSTX2-</td>
+</tr>
+<tr>
+<td>C10</td>
+<td>USB_SSRX2+</td>
+<td></td>
+<td>D10</td>
+<td>USB_SSTX2+</td>
+</tr>
+<tr>
+<td>C11</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D11</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C12</td>
+<td>USB_SSRX3-</td>
+<td></td>
+<td>D12</td>
+<td>USB_SSTX3-</td>
+</tr>
+<tr>
+<td>C13</td>
+<td>USB_SSRX3+</td>
+<td></td>
+<td>D13</td>
+<td>USB_SSTX3+</td>
+</tr>
+<tr>
+<td>C14</td>
+<td>GND</td>
+<td></td>
+<td>D14</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C15</td>
+<td><s>RSVD10G</s></td>
+<td></td>
+<td>D15</td>
+<td><s>RSVD10G</s></td>
+</tr>
+<tr>
+<td>C16</td>
+<td><s>R</s><s>SVD10G</s></td>
+<td></td>
+<td>D16</td>
+<td><s>RSVD10G</s></td>
+</tr>
+<tr>
+<td>C17</td>
+<td>10G_SDP2</td>
+<td></td>
+<td>D17</td>
+<td>10G_SDP3</td>
+</tr>
+<tr>
+<td>C18</td>
+<td>GND</td>
+<td></td>
+<td>D18</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C19</td>
+<td>PCIE_RX6+</td>
+<td></td>
+<td>D19</td>
+<td>PCIE_TX6+</td>
+</tr>
+<tr>
+<td>C20</td>
+<td>PCIE_RX6-</td>
+<td></td>
+<td>D20</td>
+<td>PCIE_TX6-</td>
+</tr>
+<tr>
+<td>C21</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D21</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C22</td>
+<td>PCIE_RX7+</td>
+<td></td>
+<td>D22</td>
+<td>PCIE_TX7+</td>
+</tr>
+<tr>
+<td>C23</td>
+<td>PCIE_RX7-</td>
+<td></td>
+<td>D23</td>
+<td>PCIE_TX7-</td>
+</tr>
+<tr>
+<td>C24</td>
+<td><s>RSVD10G</s></td>
+<td></td>
+<td>D24</td>
+<td><s>RSVD10G</s></td>
+</tr>
+<tr>
+<td>C25</td>
+<td>GND</td>
+<td></td>
+<td>D25</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C26</td>
+<td>10G_KR_RX3+</td>
+<td></td>
+<td>D26</td>
+<td>10G_KR_TX3+</td>
+</tr>
+<tr>
+<td>C27</td>
+<td>10G_KR_RX3-</td>
+<td></td>
+<td>D27</td>
+<td>10G_KR_TX3-</td>
+</tr>
+<tr>
+<td>C28</td>
+<td>GND</td>
+<td></td>
+<td>D28</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C29</td>
+<td>10G_KR_RX2+</td>
+<td></td>
+<td>D29</td>
+<td>10G_KR_TX2+</td>
+</tr>
+<tr>
+<td>C30</td>
+<td>10G_KR_RX2-</td>
+<td></td>
+<td>D30</td>
+<td>10G_KR_TX2-</td>
+</tr>
+<tr>
+<td>C31</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D31</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C32</td>
+<td><s>RSVD10G</s></td>
+<td></td>
+<td>D32</td>
+<td>RSVD10G/GP_SPI_CLK*</td>
+</tr>
+<tr>
+<td>C33</td>
+<td><s>RSVD10G</s></td>
+<td></td>
+<td>D33</td>
+<td>RSVD10G/GP_SPI_MOSI*</td>
+</tr>
+<tr>
+<td>C34</td>
+<td><s>RSVD10G</s></td>
+<td></td>
+<td>D34</td>
+<td>RSVD10G/GP_SPI_MISO*</td>
+</tr>
+<tr>
+<td>C35</td>
+<td>CEI_RST#</td>
+<td></td>
+<td>D35</td>
+<td>CEI_PRSNT#</td>
+</tr>
+<tr>
+<td>C36</td>
+<td>RSVD10G</td>
+<td></td>
+<td>D36</td>
+<td>RSVD/GP_SPI_CS#*</td>
+</tr>
+<tr>
+<td>C37</td>
+<td>RSVD10G</td>
+<td></td>
+<td>D37</td>
+<td><s>RSVD</s></td>
+</tr>
+<tr>
+<td>C38</td>
+<td><s>RSVD10G</s></td>
+<td></td>
+<td>D38</td>
+<td><s>RSVD10G</s></td>
+</tr>
+<tr>
+<td>C39</td>
+<td>CEI_SDA</td>
+<td></td>
+<td>D39</td>
+<td>CEI_SCL</td>
+</tr>
+<tr>
+<td>C40</td>
+<td>10G_SDP0</td>
+<td></td>
+<td>D40</td>
+<td>10G_SDP1</td>
+</tr>
+<tr>
+<td>C41</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D41</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C42</td>
+<td>10G_KR_RX1+</td>
+<td></td>
+<td>D42</td>
+<td>10G_KR_TX1+</td>
+</tr>
+<tr>
+<td>C43</td>
+<td>10G_KR_RX1-</td>
+<td></td>
+<td>D43</td>
+<td>10G_KR_TX1-</td>
+</tr>
+<tr>
+<td>C44</td>
+<td>GND</td>
+<td></td>
+<td>D44</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C45</td>
+<td>RSVD10G/10G_PHY_MDC_SCL1*</td>
+<td></td>
+<td>D45</td>
+<td>RSVD10G/10G_PHY_MDIO_SDA1*</td>
+</tr>
+<tr>
+<td>C46</td>
+<td>CEI_MDC</td>
+<td></td>
+<td>D46</td>
+<td>CEI_MDIO</td>
+</tr>
+<tr>
+<td>C47</td>
+<td>CEI_INT#</td>
+<td></td>
+<td>D47</td>
+<td>ETH_PHY_INT#</td>
+</tr>
+<tr>
+<td>C48</td>
+<td>GND</td>
+<td></td>
+<td>D48</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C49</td>
+<td>10G_KR_RX0+</td>
+<td></td>
+<td>D49</td>
+<td>10G_KR_TX0+</td>
+</tr>
+<tr>
+<td>C50</td>
+<td>10G_KR_RX0-</td>
+<td></td>
+<td>D50</td>
+<td>10G_KR_TX0-</td>
+</tr>
+<tr>
+<td>C51</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D51</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C52</td>
+<td>PCIE_RX16+</td>
+<td></td>
+<td>D52</td>
+<td>PCIE_TX16+</td>
+</tr>
+<tr>
+<td>C53</td>
+<td>PCIE_RX16-</td>
+<td></td>
+<td>D53</td>
+<td>PCIE_TX16-</td>
+</tr>
+<tr>
+<td>C54</td>
+<td>TYPE0#</td>
+<td></td>
+<td>D54</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C55</td>
+<td>PCIE_RX17+</td>
+<td></td>
+<td>D55</td>
+<td>PCIE_TX17+</td>
+</tr>
+<tr>
+<td>C56</td>
+<td>PCIE_RX17-</td>
+<td></td>
+<td>D56</td>
+<td>PCIE_TX17-</td>
+</tr>
+<tr>
+<td>C57</td>
+<td><s>TYPE1#</s></td>
+<td></td>
+<td>D57</td>
+<td>TYPE2#</td>
+</tr>
+<tr>
+<td>C58</td>
+<td>PCIE_RX18+</td>
+<td></td>
+<td>D58</td>
+<td>PCIE_TX18+</td>
+</tr>
+<tr>
+<td>C59</td>
+<td>PCIE_RX18-</td>
+<td></td>
+<td>D59</td>
+<td>PCIE_TX18-</td>
+</tr>
+<tr>
+<td>C60</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D60</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C61</td>
+<td>PCIE_RX19+</td>
+<td></td>
+<td>D61</td>
+<td>PCIE_TX19+</td>
+</tr>
+<tr>
+<td>C62</td>
+<td>PCIE_RX19-</td>
+<td></td>
+<td>D62</td>
+<td>PCIE_TX19-</td>
+</tr>
+<tr>
+<td>C63</td>
+<td>GND</td>
+<td></td>
+<td>D63</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C64</td>
+<td>GND</td>
+<td></td>
+<td>D64</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C65</td>
+<td>PCIE_RX20+</td>
+<td></td>
+<td>D65</td>
+<td>PCIE_TX20+</td>
+</tr>
+<tr>
+<td>C66</td>
+<td>PCIE_RX20-</td>
+<td></td>
+<td>D66</td>
+<td>PCIE_TX20-</td>
+</tr>
+<tr>
+<td>C67</td>
+<td><s>RAPID_SHUTDOWN</s></td>
+<td></td>
+<td>D67</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C68</td>
+<td>PCIE_RX21+</td>
+<td></td>
+<td>D68</td>
+<td>PCIE_TX21+</td>
+</tr>
+<tr>
+<td>C69</td>
+<td>PCIE_RX21-</td>
+<td></td>
+<td>D69</td>
+<td>PCIE_TX21-</td>
+</tr>
+<tr>
+<td>C70</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D70</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C71</td>
+<td>PCIE_RX22+</td>
+<td></td>
+<td>D71</td>
+<td>PCIE_TX22+</td>
+</tr>
+<tr>
+<td>C72</td>
+<td>PCIE_RX22-</td>
+<td></td>
+<td>D72</td>
+<td>PCIE_TX22-</td>
+</tr>
+<tr>
+<td>C73</td>
+<td>GND</td>
+<td></td>
+<td>D73</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C74</td>
+<td>PCIE_RX23+</td>
+<td></td>
+<td>D74</td>
+<td>PCIE_TX23+</td>
+</tr>
+<tr>
+<td>C75</td>
+<td>PCIE_RX23-</td>
+<td></td>
+<td>D75</td>
+<td>PCIE_TX23-</td>
+</tr>
+<tr>
+<td>C76</td>
+<td>GND</td>
+<td></td>
+<td>D76</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C77</td>
+<td>GND</td>
+<td></td>
+<td>D77</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C78</td>
+<td>PCIE_RX24+</td>
+<td></td>
+<td>D78</td>
+<td>PCIE_TX24+</td>
+</tr>
+<tr>
+<td>C79</td>
+<td>PCIE_RX24-</td>
+<td></td>
+<td>D79</td>
+<td>PCIE_TX24-</td>
+</tr>
+<tr>
+<td>C80</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D80</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C81</td>
+<td>PCIE_RX25+</td>
+<td></td>
+<td>D81</td>
+<td>PCIE_TX25</td>
+</tr>
+<tr>
+<td>C82</td>
+<td>PCIE_RX25-</td>
+<td></td>
+<td>D82</td>
+<td>PCIE_TX25-</td>
+</tr>
+<tr>
+<td>C83</td>
+<td>GND</td>
+<td></td>
+<td>D83</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C84</td>
+<td>GND</td>
+<td></td>
+<td>D84</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C85</td>
+<td>PCIE_RX26+</td>
+<td></td>
+<td>D85</td>
+<td>PCIE_TX26+</td>
+</tr>
+<tr>
+<td>C86</td>
+<td>PCIE_RX26-</td>
+<td></td>
+<td>D86</td>
+<td>PCIE_TX26-</td>
+</tr>
+<tr>
+<td>C87</td>
+<td>GND</td>
+<td></td>
+<td>D87</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C88</td>
+<td>PCIE_RX27+</td>
+<td></td>
+<td>D88</td>
+<td>PCIE_TX27+</td>
+</tr>
+<tr>
+<td>C89</td>
+<td>PCIE_RX27-</td>
+<td></td>
+<td>D89</td>
+<td>PCIE_TX27-</td>
+</tr>
+<tr>
+<td>C90</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D90</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C91</td>
+<td>PCIE_RX28+</td>
+<td></td>
+<td>D91</td>
+<td>PCIE_TX28+</td>
+</tr>
+<tr>
+<td>C92</td>
+<td>PCIE_RX28-</td>
+<td></td>
+<td>D92</td>
+<td>PCIE_TX28-</td>
+</tr>
+<tr>
+<td>C93</td>
+<td>GND</td>
+<td></td>
+<td>D93</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C94</td>
+<td>PCIE_RX29+</td>
+<td></td>
+<td>D94</td>
+<td>PCIE_TX29+</td>
+</tr>
+<tr>
+<td>C95</td>
+<td>PCIE_RX29-</td>
+<td></td>
+<td>D95</td>
+<td>PCIE_TX29-</td>
+</tr>
+<tr>
+<td>C96</td>
+<td>GND</td>
+<td></td>
+<td>D96</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C97</td>
+<td>GND</td>
+<td></td>
+<td>D97</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C98</td>
+<td>PCIE_RX30+</td>
+<td></td>
+<td>D98</td>
+<td>PCIE_TX30+</td>
+</tr>
+<tr>
+<td>C99</td>
+<td>PCIE_RX30-</td>
+<td></td>
+<td>D99</td>
+<td>PCIE_TX30-</td>
+</tr>
+<tr>
+<td>C100</td>
+<td>GND (fixed)</td>
+<td></td>
+<td>D100</td>
+<td>GND (fixed)</td>
+</tr>
+<tr>
+<td>C101</td>
+<td>PCIE_RX31+</td>
+<td></td>
+<td>D101</td>
+<td>PCIE_TX31+</td>
+</tr>
+<tr>
+<td>C102</td>
+<td>PCIE_RX31-</td>
+<td></td>
+<td>D102</td>
+<td>PCIE_TX31-</td>
+</tr>
+<tr>
+<td>C103</td>
+<td>GND</td>
+<td></td>
+<td>D103</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C104</td>
+<td>VCC_12V</td>
+<td></td>
+<td>D104</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>C105</td>
+<td>VCC_12V</td>
+<td></td>
+<td>D105</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>C106</td>
+<td>VCC_12V</td>
+<td></td>
+<td>D106</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>C107</td>
+<td>VCC_12V</td>
+<td></td>
+<td>D107</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>C108</td>
+<td>VCC_12V</td>
+<td></td>
+<td>D108</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>C109</td>
+<td>VCC_12V</td>
+<td></td>
+<td>D109</td>
+<td>VCC_12V</td>
+</tr>
+<tr>
+<td>C110</td>
+<td>GND (FIXED)</td>
+<td></td>
+<td>D110</td>
+<td>GND (FIXED)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong> : GP_SPI (D32, D33, D34, D36 pin), 10G_PHY_MDIO/MDC (C45, D45 pin) are for testing purpose, not for user usage.</p>
+<h3 id="PCIe-PCI-Express-Slots" class="article-heading">PCIe (PCI Express) Slots<a class="article-anchor" href="#PCIe-PCI-Express-Slots" aria-hidden="true"></a></h3>
+<p>One PCIex16, two PCIex4 and one PCIex8</p>
+<p><strong>PCIe 16-31</strong>: x16, up to Gen4, support up to 2-slot width devices</p>
+<p><strong>PCIe 0-3</strong>: x4, up to Gen4</p>
+<p><strong>PCIe 4-7</strong>: x4, up to Gen3</p>
+<p><strong>PCIe 8-15</strong>: x8, up to Gen3</p>
+<p><strong>JP5</strong> (PCIE MUX): a jumper for PCIe 4-7 slot setting</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>PCIE CONN</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>Run BMC        (<strong>Default</strong>, route PCIe 4 lane to BMC module)</td>
+</tr>
+</tbody>
+</table>
+<img src="CarrierIntroduction.assets/jp5.png" style="width: 80%;">
+<h3 id="10G-Ethernet" class="article-heading">10G Ethernet<a class="article-anchor" href="#10G-Ethernet" aria-hidden="true"></a></h3>
+<p>Up to 4x 10G, dependent on the 10G Ethernet adapter card and COM Express module’s offering. Get details about the 10G Ethernet card concept in <strong>10G Ethernet Card Introduction</strong></p>
+<p><strong>10G-KR</strong>: up to 4x 10G-KR lanes and its side-band signals. Convert these signals to 10G-SPF+ or 10GBASE-T via different kinds of dedicated 10G Ethernet adapter card if needed.</p>
+<h3 id="2-5G-Ethernet-mgt-Ethernet" class="article-heading">2.5G Ethernet &amp; mgt. Ethernet<a class="article-anchor" href="#2-5G-Ethernet-mgt-Ethernet" aria-hidden="true"></a></h3>
+<p><strong>LAN</strong>: RJ-45 connector at Rear I/O, up to 2.5GbE speed</p>
+<p><strong>mgt.LAN</strong>: RJ-45 connector at Rear I/O, up to GbE speed, dedicated for remote management usage and sourced from BMC module</p>
+<img src="CarrierIntroduction.assets/gbe.png" style="width: 80%;">
+<h3 id="USB-Connectors-Headers" class="article-heading">USB Connectors &amp; Headers<a class="article-anchor" href="#USB-Connectors-Headers" aria-hidden="true"></a></h3>
+<p><strong>USB0,1</strong>: 2x USB 3.x/2.0 at Type A connector at Rear I/O</p>
+<p><strong>USB2,3</strong>: 2x USB 3.x/2.0 at Type A connector at Rear I/O</p>
+<img src="CarrierIntroduction.assets/usb-rear.png" style="width: 80%;">
+<p><strong>FP_TYPE_E</strong>: 1x USB 3.x/2.0 at Type E connector, vertical direction for Front Panel</p>
+<p><strong>FP_2xUSB</strong>: 2x USB 3.x/2.0 at 19-pin header, 2.54 mm pitch for Front Panel</p>
+<img src="CarrierIntroduction.assets/a1-usb-hub.png" style="width: 100%;">
+<p>FP_TYPE_E</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+ 5V</td>
+<td>11</td>
+<td>+ 5V</td>
+</tr>
+<tr>
+<td>2</td>
+<td>USB_SSTX1P</td>
+<td>12</td>
+<td>USB_SSTX2P</td>
+</tr>
+<tr>
+<td>3</td>
+<td>USB_SSTX1N</td>
+<td>13</td>
+<td>USB_SSTX2N</td>
+</tr>
+<tr>
+<td>4</td>
+<td>GND</td>
+<td>14</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>5</td>
+<td>USB_SSRX1P</td>
+<td>15</td>
+<td>USB_SSRX2P</td>
+</tr>
+<tr>
+<td>6</td>
+<td>USB_SSRX1N</td>
+<td>16</td>
+<td>USB_SSRX2N</td>
+</tr>
+<tr>
+<td>7</td>
+<td>+ 5V</td>
+<td>17</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>8</td>
+<td>HUB_P1_CC1</td>
+<td>18</td>
+<td>USBN</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NC</td>
+<td>19</td>
+<td>USBP</td>
+</tr>
+<tr>
+<td>10</td>
+<td>NC</td>
+<td>20</td>
+<td>HUB_P1_CC2</td>
+</tr>
+</tbody>
+</table>
+<p>FP_2xUSB</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NC</td>
+<td>2</td>
+<td>USB2P</td>
+</tr>
+<tr>
+<td>3</td>
+<td>USB1P</td>
+<td>4</td>
+<td>USB2N</td>
+</tr>
+<tr>
+<td>5</td>
+<td>USB1N</td>
+<td>6</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GND</td>
+<td>8</td>
+<td>USB_SSTX2P</td>
+</tr>
+<tr>
+<td>9</td>
+<td>USB_SSTX1P</td>
+<td>10</td>
+<td>USB_SSTX2N</td>
+</tr>
+<tr>
+<td>11</td>
+<td>USB_SSTX1N</td>
+<td>12</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>13</td>
+<td>GND</td>
+<td>14</td>
+<td>USB_SSRX2P</td>
+</tr>
+<tr>
+<td>15</td>
+<td>USB_SSRX1P</td>
+<td>16</td>
+<td>USB_SSRX2N</td>
+</tr>
+<tr>
+<td>17</td>
+<td>USB_SSRX1N</td>
+<td>18</td>
+<td>+ 5V</td>
+</tr>
+<tr>
+<td>19</td>
+<td>+ 5V</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>JP14</strong> (USB MUX): a jumper for KVM selection. USB from COM Express module connects to the BMC module as KVM usage or connects to Type A connector as normal usage.</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Run BMC      (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>USB CONN</td>
+</tr>
+</tbody>
+</table>
+<img src="CarrierIntroduction.assets/a1-JP14.png" style="width: 80%;">
+<h3 id="SATA-Connectors" class="article-heading">SATA Connectors<a class="article-anchor" href="#SATA-Connectors" aria-hidden="true"></a></h3>
+<p><strong>SATA0</strong>: up to 6Gb/s</p>
+<p><strong>SATA1</strong>: up to 6Gb/s</p>
+<h3 id="VGA-Connector" class="article-heading">VGA Connector<a class="article-anchor" href="#VGA-Connector" aria-hidden="true"></a></h3>
+<p><strong>VGA</strong>_UAR1: VGA output at DB9 connector, source from BMC module. default support</p>
+<p>It works if the BMC module is inserted with pin 2-3 shorted on JP5</p>
+<h3 id="COM-Port-Connectors-Headers" class="article-heading">COM Port Connectors &amp; Headers<a class="article-anchor" href="#COM-Port-Connectors-Headers" aria-hidden="true"></a></h3>
+<img src="CarrierIntroduction.assets/com01-uart01.png" style="width: 80%;">
+<p>VGA_<strong>UART1</strong>: 1x UART at DB9 at Rear I/O, support RS232/422 via JP10/11. Source from the BMC module</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td>2</td>
+<td>DTR</td>
+</tr>
+<tr>
+<td>3</td>
+<td>TXD</td>
+<td>4</td>
+<td>RXD</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DCD</td>
+<td>6</td>
+<td>RI#</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CTS</td>
+<td>8</td>
+<td>RTS</td>
+</tr>
+<tr>
+<td>9</td>
+<td>DSR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: an adapter will be required for UART1 port</p>
+<p><strong>COM0_COM1</strong>: 2x UART at DB9 at Rear I/O. Source from the COM Express module</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NC</td>
+<td>2</td>
+<td>SER0_RX</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SER0_TX</td>
+<td>4</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>GND</td>
+<td>6</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>7</td>
+<td>NC</td>
+<td>8</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NC</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NC</td>
+<td>2</td>
+<td>SER1_RX</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SER1_TX</td>
+<td>4</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>GND</td>
+<td>6</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>7</td>
+<td>NC</td>
+<td>8</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NC</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>UART2</strong>: 1x UART at 10-pin header, 2.54 mm pitch. Source from the BMC module</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NC</td>
+<td>2</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SER2_RX</td>
+<td>4</td>
+<td>SER2_RTS</td>
+</tr>
+<tr>
+<td>5</td>
+<td>SER2_TX</td>
+<td>6</td>
+<td>SER2_CTS</td>
+</tr>
+<tr>
+<td>7</td>
+<td>NC</td>
+<td>8</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>9</td>
+<td>GND</td>
+<td>10</td>
+<td>NC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JP10/11</strong> (RS232/RS422 selection): jumpers for RS232/RS422 settings for UART1</p>
+<table>
+<thead>
+<tr>
+<th>JP10</th>
+<th>JP11</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>2-3</td>
+<td>RS-232</td>
+</tr>
+<tr>
+<td>1-2</td>
+<td>1-2</td>
+<td>RS-422</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JP12/13</strong> (UART SOL selection): jumpers for SOL setting</p>
+<table>
+<thead>
+<tr>
+<th>JP12</th>
+<th>JP13</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>1-2</td>
+<td>SOL      (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>2-3</td>
+<td>UART to connector or header</td>
+</tr>
+</tbody>
+</table>
+<h3 id="FAN-Connectors" class="article-heading">FAN Connectors<a class="article-anchor" href="#FAN-Connectors" aria-hidden="true"></a></h3>
+<p>1x Fan connector for the COM Express module, 4x Fan connectors for system level usage</p>
+<p><strong>FAN_COMe</strong>: 4-pin connector, supporting 12V fan power, managed by the COM Express module</p>
+<p><strong>FAN0-3</strong>: 4-pin connector, supporting 12V fan power, managed by the BMC module. PWM default setting is 100%</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FAN Power 12V</td>
+</tr>
+<tr>
+<td>3</td>
+<td>FAN Speed Sense</td>
+</tr>
+<tr>
+<td>4</td>
+<td>FAN Speed Control (PWM)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="RunBMC-Socket" class="article-heading">RunBMC Socket<a class="article-anchor" href="#RunBMC-Socket" aria-hidden="true"></a></h3>
+<p><strong>RunBMC</strong>: a 260-pin DDR4 SODIMM socket that is used for inserting the BMC module. Get details in <strong>BMC Introduction</strong></p>
+<h3 id="IPMB-Header" class="article-heading">IPMB Header<a class="article-anchor" href="#IPMB-Header" aria-hidden="true"></a></h3>
+<p><strong>IPMB</strong>: 1x IPMB bus at 4-pin header, 2.54 mm pitch. IPMB bus from BMC module and COM Express module (specific SKU)</p>
+<h3 id="I2C-SMB-Headers" class="article-heading">I2C &amp; SMB Headers<a class="article-anchor" href="#I2C-SMB-Headers" aria-hidden="true"></a></h3>
+<p><strong>I2C</strong>: 1x I2C at 4-pin header, 2.54 mm pitch. Source from the COM Express module</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+ 3.3V</td>
+<td>2</td>
+<td>I2C_DAT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>I2C_CLK</td>
+<td>4</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SMB</strong>: 1x SMB at 4-pin header, 2.54 mm pitch. source from COM Express module</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+ 3.3V</td>
+<td>2</td>
+<td>SMB_DAT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SMB_CLK</td>
+<td>4</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<h3 id="GPIO-Header" class="article-heading">GPIO Header<a class="article-anchor" href="#GPIO-Header" aria-hidden="true"></a></h3>
+<p><strong>8xGPIO</strong>: 8x GPIO at 8-pin header, 2.54 mm pitch. source from COM Express module</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GPI0</td>
+<td>2</td>
+<td>GPO0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>GPI1</td>
+<td>4</td>
+<td>GPO1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>GIP2</td>
+<td>6</td>
+<td>GPO2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GIP3</td>
+<td>8</td>
+<td>GPO3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Carrier-BIOS-Socket" class="article-heading">Carrier BIOS Socket<a class="article-anchor" href="#Carrier-BIOS-Socket" aria-hidden="true"></a></h3>
+<p>A socket for SPI BOIS ROM. It will require special BIOS firmware and jumper setting, JP6/JP7 (not default offering)</p>
+<h3 id="LPC-ESPI-Debug-Header" class="article-heading">LPC/ESPI Debug Header<a class="article-anchor" href="#LPC-ESPI-Debug-Header" aria-hidden="true"></a></h3>
+<p>LPC bus is default setting. supporting of ESPI bus will require JP8 setting and specific HW rework on carrier board.</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>LPC_CLK</td>
+<td>2</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LPC_FRAME#</td>
+<td>4</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>LPC_RST#</td>
+<td>6</td>
+<td>+ 5V</td>
+</tr>
+<tr>
+<td>7</td>
+<td>LPC_AD3</td>
+<td>8</td>
+<td>LPC_AD2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>+ 3.3VSB</td>
+<td>10</td>
+<td>LPC_AD1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>LPC_AD0</td>
+<td>12</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>13</td>
+<td>SMB_CK</td>
+<td>14</td>
+<td>SMB_DAT</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+ 1.8VSB *</td>
+<td>16</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>17</td>
+<td>GND</td>
+<td>18</td>
+<td>LPC_SERIRQ</td>
+</tr>
+<tr>
+<td>19</td>
+<td>LPC_DRQ0</td>
+<td>20</td>
+<td>LPC_DRQ1</td>
+</tr>
+</tbody>
+</table>
+<p>Pin.15 is for ESPI usage</p>
+<p><strong>JP8</strong> (LPC or ESPI switch)</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>LPC mode    (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>eSPI mode   (not offering)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Front-Panel-Header" class="article-heading">Front Panel Header<a class="article-anchor" href="#Front-Panel-Header" aria-hidden="true"></a></h3>
+<p><strong>F_PANEL</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>HDD_LED_P</td>
+<td>2</td>
+<td>PWR_LED_P (5V)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>HDD_LED_N</td>
+<td>4</td>
+<td>PWR_LED_N</td>
+</tr>
+<tr>
+<td>5</td>
+<td>GND</td>
+<td>6</td>
+<td>PWR_BTN_P</td>
+</tr>
+<tr>
+<td>7</td>
+<td>RST_BTN_P</td>
+<td>8</td>
+<td>PWR_BTN_N</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NC</td>
+<td>10</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>11</td>
+<td>PWR_LED_P (5V)</td>
+<td>12</td>
+<td>+ 5VSB</td>
+</tr>
+<tr>
+<td>13</td>
+<td>PWR_LED_N</td>
+<td>14</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>15</td>
+<td>NC</td>
+<td>16</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>17</td>
+<td>GND</td>
+<td>18</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>19</td>
+<td>NC</td>
+<td>20</td>
+<td>NC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="RTC-Battery" class="article-heading">RTC Battery<a class="article-anchor" href="#RTC-Battery" aria-hidden="true"></a></h3>
+<p><strong>RTC</strong>: a hold for placing RTC coin battery</p>
+<p><strong>JP15</strong> (Clear CMOS): to clear CMOS, shut down the power and short pin 2 and pin 3 (short VBAT to ground)</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Normal    (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>Clear CMOS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Power-Connectors-Power-Jumpers" class="article-heading">Power Connectors &amp; Power Jumpers<a class="article-anchor" href="#Power-Connectors-Power-Jumpers" aria-hidden="true"></a></h3>
+<p>ATX 24 and 4-pin connector offered, together with several jumpers for different power mode setting. the power mode setting also depends on COM Express module</p>
+<p><strong>ATX_24</strong>: connect the ATX 24-pin (or 20-pin) connector to supply power to the Express-Base7 R3.1 carrier.</p>
+<p><strong>ATX_4</strong>: connect the ATX 12V 4-pin connector to supply power to the COM Express module.</p>
+<p><strong>JP1</strong> (ATX/AT Mode): In AT mode, JP1 shorts PS_ON# to ground directly, forcing power on</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>ATX mode    (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>AT mode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JP2</strong> (PWR_OK_Config): Connect the ATX 12V 4-pin connector to supply power to the COM Express module</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Add 3.3V Pull-up with 10k to signal PWR_OK</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td>Connect PWRGOOD of ATX power supply          (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td>Connect PWRGOOD of onboard DC-DC regulator</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JP3</strong> (5VSB to Module Source): When an AT power supply is connected to the Express-BASE7 R3.1, JP3 can be used to provide 5VSB to the COM Express module from the carrier board.</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>5VSB from ATX power supply  (<strong>Default</strong>)</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>5VSB produced on carrier from Vcc</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td>No 5VSB to module</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JP4</strong> (12V to Module in S3/S5 mode):</p>
+<ul>
+<li>JP1-2: no 12V to module in S3/S5 mode</li>
+<li>JP2-3: there’s always 12V input to the module regardless of the module state.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>12V off in S3/S5</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>12V on in S3/S4    (<strong>Default</strong>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Power Strategy</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JP1</th>
+<th>JP2</th>
+<th>JP3</th>
+<th>JP4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATX PSU / ATX to COM Express module  (<strong>Default</strong>)</td>
+<td>1-2</td>
+<td>3-4</td>
+<td>1-2</td>
+<td>2-3</td>
+</tr>
+<tr>
+<td>ATX PSU / AT to COM Express module</td>
+<td>2-3</td>
+<td>3-4</td>
+<td>3-4</td>
+<td>2-3</td>
+</tr>
+<tr>
+<td>AT PSU / ATX to COM Express module</td>
+<td>1-2</td>
+<td>1-2</td>
+<td>2-3</td>
+<td>1-2</td>
+</tr>
+<tr>
+<td>AT PSU / AT to COM Express module</td>
+<td>2-3</td>
+<td>3-4</td>
+<td>3-4</td>
+<td>2-3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: All 12V power for the COM Express module is provided by the ATX 12V 4-pin connector. to avoid damage to the carrier board and installed components, be sure to connect the ATX power supply to proper connectors, see <strong>Power Connector Connection</strong></p>
+<h2 id="Buttons-LEDs-and-POST" class="article-heading">Buttons, LEDs and POST<a class="article-anchor" href="#Buttons-LEDs-and-POST" aria-hidden="true"></a></h2>
+<h3 id="Buttons" class="article-heading">Buttons<a class="article-anchor" href="#Buttons" aria-hidden="true"></a></h3>
+<p><strong>PWR_BTN</strong>, <strong>RST_BTN</strong> &amp; <strong>SLP_BTN</strong>, <strong>LID_BTN</strong> (SLP_BTN, LID_BTN also depends on COM Express module)</p>
+<img src="CarrierIntroduction.assets/btns.png" style="width: 80%;">
+<h3 id="POST-and-Indicator-LEDs" class="article-heading">POST and Indicator LEDs<a class="article-anchor" href="#POST-and-Indicator-LEDs" aria-hidden="true"></a></h3>
+<p>An I2C based expander located on carrier board for POST display is added for debugging. The two 7-SEG LEDs show the actual <strong>POST data</strong><br>
+A row of mini-LEDs indicate the several power state<br>
+<img src="CarrierIntroduction.assets/leds.png" style="width: 80%;"></p>
+<table>
+<thead>
+<tr>
+<th>LED</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S3</td>
+<td>Indicates S3 status</td>
+</tr>
+<tr>
+<td>5VSB</td>
+<td>ATX power attached on standby or active</td>
+</tr>
+<tr>
+<td>WDT+</td>
+<td>Indicates watchdog activity<br>watchdog source from COM Express module</td>
+</tr>
+<tr>
+<td>HDD+</td>
+<td>Indicates hard drive activity</td>
+</tr>
+<tr>
+<td>PWR_ON</td>
+<td>Indicates power on</td>
+</tr>
+<tr>
+<td>BMC_LED</td>
+<td>Indicates BMC module status<br>It indicates the readiness of firmware initiation of the BMC chip (Always on means ready)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Mechanical-Dimensions" class="article-heading">Mechanical Dimensions<a class="article-anchor" href="#Mechanical-Dimensions" aria-hidden="true"></a></h2>
+<p>will share later</p>
+<h2 id="Power-Connector-Connection" class="article-heading">Power Connector Connection<a class="article-anchor" href="#Power-Connector-Connection" aria-hidden="true"></a></h2>
+<h3 id="ATX-Power-Connectors" class="article-heading">ATX Power Connectors<a class="article-anchor" href="#ATX-Power-Connectors" aria-hidden="true"></a></h3>
+<p>The Express-Base7 R3.1 carrier board has one ATX 24-pin connector to supply power to the carrier board and one ATX 12V 4-pin connector to supply power to the COM Express module. <strong>The system will not power on unless an ATX 12V 4-pin connector is connected</strong></p>
+<p><u><strong>Note</strong>: <strong>DO NOT</strong> plug the ATX 12V 4-pin connector into the ATX 24-pin power connector</u></p>
+<ul>
+<li>If your power supply has a 24-pin ATX connector, then attach the connectors as illustrated below</li>
+</ul>
+<img src="CarrierIntroduction.assets/24-pin-atx.png" style="width: 30%;">
+<ul>
+<li>If your power supply has a 20-pin ATX connector, then attach the connectors as illustrated below</li>
+</ul>
+<img src="CarrierIntroduction.assets/20-pin-atx.png" style="width: 30%;">
+<h2 id="Feature-Support-Matrix" class="article-heading">Feature Support Matrix<a class="article-anchor" href="#Feature-Support-Matrix" aria-hidden="true"></a></h2>
+<p>The supported interfaces also depend on COM Express module offering. Table below indicates the main support feature based on Express-VR7 (AMD Ryzen V3000 based COM Express Type 7 module) and Express-BASE7 R3.1 carrier board and RunBMC-AST2600 (BMC module)</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Maximum Feature</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI Express</td>
+<td>1x PCIe Gen4x8 at slot 16-31<br>1x PCIe Gen4x4 at slot 0-3<br>1x PCIe Gen3x2 at slot 4-7<br></td>
+<td>x8 only event at this x16 slot<br> <br>as KVM usage default <br></td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>2x 10GbE at slot 10G-KR<br>1x 2.5GbE at RJ-45<br>1x mgt. GbE at RJ-45</td>
+<td>10G Ethernet card required <br><br></td>
+</tr>
+<tr>
+<td>USB</td>
+<td>4x USB3.x/2.0 at Type A<br>2x USB3.x/2.0 at header<br>1x USB3.x/2.0 at Type E</td>
+<td>USB_2 as KVM usage default<br><br></td>
+</tr>
+<tr>
+<td>SATA</td>
+<td>2x SATA</td>
+<td></td>
+</tr>
+<tr>
+<td>Display</td>
+<td>1x VGA  at DB9</td>
+<td></td>
+</tr>
+<tr>
+<td>UART</td>
+<td>2x UART at DB9 <br>1x UART at DB9 <br>1x UART at header</td>
+<td>SOL usage as default</td>
+</tr>
+<tr>
+<td>FAN</td>
+<td>1x FAN for COM module <br>4x FAN</td>
+<td><br>PWM = 100% default</td>
+</tr>
+</tbody>
+</table>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2025-06-06T06:07:29.599Z" itemprop="dateModified">Last updated: 2025-06-06</time>
+                <a href="ModuleIntroduction.html" class="article-footer-prev" title="Module Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="BmcIntroduction.html" class="article-footer-next" title="BMC Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Express-BASE7 R3.1 Carrier Board</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-Carrier-for-COM-Express-Type-7-Module"><span class="toc-text">Reference Carrier for COM Express Type 7 Module</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Component-Location"><span class="toc-text">Component Location</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functional-Diagram"><span class="toc-text">Functional Diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Connectors-Headers-and-Pinouts"><span class="toc-text">Connectors, Headers and Pinouts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Carrier-Board-Signals-Type-7"><span class="toc-text">Carrier Board Signals - Type 7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connector-Location-and-Pinout-Compatibility"><span class="toc-text">Connector Location and Pinout Compatibility</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Carrier-Board-Design"><span class="toc-text">Carrier Board Design</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#COM-Express-R3-1-Type-7-Board-to-board-Connectors"><span class="toc-text">COM Express R3.1 Type 7 Board-to-board Connectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PCIe-PCI-Express-Slots"><span class="toc-text">PCIe (PCI Express) Slots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10G-Ethernet"><span class="toc-text">10G Ethernet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5G-Ethernet-mgt-Ethernet"><span class="toc-text">2.5G Ethernet &amp; mgt. Ethernet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB-Connectors-Headers"><span class="toc-text">USB Connectors &amp; Headers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SATA-Connectors"><span class="toc-text">SATA Connectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VGA-Connector"><span class="toc-text">VGA Connector</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#COM-Port-Connectors-Headers"><span class="toc-text">COM Port Connectors &amp; Headers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FAN-Connectors"><span class="toc-text">FAN Connectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RunBMC-Socket"><span class="toc-text">RunBMC Socket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IPMB-Header"><span class="toc-text">IPMB Header</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I2C-SMB-Headers"><span class="toc-text">I2C &amp; SMB Headers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPIO-Header"><span class="toc-text">GPIO Header</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Carrier-BIOS-Socket"><span class="toc-text">Carrier BIOS Socket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LPC-ESPI-Debug-Header"><span class="toc-text">LPC&#x2F;ESPI Debug Header</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Front-Panel-Header"><span class="toc-text">Front Panel Header</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RTC-Battery"><span class="toc-text">RTC Battery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Power-Connectors-Power-Jumpers"><span class="toc-text">Power Connectors &amp; Power Jumpers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Buttons-LEDs-and-POST"><span class="toc-text">Buttons, LEDs and POST</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Buttons"><span class="toc-text">Buttons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POST-and-Indicator-LEDs"><span class="toc-text">POST and Indicator LEDs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mechanical-Dimensions"><span class="toc-text">Mechanical Dimensions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Power-Connector-Connection"><span class="toc-text">Power Connector Connection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ATX-Power-Connectors"><span class="toc-text">ATX Power Connectors</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature-Support-Matrix"><span class="toc-text">Feature Support Matrix</span></a></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link current">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/com-express/com-express/" class="mobile-nav-link  header">menu.comexpress</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link current">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/com-express/js/lang_select.js"></script>
+
+
+<script src="/com-express/js/toc.js"></script>
+
+
+<script src="/com-express/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html> 
