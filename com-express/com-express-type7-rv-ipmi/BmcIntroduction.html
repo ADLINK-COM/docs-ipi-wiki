@@ -109,8 +109,8 @@ $('button').click(function(){
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/runbmc-ast2600-and-type7-carrier-a1.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/BTN_EVENT.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/bmc-dimension.png">
-<meta property="article:published_time" content="2025-06-06T06:07:29.501Z">
-<meta property="article:modified_time" content="2025-06-06T06:07:29.501Z">
+<meta property="article:published_time" content="2025-06-12T03:42:10.692Z">
+<meta property="article:modified_time" content="2025-06-12T03:42:10.692Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/BmcIntroduction.assets/runbmc.png">
@@ -179,8 +179,10 @@ $('button').click(function(){
 <p>Building block concept leverages RunBMC module form factor that is defined by BMC daughter board I/O from OCP.</p>
 <p>RunBMC-AST2600 module is designed to interface with host system, such as COM Express module, via PCIe/USB for KVM and UART for SOL and IPMB for monitoring CPU related temperature, voltage, current, and several I2C/SMB/GPIOs.</p>
 <p>Some of the interfaces will be accessed either through IPMItool (command line) or WebUI, get detail from <strong>IPMI Software Support</strong></p>
+<br>
 <h2 id="Specification" class="article-heading">Specification<a class="article-anchor" href="#Specification" aria-hidden="true"></a></h2>
-<img src="BmcIntroduction.assets/bmc-key-element.png" style="width: 100%;">
+<img src="BmcIntroduction.assets/bmc-key-element.png">
+<br>
 <h3 id="Core-Feature" class="article-heading">Core Feature<a class="article-anchor" href="#Core-Feature" aria-hidden="true"></a></h3>
 <ul>
 <li>
@@ -244,9 +246,10 @@ $('button').click(function(){
 <p>FRU Information</p>
 </li>
 </ul>
+<br>
 <h3 id="Hardware-Interface" class="article-heading">Hardware Interface<a class="article-anchor" href="#Hardware-Interface" aria-hidden="true"></a></h3>
 <p>Interface and pin-out leverages RunBMC Rev. 1.4.1 specifications.</p>
-<img src="BmcIntroduction.assets/bmc-hw-interface.png" style="width: 100%;">
+<img src="BmcIntroduction.assets/bmc-hw-interface.png">
 <ul>
 <li>1x PCIe Gen2</li>
 <li>1x USB</li>
@@ -260,10 +263,12 @@ $('button').click(function(){
 <li>multiple SPI (not for user)</li>
 <li>Misc. and Watchdog</li>
 </ul>
+<br>
 <h2 id="Block-Diagram" class="article-heading">Block Diagram<a class="article-anchor" href="#Block-Diagram" aria-hidden="true"></a></h2>
 <p>Diagram below illustrates how the RunBMC module interfaces with COM Express Type 7 Module/Carrier.</p>
 <img src="BmcIntroduction.assets/runbmc-ast2600-and-type7-carrier-a1.png" style="width: 80%;">
 <p><strong>Note</strong> : interfaces marked with * are not enabled. Interfaces marked with a dash could be enabled by specific HW/FW rework.</p>
+<br>
 <h2 id="Pinout-Signal-Description" class="article-heading">Pinout &amp; Signal Description<a class="article-anchor" href="#Pinout-Signal-Description" aria-hidden="true"></a></h2>
 <h3 id="Pin-Summary" class="article-heading">Pin Summary<a class="article-anchor" href="#Pin-Summary" aria-hidden="true"></a></h3>
 <p>The table below shows a comprehensible list of all signal pins supported on the 260-pin RunBMC edge connectors as defined by RunBMC Rev. 1.4.1 specification. Signals described in the specification but not supported on the RunBMC-AST2600 are marked with <s>strikethrough</s>. In addition, most pins are multi-functional, thus are dependent on the firmware porting. Get the default features in <strong>Signal Description</strong></p>
@@ -1196,9 +1201,11 @@ $('button').click(function(){
 <li>Pin.117 (GPIO81) is used as MUX selection for UART2. UART2 come from BMC. the default is connecting UART from BMC and UART from CPU for SOL function</li>
 <li>Pin.121 (GPIO85) is used for monitoring the Power Button event. a input pin to BMC. Pin.76 (PASSTHRU1_OUT) is output pin from BMC and is used to trigger the Power Button behavior</li>
 </ul>
+<br>
 <h3 id="Signal-Description" class="article-heading">Signal Description<a class="article-anchor" href="#Signal-Description" aria-hidden="true"></a></h3>
 <p>Most interfaces defined by OCP RunBMC specification are multi-functional usage, dependent on<br>
 firmware porting. A default setting will be marked in “Description (default firmware)”</p>
+<br>
 <h4 id="ADC" class="article-heading">ADC<a class="article-anchor" href="#ADC" aria-hidden="true"></a></h4>
 <p>Analog-to-Digital Conversion</p>
 <table>
@@ -1261,6 +1268,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="PCIe" class="article-heading">PCIe<a class="article-anchor" href="#PCIe" aria-hidden="true"></a></h4>
 <p>Up to PCIe Gen2 x1 lane connection. This interface shall be capable of PCI-Express “Endpoint” functionality</p>
 <p>Connect to CPU as KVM function</p>
@@ -1318,6 +1326,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="Ethernet-and-RGMII" class="article-heading">Ethernet and RGMII<a class="article-anchor" href="#Ethernet-and-RGMII" aria-hidden="true"></a></h4>
 <p>Connect to a LAN controller for dedicated management Ethernet port</p>
 <table>
@@ -1471,9 +1480,11 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="USB2A-Host-Device" class="article-heading">USB2A ~~Host/~~Device<a class="article-anchor" href="#USB2A-Host-Device" aria-hidden="true"></a></h4>
 <p>The Interface shall provide a USB interface capable of <s>both USB host and</s> USB device functionality, called USB2A.</p>
 <p><strong>Note</strong>: only support USB device at current implementation. and the only usage is to connect to USB from CPU as KVM function.</p>
+<br>
 <table>
 <thead>
 <tr>
@@ -1498,6 +1509,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="LPC-ESPI" class="article-heading">LPC/ESPI<a class="article-anchor" href="#LPC-ESPI" aria-hidden="true"></a></h4>
 <p>The Interface provides both a Low Pin Count (LPC) and Enhanced Serial Peripheral Bus (eSPI) combined onto the same physical pins. The RunBMC module designer may choose to multiplex with hardware if software pin multiplexing is not supported between these interfaces on the BMC SoC.</p>
 <table>
@@ -1560,6 +1572,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="I2C" class="article-heading">I2C<a class="article-anchor" href="#I2C" aria-hidden="true"></a></h4>
 <table>
 <thead>
@@ -1734,6 +1747,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 <li>I2C6 used as SSIF and connect to PCH. PCH located on COMe module</li>
 <li>I2C8 used as I2C and as Slave mode. connect to COMe module’s I2C</li>
 </ul>
+<br>
 <h4 id="UART" class="article-heading">UART<a class="article-anchor" href="#UART" aria-hidden="true"></a></h4>
 <p>One UART connects to COMe module for Serial Over LAN feature. The other UART, named as CONSOLE (UART5), is used for default BMC console output</p>
 <table>
@@ -1749,31 +1763,31 @@ firmware porting. A default setting will be marked in “Description (default fi
 <tr>
 <td>GPIO19</td>
 <td>36</td>
-<td>Porting  as UART2 CTS</td>
+<td>Porting as UART2 CTS</td>
 <td>as SOL</td>
 </tr>
 <tr>
 <td>GPIO20</td>
 <td>38</td>
-<td>Porting  as UART2 RTS</td>
+<td>Porting as UART2 RTS</td>
 <td>as SOL</td>
 </tr>
 <tr>
 <td>UART2RX</td>
 <td>42</td>
-<td>UART2 Receive  Data</td>
+<td>UART2 Receive Data</td>
 <td>as SOL</td>
 </tr>
 <tr>
 <td>UART2TX</td>
 <td>44</td>
-<td>UART2 Transmit  Data</td>
+<td>UART2 Transmit Data</td>
 <td>as SOL</td>
 </tr>
 <tr>
 <td>CONSOLERX</td>
 <td>21</td>
-<td>Console UART Receive  Data (UART5)</td>
+<td>Console UART Receive Data (UART5)</td>
 <td>for BMC debug</td>
 </tr>
 <tr>
@@ -1785,29 +1799,30 @@ firmware porting. A default setting will be marked in “Description (default fi
 <tr>
 <td><s>GPIO15</s></td>
 <td><s>35</s></td>
-<td><s>Porting  as UART1 CTS</s></td>
+<td><s>Porting as UART1 CTS</s></td>
 <td>Not Supported</td>
 </tr>
 <tr>
 <td><s>GPIO17</s></td>
 <td><s>37</s></td>
-<td><s>Porting  as UART1 RTS</s></td>
+<td><s>Porting as UART1 RTS</s></td>
 <td>Not Supported</td>
 </tr>
 <tr>
 <td><s>UART1RX_GPIO23</s></td>
 <td><s>41</s></td>
-<td><s>UART1 Receive  Data</s></td>
+<td><s>UART1 Receive Data</s></td>
 <td>Not Supported</td>
 </tr>
 <tr>
 <td><s>UART1TX_GPIO0</s></td>
 <td><s>43</s></td>
-<td><s>UART1 Transmit  Data</s></td>
+<td><s>UART1 Transmit Data</s></td>
 <td>Not Supported</td>
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="PWM-TACH" class="article-heading">PWM/TACH<a class="article-anchor" href="#PWM-TACH" aria-hidden="true"></a></h4>
 <p>Maximum 8x PWM outputs. Driven from the BMC, these outputs are intended to drive fans or pump resent in the system.</p>
 <p>Maximum 16x Tachometer inputs to the BMC.</p>
@@ -1816,7 +1831,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 <tr>
 <th><strong>Name</strong></th>
 <th><strong>Pin #</strong></th>
-<th><strong>Description  (default function)</strong></th>
+<th><strong>Description (default function)</strong></th>
 <th><strong>Note</strong></th>
 </tr>
 </thead>
@@ -1824,53 +1839,54 @@ firmware porting. A default setting will be marked in “Description (default fi
 <tr>
 <td>PWM0</td>
 <td>26</td>
-<td>Pulse Width  Modulation Channel 0</td>
+<td>Pulse Width Modulation Channel 0</td>
 <td></td>
 </tr>
 <tr>
 <td>PWM1</td>
 <td>28</td>
-<td>Pulse Width  Modulation Channel 1</td>
+<td>Pulse Width Modulation Channel 1</td>
 <td></td>
 </tr>
 <tr>
 <td>PWM2</td>
 <td>27</td>
-<td>Pulse Width  Modulation Channel 2</td>
+<td>Pulse Width Modulation Channel 2</td>
 <td></td>
 </tr>
 <tr>
 <td>PWM3</td>
 <td>30</td>
-<td>Pulse Width  Modulation Channel 3</td>
+<td>Pulse Width Modulation Channel 3</td>
 <td></td>
 </tr>
 <tr>
 <td>PWM4</td>
 <td>29</td>
-<td>Pulse Width  Modulation Channel 4</td>
+<td>Pulse Width Modulation Channel 4</td>
 <td>BOM option required</td>
 </tr>
 <tr>
 <td>PWM5</td>
 <td>32</td>
-<td>Pulse Width  Modulation Channel 5</td>
+<td>Pulse Width Modulation Channel 5</td>
 <td>BOM option required</td>
 </tr>
 <tr>
 <td>PWM6</td>
 <td>31</td>
-<td>Pulse Width  Modulation Channel 6</td>
+<td>Pulse Width Modulation Channel 6</td>
 <td></td>
 </tr>
 <tr>
 <td>PWM7</td>
 <td>34</td>
-<td>Pulse Width  Modulation Channel 7</td>
+<td>Pulse Width Modulation Channel 7</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<br>
 <table>
 <thead>
 <tr>
@@ -1979,6 +1995,7 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="GPIO-GPI-GPO" class="article-heading">GPIO/GPI/GPO<a class="article-anchor" href="#GPIO-GPI-GPO" aria-hidden="true"></a></h4>
 <p>Many pins defined by RunBMC specification are multi-functional and dependent on firmware setting. The table below indicates the pins defined as GPI or GPIO or GPO and for user usage. It can be accessed through OEM command, get detail on <strong>IPMI Software Support</strong></p>
 <table>
@@ -2191,9 +2208,11 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h4 id="Button-Event" class="article-heading">Button Event<a class="article-anchor" href="#Button-Event" aria-hidden="true"></a></h4>
 <p>Several pins are used for button related behavior, illustrated below</p>
-<img src="BmcIntroduction.assets/BTN_EVENT.png" style="width: 80%;">
+<img src="BmcIntroduction.assets/BTN_EVENT.png">
+<br>
 <h4 id="Others" class="article-heading">Others<a class="article-anchor" href="#Others" aria-hidden="true"></a></h4>
 <p>Several pins are used for specific feature, listed below</p>
 <table>
@@ -2304,16 +2323,17 @@ firmware porting. A default setting will be marked in “Description (default fi
 </tr>
 </tbody>
 </table>
+<br>
 <h2 id="Mechanical" class="article-heading">Mechanical<a class="article-anchor" href="#Mechanical" aria-hidden="true"></a></h2>
 <h3 id="Form-Factor-Specification" class="article-heading">Form Factor &amp; Specification<a class="article-anchor" href="#Form-Factor-Specification" aria-hidden="true"></a></h3>
 <p>Leverage OCP RunBMC Rev. 1.4.1 specification. Dimensions are 69.6mm x 32mm</p>
 <p>Fit into DDR4 SO-DIMM socket</p>
-<img src="BmcIntroduction.assets/bmc-dimension.png" style="width: 80%;">
+<img src="BmcIntroduction.assets/bmc-dimension.png">
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2025-06-06T06:07:29.501Z" itemprop="dateModified">Last updated: 2025-06-06</time>
-                <a href="CarrierIntroduction.html" class="article-footer-prev" title="Carrier Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+                <time class="article-footer-updated" datetime="2025-06-12T03:42:10.692Z" itemprop="dateModified">Last updated: 2025-06-12</time>
+                <a href="CarrierIntroduction.html" class="article-footer-prev" title="Carrier Introduction"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="10GEthernetCardIntroduction.html" class="article-footer-next" title="10G Ethernet Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -2331,7 +2351,7 @@ firmware porting. A default setting will be marked in “Description (default fi
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link current">BMC Introduction</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link current">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="sidebar-link">10G Ethernet Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="sidebar-link first">10G Ethernet Card</a></details></strong>
   </div>
 </aside>
     </div>
@@ -2387,7 +2407,7 @@ firmware porting. A default setting will be marked in “Description (default fi
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link current">BMC Introduction</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link current">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="mobile-nav-link">10G Ethernet Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="mobile-nav-link first">10G Ethernet Card</a></details></strong>
     
   </div>
   

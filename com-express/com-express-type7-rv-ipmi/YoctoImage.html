@@ -96,18 +96,18 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Yocto Installation Guide for Express-VR7 This document provides detailed instructions on installing Yocto on Express-VR7. Prerequisites  Download Yocto Image: Download the prebuilt Yocto image to the">
+  <meta name="description" content="Yocto Installation Guide for Express-VR7 This document provides detailed instructions on installing Yocto on Express-VR7.  Prerequisites  Download Yocto Image: Download the prebuilt Yocto image to the">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Yocto Installation Guide for Express-VR7 This document provides detailed instructions on installing Yocto on Express-VR7. Prerequisites  Download Yocto Image: Download the prebuilt Yocto image to the">
+<meta property="og:description" content="Yocto Installation Guide for Express-VR7 This document provides detailed instructions on installing Yocto on Express-VR7.  Prerequisites  Download Yocto Image: Download the prebuilt Yocto image to the">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets%5Crufus1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/rufus1.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/rufus2.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/rufus3.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/rufus4.png">
-<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets%5Ctarget1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/target1.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/setuppage.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/saveexit.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/bootwindows.png">
@@ -121,7 +121,7 @@ $('button').click(function(){
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/finalboot.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/bootlogn.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/yoctodesktop.jpg">
-<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets%5Cdd.png">
+<meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/dd.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/usbselect.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/saveexitub.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/bootubuntu.png">
@@ -134,11 +134,11 @@ $('button').click(function(){
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/boot.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/login.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/yoctodesktop.jpg">
-<meta property="article:published_time" content="2025-01-21T01:22:26.064Z">
-<meta property="article:modified_time" content="2025-01-21T01:22:26.064Z">
+<meta property="article:published_time" content="2025-06-12T03:33:28.037Z">
+<meta property="article:modified_time" content="2025-06-12T03:33:28.037Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets%5Crufus1.png">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/YoctoImage.assets/rufus1.png">
   <!-- Google Analytics -->
   
 <script>
@@ -200,9 +200,10 @@ $('button').click(function(){
               <div class="article-content bullets" itemprop="articleBody">
                 <h1 class="article-heading">Yocto Installation Guide for Express-VR7<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
 <p>This document provides detailed instructions on installing Yocto on Express-VR7.</p>
+<br>
 <h2 id="Prerequisites" class="article-heading"><strong>Prerequisites</strong><a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2>
 <ol>
-<li><strong>Download Yocto Image</strong>: Download the prebuilt Yocto image to the working directory of your development host by clicking <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/com-express-type-7-ryzen-v3000-download">Click_Here</a>.</li>
+<li><strong>Download Yocto Image</strong>: Download the prebuilt Yocto image to the working directory of your development host by clicking <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/com-express-type-7-ryzen-v3000-download">Click here</a>.</li>
 <li><strong>Set Up Devices</strong>:
 <ul>
 <li><strong>Target Device</strong>: Ensure your target device is ready.</li>
@@ -232,6 +233,7 @@ $('button').click(function(){
 </li>
 </ol>
 <p><strong>Note</strong>: Ensure the USB drive has a minimum capacity of 16 GB, and be aware that all data on the USB drive will be erased during the flashing process.</p>
+<br>
 <h2 id="Windows-Host" class="article-heading"><strong>Windows Host</strong><a class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h2>
 <h3 id="Creating-a-Bootable-USB-with-Rufus" class="article-heading"><strong>Creating a Bootable USB with Rufus</strong><a class="article-anchor" href="#Creating-a-Bootable-USB-with-Rufus" aria-hidden="true"></a></h3>
 <ul>
@@ -251,8 +253,14 @@ $('button').click(function(){
 <p>Wait until the .iso file is copied successfully to the USB drive. Once it is successfully copied, you can remove the USB from the host.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets%5Crufus1.png" alt="rufus1">                      <img src="YoctoImage.assets\rufus2.png" alt="rufus2" style="zoom:70%;"></p>
-<p><img src="YoctoImage.assets\rufus3.png" alt="rufus3" style="zoom:80%;">           <img src="YoctoImage.assets\rufus4.png" alt="rufus4" style="zoom:80%;"></p>
+<img src="YoctoImage.assets\rufus1.png" alt="rufus1" style="width:60%">
+<br>
+<img src="YoctoImage.assets\rufus2.png" alt="rufus2" style="width:60%">
+<br>
+<img src="YoctoImage.assets\rufus3.png" alt="rufus3" style="width:60%">
+<br>
+<img src="YoctoImage.assets\rufus4.png" alt="rufus4" style="width:60%">
+<br>
 <h3 id="Installing-Yocto-on-Target-Machine" class="article-heading"><strong>Installing Yocto on Target Machine</strong><a class="article-anchor" href="#Installing-Yocto-on-Target-Machine" aria-hidden="true"></a></h3>
 <ul>
 <li>
@@ -283,11 +291,15 @@ $('button').click(function(){
 <p>Press [Del] or [Esc] repeatedly to access the BIOS setup menu.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets%5Ctarget1.png" alt="target1"></p>
+<img src="YoctoImage.assets\target1.png" alt="target1" style="width:80%">
+<br>
 <ul>
 <li>In the serial, in the boot menu, navigate to the boot order section and set your USB drive as the first boot option. Save the changes and exit the boot menu.</li>
 </ul>
-<p><img src="YoctoImage.assets\setuppage.png" alt="setuppage" style="zoom:80%;">    <img src="YoctoImage.assets\saveexit.png" alt="saveexit" style="zoom:80%;"></p>
+<img src="YoctoImage.assets\setuppage.png" alt="setuppage" style="width:80%">
+<br>
+<img src="YoctoImage.assets\saveexit.png" alt="saveexit" style="width:80%">
+<br>
 <ul>
 <li>
 <p>When changes are saved, and the boot menu exits, the system automatically boots into a grub.</p>
@@ -296,15 +308,19 @@ $('button').click(function(){
 <p>You will be presented with two options:</p>
 </li>
 </ul>
-<p>​	1. <strong>Boot</strong>: This option will boot yocto into Target.</p>
-<p>​	2. <strong>Install</strong>: This option will install yocto onto the storage device (hard disk or SSD). During installation, you must provide the target path (storage device) at runtime.</p>
+<p>​ 1. <strong>Boot</strong>: This option will boot yocto into Target.</p>
+<p>​ 2. <strong>Install</strong>: This option will install yocto onto the storage device (hard disk or SSD). During installation, you must provide the target path (storage device) at runtime.</p>
+<br>
 <p><strong>If Boot Option is Selected:</strong></p>
 <ul>
 <li>The device should automatically boot from the USB drive, and the Yocto image will be booted on your target.</li>
 </ul>
-<p>​                                                                          <img src="YoctoImage.assets\bootwindows.png" alt="bootwindows" style="zoom:80%;"></p>
-<p>​                                                                  <img src="YoctoImage.assets\bootlogn.png" alt="bootlogn" style="zoom: 87%;"></p>
-<img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="zoom:20%;">
+<img src="YoctoImage.assets\bootwindows.png" alt="bootwindows" style="width:80%">
+<br>
+<img src="YoctoImage.assets\bootlogn.png" alt="bootlogn" style="width:80%">
+<br>
+<img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="width:80%">
+<br>
 <p><strong>If Install Option is Selected:</strong></p>
 <ul>
 <li>
@@ -314,7 +330,10 @@ $('button').click(function(){
 <p>You will be prompted to enter the storage device name (e.g., <strong><code>sd[X],</code></strong> where <code>X</code> represents the connected SSD/HDD).</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets\installwin.png" alt="installwin" style="zoom:80%;">    <img src="YoctoImage.assets\sdawin.png" alt="sdawin" style="zoom: 80%;"></p>
+<img src="YoctoImage.assets\installwin.png" alt="installwin" style="width:80%">
+<br>
+<img src="YoctoImage.assets\sdawin.png" alt="sdawin" style="width:80%">
+<br>
 <ul>
 <li>
 <p>To proceed, type <strong>Y</strong> and click Enter.</p>
@@ -326,7 +345,10 @@ $('button').click(function(){
 <p>After successful flashing, remove the installation medium and press Enter. The system will automatically restart.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets\proceedy.png" alt="proceedy" style="zoom:80%;">   <img src="YoctoImage.assets\flashreboot.png" alt="flashreboot" style="zoom:80%;"></p>
+<img src="YoctoImage.assets\proceedy.png" alt="proceedy" style="width:80%">
+<br>
+<img src="YoctoImage.assets\flashreboot.png" alt="flashreboot" style="width:80%">
+<br>
 <ul>
 <li>
 <p>During the restart, press [Del] or [Esc] repeatedly to access the BIOS setup menu.</p>
@@ -338,12 +360,16 @@ $('button').click(function(){
 <p>The system will automatically go to the grub menu and boot the Yocto image from the SSD/HDD to your target device.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets\ssdselect.png" alt="ssdselect" style="zoom:80%;">   <img src="YoctoImage.assets\finalboot.png" alt="finalboot" style="zoom:80%;"></p>
+<img src="YoctoImage.assets\ssdselect.png" alt="ssdselect" style="width:80%">
+<br>
+<img src="YoctoImage.assets\finalboot.png" alt="finalboot" style="width:80%">
 <ul>
 <li>The Yocto desktop image (SATO) should now be visible on the target device.</li>
 </ul>
-<p>​                                                                               <img src="YoctoImage.assets\bootlogn.png" alt="bootlogn" style="zoom: 70%;"></p>
-<p>​                                                               <img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="zoom:20%;"></p>
+<p>​<img src="YoctoImage.assets\bootlogn.png" alt="bootlogn" style="width:80%"></p>
+<br>
+<img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="width:80%">
+<br>
 <h2 id="Linux-Host" class="article-heading"><strong>Linux Host</strong><a class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h2>
 <h3 id="Creating-a-Bootable-USB-using-dd-Command" class="article-heading"><strong>Creating a Bootable USB using dd Command</strong><a class="article-anchor" href="#Creating-a-Bootable-USB-using-dd-Command" aria-hidden="true"></a></h3>
 <ul>
@@ -354,11 +380,12 @@ $('button').click(function(){
 <p>Insert an empty USB drive and use the following command to flash the OS to the USB drive:</p>
 </li>
 </ul>
-<p><strong>Warning</strong>: Ensure you identify and use the correct USB drive (e.g., /dev/sdb or /dev/sdc) by using a tool like “gparted&quot;. Writing to the wrong device can cause data loss and, in the worst-case scenario, may damage your development host’s OS./  )</p>
+<p><strong>Warning</strong>: Ensure you identify and use the correct USB drive (e.g., /dev/sdb or /dev/sdc) by using a tool like “gparted&quot;. Writing to the wrong device can cause data loss and, in the worst-case scenario, may damage your development host’s OS./ )</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
 <p>After <code>dd</code> has completed, enter the following command to ensure all data is written to the USB drive:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sync</span><br></pre></td></tr></table></figure>
-<p><img src="YoctoImage.assets%5Cdd.png" alt="dd"></p>
+<img src="YoctoImage.assets\dd.png" alt="dd">
+<br>
 <h3 id="Installing-Yocto-on-Target-Machine-2" class="article-heading"><strong>Installing Yocto on Target Machine</strong><a class="article-anchor" href="#Installing-Yocto-on-Target-Machine-2" aria-hidden="true"></a></h3>
 <ul>
 <li>
@@ -377,9 +404,10 @@ $('button').click(function(){
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo minicom -D /dev/ttyUSB0 -b 115200</span><br></pre></td></tr></table></figure>
 <p><strong>Note:</strong> check usb to serial cable is enumerated as ttyUSB0.</p>
+<br>
 <ul>
 <li>
-<p>Power on the target device and the serial log dump can be seen on  console of host.</p>
+<p>Power on the target device and the serial log dump can be seen on console of host.</p>
 </li>
 <li>
 <p>Press [Del] or [Esc] repeatedly to access the BIOS setup menu.</p>
@@ -388,7 +416,10 @@ $('button').click(function(){
 <p>In the boot menu, navigate to the boot order section and set your USB drive as the first boot option.Save the changes and exit the boot menu.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets\usbselect.png" alt="usbselect" style="zoom:67%;">     <img src="YoctoImage.assets\saveexitub.png" alt="saveexitub" style="zoom: 55%;"></p>
+<img src="YoctoImage.assets\usbselect.png" alt="usbselect" style="width:80%">
+<br>
+<img src="YoctoImage.assets\saveexitub.png" alt="saveexitub" style="width:80%">
+<br>
 <ul>
 <li>
 <p>When changes are saved and the boot menu is exited, the system will automatically boot into a grub.</p>
@@ -397,15 +428,17 @@ $('button').click(function(){
 <p>You will be presented with two options:</p>
 </li>
 </ul>
-<p>​	1.<strong>Boot</strong>: This option will boot yocto into target.</p>
-<p>​	2.<strong>Install</strong>: This option will install  yocto  onto the storage device (hard disk or SSD). During the installation process, you will need to provide the target path (storage device) at runtime.</p>
+<p>​ 1.<strong>Boot</strong>: This option will boot yocto into target.</p>
+<p>​ 2.<strong>Install</strong>: This option will install yocto onto the storage device (hard disk or SSD). During the installation process, you will need to provide the target path (storage device) at runtime.</p>
+<br>
 <p><strong>If Boot Option is Selected:</strong></p>
 <ul>
-<li>The device should now automatically boot from the USB drive and  Yocto image will be booted on your target.</li>
+<li>The device should now automatically boot from the USB drive and Yocto image will be booted on your target.</li>
 </ul>
-<p>​                                                       <img src="YoctoImage.assets\bootubuntu.png" alt="bootubuntu" style="zoom:55%;"></p>
-<p>​                                                      <img src="YoctoImage.assets\login.png" alt="login" style="zoom:67%;"></p>
-<p>​                                                      <img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="zoom:17%;"></p>
+<p>​<img src="YoctoImage.assets\bootubuntu.png" alt="bootubuntu" style="width:80%"></p>
+<p>​<img src="YoctoImage.assets\login.png" alt="login" style="width:80%"></p>
+<p>​<img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="width:80%"></p>
+<br>
 <p><strong>If Install Option is Selected:</strong></p>
 <ul>
 <li>
@@ -418,7 +451,9 @@ $('button').click(function(){
 <p>To proceed, type <strong>Y</strong> and click Enter.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets\installoption.png" alt="installoption" style="zoom:55%;"> <img src="YoctoImage.assets\sda.png" alt="sda" style="zoom:57%;"></p>
+<img src="YoctoImage.assets\installoption.png" alt="installoption" style="width:80%">
+<br>
+<img src="YoctoImage.assets\sda.png" alt="sda" style="width:80%">
 <ul>
 <li>
 <p>The system will flash the Yocto image onto the specified external storage device via SATA.</p>
@@ -433,7 +468,10 @@ $('button').click(function(){
 <p>Navigate to the boot order section and set your external storage device as the first boot option. Save and exit the set configuration.</p>
 </li>
 </ul>
-<p><img src="YoctoImage.assets\restart.png" alt="restart" style="zoom:67%;">    <img src="YoctoImage.assets\ssdoption1.png" alt="ssdoption1" style="zoom:67%;"></p>
+<img src="YoctoImage.assets\restart.png" alt="restart" style="width:80%"> 
+<br>
+<img src="YoctoImage.assets\ssdoption1.png" alt="ssdoption1" style="width:80%">
+<br>
 <ul>
 <li>
 <p>The system will automatically go to the grub menu and boot the Yocto image from the SSD/HDD to your target device.</p>
@@ -442,14 +480,14 @@ $('button').click(function(){
 <p>The Yocto desktop image (SATO) should now be visible on the target device.</p>
 </li>
 </ul>
-<p>​                                                                                <img src="YoctoImage.assets\boot.png" alt="boot" style="zoom:55%;"> &lt;</p>
-<p>​                                                                               <img src="YoctoImage.assets\login.png" alt="login" style="zoom:67%;"></p>
-<p>​                                                                                <img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="zoom:17%;"></p>
+<p>​<img src="YoctoImage.assets\boot.png" alt="boot" style="width:80%"></p>
+<p>​<img src="YoctoImage.assets\login.png" alt="login" style="width:80%"></p>
+<p>​<img src="YoctoImage.assets\yoctodesktop.jpg" alt="yoctodesktop" style="width:80%"></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2025-01-21T01:22:26.064Z" itemprop="dateModified">Last updated: 2025-01-21</time>
-                <a href="index.html" class="article-footer-next" title="Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2025-06-12T03:33:28.037Z" itemprop="dateModified">Last updated: 2025-06-12</time>
+                <a href="UbuntuImage.html" class="article-footer-prev" title="Ubuntu"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="Othersoftware-10g-ethernet-enable.html" class="article-footer-next" title="10G Ethernet Card"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -467,7 +505,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="sidebar-link">10G Ethernet Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link current">Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="sidebar-link first">10G Ethernet Card</a></details></strong>
   </div>
 </aside>
     </div>
@@ -523,7 +561,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="mobile-nav-link">10G Ethernet Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link current">Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="mobile-nav-link first">10G Ethernet Card</a></details></strong>
     
   </div>
   

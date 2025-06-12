@@ -96,12 +96,12 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Setup SOL and KVM is default enabled and it also rely on jumpers setting and BIOS setting. The information will be illustrated on bottom of this page for diagnostic purpose. The steps for access the B">
+  <meta name="description" content="Setup SOL and KVM is default enabled and it also rely on jumpers setting and BIOS setting. The information will be illustrated on bottom of this page for diagnostic purpose.  The steps for access the">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="Setup SOL and KVM is default enabled and it also rely on jumpers setting and BIOS setting. The information will be illustrated on bottom of this page for diagnostic purpose. The steps for access the B">
+<meta property="og:description" content="Setup SOL and KVM is default enabled and it also rely on jumpers setting and BIOS setting. The information will be illustrated on bottom of this page for diagnostic purpose.  The steps for access the">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.assets/client-kit-connection.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.assets/network-internet-settings.png">
@@ -114,8 +114,8 @@ $('button').click(function(){
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.assets/jp5-kvm.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.assets/jp12-jp13-sol.png">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.assets/bios-console-sol.png">
-<meta property="article:published_time" content="2025-01-21T01:22:25.204Z">
-<meta property="article:modified_time" content="2025-01-21T01:22:25.204Z">
+<meta property="article:published_time" content="2025-06-12T02:12:10.916Z">
+<meta property="article:modified_time" content="2025-06-12T02:12:10.916Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/Setup.assets/client-kit-connection.png">
@@ -180,12 +180,14 @@ $('button').click(function(){
               <div class="article-content bullets" itemprop="articleBody">
                 <h1 class="article-heading">Setup<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
 <p>SOL and KVM is default enabled and it also rely on jumpers setting and BIOS setting. The information will be illustrated on bottom of this page for diagnostic purpose.</p>
+<br>
 <h2 id="The-steps-for-access-the-BMC-for-remote-usage" class="article-heading">The steps for access the BMC for remote usage<a class="article-anchor" href="#The-steps-for-access-the-BMC-for-remote-usage" aria-hidden="true"></a></h2>
 <p><strong>Step 1</strong></p>
 <p>Connect the LAN port of Clint system and mgt.LAN port of Dev Kit through RJ45 cable</p>
-<img src="Setup.assets/client-kit-connection.png" style="width: 80%;">
+<img src="Setup.assets/client-kit-connection.png">
 <p><strong>Step 2</strong></p>
 <p>Power on the Dev Kit and Client System</p>
+<br>
 <p><strong>Step 3</strong></p>
 <p>Set the IP of the Client System</p>
 <ul>
@@ -211,26 +213,29 @@ $('button').click(function(){
 <ul>
 <li>Key-in admin for Username and admin for Password, then, press Sign me in button</li>
 </ul>
-<img src="Setup.assets/key-in-admin.png" style="width: 80%;">
+<img src="Setup.assets/key-in-admin.png">
 <p><strong>Note</strong> : it will be required to change the your-owned password</p>
+<br>
 <ul>
 <li>The WebUI interface is launched and ready for use</li>
 </ul>
-<img src="Setup.assets/webui-launched.png" style="width: 80%;">
+<img src="Setup.assets/webui-launched.png">
+<br>
 <h2 id="SOL-and-KVM-Setting" class="article-heading">SOL and KVM Setting<a class="article-anchor" href="#SOL-and-KVM-Setting" aria-hidden="true"></a></h2>
 <h3 id="KVM" class="article-heading">KVM<a class="article-anchor" href="#KVM" aria-hidden="true"></a></h3>
 <p>There’s a graphic inside the BMC for graphic emulation. Connection between CPU and BMC through a PCIex1 lane will be necessary for KVM. Default setting of JP5 is 2-3</p>
-<img src="Setup.assets/jp5-kvm.png" style="width: 80%;">
+<img src="Setup.assets/jp5-kvm.png">
+<br>
 <h3 id="SOL-Serial-Over-LAN" class="article-heading">SOL (Serial Over LAN)<a class="article-anchor" href="#SOL-Serial-Over-LAN" aria-hidden="true"></a></h3>
 <p>UART connection between CPU and BMC through JP12, JP13 setting. This is the hardware setting for SOL. Default setting of JP12 &amp; JP13 is 1-2</p>
-<img src="Setup.assets/jp12-jp13-sol.png" style="width: 80%;">
+<img src="Setup.assets/jp12-jp13-sol.png">
 <p>At BIOS setup, console enable at COM1 is also required for SOL, as shown as below.</p>
 <p>COM1 default enabled. COM0, COM2, COM3 default disabled</p>
-<img src="Setup.assets/bios-console-sol.png" style="width: 60%;">
+<img src="Setup.assets/bios-console-sol.png" style="width: 80%;">
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2025-01-21T01:22:25.204Z" itemprop="dateModified">Last updated: 2025-01-21</time>
+                <time class="article-footer-updated" datetime="2025-06-12T02:12:10.916Z" itemprop="dateModified">Last updated: 2025-06-12</time>
                 <a href="Installation.html" class="article-footer-prev" title="Installation"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="ModuleIntroduction.html" class="article-footer-next" title="Module Introduction"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -249,7 +254,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link current">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link current">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="sidebar-link">10G Ethernet Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="sidebar-link first">10G Ethernet Card</a></details></strong>
   </div>
 </aside>
     </div>
@@ -305,7 +310,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link current">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link current">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="mobile-nav-link">10G Ethernet Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="mobile-nav-link first">10G Ethernet Card</a></details></strong>
     
   </div>
   
