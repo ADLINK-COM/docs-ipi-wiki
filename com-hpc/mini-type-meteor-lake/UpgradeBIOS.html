@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/index.html">
+  <link rel="canonical" href="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.html">
   <!-- Alternative links -->
   
     
@@ -96,17 +96,22 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/com-hpc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="OverviewI-Pi Dev KitI-Pi development kits come with an open-standard Computer-on-Module consisting the core elements such as the CPU and memory, along with a general-purpose carrier board with pre-def">
+  <meta name="description" content="Upgrade BIOS under UEFI shellThe following steps detail how to update your BIOS using a bootable USB drive under the UEFI shell.  Insert your USB drive into a host PC.  Download the upgrade BIOS files">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
-<meta property="og:url" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/index.html">
+<meta property="og:url" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="OverviewI-Pi Dev KitI-Pi development kits come with an open-standard Computer-on-Module consisting the core elements such as the CPU and memory, along with a general-purpose carrier board with pre-def">
+<meta property="og:description" content="Upgrade BIOS under UEFI shellThe following steps detail how to update your BIOS using a bootable USB drive under the UEFI shell.  Insert your USB drive into a host PC.  Download the upgrade BIOS files">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-05-21T06:08:06.829Z">
-<meta property="article:modified_time" content="2025-05-21T06:08:06.829Z">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.assets/Slide1.PNG">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.assets/Slide2.jpg">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.assets/Slide3.jpg">
+<meta property="og:image" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.assets/Slide4.PNG">
+<meta property="article:published_time" content="2025-07-14T05:50:39.533Z">
+<meta property="article:modified_time" content="2025-07-14T05:50:39.533Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/UpgradeBIOS.assets/Slide1.PNG">
   <!-- Google Analytics -->
   
 <script>
@@ -138,7 +143,7 @@ $('button').click(function(){
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=index.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=UpgradeBIOS.html'}, '*');}</script>
 
 	</div>
 	
@@ -166,18 +171,34 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Overview" class="article-heading"><a href="#Overview" class="headerlink" title="Overview"></a>Overview<a class="article-anchor" href="#Overview" aria-hidden="true"></a></h1><h2 id="I-Pi-Dev-Kit" class="article-heading"><a href="#I-Pi-Dev-Kit" class="headerlink" title="I-Pi Dev Kit"></a>I-Pi Dev Kit<a class="article-anchor" href="#I-Pi-Dev-Kit" aria-hidden="true"></a></h2><p>I-Pi development kits come with an open-standard Computer-on-Module consisting the core elements such as the CPU and memory, along with a general-purpose carrier board with pre-defined I/O interfaces, such as PCIe, USB, and display.</p>
-<p>I-Pi devkits empower customers to not only test out the performance process of new silicon as they come out, but also prototype for custom, application-specific solutions, turning innovative ideas into proof of concept.</p>
-<p><br></p>
-<h2 id="Mini-Type-Meteor-Lake-Dev-Kit" class="article-heading"><a href="#Mini-Type-Meteor-Lake-Dev-Kit" class="headerlink" title="Mini Type Meteor Lake Dev Kit"></a>Mini Type Meteor Lake Dev Kit<a class="article-anchor" href="#Mini-Type-Meteor-Lake-Dev-Kit" aria-hidden="true"></a></h2><p>ADLINK’s Dev Kit is an out-of-the-box ready development kit, including a COM-HPC R1.x-compliant COM-HPC Module + Carrier + Heatsink, that is powered by <strong>Intel® Core Ultra Processor (Meteor Lake)</strong></p>
-<p>Utilizing Intel’s advanced hybrid architecture with up to 4 Performance-cores (P-cores), for IoT workloads and maximum responsiveness, and 8 Efficient-cores (E-cores), for offload multitasking and addition 2 low power efficient-cores (LP E-cores) , it effectively optimizes productivity and can fuel IoT innovations across various power envelopes, making it well-suited for deployments requiring high performance while maintaining low power, including industrial automation and control, medical ultra sound, image processing and analysis, high speed video encoding and streaming, predictive traffic analysis, multi camera-based AI, and more.</p>
-<p><strong>Integration of powerful GPU and NPU</strong> into a single silicon package makes it capable of handling different kind of workloads and AI models at a simple hardware architecture and deliver the concept to the market on-time.</p>
-<p>Highly integrated Core Ultra platform combined with high bandwidth LPDDR5 memory and multiple PCIe Gen4 x4 high speed interfaces deliver higher responsiveness for all kinds of use cases.</p>
+                <h1 id="Upgrade-BIOS-under-UEFI-shell" class="article-heading"><a href="#Upgrade-BIOS-under-UEFI-shell" class="headerlink" title="Upgrade BIOS under UEFI shell"></a>Upgrade BIOS under UEFI shell<a class="article-anchor" href="#Upgrade-BIOS-under-UEFI-shell" aria-hidden="true"></a></h1><p>The following steps detail how to update your BIOS using a bootable USB drive under the UEFI shell.</p>
+<ol>
+<li><p>Insert your USB drive into a host PC.</p>
+</li>
+<li><p>Download the upgrade BIOS files from <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/com-express-type-6-raptor-lake-p-download">here</a> and save them into your USB drive.</p>
+</li>
+<li><p>Unplug the USB drive and insert it into your target system (COM-HPC-mMTL).</p>
+</li>
+<li><p>Ensure all necessary accessory cables—such as keyboard, mouse, and display—are properly connected to the carrier board.</p>
+</li>
+<li><p>Power on the system and enter <strong>FS0:</strong> from the UEFI shell.</p>
+<p> <img src="UpgradeBIOS.assets/Slide1.PNG"></p>
+</li>
+<li><p>Select <strong>cd COM-HPC-mMTL_10010_Image</strong> file then enter <strong>pBIOS.nsh</strong> to begin the BIOS update.</p>
+<p> <img src="UpgradeBIOS.assets/Slide2.jpg"></p>
+</li>
+<li><p>Once the update is complete, the system will display the following message.</p>
+<p> <img src="UpgradeBIOS.assets/Slide3.jpg"></p>
+</li>
+<li><p>Remove the USB drive and restart the system. It should boot directly into the BIOS. Verify that the BIOS version is correct to complete the process.</p>
+<p> <img src="UpgradeBIOS.assets/Slide4.PNG"></p>
+</li>
+</ol>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2025-05-21T06:08:06.829Z" itemprop="dateModified">Last updated: 2025-05-21</time>
-                <a href="UserInterfaces.html" class="article-footer-next" title="Interfaces"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2025-07-14T05:50:39.533Z" itemprop="dateModified">Last updated: 2025-07-14</time>
+                <a href="PreparingabootableUSBdrive.html" class="article-footer-prev" title="Preparing Bootable USB"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
             </div>
@@ -186,7 +207,7 @@ $('button').click(function(){
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-Pi-Dev-Kit"><span class="toc-text">I-Pi Dev Kit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mini-Type-Meteor-Lake-Dev-Kit"><span class="toc-text">Mini Type Meteor Lake Dev Kit</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Upgrade-BIOS-under-UEFI-shell"><span class="toc-text">Upgrade BIOS under UEFI shell</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -195,7 +216,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link current first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="HowToSetup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Installation</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="WindowsImage.html" class="sidebar-link first">Windows</a></details></strong><strong class="sidebar-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="sidebar-link first">Preparing Bootable USB</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="UpgradeBIOS.html" class="sidebar-link first">Upgrading BIOS</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="HowToSetup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Installation</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="WindowsImage.html" class="sidebar-link first">Windows</a></details></strong><strong class="sidebar-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="sidebar-link first">Preparing Bootable USB</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="UpgradeBIOS.html" class="sidebar-link current first">Upgrading BIOS</a></details></strong>
   </div>
 </aside>
     </div>
@@ -249,7 +270,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link current first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Installation</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="WindowsImage.html" class="mobile-nav-link first">Windows</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link first">Preparing Bootable USB</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="UpgradeBIOS.html" class="mobile-nav-link first">Upgrading BIOS</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Installation</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="WindowsImage.html" class="mobile-nav-link first">Windows</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Build Guide</summary><a href="PreparingabootableUSBdrive.html" class="mobile-nav-link first">Preparing Bootable USB</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="UpgradeBIOS.html" class="mobile-nav-link current first">Upgrading BIOS</a></details></strong>
     
   </div>
   
