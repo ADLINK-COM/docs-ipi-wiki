@@ -72,12 +72,12 @@
   <!-- RSS -->
   <link rel="alternate" href="/smarc/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="How to Use&#x2F;Test Interface Guide1) I2C Use the following command to display all available I2C buses  $ i2cdetect -l  Use the below command to scan and list the I2C devices connected to bus 1.  $ i2cdet">
+  <meta name="description" content="How to Use&#x2F;Test Interface Guide1) I2C Use the following command to display all available I2C buses  $ i2cdetect -l   Use the below command to scan and list the I2C devices connected to bus 1.  $">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/smarc/ipi-smarc-imx95/TestInterface.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="How to Use&#x2F;Test Interface Guide1) I2C Use the following command to display all available I2C buses  $ i2cdetect -l  Use the below command to scan and list the I2C devices connected to bus 1.  $ i2cdet">
+<meta property="og:description" content="How to Use&#x2F;Test Interface Guide1) I2C Use the following command to display all available I2C buses  $ i2cdetect -l   Use the below command to scan and list the I2C devices connected to bus 1.  $">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-imx95/TestInterface.assets/i2c1.png">
 <meta property="og:image" content="https://docs.ipi.wiki/smarc/ipi-smarc-imx95/TestInterface.assets/GPIO.png">
@@ -154,148 +154,152 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Use-Test-Interface-Guide" class="article-heading"><a href="#How-to-Use-Test-Interface-Guide" class="headerlink" title="How to Use/Test Interface Guide"></a>How to Use/Test Interface Guide<a class="article-anchor" href="#How-to-Use-Test-Interface-Guide" aria-hidden="true"></a></h1><h2 id="1-I2C" class="article-heading"><a href="#1-I2C" class="headerlink" title="1) I2C"></a>1) I2C<a class="article-anchor" href="#1-I2C" aria-hidden="true"></a></h2><ul>
+                <h1 id="How-to-Use-x2F-Test-Interface-Guide" class="article-heading"><a href="#How-to-Use-x2F-Test-Interface-Guide" class="headerlink" title="How to Use&#x2F;Test Interface Guide"></a>How to Use&#x2F;Test Interface Guide<a class="article-anchor" href="#How-to-Use-x2F-Test-Interface-Guide" aria-hidden="true"></a></h1><h2 id="1-I2C" class="article-heading"><a href="#1-I2C" class="headerlink" title="1) I2C"></a>1) I2C<a class="article-anchor" href="#1-I2C" aria-hidden="true"></a></h2><ul>
 <li>Use the following command to display all available I2C buses</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ i2cdetect -l</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>Use the below command to scan and list the I2C devices connected to bus 1.</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ i2cdetect -y 1</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>Similarly, Use the below command to scan and list the I2C devices connected to bus 2.</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ i2cdetect -y 2</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>Run <code>i2cdetect -l</code> to list available I2C buses. Only the available buses can be used with <code>i2cdetect -y &lt;bus_number&gt;</code>, where <code>&lt;bus_number&gt;</code> should be replaced with the correct bus number, Bus 1,2 and 7 in below case.</p>
 </blockquote>
-<p><img src="TestInterface.assets\i2c1.png"></p>
+<img src="TestInterface.assets\i2c1.png">
+
 <h2 id="2-GPIO" class="article-heading"><a href="#2-GPIO" class="headerlink" title="2) GPIO"></a>2) GPIO<a class="article-anchor" href="#2-GPIO" aria-hidden="true"></a></h2><p>This table lists the corresponding pin numbers for the CN1001 MRAA, CHIPSET, and GPIO interfaces. It provides the mapping for GPIO pins used in testing the GPIO interface,</p>
 <p><strong>For SX1509 GPIO</strong>, <strong>the assignments are:</strong></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:center">CN1001 MRAA</th>
-<th style="text-align:center">CHIPSET</th>
-<th style="text-align:center">GPIO</th>
+<th align="center">CN1001 MRAA</th>
+<th align="center">CHIPSET</th>
+<th align="center">GPIO</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">PIN7</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">16</td>
+<tbody><tr>
+<td align="center">PIN7</td>
+<td align="center">4</td>
+<td align="center">16</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN11</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">18</td>
+<td align="center">PIN11</td>
+<td align="center">4</td>
+<td align="center">18</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN13</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">19</td>
+<td align="center">PIN13</td>
+<td align="center">4</td>
+<td align="center">19</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN15</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">20</td>
+<td align="center">PIN15</td>
+<td align="center">4</td>
+<td align="center">20</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN12</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">17</td>
+<td align="center">PIN12</td>
+<td align="center">4</td>
+<td align="center">17</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN16</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">15</td>
+<td align="center">PIN16</td>
+<td align="center">4</td>
+<td align="center">15</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN18</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">3</td>
+<td align="center">PIN18</td>
+<td align="center">4</td>
+<td align="center">3</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN22</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">2</td>
+<td align="center">PIN22</td>
+<td align="center">4</td>
+<td align="center">2</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p><strong>For MCU GPIO pins, the assignments are:</strong></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:center">CN 1001 MRAA</th>
-<th style="text-align:center">CHIPSET</th>
-<th style="text-align:center">GPIO</th>
+<th align="center">CN 1001 MRAA</th>
+<th align="center">CHIPSET</th>
+<th align="center">GPIO</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">PIN29</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">0</td>
+<tbody><tr>
+<td align="center">PIN29</td>
+<td align="center">5</td>
+<td align="center">0</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN31</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">1</td>
+<td align="center">PIN31</td>
+<td align="center">5</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN32</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">2</td>
+<td align="center">PIN32</td>
+<td align="center">5</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN33</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">3</td>
+<td align="center">PIN33</td>
+<td align="center">5</td>
+<td align="center">3</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN35</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">4</td>
+<td align="center">PIN35</td>
+<td align="center">5</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN36</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">5</td>
+<td align="center">PIN36</td>
+<td align="center">5</td>
+<td align="center">5</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN37</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">6</td>
+<td align="center">PIN37</td>
+<td align="center">5</td>
+<td align="center">6</td>
 </tr>
 <tr>
-<td style="text-align:center">PIN38</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">7</td>
+<td align="center">PIN38</td>
+<td align="center">5</td>
+<td align="center">7</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p><strong>To configure GPIO pins on the expansion for input or output, follow these steps:</strong></p>
 <p>For GPIO input, use the command:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gpioget -c 4 2</span><br></pre></td></tr></table></figure>
+
 <p>For GPIO output, to set the GPIO line high, use:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gpioset -c 4 2=1</span><br></pre></td></tr></table></figure>
+
 <p>To set the GPIO line low, use:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gpioset -c 4 2=0</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\GPIO.png"></p>
+
+<img src="TestInterface.assets\GPIO.png">
+
 <h2 id="3-SPI" class="article-heading"><a href="#3-SPI" class="headerlink" title="3) SPI"></a>3) SPI<a class="article-anchor" href="#3-SPI" aria-hidden="true"></a></h2><ul>
 <li>Connect pins 19 and 21 on CN1001 header to establish a link between SPI0 RX and TX.</li>
 <li>Similarly Connect pins 27 and 28 on CN1602 header to establish a link between SPI1 RX and TX.</li>
 <li>Subsequently, run the spidev_test command to transmit data from SPI TX to RX. The command executed is as follows:</li>
 </ul>
 <h3 id="SPI0" class="article-heading"><a href="#SPI0" class="headerlink" title="SPI0"></a>SPI0<a class="article-anchor" href="#SPI0" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ spidev_test -D /dev/spidev0.0 -p <span class="string">&quot;12345&quot;</span> -v</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\spidev0.png"></p>
+
+<img src="TestInterface.assets\spidev0.png">
+
 <h3 id="SPI1" class="article-heading"><a href="#SPI1" class="headerlink" title="SPI1"></a>SPI1<a class="article-anchor" href="#SPI1" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ spidev_test -D /dev/spidev1.0 -p <span class="string">&quot;12345&quot;</span> -v</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\spidev.png"></p>
+
+<img src="TestInterface.assets\spidev.png">
+
 <h2 id="4-CAN" class="article-heading"><a href="#4-CAN" class="headerlink" title="4) CAN"></a>4) CAN<a class="article-anchor" href="#4-CAN" aria-hidden="true"></a></h2><p>To configure the <strong>CAN interface</strong>, make the following connections on the <strong>CN1602 header</strong>:</p>
 <ul>
 <li><strong>CAN0_H (Pin 13) → CAN1_H (Pin 14)</strong></li>
@@ -306,34 +310,48 @@
 <p>Open two terminal , and follow the below commands.</p>
 <p><strong>Terminal 1</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ip link <span class="built_in">set</span> can0 up <span class="built_in">type</span> can bitrate 500000 dbitrate 2000000 fd on</span><br><span class="line">$ ip link <span class="built_in">set</span> can1 up <span class="built_in">type</span> can bitrate 500000 dbitrate 2000000 fd on</span><br><span class="line">$ ifconfig can0 up</span><br><span class="line">$ ifconfig can1 up</span><br><span class="line">$ candump can0</span><br></pre></td></tr></table></figure>
+
 <p><strong>Terminal 2</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cansend can0 102<span class="comment">#8877665544332211</span></span><br></pre></td></tr></table></figure>
+
 <p>The output will appear on Terminal 1.</p>
-<p><img src="TestInterface.assets\IMG_6311.JPG"></p>
+<img src="TestInterface.assets\IMG_6311.JPG">
+
 <h2 id="5-Ethernet" class="article-heading"><a href="#5-Ethernet" class="headerlink" title="5) Ethernet"></a>5) Ethernet<a class="article-anchor" href="#5-Ethernet" aria-hidden="true"></a></h2><p>Use the command below to obtain Ethernet information, which will display details related to the Ethernet connection.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ifconfig eth0</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\ifconfig0.png"></p>
+
+<img src="TestInterface.assets\ifconfig0.png">
+
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ifconfig eth1</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\ifconfig.png"></p>
+
+<img src="TestInterface.assets\ifconfig.png">
+
 <p>The following command sends ICMP Echo Requests to a public DNS server to check internet connectivity and network latency. A response confirms that the network can reach external servers.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ping 8.8.8.8</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\ping.png"></p>
-<h2 id="6-Audio-Line-In-Line-Out" class="article-heading"><a href="#6-Audio-Line-In-Line-Out" class="headerlink" title="6) Audio(Line-In/Line-Out)"></a>6) Audio(Line-In/Line-Out)<a class="article-anchor" href="#6-Audio-Line-In-Line-Out" aria-hidden="true"></a></h2><p>The below command is used to test the audio interface by playing a specified <code>.wav</code> file through the selected audio device (<code>plughw:0,0</code>).</p>
+
+<img src="TestInterface.assets\ping.png">
+
+<h2 id="6-Audio-Line-In-x2F-Line-Out" class="article-heading"><a href="#6-Audio-Line-In-x2F-Line-Out" class="headerlink" title="6) Audio(Line-In&#x2F;Line-Out)"></a>6) Audio(Line-In&#x2F;Line-Out)<a class="article-anchor" href="#6-Audio-Line-In-x2F-Line-Out" aria-hidden="true"></a></h2><p>The below command is used to test the audio interface by playing a specified <code>.wav</code> file through the selected audio device (<code>plughw:0,0</code>).</p>
 <blockquote>
 <p>Replace <code>&lt;audiofile&gt;</code> with the desired file to check audio output.</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ aplay -D plughw:0,0 &lt;audiofile&gt;.wav</span><br></pre></td></tr></table></figure>
-<p><img src="TestInterface.assets\audio.png"></p>
+
+<img src="TestInterface.assets\audio.png">
+
 <h2 id="7-SD" class="article-heading"><a href="#7-SD" class="headerlink" title="7) SD"></a>7) SD<a class="article-anchor" href="#7-SD" aria-hidden="true"></a></h2><p>To confirm the presence of the SD card,Insert the SD card in board, then power on the board and execute the command below.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ lsblk</span><br></pre></td></tr></table></figure>
-<p>The output should show the connected block devices. Typically, an SD card is recognized as a device such as /dev/mmcblk0, /dev/sdX, or similar.</p>
-<p><img src="TestInterface.assets\sd.png"></p>
+
+<p>The output should show the connected block devices. Typically, an SD card is recognized as a device such as &#x2F;dev&#x2F;mmcblk0, &#x2F;dev&#x2F;sdX, or similar.</p>
+<img src="TestInterface.assets\sd.png">
+
 <h2 id="8-Camera-USB" class="article-heading"><a href="#8-Camera-USB" class="headerlink" title="8) Camera(USB)"></a>8) Camera(USB)<a class="article-anchor" href="#8-Camera-USB" aria-hidden="true"></a></h2><p>The USB webcam was evaluated using the following command</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,width=1280,height=720 ! waylandsink.</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>Here “X” corresponds to camera device connected to the module .</p>
 </blockquote>
-<p><img src="TestInterface.assets\IMG_6306.jpg" style="zoom:45%;"></p>
+<img src="TestInterface.assets\IMG_6306.jpg" style="zoom:45%;">
 
               </div>
               <footer class="article-footer">
@@ -347,7 +365,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Use-Test-Interface-Guide"><span class="toc-text">How to Use&#x2F;Test Interface Guide</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-I2C"><span class="toc-text">1) I2C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-GPIO"><span class="toc-text">2) GPIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SPI"><span class="toc-text">3) SPI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI0"><span class="toc-text">SPI0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI1"><span class="toc-text">SPI1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CAN"><span class="toc-text">4) CAN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Ethernet"><span class="toc-text">5) Ethernet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Audio-Line-In-Line-Out"><span class="toc-text">6) Audio(Line-In&#x2F;Line-Out)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-SD"><span class="toc-text">7) SD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Camera-USB"><span class="toc-text">8) Camera(USB)</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Use-x2F-Test-Interface-Guide"><span class="toc-text">How to Use&#x2F;Test Interface Guide</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-I2C"><span class="toc-text">1) I2C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-GPIO"><span class="toc-text">2) GPIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SPI"><span class="toc-text">3) SPI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI0"><span class="toc-text">SPI0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI1"><span class="toc-text">SPI1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CAN"><span class="toc-text">4) CAN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Ethernet"><span class="toc-text">5) Ethernet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Audio-Line-In-x2F-Line-Out"><span class="toc-text">6) Audio(Line-In&#x2F;Line-Out)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-SD"><span class="toc-text">7) SD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Camera-USB"><span class="toc-text">8) Camera(USB)</span></a></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -356,7 +374,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="index.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link current">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="index.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link current">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link">Flashing Android</a></details></strong>
   </div>
 </aside>
     </div>
@@ -414,7 +432,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="index.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link current">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="index.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link current">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link">Flashing Android</a></details></strong>
     
   </div>
   
