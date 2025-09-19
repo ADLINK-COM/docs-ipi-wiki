@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/IpmiSupportedCommandLineList.html">
+  <!-- Alternative links -->
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  -->
+
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/com-express/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+  jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+  });
+
+  $('button').addClass('btn-primary').text('Switch to Orange Tab');
+  $('button').click(function(){
+        $('#tabs a[href=#orange]').tab('show');
+  });
+
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+});
+
+$('button').addClass('btn-primary').text('Switch to Orange Tab');
+$('button').click(function(){
+      $('#tabs a[href=#ava]').tab('show');
+});
+
+</script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+ <!-- Hotjar Tracking Code for https://ipi.wiki 
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  -->
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/com-express/css/navy.css">
+
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/com-express//css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Support IPMI Command List-A1 Applications Commands IPMI Device Commands    Net Function Command Command Name M&#x2F;O     0x06 0x01 Get Device ID M   0x06 0x02 Cold Reset O   0x06 0x03 Warm Reset O   0x06">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type7-rv-ipmi/IpmiSupportedCommandLineList.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Support IPMI Command List-A1 Applications Commands IPMI Device Commands    Net Function Command Command Name M&#x2F;O     0x06 0x01 Get Device ID M   0x06 0x02 Cold Reset O   0x06 0x03 Warm Reset O   0x06">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-09-19T02:29:46.241Z">
+<meta property="article:modified_time" content="2025-09-19T02:29:46.241Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/com-express/com-express/" class="main-nav-link  header">menu.comexpress</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h2 id="Support-IPMI-Command-List-A1" class="article-heading">Support IPMI Command List-A1<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#Support-IPMI-Command-List-A1'}, '*');" class="article-anchor" href="#Support-IPMI-Command-List-A1" aria-hidden="true"></a></h2>
+<h3 id="Applications-Commands" class="article-heading">Applications Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#Applications-Commands'}, '*');" class="article-anchor" href="#Applications-Commands" aria-hidden="true"></a></h3>
+<h4 id="IPMI-Device-Commands" class="article-heading">IPMI Device Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#IPMI-Device-Commands'}, '*');" class="article-anchor" href="#IPMI-Device-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x06</td>
+<td>0x01</td>
+<td>Get Device ID</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x02</td>
+<td>Cold Reset</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x03</td>
+<td>Warm Reset</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x04</td>
+<td>Get Self Test Results</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x06</td>
+<td>Set ACPI Power State</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x07</td>
+<td>Get ACPI Power State</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x08</td>
+<td>Get Device GUID</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x09</td>
+<td>Get NetFn Support</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x0a</td>
+<td>Get Command Support</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x0b</td>
+<td>Get Command Sub-Function Support</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x0c</td>
+<td>Get Configurable Commands</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x0d</td>
+<td>Get Configurable Command Sub-functions</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x60</td>
+<td>Set Command Enables</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x61</td>
+<td>Get Command Enables</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+<h4 id="IPMI-Device-Commands-2" class="article-heading">IPMI Device Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#IPMI-Device-Commands-2'}, '*');" class="article-anchor" href="#IPMI-Device-Commands-2" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x06</td>
+<td>0x22</td>
+<td>Set Watchdog Timer</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x24</td>
+<td>Get Watchdog Timer</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x25</td>
+<td>Reset Watchdog Timer</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h4 id="BMC-Device-and-Messaging-Commands" class="article-heading">BMC Device and Messaging Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#BMC-Device-and-Messaging-Commands'}, '*');" class="article-anchor" href="#BMC-Device-and-Messaging-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x06</td>
+<td>0x2E</td>
+<td>Set BMC Global Enables</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x2F</td>
+<td>Get BMC Global Enables</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x30</td>
+<td>Clear Message Flags</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x31</td>
+<td>Get Message Flags</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x33</td>
+<td>Get Message</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x34</td>
+<td>Send Message</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x37</td>
+<td>Get System GUID</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x38</td>
+<td>Get Channel Authentication Capabilities</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x39</td>
+<td>Get Session Challenge</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x3A</td>
+<td>Activate Session</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x3B</td>
+<td>Set Session Privilege Level</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x3C</td>
+<td>Close Session</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x3D</td>
+<td>Get Session Info</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x40</td>
+<td>Set Channel Access</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x41</td>
+<td>Get Channel Access</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x42</td>
+<td>Get Channel Info</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x43</td>
+<td>Set User Access</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x44</td>
+<td>Get User Access</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x45</td>
+<td>Set User Name</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x46</td>
+<td>Get User Name</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x47</td>
+<td>Set User Password</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x48</td>
+<td>Activate Payload</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x49</td>
+<td>Deactivate Payload</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x4C</td>
+<td>Set User Payload Access</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x4D</td>
+<td>Get User Payload Access</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x50</td>
+<td>Get Channel OEM</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>0x52</td>
+<td>Master Write-Read</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Chassis-Commands" class="article-heading">Chassis Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#Chassis-Commands'}, '*');" class="article-anchor" href="#Chassis-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>0x00</td>
+<td>Get Chassis Capabilities</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x01</td>
+<td>Get Chassis Status</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x02</td>
+<td>Chassis Control</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x03</td>
+<td>Chassis Identify</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x04</td>
+<td>Set Chassis Capabilities</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x05</td>
+<td>Set Power Restore Policy</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x06</td>
+<td>Get System Restart Cause</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x08</td>
+<td>Set System Boot Options</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x09</td>
+<td>Get System Boot Options</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x00</td>
+<td>0x0F</td>
+<td>Get POH Counter (Power On Hour)</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Sensor-Event-Commands" class="article-heading">Sensor Event Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#Sensor-Event-Commands'}, '*');" class="article-anchor" href="#Sensor-Event-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x04</td>
+<td>0x00</td>
+<td>Set Event Receiver</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x01</td>
+<td>Get Event Receiver</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x02</td>
+<td>Platform Event Message</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x10</td>
+<td>Get PEF Capabilities</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x12</td>
+<td>Set PEF Configuration Parameters</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x13</td>
+<td>Get PEF Configuration Parameters</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x14</td>
+<td>Set Last Processed Event ID</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x15</td>
+<td>Get Last Processed Event ID</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x20</td>
+<td>Get Device SDR Info</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x21</td>
+<td>Get Device SDR</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x22</td>
+<td>Reserve Device SDR Repository</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x23</td>
+<td>Get Sensor Reading Factors</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x24</td>
+<td>Set Sensor Hysteresis</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x25</td>
+<td>Get Sensor Hysteresis</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x26</td>
+<td>Set Sensor Thresholds</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x27</td>
+<td>Get Sensor Thresholds</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x28</td>
+<td>Set Sensor Event Enable</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x29</td>
+<td>Get Sensor Event Enable</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x2a</td>
+<td>Re-arm Sesnor Event</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x2b</td>
+<td>Get Sensor Event Status</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>0x2d</td>
+<td>Get Sesnor Reading</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+<h4 id="FRU-Information-Commands" class="article-heading">FRU Information Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#FRU-Information-Commands'}, '*');" class="article-anchor" href="#FRU-Information-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0a</td>
+<td>0x10</td>
+<td>Get FRU Inventory Area Info</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x11</td>
+<td>Read FRU Data</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x12</td>
+<td>Write FRU Data</td>
+<td>M</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="SDR-Repository-Commands" class="article-heading">SDR Repository Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#SDR-Repository-Commands'}, '*');" class="article-anchor" href="#SDR-Repository-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0a</td>
+<td>0x20</td>
+<td>Get SDR Repository Info</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x22</td>
+<td>Reserve SDR Repository</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x23</td>
+<td>Get SDR</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x25</td>
+<td>Partial Add SDR</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h4 id="SEL-Device-Commands" class="article-heading">SEL Device Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#SEL-Device-Commands'}, '*');" class="article-anchor" href="#SEL-Device-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0a</td>
+<td>0x40</td>
+<td>Get SEL Info</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x41</td>
+<td>Get SEL Allocation Info</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x43</td>
+<td>Get SEL Entry</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x44</td>
+<td>Add SEL Entry</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x45</td>
+<td>Partial Add SEL Entry</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x46</td>
+<td>Delete SEL Entry</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x47</td>
+<td>Clear SEL</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x48</td>
+<td>Get SEL Time</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0a</td>
+<td>0x49</td>
+<td>Set SEL Time</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h4 id="IPM-LAN-Command" class="article-heading">IPM LAN Command<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#IPM-LAN-Command'}, '*');" class="article-anchor" href="#IPM-LAN-Command" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0c</td>
+<td>0x01</td>
+<td>Set LAN Configuration Parameters</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0x0c</td>
+<td>0x02</td>
+<td>Get LAN Configuration Parameters</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Serial-Over-LAN-Commands" class="article-heading">Serial Over LAN Commands<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#Serial-Over-LAN-Commands'}, '*');" class="article-anchor" href="#Serial-Over-LAN-Commands" aria-hidden="true"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Net Function</th>
+<th>Command</th>
+<th>Command Name</th>
+<th>M/O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0c</td>
+<td>0x21</td>
+<td>Set SOL Configuration Parameters</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0x0c</td>
+<td>0x22</td>
+<td>Get SOL Configuration Parameters</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h2 id="Support-IPMI-OEM-Command-List" class="article-heading">Support IPMI OEM Command List<a onclick="parent.postMessage( {msg: '?page=IpmiSupportedCommandLineList.html#Support-IPMI-OEM-Command-List'}, '*');" class="article-anchor" href="#Support-IPMI-OEM-Command-List" aria-hidden="true"></a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command Name</strong></th>
+<th><strong>NetFn</strong></th>
+<th><strong>CMD</strong></th>
+<th><strong>Data</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set status of UID LED</td>
+<td>0x3c</td>
+<td>0x00</td>
+<td>Request:<br>Data[0]<br>0x00, disable UID LED<br>0x01, enable UID LED</td>
+<td></td>
+</tr>
+<tr>
+<td>Get status of UID LED</td>
+<td>0x3c</td>
+<td>0x01</td>
+<td>Response:<br>Data[1]<br>0x00, disable<br>0x01, enable</td>
+<td></td>
+</tr>
+<tr>
+<td>Set fan speed by speed percentage</td>
+<td>0x3c</td>
+<td>0x10</td>
+<td><strong>Request:</strong><br> Data[0]<br> 0x00, FAN1<br> 0x01, FAN2<br> 0x02, FAN3<br> 0x03, FAN4<br> Data[2]<br> 0x00-0x64</td>
+<td></td>
+</tr>
+<tr>
+<td>Launch WAKE0# signal</td>
+<td>0x3c</td>
+<td>0xf0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Get ID of PCB</td>
+<td>0x3c</td>
+<td>0xf1</td>
+<td>Response:<br> Data[1], PCB ID0<br> Data[2], PCB ID1<br> Data[3], PCB ID2</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO direction set</td>
+<td>0x3c</td>
+<td>0x20</td>
+<td>Request:<br> Data[0]: GPIO number<br> Data[1]: GPIO direction<br> 0x00: input<br> 0x01: output<br> <br> Response:<br> Error code,<br> 0x01: GPIO no support</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO direction get</td>
+<td>0x3c</td>
+<td>0x21</td>
+<td>Request:<br> Data[0]: GPIO number<br> <br> Response:<br> Data[1]: GPIO direction<br> 0x00: input<br> 0x01: output<br> <br> Error code,<br> 0x01: GPIO no support</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO data set</td>
+<td>0x3c</td>
+<td>0x22</td>
+<td>Request:<br> Data[0]: GPIO number<br> Data[1]: GPIO data<br> 0x00: low<br> 0x01: high<br> <br> Response:<br> Error code,<br> 0x01: GPIO no support</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO data get</td>
+<td>0x3c</td>
+<td>0x23</td>
+<td>Request:<br> Data[0]: GPIO number<br> <br> Response:<br> Data[1]: GPIO data<br> 0x00: low<br> 0x01: high<br> <br> Error code,<br> 0x01: GPIO no support</td>
+<td></td>
+</tr>
+<tr>
+<td>I2C set and get</td>
+<td>0x3c</td>
+<td>0xf2</td>
+<td>Request:<br> Data[0]: Bus number<br> Data[1]: Slave address (8 bits)<br> Data[2]: Read data count: maximum count is 255. For write operations, Data[2] = 0.<br> Data[3-N]: Written data; maximum data size is 64 bytes.<br> <br> Response:<br> Data[1-N]: Read data</td>
+<td>Bus number<br> I2C1 : 0x00<br> I2C2: 0x01 <br> I2C5: 0x04 <br> I2C7: 0x06</td>
+</tr>
+</tbody>
+</table>
+<p>GPIO Mapping Table</p>
+<p>Default GPO :</p>
+<table>
+<thead>
+<tr>
+<th>GPIO Output</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pin#</td>
+<td>Name</td>
+<td>GPIO Number</td>
+</tr>
+<tr>
+<td>40</td>
+<td>GPIO21_PASSTHRU2_OUT</td>
+<td>123</td>
+</tr>
+<tr>
+<td>46</td>
+<td>GPIO25</td>
+<td>10</td>
+</tr>
+<tr>
+<td>61</td>
+<td>GPIO37_byDICATOR#</td>
+<td>151</td>
+</tr>
+<tr>
+<td>66</td>
+<td>GPIO38</td>
+<td>54</td>
+</tr>
+<tr>
+<td>74</td>
+<td>GPIO44</td>
+<td>100</td>
+</tr>
+<tr>
+<td>76</td>
+<td>GPIO45_PASSTHRU1_OUT</td>
+<td>121</td>
+</tr>
+<tr>
+<td>79</td>
+<td>GPIO47</td>
+<td>195</td>
+</tr>
+<tr>
+<td>81</td>
+<td>GPIO49</td>
+<td>11</td>
+</tr>
+<tr>
+<td>83</td>
+<td>WDTRST2_GPIO51</td>
+<td>193</td>
+</tr>
+<tr>
+<td>87</td>
+<td>GPIO55</td>
+<td>146</td>
+</tr>
+<tr>
+<td>89</td>
+<td>GPIO57</td>
+<td>170</td>
+</tr>
+<tr>
+<td>91</td>
+<td>WDTRST1_GPIO59</td>
+<td>192</td>
+</tr>
+<tr>
+<td>94</td>
+<td>TACH8_GPIO62</td>
+<td>136</td>
+</tr>
+<tr>
+<td>95</td>
+<td>GPIO63</td>
+<td>108</td>
+</tr>
+<tr>
+<td>96</td>
+<td>TACH9_GPIO64</td>
+<td>137</td>
+</tr>
+<tr>
+<td>98</td>
+<td>TACH10_GPIO65</td>
+<td>138</td>
+</tr>
+<tr>
+<td>99</td>
+<td>RESERVED_GPIO67</td>
+<td>106</td>
+</tr>
+<tr>
+<td>100</td>
+<td>TACH11_GPIO66</td>
+<td>139</td>
+</tr>
+<tr>
+<td>102</td>
+<td>TACH12_GPIO68</td>
+<td>140</td>
+</tr>
+<tr>
+<td>104</td>
+<td>TACH13_GPIO70</td>
+<td>141</td>
+</tr>
+<tr>
+<td>105</td>
+<td>GPIO73</td>
+<td>13</td>
+</tr>
+<tr>
+<td>106</td>
+<td>TACH14_GPIO72</td>
+<td>142</td>
+</tr>
+<tr>
+<td>107</td>
+<td>GPIO75</td>
+<td>51</td>
+</tr>
+<tr>
+<td>108</td>
+<td>TACH15_GPIO74</td>
+<td>143</td>
+</tr>
+<tr>
+<td>113</td>
+<td>GPIO77</td>
+<td>149</td>
+</tr>
+<tr>
+<td>115</td>
+<td>GPIO79</td>
+<td>148</td>
+</tr>
+<tr>
+<td>117</td>
+<td>GPIO81</td>
+<td>8</td>
+</tr>
+<tr>
+<td>138</td>
+<td>GPIO98</td>
+<td>55</td>
+</tr>
+<tr>
+<td>140</td>
+<td>GPIO99</td>
+<td>105</td>
+</tr>
+<tr>
+<td>154</td>
+<td>GPIO106</td>
+<td>64</td>
+</tr>
+<tr>
+<td>156</td>
+<td>GPIO107</td>
+<td>66</td>
+</tr>
+<tr>
+<td>193</td>
+<td>GPIO113_I2C15SCL</td>
+<td>60</td>
+</tr>
+<tr>
+<td>195</td>
+<td>GPIO115_I2C15SDA</td>
+<td>61</td>
+</tr>
+<tr>
+<td>209</td>
+<td>GPIO123_USB2BVBUSSNS</td>
+<td>49</td>
+</tr>
+<tr>
+<td>211</td>
+<td>GPIO125_USB2AVBUSSNS</td>
+<td>48</td>
+</tr>
+<tr>
+<td>213</td>
+<td>GPIO126_USB2APWREN</td>
+<td>107</td>
+</tr>
+</tbody>
+</table>
+<p>Default GPI</p>
+<table>
+<thead>
+<tr>
+<th>GPIO Input</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pin#</td>
+<td>Name</td>
+<td>GPIO Number</td>
+</tr>
+<tr>
+<td>68</td>
+<td>GPIO39</td>
+<td>97</td>
+</tr>
+<tr>
+<td>70</td>
+<td>GPIO40</td>
+<td>98</td>
+</tr>
+<tr>
+<td>72</td>
+<td>GPIO42</td>
+<td>99</td>
+</tr>
+<tr>
+<td>77</td>
+<td>PWRGD</td>
+<td>172</td>
+</tr>
+<tr>
+<td>85</td>
+<td>GPIO53</td>
+<td>12</td>
+</tr>
+<tr>
+<td>101</td>
+<td>GPIO69</td>
+<td>168</td>
+</tr>
+<tr>
+<td>103</td>
+<td>GPIO71</td>
+<td>169</td>
+</tr>
+<tr>
+<td>109</td>
+<td>GPIO76</td>
+<td>50</td>
+</tr>
+<tr>
+<td>119</td>
+<td>GPIO83</td>
+<td>9</td>
+</tr>
+<tr>
+<td>121</td>
+<td>GPIO85_PASSTHRU1_by</td>
+<td>120</td>
+</tr>
+<tr>
+<td>129</td>
+<td>GPIO91_I2C14SCL</td>
+<td>6</td>
+</tr>
+<tr>
+<td>131</td>
+<td>GPIO93_I2C14SDA</td>
+<td>7</td>
+</tr>
+<tr>
+<td>135</td>
+<td>GPIO95_I2C16SCL</td>
+<td>62</td>
+</tr>
+<tr>
+<td>137</td>
+<td>GPIO97_I2C16SDA</td>
+<td>63</td>
+</tr>
+<tr>
+<td>144</td>
+<td>GPIO102_UART3TX</td>
+<td>92</td>
+</tr>
+<tr>
+<td>146</td>
+<td>GPIO103_UART3RX</td>
+<td>93</td>
+</tr>
+<tr>
+<td>148</td>
+<td>GPIO104_UART4RX</td>
+<td>15</td>
+</tr>
+<tr>
+<td>150</td>
+<td>GPIO105_UART4TX</td>
+<td>14</td>
+</tr>
+<tr>
+<td>158</td>
+<td>GPIO108</td>
+<td>67</td>
+</tr>
+<tr>
+<td>160</td>
+<td>GPIO109_PASSTHRU2_by</td>
+<td>122</td>
+</tr>
+<tr>
+<td>252</td>
+<td>GPI0_ADC8</td>
+<td>160</td>
+</tr>
+<tr>
+<td>254</td>
+<td>GPI1_ADC9</td>
+<td>161</td>
+</tr>
+<tr>
+<td>255</td>
+<td>GPI3_ADC11</td>
+<td>163</td>
+</tr>
+<tr>
+<td>256</td>
+<td>GPI2_ADC10</td>
+<td>162</td>
+</tr>
+<tr>
+<td>257</td>
+<td>GPI5_ADC13</td>
+<td>165</td>
+</tr>
+<tr>
+<td>258</td>
+<td>GPI4_ADC12</td>
+<td>164</td>
+</tr>
+<tr>
+<td>259</td>
+<td>GPI7_ADC15</td>
+<td>167</td>
+</tr>
+<tr>
+<td>260</td>
+<td>GPI6_ADC14</td>
+<td>166</td>
+</tr>
+</tbody>
+</table>
+<p>I2C Mapping Table</p>
+<table>
+<thead>
+<tr>
+<th>I2C Name</th>
+<th>Bus Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I2C1</td>
+<td>0</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C2</td>
+<td>1</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C4</td>
+<td>3</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C5</td>
+<td>4</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C7</td>
+<td>6</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C9</td>
+<td>8</td>
+<td>TMP102: slave 0x49 (7 bits)</td>
+</tr>
+<tr>
+<td>I2C10</td>
+<td>9</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C12</td>
+<td>11</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>I2C13</td>
+<td>12</td>
+<td>Reserved</td>
+</tr>
+</tbody>
+</table>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2025-09-19T02:29:46.241Z" itemprop="dateModified">Last updated: 2025-09-19</time>
+                <a href="RunBmcWebUI.html" class="article-footer-prev" title="RunBMC WebUI"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="UbuntuImage.html" class="article-footer-next" title="Ubuntu"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Support-IPMI-Command-List-A1"><span class="toc-text">Support IPMI Command List-A1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Applications-Commands"><span class="toc-text">Applications Commands</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IPMI-Device-Commands"><span class="toc-text">IPMI Device Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IPMI-Device-Commands-2"><span class="toc-text">IPMI Device Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BMC-Device-and-Messaging-Commands"><span class="toc-text">BMC Device and Messaging Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Chassis-Commands"><span class="toc-text">Chassis Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sensor-Event-Commands"><span class="toc-text">Sensor Event Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#FRU-Information-Commands"><span class="toc-text">FRU Information Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SDR-Repository-Commands"><span class="toc-text">SDR Repository Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SEL-Device-Commands"><span class="toc-text">SEL Device Commands</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IPM-LAN-Command"><span class="toc-text">IPM LAN Command</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Serial-Over-LAN-Commands"><span class="toc-text">Serial Over LAN Commands</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Support-IPMI-OEM-Command-List"><span class="toc-text">Support IPMI OEM Command List</span></a></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="sidebar-link">10G Ethernet Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>IPMI Software Support</summary><a href="RunBmcWebUI.html" class="sidebar-link first">RunBMC WebUI</a><a href="IpmiSupportedCommandLineList.html" class="sidebar-link current">IPMI Supported Command List</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details open></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="OtherSoftware10GEthernetEnable.html" class="sidebar-link first">10G Ethernet Card</a></details open></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div>
+    <div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/com-express/com-express/" class="mobile-nav-link  header">menu.comexpress</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="mobile-nav-link">10G Ethernet Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>IPMI Software Support</summary><a href="RunBmcWebUI.html" class="mobile-nav-link first">RunBMC WebUI</a><a href="IpmiSupportedCommandLineList.html" class="mobile-nav-link current">IPMI Supported Command List</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="OtherSoftware10GEthernetEnable.html" class="mobile-nav-link first">10G Ethernet Card</a></details open></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/com-express/js/lang_select.js"></script>
+
+
+<script src="/com-express/js/toc.js"></script>
+
+
+<script src="/com-express/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html> 

@@ -170,19 +170,19 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 class="article-heading">Interfaces<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
+                <h1 class="article-heading">Interfaces<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#undefined'}, '*');" class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
 <p>Two main controllers on the Dev Kit, CPU and BMC. Interfaces such as USB, PCIe, SATA are offered by CPU, interfaces such as GPIO, I2C, UART are offered by BMC and/or CPU. Information below will indicates the main user interfaces come from BMC and CPU separately</p>
 <br>
-<h2 id="Interfaces-BMC" class="article-heading">Interfaces - BMC<a class="article-anchor" href="#Interfaces-BMC" aria-hidden="true"></a></h2>
+<h2 id="Interfaces-BMC" class="article-heading">Interfaces - BMC<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#Interfaces-BMC'}, '*');" class="article-anchor" href="#Interfaces-BMC" aria-hidden="true"></a></h2>
 <img src="UserInterfaces.assets/a1-bmc-interface.png">
 <p>Some of interfaces will be accessed either through IPMItool (command line) or WebUI, get detail from <a href="BmcIntroduction.html"><strong>BMC Introduction</strong></a> &amp; <strong>IPMI Software Support</strong></p>
 <br>
-<h3 id="mgt-LAN" class="article-heading">mgt. LAN<a class="article-anchor" href="#mgt-LAN" aria-hidden="true"></a></h3>
+<h3 id="mgt-LAN" class="article-heading">mgt. LAN<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#mgt-LAN'}, '*');" class="article-anchor" href="#mgt-LAN" aria-hidden="true"></a></h3>
 <ul>
 <li>Remote management usage, up to 1000Mbit/s speed</li>
 </ul>
 <br>
-<h3 id="IPMB" class="article-heading">IPMB<a class="article-anchor" href="#IPMB" aria-hidden="true"></a></h3>
+<h3 id="IPMB" class="article-heading">IPMB<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#IPMB'}, '*');" class="article-anchor" href="#IPMB" aria-hidden="true"></a></h3>
 <ul>
 <li>
 <p>IPMB for expansion purpose, at 2.54 mm pitch pin header</p>
@@ -190,7 +190,7 @@ $('button').click(function(){
 </li>
 </ul>
 <br>
-<h3 id="BMC-DBG" class="article-heading">BMC_DBG<a class="article-anchor" href="#BMC-DBG" aria-hidden="true"></a></h3>
+<h3 id="BMC-DBG" class="article-heading">BMC_DBG<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#BMC-DBG'}, '*');" class="article-anchor" href="#BMC-DBG" aria-hidden="true"></a></h3>
 <ul>
 <li>BMC debug port (also called as UART5, CONSOLE)</li>
 </ul>
@@ -219,7 +219,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="COM-Ports" class="article-heading">COM Ports<a class="article-anchor" href="#COM-Ports" aria-hidden="true"></a></h3>
+<h3 id="COM-Ports" class="article-heading">COM Ports<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#COM-Ports'}, '*');" class="article-anchor" href="#COM-Ports" aria-hidden="true"></a></h3>
 <ul>
 <li>UART1: BMC UART port_1 at DB9 connector. an adapter will be required for UART1 port</li>
 </ul>
@@ -313,7 +313,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="I2C" class="article-heading">I2C<a class="article-anchor" href="#I2C" aria-hidden="true"></a></h3>
+<h3 id="I2C" class="article-heading">I2C<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#I2C'}, '*');" class="article-anchor" href="#I2C" aria-hidden="true"></a></h3>
 <ul>
 <li>I2C1, I2C2, I2C5, I2C7 are for user usage via IPMI OEM command. located at separated 2.54 mm pitch pin headers</li>
 </ul>
@@ -344,7 +344,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="General-Purpose-Input-Output" class="article-heading">General Purpose Input/Output<a class="article-anchor" href="#General-Purpose-Input-Output" aria-hidden="true"></a></h3>
+<h3 id="General-Purpose-Input-Output" class="article-heading">General Purpose Input/Output<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#General-Purpose-Input-Output'}, '*');" class="article-anchor" href="#General-Purpose-Input-Output" aria-hidden="true"></a></h3>
 <ul>
 <li>Several GPIO for user usage are located on GPI, GPIO, I2C/GPIO, UART3, UART4 pin headers (2.54 mm pitch)</li>
 <li>IPMI OEM commands are created for the setting of input or output direction, for the setting of high level or low level</li>
@@ -547,7 +547,7 @@ $('button').click(function(){
 </table>
 <p><strong>Note</strong> : pin 2-3 are set as GPIO usage and also can be accessed through OEM command</p>
 <br>
-<h3 id="FAN" class="article-heading">FAN<a class="article-anchor" href="#FAN" aria-hidden="true"></a></h3>
+<h3 id="FAN" class="article-heading">FAN<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#FAN'}, '*');" class="article-anchor" href="#FAN" aria-hidden="true"></a></h3>
 <ul>
 <li>4 FAN at 4-pin FAN connector (FAN0, FAN1, FAN2, FAN3) for system level usage</li>
 </ul>
@@ -631,7 +631,7 @@ $('button').click(function(){
 </table>
 <p><strong>Note</strong> : pin 1, 3 are set as PWM usage. pin 2, 4 and 5-12 are set as TACH. all can be accessed through OEM command</p>
 <br>
-<h3 id="BMC-LED" class="article-heading">BMC_LED<a class="article-anchor" href="#BMC-LED" aria-hidden="true"></a></h3>
+<h3 id="BMC-LED" class="article-heading">BMC_LED<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#BMC-LED'}, '*');" class="article-anchor" href="#BMC-LED" aria-hidden="true"></a></h3>
 <ul>
 <li>BMC_HB indicates the hardware initiation of the BMC chip (Blinking means ready)</li>
 <li>BMC_LED indicates the firmware initiation of the BMC chip (Always on means ready)</li>
@@ -639,9 +639,9 @@ $('button').click(function(){
 </ul>
 <img src="UserInterfaces.assets/bmc-led-hb.png" style="width: 50%;">
 <br>
-<h2 id="Interfaces-CPU" class="article-heading">Interfaces - CPU<a class="article-anchor" href="#Interfaces-CPU" aria-hidden="true"></a></h2>
+<h2 id="Interfaces-CPU" class="article-heading">Interfaces - CPU<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#Interfaces-CPU'}, '*');" class="article-anchor" href="#Interfaces-CPU" aria-hidden="true"></a></h2>
 <img src="UserInterfaces.assets/cpu-interface.png">
-<h3 id="PCIe-Lane" class="article-heading">PCIe Lane<a class="article-anchor" href="#PCIe-Lane" aria-hidden="true"></a></h3>
+<h3 id="PCIe-Lane" class="article-heading">PCIe Lane<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#PCIe-Lane'}, '*');" class="article-anchor" href="#PCIe-Lane" aria-hidden="true"></a></h3>
 <ul>
 <li>
 <p>One PCIex8 lanes at a x16 slot, up to Gen4</p>
@@ -655,7 +655,7 @@ $('button').click(function(){
 </li>
 </ul>
 <br>
-<h3 id="USB-LAN" class="article-heading">USB &amp; LAN<a class="article-anchor" href="#USB-LAN" aria-hidden="true"></a></h3>
+<h3 id="USB-LAN" class="article-heading">USB &amp; LAN<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#USB-LAN'}, '*');" class="article-anchor" href="#USB-LAN" aria-hidden="true"></a></h3>
 <ul>
 <li>One Ethernet and Up to two USB at Rear I/O 3-in-1 combo connector
 <ul>
@@ -670,7 +670,7 @@ $('button').click(function(){
 </li>
 </ul>
 <br>
-<h3 id="COM-Ports-2" class="article-heading">COM Ports<a class="article-anchor" href="#COM-Ports-2" aria-hidden="true"></a></h3>
+<h3 id="COM-Ports-2" class="article-heading">COM Ports<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#COM-Ports-2'}, '*');" class="article-anchor" href="#COM-Ports-2" aria-hidden="true"></a></h3>
 <ul>
 <li>
 <p>COM0: Module UART port_0 at DB9 connector</p>
@@ -724,7 +724,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="FAN-2" class="article-heading">FAN<a class="article-anchor" href="#FAN-2" aria-hidden="true"></a></h3>
+<h3 id="FAN-2" class="article-heading">FAN<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#FAN-2'}, '*');" class="article-anchor" href="#FAN-2" aria-hidden="true"></a></h3>
 <ul>
 <li>1 FAN at 4-pin FAN connector (FAN_COMe) for CPU usage</li>
 </ul>
@@ -755,7 +755,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="I2C-SMB" class="article-heading">I2C &amp; SMB<a class="article-anchor" href="#I2C-SMB" aria-hidden="true"></a></h3>
+<h3 id="I2C-SMB" class="article-heading">I2C &amp; SMB<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#I2C-SMB'}, '*');" class="article-anchor" href="#I2C-SMB" aria-hidden="true"></a></h3>
 <ul>
 <li>I2C at pin header (2.54 mm pitch)</li>
 </ul>
@@ -816,7 +816,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="General-Purpose-Input-Output-2" class="article-heading">General Purpose Input/Output<a class="article-anchor" href="#General-Purpose-Input-Output-2" aria-hidden="true"></a></h3>
+<h3 id="General-Purpose-Input-Output-2" class="article-heading">General Purpose Input/Output<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#General-Purpose-Input-Output-2'}, '*');" class="article-anchor" href="#General-Purpose-Input-Output-2" aria-hidden="true"></a></h3>
 <ul>
 <li>8 GPIO at pin header (2.54 mm pitch)</li>
 </ul>
@@ -857,7 +857,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="Front-Panel" class="article-heading">Front Panel<a class="article-anchor" href="#Front-Panel" aria-hidden="true"></a></h3>
+<h3 id="Front-Panel" class="article-heading">Front Panel<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#Front-Panel'}, '*');" class="article-anchor" href="#Front-Panel" aria-hidden="true"></a></h3>
 <table>
 <thead>
 <tr>
@@ -931,7 +931,7 @@ $('button').click(function(){
 </tbody>
 </table>
 <br>
-<h3 id="10G-Ethernet-Card" class="article-heading">10G Ethernet Card<a class="article-anchor" href="#10G-Ethernet-Card" aria-hidden="true"></a></h3>
+<h3 id="10G-Ethernet-Card" class="article-heading">10G Ethernet Card<a onclick="parent.postMessage( {msg: '?page=UserInterfaces.html#10G-Ethernet-Card'}, '*');" class="article-anchor" href="#10G-Ethernet-Card" aria-hidden="true"></a></h3>
 <ul>
 <li>
 <p>An optional feature depends on the configuration you ordered (with or without 10GbE adapter card)</p>
@@ -965,7 +965,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link current">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="sidebar-link">10G Ethernet Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="sidebar-link first">10G Ethernet Card</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link current">Interfaces</a><a href="Installation.html" class="sidebar-link">Installation</a><a href="Setup.html" class="sidebar-link">Setup</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="sidebar-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="sidebar-link">10G Ethernet Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>IPMI Software Support</summary><a href="RunBmcWebUI.html" class="sidebar-link first">RunBMC WebUI</a><a href="IpmiSupportedCommandLineList.html" class="sidebar-link">IPMI Supported Command List</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details open></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="OtherSoftware10GEthernetEnable.html" class="sidebar-link first">10G Ethernet Card</a></details open></strong>
   </div>
 </aside>
     </div>
@@ -1021,7 +1021,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link current">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="mobile-nav-link">10G Ethernet Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="Othersoftware-10g-ethernet-enable.html" class="mobile-nav-link first">10G Ethernet Card</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link current">Interfaces</a><a href="Installation.html" class="mobile-nav-link">Installation</a><a href="Setup.html" class="mobile-nav-link">Setup</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="BmcIntroduction.html" class="mobile-nav-link">BMC Introduction</a><a href="10GEthernetCardIntroduction.html" class="mobile-nav-link">10G Ethernet Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>IPMI Software Support</summary><a href="RunBmcWebUI.html" class="mobile-nav-link first">RunBMC WebUI</a><a href="IpmiSupportedCommandLineList.html" class="mobile-nav-link">IPMI Supported Command List</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="OtherSoftware10GEthernetEnable.html" class="mobile-nav-link first">10G Ethernet Card</a></details open></strong>
     
   </div>
   
