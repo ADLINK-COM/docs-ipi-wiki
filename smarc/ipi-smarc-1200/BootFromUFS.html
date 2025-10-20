@@ -114,7 +114,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromUFS.html#BootFromUFS.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=BootFromUFS.html'}, '*');}</script>
 
 	</div>
 	
@@ -142,18 +142,18 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Boot-From-UFS" class="article-heading"><a href="#Boot-From-UFS" class="headerlink" title="Boot From UFS"></a>Boot From UFS<a class="article-anchor" href="#Boot-From-UFS" aria-hidden="true"></a></h1><div class="bullets">
+                <h1 id="Boot-From-UFS" class="article-heading"><a href="#Boot-From-UFS" class="headerlink" title="Boot From UFS"></a>Boot From UFS<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Boot-From-UFS'}, '*');" class="article-anchor" href="#Boot-From-UFS" aria-hidden="true"></a></h1><div class="bullets">
 This document provides detailed instructions of how to flash the Yocto image to UFS of I-Pi SMARC 1200 for Linux users.
 
  
 
-<h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+<h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
 <li>Make sure you have installed the AIoT tool on your Linux host device. If not, install them by <a href="AIoTToolInstallation.html">clicking here</a>.</li>
 <li>Be prepared with the target device(I-Pi SMARC 1200) and power cable, USB to Micro cable.</li>
 <li>For I-Pi SMARC 1200, the boot switch must be <strong>1001</strong> on the target device.</li>
 <li>The Linux host must be Ubuntu 18.04 or later.</li>
 </ul>
-<h2 id="Flashing-the-Yocto-Image-to-UFS" class="article-heading"><a href="#Flashing-the-Yocto-Image-to-UFS" class="headerlink" title="Flashing the Yocto Image to UFS"></a>Flashing the Yocto Image to UFS<a class="article-anchor" href="#Flashing-the-Yocto-Image-to-UFS" aria-hidden="true"></a></h2><ul>
+<h2 id="Flashing-the-Yocto-Image-to-UFS" class="article-heading"><a href="#Flashing-the-Yocto-Image-to-UFS" class="headerlink" title="Flashing the Yocto Image to UFS"></a>Flashing the Yocto Image to UFS<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Flashing-the-Yocto-Image-to-UFS'}, '*');" class="article-anchor" href="#Flashing-the-Yocto-Image-to-UFS" aria-hidden="true"></a></h2><ul>
 <li><p>Download the prebuilt Yocto image files by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/i-pi-smarc-1200-download">clicking here</a>.</p>
 </li>
 <li><p>Unzip the downloaded image file.</p>
@@ -178,7 +178,7 @@ This document provides detailed instructions of how to flash the Yocto image to 
 <li><p>A reboot will be automatically initiated when the image flashing process has been completed.</p>
 </li>
 </ul>
-<h2 id="Changing-Audio-Codec" class="article-heading"><a href="#Changing-Audio-Codec" class="headerlink" title="Changing Audio Codec"></a>Changing Audio Codec<a class="article-anchor" href="#Changing-Audio-Codec" aria-hidden="true"></a></h2><ul>
+<h2 id="Changing-Audio-Codec" class="article-heading"><a href="#Changing-Audio-Codec" class="headerlink" title="Changing Audio Codec"></a>Changing Audio Codec<a onclick="parent.postMessage( {msg: '?page=BootFromUFS.html#Changing-Audio-Codec'}, '*');" class="article-anchor" href="#Changing-Audio-Codec" aria-hidden="true"></a></h2><ul>
 <li><p>By default it comes with TLV 320 codec. If the customer would like to change the codec, change the device tree as mentioned below,</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_lec-mtk-i1200-ufs.dtb#conf-audio-wm8960.dtbo&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> reboot</span></span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -204,7 +204,7 @@ This document provides detailed instructions of how to flash the Yocto image to 
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="AIoTToolInstallation.html" class="sidebar-link first">Installing AIoT Tools</a><a href="GpioUtility.html" class="sidebar-link">GPIO Utility</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadSER.html" class="sidebar-link first">How to Read Console Output</a><a href="HowToBuildYocto.html" class="sidebar-link">How to Build Yocto</a><a href="FlashingUbuntu.html" class="sidebar-link">Flashing Ubuntu</a><a href="BootFromUFS.html" class="sidebar-link current">Flashing Yocto</a><a href="FlashingAndroidGuideforIPiSMARC1200v10.html" class="sidebar-link">Flashing Android</a><a href="UfsFormat.html" class="sidebar-link">Formatting UFS</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing</summary><a href="Yocto-basedNeuronSDKDemo.html" class="sidebar-link first">NeuroPilot</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="AIoTToolInstallation.html" class="sidebar-link first">Installing AIoT Tools</a><a href="GpioUtility.html" class="sidebar-link">GPIO Utility</a></details></strong><strong class="sidebar-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadSER.html" class="sidebar-link first">How to Read Console Output</a><a href="HowToBuildYocto.html" class="sidebar-link">How to Build Yocto</a><a href="FlashingUbuntu.html" class="sidebar-link">Flashing Ubuntu</a><a href="BootFromUFS.html" class="sidebar-link current">Flashing Yocto</a><a href="FlashingAndroidGuideforIPiSMARC1200v10.html" class="sidebar-link">Flashing Android</a><a href="UfsFormat.html" class="sidebar-link">Formatting UFS</a><a href="LECMTK1200UbuntuBuildGuide.html" class="sidebar-link">Building Ubuntu</a></details></strong><strong class="sidebar-title"><details open><summary>AI Inferencing</summary><a href="Yocto-basedNeuronSDKDemo.html" class="sidebar-link first">NeuroPilot</a></details></strong>
   </div>
 </aside>
     </div>
@@ -262,7 +262,7 @@ This document provides detailed instructions of how to flash the Yocto image to 
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="AIoTToolInstallation.html" class="mobile-nav-link first">Installing AIoT Tools</a><a href="GpioUtility.html" class="mobile-nav-link">GPIO Utility</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadSER.html" class="mobile-nav-link first">How to Read Console Output</a><a href="HowToBuildYocto.html" class="mobile-nav-link">How to Build Yocto</a><a href="FlashingUbuntu.html" class="mobile-nav-link">Flashing Ubuntu</a><a href="BootFromUFS.html" class="mobile-nav-link current">Flashing Yocto</a><a href="FlashingAndroidGuideforIPiSMARC1200v10.html" class="mobile-nav-link">Flashing Android</a><a href="UfsFormat.html" class="mobile-nav-link">Formatting UFS</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing</summary><a href="Yocto-basedNeuronSDKDemo.html" class="mobile-nav-link first">NeuroPilot</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="AIoTToolInstallation.html" class="mobile-nav-link first">Installing AIoT Tools</a><a href="GpioUtility.html" class="mobile-nav-link">GPIO Utility</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Guideline</summary><a href="SerialLogReadSER.html" class="mobile-nav-link first">How to Read Console Output</a><a href="HowToBuildYocto.html" class="mobile-nav-link">How to Build Yocto</a><a href="FlashingUbuntu.html" class="mobile-nav-link">Flashing Ubuntu</a><a href="BootFromUFS.html" class="mobile-nav-link current">Flashing Yocto</a><a href="FlashingAndroidGuideforIPiSMARC1200v10.html" class="mobile-nav-link">Flashing Android</a><a href="UfsFormat.html" class="mobile-nav-link">Formatting UFS</a><a href="LECMTK1200UbuntuBuildGuide.html" class="mobile-nav-link">Building Ubuntu</a></details></strong><strong class="mobile-nav-title"><details open><summary>AI Inferencing</summary><a href="Yocto-basedNeuronSDKDemo.html" class="mobile-nav-link first">NeuroPilot</a></details></strong>
     
   </div>
   
