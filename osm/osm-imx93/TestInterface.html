@@ -116,7 +116,7 @@ $('button').click(function(){
 <meta property="og:image" content="https://docs.ipi.wiki/osm/osm-imx93/TestInterface.assets/Before&amp;after.png">
 <meta property="og:image" content="https://docs.ipi.wiki/osm/osm-imx93/TestInterface.assets/USB_Camera.png">
 <meta property="og:image" content="https://docs.ipi.wiki/osm/osm-imx93/TestInterface.assets/USB_Camera_1.jpg">
-<meta property="article:published_time" content="2025-11-17T03:14:33.781Z">
+<meta property="article:published_time" content="2025-11-18T03:03:54.671Z">
 <meta property="article:modified_time" content="2025-11-17T03:14:33.781Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
@@ -180,7 +180,7 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Guide-For-Testing-Interface" class="article-heading"><a href="#Guide-For-Testing-Interface" class="headerlink" title="Guide For Testing Interface"></a>Guide For Testing Interface<a class="article-anchor" href="#Guide-For-Testing-Interface" aria-hidden="true"></a></h1><h2 id="GPIO" class="article-heading"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO<a class="article-anchor" href="#GPIO" aria-hidden="true"></a></h2><ul>
+                <h1 id="Guide-For-Testing-Interface" class="article-heading"><a href="#Guide-For-Testing-Interface" class="headerlink" title="Guide For Testing Interface"></a>Guide For Testing Interface<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Guide-For-Testing-Interface'}, '*');" class="article-anchor" href="#Guide-For-Testing-Interface" aria-hidden="true"></a></h1><h2 id="GPIO" class="article-heading"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#GPIO'}, '*');" class="article-anchor" href="#GPIO" aria-hidden="true"></a></h2><ul>
 <li>The J6 expansion connector provides access to GPIO_A and GPIO_B. The mapping of these GPIO pins is as follows:</li>
 </ul>
 <p><strong>For A_GPIO, the assignments are:</strong></p>
@@ -288,7 +288,7 @@ $('button').click(function(){
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gpioset -c 4 2=1</span><br></pre></td></tr></table></figure>
 <p>To set the GPIO line low, use:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gpioset -c 4 2=0</span><br></pre></td></tr></table></figure>
-<h2 id="I2C" class="article-heading"><a href="#I2C" class="headerlink" title="I2C"></a>I2C<a class="article-anchor" href="#I2C" aria-hidden="true"></a></h2><ul>
+<h2 id="I2C" class="article-heading"><a href="#I2C" class="headerlink" title="I2C"></a>I2C<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#I2C'}, '*');" class="article-anchor" href="#I2C" aria-hidden="true"></a></h2><ul>
 <li><p>Devices linked to the I2C interface on J44 (I2C_A_SCL_3V3 and I2C_A_SDA_3V3) can be verified with the following command:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> i2cdetect -yr 0</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -297,7 +297,7 @@ $('button').click(function(){
 <p><img src="TestInterface.assets\I2C.png" alt="I2C"></p>
 </li>
 </ul>
-<h2 id="SPI" class="article-heading"><a href="#SPI" class="headerlink" title="SPI"></a>SPI<a class="article-anchor" href="#SPI" aria-hidden="true"></a></h2><ul>
+<h2 id="SPI" class="article-heading"><a href="#SPI" class="headerlink" title="SPI"></a>SPI<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#SPI'}, '*');" class="article-anchor" href="#SPI" aria-hidden="true"></a></h2><ul>
 <li><p>Connect pins 2 and 4 on the J45 board to establish a link between SPI1 RX and TX.</p>
 </li>
 <li><p>Subsequently, run the spidev_test command to transmit data from SPI1 TX to RX. The command executed is as follows:</p>
@@ -305,7 +305,7 @@ $('button').click(function(){
 <p><img src="TestInterface.assets\SPI.png" alt="SPI"></p>
 </li>
 </ul>
-<h2 id="CAN" class="article-heading"><a href="#CAN" class="headerlink" title="CAN"></a>CAN<a class="article-anchor" href="#CAN" aria-hidden="true"></a></h2><ul>
+<h2 id="CAN" class="article-heading"><a href="#CAN" class="headerlink" title="CAN"></a>CAN<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#CAN'}, '*');" class="article-anchor" href="#CAN" aria-hidden="true"></a></h2><ul>
 <li>To configure the CAN0 and CAN1 loopback, the ports can0 and can1 are assigned to Jp5 and Jp6, respectively. The following steps outline the testing procedure for CAN. For JP6, the pinout is as follows:</li>
 </ul>
 <div class="table-container">
@@ -349,8 +349,8 @@ $('button').click(function(){
 </table>
 </div>
 <p>Open two terminal , and follow the below commands.</p>
-<h5 id="Terminal-1" class="article-heading"><a href="#Terminal-1" class="headerlink" title="Terminal 1 :"></a>Terminal 1 :<a class="article-anchor" href="#Terminal-1" aria-hidden="true"></a></h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can0 down</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ip link <span class="built_in">set</span> can0 up <span class="built_in">type</span> can bitrate 125000</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can0 up</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> candump can0</span></span><br></pre></td></tr></table></figure>
-<h5 id="Terminal-2" class="article-heading"><a href="#Terminal-2" class="headerlink" title="Terminal 2 :"></a>Terminal 2 :<a class="article-anchor" href="#Terminal-2" aria-hidden="true"></a></h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can1 down</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ip link <span class="built_in">set</span> can1 up <span class="built_in">type</span> can bitrate 125000</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can1 up</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> canse</span></span><br></pre></td></tr></table></figure>
+<h5 id="Terminal-1" class="article-heading"><a href="#Terminal-1" class="headerlink" title="Terminal 1 :"></a>Terminal 1 :<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Terminal-1'}, '*');" class="article-anchor" href="#Terminal-1" aria-hidden="true"></a></h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can0 down</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ip link <span class="built_in">set</span> can0 up <span class="built_in">type</span> can bitrate 125000</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can0 up</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> candump can0</span></span><br></pre></td></tr></table></figure>
+<h5 id="Terminal-2" class="article-heading"><a href="#Terminal-2" class="headerlink" title="Terminal 2 :"></a>Terminal 2 :<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Terminal-2'}, '*');" class="article-anchor" href="#Terminal-2" aria-hidden="true"></a></h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can1 down</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ip link <span class="built_in">set</span> can1 up <span class="built_in">type</span> can bitrate 125000</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ifconfig can1 up</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> canse</span></span><br></pre></td></tr></table></figure>
 <p><img src="TestInterface.assets\CAN.jpg" alt="CAN"></p>
 <p>The output will be on Terminal 1.</p>
 <p>It is important to note that the CAN test should be conducted in loopback mode between CAN0 and CAN1, with the connections established as follows:</p>
@@ -374,13 +374,13 @@ $('button').click(function(){
 </tbody>
 </table>
 </div>
-<h2 id="USB-OTG" class="article-heading"><a href="#USB-OTG" class="headerlink" title="USB(OTG)"></a>USB(OTG)<a class="article-anchor" href="#USB-OTG" aria-hidden="true"></a></h2><ul>
-<li><h5 id="HOST-MODE" class="article-heading"><a href="#HOST-MODE" class="headerlink" title="HOST MODE"></a><strong>HOST MODE</strong><a class="article-anchor" href="#HOST-MODE" aria-hidden="true"></a></h5><p>To initiate host mode, connect any USB device, such as a USB storage disk, to the board using an OTG cable and verify that the device is detected by Execute the command below:</p>
+<h2 id="USB-OTG" class="article-heading"><a href="#USB-OTG" class="headerlink" title="USB(OTG)"></a>USB(OTG)<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#USB-OTG'}, '*');" class="article-anchor" href="#USB-OTG" aria-hidden="true"></a></h2><ul>
+<li><h5 id="HOST-MODE" class="article-heading"><a href="#HOST-MODE" class="headerlink" title="HOST MODE"></a><strong>HOST MODE</strong><a onclick="parent.postMessage( {msg: '?page=TestInterface.html#HOST-MODE'}, '*');" class="article-anchor" href="#HOST-MODE" aria-hidden="true"></a></h5><p>To initiate host mode, connect any USB device, such as a USB storage disk, to the board using an OTG cable and verify that the device is detected by Execute the command below:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> host  &gt; /sys/bus/platform/devices/ci_hdrc.0/usb_role/ci_hdrc.0-role switch/role</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo lsusb</span></span><br></pre></td></tr></table></figure>
 <p><img src="TestInterface.assets\USB_OTG.png" alt="USB_OTG"></p>
 </li>
-<li><h5 id="DEVICE-MODE" class="article-heading"><a href="#DEVICE-MODE" class="headerlink" title="DEVICE MODE"></a>DEVICE MODE<a class="article-anchor" href="#DEVICE-MODE" aria-hidden="true"></a></h5><p>Switch to device mode by executing the appropriate command, followed by loading the g_serial module.</p>
+<li><h5 id="DEVICE-MODE" class="article-heading"><a href="#DEVICE-MODE" class="headerlink" title="DEVICE MODE"></a>DEVICE MODE<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#DEVICE-MODE'}, '*');" class="article-anchor" href="#DEVICE-MODE" aria-hidden="true"></a></h5><p>Switch to device mode by executing the appropriate command, followed by loading the g_serial module.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> device &gt; /sys/bus/platform/devices/ci_hdrc.0/usb_role/ci_hdrc.0-role-switch/role</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> modprobe g_serial</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo lsusb</span></span><br></pre></td></tr></table></figure>
@@ -391,12 +391,12 @@ $('button').click(function(){
 </ul>
 <p>An example of the USB log from the PC is provided below:</p>
 <p><strong>OUTPUT:</strong> Bus 001 Device 008: ID 0525:a4a7 Netchip Technology, Inc. Linux-USB Serial Gadget (CDC ACM mode).</p>
-<h2 id="Ethernet" class="article-heading"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet<a class="article-anchor" href="#Ethernet" aria-hidden="true"></a></h2><p>To obtain the Ethernet information, use the below mentioned command. This will display the details related to the Ethernet connection.</p>
+<h2 id="Ethernet" class="article-heading"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Ethernet'}, '*');" class="article-anchor" href="#Ethernet" aria-hidden="true"></a></h2><p>To obtain the Ethernet information, use the below mentioned command. This will display the details related to the Ethernet connection.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig eth0</span></span><br></pre></td></tr></table></figure>
 <p><img src="TestInterface.assets\eth0.png" alt="eth0"></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig eth1</span></span><br></pre></td></tr></table></figure>
 <p><img src="TestInterface.assets\eth1.png" alt="eth1"></p>
-<h2 id="Audio-Line-In-Line-Out" class="article-heading"><a href="#Audio-Line-In-Line-Out" class="headerlink" title="Audio(Line-In/Line-Out)"></a>Audio(Line-In/Line-Out)<a class="article-anchor" href="#Audio-Line-In-Line-Out" aria-hidden="true"></a></h2><ul>
+<h2 id="Audio-Line-In-Line-Out" class="article-heading"><a href="#Audio-Line-In-Line-Out" class="headerlink" title="Audio(Line-In/Line-Out)"></a>Audio(Line-In/Line-Out)<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Audio-Line-In-Line-Out'}, '*');" class="article-anchor" href="#Audio-Line-In-Line-Out" aria-hidden="true"></a></h2><ul>
 <li><p>The TLV320 audio can be tested with the following command:</p>
 </li>
 <li><p>To play back an audio sample, use the command:</p>
@@ -404,23 +404,23 @@ $('button').click(function(){
 <p><img src="TestInterface.assets\Audio.png" alt="Audio"></p>
 </li>
 </ul>
-<h2 id="SD" class="article-heading"><a href="#SD" class="headerlink" title="SD:"></a>SD:<a class="article-anchor" href="#SD" aria-hidden="true"></a></h2><ul>
+<h2 id="SD" class="article-heading"><a href="#SD" class="headerlink" title="SD:"></a>SD:<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#SD'}, '*');" class="article-anchor" href="#SD" aria-hidden="true"></a></h2><ul>
 <li><p>To confirm the presence of the SD card,Insert the SD card in board, then power on the board and execute the command below.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> lsblk</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="TestInterface.assets\SD.png" alt="SD"></p>
-<h2 id="Pulse-Width-Modulation-PWM" class="article-heading"><a href="#Pulse-Width-Modulation-PWM" class="headerlink" title="Pulse Width Modulation (PWM)"></a>Pulse Width Modulation (PWM)<a class="article-anchor" href="#Pulse-Width-Modulation-PWM" aria-hidden="true"></a></h2><ul>
-<li><h5 id="Connecting-the-Multimeter-Probes" class="article-heading"><a href="#Connecting-the-Multimeter-Probes" class="headerlink" title="Connecting the Multimeter Probes:"></a>Connecting the Multimeter Probes:<a class="article-anchor" href="#Connecting-the-Multimeter-Probes" aria-hidden="true"></a></h5></li>
-<li><h5 id="Positive-Probe-Red" class="article-heading"><a href="#Positive-Probe-Red" class="headerlink" title="Positive Probe (Red):"></a>Positive Probe (Red):<a class="article-anchor" href="#Positive-Probe-Red" aria-hidden="true"></a></h5><ul>
+<h2 id="Pulse-Width-Modulation-PWM" class="article-heading"><a href="#Pulse-Width-Modulation-PWM" class="headerlink" title="Pulse Width Modulation (PWM)"></a>Pulse Width Modulation (PWM)<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Pulse-Width-Modulation-PWM'}, '*');" class="article-anchor" href="#Pulse-Width-Modulation-PWM" aria-hidden="true"></a></h2><ul>
+<li><h5 id="Connecting-the-Multimeter-Probes" class="article-heading"><a href="#Connecting-the-Multimeter-Probes" class="headerlink" title="Connecting the Multimeter Probes:"></a>Connecting the Multimeter Probes:<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Connecting-the-Multimeter-Probes'}, '*');" class="article-anchor" href="#Connecting-the-Multimeter-Probes" aria-hidden="true"></a></h5></li>
+<li><h5 id="Positive-Probe-Red" class="article-heading"><a href="#Positive-Probe-Red" class="headerlink" title="Positive Probe (Red):"></a>Positive Probe (Red):<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Positive-Probe-Red'}, '*');" class="article-anchor" href="#Positive-Probe-Red" aria-hidden="true"></a></h5><ul>
 <li>Connect the positive probe to the PWM signal line. This is the pin where the PWM signal is being generated or output.</li>
 </ul>
 </li>
-<li><h5 id="Negative-Probe-Black" class="article-heading"><a href="#Negative-Probe-Black" class="headerlink" title="Negative Probe (Black):"></a>Negative Probe (Black):<a class="article-anchor" href="#Negative-Probe-Black" aria-hidden="true"></a></h5><ul>
+<li><h5 id="Negative-Probe-Black" class="article-heading"><a href="#Negative-Probe-Black" class="headerlink" title="Negative Probe (Black):"></a>Negative Probe (Black):<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Negative-Probe-Black'}, '*');" class="article-anchor" href="#Negative-Probe-Black" aria-hidden="true"></a></h5><ul>
 <li>Connect the negative probe to the ground (GND) pin of the circuit.</li>
 </ul>
 </li>
-<li><h5 id="PIN-configurations" class="article-heading"><a href="#PIN-configurations" class="headerlink" title="PIN configurations:"></a>PIN configurations:<a class="article-anchor" href="#PIN-configurations" aria-hidden="true"></a></h5></li>
+<li><h5 id="PIN-configurations" class="article-heading"><a href="#PIN-configurations" class="headerlink" title="PIN configurations:"></a>PIN configurations:<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#PIN-configurations'}, '*');" class="article-anchor" href="#PIN-configurations" aria-hidden="true"></a></h5></li>
 </ul>
 <div class="table-container">
 <table>
@@ -449,7 +449,7 @@ $('button').click(function(){
 <p><img src="TestInterface.assets\Before&amp;after.png" alt="Before&amp;after"></p>
 </li>
 </ul>
-<h2 id="Camera-USB" class="article-heading"><a href="#Camera-USB" class="headerlink" title="Camera(USB)"></a>Camera(USB)<a class="article-anchor" href="#Camera-USB" aria-hidden="true"></a></h2><ul>
+<h2 id="Camera-USB" class="article-heading"><a href="#Camera-USB" class="headerlink" title="Camera(USB)"></a>Camera(USB)<a onclick="parent.postMessage( {msg: '?page=TestInterface.html#Camera-USB'}, '*');" class="article-anchor" href="#Camera-USB" aria-hidden="true"></a></h2><ul>
 <li><p>The USB webcam was evaluated using the following command:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,width=1280,height=720 ! waylandsink.</span></span><br></pre></td></tr></table></figure>
 <p><img src="TestInterface.assets\USB_Camera.png" alt="USB_Camera"></p>
@@ -478,7 +478,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoFlash.html" class="sidebar-link first">Flashing Yocto</a><a href="ReadConsole.html" class="sidebar-link">Reading Console</a><a href="TestInterface.html" class="sidebar-link current">Testing Interfaces</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="UserInterfaces.html" class="sidebar-link">User Interfaces</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoFlash.html" class="sidebar-link first">Flashing Yocto</a><a href="ReadConsole.html" class="sidebar-link">Reading Console</a><a href="TestInterface.html" class="sidebar-link current">Testing Interfaces</a></details open></strong>
   </div>
 </aside>
     </div>
@@ -532,7 +532,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoFlash.html" class="mobile-nav-link first">Flashing Yocto</a><a href="ReadConsole.html" class="mobile-nav-link">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link current">Testing Interfaces</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="UserInterfaces.html" class="mobile-nav-link">User Interfaces</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoFlash.html" class="mobile-nav-link first">Flashing Yocto</a><a href="ReadConsole.html" class="mobile-nav-link">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link current">Testing Interfaces</a></details open></strong>
     
   </div>
   
