@@ -124,7 +124,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=YoctoFlash.html#YoctoFlash.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=YoctoFlash.html'}, '*');}</script>
 
 	</div>
 	
@@ -152,7 +152,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Flashing-Yocto-Image" class="article-heading"><a href="#Flashing-Yocto-Image" class="headerlink" title="Flashing Yocto Image"></a>Flashing Yocto Image<a class="article-anchor" href="#Flashing-Yocto-Image" aria-hidden="true"></a></h1><h2 id="1-Boot-from-SD-card" class="article-heading"><a href="#1-Boot-from-SD-card" class="headerlink" title="1.Boot from SD card"></a>1.Boot from SD card<a class="article-anchor" href="#1-Boot-from-SD-card" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
+                <h1 id="Flashing-Yocto-Image" class="article-heading"><a href="#Flashing-Yocto-Image" class="headerlink" title="Flashing Yocto Image"></a>Flashing Yocto Image<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#Flashing-Yocto-Image'}, '*');" class="article-anchor" href="#Flashing-Yocto-Image" aria-hidden="true"></a></h1><h2 id="1-Boot-from-SD-card" class="article-heading"><a href="#1-Boot-from-SD-card" class="headerlink" title="1.Boot from SD card"></a>1.Boot from SD card<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#1-Boot-from-SD-card'}, '*');" class="article-anchor" href="#1-Boot-from-SD-card" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ul>
 <li><p>Download the pre-built Yocto bootable Yocto image &amp; bootloader <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/downloads-lec-imx95">click_here</a>.</p>
 </li>
 <li><p>Copy the pre-built bootable Yocto image to the working directory on your development host.</p>
@@ -163,14 +163,15 @@
 <blockquote>
 <p>Flashing will erase all data on the SD card. A card with at least <strong>16 GB</strong> of storage is recommended</p>
 </blockquote>
-<h3 id="1-1-Windows-Host" class="article-heading"><a href="#1-1-Windows-Host" class="headerlink" title="1.1 Windows Host"></a>1.1 Windows Host<a class="article-anchor" href="#1-1-Windows-Host" aria-hidden="true"></a></h3><p>Insert a blank MicroSD card into the development host and launch the <strong>Win32DiskImager</strong> tool.</p>
+<h3 id="1-1-Windows-Host" class="article-heading"><a href="#1-1-Windows-Host" class="headerlink" title="1.1 Windows Host"></a>1.1 Windows Host<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#1-1-Windows-Host'}, '*');" class="article-anchor" href="#1-1-Windows-Host" aria-hidden="true"></a></h3><p>Insert a blank MicroSD card into the development host and launch the <strong>Win32DiskImager</strong> tool.</p>
 <ul>
 <li><p>The SD card device is detected automatically.</p>
 </li>
 <li><p>Click the file explorer icon to select the image file.</p>
 </li>
 <li><p>Navigate to the downloaded directory on the development host, choose the image, and click <strong>Write</strong> to begin the process.</p>
-<img src="YoctoFlash.assets\SD_flash_win.png"></li>
+<p><img src="YoctoFlash.assets\SD_flash_win.png"></p>
+</li>
 </ul>
 <blockquote>
 <p>The tool will warn the user that all data will be lost. Click <strong>“Yes”</strong> to proceed.</p>
@@ -181,60 +182,62 @@
 <li><p>Eject the SD card, insert it into the target board, set the switch settings to <strong>0110</strong> and power it on to boot up.</p>
 </li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">Boot Settings</th>
-<th align="center">SW1</th>
-<th align="center">SW2</th>
-<th align="center">SW3</th>
-<th align="center">SW4</th>
+<th style="text-align:center">Boot Settings</th>
+<th style="text-align:center">SW1</th>
+<th style="text-align:center">SW2</th>
+<th style="text-align:center">SW3</th>
+<th style="text-align:center">SW4</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">SD Card</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tbody>
+<tr>
+<td style="text-align:center">SD Card</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">SPI Carrier</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<td style="text-align:center">SPI Carrier</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">Remote GbE</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<td style="text-align:center">Remote GbE</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">eMMC module</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<td style="text-align:center">eMMC module</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">Recovery or Serial Download Mode</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<td style="text-align:center">Recovery or Serial Download Mode</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
-</tbody></table>
-<h3 id="1-2-Linux-Host" class="article-heading"><a href="#1-2-Linux-Host" class="headerlink" title="1.2 Linux Host"></a>1.2 Linux Host<a class="article-anchor" href="#1-2-Linux-Host" aria-hidden="true"></a></h3><ul>
+</tbody>
+</table>
+</div>
+<h3 id="1-2-Linux-Host" class="article-heading"><a href="#1-2-Linux-Host" class="headerlink" title="1.2 Linux Host"></a>1.2 Linux Host<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#1-2-Linux-Host'}, '*');" class="article-anchor" href="#1-2-Linux-Host" aria-hidden="true"></a></h3><ul>
 <li>Insert the SD card into your Linux machine.</li>
 <li>Open a terminal and identify your SD card using <code>lsblk</code></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
-
-<img src="YoctoFlash.assets\lsblk.png">
-
+<p><img src="YoctoFlash.assets\lsblk.png"></p>
 <blockquote>
 <p>Look for a device that matches the size of your SD card (e.g., <code>/dev/sdX</code>, where <code>X</code> is the device letter, such as <code>b</code>, <code>c</code>, etc.). Ensure that you identify the <strong>correct device</strong> to avoid overwriting the wrong disk.</p>
 </blockquote>
@@ -242,203 +245,154 @@
 <li>You can use the <code>dd</code> command to write the Yocto image to the SD card. Replace <code>/path/to/yocto-image.img</code> with your actual Yocto image file path, and <code>/dev/sdX</code> with the correct SD card device (without the partition number, e.g., <code>/dev/sdX</code> and not <code>/dev/sdX1</code>).</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo dd <span class="keyword">if</span>=/path/to/yocto-image.img of=/dev/sdX bs=4M status=progress</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>Once <code>dd</code> finishes, it’s a good idea to flush the cache and ensure the SD card is properly written</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sync</span><br></pre></td></tr></table></figure>
-
-<img src="YoctoFlash.assets\SD_linux.png">
-
+<p><img src="YoctoFlash.assets\SD_linux.png"></p>
 <ul>
 <li>Eject the SD card, insert it into the target board, set the switch settings to <strong>0110</strong> and power it on to boot up.</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">Boot Settings</th>
-<th align="center">SW1</th>
-<th align="center">SW2</th>
-<th align="center">SW3</th>
-<th align="center">SW4</th>
+<th style="text-align:center">Boot Settings</th>
+<th style="text-align:center">SW1</th>
+<th style="text-align:center">SW2</th>
+<th style="text-align:center">SW3</th>
+<th style="text-align:center">SW4</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><strong>SD Card</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>SD Card</strong></td>
+<td style="text-align:center"><strong>0</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>0</strong></td>
 </tr>
 <tr>
-<td align="center">SPI Carrier</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<td style="text-align:center">SPI Carrier</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">Remote GbE</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<td style="text-align:center">Remote GbE</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">eMMC module</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<td style="text-align:center">eMMC module</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">Recovery or Serial Download Mode</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<td style="text-align:center">Recovery or Serial Download Mode</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
-</tbody></table>
-<h2 id="2-Boot-from-eMMC" class="article-heading"><a href="#2-Boot-from-eMMC" class="headerlink" title="2.Boot from eMMC"></a>2.Boot from eMMC<a class="article-anchor" href="#2-Boot-from-eMMC" aria-hidden="true"></a></h2><h3 id="2-1-Windows-Host" class="article-heading"><a href="#2-1-Windows-Host" class="headerlink" title="2.1 Windows Host"></a>2.1 Windows Host<a class="article-anchor" href="#2-1-Windows-Host" aria-hidden="true"></a></h3><ul>
-<li><p>Change the boot settings to <strong>Recovery mode&#x2F;Serial Download mode (0001)</strong> on your I-Pi SMARC LEC-iMX95.</p>
-<img src="YoctoFlash.assets\BootSettingsButtons.png" style="zoom: 80%;">
-
-<table>
-<thead>
-<tr>
-<th align="center">Boot Settings</th>
-<th align="center">SW1</th>
-<th align="center">SW2</th>
-<th align="center">SW3</th>
-<th align="center">SW4</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">SD Card</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">SPI Carrier</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">Remote GbE</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">eMMC module</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center"><strong>Recovery or Serial Download Mode</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<h2 id="2-Boot-from-eMMC" class="article-heading"><a href="#2-Boot-from-eMMC" class="headerlink" title="2.Boot from eMMC"></a>2.Boot from eMMC<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#2-Boot-from-eMMC'}, '*');" class="article-anchor" href="#2-Boot-from-eMMC" aria-hidden="true"></a></h2><h3 id="2-1-Windows-Host" class="article-heading"><a href="#2-1-Windows-Host" class="headerlink" title="2.1 Windows Host"></a>2.1 Windows Host<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#2-1-Windows-Host'}, '*');" class="article-anchor" href="#2-1-Windows-Host" aria-hidden="true"></a></h3><ul>
+<li><p>Change the boot settings to <strong>Recovery mode/Serial Download mode (0001)</strong> on your I-Pi SMARC LEC-iMX95.</p>
+<p><img src="YoctoFlash.assets\BootSettingsButtons.png" style="zoom: 80%;"></p>
+<p>|            Boot Settings             |  SW1  |  SW2  |  SW3  |  SW4  |<br>| :—————————————————: | :—-: | :—-: | :—-: | :—-: |<br>|               SD Card                |   0   |   1   |   1   |   0   |<br>|             SPI Carrier              |   0   |   0   |   1   |   0   |<br>|              Remote GbE              |   0   |   1   |   0   |   0   |<br>|             eMMC module              |   1   |   0   |   0   |   0   |<br>| <strong>Recovery or Serial Download Mode</strong> | <strong>0</strong> | <strong>0</strong> | <strong>0</strong> | <strong>1</strong> |</p>
 </li>
 <li><p>Your development host must be connected to the target board using a micro USB OTG cable, and the board must be powered via a power cable.</p>
 </li>
 <li><p>Install the <strong>WinUSB driver</strong> using <strong>Zadig</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zadig.akeo.ie/">click here</a>.</p>
 </li>
 <li><p>Open <strong>Zadig</strong>, locate your <strong>USB-connected device</strong>, go to <strong>Options</strong>, and click <strong>List All Devices</strong>.</p>
-<img src="YoctoFlash.assets\emmc_win_1.png" style="zoom:95%;">
+<p><img src="YoctoFlash.assets\emmc_win_1.png" style="zoom:95%;"></p>
 </li>
-<li><p>The connected USB device would be the **OO Blank XX or **USB download gadget. Select that device and choose <strong>“Replace Driver”</strong></p>
-<img src="YoctoFlash.assets\emmc_win_3.png">
+<li><p>The connected USB device would be the <strong>OO Blank XX or </strong>USB download gadget. Select that device and choose <strong>“Replace Driver”</strong></p>
+<p><img src="YoctoFlash.assets\emmc_win_3.png"></p>
 </li>
-<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.201/uuu.exe">Click here</a> to download the <strong>UUU tool</strong> and copy them to <strong>C:&#x2F;Windows&#x2F;System32</strong> directory.</p>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.201/uuu.exe">Click here</a> to download the <strong>UUU tool</strong> and copy them to <strong>C:/Windows/System32</strong> directory.</p>
 </li>
 <li><p>Run the Windows <strong>Command Prompt as Administrator</strong> and navigate to the directory where you downloaded UUU tool. Type the following commands</p>
 </li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uuu.exe -b emmc_all (file_path_of_boot_loader) (file_path_of_image_file)</span><br></pre></td></tr></table></figure>
-
-<img src="YoctoFlash.assets\win_flash_emmc.png">
-
+<p><img src="YoctoFlash.assets\win_flash_emmc.png"></p>
 <ul>
 <li>Take off all the cables from the carrier, such as the power cord and USB cable. Set the boot settings to <strong>eMMC 1000</strong>.</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">Boot Settings</th>
-<th align="center">SW1</th>
-<th align="center">SW2</th>
-<th align="center">SW3</th>
-<th align="center">SW4</th>
+<th style="text-align:center">Boot Settings</th>
+<th style="text-align:center">SW1</th>
+<th style="text-align:center">SW2</th>
+<th style="text-align:center">SW3</th>
+<th style="text-align:center">SW4</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">SD Card</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tbody>
+<tr>
+<td style="text-align:center">SD Card</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">SPI Carrier</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<td style="text-align:center">SPI Carrier</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">Remote GbE</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<td style="text-align:center">Remote GbE</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center"><strong>eMMC module</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
+<td style="text-align:center"><strong>eMMC module</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>0</strong></td>
+<td style="text-align:center"><strong>0</strong></td>
+<td style="text-align:center"><strong>0</strong></td>
 </tr>
 <tr>
-<td align="center">Recovery or Serial Download Mode</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<td style="text-align:center">Recovery or Serial Download Mode</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
-</tbody></table>
-<h3 id="2-2-Linux-Host" class="article-heading"><a href="#2-2-Linux-Host" class="headerlink" title="2.2 Linux Host"></a>2.2 Linux Host<a class="article-anchor" href="#2-2-Linux-Host" aria-hidden="true"></a></h3><ul>
-<li><p>Modify the switch settings to <strong>Recovery Mode&#x2F;Serial Download Mode</strong> (<strong>0001</strong>) on your I-Pi SMARC LEC-IMX95.</p>
+</tbody>
+</table>
+</div>
+<h3 id="2-2-Linux-Host" class="article-heading"><a href="#2-2-Linux-Host" class="headerlink" title="2.2 Linux Host"></a>2.2 Linux Host<a onclick="parent.postMessage( {msg: '?page=YoctoFlash.html#2-2-Linux-Host'}, '*');" class="article-anchor" href="#2-2-Linux-Host" aria-hidden="true"></a></h3><ul>
+<li><p>Modify the switch settings to <strong>Recovery Mode/Serial Download Mode</strong> (<strong>0001</strong>) on your I-Pi SMARC LEC-IMX95.</p>
 </li>
 <li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.201/uuu">Click here</a> to download the <strong>UUU tool</strong></p>
 </li>
-<li><p>Connect your development host to the target board using a micro <strong>USB OTG</strong> cable and ensure the board is powered with a power cable.</p>
-</li>
-<li><p>To run the UUU tool, navigate to the downloaded directory and enter the following commands in the Linux terminal.</p>
-</li>
+<li>Connect your development host to the target board using a micro <strong>USB OTG</strong> cable and ensure the board is powered with a power cable.</li>
+<li>To run the UUU tool, navigate to the downloaded directory and enter the following commands in the Linux terminal.</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo cp ~/Downloads/uuu /usr/bin</span><br><span class="line">sudo chmod +x /usr/bin/uuu</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>Using these UUU commands, you can check the <strong>USB devices</strong> and <strong>flash the image to the eMMC</strong>.</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uuu -lsusb</span><br><span class="line">sudo uuu -b emmc_all (file_path_of_boot_loader) (file_path_of_image_file)</span><br></pre></td></tr></table></figure>
-
-<img src="YoctoFlash.assets\emmc_lin1.png">
-
-<img src="YoctoFlash.assets\emmc_lin.png" style="zoom:73%;">
-
+<p><img src="YoctoFlash.assets\emmc_lin1.png"></p>
+<p><img src="YoctoFlash.assets\emmc_lin.png" style="zoom:73%;"></p>
 <ul>
 <li>Disconnect all cables from the carrier, including the power cord and USB cable. Then, set the boot settings to <strong>eMMC (1000)</strong>.</li>
 <li>Power on the target device to boot up.</li>
@@ -465,7 +419,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="index.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link current">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link">Flashing Android</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link current">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link">Flashing Android</a><a href="AI_Inferencing_eIQ.html" class="sidebar-link">AI Inferencing Article</a></details></strong>
   </div>
 </aside>
     </div>
@@ -523,7 +477,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="index.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link current">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link">Flashing Android</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link current">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link">Flashing Android</a><a href="AI_Inferencing_eIQ.html" class="mobile-nav-link">AI Inferencing Article</a></details></strong>
     
   </div>
   

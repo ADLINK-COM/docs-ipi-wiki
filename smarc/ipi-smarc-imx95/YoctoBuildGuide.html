@@ -79,8 +79,8 @@
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
 <meta property="og:description" content="How to Build YoctoThe Yocto Project offers open-source tools that enable developers to customize Linux-based systems across various architectures. By following this procedure, you will be able to buil">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-04-02T04:02:34.950Z">
-<meta property="article:modified_time" content="2025-04-02T04:02:34.950Z">
+<meta property="article:published_time" content="2025-12-08T06:15:10.781Z">
+<meta property="article:modified_time" content="2025-12-08T06:15:10.781Z">
 <meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -114,7 +114,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=YoctoBuildGuide.html#YoctoBuildGuide.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=YoctoBuildGuide.html'}, '*');}</script>
 
 	</div>
 	
@@ -142,47 +142,27 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="How-to-Build-Yocto" class="article-heading"><a href="#How-to-Build-Yocto" class="headerlink" title="How to Build Yocto"></a>How to Build Yocto<a class="article-anchor" href="#How-to-Build-Yocto" aria-hidden="true"></a></h1><p>The <strong>Yocto Project</strong> offers open-source tools that enable developers to customize Linux-based systems across various architectures. By following this procedure, you will be able to build a <strong>Yocto image</strong> specifically for the <strong>LEC-iMX95</strong>.</p>
-<h2 id="1-Set-up-a-build-host-environment" class="article-heading"><a href="#1-Set-up-a-build-host-environment" class="headerlink" title="1. Set up a build host environment"></a>1. Set up a build host environment<a class="article-anchor" href="#1-Set-up-a-build-host-environment" aria-hidden="true"></a></h2><h3 id="1-1-Recommended-Hardware-for-the-host" class="article-heading"><a href="#1-1-Recommended-Hardware-for-the-host" class="headerlink" title="1.1 Recommended Hardware for the host"></a>1.1 Recommended Hardware for the host<a class="article-anchor" href="#1-1-Recommended-Hardware-for-the-host" aria-hidden="true"></a></h3><ul>
-<li>Intel Core-i7 Processor (&gt;&#x3D; 4 cores)</li>
+                <h1 id="How-to-Build-Yocto" class="article-heading"><a href="#How-to-Build-Yocto" class="headerlink" title="How to Build Yocto"></a>How to Build Yocto<a onclick="parent.postMessage( {msg: '?page=YoctoBuildGuide.html#How-to-Build-Yocto'}, '*');" class="article-anchor" href="#How-to-Build-Yocto" aria-hidden="true"></a></h1><p>The <strong>Yocto Project</strong> offers open-source tools that enable developers to customize Linux-based systems across various architectures. By following this procedure, you will be able to build a <strong>Yocto image</strong> specifically for the <strong>LEC-iMX95</strong>.</p>
+<h2 id="Set-up-a-build-host-environment" class="article-heading"><a href="#Set-up-a-build-host-environment" class="headerlink" title="Set up a build host environment"></a>Set up a build host environment<a onclick="parent.postMessage( {msg: '?page=YoctoBuildGuide.html#Set-up-a-build-host-environment'}, '*');" class="article-anchor" href="#Set-up-a-build-host-environment" aria-hidden="true"></a></h2><h3 id="Recommended-Hardware-for-the-host" class="article-heading"><a href="#Recommended-Hardware-for-the-host" class="headerlink" title="Recommended Hardware for the host"></a>Recommended Hardware for the host<a onclick="parent.postMessage( {msg: '?page=YoctoBuildGuide.html#Recommended-Hardware-for-the-host'}, '*');" class="article-anchor" href="#Recommended-Hardware-for-the-host" aria-hidden="true"></a></h3><ul>
+<li>Intel Core-i7 Processor (&gt;= 4 cores)</li>
 <li>at least 8GB Memory</li>
 <li>at least 500GB Disk space</li>
 <li>Ubuntu <strong>22.04 LTS 64bit</strong> or later version for Yocto Project Build</li>
 <li>High speed network connectivity</li>
 </ul>
-<h3 id="1-2-Required-Essential-Packages-to-Install-on-the-Host-System" class="article-heading"><a href="#1-2-Required-Essential-Packages-to-Install-on-the-Host-System" class="headerlink" title="1.2 Required Essential Packages to Install on the Host System"></a>1.2 Required Essential Packages to Install on the Host System<a class="article-anchor" href="#1-2-Required-Essential-Packages-to-Install-on-the-Host-System" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm zstd liblz4-tool curl git python-is-python3</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Please avoid using the root account to build Yocto, as it may lead to unpredictable errors.</p>
-</blockquote>
-<h3 id="1-3-Set-up-the-GitHub-account-on-the-host" class="article-heading"><a href="#1-3-Set-up-the-GitHub-account-on-the-host" class="headerlink" title="1.3 Set up the GitHub account on the host"></a>1.3 Set up the GitHub account on the host<a class="article-anchor" href="#1-3-Set-up-the-GitHub-account-on-the-host" aria-hidden="true"></a></h3><p>Before starting the build process, verify that Git is correctly set up using the commands below.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;Your Email&quot;</span></span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-4-“Google-repo”-packages-required-to-be-installed-in-your-host" class="article-heading"><a href="#1-4-“Google-repo”-packages-required-to-be-installed-in-your-host" class="headerlink" title="1.4 “Google repo” packages required to be installed in your host"></a>1.4 “Google repo” packages required to be installed in your host<a class="article-anchor" href="#1-4-“Google-repo”-packages-required-to-be-installed-in-your-host" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir ~/bin (this step may not be needed <span class="keyword">if</span> the bin folder already exists)</span><br><span class="line">$ curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</span><br><span class="line">$ chmod a+x ~/bin/repo</span><br><span class="line">$ <span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:~/bin</span><br><span class="line">$ <span class="built_in">export</span> LC_ALL=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-Fetch-the-source-from-Git" class="article-heading"><a href="#2-Fetch-the-source-from-Git" class="headerlink" title="2. Fetch the source from Git"></a>2. Fetch the source from Git<a class="article-anchor" href="#2-Fetch-the-source-from-Git" aria-hidden="true"></a></h2><h3 id="2-1-Create-a-working-directory" class="article-heading"><a href="#2-1-Create-a-working-directory" class="headerlink" title="2.1 Create a working directory"></a>2.1 Create a working directory<a class="article-anchor" href="#2-1-Create-a-working-directory" aria-hidden="true"></a></h3><p>Create a working directory named ‘imx95-yocto-bsp’.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir imx95-yocto-bsp</span><br><span class="line">$ <span class="built_in">cd</span> imx95-yocto-bsp</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-Download-the-required-meta-layers" class="article-heading"><a href="#2-2-Download-the-required-meta-layers" class="headerlink" title="2.2 Download the required meta-layers."></a>2.2 Download the required meta-layers.<a class="article-anchor" href="#2-2-Download-the-required-meta-layers" aria-hidden="true"></a></h3><blockquote>
-<p>It is recommended to use the latest branch and manifest file for building the Yocto image. You can find the available branches and manifest files <em>[Link to be updated]</em>.</p>
-</blockquote>
-<p><strong>Scarthgap branch</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ repo init -u https://github.com/ADLINK/adlink-manifest -b lec-imx-yocto-scarthgap -m adlink-lec-imx95-yocto-scarthgap_1v0.xml</span><br><span class="line">$ repo sync</span><br><span class="line">$ MACHINE=lec-imx95 DISTRO=fsl-imx-xwayland <span class="built_in">source</span> adlink-imx-setup-release.sh -b &lt;build_dir&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-Build-the-image" class="article-heading"><a href="#2-3-Build-the-image" class="headerlink" title="2.3 Build the image"></a>2.3 Build the image<a class="article-anchor" href="#2-3-Build-the-image" aria-hidden="true"></a></h3><p>To build without Qt 6 and machine learning, use <code>imx-image-multimedia</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ bitbake imx-image-multimedia</span><br></pre></td></tr></table></figure>
-
-<p>To build with Qt 6 and machine learning, use <code>imx-image-full</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ bitbake imx-image-full</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Sometimes the build may fail due to the traffic&#x2F;server try again after sometime</p>
-</blockquote>
-<p>Image is generated as <code>imx-image-full-lec-imx95-*.wic</code> in <code>&lt;build_dir&gt;/tmp/deploy/image/lec-imx95/</code>.</p>
+<h2 id="How-to-Build-Yocto-1" class="article-heading"><a href="#How-to-Build-Yocto-1" class="headerlink" title="How to Build Yocto"></a>How to Build Yocto<a onclick="parent.postMessage( {msg: '?page=YoctoBuildGuide.html#How-to-Build-Yocto-1'}, '*');" class="article-anchor" href="#How-to-Build-Yocto-1" aria-hidden="true"></a></h2><p>The <strong>Yocto Project</strong> offers open-source tools that enable developers to customize Linux-based systems across various architectures. By following this procedure, you will be able to build a <strong>Yocto image</strong> specifically for the <strong>LEC-i.MX95</strong>.</p>
+<h3 id="Host-Environment-Setup" class="article-heading"><a href="#Host-Environment-Setup" class="headerlink" title="Host Environment Setup"></a>Host Environment Setup<a onclick="parent.postMessage( {msg: '?page=YoctoBuildGuide.html#Host-Environment-Setup'}, '*');" class="article-anchor" href="#Host-Environment-Setup" aria-hidden="true"></a></h3><ul>
+<li>Intel Core-i7 Processor (&gt;= 4 cores)</li>
+<li>At least 8GB Memory</li>
+<li>At least 500GB Disk space</li>
+<li>Ubuntu 22.04 LTS 64-bit or later versions</li>
+<li>High speed &amp; stable network connectivity</li>
+</ul>
+<h3 id="Build-Instructions" class="article-heading"><a href="#Build-Instructions" class="headerlink" title="Build Instructions"></a>Build Instructions<a onclick="parent.postMessage( {msg: '?page=YoctoBuildGuide.html#Build-Instructions'}, '*');" class="article-anchor" href="#Build-Instructions" aria-hidden="true"></a></h3><p>For a step-by-step guide on how to build ADLINK Yocto Image for this device, check out our ADLINK NXP GitHub repo <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADLINK/meta-adlink-nxp/wiki/Building-Yocto-for-LEC%E2%80%90IMX95">wiki page</a>.</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2025-04-02T04:02:34.950Z" itemprop="dateModified">Last updated: 2025-04-02</time>
+                <time class="article-footer-updated" datetime="2025-12-08T06:15:10.781Z" itemprop="dateModified">Last updated: 2025-12-08</time>
                 <a href="TestInterface.html" class="article-footer-prev" title="Testing Interfaces"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="YoctoFlash.html" class="article-footer-next" title="Flashing Yocto"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -192,7 +172,7 @@
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Build-Yocto"><span class="toc-text">How to Build Yocto</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Set-up-a-build-host-environment"><span class="toc-text">1. Set up a build host environment</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Recommended-Hardware-for-the-host"><span class="toc-text">1.1 Recommended Hardware for the host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Required-Essential-Packages-to-Install-on-the-Host-System"><span class="toc-text">1.2 Required Essential Packages to Install on the Host System</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Set-up-the-GitHub-account-on-the-host"><span class="toc-text">1.3 Set up the GitHub account on the host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E2%80%9CGoogle-repo%E2%80%9D-packages-required-to-be-installed-in-your-host"><span class="toc-text">1.4 “Google repo” packages required to be installed in your host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Fetch-the-source-from-Git"><span class="toc-text">2. Fetch the source from Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Create-a-working-directory"><span class="toc-text">2.1 Create a working directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Download-the-required-meta-layers"><span class="toc-text">2.2 Download the required meta-layers.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Build-the-image"><span class="toc-text">2.3 Build the image</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Build-Yocto"><span class="toc-text">How to Build Yocto</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Set-up-a-build-host-environment"><span class="toc-text">Set up a build host environment</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Recommended-Hardware-for-the-host"><span class="toc-text">Recommended Hardware for the host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-Build-Yocto-1"><span class="toc-text">How to Build Yocto</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Host-Environment-Setup"><span class="toc-text">Host Environment Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-Instructions"><span class="toc-text">Build Instructions</span></a></li></ol></li></ol></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -201,7 +181,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="index.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link current">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link">Flashing Android</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link current">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link">Flashing Android</a><a href="AI_Inferencing_eIQ.html" class="sidebar-link">AI Inferencing Article</a></details></strong>
   </div>
 </aside>
     </div>
@@ -259,7 +239,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="index.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link current">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link">Flashing Android</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link current">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link">Flashing Android</a><a href="AI_Inferencing_eIQ.html" class="mobile-nav-link">AI Inferencing Article</a></details></strong>
     
   </div>
   
