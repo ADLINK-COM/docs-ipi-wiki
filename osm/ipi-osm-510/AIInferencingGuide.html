@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.html">
+  <!-- Alternative links -->
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  -->
+
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/osm/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+  jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+  });
+
+  $('button').addClass('btn-primary').text('Switch to Orange Tab');
+  $('button').click(function(){
+        $('#tabs a[href=#orange]').tab('show');
+  });
+
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+});
+
+$('button').addClass('btn-primary').text('Switch to Orange Tab');
+$('button').click(function(){
+      $('#tabs a[href=#ava]').tab('show');
+});
+
+</script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+ <!-- Hotjar Tracking Code for https://ipi.wiki 
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/osm/css/navy.css">
+
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/osm//css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/osm/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="AI InferencingThis guide walks through all available AI demo applications and benchmarking tools included in the Yocto BSP for the OSM-MTK510. All live demos use NNStreamer as the inference pipeline f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="AI InferencingThis guide walks through all available AI demo applications and benchmarking tools included in the Yocto BSP for the OSM-MTK510. All live demos use NNStreamer as the inference pipeline f">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/01_image_classification.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/02_image_classification.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/03_image_classification.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/04_object_detection.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/06_object_detection.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/07_face_detection.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/08_pose_detection.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/09_low_light_enhancement.JPG">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/10_monocular_depth.JPG">
+<meta property="article:published_time" content="2026-03-26T06:49:36.303Z">
+<meta property="article:modified_time" content="2026-03-26T06:49:36.303Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/osm/ipi-osm-510/AIInferencingGuide.assets/01_image_classification.JPG">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/osm/osm/" class="main-nav-link  header">menu.OSM</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=AIInferencingGuide.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="AI-Inferencing" class="article-heading"><a href="#AI-Inferencing" class="headerlink" title="AI Inferencing"></a>AI Inferencing<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#AI-Inferencing'}, '*');" class="article-anchor" href="#AI-Inferencing" aria-hidden="true"></a></h1><p>This guide walks through all available AI demo applications and benchmarking tools included in the Yocto BSP for the OSM-MTK510. All live demos use <a target="_blank" rel="noopener external nofollow noreferrer" href="https://nnstreamer.ai/">NNStreamer</a> as the inference pipeline framework, with a UVC USB webcam as input.</p>
+<h2 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2><h3 id="Hardware" class="article-heading"><a href="#Hardware" class="headerlink" title="Hardware"></a>Hardware<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Hardware'}, '*');" class="article-anchor" href="#Hardware" aria-hidden="true"></a></h3><ul>
+<li>OSM-MTK510 powered on and accessible via serial console (UART)</li>
+<li>HDMI/DP display connected</li>
+<li>UVC USB webcam connected (required for all demos except Low Light Image Enhancement)</li>
+</ul>
+<h3 id="Identify-Your-Camera-Node" class="article-heading"><a href="#Identify-Your-Camera-Node" class="headerlink" title="Identify Your Camera Node"></a>Identify Your Camera Node<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Identify-Your-Camera-Node'}, '*');" class="article-anchor" href="#Identify-Your-Camera-Node" aria-hidden="true"></a></h3><p>Before running any live demo, identify the correct camera device node:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">v4l2-ctl --list-devices</span><br></pre></td></tr></table></figure>
+<p>Look for your UVC camera in the output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">UVC Camera (046d:081b) (usb-11200000.xhci1-1.7):</span><br><span class="line">        /dev/video5</span><br><span class="line">        /dev/video6</span><br></pre></td></tr></table></figure>
+<p>Use the first node listed. In this example <code>/dev/video5</code>, which corresponds to camera ID <code>5</code>. Use <code>v4l2-ctl --device=/dev/video5 --list-formats-ext</code> to verify supported resolutions.</p>
+<h2 id="Inference-Backends" class="article-heading"><a href="#Inference-Backends" class="headerlink" title="Inference Backends"></a>Inference Backends<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Inference-Backends'}, '*');" class="article-anchor" href="#Inference-Backends" aria-hidden="true"></a></h2><p>The OSM-MTK510 supports multiple inference backends. All are pre-installed in the BSP.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th><code>--engine</code></th>
+<th><code>--framework</code></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU (TFLite)</td>
+<td><code>cpu</code></td>
+<td><code>tflite</code></td>
+<td>Default, software inference using all CPU cores</td>
+</tr>
+<tr>
+<td>ArmNN (GPU)</td>
+<td><code>armnn</code></td>
+<td><code>tflite</code></td>
+<td>ArmNN delegate using Mali GPU acceleration</td>
+</tr>
+<tr>
+<td>NPU Stable Delegate</td>
+<td><code>stable_delegate</code></td>
+<td><code>tflite</code></td>
+<td>NPU acceleration via TFLite stable delegate</td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>—</td>
+<td><code>neuronsdk</code></td>
+<td>Compiles <code>.tflite</code> to <code>.dla</code> and runs directly on NPU</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>Note:</strong> On first run, <code>neuronsdk</code> framework compiles the model to a <code>.dla</code> file which may take a few extra seconds. Subsequent runs use the cached <code>.dla</code> file.</p>
+<p><strong>Tip:</strong> Add <code>--performance 1</code> to any command to lock CPU, GPU, and APU to maximum clock speeds for consistent and optimal performance.</p>
+</blockquote>
+<h2 id="Demo-Applications" class="article-heading"><a href="#Demo-Applications" class="headerlink" title="Demo Applications"></a>Demo Applications<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Demo-Applications'}, '*');" class="article-anchor" href="#Demo-Applications" aria-hidden="true"></a></h2><p>All demos are located at <code>/usr/bin/nnstreamer-demo/</code> and are launched via a common runner script:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py --app &lt;app_name&gt; --cam_type uvc [OPTIONS]</span><br></pre></td></tr></table></figure>
+<h3 id="Common-Arguments" class="article-heading"><a href="#Common-Arguments" class="headerlink" title="Common Arguments"></a>Common Arguments<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Common-Arguments'}, '*');" class="article-anchor" href="#Common-Arguments" aria-hidden="true"></a></h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--app</code></td>
+<td><code>image_classification</code></td>
+<td>Demo app to run</td>
+</tr>
+<tr>
+<td><code>--engine</code></td>
+<td><code>cpu</code></td>
+<td>Inference backend: <code>cpu</code>, <code>armnn</code>, <code>stable_delegate</code></td>
+</tr>
+<tr>
+<td><code>--framework</code></td>
+<td><code>tflite</code></td>
+<td>Inference framework: <code>tflite</code>, <code>neuronsdk</code></td>
+</tr>
+<tr>
+<td><code>--cam</code></td>
+<td><code>0</code></td>
+<td>Camera node ID (e.g. <code>5</code> for <code>/dev/video5</code>)</td>
+</tr>
+<tr>
+<td><code>--cam_type</code></td>
+<td><em>(required)</em></td>
+<td>Camera type: <code>uvc</code>, <code>yuvsensor</code>, <code>rawsensor</code></td>
+</tr>
+<tr>
+<td><code>--width</code></td>
+<td><code>640</code></td>
+<td>Video display width in pixels</td>
+</tr>
+<tr>
+<td><code>--height</code></td>
+<td><code>480</code></td>
+<td>Video display height in pixels</td>
+</tr>
+<tr>
+<td><code>--fullscreen</code></td>
+<td><code>0</code></td>
+<td>Set <code>1</code> to enable fullscreen output</td>
+</tr>
+<tr>
+<td><code>--throughput</code></td>
+<td><code>0</code></td>
+<td>Set <code>1</code> to display FPS and inference time on screen</td>
+</tr>
+<tr>
+<td><code>--performance</code></td>
+<td><code>0</code></td>
+<td>Set <code>1</code> to enable performance mode (max clocks)</td>
+</tr>
+<tr>
+<td><code>--rot</code></td>
+<td><code>0</code></td>
+<td>Rotate camera image by degrees (e.g. <code>90</code>)</td>
+</tr>
+<tr>
+<td><code>--img</code></td>
+<td>—</td>
+<td>Input image path (Low Light Enhancement only)</td>
+</tr>
+<tr>
+<td><code>--export</code></td>
+<td>—</td>
+<td>Output image path (Low Light Enhancement only)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="1-Image-Classification" class="article-heading"><a href="#1-Image-Classification" class="headerlink" title="1. Image Classification"></a>1. Image Classification<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#1-Image-Classification'}, '*');" class="article-anchor" href="#1-Image-Classification" aria-hidden="true"></a></h3><p>Classifies the main subject in the camera frame in real time using MobileNet V1.</p>
+<p><img src="AIInferencingGuide.assets/01_image_classification.JPG" style="zoom:8%;"> <img src="AIInferencingGuide.assets/02_image_classification.JPG" style="zoom:8%;"> <img src="AIInferencingGuide.assets/03_image_classification.JPG" style="zoom:8%;"></p>
+<ul>
+<li><strong>Model:</strong> <code>mobilenet_v1_1.0_224_quant.tflite</code></li>
+<li><strong>Input:</strong> 224×224 RGB (resized from camera feed)</li>
+<li><strong>Output:</strong> Top-1 class label overlaid on the display</li>
+</ul>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app image_classification \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app image_classification \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app image_classification \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (ArmNN GPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app image_classification \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine armnn \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Avg FPS</th>
+<th>Avg Invoke Time</th>
+<th>vs CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>~28.9</td>
+<td>16.6 ms</td>
+<td>baseline</td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>~27.4</td>
+<td>1.76 ms</td>
+<td><strong>9.4x faster</strong></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>~29.5</td>
+<td>2.42 ms</td>
+<td><strong>6.9x faster</strong></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>~29.7</td>
+<td>38.3 ms</td>
+<td>2.3x slower</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="2-Object-Detection-SSD-MobileNet-V2" class="article-heading"><a href="#2-Object-Detection-SSD-MobileNet-V2" class="headerlink" title="2. Object Detection (SSD MobileNet V2)"></a>2. Object Detection (SSD MobileNet V2)<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#2-Object-Detection-SSD-MobileNet-V2'}, '*');" class="article-anchor" href="#2-Object-Detection-SSD-MobileNet-V2" aria-hidden="true"></a></h3><p>Detects and draws bounding boxes around multiple objects simultaneously using SSD MobileNet V2 trained on the COCO dataset (80 object classes).</p>
+<p><img src="AIInferencingGuide.assets/04_object_detection.JPG" style="zoom:20%;"></p>
+<ul>
+<li><strong>Model:</strong> <code>ssd_mobilenet_v2_coco.tflite</code></li>
+<li><strong>Input:</strong> 300×300 RGB</li>
+<li><strong>Output:</strong> Bounding boxes with class labels overlaid on the display</li>
+</ul>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (ArmNN GPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine armnn \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Avg FPS</th>
+<th>Avg Invoke Time</th>
+<th>vs CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>~30.4</td>
+<td>160.9 ms</td>
+<td>baseline</td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>~31.3</td>
+<td>21.98 ms</td>
+<td><strong>7.3x faster</strong></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>~30.2</td>
+<td>22.83 ms</td>
+<td><strong>7.0x faster</strong></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>~31.3</td>
+<td>112.07 ms</td>
+<td>1.4x slower</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="3-Object-Detection-YOLOv5" class="article-heading"><a href="#3-Object-Detection-YOLOv5" class="headerlink" title="3. Object Detection (YOLOv5)"></a>3. Object Detection (YOLOv5)<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#3-Object-Detection-YOLOv5'}, '*');" class="article-anchor" href="#3-Object-Detection-YOLOv5" aria-hidden="true"></a></h3><p>Detects objects and draws bounding boxes around multiple objects simultaneously using the YOLOv5s model quantized to INT8. Provides improved detection density compared to SSD across 80 COCO object classes.</p>
+<p><img src="AIInferencingGuide.assets/06_object_detection.JPG" style="zoom:20%;"></p>
+<ul>
+<li><strong>Model:</strong> <code>yolov5s-int8.tflite</code></li>
+<li><strong>Input:</strong> 320×320 RGB</li>
+<li><strong>Output:</strong> Bounding boxes with class labels overlaid on the display</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> NNAPI is not supported for this demo.</p>
+</blockquote>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection_yolov5 \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection_yolov5 \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection_yolov5 \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (ArmNN GPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app object_detection_yolov5 \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine armnn \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Avg FPS</th>
+<th>Avg Invoke Time</th>
+<th>vs CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>~30.2</td>
+<td>45.11 ms</td>
+<td>baseline</td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>~30.4</td>
+<td>5.67 ms</td>
+<td><strong>7.9x faster</strong></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>~30.3</td>
+<td>6.38 ms</td>
+<td><strong>7.1x faster</strong></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>~36.2</td>
+<td>87.17 ms</td>
+<td>1.9x slower</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="4-Face-Detection" class="article-heading"><a href="#4-Face-Detection" class="headerlink" title="4. Face Detection"></a>4. Face Detection<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#4-Face-Detection'}, '*');" class="article-anchor" href="#4-Face-Detection" aria-hidden="true"></a></h3><p>Detects human faces in real-time using the NPU and applies a mosaic pixelation effect over each detected face.</p>
+<p><img src="AIInferencingGuide.assets/07_face_detection.JPG" style="zoom:20%;"></p>
+<ul>
+<li><strong>Model:</strong> <code>detect_face.tflite</code></li>
+<li><strong>Input:</strong> Live camera feed</li>
+<li><strong>Output:</strong> Bounding boxes around detected faces overlaid on the display</li>
+</ul>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app face_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app face_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app face_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (ArmNN GPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app face_detection \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine armnn \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Avg FPS</th>
+<th>Avg Invoke Time</th>
+<th>vs CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>~29.4</td>
+<td>73.99 ms</td>
+<td>baseline</td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>~29.7</td>
+<td>11.3 ms</td>
+<td><strong>6.5x faster</strong></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>~29.7</td>
+<td>12.83 ms</td>
+<td><strong>5.8x faster</strong></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>~29.7</td>
+<td>93.62 ms</td>
+<td>1.3x slower</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="5-Pose-Estimation" class="article-heading"><a href="#5-Pose-Estimation" class="headerlink" title="5. Pose Estimation"></a>5. Pose Estimation<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#5-Pose-Estimation'}, '*');" class="article-anchor" href="#5-Pose-Estimation" aria-hidden="true"></a></h3><p>Estimates human body pose by detecting 17 key body joints using PoseNet, and draws a skeleton overlay connecting the joints.</p>
+<p><img src="AIInferencingGuide.assets/08_pose_detection.JPG" style="zoom:18%;"></p>
+<ul>
+<li><strong>Model:</strong> <code>posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite</code></li>
+<li><strong>Input:</strong> 257×257 RGB</li>
+<li><strong>Output:</strong> Skeleton overlay with joint connections drawn on the display</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> NNAPI is not supported for this demo.</p>
+</blockquote>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app pose_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app pose_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app pose_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (ArmNN GPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app pose_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine armnn \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Avg FPS</th>
+<th>Avg Invoke Time</th>
+<th>vs CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>~30.2</td>
+<td>39.7 ms</td>
+<td>baseline</td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>~31.4</td>
+<td>7.2 ms</td>
+<td><strong>5.5x faster</strong></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>~30.3</td>
+<td>8.58 ms</td>
+<td><strong>4.6x faster</strong></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>~30.4</td>
+<td>77.04 ms</td>
+<td>1.9x slower</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="6-Low-Light-Image-Enhancement" class="article-heading"><a href="#6-Low-Light-Image-Enhancement" class="headerlink" title="6. Low Light Image Enhancement"></a>6. Low Light Image Enhancement<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#6-Low-Light-Image-Enhancement'}, '*');" class="article-anchor" href="#6-Low-Light-Image-Enhancement" aria-hidden="true"></a></h3><p>Enhances a dark or underexposed PNG image using the Zero-DCE model. Unlike other demos, this works on a <strong>static image file</strong> rather than a live camera feed, and saves the enhanced result as a PNG file.</p>
+<p><img src="AIInferencingGuide.assets/09_low_light_enhancement.JPG" alt></p>
+<ul>
+<li><strong>Model:</strong> <code>lite-model_zero-dce_1.tflite</code></li>
+<li><strong>Input:</strong> PNG image file - a sample <code>original.png</code> is included in the demo directory</li>
+<li><strong>Output:</strong> Enhanced PNG file saved to the path specified by <code>--export</code></li>
+<li><strong>Fixed input size:</strong> 600×400 pixels</li>
+</ul>
+<blockquote>
+<p><strong>Important:</strong> This demo must be run with the Weston compositor stopped to avoid GPU memory pressure causing the process to be killed. Stop Weston before running and restart it afterwards.</p>
+</blockquote>
+<p><strong>Stop Weston before running:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">killall weston</span><br></pre></td></tr></table></figure>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app low_light_image_enhancement \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --img /usr/bin/nnstreamer-demo/original.png \</span><br><span class="line">  --<span class="built_in">export</span> /home/root/enhanced_cpu.png \</span><br><span class="line">  --width 600 \</span><br><span class="line">  --height 400 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app low_light_image_enhancement \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --img /usr/bin/nnstreamer-demo/original.png \</span><br><span class="line">  --<span class="built_in">export</span> /home/root/enhanced_npu.png \</span><br><span class="line">  --width 600 \</span><br><span class="line">  --height 400 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app low_light_image_enhancement \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --img /usr/bin/nnstreamer-demo/original.png \</span><br><span class="line">  --<span class="built_in">export</span> /home/root/enhanced_neuronsdk.png \</span><br><span class="line">  --width 600 \</span><br><span class="line">  --height 400 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Restart Weston after running:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">weston --backend=drm-backend.so &amp;</span><br></pre></td></tr></table></figure>
+<p><strong>View original vs enhanced images side by side:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">weston-image /usr/bin/nnstreamer-demo/original.png &amp;</span><br><span class="line">weston-image /home/root/enhanced_neuronsdk.png_neuronsdk.png &amp;</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Invoke Time</th>
+<th>vs CPU</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>1243.78 ms</td>
+<td>baseline</td>
+<td></td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>248.08 ms</td>
+<td><strong>5.0x faster</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>101.76 ms</td>
+<td><strong>12.2x faster</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>656.60 ms</td>
+<td>1.9x slower</td>
+<td>SQUARE op unsupported - partial CPU fallback</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="7-Monocular-Depth-Estimation" class="article-heading"><a href="#7-Monocular-Depth-Estimation" class="headerlink" title="7. Monocular Depth Estimation"></a>7. Monocular Depth Estimation<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#7-Monocular-Depth-Estimation'}, '*');" class="article-anchor" href="#7-Monocular-Depth-Estimation" aria-hidden="true"></a></h3><p>Estimates per-pixel depth from a single camera frame using the MiDaS model. The output is a false-colour depth map, warmer colours (yellow/white) indicate closer objects, cooler colours (purple/black) indicate farther objects.</p>
+<p><img src="AIInferencingGuide.assets/10_monocular_depth.JPG" style="zoom:25%;"></p>
+<ul>
+<li><strong>Model:</strong> <code>midas.tflite</code></li>
+<li><strong>Input:</strong> 256×256 RGB (resized from 640×480 camera feed)</li>
+<li><strong>Output:</strong> False-colour depth map rendered via OpenCV window on the display</li>
+<li>Press <code>q</code> to quit the demo</li>
+</ul>
+<p><strong>Run (CPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app monocular_depth_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - stable delegate):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app monocular_depth_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine stable_delegate \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (NPU - NeuronSDK):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app monocular_depth_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --framework neuronsdk \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Run (ArmNN GPU):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/bin/nnstreamer-demo/run_nnstreamer_example.py \</span><br><span class="line">  --app monocular_depth_estimation \</span><br><span class="line">  --cam_type uvc \</span><br><span class="line">  --cam 5 \</span><br><span class="line">  --engine armnn \</span><br><span class="line">  --throughput 1</span><br></pre></td></tr></table></figure>
+<p><strong>Benchmark Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Avg FPS</th>
+<th>vs CPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>~4.17</td>
+<td>baseline</td>
+</tr>
+<tr>
+<td>NPU stable_delegate</td>
+<td>~22.53</td>
+<td><strong>5.4x faster</strong></td>
+</tr>
+<tr>
+<td>NPU NeuronSDK</td>
+<td>~22.69</td>
+<td><strong>5.4x faster</strong></td>
+</tr>
+<tr>
+<td>ArmNN GPU</td>
+<td>~5.54</td>
+<td>1.3x faster</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Benchmarking" class="article-heading"><a href="#Benchmarking" class="headerlink" title="Benchmarking"></a>Benchmarking<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#Benchmarking'}, '*');" class="article-anchor" href="#Benchmarking" aria-hidden="true"></a></h2><h3 id="NPU-DLA-Benchmark-benchmark-py" class="article-heading"><a href="#NPU-DLA-Benchmark-benchmark-py" class="headerlink" title="NPU DLA Benchmark (benchmark.py)"></a>NPU DLA Benchmark (<code>benchmark.py</code>)<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#NPU-DLA-Benchmark-benchmark-py'}, '*');" class="article-anchor" href="#NPU-DLA-Benchmark-benchmark-py" aria-hidden="true"></a></h3><p>This tool compiles a <code>.tflite</code> model to a <code>.dla</code> file for the NPU and measures average inference time across multiple runs using <code>neuronrt</code>.</p>
+<p><strong>Location:</strong> <code>/usr/share/benchmark_dla/benchmark.py</code></p>
+<p><strong>Available NPU targets on OSM-MTK510:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdla3.0</code></td>
+<td>MediaTek Deep Learning Accelerator</td>
+</tr>
+<tr>
+<td><code>vpu</code></td>
+<td>Vector Processing Unit</td>
+</tr>
+<tr>
+<td><code>tflite_cpu</code></td>
+<td>Software fallback (TFLite CPU)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Benchmark a single model on a specific target:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/share/benchmark_dla/benchmark.py \</span><br><span class="line">  --file /usr/bin/nnstreamer-demo/mobilenet_v1_1.0_224_quant.tflite \</span><br><span class="line">  --target mdla3.0 \</span><br><span class="line">  --count 100</span><br></pre></td></tr></table></figure>
+<p><strong>Auto-benchmark all <code>.tflite</code> models in the current directory across all targets:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/bin/nnstreamer-demo/</span><br><span class="line">python3 /usr/share/benchmark_dla/benchmark.py --auto --count 100</span><br></pre></td></tr></table></figure>
+<p><strong>Stress test (retains compiled <code>.dla</code> files after run):</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 /usr/share/benchmark_dla/benchmark.py --stress --count 100</span><br></pre></td></tr></table></figure>
+<p><strong>NPU DLA Benchmark Results (100 inference runs):</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>MDLA 3.0</th>
+<th>VPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MobileNet V1 quant (Image Classification)</td>
+<td>1.29 ms</td>
+<td>13.51 ms</td>
+</tr>
+<tr>
+<td>SSD MobileNet V2 (Object Detection)</td>
+<td>21.76 ms</td>
+<td>❌ Not supported</td>
+</tr>
+<tr>
+<td>YOLOv5s INT8 (Object Detection)</td>
+<td>5.4 ms</td>
+<td>❌ Not supported</td>
+</tr>
+<tr>
+<td>Face Detection</td>
+<td>11.59 ms</td>
+<td>❌ Not supported</td>
+</tr>
+<tr>
+<td>PoseNet MobileNet V1 (Pose Estimation)</td>
+<td>7.49 ms</td>
+<td>❌ Not supported</td>
+</tr>
+<tr>
+<td>MiDaS (Depth Estimation)</td>
+<td>22.25 ms</td>
+<td>❌ Not supported</td>
+</tr>
+<tr>
+<td>Zero-DCE (Low Light Enhancement)</td>
+<td>99.06 ms</td>
+<td>❌ Not supported</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>Note:</strong> The VPU target only supports models with a limited set of operations. MobileNet V1 is the only BSP model that compiles successfully for VPU. All other models must use MDLA 3.0.</p>
+</blockquote>
+<h3 id="TFLite-Benchmark-Model" class="article-heading"><a href="#TFLite-Benchmark-Model" class="headerlink" title="TFLite Benchmark Model"></a>TFLite Benchmark Model<a onclick="parent.postMessage( {msg: '?page=AIInferencingGuide.html#TFLite-Benchmark-Model'}, '*');" class="article-anchor" href="#TFLite-Benchmark-Model" aria-hidden="true"></a></h3><p>Benchmarks <code>.tflite</code> models directly using the TFLite benchmark binary, automatically detecting and testing all available delegates (CPU, GPU, NNAPI).</p>
+<p><strong>Location:</strong> <code>/home/root/benchmark_suite/benchmark_model/</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/root/benchmark_suite/benchmark_model/</span><br><span class="line">./run.sh</span><br></pre></td></tr></table></figure>
+<p><strong>Results:</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>CPU</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MobileNet V2 Float</td>
+<td>24.42 ms</td>
+<td>23.16 ms</td>
+</tr>
+<tr>
+<td>MobileNet V2 Quant</td>
+<td>34.38 ms</td>
+<td>24.60 ms</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2026-03-26T06:49:36.303Z" itemprop="dateModified">Last updated: 2026-03-26</time>
+                <a href="InterfaceTestingGuide.html" class="article-footer-prev" title="Testing Interfaces"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AI-Inferencing"><span class="toc-text">AI Inferencing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hardware"><span class="toc-text">Hardware</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Identify-Your-Camera-Node"><span class="toc-text">Identify Your Camera Node</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inference-Backends"><span class="toc-text">Inference Backends</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo-Applications"><span class="toc-text">Demo Applications</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Common-Arguments"><span class="toc-text">Common Arguments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Image-Classification"><span class="toc-text">1. Image Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Object-Detection-SSD-MobileNet-V2"><span class="toc-text">2. Object Detection (SSD MobileNet V2)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Object-Detection-YOLOv5"><span class="toc-text">3. Object Detection (YOLOv5)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Face-Detection"><span class="toc-text">4. Face Detection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Pose-Estimation"><span class="toc-text">5. Pose Estimation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Low-Light-Image-Enhancement"><span class="toc-text">6. Low Light Image Enhancement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Monocular-Depth-Estimation"><span class="toc-text">7. Monocular Depth Estimation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Benchmarking"><span class="toc-text">Benchmarking</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NPU-DLA-Benchmark-benchmark-py"><span class="toc-text">NPU DLA Benchmark (benchmark.py)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TFLite-Benchmark-Model"><span class="toc-text">TFLite Benchmark Model</span></a></li></ol></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">Unboxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoBuildGuide.html" class="sidebar-link first">Building Yocto</a><a href="YoctoFlashingGuide.html" class="sidebar-link">Flashing Yocto</a><a href="ReadingDebugConsole.html" class="sidebar-link">Reading Console</a><a href="InterfaceTestingGuide.html" class="sidebar-link">Testing Interfaces</a></details open></strong><strong class="sidebar-title"><details open><summary>Al Intefencing</summary><a href="AIInferencingGuide.html" class="sidebar-link current first">AI Demo Applications</a></details open></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/osm/osm/" class="mobile-nav-link  header">menu.OSM</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">Unboxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoBuildGuide.html" class="mobile-nav-link first">Building Yocto</a><a href="YoctoFlashingGuide.html" class="mobile-nav-link">Flashing Yocto</a><a href="ReadingDebugConsole.html" class="mobile-nav-link">Reading Console</a><a href="InterfaceTestingGuide.html" class="mobile-nav-link">Testing Interfaces</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Al Intefencing</summary><a href="AIInferencingGuide.html" class="mobile-nav-link current first">AI Demo Applications</a></details open></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/osm/js/lang_select.js"></script>
+
+
+<script src="/osm/js/toc.js"></script>
+
+
+<script src="/osm/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html> 
