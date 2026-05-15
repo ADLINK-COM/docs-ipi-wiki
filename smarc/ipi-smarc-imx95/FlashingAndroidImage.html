@@ -123,7 +123,7 @@
     </nav>
 	
 	<div id = "changeurl">
-	    <script>window.onload = function() {parent.postMessage( {msg: '?page=FlashingAndroidImage.html'}, '*');}</script>
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=FlashingAndroidImage.html#FlashingAndroidImage.html'}, '*');}</script>
 
 	</div>
 	
@@ -151,7 +151,7 @@
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Flashing-Android-Image" class="article-heading"><a href="#Flashing-Android-Image" class="headerlink" title="Flashing Android Image"></a>Flashing Android Image<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#Flashing-Android-Image'}, '*');" class="article-anchor" href="#Flashing-Android-Image" aria-hidden="true"></a></h1><h2 id="1-Boot-from-SD-card" class="article-heading"><a href="#1-Boot-from-SD-card" class="headerlink" title="1.Boot from SD card"></a>1.Boot from SD card<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#1-Boot-from-SD-card'}, '*');" class="article-anchor" href="#1-Boot-from-SD-card" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ol>
+                <h1 id="Flashing-Android-Image" class="article-heading"><a href="#Flashing-Android-Image" class="headerlink" title="Flashing Android Image"></a>Flashing Android Image<a class="article-anchor" href="#Flashing-Android-Image" aria-hidden="true"></a></h1><h2 id="1-Boot-from-SD-card" class="article-heading"><a href="#1-Boot-from-SD-card" class="headerlink" title="1.Boot from SD card"></a>1.Boot from SD card<a class="article-anchor" href="#1-Boot-from-SD-card" aria-hidden="true"></a></h2><h3 id="Prerequisites" class="article-heading"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites<a class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h3><ol>
 <li><p>Insert the micro SD card into the Linux host machine using a USB adapter.</p>
 </li>
 <li><p>Navigate to the Android image directory: <code>adlink-lec-imx95-android-vanillaicecream_V2_R1_08082025</code></p>
@@ -165,7 +165,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install android-sdk-libsparse-utils</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp tools/bin/make_f2fs  /usr/bin</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x /usr/bin/make_f2fs /usr/bin/simg2img</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/smarc/ipi-smarc-imx95/FlashingAndroidImage.assets/sd22.png"></p>
-<h3 id="Flash-image-to-SD-card" class="article-heading"><a href="#Flash-image-to-SD-card" class="headerlink" title="Flash image to SD card"></a>Flash image to SD card<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#Flash-image-to-SD-card'}, '*');" class="article-anchor" href="#Flash-image-to-SD-card" aria-hidden="true"></a></h3><p>Run the following command to partition a 32 GB Micro-SD card for i.MX95:</p>
+<h3 id="Flash-image-to-SD-card" class="article-heading"><a href="#Flash-image-to-SD-card" class="headerlink" title="Flash image to SD card"></a>Flash image to SD card<a class="article-anchor" href="#Flash-image-to-SD-card" aria-hidden="true"></a></h3><p>Run the following command to partition a 32 GB Micro-SD card for i.MX95:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./imx-sdcard-partition.sh -f imx95 /dev/sdX</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -234,13 +234,13 @@
 <blockquote>
 <p>The first boot from the SD card may take longer. Subsequent boots will be faster</p>
 </blockquote>
-<h2 id="2-Boot-from-eMMC" class="article-heading"><a href="#2-Boot-from-eMMC" class="headerlink" title="2.Boot from eMMC"></a>2.Boot from eMMC<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#2-Boot-from-eMMC'}, '*');" class="article-anchor" href="#2-Boot-from-eMMC" aria-hidden="true"></a></h2><p>Navigate to the Android image directory: <code>adlink-lec-imx95-android-vanillaicecream_V2_R1_08082025</code></p>
-<h3 id="Download-uuu-utility" class="article-heading"><a href="#Download-uuu-utility" class="headerlink" title="Download uuu utility"></a>Download uuu utility<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#Download-uuu-utility'}, '*');" class="article-anchor" href="#Download-uuu-utility" aria-hidden="true"></a></h3><p>Download the <strong>UUU (Universal Update Utility)</strong> from the link below and copy it to <code>/usr/bin</code>:</p>
+<h2 id="2-Boot-from-eMMC" class="article-heading"><a href="#2-Boot-from-eMMC" class="headerlink" title="2.Boot from eMMC"></a>2.Boot from eMMC<a class="article-anchor" href="#2-Boot-from-eMMC" aria-hidden="true"></a></h2><p>Navigate to the Android image directory: <code>adlink-lec-imx95-android-vanillaicecream_V2_R1_08082025</code></p>
+<h3 id="Download-uuu-utility" class="article-heading"><a href="#Download-uuu-utility" class="headerlink" title="Download uuu utility"></a>Download uuu utility<a class="article-anchor" href="#Download-uuu-utility" aria-hidden="true"></a></h3><p>Download the <strong>UUU (Universal Update Utility)</strong> from the link below and copy it to <code>/usr/bin</code>:</p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.201/uuu">https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.201/uuu</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo cp ~/Downloads/uuu /usr/bin</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x /usr/bin/uuu</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/smarc/ipi-smarc-imx95/FlashingAndroidImage.assets/emmc11.png"></p>
-<h3 id="Boot-into-Recovery-Mode" class="article-heading"><a href="#Boot-into-Recovery-Mode" class="headerlink" title="Boot into Recovery Mode"></a>Boot into Recovery Mode<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#Boot-into-Recovery-Mode'}, '*');" class="article-anchor" href="#Boot-into-Recovery-Mode" aria-hidden="true"></a></h3><ul>
+<h3 id="Boot-into-Recovery-Mode" class="article-heading"><a href="#Boot-into-Recovery-Mode" class="headerlink" title="Boot into Recovery Mode"></a>Boot into Recovery Mode<a class="article-anchor" href="#Boot-into-Recovery-Mode" aria-hidden="true"></a></h3><ul>
 <li><p>Set the boot switch into <strong>0001</strong>(Recovery mode)</p>
 <table>
 <thead>
@@ -294,7 +294,7 @@
 <li><p>Power on the board.</p>
 </li>
 </ul>
-<h3 id="Flash-image-to-eMMC" class="article-heading"><a href="#Flash-image-to-eMMC" class="headerlink" title="Flash image to eMMC"></a>Flash image to eMMC<a onclick="parent.postMessage( {msg: '?page=FlashingAndroidImage.html#Flash-image-to-eMMC'}, '*');" class="article-anchor" href="#Flash-image-to-eMMC" aria-hidden="true"></a></h3><p>Run the below command to verify if your i.MX95 board is detected over OTG by the UUU (Universal Update Utility) tool:</p>
+<h3 id="Flash-image-to-eMMC" class="article-heading"><a href="#Flash-image-to-eMMC" class="headerlink" title="Flash image to eMMC"></a>Flash image to eMMC<a class="article-anchor" href="#Flash-image-to-eMMC" aria-hidden="true"></a></h3><p>Run the below command to verify if your i.MX95 board is detected over OTG by the UUU (Universal Update Utility) tool:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> uuu -lsusb</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/smarc/ipi-smarc-imx95/FlashingAndroidImage.assets/emmc1.png"></p>
@@ -376,7 +376,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link current">Flashing Android</a></details></strong><strong class="sidebar-title"><details open><summary>Al Inferencing</summary><a href="AI_Inferencing_eIQ.html" class="sidebar-link first">eIQ® Toolkit</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UnBoxing.html" class="sidebar-link">UnBoxing</a><a href="HowToSetup.html" class="sidebar-link">How to Setup</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="sidebar-link first">Reading Console</a><a href="TestInterface.html" class="sidebar-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="sidebar-link">Building Yocto</a><a href="YoctoFlash.html" class="sidebar-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="sidebar-link current">Flashing Android</a></details></strong><strong class="sidebar-title"><details open><summary>Al Inferencing</summary><a href="AI_Inferencing_eIQ.html" class="sidebar-link first">eIQ® Toolkit</a></details></strong>
   </div>
 </aside>
     </div>
@@ -434,7 +434,7 @@
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link current">Flashing Android</a></details></strong><strong class="mobile-nav-title"><details open><summary>Al Inferencing</summary><a href="AI_Inferencing_eIQ.html" class="mobile-nav-link first">eIQ® Toolkit</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UnBoxing.html" class="mobile-nav-link">UnBoxing</a><a href="HowToSetup.html" class="mobile-nav-link">How to Setup</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Documentation</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="ReadConsole.html" class="mobile-nav-link first">Reading Console</a><a href="TestInterface.html" class="mobile-nav-link">Testing Interfaces</a><a href="YoctoBuildGuide.html" class="mobile-nav-link">Building Yocto</a><a href="YoctoFlash.html" class="mobile-nav-link">Flashing Yocto</a><a href="FlashingAndroidImage.html" class="mobile-nav-link current">Flashing Android</a></details></strong><strong class="mobile-nav-title"><details open><summary>Al Inferencing</summary><a href="AI_Inferencing_eIQ.html" class="mobile-nav-link first">eIQ® Toolkit</a></details></strong>
     
   </div>
   
