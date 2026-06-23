@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
+  <title>ADLINK Industrial Pi Wiki</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.html">
+  <!-- Alternative links -->
+  
+    
+  
+
+  <!--
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  -->
+
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/osm/images/favicon.ico">
+  <!-- CSS -->
+
+  <script
+    src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+  jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+  });
+
+  $('button').addClass('btn-primary').text('Switch to Orange Tab');
+  $('button').click(function(){
+        $('#tabs a[href=#orange]').tab('show');
+  });
+
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+});
+
+$('button').addClass('btn-primary').text('Switch to Orange Tab');
+$('button').click(function(){
+      $('#tabs a[href=#ava]').tab('show');
+});
+
+</script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+ <!-- Hotjar Tracking Code for https://ipi.wiki 
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+-->
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/osm/css/navy.css">
+
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/osm//css/font/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"> -->
+  <!-- RSS -->
+  <link rel="alternate" href="/osm/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Testing InterfacesThis document provides step-by-step instructions for validating the hardware interfaces on the ADLINK OSM-520 platform. It covers the testing procedures for various peripherals and i">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ADLINK Industrial Pi Wiki">
+<meta property="og:url" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.html">
+<meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
+<meta property="og:description" content="Testing InterfacesThis document provides step-by-step instructions for validating the hardware interfaces on the ADLINK OSM-520 platform. It covers the testing procedures for various peripherals and i">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/lsblk.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/sd-rw.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/i2clist.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/i2cbus.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/spidev0.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/spidev1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/lsusb.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/aplay-dp.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/speakertest.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/usbcam.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/usbcam_op.jpg">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/pwm-1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/pwm-2.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/pingtest.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/mlan.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/lspci.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/nvme-rw.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/rtc1.png">
+<meta property="og:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/rtc2.png">
+<meta property="article:published_time" content="2026-06-23T06:41:01.562Z">
+<meta property="article:modified_time" content="2026-06-23T06:41:01.562Z">
+<meta property="article:author" content="ADLINK Technology Inc. All Rights Reserved.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.ipi.wiki/osm/ipi-osm-520/TestingInterface.assets/lsblk.png">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-161199547-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header" class="header-wrapper">
+  <div id="header-inner" class="inner wrapper">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a class="navbar-brand" href="https://www.ipi.wiki/" rel="external nofollow noreferrer" target="_self">
+      
+      <a href="https://www.ipi.wiki/" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Home</a>
+      <div style="display:inline-block"><div class="btn-group"><a href="/osm/osm/" class="main-nav-link  header">menu.OSM</a></div>
+      <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/adlink" class="main-nav-link"><i class="fa fa-github-alt"></i> GitHub</a>
+      <a href="https://www.ipi.wiki/community/forum" rel="external nofollow noreferrer" class="main-nav-link" target="_self"> Community </a>    
+    </nav>
+	
+	<div id = "changeurl">
+	    <script>window.onload = function() {parent.postMessage( {msg: '?page=TestingInterface.html'}, '*');}</script>
+
+	</div>
+	
+
+	
+
+
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content bullets" itemprop="articleBody">
+                <h1 id="Testing-Interfaces" class="article-heading"><a href="#Testing-Interfaces" class="headerlink" title="Testing Interfaces"></a>Testing Interfaces<a class="article-anchor" href="#Testing-Interfaces" aria-hidden="true"></a></h1><p>This document provides step-by-step instructions for validating the hardware interfaces on the ADLINK OSM-520 platform. It covers the testing procedures for various peripherals and interfaces to ensure proper functionality.</p>
+<h2 id="1-GPIO" class="article-heading"><a href="#1-GPIO" class="headerlink" title="1. GPIO"></a>1. GPIO<a class="article-anchor" href="#1-GPIO" aria-hidden="true"></a></h2><p>The connectors <strong>CN2901</strong> (7 pins) and <strong>CN2904</strong> (1 pin) provide a total of <strong>8 GPIOs</strong>. The table below maps the physical pin numbers on these connectors to their corresponding Linux GPIO numbers.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>PIN NAME</th>
+<th>CONNECTOR</th>
+<th>PIN NUMBER ON PHYSICAL CONNECTOR</th>
+<th>LINUX OS CHIP NUMBER</th>
+<th>LINUX OS PIN OFFSET IN CHIP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_GPIO0</td>
+<td>CN2901</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr>
+<td>E_GPIO1</td>
+<td>CN2901</td>
+<td>11</td>
+<td>1</td>
+<td>9</td>
+</tr>
+<tr>
+<td>E_GPIO2</td>
+<td>CN2901</td>
+<td>13</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>E_GPIO3</td>
+<td>CN2901</td>
+<td>15</td>
+<td>1</td>
+<td>11</td>
+</tr>
+<tr>
+<td>E_GPIO4</td>
+<td>CN2901</td>
+<td>12</td>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>E_GPIO5</td>
+<td>CN2901</td>
+<td>16</td>
+<td>1</td>
+<td>13</td>
+</tr>
+<tr>
+<td>E_GPIO6</td>
+<td>CN2901</td>
+<td>18</td>
+<td>1</td>
+<td>14</td>
+</tr>
+<tr>
+<td>E_GPIO7</td>
+<td>CN2904</td>
+<td>2</td>
+<td>1</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Setting-GPIO-as-Output" class="article-heading"><a href="#Setting-GPIO-as-Output" class="headerlink" title="Setting GPIO as Output"></a>Setting GPIO as Output<a class="article-anchor" href="#Setting-GPIO-as-Output" aria-hidden="true"></a></h3><p>Use the following command to configure a GPIO as output and set its value. The pin voltage can be verified using a multimeter.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpioset -c &lt;LINUX OS CHIP NUMBER&gt; &lt;LINUX OS PIN OFFSET IN CHIP&gt;=&lt;0 or 1&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Examples:</strong></p>
+<p>a) Set pin 7 on connector CN2901 to output high:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpioset -c 1 7=1</span><br></pre></td></tr></table></figure>
+<p>b) Set pin 2 on connector CN2904 to output low:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpioset -c 1 15=0</span><br></pre></td></tr></table></figure>
+<h3 id="Setting-GPIO-as-Input" class="article-heading"><a href="#Setting-GPIO-as-Input" class="headerlink" title="Setting GPIO as Input"></a>Setting GPIO as Input<a class="article-anchor" href="#Setting-GPIO-as-Input" aria-hidden="true"></a></h3><p>Use the following command to read the value of a GPIO pin.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpioget -c &lt;LINUX OS CHIP NUMBER&gt; &lt;LINUX OS PIN OFFSET IN CHIP&gt;</span><br></pre></td></tr></table></figure>
+<p>To verify input functionality, perform a <strong>loopback test</strong> by connecting an output pin to an input pin and observing the value change.</p>
+<p><strong>Examples:</strong></p>
+<p>a) Read the value from pin 18 on connector CN2901:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpioget -c 1 14</span><br></pre></td></tr></table></figure>
+<p>b) Read the value from pin 15 on connector CN2901:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpioget -c 1 11</span><br></pre></td></tr></table></figure>
+<h2 id="2-SD" class="article-heading"><a href="#2-SD" class="headerlink" title="2. SD"></a>2. SD<a class="article-anchor" href="#2-SD" aria-hidden="true"></a></h2><p>Insert the SD card, power on the board, and run the following command to confirm detection:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk</span><br></pre></td></tr></table></figure>
+<p>The SD card will appear as a device named <code>mmcblk1</code>, along with its partitions (e.g., <code>mmcblk1p1</code>, <code>mmcblk1p2</code>).</p>
+<p><img src="./TestingInterface.assets/lsblk.png" style="zoom: 80%;"></p>
+<p><strong>Write Test:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/urandom of=/dev/mmcblk1 bs=1M count=100 oflag=direct</span><br></pre></td></tr></table></figure>
+<p><strong>Read Test:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/mmcblk1 of=/dev/null bs=1M count=100 iflag=direct</span><br></pre></td></tr></table></figure>
+<p>Both commands will report the data transferred and the speed on completion. A successful test will show 100 MB transferred with no errors.</p>
+<p><img src="./TestingInterface.assets/sd-rw.png" style="zoom: 80%;"></p>
+<h2 id="3-I2C" class="article-heading"><a href="#3-I2C" class="headerlink" title="3. I2C"></a>3. I2C<a class="article-anchor" href="#3-I2C" aria-hidden="true"></a></h2><p>The module features six I2C buses. To list all available I2C buses, run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">i2cdetect -y -l</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/i2clist.png" style="zoom: 80%;"></p>
+<p>To scan for connected devices on a specific bus, use:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">i2cdetect -y -r &lt;i2c-bus&gt;</span><br></pre></td></tr></table></figure>
+<p>The following external I2C interfaces are available:</p>
+<ul>
+<li>Pins <strong>CN2901-3 (SDA)</strong> and <strong>CN2901-5 (SCL)</strong> correspond to <strong>I2C bus 0</strong> in Linux.</li>
+<li>Pins <strong>CN2904-7 (SDA)</strong> and <strong>CN2904-8 (SCL)</strong> correspond to <strong>I2C bus 1</strong> in Linux.</li>
+</ul>
+<p><img src="./TestingInterface.assets/i2cbus.png" style="zoom: 80%;"></p>
+<p>The output of <code>i2cdetect -y -r</code> will display detected devices across the address grid. The values are interpreted as follows:</p>
+<ul>
+<li>A hex value indicates the detected device address on that bus.</li>
+<li><code>UU</code> indicates the address is already in use by a kernel driver.</li>
+<li><code>--</code> indicates no device is present at that address.</li>
+</ul>
+<h2 id="4-SPI" class="article-heading"><a href="#4-SPI" class="headerlink" title="4. SPI"></a>4. SPI<a class="article-anchor" href="#4-SPI" aria-hidden="true"></a></h2><p>The OSM-520 provides two SPI user interfaces: <strong>spidev0.0</strong> and <strong>spidev1.0</strong>. Both can be verified by performing a physical loopback test.</p>
+<h3 id="SPI-A-spidev0-0" class="article-heading"><a href="#SPI-A-spidev0-0" class="headerlink" title="SPI A (spidev0.0)"></a>SPI A (spidev0.0)<a class="article-anchor" href="#SPI-A-spidev0-0" aria-hidden="true"></a></h3><p><strong>Hardware setup:</strong> Short the <strong>SPI_A_SDO (CN2902-4)</strong> and <strong>SPI_A_SDI (CN2902-6)</strong> pins on the connector.</p>
+<p>Then run the following commands to send a test binary and verify the loopback:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">modprobe spidev</span><br><span class="line">ls -l /dev/spidev0.0</span><br><span class="line">dd <span class="keyword">if</span>=/dev/random of=test.bin bs=96 count=1</span><br><span class="line">spidev_test -D /dev/spidev0.0 -s 400000 -i test.bin -v</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/spidev0.png" style="zoom: 80%;"></p>
+<h3 id="SPI-B-spidev1-0" class="article-heading"><a href="#SPI-B-spidev1-0" class="headerlink" title="SPI B (spidev1.0)"></a>SPI B (spidev1.0)<a class="article-anchor" href="#SPI-B-spidev1-0" aria-hidden="true"></a></h3><p><strong>Hardware setup:</strong> Short the <strong>SPI_B_SDI (CN2901-19)</strong> and <strong>SPI_B_SDO (CN2904-1)</strong> pins on the connector.</p>
+<p>Then run the following commands to send a test binary and verify the loopback:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">modprobe spidev</span><br><span class="line">ls -l /dev/spidev1.0</span><br><span class="line">dd <span class="keyword">if</span>=/dev/random of=test.bin bs=96 count=1</span><br><span class="line">spidev_test -D /dev/spidev1.0 -s 400000 -i test.bin -v</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/spidev1.png" style="zoom: 80%;"></p>
+<p>For both interfaces, the output will display the transmitted (TX) and received (RX) data. A successful loopback is confirmed when the RX data matches the TX data. If the RX data is all zeros or does not match, the loopback connection is not correct.</p>
+<h2 id="5-USB" class="article-heading"><a href="#5-USB" class="headerlink" title="5. USB"></a>5. USB<a class="article-anchor" href="#5-USB" aria-hidden="true"></a></h2><p>The board provides four external USB connectors: two USB 3.0 ports and two USB 2.0 ports.</p>
+<p>Connect any USB device (e.g., a USB storage drive) and verify detection using:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsusb -tv</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/lsusb.png" style="zoom: 80%;"></p>
+<p>The output lists all USB buses and their connected devices in a tree structure, showing the device class, driver, and speed. For example, a USB 2.0 hub with a storage drive, keyboard, and mouse connected would appear under a 480M bus, while a USB 3.0 hub with a network adapter would appear under a 20000M/x2 bus.</p>
+<h2 id="6-Display-Interfaces" class="article-heading"><a href="#6-Display-Interfaces" class="headerlink" title="6. Display Interfaces"></a>6. Display Interfaces<a class="article-anchor" href="#6-Display-Interfaces" aria-hidden="true"></a></h2><p>Each display interface requires the appropriate Device Tree Overlay (DTO) to be set before booting. Set the boot configuration using the relevant command below and reboot the board. After reboot, verify that the display output is active.</p>
+<h3 id="DP" class="article-heading"><a href="#DP" class="headerlink" title="DP"></a>DP<a class="article-anchor" href="#DP" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-panel-dp.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h3 id="eDP" class="article-heading"><a href="#eDP" class="headerlink" title="eDP"></a>eDP<a class="article-anchor" href="#eDP" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-panel-edp.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h3 id="LVDS-g101eat026" class="article-heading"><a href="#LVDS-g101eat026" class="headerlink" title="LVDS (g101eat026)"></a>LVDS (g101eat026)<a class="article-anchor" href="#LVDS-g101eat026" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-panel-lvds-g101eat026.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h3 id="DSI" class="article-heading"><a href="#DSI" class="headerlink" title="DSI"></a>DSI<a class="article-anchor" href="#DSI" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-panel-dsi.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h2 id="7-Audio" class="article-heading"><a href="#7-Audio" class="headerlink" title="7. Audio"></a>7. Audio<a class="article-anchor" href="#7-Audio" aria-hidden="true"></a></h2><h3 id="DP-Audio" class="article-heading"><a href="#DP-Audio" class="headerlink" title="DP Audio"></a>DP Audio<a class="article-anchor" href="#DP-Audio" aria-hidden="true"></a></h3><p>Connect a DP monitor, then first identify the sound card number by running:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">aplay -l | grep -i hdmi</span><br></pre></td></tr></table></figure>
+<p>This will output the card and device number for DP audio playback.</p>
+<p><img src="./TestingInterface.assets/aplay-dp.png" style="zoom: 80%;"></p>
+<p>In this case, the card number is <code>1</code> and the device number is <code>5</code>. Use these values in the commands below. Configure the audio routing and run the speaker test:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">amixer -c 1 cset name=<span class="string">&#x27;HDMI_CH0_MUX&#x27;</span> <span class="string">&#x27;CH0&#x27;</span></span><br><span class="line">amixer -c 1 cset name=<span class="string">&#x27;HDMI_CH1_MUX&#x27;</span> <span class="string">&#x27;CH1&#x27;</span></span><br><span class="line">amixer -c 1 cset name=<span class="string">&#x27;DPTX_OUT_MUX&#x27;</span> <span class="string">&#x27;Connect&#x27;</span></span><br><span class="line">speaker-test -D hw:1,5 -c 2 -t sine -f 440</span><br></pre></td></tr></table></figure>
+<p>A successful test will cycle through Front Left and Front Right channels, with the sine tone audible on the connected DP monitor’s speakers.</p>
+<p><img src="./TestingInterface.assets/speakertest.png" style="zoom: 80%;"></p>
+<h2 id="8-Camera-USB" class="article-heading"><a href="#8-Camera-USB" class="headerlink" title="8. Camera (USB)"></a>8. Camera (USB)<a class="article-anchor" href="#8-Camera-USB" aria-hidden="true"></a></h2><p>A USB webcam can be tested using the following command. Replace <code>[x]</code> with the appropriate video device number (e.g., <code>video2</code>):</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gst-launch-1.0 v4l2src name=src device=/dev/video[x] io-mode=mmap ! video/x-raw,width=1280,height=720 ! autovideosink</span><br></pre></td></tr></table></figure>
+<p>The camera output will be displayed on the DP output.</p>
+<p><img src="./TestingInterface.assets/usbcam.png" style="zoom: 80%;"></p>
+<p><img src="./TestingInterface.assets/usbcam_op.jpg" style="zoom: 80%;"></p>
+<h2 id="9-Camera-1-CSI-CN2701" class="article-heading"><a href="#9-Camera-1-CSI-CN2701" class="headerlink" title="9. Camera 1 - CSI (CN2701)"></a>9. Camera 1 - CSI (CN2701)<a class="article-anchor" href="#9-Camera-1-CSI-CN2701" aria-hidden="true"></a></h2><h3 id="IMX258" class="article-heading"><a href="#IMX258" class="headerlink" title="IMX258"></a>IMX258<a class="article-anchor" href="#IMX258" aria-hidden="true"></a></h3><p><strong>Step 1:</strong> Set the boot configuration to load the IMX258 camera device tree overlay, then reboot:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-camera-imx258-dual-std-osm520.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> After reboot, navigate to the tools directory, source the camera test script and run the test case:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> tools/</span><br><span class="line"><span class="built_in">source</span> ./genio_520_720_standard_v4l2_camera_testcase_20250905.sh</span><br><span class="line">SINGLE_CAMERA_IMX258_CSI0</span><br></pre></td></tr></table></figure>
+<p>A successful test will show a steady frame rate output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br></pre></td></tr></table></figure>
+<h3 id="OV5640" class="article-heading"><a href="#OV5640" class="headerlink" title="OV5640"></a>OV5640<a class="article-anchor" href="#OV5640" aria-hidden="true"></a></h3><p><strong>Step 1:</strong> Set the boot configuration to load the OV5640 camera device tree overlay, then reboot:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-camera-ov5640-dual-std-osm520.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> After reboot, navigate to the tools directory, source the camera test script and run the test case:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> tools/</span><br><span class="line"><span class="built_in">source</span> ./genio_520_720_standard_v4l2_camera_testcase_20250905.sh</span><br><span class="line">SINGLE_CAMERA_OV5640_CSI0</span><br></pre></td></tr></table></figure>
+<p>Verify that the camera preview is displayed on the DP display.</p>
+<h2 id="10-Camera-2-CSI-CN2702" class="article-heading"><a href="#10-Camera-2-CSI-CN2702" class="headerlink" title="10. Camera 2 - CSI (CN2702)"></a>10. Camera 2 - CSI (CN2702)<a class="article-anchor" href="#10-Camera-2-CSI-CN2702" aria-hidden="true"></a></h2><h3 id="IMX258-1" class="article-heading"><a href="#IMX258-1" class="headerlink" title="IMX258"></a>IMX258<a class="article-anchor" href="#IMX258-1" aria-hidden="true"></a></h3><p><strong>Step 1:</strong> Set the boot configuration to load the IMX258 camera device tree overlay, then reboot:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-camera-imx258-dual-std-osm520.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> After reboot, navigate to the tools directory, source the camera test script and run the test case:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> tools/</span><br><span class="line"><span class="built_in">source</span> ./genio_520_720_standard_v4l2_camera_testcase_20250905.sh</span><br><span class="line">SINGLE_CAMERA_IMX258_CSI1</span><br></pre></td></tr></table></figure>
+<p>A successful test will show a steady frame rate output:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 29.80 fps</span><br></pre></td></tr></table></figure>
+<h3 id="OV5640-1" class="article-heading"><a href="#OV5640-1" class="headerlink" title="OV5640"></a>OV5640<a class="article-anchor" href="#OV5640-1" aria-hidden="true"></a></h3><p><strong>Step 1:</strong> Set the boot configuration to load the OV5640 camera device tree overlay with DP panel support, then reboot:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fw_setenv boot_conf <span class="string">&quot;#conf-mediatek_osm-520_mtk520.dtb#conf-ufs.dtbo#conf-apusys.dtbo#conf-panel-dp.dtbo#conf-camera-ov5640-dual-std-osm520.dtbo&quot;</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> After reboot, navigate to the tools directory, source the camera test script and run the test case:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> tools/</span><br><span class="line"><span class="built_in">source</span> ./genio_520_720_standard_v4l2_camera_testcase_20250905.sh</span><br><span class="line">SINGLE_CAMERA_OV5640_CSI1</span><br></pre></td></tr></table></figure>
+<p>Verify that the camera preview is displayed on the DP display.</p>
+<h2 id="11-Pulse-Width-Modulation-PWM" class="article-heading"><a href="#11-Pulse-Width-Modulation-PWM" class="headerlink" title="11. Pulse Width Modulation (PWM)"></a>11. Pulse Width Modulation (PWM)<a class="article-anchor" href="#11-Pulse-Width-Modulation-PWM" aria-hidden="true"></a></h2><p>The OSM-520 carrier provides PWM via <code>pwmchip1</code>. The confirmed pin mappings are listed below:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>PIN NAME</th>
+<th>CONNECTOR</th>
+<th>PIN NUMBER ON CONNECTOR</th>
+<th>LINUX OS PWM NUMBER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PWM_1</td>
+<td>CN2904</td>
+<td>9</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PWM_2</td>
+<td>CN2904</td>
+<td>11</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Generating-PWM" class="article-heading"><a href="#Generating-PWM" class="headerlink" title="Generating PWM"></a>Generating PWM<a class="article-anchor" href="#Generating-PWM" aria-hidden="true"></a></h3><p>Use the following commands to generate a PWM signal. Period and duty cycle values must be specified in <strong>nanoseconds</strong>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sys/class/pwm/pwmchip1</span><br><span class="line"><span class="built_in">echo</span> &lt;LINUX OS PWM NUMBER&gt; &gt; <span class="built_in">export</span></span><br><span class="line"><span class="built_in">cd</span> pwm&lt;LINUX OS PWM NUMBER&gt;/</span><br><span class="line"><span class="built_in">echo</span> &lt;PERIOD_IN_NANO_SECONDS&gt; &gt; period</span><br><span class="line"><span class="built_in">echo</span> &lt;DUTY_CYCLE_IN_NANO_SECONDS&gt; &gt; duty_cycle</span><br><span class="line"><span class="built_in">echo</span> 1 &gt; <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<p><strong>Example 1:</strong> Generate a 1 kHz signal with 50% duty cycle on pin CN2904-9 (PWM_1, Linux PWM number 1):</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Period     = 1 / 1000 Hz = 1 ms = 1,000,000 ns</span><br><span class="line">Duty cycle = 1,000,000 × 0.5 = 500,000 ns</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sys/class/pwm/pwmchip1</span><br><span class="line"><span class="built_in">echo</span> 1 &gt; <span class="built_in">export</span></span><br><span class="line"><span class="built_in">cd</span> pwm1/</span><br><span class="line"><span class="built_in">echo</span> 1000000 &gt; period</span><br><span class="line"><span class="built_in">echo</span> 500000 &gt; duty_cycle</span><br><span class="line"><span class="built_in">echo</span> 1 &gt; <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong> Generate a 1 kHz, 50% duty cycle signal on pin CN2904-11 (PWM_2, Linux PWM number 2):</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sys/class/pwm/pwmchip1</span><br><span class="line"><span class="built_in">echo</span> 2 &gt; <span class="built_in">export</span></span><br><span class="line"><span class="built_in">cd</span> pwm2/</span><br><span class="line"><span class="built_in">echo</span> 1000000 &gt; period</span><br><span class="line"><span class="built_in">echo</span> 500000 &gt; duty_cycle</span><br><span class="line"><span class="built_in">echo</span> 1 &gt; <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<h3 id="Testing-PWM-Signals" class="article-heading"><a href="#Testing-PWM-Signals" class="headerlink" title="Testing PWM Signals"></a>Testing PWM Signals<a class="article-anchor" href="#Testing-PWM-Signals" aria-hidden="true"></a></h3><p>Connect an oscilloscope probe to the PWM pin to verify the duty cycle and period. In the examples below, a PWM signal of 1 kHz with 50% duty cycle is generated on pin 9 of CN2904.</p>
+<p><strong>Period Measurement (1 kHz signal):</strong></p>
+<p><img src="./TestingInterface.assets/pwm-1.png" style="zoom: 80%;"></p>
+<p><strong>Duty Cycle Measurement (50% duty cycle):</strong></p>
+<p>(Note: The measurement shows the LOW time, which is 0.5 ms, corresponding to a 50% duty cycle of ON time.)</p>
+<p><img src="./TestingInterface.assets/pwm-2.png" style="zoom: 80%;"></p>
+<h3 id="Disabling-PWM" class="article-heading"><a href="#Disabling-PWM" class="headerlink" title="Disabling PWM"></a>Disabling PWM<a class="article-anchor" href="#Disabling-PWM" aria-hidden="true"></a></h3><p>To disable a PWM signal, run the following command on the exported PWM channel:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 0 &gt; <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<h2 id="12-UART" class="article-heading"><a href="#12-UART" class="headerlink" title="12. UART"></a>12. UART<a class="article-anchor" href="#12-UART" aria-hidden="true"></a></h2><p>The board provides two general-purpose UART interfaces. Their connector mappings and Linux device names are listed below:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>PIN NAME</th>
+<th>CONNECTOR</th>
+<th>PIN NUMBER ON CONNECTOR</th>
+<th>LINUX DEVICE NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART_C</td>
+<td>CN2901</td>
+<td>8 (TX), 10 (RX)</td>
+<td>ttyS1</td>
+</tr>
+<tr>
+<td>UART_D</td>
+<td>CN2904</td>
+<td>15 (TX), 17 (RX)</td>
+<td>ttyS3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="UART-Testing" class="article-heading"><a href="#UART-Testing" class="headerlink" title="UART Testing"></a>UART Testing<a class="article-anchor" href="#UART-Testing" aria-hidden="true"></a></h3><p><strong>Hardware setup:</strong> Create a physical loopback by connecting the pins as follows:</p>
+<ul>
+<li>Connect <strong>CN2901-8</strong> to <strong>CN2904-17</strong></li>
+<li>Connect <strong>CN2901-10</strong> to <strong>CN2904-15</strong></li>
+</ul>
+<p>Configure both interfaces to a baud rate of <strong>115200</strong> and disable echo:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">stty -F /dev/ttyS1 speed 115200 -<span class="built_in">echo</span></span><br><span class="line">stty -F /dev/ttyS3 speed 115200 -<span class="built_in">echo</span></span><br></pre></td></tr></table></figure>
+<p><strong>Verifying TX (Transmit) - ttyS1 to ttyS3:</strong></p>
+<p>Run a listener on <code>/dev/ttyS3</code> in the background, then transmit from <code>/dev/ttyS1</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /dev/ttyS3 &amp;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;adlink&quot;</span> &gt; /dev/ttyS1</span><br></pre></td></tr></table></figure>
+<p>If successful, <code>adlink</code> will be printed to the terminal.</p>
+<p><strong>Verifying RX (Receive) - ttyS3 to ttyS1:</strong></p>
+<p>Run a listener on <code>/dev/ttyS1</code> in the background, then transmit from <code>/dev/ttyS3</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /dev/ttyS1 &amp;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;adlink&quot;</span> &gt; /dev/ttyS3</span><br></pre></td></tr></table></figure>
+<p>If successful, <code>adlink</code> will be printed to the terminal.</p>
+<h2 id="13-Ethernet" class="article-heading"><a href="#13-Ethernet" class="headerlink" title="13. Ethernet"></a>13. Ethernet<a class="article-anchor" href="#13-Ethernet" aria-hidden="true"></a></h2><p>The OSM-520 provides two Ethernet ports.</p>
+<h3 id="Ping-Test" class="article-heading"><a href="#Ping-Test" class="headerlink" title="Ping Test"></a>Ping Test<a class="article-anchor" href="#Ping-Test" aria-hidden="true"></a></h3><p>Connect an Ethernet cable to either <strong>CN801</strong> or <strong>CN802</strong> and run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ping 8.8.8.8 -I &lt;end0 or enu1u5&gt; -c 4</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example:</span></span><br><span class="line">ping 8.8.8.8 -I end0 -c 4</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/pingtest.png" style="zoom: 80%;"></p>
+<h3 id="Throughput-Test" class="article-heading"><a href="#Throughput-Test" class="headerlink" title="Throughput Test"></a>Throughput Test<a class="article-anchor" href="#Throughput-Test" aria-hidden="true"></a></h3><p><strong>Host side</strong> - start an iperf server:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iperf -s</span><br></pre></td></tr></table></figure>
+<p><strong>DUT side</strong> - connect both the host and DUT to the same LAN, then run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig &lt;end0 or enu1u5&gt; 192.168.10.2 netmask 255.255.255.0</span><br><span class="line">iperf3 -c 192.168.10.1</span><br><span class="line">iperf3 -c 192.168.10.1 -R</span><br></pre></td></tr></table></figure>
+<h2 id="14-WiFi" class="article-heading"><a href="#14-WiFi" class="headerlink" title="14. WiFi"></a>14. WiFi<a class="article-anchor" href="#14-WiFi" aria-hidden="true"></a></h2><p>The OSM-520 supports WiFi connectivity via the <code>mlan0</code> interface. Follow the steps below to connect to a wireless network and verify connectivity.</p>
+<p><strong>Step 1:</strong> Generate a WPA supplicant configuration file for your network:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpa_passphrase <span class="string">&quot;YourSSID&quot;</span> <span class="string">&quot;YourPassword&quot;</span> &gt; /etc/wpa_supplicant/wpa_supplicant-mlan0.conf</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> Start the WPA supplicant in the background:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wpa_supplicant -B -i mlan0 -c /etc/wpa_supplicant/wpa_supplicant-mlan0.conf</span><br></pre></td></tr></table></figure>
+<p><strong>Step 3:</strong> Obtain an IP address via DHCP:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">udhcpc -i mlan0</span><br></pre></td></tr></table></figure>
+<p><strong>Step 4:</strong> Verify connectivity with a ping test:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ping 8.8.8.8 -I mlan0 -c 4</span><br></pre></td></tr></table></figure>
+<p>A successful connection will show 4 packets transmitted and received with 0% packet loss.</p>
+<p><img src="./TestingInterface.assets/mlan.png" style="zoom: 80%;"></p>
+<h2 id="15-Bluetooth" class="article-heading"><a href="#15-Bluetooth" class="headerlink" title="15. Bluetooth"></a>15. Bluetooth<a class="article-anchor" href="#15-Bluetooth" aria-hidden="true"></a></h2><p>The OSM-520 supports Bluetooth connectivity via <code>hci0</code>. Follow the steps below to bring up the interface, scan for devices, and verify pairing.</p>
+<p><strong>Step 1:</strong> Bring up the Bluetooth interface:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hciconfig hci0 up</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> Launch the Bluetooth control utility:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bluetoothctl</span><br></pre></td></tr></table></figure>
+<p><strong>Step 3:</strong> Inside the <code>bluetoothctl</code> prompt, register the agent and start scanning:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">default-agent</span><br><span class="line">agent on</span><br><span class="line">scan on</span><br></pre></td></tr></table></figure>
+<p>Nearby devices will appear as they are discovered, for example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[NEW] Device 0A:1A:E4:B9:2F:10 TestDevice</span><br></pre></td></tr></table></figure>
+<p><strong>Step 4:</strong> Once the target device appears, stop the scan and initiate pairing. Replace the address with the one discovered in your scan:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan off</span><br><span class="line">pair XX:XX:XX:XX:XX:XX</span><br></pre></td></tr></table></figure>
+<p>A passkey confirmation will be prompted on both the board and the remote device. Confirm on both sides:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[agent] Confirm passkey XXXXXX (yes/no): yes</span><br></pre></td></tr></table></figure>
+<p>A successful pairing will show:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[CHG] Device XX:XX:XX:XX:XX:XX Bonded: yes</span><br><span class="line">[CHG] Device XX:XX:XX:XX:XX:XX Paired: yes</span><br><span class="line">Pairing successful</span><br></pre></td></tr></table></figure>
+<p><strong>Step 5:</strong> Exit the utility:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+<h2 id="16-PCIe-NVMe" class="article-heading"><a href="#16-PCIe-NVMe" class="headerlink" title="16. PCIe/NVMe"></a>16. PCIe/NVMe<a class="article-anchor" href="#16-PCIe-NVMe" aria-hidden="true"></a></h2><p>Connect an NVMe device to the M.2 PCIe slot on the board and run the following command to verify detection:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lspci</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/lspci.png" style="zoom: 80%;"></p>
+<p>The NVMe device should appear in the output as a PCIe storage controller. Then confirm the block device is available:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsblk | grep nvme</span><br></pre></td></tr></table></figure>
+<p>The device will appear as <code>nvme0n1</code>.</p>
+<p><strong>Write Test:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/urandom of=/dev/nvme0n1 bs=1M count=500 oflag=direct</span><br></pre></td></tr></table></figure>
+<p><strong>Read Test:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/nvme0n1 of=/dev/null bs=1M count=500 iflag=direct</span><br></pre></td></tr></table></figure>
+<p>Both commands will report the data transferred and speed on completion. A successful test will show 500 MB transferred with no errors.</p>
+<p><img src="./TestingInterface.assets/nvme-rw.png" style="zoom: 80%;"></p>
+<h2 id="17-RTC" class="article-heading"><a href="#17-RTC" class="headerlink" title="17. RTC"></a>17. RTC<a class="article-anchor" href="#17-RTC" aria-hidden="true"></a></h2><p>Follow the steps below to set the RTC time and verify it is retained across a power cycle.</p>
+<p><strong>Before power cycle</strong> - disable NTP sync, set the system time, and write it to the RTC:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">timedatectl set-ntp <span class="literal">false</span></span><br><span class="line">date -s <span class="string">&quot;2026-03-20 11:17:00&quot;</span></span><br><span class="line">date</span><br><span class="line">hwclock -w -f /dev/rtc0</span><br><span class="line">hwclock -r -f /dev/rtc0</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/rtc1.png" style="zoom: 80%;"></p>
+<p>Power off the board, wait <strong>2–5 minutes</strong>, then power it back on.</p>
+<p><strong>After power cycle</strong> - verify the RTC time has been retained:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hwclock -r -f /dev/rtc0</span><br></pre></td></tr></table></figure>
+<p><img src="./TestingInterface.assets/rtc2.png" style="zoom: 80%;"></p>
+<p>The returned timestamp should match the time set before the power cycle, confirming the RTC is functioning correctly.</p>
+<h2 id="18-ADC" class="article-heading"><a href="#18-ADC" class="headerlink" title="18. ADC"></a>18. ADC<a class="article-anchor" href="#18-ADC" aria-hidden="true"></a></h2><p>The OSM-520 provides two ADC input pins on connector <strong>CN2903</strong>. To read the ADC value, short the pin to either GND or 1.8V and read the corresponding sysfs entry.</p>
+<p><strong>ADC Channel 4 - CN2903-1:</strong></p>
+<p>Short CN2903-1 to GND:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/iio/devices/iio:device1/in_voltage4_input</span><br></pre></td></tr></table></figure>
+<p>Expected output: <code>0</code></p>
+<p>Short CN2903-1 to 1.8V:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/iio/devices/iio:device1/in_voltage4_input</span><br></pre></td></tr></table></figure>
+<p>Expected output: <code>1376</code></p>
+<p><strong>ADC Channel 5 - CN2903-2:</strong></p>
+<p>Short CN2903-2 to GND:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/iio/devices/iio:device1/in_voltage5_input</span><br></pre></td></tr></table></figure>
+<p>Expected output: <code>0</code></p>
+<p>Short CN2903-2 to 1.8V:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /sys/bus/iio/devices/iio:device1/in_voltage5_input</span><br></pre></td></tr></table></figure>
+<p>Expected output: <code>1376</code></p>
+<h2 id="19-Thermal" class="article-heading"><a href="#19-Thermal" class="headerlink" title="19. Thermal"></a>19. Thermal<a class="article-anchor" href="#19-Thermal" aria-hidden="true"></a></h2><p>To read the temperature values from all available thermal zones, run the following command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">i=0; <span class="keyword">while</span> [ <span class="variable">$i</span> -lt 40 ]; <span class="keyword">do</span> <span class="keyword">if</span> [ -f /sys/class/thermal/thermal_zone<span class="variable">$i</span>/<span class="built_in">type</span> ]; <span class="keyword">then</span> <span class="built_in">type</span>=$(cat /sys/class/thermal/thermal_zone<span class="variable">$i</span>/<span class="built_in">type</span>); temp=$(cat /sys/class/thermal/thermal_zone<span class="variable">$i</span>/temp); <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$i</span> <span class="variable">$type</span>: <span class="variable">$temp</span>&quot;</span>; <span class="keyword">fi</span>; i=$((i+<span class="number">1</span>)); <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>The output lists each thermal zone by index, type, and temperature in millidegrees Celsius. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0 soc_max: 31834</span><br><span class="line">1 cpu-big1: 28226</span><br><span class="line">2 cpu-big2: 28012</span><br><span class="line">3 cpu-big3: 28180</span><br><span class="line">4 cpu-big4: 28180</span><br><span class="line">5 cpu-little1: 30229</span><br><span class="line">6 cpu-little2: 30810</span><br><span class="line">7 cpu-little3: 30672</span><br><span class="line">8 cpu-little4: 30504</span><br><span class="line">9 cpu-little5: 31972</span><br><span class="line">10 cpu-little6: 31650</span><br><span class="line">11 cpu-little7: 32048</span><br><span class="line">12 cpu-little8: 32094</span><br><span class="line">13 soc1: 30718</span><br><span class="line">14 soc2: 30412</span><br><span class="line">15 soc3: 30764</span><br><span class="line">16 apu: 30275</span><br><span class="line">17 gpu1: 29510</span><br><span class="line">18 gpu2: 29648</span><br></pre></td></tr></table></figure>
+<p>To convert a value to degrees Celsius, divide by 1000 (e.g., 31834 → ~31.8°C).</p>
+<h2 id="20-TPM" class="article-heading"><a href="#20-TPM" class="headerlink" title="20. TPM"></a>20. TPM<a class="article-anchor" href="#20-TPM" aria-hidden="true"></a></h2><p>To verify the TPM module, run the following command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">eltt2 -cgv</span><br></pre></td></tr></table></figure>
+<p>A successful response will display the TPM clock info, fixed properties, memory settings, and startup state. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Clock info:</span><br><span class="line">=========================================================</span><br><span class="line">Time since the last TPM_Init:</span><br><span class="line">28790 ms  =  0 y, 0 d, 0 h, 0 min, 28 s, 790 ms</span><br><span class="line">Time during which the TPM has been powered:</span><br><span class="line">282907863 ms  =  0 y, 3 d, 6 h, 35 min, 7 s, 863 ms</span><br><span class="line">TPM Reset since the last TPM2_Clear:            488</span><br><span class="line">Number of times that TPM2_Shutdown:             0</span><br><span class="line">Safe:                                           1 = Yes</span><br><span class="line">TPM capability information of fixed properties:</span><br><span class="line">=========================================================</span><br><span class="line">TPM_PT_FAMILY_INDICATOR:        2.0</span><br><span class="line">TPM_PT_LEVEL:                   0</span><br><span class="line">TPM_PT_REVISION:                159</span><br><span class="line">TPM_PT_DAY_OF_YEAR:             9</span><br><span class="line">TPM_PT_YEAR:                    2023</span><br><span class="line">TPM_PT_MANUFACTURER:            STM</span><br><span class="line">TPM_PT_VENDOR_STRING:           ST33KTPM2X</span><br><span class="line">TPM_PT_VENDOR_TPM_TYPE:         0</span><br><span class="line">TPM_PT_FIRMWARE_VERSION:        9.257.0</span><br><span class="line">TPM_PT_MEMORY:</span><br><span class="line">=========================================================</span><br><span class="line">Shared RAM:                     0 CLEAR</span><br><span class="line">Shared NV:                      1 SET</span><br><span class="line">Object Copied To Ram:           0 CLEAR</span><br><span class="line">TPM_PT_PERMANENT:</span><br><span class="line">=========================================================</span><br><span class="line">Owner Auth Set:                 0 CLEAR</span><br><span class="line">Sendorsement Auth Set:          0 CLEAR</span><br><span class="line">Lockout Auth Set:               0 CLEAR</span><br><span class="line">Disable Clear:                  0 CLEAR</span><br><span class="line">In Lockout:                     0 CLEAR</span><br><span class="line">TPM Generated EPS:              1 SET</span><br><span class="line">TPM capability information of variable properties:</span><br><span class="line">TPM_PT_STARTUP_CLEAR:</span><br><span class="line">=========================================================</span><br><span class="line">Ph Enable:                      1 SET</span><br><span class="line">Sh Enable:                      1 SET</span><br><span class="line">Eh Enable:                      1 SET</span><br><span class="line">Orderly:                        0 CLEAR</span><br></pre></td></tr></table></figure>
+<p>Key fields to verify: <code>TPM_PT_FAMILY_INDICATOR</code> should report <code>2.0</code>, <code>TPM_PT_MANUFACTURER</code> should identify the chip vendor, and <code>Safe</code> should be <code>1 = Yes</code>.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2026-06-23T06:41:01.562Z" itemprop="dateModified">Last updated: 2026-06-23</time>
+                <a href="ReadConsole.html" class="article-footer-prev" title="Reading Console"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div class="article-toc-border">
+                <strong class="sidebar-title">Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Testing-Interfaces"><span class="toc-text">Testing Interfaces</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-GPIO"><span class="toc-text">1. GPIO</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting-GPIO-as-Output"><span class="toc-text">Setting GPIO as Output</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting-GPIO-as-Input"><span class="toc-text">Setting GPIO as Input</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SD"><span class="toc-text">2. SD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-I2C"><span class="toc-text">3. I2C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-SPI"><span class="toc-text">4. SPI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI-A-spidev0-0"><span class="toc-text">SPI A (spidev0.0)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI-B-spidev1-0"><span class="toc-text">SPI B (spidev1.0)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-USB"><span class="toc-text">5. USB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Display-Interfaces"><span class="toc-text">6. Display Interfaces</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DP"><span class="toc-text">DP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#eDP"><span class="toc-text">eDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LVDS-g101eat026"><span class="toc-text">LVDS (g101eat026)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DSI"><span class="toc-text">DSI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Audio"><span class="toc-text">7. Audio</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DP-Audio"><span class="toc-text">DP Audio</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Camera-USB"><span class="toc-text">8. Camera (USB)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Camera-1-CSI-CN2701"><span class="toc-text">9. Camera 1 - CSI (CN2701)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IMX258"><span class="toc-text">IMX258</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OV5640"><span class="toc-text">OV5640</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Camera-2-CSI-CN2702"><span class="toc-text">10. Camera 2 - CSI (CN2702)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IMX258-1"><span class="toc-text">IMX258</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OV5640-1"><span class="toc-text">OV5640</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Pulse-Width-Modulation-PWM"><span class="toc-text">11. Pulse Width Modulation (PWM)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Generating-PWM"><span class="toc-text">Generating PWM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-PWM-Signals"><span class="toc-text">Testing PWM Signals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disabling-PWM"><span class="toc-text">Disabling PWM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-UART"><span class="toc-text">12. UART</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UART-Testing"><span class="toc-text">UART Testing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-Ethernet"><span class="toc-text">13. Ethernet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ping-Test"><span class="toc-text">Ping Test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Throughput-Test"><span class="toc-text">Throughput Test</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-WiFi"><span class="toc-text">14. WiFi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Bluetooth"><span class="toc-text">15. Bluetooth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-PCIe-NVMe"><span class="toc-text">16. PCIe&#x2F;NVMe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-RTC"><span class="toc-text">17. RTC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-ADC"><span class="toc-text">18. ADC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-Thermal"><span class="toc-text">19. Thermal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-TPM"><span class="toc-text">20. TPM</span></a></li></ol></li></ol>
+                <a href="#" id="article-toc-top">Back to Top</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoFlashing.html" class="sidebar-link first">Flashing Yocto</a><a href="ReadConsole.html" class="sidebar-link">Reading Console</a><a href="TestingInterface.html" class="sidebar-link current">Testing Interfaces</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapperforfooter">
+  <div class="inner">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+  <div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item  small--one-whole site-footer-item-tall"><ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list"><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.facebook.com/profile.php?id=61552196601777" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"></path></svg><span class="icon__fallback-text">Facebook</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://twitter.com/i_pi_devkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"></path></svg><span class="icon__fallback-text">Twitter</span>
+                  </a>
+                </li><li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.youtube.com/@i-pidevelopmentkits6289" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"></path></svg><span class="icon__fallback-text">YouTube</span>
+                  </a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.linkedin.com/in/adlink-com-0ba7161a3/" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fa fa-linkedin-square" style="font-size:28px"></i></a>
+                </li>
+                <li class="social-icons__item">
+                  <a class="social-icons__link" target="_blank" href="https://www.tiktok.com/@ipidevkits" rel="external nofollow noreferrer" aria-describedby="a11y-external-message"><i class="fab fa-tiktok" style="font-size:28px;"></i></a>
+                </li>
+                </ul></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons" style="display:none;">
+      <span class="visually-hidden">Payment methods</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole  site-footer-item-align-center">
+        <small class="site-footer__copyright-content">© 2023, I-Pi Development Kits by ADLINK Technology Inc.</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow noopener" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore" aria-describedby="a11y-new-window-external-message"> </a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/osm/osm/" class="mobile-nav-link  header">menu.OSM</a>
+      <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoFlashing.html" class="mobile-nav-link first">Flashing Yocto</a><a href="ReadConsole.html" class="mobile-nav-link">Reading Console</a><a href="TestingInterface.html" class="mobile-nav-link current">Testing Interfaces</a></details></strong>
+    
+  </div>
+  
+
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/osm/js/lang_select.js"></script>
+
+
+<script src="/osm/js/toc.js"></script>
+
+
+<script src="/osm/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html> 
