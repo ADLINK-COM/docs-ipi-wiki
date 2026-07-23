@@ -96,12 +96,12 @@ $('button').click(function(){
   <!-- RSS -->
   <link rel="alternate" href="/com-express/atom.xml" title="ADLINK Industrial Pi Wiki" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="(Not Updated)Preparing a bootable USB drive  This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium Prerequisites  Download the prebuilt bootable i">
+  <meta name="description" content="(Not Updated)Preparing a bootable USB drive  This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium   ## Prerequisites   - Download the prebuilt bo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ADLINK Industrial Pi Wiki">
 <meta property="og:url" content="https://docs.ipi.wiki/com-express/com-express-type7-rv/PreparingabootableUSBdrive.html">
 <meta property="og:site_name" content="ADLINK Industrial Pi Wiki">
-<meta property="og:description" content="(Not Updated)Preparing a bootable USB drive  This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium Prerequisites  Download the prebuilt bootable i">
+<meta property="og:description" content="(Not Updated)Preparing a bootable USB drive  This procedure describes how to Flash the ISO&#x2F;IMG file into USB drive and make it as an installation medium   ## Prerequisites   - Download the prebuilt bo">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.ipi.wiki/com-express/com-express-type7-rv/Preparingabootableusbdrive.assets/rufus.png">
 <meta property="article:published_time" content="2024-07-04T05:41:10.810Z">
@@ -168,43 +168,46 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 class="article-heading">(Not Updated)Preparing a bootable USB drive<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#undefined'}, '*');" class="article-anchor" href="#undefined" aria-hidden="true"></a></h1>
-<div class="bullets">
-<p>This procedure describes how to Flash the ISO/IMG file into USB drive and make it as an installation medium</p>
-<h2 id="Prerequisites" class="article-heading">Prerequisites<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Prerequisites'}, '*');" class="article-anchor" href="#Prerequisites" aria-hidden="true"></a></h2>
-<ul>
-<li>Download the prebuilt bootable image to the working directory on your development host <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ipi.wiki/pages/com-express-type-6-raptor-lake-p-download">click here</a>.
-<ul>
-<li>Ubuntu (Not available)</li>
-<li>Windows <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/software-download/windows10">click here</a></li>
-</ul>
-</li>
-<li>In Windows environments, please download <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rufus.ie/">Rufus</a>. (Rufus is flashing tool for <strong>.iso</strong> format)</li>
-<li>In a Linux environment use <code>dd</code> command.</li>
-</ul>
-<p><strong>Note:</strong> All files will be erased on the USB drive. The size should be preferable 16 GB or larger.</p>
-<h3 id="Windows-Host" class="article-heading">Windows Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Windows-Host'}, '*');" class="article-anchor" href="#Windows-Host" aria-hidden="true"></a></h3>
-<h4 id="Rufus-as-Flashing-tool-Ubuntu-Windows" class="article-heading">Rufus as Flashing tool (Ubuntu/Windows)<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Rufus-as-Flashing-tool-Ubuntu-Windows'}, '*');" class="article-anchor" href="#Rufus-as-Flashing-tool-Ubuntu-Windows" aria-hidden="true"></a></h4>
-<ol>
-<li>
-<p>Insert an empty USB drive into the your development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.</p>
-</li>
-<li>
-<p>Press the <strong>SELECT</strong> button and browse to the .iso file previously downloaded to your working directory on the development host. Then click <strong>START</strong> and wait for the process to be finished.</p>
-</li>
-</ol>
+                <h1 id="Not-Updated-Preparing-a-bootable-USB-drive" class="article-heading"><a href="#Not-Updated-Preparing-a-bootable-USB-drive" class="headerlink" title="(Not Updated)Preparing a bootable USB drive"></a>(Not Updated)Preparing a bootable USB drive<a class="article-anchor" href="#Not-Updated-Preparing-a-bootable-USB-drive" aria-hidden="true"></a></h1><div class="bullets">
+
+This procedure describes how to Flash the ISO/IMG file into USB drive and make it as an installation medium
+
+
+## Prerequisites
+
+
+- Download the prebuilt bootable image to the working directory on your development host [click here](https://www.ipi.wiki/pages/com-express-type-6-raptor-lake-p-download).
+  - Ubuntu (Not available)
+  - Windows [click here](https://www.microsoft.com/en-us/software-download/windows10)
+- In Windows environments, please download [Rufus](https://rufus.ie/). (Rufus is flashing tool for **.iso** format)
+- In a Linux environment use `dd` command.
+
+**Note:** All files will be erased on the USB drive. The size should be preferable 16 GB or larger.
+
+### Windows Host
+
+#### Rufus as Flashing tool (Ubuntu/Windows)
+
+1. Insert an empty USB drive into the your development host and execute rufus.exe as the picture below. It will auto-detected your storage drives.
+
+2. Press the **SELECT** button and browse to the .iso file previously downloaded to your working directory on the development host. Then click **START** and wait for the process to be finished.
+
 <img src="Preparingabootableusbdrive.assets/rufus.png" alt="rufus_2" style="margin-left: auto; margin-right: auto; display: block;">
-<h3 id="Linux-Host" class="article-heading">Linux Host<a onclick="parent.postMessage( {msg: '?page=PreparingabootableUSBdrive.html#Linux-Host'}, '*');" class="article-anchor" href="#Linux-Host" aria-hidden="true"></a></h3>
-<ol>
-<li>
-<p>Download the prebuilt bootable OS to the working directory on your development host. Insert an empty USB drive and enter the following command to flash the OS to the USB drive.</p>
-<p><strong>Warning</strong>: Make sure you first properly identify the USB device, for example (/dev/sdb or /dev/sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development hosts OS.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
-<p>After dd has completed, enter the following command:</p>
-</li>
-</ol>
+
+### Linux Host
+
+1. Download the prebuilt bootable OS to the working directory on your development host. Insert an empty USB drive and enter the following command to flash the OS to the USB drive.
+
+   **Warning**: Make sure you first properly identify the USB device, for example (/dev/sdb or /dev/sdc) by using “gparted”. Data loss may result if written into the wrong device or in the worst case you kill your development hosts OS.
+
+   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo dd if=[your image].img of=/dev/sd[x]</span><br></pre></td></tr></table></figure>
+
+   After dd has completed, enter the following command:
+
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sync</span><br></pre></td></tr></table></figure>
-<p><strong>Note</strong>: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your <code>dd</code> command.</p>
+
+**Note**: You can also flash Yocto and Android images using Linux host, but make sure, you type the correct image format in your `dd` command.
+
 </div>
 
               </div>
@@ -219,7 +222,7 @@ $('button').click(function(){
             <div id="article-toc-inner">
               <div class="article-toc-border">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">(Not Updated)Preparing a bootable USB drive</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-text">Prerequisites</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-Host"><span class="toc-text">Windows Host</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Rufus-as-Flashing-tool-Ubuntu-Windows"><span class="toc-text">Rufus as Flashing tool (Ubuntu&#x2F;Windows)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-Host"><span class="toc-text">Linux Host</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Not-Updated-Preparing-a-bootable-USB-drive"><span class="toc-text">(Not Updated)Preparing a bootable USB drive</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </div>
@@ -228,7 +231,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a></details open></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="10GbEAdapterCardIntroduction.html" class="sidebar-link">10GbE Adapter Card Introduction</a><a href="TransceiverAVL.html" class="sidebar-link">Transceiver AVL</a><a href="RAMAVL.html" class="sidebar-link">RAM AVL</a></details open></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details open></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="SFP+EnablementGuideLinux.html" class="sidebar-link first">10GbE Adapter Card Installation</a></details open></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a><a href="UserInterfaces.html" class="sidebar-link">Interfaces</a></details></strong><strong class="sidebar-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="sidebar-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="sidebar-link">Carrier Introduction</a><a href="10GbEAdapterCardIntroduction.html" class="sidebar-link">10GbE Adapter Card Introduction</a><a href="TransceiverAVL.html" class="sidebar-link">Transceiver AVL</a><a href="RAMAVL.html" class="sidebar-link">RAM AVL</a></details></strong><strong class="sidebar-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="sidebar-link first">Ubuntu</a><a href="WindowsImage.html" class="sidebar-link">Windows</a><a href="YoctoImage.html" class="sidebar-link">Yocto</a></details></strong><strong class="sidebar-title"><details open><summary>Other Software</summary><a href="SFP+EnablementGuideLinux.html" class="sidebar-link first">10GbE Adapter Card Installation</a></details></strong>
   </div>
 </aside>
     </div>
@@ -284,7 +287,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="10GbEAdapterCardIntroduction.html" class="mobile-nav-link">10GbE Adapter Card Introduction</a><a href="TransceiverAVL.html" class="mobile-nav-link">Transceiver AVL</a><a href="RAMAVL.html" class="mobile-nav-link">RAM AVL</a></details open></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="SFP+EnablementGuideLinux.html" class="mobile-nav-link first">10GbE Adapter Card Installation</a></details open></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a><a href="UserInterfaces.html" class="mobile-nav-link">Interfaces</a></details></strong><strong class="mobile-nav-title"><details open><summary>Hardware Specs</summary><a href="ModuleIntroduction.html" class="mobile-nav-link first">Module Introduction</a><a href="CarrierIntroduction.html" class="mobile-nav-link">Carrier Introduction</a><a href="10GbEAdapterCardIntroduction.html" class="mobile-nav-link">10GbE Adapter Card Introduction</a><a href="TransceiverAVL.html" class="mobile-nav-link">Transceiver AVL</a><a href="RAMAVL.html" class="mobile-nav-link">RAM AVL</a></details></strong><strong class="mobile-nav-title"><details open><summary>OS Installation</summary><a href="UbuntuImage.html" class="mobile-nav-link first">Ubuntu</a><a href="WindowsImage.html" class="mobile-nav-link">Windows</a><a href="YoctoImage.html" class="mobile-nav-link">Yocto</a></details></strong><strong class="mobile-nav-title"><details open><summary>Other Software</summary><a href="SFP+EnablementGuideLinux.html" class="mobile-nav-link first">10GbE Adapter Card Installation</a></details></strong>
     
   </div>
   
