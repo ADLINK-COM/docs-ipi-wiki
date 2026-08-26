@@ -176,8 +176,8 @@ $('button').click(function(){
                 <a href="" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content bullets" itemprop="articleBody">
-                <h1 id="Reading-Debug-Console" class="article-heading"><a href="#Reading-Debug-Console" class="headerlink" title="Reading Debug Console"></a>Reading Debug Console<a class="article-anchor" href="#Reading-Debug-Console" aria-hidden="true"></a></h1><p>This guide explains how to connect to the OSM-520 board’s serial console and read data on both <strong>Linux</strong> and <strong>Windows</strong>.</p>
-<h2 id="1-Hardware-Setup" class="article-heading"><a href="#1-Hardware-Setup" class="headerlink" title="1. Hardware Setup"></a>1. Hardware Setup<a class="article-anchor" href="#1-Hardware-Setup" aria-hidden="true"></a></h2><h3 id="Board-Connectors" class="article-heading"><a href="#Board-Connectors" class="headerlink" title="Board Connectors"></a>Board Connectors<a class="article-anchor" href="#Board-Connectors" aria-hidden="true"></a></h3><div class="table-container">
+                <h1 id="Reading-Debug-Console" class="article-heading"><a href="#Reading-Debug-Console" class="headerlink" title="Reading Debug Console"></a>Reading Debug Console<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Reading-Debug-Console'}, '*');" class="article-anchor" href="#Reading-Debug-Console" aria-hidden="true"></a></h1><p>This guide explains how to connect to the OSM-520 board’s serial console and read data on both <strong>Linux</strong> and <strong>Windows</strong>.</p>
+<h2 id="1-Hardware-Setup" class="article-heading"><a href="#1-Hardware-Setup" class="headerlink" title="1. Hardware Setup"></a>1. Hardware Setup<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#1-Hardware-Setup'}, '*');" class="article-anchor" href="#1-Hardware-Setup" aria-hidden="true"></a></h2><h3 id="Board-Connectors" class="article-heading"><a href="#Board-Connectors" class="headerlink" title="Board Connectors"></a>Board Connectors<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Board-Connectors'}, '*');" class="article-anchor" href="#Board-Connectors" aria-hidden="true"></a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -205,7 +205,7 @@ $('button').click(function(){
 <p>Refer to the board image below for connector locations.</p>
 </blockquote>
 <p><img src="./ReadConsole.assets/OSM-520.png" style="zoom: 67%;"></p>
-<h3 id="Connection-Steps" class="article-heading"><a href="#Connection-Steps" class="headerlink" title="Connection Steps"></a>Connection Steps<a class="article-anchor" href="#Connection-Steps" aria-hidden="true"></a></h3><ol>
+<h3 id="Connection-Steps" class="article-heading"><a href="#Connection-Steps" class="headerlink" title="Connection Steps"></a>Connection Steps<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Connection-Steps'}, '*');" class="article-anchor" href="#Connection-Steps" aria-hidden="true"></a></h3><ol>
 <li><p>Connect the <strong>power cable</strong> to the POWER connector.</p>
 </li>
 <li><p>Connect a <strong>USB Type-C cable</strong> from the host PC to the <strong>CONSOLE OUTPUT</strong> port.</p>
@@ -221,9 +221,9 @@ $('button').click(function(){
 </ul>
 </li>
 </ol>
-<h2 id="2-Linux-Setup-Minicom" class="article-heading"><a href="#2-Linux-Setup-Minicom" class="headerlink" title="2. Linux Setup - Minicom"></a>2. Linux Setup - Minicom<a class="article-anchor" href="#2-Linux-Setup-Minicom" aria-hidden="true"></a></h2><h3 id="Install-Minicom" class="article-heading"><a href="#Install-Minicom" class="headerlink" title="Install Minicom"></a>Install Minicom<a class="article-anchor" href="#Install-Minicom" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install minicom</span><br></pre></td></tr></table></figure>
-<h3 id="Launch-Minicom-in-Setup-Mode" class="article-heading"><a href="#Launch-Minicom-in-Setup-Mode" class="headerlink" title="Launch Minicom in Setup Mode"></a>Launch Minicom in Setup Mode<a class="article-anchor" href="#Launch-Minicom-in-Setup-Mode" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo minicom -s</span><br></pre></td></tr></table></figure>
-<h3 id="Serial-Port-Configuration" class="article-heading"><a href="#Serial-Port-Configuration" class="headerlink" title="Serial Port Configuration"></a>Serial Port Configuration<a class="article-anchor" href="#Serial-Port-Configuration" aria-hidden="true"></a></h3><p>Once the configuration menu appears:</p>
+<h2 id="2-Linux-Setup-Minicom" class="article-heading"><a href="#2-Linux-Setup-Minicom" class="headerlink" title="2. Linux Setup - Minicom"></a>2. Linux Setup - Minicom<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#2-Linux-Setup-Minicom'}, '*');" class="article-anchor" href="#2-Linux-Setup-Minicom" aria-hidden="true"></a></h2><h3 id="Install-Minicom" class="article-heading"><a href="#Install-Minicom" class="headerlink" title="Install Minicom"></a>Install Minicom<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Install-Minicom'}, '*');" class="article-anchor" href="#Install-Minicom" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install minicom</span><br></pre></td></tr></table></figure>
+<h3 id="Launch-Minicom-in-Setup-Mode" class="article-heading"><a href="#Launch-Minicom-in-Setup-Mode" class="headerlink" title="Launch Minicom in Setup Mode"></a>Launch Minicom in Setup Mode<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Launch-Minicom-in-Setup-Mode'}, '*');" class="article-anchor" href="#Launch-Minicom-in-Setup-Mode" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo minicom -s</span><br></pre></td></tr></table></figure>
+<h3 id="Serial-Port-Configuration" class="article-heading"><a href="#Serial-Port-Configuration" class="headerlink" title="Serial Port Configuration"></a>Serial Port Configuration<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Serial-Port-Configuration'}, '*');" class="article-anchor" href="#Serial-Port-Configuration" aria-hidden="true"></a></h3><p>Once the configuration menu appears:</p>
 <p><img src="./ReadConsole.assets/minicom_menu.png" alt></p>
 <ol>
 <li><p>Select <strong>Serial port setup</strong> and configure as follows:</p>
@@ -265,15 +265,15 @@ $('button').click(function(){
 <li>Press <strong>Esc</strong> to return to the main menu.</li>
 <li>Select <strong>Exit</strong> and press <strong>Enter</strong> to start the session.</li>
 </ol>
-<h3 id="Reading-Serial-Output" class="article-heading"><a href="#Reading-Serial-Output" class="headerlink" title="Reading Serial Output"></a>Reading Serial Output<a class="article-anchor" href="#Reading-Serial-Output" aria-hidden="true"></a></h3><p>Minicom will connect at <strong>921600 baud</strong>. Power on or reset the board, boot logs and console output will appear in the terminal.</p>
+<h3 id="Reading-Serial-Output" class="article-heading"><a href="#Reading-Serial-Output" class="headerlink" title="Reading Serial Output"></a>Reading Serial Output<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Reading-Serial-Output'}, '*');" class="article-anchor" href="#Reading-Serial-Output" aria-hidden="true"></a></h3><p>Minicom will connect at <strong>921600 baud</strong>. Power on or reset the board, boot logs and console output will appear in the terminal.</p>
 <p><img src="./ReadConsole.assets/linux_log.png" style="zoom:67%;"></p>
 <p>To <strong>exit Minicom</strong>:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Ctrl+A  →  X  →  Enter</span><br></pre></td></tr></table></figure>
-<h2 id="3-Windows-Setup-PuTTY" class="article-heading"><a href="#3-Windows-Setup-PuTTY" class="headerlink" title="3. Windows Setup - PuTTY"></a>3. Windows Setup - PuTTY<a class="article-anchor" href="#3-Windows-Setup-PuTTY" aria-hidden="true"></a></h2><h3 id="Install-PuTTY" class="article-heading"><a href="#Install-PuTTY" class="headerlink" title="Install PuTTY"></a>Install PuTTY<a class="article-anchor" href="#Install-PuTTY" aria-hidden="true"></a></h3><p>Download and install PuTTY from the official site:</p>
+<h2 id="3-Windows-Setup-PuTTY" class="article-heading"><a href="#3-Windows-Setup-PuTTY" class="headerlink" title="3. Windows Setup - PuTTY"></a>3. Windows Setup - PuTTY<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#3-Windows-Setup-PuTTY'}, '*');" class="article-anchor" href="#3-Windows-Setup-PuTTY" aria-hidden="true"></a></h2><h3 id="Install-PuTTY" class="article-heading"><a href="#Install-PuTTY" class="headerlink" title="Install PuTTY"></a>Install PuTTY<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Install-PuTTY'}, '*');" class="article-anchor" href="#Install-PuTTY" aria-hidden="true"></a></h3><p>Download and install PuTTY from the official site:</p>
 <blockquote>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a></p>
 </blockquote>
-<h3 id="Find-the-COM-Port" class="article-heading"><a href="#Find-the-COM-Port" class="headerlink" title="Find the COM Port"></a>Find the COM Port<a class="article-anchor" href="#Find-the-COM-Port" aria-hidden="true"></a></h3><ol>
+<h3 id="Find-the-COM-Port" class="article-heading"><a href="#Find-the-COM-Port" class="headerlink" title="Find the COM Port"></a>Find the COM Port<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Find-the-COM-Port'}, '*');" class="article-anchor" href="#Find-the-COM-Port" aria-hidden="true"></a></h3><ol>
 <li><p>Open <strong>Device Manager</strong> (<code>Win + X</code> → Device Manager).</p>
 </li>
 <li><p>Expand <strong>Ports (COM &amp; LPT)</strong>.</p>
@@ -282,7 +282,7 @@ $('button').click(function(){
 <p><img src="./ReadConsole.assets/device_manager.png" style="zoom:150%;"></p>
 </li>
 </ol>
-<h3 id="Configure-PuTTY" class="article-heading"><a href="#Configure-PuTTY" class="headerlink" title="Configure PuTTY"></a>Configure PuTTY<a class="article-anchor" href="#Configure-PuTTY" aria-hidden="true"></a></h3><ol>
+<h3 id="Configure-PuTTY" class="article-heading"><a href="#Configure-PuTTY" class="headerlink" title="Configure PuTTY"></a>Configure PuTTY<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Configure-PuTTY'}, '*');" class="article-anchor" href="#Configure-PuTTY" aria-hidden="true"></a></h3><ol>
 <li><p>Open <strong>PuTTY</strong>.</p>
 </li>
 <li><p>Set the <strong>Connection type</strong> to <code>Serial</code>.</p>
@@ -318,13 +318,13 @@ $('button').click(function(){
 <ol>
 <li>Click <strong>Open</strong>.</li>
 </ol>
-<h3 id="Reading-Serial-Output-1" class="article-heading"><a href="#Reading-Serial-Output-1" class="headerlink" title="Reading Serial Output"></a>Reading Serial Output<a class="article-anchor" href="#Reading-Serial-Output-1" aria-hidden="true"></a></h3><p>A terminal window will open. Power on or reset the board, boot logs and console output will appear in the terminal.</p>
+<h3 id="Reading-Serial-Output-1" class="article-heading"><a href="#Reading-Serial-Output-1" class="headerlink" title="Reading Serial Output"></a>Reading Serial Output<a onclick="parent.postMessage( {msg: '?page=ReadConsole.html#Reading-Serial-Output-1'}, '*');" class="article-anchor" href="#Reading-Serial-Output-1" aria-hidden="true"></a></h3><p>A terminal window will open. Power on or reset the board, boot logs and console output will appear in the terminal.</p>
 <p><img src="./ReadConsole.assets/putty_log.png" style="zoom:75%;"></p>
 
               </div>
               <footer class="article-footer">
                 <time class="article-footer-updated" datetime="2026-06-23T06:42:09.746Z" itemprop="dateModified">Last updated: 2026-06-23</time>
-                <a href="YoctoFlashing.html" class="article-footer-prev" title="Flashing Yocto"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="TestingInterface.html" class="article-footer-next" title="Testing Interfaces"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <a href="FlashingYocto.html" class="article-footer-prev" title="Flashing Yocto"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="TestingInterface.html" class="article-footer-next" title="Testing Interfaces"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -342,7 +342,7 @@ $('button').click(function(){
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="YoctoFlashing.html" class="sidebar-link first">Flashing Yocto</a><a href="ReadConsole.html" class="sidebar-link current">Reading Console</a><a href="TestingInterface.html" class="sidebar-link">Testing Interfaces</a></details></strong>
+    <strong class="sidebar-title"><details open><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Introduction</a></details open></strong><strong class="sidebar-title"><details open><summary>Software Documentation</summary><a href="FlashingUbuntu.html" class="sidebar-link first">Flashing Ubuntu</a><a href="FlashingYocto.html" class="sidebar-link">Flashing Yocto</a><a href="ReadConsole.html" class="sidebar-link current">Reading Console</a><a href="TestingInterface.html" class="sidebar-link">Testing Interfaces</a></details open></strong>
   </div>
 </aside>
     </div>
@@ -396,7 +396,7 @@ $('button').click(function(){
       <a href="https://github.com/adlink" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
     </ul>
     
-      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="YoctoFlashing.html" class="mobile-nav-link first">Flashing Yocto</a><a href="ReadConsole.html" class="mobile-nav-link current">Reading Console</a><a href="TestingInterface.html" class="mobile-nav-link">Testing Interfaces</a></details></strong>
+      <strong class="mobile-nav-title"><details open><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Introduction</a></details open></strong><strong class="mobile-nav-title"><details open><summary>Software Documentation</summary><a href="FlashingUbuntu.html" class="mobile-nav-link first">Flashing Ubuntu</a><a href="FlashingYocto.html" class="mobile-nav-link">Flashing Yocto</a><a href="ReadConsole.html" class="mobile-nav-link current">Reading Console</a><a href="TestingInterface.html" class="mobile-nav-link">Testing Interfaces</a></details open></strong>
     
   </div>
   
